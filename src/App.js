@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import getHomePageImages from './get-home-page-images';
 
 function App() {
+  getHomePageImages();
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img id="home-page-img" src={logo} className="App-logo" alt="logo" />
+        <div id="home-page-img-div"></div>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
