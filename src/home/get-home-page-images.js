@@ -1,5 +1,6 @@
 import config from '../config';
 import axios from 'axios';
+import addHomePageImage from './home-image.component'
 
 const getHomePageImageUrls = async function() {
     axios.get(config.backend,
@@ -9,7 +10,7 @@ const getHomePageImageUrls = async function() {
       const imgUrlArray = response.data['travelImages'];
       const imgPanelDiv = document.getElementById('home-page-img-div')
       imgUrlArray.forEach((imgUrl) => {
-        imgPanelDiv.innerHTML += "<img class=\"home-page-img\" src=\"" + imgUrl + "\"/>";
+        imgPanelDiv.innerHTML += addHomePageImage(imgUrl);
       });
       document.getElementById('home-page-img-div')
     })

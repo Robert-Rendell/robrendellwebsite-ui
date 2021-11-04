@@ -1,10 +1,9 @@
 import logo from '../resources/logo.svg';
-import './App.css';
+import './App.component.css';
 import React from 'react';
 import getHomePageImageUrls from '../home/get-home-page-images';
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = { date: new Date() };
