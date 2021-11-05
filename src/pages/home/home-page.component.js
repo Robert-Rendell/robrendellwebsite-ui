@@ -15,16 +15,20 @@ class HomePageComponent extends React.Component {
 
   render() {
     return (
-      <div class='home-page-margins'>
-        <h2>Welcome to robrendell.com</h2>
-        <subtitle>last updated: 05/11/21 @ 09.15</subtitle>
+      <div class="home-page-margins page-styling">
+        <h2 class="centred">Welcome to robrendell.com</h2>
+        <h3>Rob Rendell: Node.js Developer (--- CURRENTLY LOOKING FOR WORK ---)</h3>
+        <p>last updated: 05/11/21 @ 09.15</p>
         <hr/>
-        <h3>Rob Rendell: Node.js Developer</h3>
-        <h3>--- CURRENTLY LOOKING FOR WORK ---</h3>
-        <br/>
-        <h4>This is an ongoing personal project using: Node.js, TypeScript, AWS, React</h4>
+        <h4>This website is an ongoing personal project using:</h4>
+        <ul>
+          <li>Node.js</li>
+          <li>TypeScript</li>
+          <li>AWS</li>
+          <li>React</li>
+        </ul>
         <hr/>
-        <h5>Here are some of my own photos from travelling over the years <i>(click to enlarge) - coming soon</i>:</h5>
+        <p>Here are some of my own photos from travelling over the years <i>(click to enlarge - coming soon)</i>:</p>
         <div id="home-page-img-div"></div>
       </div>
     );

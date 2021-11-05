@@ -1,3 +1,13 @@
 .home-page-margins {
   padding: 10px;
 }
+
+.page-styling {
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.centred {
+  justify-content: center;
+}

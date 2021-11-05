@@ -5,6 +5,11 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import './nav.component.css';
+import logo from '../resources/logo.svg';
+import nodeJsLogo from '../resources/nodejs-logo.png';
+import tsLogo from '../resources/ts-logo.png';
+import awsLogo from '../resources/aws-logo.png';
 
 class NavComponent extends React.Component {
   constructor(props) {
@@ -18,7 +23,7 @@ class NavComponent extends React.Component {
 
   render() {
     return (
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="/">Rob Rendell</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -43,6 +48,12 @@ class NavComponent extends React.Component {
             </NavDropdown>
           </Nav>
           <Form className="d-flex">
+            <img src={logo} width="40" height="40" alt="React" />
+            <img src={tsLogo} class="tech-icons" width="30" height="30" alt="TypeScript" />
+            <img src={nodeJsLogo} class="tech-icons nodejs-icon" width="30" height="30" alt="nodeJs" />
+            <div class="tech-icons aws-icon-bg" width="40" height="40">
+              <img src={awsLogo} class="aws-icon" width="30" height="20" alt="nodeJs" />
+            </div>
             <Button variant="outline-success" disabled>Enquire</Button>
           </Form>
         </Navbar.Collapse>
