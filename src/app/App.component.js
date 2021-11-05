@@ -1,14 +1,6 @@
 import './App.component.css';
 import React from 'react';
 import NavComponent from '../nav/nav.component';
-import HomePageComponent from '../pages/home/home-page.component';
-import SudokuDashboardComponent from '../pages/sudoku/sudoku-dashboard.component';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
-
 
 class App extends React.Component {
   constructor(props) {
@@ -22,25 +14,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
+      <div className="App">
         <div className="App">
           <NavComponent />
-          <header className="App-header">
-            <HomePageComponent />
-          </header>
         </div>
-        <Routes>
-          <Route path="/">
-            <h1>test</h1>
-          </Route>
-          <Route path="/sudoku">
-            <SudokuDashboardComponent />
-          </Route>
-          <Route path="/strava-api">
-            
-          </Route>
-        </Routes>
-      </Router>
+      </div>
     );
   }
 }

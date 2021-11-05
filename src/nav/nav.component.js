@@ -32,7 +32,7 @@ class NavComponent extends React.Component {
             <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">LinkedIn</Nav.Link>
             <Nav.Link href="/sudoku">Sudoku</Nav.Link>
             <NavDropdown title="Processing.js" id="processingNavbarScrollingDropdown">
-              <NavDropdown.Item href="#action3" disabled>Chaos Theory: Bifurcation Diagram</NavDropdown.Item>
+              <NavDropdown.Item href="https://editor.p5js.org/Robert-Rendell/sketches/Zi4pekiUZd" disabled>Chaos Theory: Bifurcation Diagram</NavDropdown.Item>
               <NavDropdown.Item href="#action3" disabled>Fishing Game</NavDropdown.Item>
               <NavDropdown.Item href="#action4" disabled>Bomberman</NavDropdown.Item>
             </NavDropdown>
