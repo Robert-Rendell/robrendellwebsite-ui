@@ -28,7 +28,7 @@ class NavComponent extends React.Component {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">LinkedIn</Nav.Link>
             <Nav.Link href="/sudoku">Sudoku</Nav.Link>
             <NavDropdown title="Processing.js" id="processingNavbarScrollingDropdown">
@@ -38,7 +38,7 @@ class NavComponent extends React.Component {
             </NavDropdown>
             <NavDropdown title="Music Projects" id="processingNavbarScrollingDropdown">
               <NavDropdown.Item href="https://www.shiva-archetypes.com">Shiva Archetypes (band)</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.robcelticfiddle.com">Rob Celtic Fiddle (weddings)</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.robcelticfiddle.co.uk">Rob Celtic Fiddle (weddings)</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form className="d-flex">
