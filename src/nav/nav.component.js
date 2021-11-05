@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import './nav.component.css';
 
 class NavComponent extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class NavComponent extends React.Component {
 
   render() {
     return (
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="/">Rob Rendell</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
