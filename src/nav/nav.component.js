@@ -20,7 +20,7 @@ class NavComponent extends React.Component {
     return (
       <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Rob Rendell</Navbar.Brand>
+        <Navbar.Brand href="/">Rob Rendell</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -30,8 +30,8 @@ class NavComponent extends React.Component {
           >
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">LinkedIn</Nav.Link>
-            <Nav.Link href="/sudoku">Sudoku</Nav.Link>
-            <Nav.Link href="/strava-api">Strava API (OAuth2.0)</Nav.Link>
+            <Nav.Link href="/sudoku" disabled>Sudoku</Nav.Link>
+            <Nav.Link href="/strava-api" disabled>Strava API (OAuth2.0)</Nav.Link>
             <NavDropdown title="Processing.js" id="processingNavbarScrollingDropdown">
               <NavDropdown.Item href="https://editor.p5js.org/Robert-Rendell/sketches/Zi4pekiUZd">Chaos Theory: Bifurcation Diagram</NavDropdown.Item>
               <NavDropdown.Item href="#action3" disabled>Fishing Game</NavDropdown.Item>
