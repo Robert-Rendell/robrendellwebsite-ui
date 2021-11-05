@@ -2,11 +2,11 @@ import './App.component.css';
 import React from 'react';
 import NavComponent from '../nav/nav.component';
 import HomePageComponent from '../pages/home/home-page.component';
+import SudokuDashboardComponent from '../pages/sudoku/sudoku-dashboard.component';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 
@@ -30,8 +30,11 @@ class App extends React.Component {
           </header>
         </div>
         <Routes>
+          <Route path="/">
+            <h1>test</h1>
+          </Route>
           <Route path="/sudoku">
-            
+            <SudokuDashboardComponent />
           </Route>
           <Route path="/strava-api">
             

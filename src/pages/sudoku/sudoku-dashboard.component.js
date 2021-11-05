@@ -7,7 +7,7 @@ class SudokuDashboardComponent extends React.Component {
   }
 
   componentDidMount() {
-    this.getHomePageImageUrls();
+    // nothing
   }
 
   render() {
