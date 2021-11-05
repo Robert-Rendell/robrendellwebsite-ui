@@ -1,7 +1,7 @@
 import './App.component.css';
 import React from 'react';
-import getHomePageImageUrls from '../pages/home/get-home-page-images';
 import NavComponent from '../nav/nav.component';
+import HomePageComponent from '../pages/home/home-page.component';
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    getHomePageImageUrls();
+    // load
   }
 
   render() {
@@ -26,9 +26,7 @@ class App extends React.Component {
         <div className="App">
           <NavComponent />
           <header className="App-header">
-            <h2>Welcome to robrendell.com</h2>
-            <h4>Technologies: Node.js, TypeScript, AWS, React</h4>
-            <div id="home-page-img-div"></div>
+            <HomePageComponent />
           </header>
         </div>
         <Routes>
