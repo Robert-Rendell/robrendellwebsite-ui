@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import App from './app/App.component';
 import HomePageComponent from './pages/home/home-page.component';
 import SudokuDashboardComponent from './pages/sudoku/dashboard/sudoku-dashboard.component';
+import SudokuGameComponent from './pages/sudoku/game/sudoku-game.component';
 import StravaDashboardComponent from './pages/strava-api/strava-dashboard.component';
 
 ReactDOM.render(
@@ -17,7 +18,10 @@ ReactDOM.render(
       <Routes>
         <div class='rob-rendell-website'>
           <Route path="/" element={<HomePageComponent />} />
+
           <Route path="sudoku" element={<SudokuDashboardComponent />} />
+          <Route path="sudoku/play" element={<SudokuGameComponent />} />
+
           <Route path="strava-api" element={<StravaDashboardComponent />} />
         </div>
       </Routes>
