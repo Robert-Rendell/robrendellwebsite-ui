@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 import SudokuCellComponent from './cell/sudoku-cell.component';
 import './sudoku-game.component.css';
 
@@ -11,7 +12,13 @@ class SudokuGameComponent extends React.Component {
         sudokuBoard: [
             [1,2,3,1,2,3,1,2,3],
             [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3]
+            [1,2,3,1,2,3,1,2,3],
+            [1,2,3,1,2,3,1,2,3],
+            [1,2,3,1,2,3,1,2,3],
+            [1,2,3,1,2,3,1,2,3],
+            [1,2,3,1,2,3,1,2,3],
+            [1,2,3,1,2,3,1,2,3],
+            [1,2,3,1,2,3,1,2,3],
         ],
     };
   }
@@ -26,17 +33,18 @@ class SudokuGameComponent extends React.Component {
 
   renderSudoku(row) {
     return this.state.sudokuBoard.map((sudokuRow, rowIndex) => {
-        return sudokuRow.map((cell, columnIndex) => {
-            return (
-                <tr>
-                    <SudokuCellComponent cell={cell} 
-                                         row={rowIndex}
-                                         column={columnIndex}
-                    />
-                </tr>
-            );
-         });
-     });
+        return (
+          <tr>
+          { 
+            sudokuRow.map((cell, columnIndex) => {
+              return <SudokuCellComponent cell={cell} 
+                                          row={rowIndex} 
+                                          column={columnIndex}/>
+            })
+          }
+          </tr>
+        );
+    });
   }
 
   render() {
@@ -45,9 +53,11 @@ class SudokuGameComponent extends React.Component {
         <div class="row">
           <div class="col left-right-padding-5">
               <div id="board" class="sudoku-parent">
-                  <table class="table table-bordered sudoku-table">
-                   { this.renderSudoku() }
-                  </table>
+                  <Table striped bordered hover class="table table-bordered sudoku-table">
+                    <tbody>
+                    { this.renderSudoku() }
+                    </tbody>
+                  </Table>
               </div>
               <Button OnClick="giveUp()">Give Up</Button>
               <Button OnClick="check()">Check</Button>
