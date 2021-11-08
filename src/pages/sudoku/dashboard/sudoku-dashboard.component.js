@@ -42,6 +42,7 @@ class SudokuDashboardComponent extends React.Component {
           <li>
             Sudoku
             <ul>
+              <li>generatedDate</li>
               <li>problem</li>
               <li>solution</li>
             </ul>
@@ -57,6 +58,7 @@ class SudokuDashboardComponent extends React.Component {
             Submission
             <ul>
               <li>completed: [True or False] - allows for partial submissions</li>
+              <li>date/time</li>
             </ul>
           </li>
         </ul>
