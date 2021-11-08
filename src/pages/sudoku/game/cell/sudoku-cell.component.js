@@ -14,9 +14,10 @@ class SudokuCellComponent extends Component {
   render() {
     return (
       <td>
-        <input id={this.createSudokuInputId("sudoku-input",this.row, this.column)}
-              name={this.createSudokuInputName(this.row, this.column)}
+        <input id={this.createSudokuInputId("sudoku-input",this.props.row, this.props.column)}
+              name={this.createSudokuInputName(this.props.row, this.props.column)}
               type="number"
+              value={this.props.cell}
               class="sudoku-input"
               onKeydown = "if(event.keyCode == 13){this.blur()}"
         />
