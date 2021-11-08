@@ -2,16 +2,16 @@
   background-color: #282c34;
   color: white;
 }
-.sudoku-table tr {
+tr {
   background-color: white;
 }
-.sudoku-table tr:nth-child(3) td, .sudoku-table tr:nth-child(6) td {
+tr:nth-child(3) td, tr:nth-child(6) td {
   border-bottom: 3px solid grey;
 }
-.sudoku-table tr td:nth-child(3), .sudoku-table tr td:nth-child(6) {
+tr td:nth-child(3), tr td:nth-child(6) {
   border-right: 3px solid grey;
 }
-.sudoku-table td{
+td{
   background-color: red;
   padding:3px;
   width:25px;
