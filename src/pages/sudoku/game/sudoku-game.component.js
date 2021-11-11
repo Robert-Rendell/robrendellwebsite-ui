@@ -2,9 +2,16 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import SudokuCellComponent from './cell/sudoku-cell.component';
+import axios from 'axios';
+import config from '../../../config';
 import './sudoku-game.component.css';
 
 class SudokuGameComponent extends React.Component {
+
+  static Divs = {
+    SudokuBoard: 'render-sudoku-board',
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -23,15 +30,31 @@ class SudokuGameComponent extends React.Component {
     };
   }
 
+  getSudoku(id) {
+    axios.get(`${config.backend}/sudoku/${id}`,
+      { headers: {'Content-Type': 'application/json'}}
+    ).then((response) => {
+      console.log(response.data);
+      const sudoku = response.data['problem'];
+      this.setState({sudokuBoard: sudoku});
+      const div = document.getElementById(SudokuGameComponent.Divs.SudokuBoard);
+      div.innerHTML = this.renderSudoku();
+    })
+  }
+
   showShareLink(x, shareId) {
 
   }
 
   componentDidMount() {
-    // nothing
+    // const id = this.props.match.params.id;
+
+    // if (id) {
+      
+    // }
   }
 
-  renderSudoku(row) {
+  renderSudoku() {
     return this.state.sudokuBoard.map((sudokuRow, rowIndex) => {
         return (
           <tr>
@@ -53,9 +76,11 @@ class SudokuGameComponent extends React.Component {
         <div class="row">
           <div class="col left-right-padding-5">
               <div id="board" class="sudoku-parent">
-                  <Table striped bordered hover class="table table-bordered sudoku-table">
+                  <Table striped bordered hover>
                     <tbody>
-                    { this.renderSudoku() }
+                      <div id={SudokuGameComponent.Divs.SudokuBoard}>
+                        { this.renderSudoku() }
+                      </div>
                     </tbody>
                   </Table>
               </div>

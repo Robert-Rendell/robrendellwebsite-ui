@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import './sudoku-dashboard.component.css';
 import { Link } from "react-router-dom";
+import './sudoku-dashboard.component.css';
 
 class SudokuDashboardComponent extends React.Component {
   constructor(props) {
@@ -20,6 +20,8 @@ class SudokuDashboardComponent extends React.Component {
         <hr/>
         <h2>Play!</h2>
         <Link to="/sudoku/play">Populate sudoku</Link>
+        <br/>
+        <Link to="/sudoku/0">Play a sudoku</Link>
         <hr/>
         <h2>Generate</h2>
         <div id="difficulty-button-panel-parent">

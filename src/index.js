@@ -21,6 +21,7 @@ ReactDOM.render(
 
           <Route path="sudoku" element={<SudokuDashboardComponent />} />
           <Route path="sudoku/play" element={<SudokuGameComponent />} />
+          <Route path="sudoku/play/:id" element={<SudokuGameComponent />} />
 
           <Route path="strava-api" element={<StravaDashboardComponent />} />
         </div>
