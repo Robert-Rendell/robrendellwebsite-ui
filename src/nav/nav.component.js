@@ -28,14 +28,10 @@ class NavComponent extends React.Component {
         <Navbar.Brand href="/">Rob Rendell</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
+          <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">LinkedIn</Nav.Link>
-            <Nav.Link href="/sudoku" disabled>Sudoku</Nav.Link>
+            <Nav.Link href="/sudoku" disabled>Sudoku Project</Nav.Link>
             <Nav.Link href="/strava-api" disabled>Strava API (OAuth2.0)</Nav.Link>
             <NavDropdown title="Processing.js" id="processingNavbarScrollingDropdown">
               <NavDropdown.Item href="https://editor.p5js.org/Robert-Rendell/sketches/Zi4pekiUZd">Chaos Theory: Bifurcation Diagram</NavDropdown.Item>

@@ -1,0 +1,23 @@
+Button {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color:red;
+}
+
+#sudoku-dashboard {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+}
+
+#difficulty-button-panel {
+  justify-content: center;
+  width: max-content;
+  align-content: center;
+}
+
+#difficulty-button-panel-container {
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
