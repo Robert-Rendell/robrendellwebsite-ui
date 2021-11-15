@@ -18,26 +18,30 @@ class SudokuDashboardComponent extends React.Component {
       <div id="sudoku-dashboard">
         <h1>Sudoku!</h1>
         <hr/>
-        <h2>Play!</h2>
-        <Link to="/sudoku/play">Populate sudoku</Link>
+        <h2>Play Sudoku (Gradual work in progress)</h2>
+        <b>Progress Updates:</b>
+        <p>- 15.53 15/11/21 - Sudoku loaded from AWS DynamoDB but the UI needs work to play it</p>
+        <Link to="/sudoku/play">Populate sudoku board</Link>
         <br/>
-        <Link to="/sudoku/0">Play a sudoku</Link>
-        <hr/>
-        <h2>Generate</h2>
+        <Link to="/sudoku/play/0">Play a sudoku</Link>
+        <br/>
+        <h2>Generate Sudoku (coming soon)</h2>
         <div id="difficulty-button-panel-parent">
           <div id="difficulty-button-panel">
-            <Button>
+            <Button disabled>
               Easy
             </Button>
-            <Button>
+            <Button disabled>
               Medium
             </Button>
-            <Button>
+            <Button disabled>
               Hard
             </Button>
           </div>
         </div>
 
+        <hr/>
+        <h2>Documentation</h2> 
         <hr/>
         <h2>Entities</h2>
         <ul>

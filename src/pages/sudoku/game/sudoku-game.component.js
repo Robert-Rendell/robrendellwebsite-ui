@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import SudokuCellComponent from './cell/sudoku-cell.component';
@@ -16,17 +17,7 @@ class SudokuGameComponent extends React.Component {
     super(props);
     this.state = {
         date: new Date(),
-        sudokuBoard: [
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-        ],
+        sudokuBoard: [],
     };
   }
 
@@ -38,7 +29,7 @@ class SudokuGameComponent extends React.Component {
       const sudoku = response.data['problem'];
       this.setState({sudokuBoard: sudoku});
       const div = document.getElementById(SudokuGameComponent.Divs.SudokuBoard);
-      div.innerHTML = this.renderSudoku();
+      ReactDOM.render(this.renderSudoku(), div);
     })
   }
 
@@ -47,11 +38,29 @@ class SudokuGameComponent extends React.Component {
   }
 
   componentDidMount() {
-    // const id = this.props.match.params.id;
+    const id = this.props.sudokuId;
+    console.log(`Got sudoku id: ${id}`);
+    if (id) {
+      this.getSudoku(id);
+    } else {
+      this.populateSudokuGrid();
+    }
+  }
 
-    // if (id) {
-      
-    // }
+  populateSudokuGrid() {
+    this.setState({
+      sudokuBoard: [
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+      ]
+    });
   }
 
   renderSudoku() {
@@ -70,6 +79,14 @@ class SudokuGameComponent extends React.Component {
     });
   }
 
+  giveUp() {
+    //
+  }
+
+  validateSudoku() {
+    //
+  }
+
   render() {
     return (
       <div id="sudoku-game">
@@ -77,19 +94,16 @@ class SudokuGameComponent extends React.Component {
           <div class="col left-right-padding-5">
               <div id="board" class="sudoku-parent">
                   <Table striped bordered hover>
-                    <tbody>
-                      <div id={SudokuGameComponent.Divs.SudokuBoard}>
+                    <tbody id={SudokuGameComponent.Divs.SudokuBoard}>
                         { this.renderSudoku() }
-                      </div>
                     </tbody>
                   </Table>
               </div>
-              <Button OnClick="giveUp()">Give Up</Button>
-              <Button OnClick="check()">Check</Button>
+              <Button onClick={this.giveUp()}>Give Up</Button>
+              <Button onClick={this.validateSudoku()}>Check</Button>
               <input type="text" id="txtShareLink" class="inline form-control"
                 onFocus={this.showShareLink(this,'{{ sudoku_id }}')}
-                onFocusout={this.value = 'click for share link'}
-                onMouseup={false}
+                onBlur={() => this.value = 'click for share link'}
                 value="click for share link"/>
           </div>
         </div>

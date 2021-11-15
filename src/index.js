@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,20 +16,23 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
       <Routes>
-        <div class='rob-rendell-website'>
           <Route path="/" element={<HomePageComponent />} />
 
           <Route path="sudoku" element={<SudokuDashboardComponent />} />
           <Route path="sudoku/play" element={<SudokuGameComponent />} />
-          <Route path="sudoku/play/:id" element={<SudokuGameComponent />} />
+          <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
 
           <Route path="strava-api" element={<StravaDashboardComponent />} />
-        </div>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+function PlaySudoku() {
+  const { sudokuId } = useParams();
+  return <SudokuGameComponent sudokuId={sudokuId}/>;
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
