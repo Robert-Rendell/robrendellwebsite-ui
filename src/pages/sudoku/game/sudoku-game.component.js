@@ -64,6 +64,7 @@ class SudokuGameComponent extends React.Component {
   }
 
   renderSudoku() {
+    if (this.state.sudokuBoard.length === 0) return (<h2>Loading...</h2>)
     return this.state.sudokuBoard.map((sudokuRow, rowIndex) => {
         return (
           <tr>
