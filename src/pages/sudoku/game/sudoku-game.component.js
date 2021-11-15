@@ -17,17 +17,7 @@ class SudokuGameComponent extends React.Component {
     super(props);
     this.state = {
         date: new Date(),
-        sudokuBoard: [
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-            [1,2,3,1,2,3,1,2,3],
-        ],
+        sudokuBoard: [],
     };
   }
 
@@ -52,7 +42,25 @@ class SudokuGameComponent extends React.Component {
     console.log(`Got sudoku id: ${id}`);
     if (id) {
       this.getSudoku(id);
+    } else {
+      this.populateSudokuGrid();
     }
+  }
+
+  populateSudokuGrid() {
+    this.setState({
+      sudokuBoard: [
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+        [1,2,3,1,2,3,1,2,3],
+      ]
+    });
   }
 
   renderSudoku() {
