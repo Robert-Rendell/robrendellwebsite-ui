@@ -99,12 +99,14 @@ class SudokuGameComponent extends React.Component {
                     </tbody>
                   </Table>
               </div>
-              <Button onClick={this.giveUp()}>Give Up</Button>
-              <Button onClick={this.validateSudoku()}>Check</Button>
+              <Button onClick={this.giveUp()} disabled>Give Up</Button>
+              <Button onClick={this.validateSudoku()} disabled>Check</Button>
               <input type="text" id="txtShareLink" class="inline form-control"
                 onFocus={this.showShareLink(this,'{{ sudoku_id }}')}
                 onBlur={() => this.value = 'click for share link'}
-                value="click for share link"/>
+                value="click for share link"
+                disabled
+              />
           </div>
         </div>
       </div>
