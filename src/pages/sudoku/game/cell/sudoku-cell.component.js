@@ -11,15 +11,28 @@ class SudokuCellComponent extends Component {
     return `${inputName}${this.createSudokuInputName(row, col)}`;
   }
 
+  keyDown(event) {
+    if(event.keyCode === 13) this.blur();
+  }
+
+  getCellValue() {
+    return parseInt(this.props.cell) > 0 ? this.props.cell : '';
+  }
+
+  onChangeHandler() {
+    return '';
+  }
+
   render() {
     return (
       <td>
         <input id={this.createSudokuInputId("sudoku-input",this.props.row, this.props.column)}
               name={this.createSudokuInputName(this.props.row, this.props.column)}
               type="number"
-              value={this.props.cell}
+              value={this.getCellValue()}
               class="sudoku-input"
-              onKeydown = "if(event.keyCode == 13){this.blur()}"
+              onKeyDown={this.keyDown}
+              defaultValue={ this.getCellValue() ? undefined : this.onChangeHandler}
         />
       </td>
     );
