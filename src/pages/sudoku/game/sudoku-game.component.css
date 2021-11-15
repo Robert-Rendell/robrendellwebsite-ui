@@ -1,6 +1,7 @@
 #sudoku-game {
   background-color: #282c34;
   color: white;
+  padding: 20px;
 }
 
 h2 {
@@ -44,10 +45,6 @@ td{
 
 #sudoku{
   animation: 1s ease-out 0s 1 fadeIn;
-}
-
-#board{
-  padding-top:10px;
 }
 
 @keyframes slideInFromLeft {
