@@ -19,20 +19,16 @@ class SudokuCellComponent extends Component {
     return parseInt(this.props.cell) > 0 ? this.props.cell : '';
   }
 
-  onChangeHandler() {
-    return '';
-  }
-
   render() {
     return (
       <td>
         <input id={this.createSudokuInputId("sudoku-input",this.props.row, this.props.column)}
               name={this.createSudokuInputName(this.props.row, this.props.column)}
               type="number"
-              value={this.getCellValue()}
+              defaultValue={this.getCellValue()}
               class="sudoku-input"
               onKeyDown={this.keyDown}
-              defaultValue={ this.getCellValue() ? undefined : this.onChangeHandler}
+              disabled={this.getCellValue() ? true : false}
         />
       </td>
     );
