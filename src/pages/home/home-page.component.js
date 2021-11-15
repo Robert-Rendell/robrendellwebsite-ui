@@ -18,7 +18,11 @@ class HomePageComponent extends React.Component {
       <div class="home-page-margins page-styling">
         <h2 class="centred">Welcome to robrendell.com</h2>
         <h3>Rob Rendell: Node.js Developer (--- CURRENTLY LOOKING FOR WORK ---)</h3>
-        <p>last updated: 05/11/21 @ 09.15</p>
+        <h4>Recent developments:</h4>
+        <ul>
+          <li>15/11/21 @ 15.53 - Enabled Sudoku Project. It is currently using <code>AWS.DynamoDB.getItem</code></li>
+          <li>05/11/21 @ 09.15 - Home page images loading using <code>AWS.S3.getSignedUrlPromise</code> and <code>AWS.S3.listObjectsV2</code></li>
+        </ul>
         <hr/>
         <h4>This website is an ongoing personal project using:</h4>
         <ul>

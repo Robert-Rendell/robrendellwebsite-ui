@@ -20,7 +20,7 @@ class SudokuDashboardComponent extends React.Component {
         <hr/>
         <h2>Play Sudoku (Gradual work in progress)</h2>
         <b>Progress Updates:</b>
-        <p>- 15.53 15/11/21 - Sudoku loaded from AWS DynamoDB but the UI needs work to play it</p>
+        <p>- 15/11/21 @ 15.53 - Sudoku loaded from AWS DynamoDB but the UI needs more dev work to play it</p>
         <Link to="/sudoku/play">Populate sudoku board</Link>
         <br/>
         <Link to="/sudoku/play/0">Play a sudoku</Link>
