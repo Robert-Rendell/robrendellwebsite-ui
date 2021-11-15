@@ -33,7 +33,9 @@ class HomePageComponent extends React.Component {
         </ul>
         <hr/>
         <p>Here are some of my own photos from travelling over the years <i>(click to enlarge - coming soon)</i>:</p>
-        <div id="home-page-img-div"></div>
+        <div id="home-page-img-div">
+          <h2>Loading images from S3...</h2>
+        </div>
       </div>
     );
   }
@@ -49,6 +51,7 @@ class HomePageComponent extends React.Component {
       console.log()
       const imgUrlArray = response.data['travelImages'];
       const imgPanelDiv = document.getElementById('home-page-img-div')
+      imgPanelDiv.innerHTML = '';
       imgUrlArray.forEach((imgUrl) => {
         imgPanelDiv.innerHTML += this.addHomePageImage(imgUrl);
       });
