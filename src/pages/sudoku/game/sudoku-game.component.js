@@ -22,6 +22,7 @@ class SudokuGameComponent extends React.Component {
     this.readSudokuGrid = this.readSudokuGrid.bind(this);
     this.submitSudoku = this.submitSudoku.bind(this);
     this.valid = this.valid.bind(this);
+    this.invalid = this.invalid.bind(this);
     this.complete = this.complete.bind(this);
     // Use arrow funtions instead of having to bind to 'this'
   }
@@ -120,8 +121,10 @@ class SudokuGameComponent extends React.Component {
       console.log(response.data);
       if (response.data.valid && response.data.complete) {
         this.complete();
-      } else {
-        if (response.data.valid) this.valid();
+      } else if (response.data.valid) {
+        this.valid();
+      } else if (!response.data.valid) {
+        this.invalid();
       }
     });
   }
@@ -146,6 +149,10 @@ class SudokuGameComponent extends React.Component {
           </tr>
         );
     });
+  }
+
+  invalid() {
+    alert('Something is wrong!');
   }
 
   valid() {
