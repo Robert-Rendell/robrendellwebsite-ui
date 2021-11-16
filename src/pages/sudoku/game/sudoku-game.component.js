@@ -11,15 +11,17 @@ import './sudoku-game.component.css';
 class SudokuGameComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.divs = {
-      SudokuBoard: 'render-sudoku-board',
-    };
     this.state = {
         date: new Date(),
         sudokuBoard: [],
         submission: [],
+        sudokuId: '',
         submissionId: '',
     };
+    // Oh my god JavaScript...
+    this.readSudokuGrid = this.readSudokuGrid.bind(this);
+    this.submitSudoku = this.submitSudoku.bind(this);
+    // Use arrow funtions instead of having to bind to 'this'
   }
 
   showShareLink(x, shareId) {
@@ -54,35 +56,16 @@ class SudokuGameComponent extends React.Component {
 
   readSudokuGrid() {
     const sudokuGrid = [];
-    console.log('got here 1)')
     for (let row = 0; row < 9; row++) {
-      const row = [];
-      sudokuGrid.push(row);
+      const rowCells = [];
+      sudokuGrid.push(rowCells);
       for (let col = 0; col < 9; col++) {
-        const v = document.getElementById(`sudoku-input(${row}, ${col})`).value
-        row.push(v);
+        const v = document.getElementById(`sudoku-input(${row}, ${col})`)?.value;
+        rowCells.push(v ? parseInt(v) : 0);
       }
     }
-    console.log('got here 2)')
+    console.log(sudokuGrid);
     return sudokuGrid;
-  }
-
-  renderSudoku() {
-    if (this.state.sudokuBoard.length === 0) return (<h2>Loading...</h2>)
-    return this.state.sudokuBoard.map((sudokuRow, rowIndex) => {
-        return (
-          <tr key={() => `row(${rowIndex})`}>
-          { 
-            sudokuRow.map((cell, columnIndex) => {
-              return <SudokuCellComponent key={() => `cell(${rowIndex},${columnIndex})`}
-                                          cell={cell} 
-                                          row={rowIndex} 
-                                          column={columnIndex}/>
-            })
-          }
-          </tr>
-        );
-    });
   }
 
   /**
@@ -104,7 +87,7 @@ class SudokuGameComponent extends React.Component {
         submissionId,
         sudokuId,
       });
-      const div = document.getElementById(this.divs.SudokuBoard);
+      const div = document.getElementById(SudokuGameComponent.Div.SudokuBoard);
       ReactDOM.render(this.renderSudoku(), div);
     });
   }
@@ -122,22 +105,40 @@ class SudokuGameComponent extends React.Component {
    * - valid: boolean
    */
   submitSudoku() {
-    console.log(this.readSudokuGrid());
+    const sudokuGrid = this.readSudokuGrid();
     axios.post(`${config.backend}/sudoku/submit`,
       { 
         headers: {'Content-Type': 'application/json'},
-        "sudokuId": "0",
-        "sudokuSubmission": "[[1,6,2,4,5,3,7,8,9],[3,7,5,9,1,8,4,6,2],[9,8,4,6,2,7,5,3,1],[6,3,1,7,8,4,9,2,5],[8,4,7,2,9,5,6,1,3],[5,2,9,1,3,6,8,7,4],[2,9,8,5,7,1,3,4,6],[4,1,3,8,6,9,2,5,7],[7,5,6,3,4,2,1,9,8]]",
+        "sudokuId": this.state.sudokuId,
+        "sudokuSubmission": JSON.stringify(sudokuGrid),
+        "sudokuSubmissionId": this.state.submissionId,
         "timeTaken": 0
       }
     ).then((response) => {
       console.log(response.data);
-      
     });
   }
 
   giveUp() {
     //
+  }
+
+  renderSudoku() {
+    if (this.state.sudokuBoard.length === 0) return (<h2>Loading...</h2>)
+    return this.state.sudokuBoard.map((sudokuRow, rowIndex) => {
+        return (
+          <tr key={`row(${rowIndex})`}>
+          { 
+            sudokuRow.map((cell, columnIndex) => {
+              return <SudokuCellComponent key={`cell(${rowIndex},${columnIndex})`}
+                                          cell={cell} 
+                                          row={rowIndex} 
+                                          column={columnIndex}/>
+            })
+          }
+          </tr>
+        );
+    });
   }
 
   render() {
@@ -147,7 +148,7 @@ class SudokuGameComponent extends React.Component {
           <div className="col left-right-padding-5">
               <div id="board" className="sudoku-parent">
                   <Table striped bordered hover>
-                    <tbody id={SudokuGameComponent.Divs.SudokuBoard}>
+                    <tbody id={SudokuGameComponent.Div.SudokuBoard}>
                         { this.renderSudoku() }
                     </tbody>
                   </Table>
@@ -170,5 +171,9 @@ class SudokuGameComponent extends React.Component {
 export default SudokuGameComponent;
 
 SudokuGameComponent.propTypes = {
-  sudokuId: PropTypes.string.isRequired,
+  sudokuId: PropTypes.string,
 }
+
+SudokuGameComponent.Div = {
+  SudokuBoard: 'render-sudoku-board',
+};
