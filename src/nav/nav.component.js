@@ -45,10 +45,10 @@ class NavComponent extends React.Component {
           </Nav>
           <Form className="d-flex">
             <img src={logo} width="40" height="40" alt="React" />
-            <img src={tsLogo} class="tech-icons" width="30" height="30" alt="TypeScript" />
-            <img src={nodeJsLogo} class="tech-icons nodejs-icon" width="30" height="30" alt="nodeJs" />
-            <div class="tech-icons aws-icon-bg" width="40" height="40">
-              <img src={awsLogo} class="aws-icon" width="30" height="20" alt="nodeJs" />
+            <img src={tsLogo} className="tech-icons" width="30" height="30" alt="TypeScript" />
+            <img src={nodeJsLogo} className="tech-icons nodejs-icon" width="30" height="30" alt="nodeJs" />
+            <div className="tech-icons aws-icon-bg" width="40" height="40">
+              <img src={awsLogo} className="aws-icon" width="30" height="20" alt="nodeJs" />
             </div>
             <Button variant="outline-success" disabled>Enquire</Button>
           </Form>

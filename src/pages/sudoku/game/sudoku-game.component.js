@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
@@ -8,13 +9,11 @@ import config from '../../../config';
 import './sudoku-game.component.css';
 
 class SudokuGameComponent extends React.Component {
-
-  static Divs = {
-    SudokuBoard: 'render-sudoku-board',
-  };
-
   constructor(props) {
     super(props);
+    this.divs = {
+      SudokuBoard: 'render-sudoku-board',
+    };
     this.state = {
         date: new Date(),
         sudokuBoard: [],
@@ -24,7 +23,7 @@ class SudokuGameComponent extends React.Component {
   }
 
   showShareLink(x, shareId) {
-
+    console.log(x, shareId);
   }
 
   componentDidMount() {
@@ -53,14 +52,30 @@ class SudokuGameComponent extends React.Component {
     });
   }
 
+  readSudokuGrid() {
+    const sudokuGrid = [];
+    console.log('got here 1)')
+    for (let row = 0; row < 9; row++) {
+      const row = [];
+      sudokuGrid.push(row);
+      for (let col = 0; col < 9; col++) {
+        const v = document.getElementById(`sudoku-input(${row}, ${col})`).value
+        row.push(v);
+      }
+    }
+    console.log('got here 2)')
+    return sudokuGrid;
+  }
+
   renderSudoku() {
     if (this.state.sudokuBoard.length === 0) return (<h2>Loading...</h2>)
     return this.state.sudokuBoard.map((sudokuRow, rowIndex) => {
         return (
-          <tr>
+          <tr key={() => `row(${rowIndex})`}>
           { 
             sudokuRow.map((cell, columnIndex) => {
-              return <SudokuCellComponent cell={cell} 
+              return <SudokuCellComponent key={() => `cell(${rowIndex},${columnIndex})`}
+                                          cell={cell} 
                                           row={rowIndex} 
                                           column={columnIndex}/>
             })
@@ -89,7 +104,7 @@ class SudokuGameComponent extends React.Component {
         submissionId,
         sudokuId,
       });
-      const div = document.getElementById(SudokuGameComponent.Divs.SudokuBoard);
+      const div = document.getElementById(this.divs.SudokuBoard);
       ReactDOM.render(this.renderSudoku(), div);
     });
   }
@@ -107,6 +122,7 @@ class SudokuGameComponent extends React.Component {
    * - valid: boolean
    */
   submitSudoku() {
+    console.log(this.readSudokuGrid());
     axios.post(`${config.backend}/sudoku/submit`,
       { 
         headers: {'Content-Type': 'application/json'},
@@ -116,6 +132,7 @@ class SudokuGameComponent extends React.Component {
       }
     ).then((response) => {
       console.log(response.data);
+      
     });
   }
 
@@ -126,9 +143,9 @@ class SudokuGameComponent extends React.Component {
   render() {
     return (
       <div id="sudoku-game">
-        <div class="row">
-          <div class="col left-right-padding-5">
-              <div id="board" class="sudoku-parent">
+        <div className="row">
+          <div className="col left-right-padding-5">
+              <div id="board" className="sudoku-parent">
                   <Table striped bordered hover>
                     <tbody id={SudokuGameComponent.Divs.SudokuBoard}>
                         { this.renderSudoku() }
@@ -137,7 +154,7 @@ class SudokuGameComponent extends React.Component {
               </div>
               <Button onClick={this.giveUp} disabled>Give Up</Button>
               <Button onClick={this.submitSudoku}>Check</Button>
-              <input type="text" id="txtShareLink" class="inline form-control"
+              <input type="text" id="txtShareLink" className="inline form-control"
                 onFocus={this.showShareLink(this,'{{ sudoku_id }}')}
                 onBlur={() => this.value = 'click for share link'}
                 value="click for share link"
@@ -151,3 +168,7 @@ class SudokuGameComponent extends React.Component {
 }
 
 export default SudokuGameComponent;
+
+SudokuGameComponent.propTypes = {
+  sudokuId: PropTypes.string.isRequired,
+}

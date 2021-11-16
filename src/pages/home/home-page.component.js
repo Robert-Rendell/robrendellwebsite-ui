@@ -15,8 +15,8 @@ class HomePageComponent extends React.Component {
 
   render() {
     return (
-      <div class="home-page-margins page-styling">
-        <h2 class="centred">Welcome to robrendell.com</h2>
+      <div className="home-page-margins page-styling">
+        <h2 className="centred">Welcome to robrendell.com</h2>
         <h3>Rob Rendell: Node.js Developer (--- CURRENTLY LOOKING FOR WORK ---)</h3>
         <h4>Recent developments:</h4>
         <ul>
@@ -42,7 +42,7 @@ class HomePageComponent extends React.Component {
 
   addHomePageImage(imgUrl) {
     return "<img class=\"home-page-img\" src=\"" + imgUrl + "\"/ onClick={activateLasers}>";
-  };
+  }
 
   getHomePageImageUrls() {
     axios.get(config.backend,

@@ -86,8 +86,7 @@ class SudokuDashboardComponent extends React.Component {
 
         <hr/>
         <p>
-        When sudoku is finished by user or partially finished, validate their input first with the 
-        front end. If the front end says it's correct When they
+        When sudoku is finished by user or partially finished, send a sudoku submission to the back end. When they
         finish the sudoku and it is correct, send respond with success to update the UI.
         </p>
 
