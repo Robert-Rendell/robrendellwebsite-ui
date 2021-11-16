@@ -21,6 +21,8 @@ class SudokuGameComponent extends React.Component {
     // Oh my god JavaScript...
     this.readSudokuGrid = this.readSudokuGrid.bind(this);
     this.submitSudoku = this.submitSudoku.bind(this);
+    this.valid = this.valid.bind(this);
+    this.complete = this.complete.bind(this);
     // Use arrow funtions instead of having to bind to 'this'
   }
 
@@ -116,6 +118,11 @@ class SudokuGameComponent extends React.Component {
       }
     ).then((response) => {
       console.log(response.data);
+      if (response.data.valid && response.data.complete) {
+        this.complete();
+      } else {
+        if (response.data.valid) this.valid();
+      }
     });
   }
 
@@ -141,6 +148,14 @@ class SudokuGameComponent extends React.Component {
     });
   }
 
+  valid() {
+    alert('Sudoku is valid! Keep going!');
+  }
+
+  complete() {
+    alert('Sudoku is completed! Well done!!');
+  }
+
   render() {
     return (
       <div id="sudoku-game">
@@ -155,12 +170,12 @@ class SudokuGameComponent extends React.Component {
               </div>
               <Button onClick={this.giveUp} disabled>Give Up</Button>
               <Button onClick={this.submitSudoku}>Check</Button>
-              <input type="text" id="txtShareLink" className="inline form-control"
+              {/* <input type="text" id="txtShareLink" className="inline form-control"
                 onFocus={this.showShareLink(this,'{{ sudoku_id }}')}
                 onBlur={() => this.value = 'click for share link'}
                 value="click for share link"
                 disabled
-              />
+              /> */}
           </div>
         </div>
       </div>
