@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './sudoku-cell.component.css';
 
 class SudokuCellComponent extends Component {
@@ -26,7 +27,7 @@ class SudokuCellComponent extends Component {
               name={this.createSudokuInputName(this.props.row, this.props.column)}
               type="number"
               defaultValue={this.getCellValue()}
-              class="sudoku-input"
+              className="sudoku-input"
               onKeyDown={this.keyDown}
               disabled={this.getCellValue() ? true : false}
         />
@@ -36,3 +37,9 @@ class SudokuCellComponent extends Component {
 }
 
 export default SudokuCellComponent;
+
+SudokuCellComponent.propTypes = {
+  cell: PropTypes.number.isRequired,
+  row: PropTypes.number.isRequired,
+  column: PropTypes.number.isRequired,
+}
