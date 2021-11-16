@@ -18,19 +18,9 @@ class SudokuGameComponent extends React.Component {
     this.state = {
         date: new Date(),
         sudokuBoard: [],
+        submission: [],
+        submissionId: '',
     };
-  }
-
-  getSudoku(id) {
-    axios.get(`${config.backend}/sudoku/${id}`,
-      { headers: {'Content-Type': 'application/json'}}
-    ).then((response) => {
-      console.log(response.data);
-      const sudoku = response.data['problem'];
-      this.setState({sudokuBoard: sudoku});
-      const div = document.getElementById(SudokuGameComponent.Divs.SudokuBoard);
-      ReactDOM.render(this.renderSudoku(), div);
-    })
   }
 
   showShareLink(x, shareId) {
@@ -80,11 +70,56 @@ class SudokuGameComponent extends React.Component {
     });
   }
 
-  giveUp() {
-    //
+  /**
+   * Response:
+   * - sudokuId: SudokuId
+   * - puzzle: number[][] | undefined,
+   * - submissionId: SubmissionId,
+   */
+  getSudoku(id) {
+    axios.get(`${config.backend}/sudoku/play/${id}`,
+      { headers: {'Content-Type': 'application/json'}}
+    ).then((response) => {
+      console.log(response.data);
+      const sudoku = response.data['puzzle'];
+      const submissionId = response.data['submissionId'];
+      const sudokuId = response.data['sudokuId'];
+      this.setState({
+        sudokuBoard: sudoku,
+        submissionId,
+        sudokuId,
+      });
+      const div = document.getElementById(SudokuGameComponent.Divs.SudokuBoard);
+      ReactDOM.render(this.renderSudoku(), div);
+    });
   }
 
-  validateSudoku() {
+  /**
+   * API call to POST /sudoku/submit
+   * Request:
+   * - sudokuId: SudokuId,
+   * - sudokuSubmission: string,
+   * - sudokuSubmissionId: SubmissionId,
+   * 
+   * Response:
+   * - errorMessage: string
+   * - complete: boolean
+   * - valid: boolean
+   */
+  submitSudoku() {
+    axios.post(`${config.backend}/sudoku/submit`,
+      { 
+        headers: {'Content-Type': 'application/json'},
+        "sudokuId": "0",
+        "sudokuSubmission": "[[1,6,2,4,5,3,7,8,9],[3,7,5,9,1,8,4,6,2],[9,8,4,6,2,7,5,3,1],[6,3,1,7,8,4,9,2,5],[8,4,7,2,9,5,6,1,3],[5,2,9,1,3,6,8,7,4],[2,9,8,5,7,1,3,4,6],[4,1,3,8,6,9,2,5,7],[7,5,6,3,4,2,1,9,8]]",
+        "timeTaken": 0
+      }
+    ).then((response) => {
+      console.log(response.data);
+    });
+  }
+
+  giveUp() {
     //
   }
 
@@ -100,8 +135,8 @@ class SudokuGameComponent extends React.Component {
                     </tbody>
                   </Table>
               </div>
-              <Button onClick={this.giveUp()} disabled>Give Up</Button>
-              <Button onClick={this.validateSudoku()} disabled>Check</Button>
+              <Button onClick={this.giveUp} disabled>Give Up</Button>
+              <Button onClick={this.submitSudoku}>Check</Button>
               <input type="text" id="txtShareLink" class="inline form-control"
                 onFocus={this.showShareLink(this,'{{ sudoku_id }}')}
                 onBlur={() => this.value = 'click for share link'}
