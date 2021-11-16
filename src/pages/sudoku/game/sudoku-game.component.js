@@ -13,6 +13,7 @@ class SudokuGameComponent extends React.Component {
     super(props);
     this.state = {
         date: new Date(),
+        puzzle: [],
         sudokuBoard: [],
         submission: [],
         sudokuId: '',
@@ -24,6 +25,11 @@ class SudokuGameComponent extends React.Component {
     this.valid = this.valid.bind(this);
     this.invalid = this.invalid.bind(this);
     this.complete = this.complete.bind(this);
+    this.disableValidateButton = this.disableValidateButton.bind(this);
+    this.enableValidateButton = this.enableValidateButton.bind(this);
+    this.reset = this.reset.bind(this);
+    this.disableBoard = this.disableBoard.bind(this);
+    this.setupBoard = this.setupBoard.bind(this);
     // Use arrow funtions instead of having to bind to 'this'
   }
 
@@ -71,6 +77,11 @@ class SudokuGameComponent extends React.Component {
     return sudokuGrid;
   }
 
+  setupBoard() {
+    const div = document.getElementById(SudokuGameComponent.Div.SudokuBoard);
+    ReactDOM.render(this.renderSudoku(), div);
+  }
+
   /**
    * Response:
    * - sudokuId: SudokuId
@@ -86,12 +97,12 @@ class SudokuGameComponent extends React.Component {
       const submissionId = response.data['submissionId'];
       const sudokuId = response.data['sudokuId'];
       this.setState({
+        puzzle: JSON.stringify(sudoku),
         sudokuBoard: sudoku,
         submissionId,
         sudokuId,
       });
-      const div = document.getElementById(SudokuGameComponent.Div.SudokuBoard);
-      ReactDOM.render(this.renderSudoku(), div);
+      this.setupBoard();
     });
   }
 
@@ -108,6 +119,7 @@ class SudokuGameComponent extends React.Component {
    * - valid: boolean
    */
   submitSudoku() {
+    this.disableValidateButton();
     const sudokuGrid = this.readSudokuGrid();
     axios.post(`${config.backend}/sudoku/submit`,
       { 
@@ -152,15 +164,41 @@ class SudokuGameComponent extends React.Component {
   }
 
   invalid() {
+    this.enableValidateButton();
     alert('Something is wrong!');
   }
 
   valid() {
+    this.enableValidateButton();
     alert('Sudoku is valid! Keep going!');
   }
 
   complete() {
+    this.disableBoard();
+    this.disableValidateButton();
     alert('Sudoku is completed! Well done!!');
+  }
+
+  disableBoard() {
+    const board = document.getElementById(SudokuGameComponent.Div.SudokuBoard);
+    board.disabled = true;
+  }
+
+  disableValidateButton() {
+    const btnValidate = document.getElementById(SudokuGameComponent.Button.Validate);
+    btnValidate.disabled = true;
+  }
+
+  enableValidateButton() {
+    const btnValidate = document.getElementById(SudokuGameComponent.Button.Validate);
+    btnValidate.disabled = false;
+  }
+
+  reset() {
+    this.setState({
+      sudokuBoard: JSON.parse(this.state.puzzle),
+    });
+    this.setupBoard();
   }
 
   render() {
@@ -175,8 +213,9 @@ class SudokuGameComponent extends React.Component {
                     </tbody>
                   </Table>
               </div>
-              <Button onClick={this.giveUp} disabled>Give Up</Button>
-              <Button onClick={this.submitSudoku}>Check</Button>
+              <Button id={SudokuGameComponent.Button.GiveUp} onClick={this.giveUp} disabled>Give Up</Button>
+              <Button id={SudokuGameComponent.Button.Validate} onClick={this.submitSudoku}>Check / Validate</Button>
+              <Button id={SudokuGameComponent.Button.Reset} onClick={this.reset} disabled>Reset</Button>
               {/* <input type="text" id="txtShareLink" className="inline form-control"
                 onFocus={this.showShareLink(this,'{{ sudoku_id }}')}
                 onBlur={() => this.value = 'click for share link'}
@@ -198,4 +237,10 @@ SudokuGameComponent.propTypes = {
 
 SudokuGameComponent.Div = {
   SudokuBoard: 'render-sudoku-board',
+};
+
+SudokuGameComponent.Button = {
+  GiveUp: 'btnGiveUp',
+  Validate: 'btnValidate',
+  Reset: 'btnReset',
 };
