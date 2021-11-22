@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 import { Link } from "react-router-dom";
 import './sudoku-dashboard.component.css';
 
@@ -24,7 +25,27 @@ class SudokuDashboardComponent extends React.Component {
         </p>
         <hr/>
         <h2>Play Sudoku (Gradual work in progress)</h2>
-        <Link to="/sudoku/play/0">Play a sudoku</Link>
+        <Table striped bordered hover variant="dark">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Sudoku name</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>Test Sudoku</td>
+              <td><Link to="/sudoku/play/0">Play!</Link></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Test Sudoku (only one empty cell)</td>
+              <td><Link to="/sudoku/play/1">Play!</Link></td>
+            </tr>
+          </tbody>
+        </Table>
         <br/>
         <h2>Generate Sudoku (coming soon)</h2>
         <div id="difficulty-button-panel-parent">
