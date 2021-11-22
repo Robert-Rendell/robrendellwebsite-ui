@@ -24,8 +24,6 @@ class SudokuDashboardComponent extends React.Component {
           - 16/11/21 @ 14.43 - Developed endpoint for user to submit partial/completed sudokus and have it validated.<br/>
           - 15/11/21 @ 15.53 - Sudoku loaded from AWS DynamoDB but the UI needs more dev work to play it
         </p>
-        <Link to="/sudoku/play">Populate sudoku board</Link>
-        <br/>
         <Link to="/sudoku/play/0">Play a sudoku</Link>
         <br/>
         <h2>Generate Sudoku (coming soon)</h2>
