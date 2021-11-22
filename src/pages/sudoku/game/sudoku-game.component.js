@@ -18,6 +18,7 @@ class SudokuGameComponent extends React.Component {
         submission: [],
         sudokuId: '',
         submissionId: '',
+        submitterName: '',
     };
     // Oh my god JavaScript...
     this.readSudokuGrid = this.readSudokuGrid.bind(this);
@@ -30,6 +31,8 @@ class SudokuGameComponent extends React.Component {
     this.reset = this.reset.bind(this);
     this.disableBoard = this.disableBoard.bind(this);
     this.setupBoard = this.setupBoard.bind(this);
+    this.getSubmitterName = this.getSubmitterName.bind(this);
+    this.isSubmissionComplete = this.isSubmissionComplete.bind(this);
     // Use arrow funtions instead of having to bind to 'this'
   }
 
@@ -119,15 +122,20 @@ class SudokuGameComponent extends React.Component {
    * - valid: boolean
    */
   submitSudoku() {
+    let submitter = '';
     this.disableValidateButton();
     const sudokuGrid = this.readSudokuGrid();
+    if (this.isSubmissionComplete(sudokuGrid)) {
+      submitter = this.getSubmitterName();
+    }
     axios.post(`${config.backend}/sudoku/submit`,
       { 
         headers: {'Content-Type': 'application/json'},
         "sudokuId": this.state.sudokuId,
         "sudokuSubmission": JSON.stringify(sudokuGrid),
         "sudokuSubmissionId": this.state.submissionId,
-        "timeTaken": 0
+        "timeTaken": 0,
+        "submitterName": submitter,
       }
     ).then((response) => {
       console.log(response.data);
@@ -143,6 +151,20 @@ class SudokuGameComponent extends React.Component {
 
   giveUp() {
     //
+  }
+
+  isSubmissionComplete(sudokuGrid) {
+    return !JSON.stringify(sudokuGrid).includes('0');
+  }
+
+  getSubmitterName() {
+    if (this.state.submitterName.length === 0) {
+      const submitterName = prompt('Enter your name or leave blank')
+      this.setState({
+        submitterName,
+      });
+      return submitterName;
+    }
   }
 
   renderSudoku() {
