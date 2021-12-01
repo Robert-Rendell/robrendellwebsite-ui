@@ -38,9 +38,12 @@ class NavComponent extends React.Component {
               <NavDropdown.Item href="#action3" disabled>Fishing Game</NavDropdown.Item>
               <NavDropdown.Item href="#action4" disabled>Bomberman</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Music Projects" id="processingNavbarScrollingDropdown">
+            <NavDropdown title="Music Projects" id="musicProjectsNavbarScrollingDropdown">
               <NavDropdown.Item href="https://www.shiva-archetypes.com">Shiva Archetypes (band)</NavDropdown.Item>
               <NavDropdown.Item href="https://www.robcelticfiddle.co.uk">Rob Celtic Fiddle (weddings)</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Technical Tests" id="techTestsNavbarScrollingDropdown">
+              <NavDropdown.Item href="/technical-tests/291121">29/11/21 - University data visualiser</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form className="d-flex">
