@@ -43,7 +43,8 @@ class UniDataVisualiserComponent extends React.Component {
 
   bestUnisForSubjectOptions(bestUnisForSubjectData) {
     return { chart: {
-      type: 'bar'
+      type: 'bar',
+      width: 500,
     },
     title: {
         text: 'Best Unis for Subject'
@@ -98,7 +99,7 @@ class UniDataVisualiserComponent extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="uni-data-body">
         <h2>Table of subjects and where to study</h2>
         <Table>
         <tbody>
