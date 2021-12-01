@@ -10,14 +10,7 @@ class UniDataVisualiserComponent extends React.Component {
     super(props);
     this.state = { 
       date: new Date(),
-      bestUnisForSubjectGraph: {
-        title: {
-          text: 'My chart'
-        },
-        series: [{
-          data: [1, 2, 3]
-        }]
-      }
+      bestUnisForSubjectGraph: {}
     };
     this.bestUnisForSubjectOptions = this.bestUnisForSubjectOptions.bind(this);
   }
@@ -106,7 +99,7 @@ class UniDataVisualiserComponent extends React.Component {
   render() {
     return (
       <div>
-        <h2>List of subjects and where to study</h2>
+        <h2>Table of subjects and where to study</h2>
         <Table>
         <tbody>
           <tr>
