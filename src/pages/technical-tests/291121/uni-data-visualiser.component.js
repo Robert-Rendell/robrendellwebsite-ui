@@ -10,9 +10,11 @@ class UniDataVisualiserComponent extends React.Component {
     super(props);
     this.state = { 
       date: new Date(),
-      bestUnisForSubjectGraph: {}
+      bestUnisForSubjectGraph: {},
+      submissionsPerYear: {},
     };
     this.bestUnisForSubjectOptions = this.bestUnisForSubjectOptions.bind(this);
+    this.submissionsPerYear = this.submissionsPerYear.bind(this);
   }
 
   /**
@@ -36,6 +38,7 @@ class UniDataVisualiserComponent extends React.Component {
         this.setState({
           bestUnisForSubjectGraph: this.bestUnisForSubjectOptions(response.data.bestUnisForSubject),
           listOfSubjectsAndWhereToStudy: response.data.listOfSubjectsAndWhereToStudy,
+          submissionsPerYear: this.submissionsPerYear(response.data.submissionsPerYear)
         });
       }
     });
@@ -47,7 +50,7 @@ class UniDataVisualiserComponent extends React.Component {
       width: 500,
     },
     title: {
-        text: 'Best Unis for Subject'
+        text: 'Best Universities for Subjects'
     },
     subtitle: {
         text: 'Based on the average student rating from questionnaire submissions'
@@ -97,6 +100,65 @@ class UniDataVisualiserComponent extends React.Component {
     series: bestUnisForSubjectData.series};
   }
 
+  submissionsPerYear(submissionsPerYearData) {
+    return {
+      chart: {
+          type: 'column',
+      },
+      title: {
+          text: 'Submissions Per Year'
+      },
+      xAxis: {
+          categories: submissionsPerYearData.xAxis,
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'No. of submissions'
+          },
+          stackLabels: {
+              enabled: true,
+              style: {
+                  fontWeight: 'bold',
+                  color: ( // theme
+                      Highcharts.defaultOptions.title.style &&
+                      Highcharts.defaultOptions.title.style.color
+                  ) || 'gray'
+              }
+          }
+      },
+      legend: {
+          align: 'right',
+          x: -30,
+          verticalAlign: 'top',
+          y: 25,
+          floating: true,
+          backgroundColor:
+              Highcharts.defaultOptions.legend.backgroundColor || 'white',
+          borderColor: '#CCC',
+          borderWidth: 1,
+          shadow: false
+      },
+      tooltip: {
+          headerFormat: '<b>{point.x}</b><br/>',
+          pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+      },
+      plotOptions: {
+          column: {
+              stacking: 'normal',
+              dataLabels: {
+                  enabled: true
+              }
+          }
+      },
+      series: submissionsPerYearData.series
+      // [{
+      //     name: 'John',
+      //     data: [5, 3, 4, 7, 2]
+      // }]
+    };
+  }
+
   render() {
     return (
       <div id="uni-data-body">
@@ -119,6 +181,10 @@ class UniDataVisualiserComponent extends React.Component {
         <HighchartsReact
           highcharts={Highcharts}
           options={this.state.bestUnisForSubjectGraph}
+        />
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={this.state.submissionsPerYear}
         />
       </div>
     )
