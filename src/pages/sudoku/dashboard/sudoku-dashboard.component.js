@@ -24,7 +24,7 @@ class SudokuDashboardComponent extends React.Component {
           - 15/11/21 @ 15.53 - Sudoku loaded from AWS DynamoDB but the UI needs more dev work to play it
         </p>
         <hr/>
-        <h2>Play Sudoku (Gradual work in progress)</h2>
+        <h2>Play Sudoku (work in progress)</h2>
         <Table striped bordered hover variant="dark">
           <thead>
             <tr>

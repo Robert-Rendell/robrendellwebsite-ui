@@ -17,9 +17,18 @@ class HomePageComponent extends React.Component {
     return (
       <div className="home-page-margins page-styling">
         <h2 className="centred">Welcome to robrendell.com</h2>
-        <h3>Rob Rendell: Node.js Developer (--- CURRENTLY LOOKING FOR WORK ---)</h3>
+        <h3>Rob Rendell: Node.js Developer</h3>
         <h4>Recent developments:</h4>
         <ul>
+          <li>
+            01/12/21 @ 07.00 - <a href="technical-tests/291121">Technical Test</a> completed
+            <ul>
+              <li>
+                University data visualiser with back end express API using AWS S3 for storage
+              </li>
+            </ul>
+          </li>
+          <li>28/11/21 @ 14.00 - AWS Lambda running my Python <a href="sudoku/">Sudoku generation</a> code; triggered by front end.</li>
           <li>16/11/21 @ 12.45 - Enabled &apos;Validate&apos; <a href="sudoku/play/0/">Sudoku Project</a> button.</li>
           <li>15/11/21 @ 15.53 - Enabled <a href="sudoku/">Sudoku Project</a>. It is currently using <code>AWS.DynamoDB.getItem</code></li>
           <li>05/11/21 @ 09.15 - Home page images loading using <code>AWS.S3.getSignedUrlPromise</code> and <code>AWS.S3.listObjectsV2</code></li>

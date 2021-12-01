@@ -9,6 +9,7 @@ import App from './app/App.component';
 import HomePageComponent from './pages/home/home-page.component';
 import SudokuDashboardComponent from './pages/sudoku/dashboard/sudoku-dashboard.component';
 import SudokuGameComponent from './pages/sudoku/game/sudoku-game.component';
+import UniDataVisualiserComponent from './pages/technical-tests/291121/uni-data-visualiser.component'
 import StravaDashboardComponent from './pages/strava-api/strava-dashboard.component';
 
 ReactDOM.render(
@@ -21,6 +22,8 @@ ReactDOM.render(
           <Route path="sudoku" element={<SudokuDashboardComponent />} />
           <Route path="sudoku/play" element={<SudokuGameComponent />} />
           <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
+
+          <Route path="/technical-tests/291121" element={<UniDataVisualiserComponent />} />
 
           <Route path="strava-api" element={<StravaDashboardComponent />} />
       </Routes>
