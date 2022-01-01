@@ -3,7 +3,6 @@ import axios from 'axios';
 import config from '../../../config';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
-import { Link } from "react-router-dom";
 import './sudoku-dashboard.component.css';
 
 class SudokuDashboardComponent extends React.Component {
@@ -13,6 +12,7 @@ class SudokuDashboardComponent extends React.Component {
       date: new Date(),
       generationJobId: undefined,
       retries: 0,
+      recentSudokus: ['hi'],
     };
     this.generateSudoku = this.generateSudoku.bind(this);
     this.generateMediumSudoku = this.generateMediumSudoku.bind(this);
@@ -24,11 +24,30 @@ class SudokuDashboardComponent extends React.Component {
     this.sudokuGenerated = this.sudokuGenerated.bind(this);
     this.watchSudokuGeneration = this.watchSudokuGeneration.bind(this);
     this.setSudokuResult = this.setSudokuResult.bind(this);
+    this.loadDashboard = this.loadDashboard.bind(this);
     this.checkGenerationLoop = undefined; // set later
   }
 
   componentDidMount() {
-    // nothing
+    this.loadDashboard();
+  }
+
+  loadDashboard() {
+    axios.post(`${config.backend}/sudoku/list`, { 
+      headers: {'Content-Type': 'application/json'},
+      filters: {
+        dateGenerated: {
+          days: 30,
+        }
+      },
+      pagination: {
+          limit: 10
+      }
+    }).then((response) => {
+      this.setState({ recentSudokus: response.data.slice() });
+    }).catch((reason) => {
+      console.error(reason);
+    });
   }
 
   /**
@@ -109,7 +128,7 @@ class SudokuDashboardComponent extends React.Component {
         if (this.state.retries < 1) {
           this.setState({ retries: this.state.retries + 1 });
           this.checkGenerationLoop = setInterval(() => this.checkSudokuGeneration(), 10000);
-          this.setSudokuResult(`No response yet: retries (${this.state.retries})`);
+          this.setSudokuResult(`No response yet, retrying (attempt no.${this.state.retries})...`);
         } else {
           this.setSudokuResult(`Sudoku Generation timed out.`);
         }
@@ -130,47 +149,30 @@ class SudokuDashboardComponent extends React.Component {
     this.setSudokuResult(`Sudoku Generated! <a href="/sudoku/play/${sudokuId}">Play</a>`);
     this.toggleGeneration(false);
     this.checkGenerationLoop = null;
+    this.loadDashboard();
   }
 
   render() {
+    const recentSudokus = this.state.recentSudokus?.map(item => {
+      // change the title and location key based on your API
+      return (<tr key={item.sudokuId}>
+        <td>{item.sudokuId}</td>
+        <td>{item.difficulty}</td>
+        <td>{new Date(item.dateGenerated).toDateString()}</td>
+        <td><a href={`/sudoku/play/${item.sudokuId}`}>Play!</a></td> 
+      </tr>)
+    });
     return (
       <div id="sudoku-dashboard">
         <h1>Sudoku!</h1>
         <b>Progress Updates:</b>
         <p>
+          - 01/01/22 @ 23.32 - List generated sudokus when generated<br/>
           - 28/11/21 @ 14.00 - Generate sudoku using S3 upload to trigger AWS Lambda (keeping costs down)<br/>
           - 16/11/21 @ 14.43 - Developed endpoint for user to submit partial/completed sudokus and have it validated.<br/>
           - 15/11/21 @ 15.53 - Sudoku loaded from AWS DynamoDB
         </p>
         <hr/>
-        <h2>Play Sudoku (work in progress)</h2>
-        <Table striped bordered hover variant="dark">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Sudoku name</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>0</td>
-              <td>Test Sudoku</td>
-              <td><Link to="/sudoku/play/0">Play!</Link></td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Test Sudoku (only one empty cell)</td>
-              <td><Link to="/sudoku/play/1">Play!</Link></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Generated Hard Sudoku</td>
-              <td><Link to="/sudoku/play/5485039b-4d70-4cba-befd-bc326ab32ff0">Play!</Link></td>
-            </tr>
-          </tbody>
-        </Table>
-        <br/>
         <h2>Generate Sudoku</h2>
         <div id="difficulty-button-panel-parent">
           <div id="difficulty-button-panel">
@@ -189,7 +191,21 @@ class SudokuDashboardComponent extends React.Component {
           </div>
           <div id={SudokuDashboardComponent.Div.SudokuGenerationResults}></div>
         </div>
-
+        <hr/>
+        <h2>Play Sudoku (work in progress)</h2>
+        <Table striped bordered hover variant="dark">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Difficulty</th>
+              <th>Generated</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+          {recentSudokus}
+          </tbody>
+        </Table>
         <hr/>
         <h2>
           Documentation: Swagger API
