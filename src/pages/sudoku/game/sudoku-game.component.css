@@ -92,7 +92,7 @@ td{
   font-weight:500;
   text-shadow: 0 0 3px white;
 }
-
+/* 
 #leaderboard table tr:nth-child(2){
   color: #adad85;
   font-weight:400;
@@ -103,7 +103,7 @@ td{
   color: #994d00;
   font-weight:300;
   text-shadow: 0 0 3px white;
-}
+} */
 
 #leaderboard table th{
   color: #212529;
