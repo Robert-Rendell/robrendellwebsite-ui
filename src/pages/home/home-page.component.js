@@ -20,7 +20,7 @@ class HomePageComponent extends React.Component {
         <h3>Rob Rendell: Node.js Developer</h3>
         <h4>Recent developments:</h4>
         <ul>
-          <li>02/12/22 @ 17.40 - Leaderboard feature for time taken to complete <a href="sudoku/">Sudoku</a> using <code>AWS.DynamoDB.query</code> and GSI.</li>
+          <li>02/01/22 @ 17.40 - Leaderboard feature for time taken to complete <a href="sudoku/">Sudoku</a> using <code>AWS.DynamoDB.query</code> and GSI.</li>
           <li>
             01/12/21 @ 07.00 - <a href="technical-tests/291121">Technical Test</a> completed
             <ul>

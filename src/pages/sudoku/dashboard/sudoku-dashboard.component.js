@@ -167,7 +167,7 @@ class SudokuDashboardComponent extends React.Component {
         <h1>Sudoku!</h1>
         <b>Progress Updates:</b>
         <p>
-          - 02/12/22 @ 17.40 - Leaderboard feature for time taken to complete using DynamoDB query and GSI<br/>
+          - 02/01/22 @ 17.40 - Leaderboard feature for time taken to complete using DynamoDB query and GSI<br/>
           - 01/01/22 @ 23.32 - List generated sudokus when generated<br/>
           - 28/11/21 @ 14.00 - Generate sudoku using S3 upload to trigger AWS Lambda (keeping costs down)<br/>
           - 16/11/21 @ 14.43 - Developed endpoint for user to submit partial/completed sudokus and have it validated.<br/>
@@ -193,7 +193,7 @@ class SudokuDashboardComponent extends React.Component {
           <div id={SudokuDashboardComponent.Div.SudokuGenerationResults}></div>
         </div>
         <hr/>
-        <h2>Play Sudoku (work in progress)</h2>
+        <h2>Play Sudoku</h2>
         <Table striped bordered hover variant="dark">
           <thead>
             <tr>
