@@ -140,7 +140,7 @@ class SudokuGameComponent extends React.Component {
     ).then((response) => {
       console.log(response.data);
       if (response.data.valid && response.data.complete) {
-        this.complete();
+        this.complete(response.data.timeTakenMs);
       } else if (response.data.valid) {
         this.valid();
       } else if (!response.data.valid) {
@@ -195,10 +195,10 @@ class SudokuGameComponent extends React.Component {
     alert('Sudoku is valid! Keep going!');
   }
 
-  complete() {
+  complete(timeTakenMs) {
     this.disableBoard();
     this.disableValidateButton();
-    alert('Sudoku is completed! Well done!!');
+    alert(`Sudoku was completed in ${Math.round(timeTakenMs / 1000)} seconds! Well done ${this.state.submitterName}!!`);
   }
 
   disableBoard() {
