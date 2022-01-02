@@ -206,6 +206,7 @@ class SudokuGameComponent extends React.Component {
   }
 
   complete(timeTakenMs) {
+    this.getSudokuLeaderboard(this.props.sudokuId);
     this.disableBoard();
     this.disableValidateButton();
     alert(`Sudoku was completed in ${Math.round(timeTakenMs / 1000)} seconds! Well done ${this.state.submitterName}!!`);
