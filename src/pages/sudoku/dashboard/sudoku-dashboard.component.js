@@ -12,7 +12,7 @@ class SudokuDashboardComponent extends React.Component {
       date: new Date(),
       generationJobId: undefined,
       retries: 0,
-      recentSudokus: ['hi'],
+      recentSudokus: [],
     };
     this.generateSudoku = this.generateSudoku.bind(this);
     this.generateMediumSudoku = this.generateMediumSudoku.bind(this);
@@ -41,10 +41,10 @@ class SudokuDashboardComponent extends React.Component {
         }
       },
       pagination: {
-          limit: 10
+          limit: 10,
       }
     }).then((response) => {
-      this.setState({ recentSudokus: response.data.slice() });
+      this.setState({ recentSudokus: response.data });
     }).catch((reason) => {
       console.error(reason);
     });

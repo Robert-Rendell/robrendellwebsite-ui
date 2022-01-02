@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import SudokuCellComponent from './cell/sudoku-cell.component';
@@ -30,9 +29,9 @@ class SudokuGameComponent extends React.Component {
     this.enableValidateButton = this.enableValidateButton.bind(this);
     this.reset = this.reset.bind(this);
     this.disableBoard = this.disableBoard.bind(this);
-    this.setupBoard = this.setupBoard.bind(this);
     this.getSubmitterName = this.getSubmitterName.bind(this);
     this.isSubmissionComplete = this.isSubmissionComplete.bind(this);
+    this.getSudokuLeaderboard = this.getSudokuLeaderboard.bind(this);
     // Use arrow funtions instead of having to bind to 'this'
   }
 
@@ -45,6 +44,7 @@ class SudokuGameComponent extends React.Component {
     console.log(`Got sudoku id: ${id}`);
     if (id) {
       this.getSudoku(id);
+      this.getSudokuLeaderboard(id);
     } else {
       this.populateSudokuGrid();
     }
@@ -80,11 +80,6 @@ class SudokuGameComponent extends React.Component {
     return sudokuGrid;
   }
 
-  setupBoard() {
-    const div = document.getElementById(SudokuGameComponent.Div.SudokuBoard);
-    ReactDOM.render(this.renderSudoku(), div);
-  }
-
   /**
    * Response:
    * - sudokuId: SudokuId
@@ -105,7 +100,22 @@ class SudokuGameComponent extends React.Component {
         submissionId,
         sudokuId,
       });
-      this.setupBoard();
+    });
+  }
+
+    /**
+   * Response:
+   * - leaderboard: []
+   * - { 'timeTakenMs' | 'dateSubmitted' | 'submitterName' }
+   */
+  getSudokuLeaderboard(id) {
+    axios.get(`${config.backend}/sudoku/leaderboard/${id}`,
+      { headers: {'Content-Type': 'application/json'}}
+    ).then((response) => {
+      console.log(response.data);
+      this.setState({
+        leaderboard: response.data['leaderboard'],
+      });
     });
   }
 
@@ -140,7 +150,7 @@ class SudokuGameComponent extends React.Component {
     ).then((response) => {
       console.log(response.data);
       if (response.data.valid && response.data.complete) {
-        this.complete();
+        this.complete(response.data.timeTakenMs);
       } else if (response.data.valid) {
         this.valid();
       } else if (!response.data.valid) {
@@ -195,10 +205,10 @@ class SudokuGameComponent extends React.Component {
     alert('Sudoku is valid! Keep going!');
   }
 
-  complete() {
+  complete(timeTakenMs) {
     this.disableBoard();
     this.disableValidateButton();
-    alert('Sudoku is completed! Well done!!');
+    alert(`Sudoku was completed in ${Math.round(timeTakenMs / 1000)} seconds! Well done ${this.state.submitterName}!!`);
   }
 
   disableBoard() {
@@ -220,24 +230,53 @@ class SudokuGameComponent extends React.Component {
     this.setState({
       sudokuBoard: JSON.parse(this.state.puzzle),
     });
-    this.setupBoard();
   }
 
   render() {
+    const leaderboardEntries = this.state.leaderboard?.slice(0,5).map((item, index) => {
+      return ( <tr key={`leaderboard-entry-${index}`}>
+        <td>{ index + 1 }</td>
+        <td>{ new Date(item.dateSubmitted).toUTCString().replace('GMT',"") }</td>
+        <td>{ item.submitterName || 'anonymous' }</td>
+        <td>{ Math.round(item.timeTakenMs / 1000) }</td>
+    </tr>)
+    });
+    let leaderboard = '';
+    if (leaderboardEntries?.length > 0) {
+      leaderboard = (
+        <div id="leaderboard_parent" className="col left-right-padding-5">
+          <div id="leaderboard">
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Date</th>
+                      <th>Name</th>
+                      <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  { leaderboardEntries }
+                </tbody>
+            </Table>
+          </div>
+        </div>
+      );
+    }
     return (
       <div id="sudoku-game">
-        <div className="row">
-          <div className="col left-right-padding-5">
+        <div id="sudoku-game-inner" className="row">
+          <div id="board-parent" className="col left-right-padding-5">
               <div id="board" className="sudoku-parent">
                   <Table striped bordered hover>
                     <tbody id={SudokuGameComponent.Div.SudokuBoard}>
                         { this.renderSudoku() }
                     </tbody>
                   </Table>
-              </div>
-              <Button id={SudokuGameComponent.Button.GiveUp} onClick={this.giveUp} disabled>Give Up</Button>
+                  <Button id={SudokuGameComponent.Button.GiveUp} onClick={this.giveUp} disabled>Give Up</Button>
               <Button id={SudokuGameComponent.Button.Validate} onClick={this.submitSudoku}>Check / Validate</Button>
               <Button id={SudokuGameComponent.Button.Reset} onClick={this.reset} disabled>Reset</Button>
+              </div>
               {/* <input type="text" id="txtShareLink" className="inline form-control"
                 onFocus={this.showShareLink(this,'{{ sudoku_id }}')}
                 onBlur={() => this.value = 'click for share link'}
@@ -245,6 +284,7 @@ class SudokuGameComponent extends React.Component {
                 disabled
               /> */}
           </div>
+          {leaderboard}
         </div>
       </div>
     );
