@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import ReactDOM from 'react-dom';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import SudokuCellComponent from './cell/sudoku-cell.component';
@@ -242,39 +241,42 @@ class SudokuGameComponent extends React.Component {
         <td>{ Math.round(item.timeTakenMs / 1000) }</td>
     </tr>)
     });
-    const leaderboard = (
-      <div id="leaderboard_parent" className="col left-right-padding-5">
-        <div id="leaderboard">
-          <Table striped bordered hover>
-              <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Date</th>
-                    <th>Name</th>
-                    <th>Time</th>
-                  </tr>
-              </thead>
-              <tbody>
-                { leaderboardEntries }
-              </tbody>
-          </Table>
+    let leaderboard = '';
+    if (leaderboardEntries?.length > 0) {
+      leaderboard = (
+        <div id="leaderboard_parent" className="col left-right-padding-5">
+          <div id="leaderboard">
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Date</th>
+                      <th>Name</th>
+                      <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  { leaderboardEntries }
+                </tbody>
+            </Table>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
     return (
       <div id="sudoku-game">
-        <div className="row">
-          <div className="col left-right-padding-5">
+        <div id="sudoku-game-inner" className="row">
+          <div id="board-parent" className="col left-right-padding-5">
               <div id="board" className="sudoku-parent">
                   <Table striped bordered hover>
                     <tbody id={SudokuGameComponent.Div.SudokuBoard}>
                         { this.renderSudoku() }
                     </tbody>
                   </Table>
-              </div>
-              <Button id={SudokuGameComponent.Button.GiveUp} onClick={this.giveUp} disabled>Give Up</Button>
+                  <Button id={SudokuGameComponent.Button.GiveUp} onClick={this.giveUp} disabled>Give Up</Button>
               <Button id={SudokuGameComponent.Button.Validate} onClick={this.submitSudoku}>Check / Validate</Button>
               <Button id={SudokuGameComponent.Button.Reset} onClick={this.reset} disabled>Reset</Button>
+              </div>
               {/* <input type="text" id="txtShareLink" className="inline form-control"
                 onFocus={this.showShareLink(this,'{{ sudoku_id }}')}
                 onBlur={() => this.value = 'click for share link'}

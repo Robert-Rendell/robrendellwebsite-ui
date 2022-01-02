@@ -1,7 +1,12 @@
 #sudoku-game {
   background-color: #282c34;
   color: white;
-  padding: 20px;
+}
+
+#sudoku-game-inner {
+  max-width:900px;
+  margin:auto;
+  padding-top: 10px;
 }
 
 h2 {
@@ -24,13 +29,16 @@ td{
   width:25px;
   height:25px;
 }
-.sudoku-parent{
-  max-width:400px;
+
+#leaderboard {
+  max-width: 400px;
+  margin:auto;
 }
 
-
-#leaderboard{
-  padding-top: 10px;
+.sudoku-parent{
+  max-width:400px;
+  margin:auto;
+  padding-bottom: 10px;
 }
 
 .inline{
