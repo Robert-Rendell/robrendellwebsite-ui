@@ -32,6 +32,7 @@ class SudokuGameComponent extends React.Component {
     this.getSubmitterName = this.getSubmitterName.bind(this);
     this.isSubmissionComplete = this.isSubmissionComplete.bind(this);
     this.getSudokuLeaderboard = this.getSudokuLeaderboard.bind(this);
+    this.getMinutesAndSeconds = this.getMinutesAndSeconds.bind(this);
     // Use arrow funtions instead of having to bind to 'this'
   }
 
@@ -163,6 +164,16 @@ class SudokuGameComponent extends React.Component {
     //
   }
 
+  getMinutesAndSeconds(ms) {
+    const rounded = Math.round(ms / 1000);
+    if (rounded < 60) {
+      return `${rounded} secs`;
+    }
+    const minutes = Math.floor(rounded / 60);
+    const seconds = ((rounded / 60) - minutes) * 60;
+    return `${minutes} min ${seconds.toFixed(0)} secs`
+  }
+
   isSubmissionComplete(sudokuGrid) {
     return !JSON.stringify(sudokuGrid).includes('0');
   }
@@ -209,7 +220,7 @@ class SudokuGameComponent extends React.Component {
     this.getSudokuLeaderboard(this.props.sudokuId);
     this.disableBoard();
     this.disableValidateButton();
-    alert(`Sudoku was completed in ${Math.round(timeTakenMs / 1000)} seconds! Well done ${this.state.submitterName}!!`);
+    alert(`Sudoku was completed in ${this.getMinutesAndSeconds(timeTakenMs)} seconds! Well done ${this.state.submitterName}!!`);
   }
 
   disableBoard() {
@@ -239,7 +250,7 @@ class SudokuGameComponent extends React.Component {
         <td>{ index + 1 }</td>
         <td>{ new Date(item.dateSubmitted).toUTCString().replace('GMT',"") }</td>
         <td>{ item.submitterName || 'anonymous' }</td>
-        <td>{ Math.round(item.timeTakenMs / 1000) }</td>
+        <td>{ this.getMinutesAndSeconds(item.timeTakenMs) }</td>
     </tr>)
     });
     let leaderboard = '';
