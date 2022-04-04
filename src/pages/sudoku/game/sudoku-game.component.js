@@ -220,7 +220,7 @@ class SudokuGameComponent extends React.Component {
     this.getSudokuLeaderboard(this.props.sudokuId);
     this.disableBoard();
     this.disableValidateButton();
-    alert(`Sudoku was completed in ${this.getMinutesAndSeconds(timeTakenMs)} seconds! Well done ${this.state.submitterName}!!`);
+    alert(`Sudoku was completed in ${this.getMinutesAndSeconds(timeTakenMs)}! Well done ${this.state.submitterName}!!`);
   }
 
   disableBoard() {

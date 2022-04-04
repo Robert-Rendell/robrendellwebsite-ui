@@ -4,6 +4,15 @@ import './sudoku-cell.component.css';
 
 class SudokuCellComponent extends Component {
 
+  constructor(props) {
+    super(props);
+    this.createSudokuInputName = this.createSudokuInputName.bind(this);
+    this.createSudokuInputId = this.createSudokuInputId.bind(this);
+    this.keyDown = this.keyDown.bind(this);
+    this.getCellValue = this.getCellValue.bind(this);
+    this.getId = this.getId.bind(this);
+  }
+
   createSudokuInputName(row, col) {
     return `(${row}, ${col})`;
   }
@@ -13,17 +22,23 @@ class SudokuCellComponent extends Component {
   }
 
   keyDown(event) {
-    if(event.keyCode === 13) this.blur();
+    if (event.keyCode === 13) {
+      document.getElementById(this.getId()).blur();
+    }
   }
 
   getCellValue() {
     return parseInt(this.props.cell) > 0 ? this.props.cell : '';
   }
 
+  getId() {
+    return this.createSudokuInputId("sudoku-input",this.props.row, this.props.column);
+  }
+
   render() {
     return (
       <td>
-        <input id={this.createSudokuInputId("sudoku-input",this.props.row, this.props.column)}
+        <input id={this.getId()}
               name={this.createSudokuInputName(this.props.row, this.props.column)}
               type="number"
               defaultValue={this.getCellValue()}
