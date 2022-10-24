@@ -11,8 +11,12 @@ import nodeJsLogo from '../resources/nodejs-logo.png';
 import tsLogo from '../resources/ts-logo.png';
 import awsLogo from '../resources/aws-logo.png';
 
+type Props = {
+
+}
+
 class NavComponent extends React.Component {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.state = { date: new Date() };
   }
@@ -32,7 +36,7 @@ class NavComponent extends React.Component {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
             <NavDropdown title="Recursion Project" id="recursionProject">
-              <NavDropdown.Item href="#action2" disabled>Coming very soon!</NavDropdown.Item>
+              <NavDropdown.Item href="/recursion" disabled>Coming very soon!</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Music Projects" id="musicProjectsNavbarScrollingDropdown">
               <NavDropdown.Item href="https://www.shiva-archetypes.com">Shiva Archetypes (band)</NavDropdown.Item>
@@ -52,7 +56,7 @@ class NavComponent extends React.Component {
             <img src={logo} width="40" height="40" alt="React" />
             <img src={tsLogo} className="tech-icons" width="30" height="30" alt="TypeScript" />
             <img src={nodeJsLogo} className="tech-icons nodejs-icon" width="30" height="30" alt="nodeJs" />
-            <div className="tech-icons aws-icon-bg" width="40" height="40">
+            <div className="tech-icons aws-icon-bg">
               <img src={awsLogo} className="aws-icon" width="30" height="20" alt="nodeJs" />
             </div>
             <Button variant="outline-success" disabled>Enquire</Button>
