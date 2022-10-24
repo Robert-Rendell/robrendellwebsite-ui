@@ -3,6 +3,7 @@ import axios from 'axios';
 import { config } from '../../../config';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
+import InfinitySpinner from '../../../resources/infinity-spinner.svg';
 import './sudoku-dashboard.component.css';
 
 class SudokuDashboardComponent extends React.Component {
@@ -13,13 +14,14 @@ class SudokuDashboardComponent extends React.Component {
       generationJobId: undefined,
       retries: 0,
       recentSudokus: [],
+      isGenerating: false,
     };
     this.generateSudoku = this.generateSudoku.bind(this);
     this.generateMediumSudoku = this.generateMediumSudoku.bind(this);
     this.generateEasySudoku = this.generateEasySudoku.bind(this);
     this.generateHardSudoku = this.generateHardSudoku.bind(this);
     this.generateVeryHardSudoku = this.generateVeryHardSudoku.bind(this); 
-    this.toggleGeneration = this.toggleGeneration.bind(this);
+    this.toggleGeneration = this.toggleGenerating.bind(this);
     this.checkSudokuGeneration = this.checkSudokuGeneration.bind(this);
     this.sudokuGenerated = this.sudokuGenerated.bind(this);
     this.watchSudokuGeneration = this.watchSudokuGeneration.bind(this);
@@ -56,7 +58,7 @@ class SudokuDashboardComponent extends React.Component {
    * generatorUserName: string;
    */
   generateSudoku(difficulty) {
-    this.toggleGeneration(true);
+    this.toggleGenerating(true);
     axios.post(`${config.backend}/sudoku/add`, { 
       headers: {'Content-Type': 'application/json'},
       roberto: "testing",
@@ -86,12 +88,12 @@ class SudokuDashboardComponent extends React.Component {
   generateHardSudoku() { this.generateSudoku('hard'); }
   generateVeryHardSudoku() { this.generateSudoku('very-hard'); }
 
-  toggleGeneration(toggle) {
-    console.log(toggle);
+  toggleGenerating(toggle) {
+    this.setState({ isGenerating: toggle })
     document.getElementById(SudokuDashboardComponent.Button.Easy).disabled = toggle;
     document.getElementById(SudokuDashboardComponent.Button.Medium).disabled = toggle;
     document.getElementById(SudokuDashboardComponent.Button.Hard).disabled = toggle;
-    document.getElementById(SudokuDashboardComponent.Button.VeryHard).disabled = toggle;
+    // document.getElementById(SudokuDashboardComponent.Button.VeryHard).disabled = toggle;
   }
 
   watchSudokuGeneration() {
@@ -130,6 +132,7 @@ class SudokuDashboardComponent extends React.Component {
           this.checkGenerationLoop = setInterval(() => this.checkSudokuGeneration(), 10000);
           this.setSudokuResult(`No response yet, retrying (attempt no.${this.state.retries})...`);
         } else {
+          this.
           this.setSudokuResult(`Sudoku Generation timed out.`);
         }
       }
@@ -147,7 +150,7 @@ class SudokuDashboardComponent extends React.Component {
     console.log('Sudoku generated!');
     this.setState({ retries: 0, generationJobId: null });
     this.setSudokuResult(`Sudoku Generated! <a href="/sudoku/play/${sudokuId}">Play</a>`);
-    this.toggleGeneration(false);
+    this.toggleGenerating(false);
     this.checkGenerationLoop = null;
     this.loadDashboard();
   }
@@ -186,11 +189,14 @@ class SudokuDashboardComponent extends React.Component {
             <Button id={SudokuDashboardComponent.Button.Hard} onClick={this.generateHardSudoku}>
               Hard
             </Button>
-            <Button id={SudokuDashboardComponent.Button.VeryHard} onClick={this.generateVeryHardSudoku}>
+            {/* <Button id={SudokuDashboardComponent.Button.VeryHard} onClick={this.generateVeryHardSudoku}>
               Very Hard
-            </Button>
+            </Button> */}
           </div>
-          <div id={SudokuDashboardComponent.Div.SudokuGenerationResults}></div>
+          <div id={SudokuDashboardComponent.Div.SudokuGenerationResultsContainer}>
+            { this.state.isGenerating && (<img src={InfinitySpinner}/>) }
+            <div id={SudokuDashboardComponent.Div.SudokuGenerationResults}></div>
+          </div>
         </div>
         <hr/>
         <h2>Play Sudoku</h2>
@@ -223,6 +229,7 @@ class SudokuDashboardComponent extends React.Component {
 export default SudokuDashboardComponent;
 
 SudokuDashboardComponent.Div = {
+  SudokuGenerationResultsContainer: 'sudoku-gen-results-container',
   SudokuGenerationResults: 'sudoku-gen-results',
 }
 
