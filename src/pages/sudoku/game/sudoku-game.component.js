@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import SudokuCellComponent from './cell/sudoku-cell.component';
 import axios from 'axios';
-import config from '../../../config';
+import { config } from '../../../config';
 import './sudoku-game.component.css';
 
 class SudokuGameComponent extends React.Component {

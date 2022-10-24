@@ -3,7 +3,7 @@ import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import Table from 'react-bootstrap/Table';
 import axios from 'axios';
-import config from '../../../config';
+import { config } from '../../../config';
 import './uni-data-visualiser.component.css';
 class UniDataVisualiserComponent extends React.Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import config from '../../../config';
+import { config } from '../../../config';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import './sudoku-dashboard.component.css';

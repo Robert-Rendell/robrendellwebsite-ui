@@ -1,11 +1,11 @@
 import React from 'react';
-import config from '../../config';
+import { config } from '../../config';
 import axios from 'axios';
 import './home-page.component.css';
-import infinitySpinner from '../../resources/infinity-spinner.svg';
+import InfinitySpinner from '../../resources/infinity-spinner.svg';
 
 class HomePageComponent extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = { date: new Date() };
   }
@@ -48,13 +48,13 @@ class HomePageComponent extends React.Component {
         <p>Here are some of my own photos from travelling over the years <i>(click to enlarge - coming soon)</i>:</p>
         <div id="home-page-img-div">
           <h2>Loading images from S3...</h2>
-          <img src={infinitySpinner}/>
+          <img src={InfinitySpinner}/>
         </div>
       </div>
     );
   }
 
-  addHomePageImage(imgUrl) {
+  addHomePageImage(imgUrl: string) {
     return "<img class=\"home-page-img\" src=\"" + imgUrl + "\"/ onClick={activateLasers}>";
   }
 
@@ -62,12 +62,16 @@ class HomePageComponent extends React.Component {
     axios.get(config.backend,
       { headers: {'Content-Type': 'application/json'}}
     ).then((response) => {
-      const imgUrlArray = response.data['travelImages'];
-      const imgPanelDiv = document.getElementById('home-page-img-div')
-      imgPanelDiv.innerHTML = '';
-      imgUrlArray.forEach((imgUrl) => {
-        imgPanelDiv.innerHTML += this.addHomePageImage(imgUrl);
-      });
+      const imgUrlArray: string[] = response.data['travelImages'];
+      const imgPanelDiv: HTMLElement | null = document.getElementById('home-page-img-div')
+      if (imgPanelDiv) {
+        imgPanelDiv.innerHTML = '';
+        imgUrlArray.forEach((imgUrl) => {
+          imgPanelDiv.innerHTML += this.addHomePageImage(imgUrl);
+        });
+      } else {
+        throw Error('Could not find div by id: "home-page-img-div"')
+      }
     })
   }
 }
