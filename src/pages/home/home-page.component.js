@@ -2,6 +2,7 @@ import React from 'react';
 import config from '../../config';
 import axios from 'axios';
 import './home-page.component.css';
+import infinitySpinner from '../../resources/infinity-spinner.svg';
 
 class HomePageComponent extends React.Component {
   constructor(props) {
@@ -16,10 +17,11 @@ class HomePageComponent extends React.Component {
   render() {
     return (
       <div className="home-page-margins page-styling">
-        <h2 className="centred">Welcome to robrendell.com</h2>
-        <h3>Rob Rendell: Node.js Developer</h3>
+        <h2 className="centred">Welcome to rob-rendell.co.uk</h2>
+        <h3>Rob Rendell: Node.js / TypeScript Developer</h3>
         <h4>Recent developments:</h4>
         <ul>
+          <li>24/10/22 @ 15.10 - Added spinner and placeholder for Recursion project</li>
           <li>02/01/22 @ 17.40 - Leaderboard feature for time taken to complete <a href="sudoku/">Sudoku</a> using <code>AWS.DynamoDB.query</code> and GSI.</li>
           <li>
             01/12/21 @ 07.00 - <a href="technical-tests/291121">Technical Test</a> completed
@@ -46,6 +48,7 @@ class HomePageComponent extends React.Component {
         <p>Here are some of my own photos from travelling over the years <i>(click to enlarge - coming soon)</i>:</p>
         <div id="home-page-img-div">
           <h2>Loading images from S3...</h2>
+          <img src={infinitySpinner}/>
         </div>
       </div>
     );
@@ -59,14 +62,12 @@ class HomePageComponent extends React.Component {
     axios.get(config.backend,
       { headers: {'Content-Type': 'application/json'}}
     ).then((response) => {
-      console.log()
       const imgUrlArray = response.data['travelImages'];
       const imgPanelDiv = document.getElementById('home-page-img-div')
       imgPanelDiv.innerHTML = '';
       imgUrlArray.forEach((imgUrl) => {
         imgPanelDiv.innerHTML += this.addHomePageImage(imgUrl);
       });
-      document.getElementById('home-page-img-div')
     })
   }
 }

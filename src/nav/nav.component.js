@@ -30,21 +30,23 @@ class NavComponent extends React.Component {
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">LinkedIn</Nav.Link>
             <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
-            <Nav.Link href="/strava-api" disabled>Strava API (OAuth2.0)</Nav.Link>
-            <NavDropdown title="Processing.js" id="processingNavbarScrollingDropdown">
-              <NavDropdown.Item href="https://editor.p5js.org/Robert-Rendell/sketches/Zi4pekiUZd">Chaos Theory: Bifurcation Diagram</NavDropdown.Item>
-              <NavDropdown.Item href="#action3" disabled>Fishing Game</NavDropdown.Item>
-              <NavDropdown.Item href="#action4" disabled>Bomberman</NavDropdown.Item>
+            <NavDropdown title="Recursion Project" id="recursionProject">
+              <NavDropdown.Item href="#action2" disabled>Coming very soon!</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Music Projects" id="musicProjectsNavbarScrollingDropdown">
               <NavDropdown.Item href="https://www.shiva-archetypes.com">Shiva Archetypes (band)</NavDropdown.Item>
               <NavDropdown.Item href="https://www.robcelticfiddle.co.uk">Rob Celtic Fiddle (weddings)</NavDropdown.Item>
             </NavDropdown>
+            <NavDropdown title="Processing.js" id="processingNavbarScrollingDropdown">
+              <NavDropdown.Item href="https://editor.p5js.org/Robert-Rendell/sketches/Zi4pekiUZd">Chaos Theory: Bifurcation Diagram</NavDropdown.Item>
+              <NavDropdown.Item href="#action3" disabled>Fishing Game</NavDropdown.Item>
+              <NavDropdown.Item href="#action4" disabled>Bomberman</NavDropdown.Item>
+            </NavDropdown>
             <NavDropdown title="Technical Tests" id="techTestsNavbarScrollingDropdown">
               <NavDropdown.Item href="/technical-tests/291121">29/11/21 - University data visualiser</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">LinkedIn</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <img src={logo} width="40" height="40" alt="React" />
