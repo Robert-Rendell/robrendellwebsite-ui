@@ -11,7 +11,7 @@ import SudokuDashboardComponent from './pages/sudoku/dashboard/sudoku-dashboard.
 import SudokuGameComponent from './pages/sudoku/game/sudoku-game.component';
 import UniDataVisualiserComponent from './pages/technical-tests/291121/uni-data-visualiser.component'
 import StravaDashboardComponent from './pages/strava-api/strava-dashboard.component';
-import RecursionPageComponent from './pages/recursion/page1.component'
+import RecursionPageComponent from './pages/recursion/recursion.page'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +23,7 @@ ReactDOM.render(
           <Route path="sudoku" element={<SudokuDashboardComponent />} />
           <Route path="sudoku/play" element={<SudokuGameComponent />} />
           <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
+
           <Route path="recursion" element={<RecursionPageComponent />} />
 
           <Route path="/technical-tests/291121" element={<UniDataVisualiserComponent />} />
