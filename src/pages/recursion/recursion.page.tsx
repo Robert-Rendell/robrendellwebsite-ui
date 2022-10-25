@@ -4,6 +4,7 @@ import { ReactP5Wrapper } from "react-p5-wrapper";
 import { starRecursiveFnCode, starRecursiveFn, starIterativeFn, starIterativeFnCode } from './functions/stars';
 import { doubleHelixSketch } from './p5-sketches/double-helix.sketch';
 import { sutcliffePentagonSketch } from './p5-sketches/sutcliffe-pentagon.sketch';
+import { gameOfLifeSketch } from './p5-sketches/game-of-life.sketch';
 import './recursion.page.css';
 
 type Props = {
@@ -72,6 +73,24 @@ class RecursionPageComponent extends React.Component {
     <p>
       <ReactP5Wrapper sketch={sutcliffePentagonSketch} />
     </p>
+    <h3>
+      Conway&apos;s Game of Life: Cellular Automata
+    </h3>
+    <p>
+      I can&apos;t write about recursion and fractals without going off on an unrelated tangent about Conways Game of Life:
+    </p>
+    <p>
+      Unfortunately Daniel Shiffman&apos;s P5.js sketch of Game of Life isn&apos;t recursive... or fractal in its nature.
+    </p>
+    <p>
+      <ReactP5Wrapper sketch={gameOfLifeSketch} />
+    </p>
+    <p>
+      However... you will find some self referencing in this mind-blowing video, you must watch it to the end:
+    </p>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/xP5-iIeKXE8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+    </div>
     <h3>
       DNA
     </h3>
