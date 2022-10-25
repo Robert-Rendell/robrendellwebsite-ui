@@ -39,9 +39,13 @@ class NavComponent extends React.Component {
               <NavDropdown.Item href="/recursion/bifurcation-logistical-map">Chaos Theory: Bifurcation Logistical Map</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Climate Change" id="climateChange">
-              <NavDropdown.Item href="https://www.timeshighereducation.com/impactrankings">
-                World University Impact Sustainability Rankings
-              </NavDropdown.Item>
+            <NavDropdown.Item href="/climate-change/ruminants">
+              Ruminants / Milk + Beef
+            </NavDropdown.Item>
+            <NavDropdown.Item href="https://www.timeshighereducation.com/impactrankings">
+              World University Impact Sustainability Rankings
+            </NavDropdown.Item>
+              
             </NavDropdown>
             <NavDropdown title="Music Projects" id="musicProjectsNavbarScrollingDropdown">
               <NavDropdown.Item href="https://www.shiva-archetypes.com">Shiva Archetypes (band)</NavDropdown.Item>

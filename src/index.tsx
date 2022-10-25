@@ -13,6 +13,7 @@ import UniDataVisualiserComponent from './pages/technical-tests/291121/uni-data-
 import StravaDashboardComponent from './pages/strava-api/strava-dashboard.component';
 import RecursionPageComponent from './pages/recursion/recursion.page'
 import { BifurcationLogisticalPage } from './pages/recursion/bifurcation-logistical.page';
+import { RuminantsPage } from './pages/climate-change/ruminants.page';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,8 +27,9 @@ ReactDOM.render(
           <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
 
           <Route path="recursion" element={<RecursionPageComponent />} />
-
           <Route path="recursion/bifurcation-logistical-map" element={<BifurcationLogisticalPage />} />
+
+          <Route path="climate-change/ruminants" element={<RuminantsPage />} />
 
           <Route path="/technical-tests/291121" element={<UniDataVisualiserComponent />} />
 
