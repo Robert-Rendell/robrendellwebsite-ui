@@ -4,7 +4,7 @@ const sutcliffePentagonSketch = (p5) => {
   const Settings = {
     branchColor: '#000000',
     nest: 5,
-    radius: 350,
+    radius: 200,
     strutFactor: 0.25,
     strutTarget: 3,
     subStrutTarget: 3,
@@ -117,7 +117,7 @@ const sutcliffePentagonSketch = (p5) => {
   }
   
   p5.setup = () => {
-    p5.createCanvas(800, 800);
+    p5.createCanvas(500, 500);
     p5.drawFractal();
   }
   

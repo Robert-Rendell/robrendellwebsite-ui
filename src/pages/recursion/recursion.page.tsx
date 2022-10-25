@@ -25,11 +25,15 @@ class RecursionPageComponent extends React.Component {
     <h2>
       Recursion & Fractals
     </h2>
-    <p>
-
+    <p style={{textAlign: "center"}}>
+      <hr/>
+       Work in Progress
+       <hr/>
     </p>
-    <ol>
-      <li>
+    <h3>
+      Recursion and Iteration
+    </h3>
+    <div>
       Recursive functions - base case and self referencing recursive case. Helper functions
       <p><b>Stars (recursive function)</b>: { starRecursiveFn(5)}</p>
       <CopyBlock
@@ -49,19 +53,42 @@ class RecursionPageComponent extends React.Component {
         startingLineNumber={1}
         wrapLines
       />
-      </li>
-      <li>
-      Stackoverstackoverflow error, we live in an unordered world and in order for us to apply logic we require it be ordered.
-      </li>
-      <li>
-        <ul>
-          <li>why is Recursion so important in nature and with humans?</li>
-          <li>recursion is in our DNA yet our minds find it hard to understand recursive functions</li>
-        </ul>
-        <ReactP5Wrapper sketch={doubleHelixSketch} />
-      </li>
-      <li>
-      Binary Search Tree
+    </div>
+     
+    <h3>
+      Recursion in the Natural World
+    </h3>
+    <p>
+      We live in an unordered world and it is necessary for us to create order so we can utilise reliable, deterministic logic.
+      In the natural world, there is no such thing as a call stack keeping track of recursive functions. Instead these natural recursive functions are better described as being painted onto the canvas of the cosmos and that painting is infinitely being imagined.
+      However it is finite on a machine and this is why you might get the stack overflow error if you exceed the call stack limit.
+    </p>
+    <p>
+      Tree fractals: http://fractal-tree-simulator.surge.sh/
+    </p>
+    <p>
+      The Sutcliffe Pentagon is a mathematical formula that allows us to replicate a similar pattern of growth in the leaves of an Ivy.
+    </p>
+    <p>
+      <ReactP5Wrapper sketch={sutcliffePentagonSketch} />
+    </p>
+    <h3>
+      DNA
+    </h3>
+    <p>
+    <ul>
+      <li>So why is Recursion so important to humans?</li>
+      <li>Recursion is in our DNA! However, our minds prefer to focus on one thing at at time and are not naturally accustomed to recursively following each rabbit hole</li>
+    </ul>
+    <ReactP5Wrapper sketch={doubleHelixSketch} />
+    </p>
+
+    <h3>
+      Recursive Algorithms
+    </h3>
+
+    <p>
+    Binary Search Tree
         <ul>
           <li>
           depth first
@@ -70,21 +97,7 @@ class RecursionPageComponent extends React.Component {
           breadth first
           </li>
         </ul>
-      </li>
-
-      <li>
-      <ReactP5Wrapper sketch={sutcliffePentagonSketch} />
-      </li>
-      <li>
-      ivy worm hole, inner pentagons spin at a different speed?
-      </li>
-      <li>
-      tree fractals: http://fractal-tree-simulator.surge.sh/
-      </li>
-      <li>
-      fractals - the shape of recursion
-      </li>
-    </ol>
+    </p>
     </div>)
   }
 }
