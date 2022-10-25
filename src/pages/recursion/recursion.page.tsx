@@ -1,7 +1,7 @@
 import React from 'react';
 import { CopyBlock, dracula } from "react-code-blocks";
-import { starRecursiveFnCode, starRecursiveFn, starIterativeFn, starIterativeFnCode } from './functions/stars';
 import { ReactP5Wrapper } from "react-p5-wrapper";
+import { starRecursiveFnCode, starRecursiveFn, starIterativeFn, starIterativeFnCode } from './functions/stars';
 import { doubleHelixSketch } from './p5-sketches/double-helix.sketch';
 import { sutcliffePentagonSketch } from './p5-sketches/sutcliffe-pentagon.sketch';
 import './recursion.page.css';

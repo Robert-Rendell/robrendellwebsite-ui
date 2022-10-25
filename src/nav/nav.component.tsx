@@ -35,19 +35,17 @@ class NavComponent extends React.Component {
           <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
             <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
             <NavDropdown title="Recursion Project" id="recursionProject">
-              <NavDropdown.Item href="/recursion">Coming very soon!</NavDropdown.Item>
+              <NavDropdown.Item href="/recursion">Fractals: Building in progress</NavDropdown.Item>
+              <NavDropdown.Item href="/recursion/bifurcation-logistical-map">Chaos Theory: Bifurcation Logistical Map</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Climate Change" id="climateChange">
-              <NavDropdown.Item href="/climate-change" disabled>Happening now! :(</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.timeshighereducation.com/impactrankings">
+                World University Impact Sustainability Rankings
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Music Projects" id="musicProjectsNavbarScrollingDropdown">
               <NavDropdown.Item href="https://www.shiva-archetypes.com">Shiva Archetypes (band)</NavDropdown.Item>
               <NavDropdown.Item href="https://www.robcelticfiddle.co.uk">Rob Celtic Fiddle (weddings)</NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="P5.js" id="processingNavbarScrollingDropdown">
-              <NavDropdown.Item href="https://editor.p5js.org/Robert-Rendell/sketches/Zi4pekiUZd">Chaos Theory: Bifurcation Diagram</NavDropdown.Item>
-              <NavDropdown.Item href="#action3" disabled>Fishing Game</NavDropdown.Item>
-              <NavDropdown.Item href="#action4" disabled>Bomberman</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Technical Tests" id="techTestsNavbarScrollingDropdown">
               <NavDropdown.Item href="/technical-tests/291121">29/11/21 - University data visualiser</NavDropdown.Item>
