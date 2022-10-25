@@ -87,7 +87,9 @@ class RecursionPageComponent extends React.Component {
       Recursive Algorithms
     </h3>
 
-    <p>
+    <p>TO DO</p>
+    
+    {/* <p>
     Binary Search Tree
         <ul>
           <li>
@@ -97,7 +99,7 @@ class RecursionPageComponent extends React.Component {
           breadth first
           </li>
         </ul>
-    </p>
+    </p> */}
     </div>)
   }
 }
