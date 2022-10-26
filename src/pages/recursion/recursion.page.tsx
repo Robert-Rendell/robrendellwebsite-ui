@@ -5,7 +5,7 @@ import { starRecursiveFnCode, starRecursiveFn, starIterativeFn, starIterativeFnC
 import { doubleHelixSketch } from './p5-sketches/double-helix.sketch';
 import { sutcliffePentagonSketch } from './p5-sketches/sutcliffe-pentagon.sketch';
 import { gameOfLifeSketch } from './p5-sketches/game-of-life.sketch';
-import './recursion.page.css';
+import '../page.css';
 
 type Props = {
 
@@ -24,38 +24,13 @@ class RecursionPageComponent extends React.Component {
   render() {
     return (<div className="home-page-margins page-styling">
     <h2>
-      Recursion & Fractals
+      Recursion / Fractals
     </h2>
     <p style={{textAlign: "center"}}>
       <hr/>
        Work in Progress
        <hr/>
-    </p>
-    <h3>
-      Recursion and Iteration
-    </h3>
-    <div>
-      Recursive functions - base case and self referencing recursive case. Helper functions
-      <p><b>Stars (recursive function)</b>: { starRecursiveFn(5)}</p>
-      <CopyBlock
-        text={starRecursiveFnCode}
-        theme={dracula}
-        language={'typescript'}
-        showLineNumbers={false}
-        startingLineNumber={1}
-        wrapLines
-      />
-      <p><b>Stars (iterative function)</b>: { starIterativeFn(5)}</p>
-      <CopyBlock
-        text={starIterativeFnCode}
-        theme={dracula}
-        language={'typescript'}
-        showLineNumbers={false}
-        startingLineNumber={1}
-        wrapLines
-      />
-    </div>
-     
+    </p>    
     <h3>
       Recursion in the Natural World
     </h3>
@@ -65,14 +40,27 @@ class RecursionPageComponent extends React.Component {
       However it is finite on a machine and this is why you might get the stack overflow error if you exceed the call stack limit.
     </p>
     <p>
-      Tree fractals: http://fractal-tree-simulator.surge.sh/
+      Tree fractals: <a href="http://fractal-tree-simulator.surge.sh/">http://fractal-tree-simulator.surge.sh/</a>
     </p>
     <p>
       The Sutcliffe Pentagon is a mathematical formula that allows us to replicate a similar pattern of growth in the leaves of an Ivy.
     </p>
     <p>
-      <ReactP5Wrapper sketch={sutcliffePentagonSketch} />
+      <ReactP5Wrapper sketch={sutcliffePentagonSketch}/>
     </p>
+    <h3>
+      Recursion / Fractals in music
+    </h3>
+    <p>
+      Adam Neely (Sungazer bassist) has a fantastic video on how rhythm can be the same as pitch.
+    </p>
+    <p>
+      You should watch the full video to understand how this relates to recursion and self referencing patterns.
+    </p>
+    <p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_gCJHNBEdoc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+    </p>
+    <hr/>
     <h3>
       Conway&apos;s Game of Life: Cellular Automata
     </h3>
@@ -91,22 +79,51 @@ class RecursionPageComponent extends React.Component {
     <div>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/xP5-iIeKXE8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     </div>
+    <hr/>
     <h3>
       DNA
     </h3>
     <p>
     <ul>
-      <li>So why is Recursion so important to humans?</li>
-      <li>Recursion is in our DNA! However, our minds prefer to focus on one thing at at time and are not naturally accustomed to recursively following each rabbit hole</li>
+      <li>So why is recursion so important to humans?</li>
+      <li>
+        Recursion is in our DNA! However, our minds prefer to focus on one thing at at time 
+        and are not naturally accustomed to recursively following each rabbit hole.
+        Learning to think recursively has been articulated effectively <a href="https://qr.ae/pvutmb">here.</a>
+      </li>
     </ul>
     <ReactP5Wrapper sketch={doubleHelixSketch} />
+    https://editor.p5js.org/AlexandraLopez/sketches
     </p>
-
+    <hr/>
+    <h3>
+      Recursion and Iteration
+    </h3>
+    <div>
+      Recursive functions - base case and self referencing recursive case (also helper functions):
+      <CopyBlock
+        text={starRecursiveFnCode}
+        theme={dracula}
+        language={'typescript'}
+        showLineNumbers={false}
+        wrapLines
+      />
+      <p><b>Stars (recursive function)</b>: { starRecursiveFn(5)}</p>
+      <CopyBlock
+        text={starIterativeFnCode}
+        theme={dracula}
+        language={'typescript'}
+        showLineNumbers={false}
+        wrapLines
+      />
+      <p><b>Stars (iterative function)</b>: { starIterativeFn(5)}</p>
+    </div>
+    <hr/>
     <h3>
       Recursive Algorithms
     </h3>
 
-    <p>TO DO</p>
+    <p>Content coming soon</p>
     
     {/* <p>
     Binary Search Tree

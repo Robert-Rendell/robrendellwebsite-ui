@@ -11,7 +11,7 @@ export function RuminantsPage() {
         We have a lot of cows in the world. 
       </p>
       <p>
-        Basically, cut down on the amount of beef / steaks are you eating. Also you can reduce the amount of cow&apos;s milk you drink.
+        Basically, cut down on the amount of beef / steaks are you eating. Also, you can reduce the amount of cow&apos;s milk you drink.
       </p>
       <p>
         All the science is here; greenhouse gases (namely <u>carbon dioxide</u> and <u>methane</u>) are produced by huge amounts of ruminating cattle, being bred to provide milk and beef for humans.
