@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import { bifurcationDiagramSketch } from './p5-sketches/bifurcation-diagram.sketch';
-import './recursion.page.css';
+import '../page.css';
 
 type Props = {
 

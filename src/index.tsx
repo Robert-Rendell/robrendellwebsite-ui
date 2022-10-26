@@ -14,6 +14,14 @@ import StravaDashboardComponent from './pages/strava-api/strava-dashboard.compon
 import RecursionPageComponent from './pages/recursion/recursion.page'
 import { BifurcationLogisticalPage } from './pages/recursion/bifurcation-logistical.page';
 import { RuminantsPage } from './pages/climate-change/ruminants.page';
+import { RideABikePage } from './pages/climate-change/ride-a-bike.page';
+import { OceanAcidity } from './pages/climate-change/ocean-acidity.page';
+import { WildFlowersPage } from './pages/photos-ive-taken/nature/wild-flowers.page';
+import { ArachnidsPage } from './pages/photos-ive-taken/nature/arachnids.page';
+import { LichenPage } from './pages/photos-ive-taken/nature/lichen.page';
+import { InsectsPage } from './pages/photos-ive-taken/nature/insects.page';
+import { ReduceReuseRecyclePage } from './pages/climate-change/reduce-reuse-recycle.page';
+import { RenewableEnergyPage } from './pages/climate-change/renewable-energy.page';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -30,6 +38,16 @@ ReactDOM.render(
           <Route path="recursion/bifurcation-logistical-map" element={<BifurcationLogisticalPage />} />
 
           <Route path="climate-change/ruminants" element={<RuminantsPage />} />
+          <Route path="climate-change/ocean-acidity" element={<OceanAcidity />} />
+          <Route path="climate-change/ride-a-bike" element={<RideABikePage />} />
+          <Route path="climate-change/renewable-energy" element={<RenewableEnergyPage />} />
+          <Route path="climate-change/reduce-reuse-recycle" element={<ReduceReuseRecyclePage />} />
+
+          <Route path="photos-ive-taken/nature/arachnids" element={<ArachnidsPage />} />
+          <Route path="photos-ive-taken/nature/insects" element={<InsectsPage />} />
+          <Route path="photos-ive-taken/nature/lichen" element={<LichenPage />} />
+          <Route path="photos-ive-taken/nature/wild-flowers" element={<WildFlowersPage />} />
+          
 
           <Route path="/technical-tests/291121" element={<UniDataVisualiserComponent />} />
 
