@@ -18,7 +18,7 @@ export const RecursionPageComponent = (): any => {
     console.log('Double helix ready')
   }
   return (<>
-    <div className="home-page-margins page-styling">
+    <div className="standard-page-margins standard-page-styling">
       <h2>
         Recursion and Fractals
       </h2>
