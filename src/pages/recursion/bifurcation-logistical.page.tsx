@@ -18,7 +18,7 @@ class BifurcationLogisticalPage extends React.Component {
   }
 
   render() {
-    return (<div className="home-page-margins page-styling">
+    return (<div className="standard-page-margins standard-page-styling">
       <ReactP5Wrapper sketch={bifurcationDiagramSketch} />
       </div>
     );
