@@ -1,17 +1,17 @@
-const starRecursiveFnCode = `function starRecursiveFn(stars: number, starsString = ''): string {
+const starRecursiveFnCode = `function starRecursiveFn(count: number): string {
   // base case
-  if (stars === 0) return starsString;
+  if (count === 1) return '*';
 
   // recursive case
-  return starRecursiveFn(stars-1,starsString+'*');
+  return '*' + starRecursiveFn(count - 1);
 }`
 
-function starRecursiveFn(stars: number, starsString = ''): string {
+function starRecursiveFn(count: number): string {
   // base case
-  if (stars === 0) return starsString;
+  if (count === 1) return '*';
 
   // recursive case
-  return starRecursiveFn(stars-1,starsString+'*');
+  return '*' + starRecursiveFn(count - 1);
 }
 
 const starIterativeFnCode = `const starIterativeFn = (stars: number): string => {

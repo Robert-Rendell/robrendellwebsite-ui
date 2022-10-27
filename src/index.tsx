@@ -15,7 +15,7 @@ import RecursionPageComponent from './pages/recursion/recursion.page'
 import { BifurcationLogisticalPage } from './pages/recursion/bifurcation-logistical.page';
 import { RuminantsPage } from './pages/climate-change/ruminants.page';
 import { RideABikePage } from './pages/climate-change/ride-a-bike.page';
-import { OceanAcidity } from './pages/climate-change/ocean-acidity.page';
+import { OceanAcidification } from './pages/climate-change/ocean-acidification.page';
 import { WildFlowersPage } from './pages/photos-ive-taken/nature/wild-flowers.page';
 import { ArachnidsPage } from './pages/photos-ive-taken/nature/arachnids.page';
 import { LichenPage } from './pages/photos-ive-taken/nature/lichen.page';
@@ -38,7 +38,7 @@ ReactDOM.render(
           <Route path="recursion/bifurcation-logistical-map" element={<BifurcationLogisticalPage />} />
 
           <Route path="climate-change/ruminants" element={<RuminantsPage />} />
-          <Route path="climate-change/ocean-acidity" element={<OceanAcidity />} />
+          <Route path="climate-change/ocean-acidification" element={<OceanAcidification />} />
           <Route path="climate-change/ride-a-bike" element={<RideABikePage />} />
           <Route path="climate-change/renewable-energy" element={<RenewableEnergyPage />} />
           <Route path="climate-change/reduce-reuse-recycle" element={<ReduceReuseRecyclePage />} />
