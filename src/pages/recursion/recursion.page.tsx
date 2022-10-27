@@ -23,7 +23,7 @@ export const RecursionPageComponent = (): any => {
         Recursion and Fractals
       </h2>
       <hr/>
-      <h3><i>What is Recursion?</i></h3>
+      <h3><i>&quot;What is Recursion?&quot;</i></h3>
       <p>
       Recursion is the repeated application of a recursive procedure or definition.
       </p>
@@ -44,7 +44,7 @@ export const RecursionPageComponent = (): any => {
         When you reach the recursive call stack limit, you&apos;ll see the 
         classic <u>Stack Overflow</u> error.
       </p>
-      <h3><i>Why is recursion such an alien concept to beginners?</i></h3>
+      <h3><i>&quot;Why is recursion such an alien concept to beginners?&quot;</i></h3>
       <p>
         I believe that&apos;s because our minds prefer to focus on one thing at at time and prefer dealing with
         (and finding solutions for) the problems that are, metaphorically, directly in front of us. 
@@ -63,7 +63,7 @@ export const RecursionPageComponent = (): any => {
       </p>
       <hr/>
 
-      <h3><i>What is a Fractal?</i></h3>
+      <h3><i>&quot;What is a Fractal?&quot;</i></h3>
       <p>
       A <a href="https://fractalfoundation.org/resources/what-are-fractals/">fractal</a> is 
       a never-ending pattern. Fractals are infinitely complex 
@@ -96,7 +96,7 @@ export const RecursionPageComponent = (): any => {
         Human Genome
       </h3>
       <p>
-        <i>So why is recursion important to humans?</i>
+        <i>&quot;So why is recursion important to humans?&quot;</i>
       </p>
       <p>
           I&apos;m ignorant to genetics and the human genome 
@@ -116,7 +116,7 @@ export const RecursionPageComponent = (): any => {
         the same as all living things.
       </p>
       <p>
-        <i>Is it worth contemplating that perhaps DNA in humans is also self referencing?</i>
+        <i>&quot;Is it worth contemplating that perhaps DNA in humans is also self referencing?&quot;</i>
       </p>
       <p>
       <Img src="self referencing dna.png" 
