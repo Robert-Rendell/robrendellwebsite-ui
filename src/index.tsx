@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import reportWebVitals from './reportWebVitals';
 import App from './app/App.component';
-import HomePageComponent from './pages/home/home-page.component';
+import { HomePage } from './pages/home/home.page';
 import SudokuDashboardComponent from './pages/sudoku/dashboard/sudoku-dashboard.component';
 import SudokuGameComponent from './pages/sudoku/game/sudoku-game.component';
 import UniDataVisualiserComponent from './pages/technical-tests/291121/uni-data-visualiser.component'
@@ -28,7 +28,7 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
       <Routes>
-          <Route path="/" element={<HomePageComponent />} />
+          <Route path="/" element={<HomePage />} />
 
           <Route path="sudoku" element={<SudokuDashboardComponent />} />
           <Route path="sudoku/play" element={<SudokuGameComponent />} />
