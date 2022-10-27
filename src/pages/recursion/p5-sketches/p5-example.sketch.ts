@@ -18,6 +18,6 @@ const exampleSketch = (p5: any) => {
     p5.box(100);
     p5.pop();
   };
-}
+};
 
-export { exampleSketch }
+export { exampleSketch };

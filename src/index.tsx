@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,9 +9,9 @@ import App from './app/App.component';
 import { HomePage } from './pages/home/home.page';
 import SudokuDashboardComponent from './pages/sudoku/dashboard/sudoku-dashboard.component';
 import SudokuGameComponent from './pages/sudoku/game/sudoku-game.component';
-import UniDataVisualiserComponent from './pages/technical-tests/291121/uni-data-visualiser.component'
+import UniDataVisualiserComponent from './pages/technical-tests/291121/uni-data-visualiser.component';
 import StravaDashboardComponent from './pages/strava-api/strava-dashboard.component';
-import RecursionPageComponent from './pages/recursion/recursion.page'
+import RecursionPageComponent from './pages/recursion/recursion.page';
 import { BifurcationLogisticalPage } from './pages/recursion/bifurcation-logistical.page';
 import { RuminantsPage } from './pages/climate-change/ruminants.page';
 import { RideABikePage } from './pages/climate-change/ride-a-bike.page';
@@ -28,30 +28,30 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
       <Routes>
-          <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
 
-          <Route path="sudoku" element={<SudokuDashboardComponent />} />
-          <Route path="sudoku/play" element={<SudokuGameComponent />} />
-          <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
+        <Route path="sudoku" element={<SudokuDashboardComponent />} />
+        <Route path="sudoku/play" element={<SudokuGameComponent />} />
+        <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
 
-          <Route path="recursion" element={<RecursionPageComponent />} />
-          <Route path="recursion/bifurcation-logistical-map" element={<BifurcationLogisticalPage />} />
+        <Route path="recursion" element={<RecursionPageComponent />} />
+        <Route path="recursion/bifurcation-logistical-map" element={<BifurcationLogisticalPage />} />
 
-          <Route path="climate-change/ruminants" element={<RuminantsPage />} />
-          <Route path="climate-change/ocean-acidification" element={<OceanAcidification />} />
-          <Route path="climate-change/ride-a-bike" element={<RideABikePage />} />
-          <Route path="climate-change/renewable-energy" element={<RenewableEnergyPage />} />
-          <Route path="climate-change/reduce-reuse-recycle" element={<ReduceReuseRecyclePage />} />
+        <Route path="climate-change/ruminants" element={<RuminantsPage />} />
+        <Route path="climate-change/ocean-acidification" element={<OceanAcidification />} />
+        <Route path="climate-change/ride-a-bike" element={<RideABikePage />} />
+        <Route path="climate-change/renewable-energy" element={<RenewableEnergyPage />} />
+        <Route path="climate-change/reduce-reuse-recycle" element={<ReduceReuseRecyclePage />} />
 
-          <Route path="photos-ive-taken/nature/arachnids" element={<ArachnidsPage />} />
-          <Route path="photos-ive-taken/nature/insects" element={<InsectsPage />} />
-          <Route path="photos-ive-taken/nature/lichen" element={<LichenPage />} />
-          <Route path="photos-ive-taken/nature/wild-flowers" element={<WildFlowersPage />} />
+        <Route path="photos-ive-taken/nature/arachnids" element={<ArachnidsPage />} />
+        <Route path="photos-ive-taken/nature/insects" element={<InsectsPage />} />
+        <Route path="photos-ive-taken/nature/lichen" element={<LichenPage />} />
+        <Route path="photos-ive-taken/nature/wild-flowers" element={<WildFlowersPage />} />
           
 
-          <Route path="/technical-tests/291121" element={<UniDataVisualiserComponent />} />
+        <Route path="/technical-tests/291121" element={<UniDataVisualiserComponent />} />
 
-          <Route path="strava-api" element={<StravaDashboardComponent />} />
+        <Route path="strava-api" element={<StravaDashboardComponent />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

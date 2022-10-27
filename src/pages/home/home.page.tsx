@@ -13,7 +13,7 @@ export const HomePage = () => {
       getHomePageImageUrls();
       initialised = true;
     }
-  }, [initialised])
+  }, [initialised]);
 
   return (
     <div className="standard-page-margins standard-page-styling">
@@ -45,4 +45,4 @@ export const HomePage = () => {
       </div>
     </div>
   );
-}
+};

@@ -32,19 +32,19 @@ class SudokuCellComponent extends Component {
   }
 
   getId() {
-    return this.createSudokuInputId("sudoku-input",this.props.row, this.props.column);
+    return this.createSudokuInputId('sudoku-input',this.props.row, this.props.column);
   }
 
   render() {
     return (
       <td>
         <input id={this.getId()}
-              name={this.createSudokuInputName(this.props.row, this.props.column)}
-              type="number"
-              defaultValue={this.getCellValue()}
-              className="sudoku-input"
-              onKeyDown={this.keyDown}
-              disabled={this.getCellValue() ? true : false}
+          name={this.createSudokuInputName(this.props.row, this.props.column)}
+          type="number"
+          defaultValue={this.getCellValue()}
+          className="sudoku-input"
+          onKeyDown={this.keyDown}
+          disabled={this.getCellValue() ? true : false}
         />
       </td>
     );
@@ -57,4 +57,4 @@ SudokuCellComponent.propTypes = {
   cell: PropTypes.number.isRequired,
   row: PropTypes.number.isRequired,
   column: PropTypes.number.isRequired,
-}
+};

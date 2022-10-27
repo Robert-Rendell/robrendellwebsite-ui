@@ -1,6 +1,6 @@
 import React from 'react';
-import Highcharts from 'highcharts'
-import HighchartsReact from 'highcharts-react-official'
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 import Table from 'react-bootstrap/Table';
 import axios from 'axios';
 import { config } from '../../../config';
@@ -50,52 +50,52 @@ class UniDataVisualiserComponent extends React.Component {
       width: 500,
     },
     title: {
-        text: 'Best Universities for Subjects'
+      text: 'Best Universities for Subjects'
     },
     subtitle: {
-        text: 'Based on the average student rating from questionnaire submissions'
+      text: 'Based on the average student rating from questionnaire submissions'
     },
     xAxis: {
-        enabled: false,
-        categories: bestUnisForSubjectData.xAxis,
-        title: {
-            text: null
-        }
+      enabled: false,
+      categories: bestUnisForSubjectData.xAxis,
+      title: {
+        text: null
+      }
     },
     yAxis: {
-        min: 0,
-        title: {
-            text: 'Average Student Rating',
-            align: 'high'
-        },
-        labels: {
-            overflow: 'justify'
-        }
+      min: 0,
+      title: {
+        text: 'Average Student Rating',
+        align: 'high'
+      },
+      labels: {
+        overflow: 'justify'
+      }
     },
     tooltip: {
-        valueSuffix: ' millions'
+      valueSuffix: ' millions'
     },
     plotOptions: {
-        bar: {
-            dataLabels: {
-                enabled: true
-            }
+      bar: {
+        dataLabels: {
+          enabled: true
         }
+      }
     },
     legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        x: -40,
-        y: 80,
-        floating: true,
-        borderWidth: 1,
-        backgroundColor:
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'top',
+      x: -40,
+      y: 80,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor:
             Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
-        shadow: true
+      shadow: true
     },
     credits: {
-        enabled: false
+      enabled: false
     },
     series: bestUnisForSubjectData.series};
   }
@@ -103,53 +103,53 @@ class UniDataVisualiserComponent extends React.Component {
   submissionsPerYear(submissionsPerYearData) {
     return {
       chart: {
-          type: 'column',
+        type: 'column',
       },
       title: {
-          text: 'Submissions Per Year'
+        text: 'Submissions Per Year'
       },
       xAxis: {
-          categories: submissionsPerYearData.xAxis,
+        categories: submissionsPerYearData.xAxis,
       },
       yAxis: {
-          min: 0,
-          title: {
-              text: 'No. of submissions'
-          },
-          stackLabels: {
-              enabled: true,
-              style: {
-                  fontWeight: 'bold',
-                  color: ( // theme
-                      Highcharts.defaultOptions.title.style &&
+        min: 0,
+        title: {
+          text: 'No. of submissions'
+        },
+        stackLabels: {
+          enabled: true,
+          style: {
+            fontWeight: 'bold',
+            color: ( // theme
+              Highcharts.defaultOptions.title.style &&
                       Highcharts.defaultOptions.title.style.color
-                  ) || 'gray'
-              }
+            ) || 'gray'
           }
+        }
       },
       legend: {
-          align: 'right',
-          x: -30,
-          verticalAlign: 'top',
-          y: 25,
-          floating: true,
-          backgroundColor:
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor:
               Highcharts.defaultOptions.legend.backgroundColor || 'white',
-          borderColor: '#CCC',
-          borderWidth: 1,
-          shadow: false
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
       },
       tooltip: {
-          headerFormat: '<b>{point.x}</b><br/>',
-          pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
       },
       plotOptions: {
-          column: {
-              stacking: 'normal',
-              dataLabels: {
-                  enabled: true
-              }
+        column: {
+          stacking: 'normal',
+          dataLabels: {
+            enabled: true
           }
+        }
       },
       series: submissionsPerYearData.series
       // [{
@@ -164,18 +164,18 @@ class UniDataVisualiserComponent extends React.Component {
       <div id="uni-data-body">
         <h2>Table of subjects and where to study</h2>
         <Table>
-        <tbody>
-          <tr>
-            {this.state.listOfSubjectsAndWhereToStudy?.map((value, index) => (
-              <td key={index}>{value.split(":")[0]}</td>
-            ))}
-          </tr>
-          <tr>
-            {this.state.listOfSubjectsAndWhereToStudy?.map((value, index) => (
-              <td key={`${index}-2`}>{value.split(":")[1]}</td>
-            ))}
-          </tr>
-        </tbody>
+          <tbody>
+            <tr>
+              {this.state.listOfSubjectsAndWhereToStudy?.map((value, index) => (
+                <td key={index}>{value.split(':')[0]}</td>
+              ))}
+            </tr>
+            <tr>
+              {this.state.listOfSubjectsAndWhereToStudy?.map((value, index) => (
+                <td key={`${index}-2`}>{value.split(':')[1]}</td>
+              ))}
+            </tr>
+          </tbody>
         </Table>
         <hr/>
         <HighchartsReact
@@ -187,8 +187,8 @@ class UniDataVisualiserComponent extends React.Component {
           options={this.state.submissionsPerYear}
         />
       </div>
-    )
+    );
   }
 }
 
-export { UniDataVisualiserComponent as default }
+export { UniDataVisualiserComponent as default };
