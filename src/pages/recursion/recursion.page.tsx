@@ -1,6 +1,7 @@
 import React from 'react';
 import { CopyBlock, dracula } from "react-code-blocks";
 import { ReactP5Wrapper } from "react-p5-wrapper";
+// import { AWSSIHLazyLoadImg as Img } from 'react-aws-sih-loader';
 import { starRecursiveFnCode, starRecursiveFn, starIterativeFn, starIterativeFnCode } from './functions/stars';
 import { doubleHelixSketch } from './p5-sketches/double-helix.sketch';
 import { sutcliffePentagonSketch } from './p5-sketches/sutcliffe-pentagon.sketch';
@@ -26,28 +27,56 @@ class RecursionPageComponent extends React.Component {
     return (<>
     <div className="home-page-margins page-styling">
       <h2>
-        Recursion / Fractals
+        Recursion and Fractals
       </h2>
       <hr/>
-
-      <span style={{textAlign: 'center'}}>
-        Work in Progress
-      </span>
-      <hr/> 
-
+      <h3><i>What is Recursion?</i></h3>
+      <p>
+      Recursion is the repeated application of a recursive procedure or definition.
+      </p>
       <h3>
-        Recursion in the Natural World
+        Recursion in the Natural World vs Digital World
       </h3>
       <p>
-        We live in an unordered world and it is necessary for us to
-         create order so we can utilise reliable, deterministic logic.
-        In the natural world, there is no such thing as a call stack 
+        We live in an unordered world and it is necessary for humans to
+        create order, in our minds, so we can utilise reliable, deterministic logic.
+        In the natural world, there is no such thing as a recursive call stack 
         keeping track of recursive functions. Instead these natural 
         recursive functions are better described as being painted onto 
         the canvas of the cosmos and that painting is infinitely being imagined.
-        However it is finite on a machine and this is why you might 
-        get the stack overflow error if you exceed the call stack limit.
+        However we need a call stack on a machine so we can create order and this
+        call stack is finite because memory on a machine is finite.
       </p>
+      <p>
+        When you reach the recursive call stack limit, you&apos;ll see the 
+        classic <u>Stack Overflow</u> error.
+      </p>
+      <h3><i>Why is recursion such an alien concept to beginners?</i></h3>
+      <p>
+        I believe that&apos;s because our minds prefer to focus on one thing at at time and prefer dealing with
+        (and finding solutions for) the problems that are, metaphorically, directly in front of us. 
+      <p>
+        Thinking recursively requires that you dig down past all the problems directly in front
+        and get right to nub of the recursive tree before you start evaluating solutions. 
+      </p>
+      <p>
+        It&apos;s very difficult for our minds to hold that many things in short term memory and remain accurate.
+      </p>
+      <p>
+        In my mind, it makes sense that recursion is working in reverse of iteration with the help of
+        a call stack.
+      </p> 
+        Learning to think recursively has been articulated effectively <a href="https://qr.ae/pvutmb">here.</a>
+      </p>
+      <hr/>
+
+      <h3><i>What is a Fractal?</i></h3>
+      <p>
+      A <a href="https://fractalfoundation.org/resources/what-are-fractals/">fractal</a> is 
+      a never-ending pattern. Fractals are infinitely complex 
+      patterns that are self-similar across different scales.
+      </p>
+      <h3>Best Visual Examples of Fractals in Nature</h3>
       <p>
         Tree fractals: <a href="http://fractal-tree-simulator.surge.sh/">
           http://fractal-tree-simulator.surge.sh/
@@ -55,7 +84,7 @@ class RecursionPageComponent extends React.Component {
       </p>
       <p>
         The Sutcliffe Pentagon is a mathematical formula that allows 
-        us to replicate a similar pattern of growth in the leaves of an Ivy.
+        us to replicate a similar pattern of growth in leaves.
       </p>
       <p>
         <ReactP5Wrapper sketch={sutcliffePentagonSketch}/>
@@ -94,19 +123,17 @@ class RecursionPageComponent extends React.Component {
       <p>
         <i>Is it worth contemplating that perhaps DNA in humans is also self referencing?</i>
       </p>
-      <p>
-        <img src="../../../assets/static/img/self referencing dna.png"/>
+      {/* <p>
+      <Img src="self referencing dna.png" 
+            config={{
+                endpoint: 'https://cxjchicdsxdfl3.cloudfront.net',
+                bucket: 'bucket-for-my-images',
+                width: 640, 
+                normalize: true
+            }} />
         <br/>
         Source: https://arxiv.org/ftp/arxiv/papers/1804/1804.03430.pdf
-      </p>
-      <p>
-        <i>Why is recursion such an alien concept to beginners?</i>
-      </p>
-      <p>
-        I believe thats because our minds prefer to focus on one thing at at time 
-          and are not naturally accustomed to recursively following each rabbit hole.
-          Learning to think recursively has been articulated effectively <a href="https://qr.ae/pvutmb">here.</a>
-      </p>
+      </p> */}
       <p>
         <ReactP5Wrapper sketch={doubleHelixSketch} />
         Source: https://editor.p5js.org/AlexandraLopez/sketches
@@ -117,7 +144,7 @@ class RecursionPageComponent extends React.Component {
         Recursion / Fractals in music
       </h3>
       <p>
-        Adam Neely (Sungazer bassist) has a fantastic video on how rhythm can be the same as pitch.
+        Adam Neely (<a href="https://www.sungazermusic.com/">Sungazer</a> bassist) has a fantastic video on how rhythm can be the same as pitch.
       </p>
       <p>
         You should watch the full video to understand how this relates to recursion and self referencing patterns.
