@@ -111,7 +111,7 @@ export const RecursionPageComponent = (): any => {
           rel="noreferrer">
               Tree of Life
         </a> shows that all life is connected 
-        and the best designs have survived evolution.
+        and the best designs have emerged through brutal evolution, over an unimaginable period of time.
         We see wonderful recursive patterns in plants which are made up of cells, 
         the same as all living things.
       </p>
