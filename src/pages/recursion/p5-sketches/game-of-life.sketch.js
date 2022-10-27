@@ -18,11 +18,13 @@ const gameOfLifeSketch = (p5) => {
   let cols;
   let rows;
   let resolution = 10;
+  let maxWidth = 600;
+  let width = maxWidth;
   
   p5.setup = () => {
-    p5.createCanvas(600, 400);
-    cols = p5.width / resolution;
-    rows = p5.height / resolution;
+    p5.createCanvas(width, Math.ceil(width*(2/3)));
+    cols = Math.ceil(p5.width / resolution);
+    rows = Math.ceil(p5.height / resolution);
   
     grid = make2DArray(cols, rows);
     for (let i = 0; i < cols; i++) {
@@ -31,6 +33,16 @@ const gameOfLifeSketch = (p5) => {
       }
     }
   }
+
+  p5.updateWithProps = (props) => {
+    if (props.onReady) {
+      props.onReady();
+      delete props.onReady;
+    }
+    if (props.screenWidth) {
+      width = Math.ceil(Math.min(props.screenWidth, maxWidth));
+    }
+  };
   
   p5.draw = () => {
     p5.background(0);
@@ -68,9 +80,7 @@ const gameOfLifeSketch = (p5) => {
     }
   
     grid = next;
-  
-  
-  
+    
   }
   
   

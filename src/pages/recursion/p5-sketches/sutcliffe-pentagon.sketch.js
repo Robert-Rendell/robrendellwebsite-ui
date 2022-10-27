@@ -1,10 +1,12 @@
 // https://github.com/tex2e/p5js-pentagon/blob/master/js/main.js
 
 const sutcliffePentagonSketch = (p5) => {
+  const maxWidth = 500;
+  let width = maxWidth;
   const Settings = {
     branchColor: '#000000',
     nest: 5,
-    radius: 200,
+    radius: maxWidth * 0.4,
     strutFactor: 0.25,
     strutTarget: 3,
     subStrutTarget: 3,
@@ -117,9 +119,20 @@ const sutcliffePentagonSketch = (p5) => {
   }
   
   p5.setup = () => {
-    p5.createCanvas(500, 500);
+    p5.createCanvas(width, width);
     p5.drawFractal();
   }
+
+  p5.updateWithProps = (props) => {
+    if (props.onReady) {
+      props.onReady();
+      delete props.onReady;
+    }
+    if (props.screenWidth) {
+      width = Math.min(props.screenWidth, 480);
+      Settings.radius = width * 0.4;
+    }
+  };
   
   p5.drawFractal = () => {
     p5.clear();

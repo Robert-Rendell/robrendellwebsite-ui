@@ -1,14 +1,31 @@
-import { P5CanvasInstance } from "react-p5-wrapper";
+import { P5Instance } from "react-p5-wrapper";
 
-const doubleHelixSketch = (p5: P5CanvasInstance) => {
+type Props = {
+  screenWidth: number;
+  onReady: (() => void) | undefined;
+}
+
+const doubleHelixSketch = (p5: P5Instance<Props>) => {
   let CircleNum: number;
   let Diameter = 10
+  let width = 480;
+  let firstDraw = true;
   
   p5.setup = () => { 
-    p5.createCanvas(480, 360);
+    p5.createCanvas(width, width*0.75);
     CircleNum = 100;
-  
   } 
+
+  p5.updateWithProps = (props) => {
+    if (!firstDraw && props.onReady) {
+      props.onReady();
+      delete props.onReady;
+    }
+    if (props.screenWidth) {
+      width = Math.min(props.screenWidth, 480);
+      p5.createCanvas(width, 360);
+    }
+  };
   
   p5.draw = () => {
     p5.background(15,15,30);
@@ -35,7 +52,7 @@ const doubleHelixSketch = (p5: P5CanvasInstance) => {
       p5.fill(p5.random (0,255),g,b,20);
       p5.noStroke();
       p5.ellipse(x3,p5.height/2+30*p5.tan(50*i+p5.frameCount/100),Diameter,Diameter);
-      
+      firstDraw = false;
     }
   }
 }

@@ -1,30 +1,23 @@
 import React from 'react';
 import { CopyBlock, dracula } from "react-code-blocks";
 import { ReactP5Wrapper } from "react-p5-wrapper";
-// import { AWSSIHLazyLoadImg as Img } from 'react-aws-sih-loader';
+import { AWSSIHLazyLoadImg as Img } from 'react-aws-sih-loader';
 import { starRecursiveFnCode, starRecursiveFn, starIterativeFn, starIterativeFnCode } from './functions/stars';
 import { doubleHelixSketch } from './p5-sketches/double-helix.sketch';
 import { sutcliffePentagonSketch } from './p5-sketches/sutcliffe-pentagon.sketch';
 import { gameOfLifeSketch } from './p5-sketches/game-of-life.sketch';
 import '../page.css';
 import { goldenSpiralSketch } from './p5-sketches/golden-spiral';
+import { useWindowSize } from '../../hooks/use-window-size.hook';
 
-type Props = {
+export const RecursionPageComponent = (): any => {
+  const windowSize = useWindowSize();
+  const width = windowSize[0] - 20;
 
-}
-
-class RecursionPageComponent extends React.Component {
-  constructor(props: Props) {
-    super(props);
-    this.state = { date: new Date() };
+  const onDoubleHelixSketchReady = () => {
+    console.log('Double helix ready')
   }
-
-  componentDidMount() {
-    // nothing
-  }
-
-  render() {
-    return (<>
+  return (<>
     <div className="home-page-margins page-styling">
       <h2>
         Recursion and Fractals
@@ -77,17 +70,25 @@ class RecursionPageComponent extends React.Component {
       patterns that are self-similar across different scales.
       </p>
       <h3>Best Visual Examples of Fractals in Nature</h3>
+      <h4>Fractal Tree - Trees</h4>
       <p>
-        Tree fractals: <a href="http://fractal-tree-simulator.surge.sh/">
+        <a href="http://fractal-tree-simulator.surge.sh/">
           http://fractal-tree-simulator.surge.sh/
         </a>
       </p>
+      <h4>Sutcliffe Pentagons - Leaves</h4>
       <p>
         The Sutcliffe Pentagon is a mathematical formula that allows 
         us to replicate a similar pattern of growth in leaves.
       </p>
       <p>
-        <ReactP5Wrapper sketch={sutcliffePentagonSketch}/>
+        <ReactP5Wrapper sketch={sutcliffePentagonSketch} screenWidth={width}/>
+      </p>
+      <p>
+        Golden Spiral - Nautilus Shell
+      </p>
+      <p>
+        <ReactP5Wrapper sketch={goldenSpiralSketch} />
       </p>
       <hr/>
 
@@ -105,12 +106,6 @@ class RecursionPageComponent extends React.Component {
           however my feeling is that DNA is recursive in its physicality.
       </p>
       <p>
-        Golden Spiral
-      </p>
-      <p>
-        <ReactP5Wrapper sketch={goldenSpiralSketch} />
-      </p>
-      <p>
         The <a href="https://youtu.be/pktDqFy5IcE" 
               target="_blank" 
               rel="noreferrer">
@@ -123,19 +118,19 @@ class RecursionPageComponent extends React.Component {
       <p>
         <i>Is it worth contemplating that perhaps DNA in humans is also self referencing?</i>
       </p>
-      {/* <p>
+      <p>
       <Img src="self referencing dna.png" 
             config={{
-                endpoint: 'https://cxjchicdsxdfl3.cloudfront.net',
-                bucket: 'bucket-for-my-images',
+                endpoint: 'https://robrendellwebsite-images.s3.eu-west-1.amazonaws.com/recursion/original/self+referencing+dna.png',
+                bucket: 'robrendellwebsite-images',
                 width: 640, 
-                normalize: true
+                normalize: true,
             }} />
         <br/>
         Source: https://arxiv.org/ftp/arxiv/papers/1804/1804.03430.pdf
-      </p> */}
+      </p>
       <p>
-        <ReactP5Wrapper sketch={doubleHelixSketch} />
+        <ReactP5Wrapper sketch={doubleHelixSketch} screenWidth={width} onReady={onDoubleHelixSketchReady}/>
         Source: https://editor.p5js.org/AlexandraLopez/sketches
       </p>
       <hr/>
@@ -150,8 +145,8 @@ class RecursionPageComponent extends React.Component {
         You should watch the full video to understand how this relates to recursion and self referencing patterns.
       </p>
       <p>
-        <iframe width="560" 
-                height="315" 
+        <iframe width={width} 
+                height="315"
                 src="https://www.youtube.com/embed/_gCJHNBEdoc"
                 title="YouTube video player" 
                 frameBorder="0"
@@ -170,21 +165,35 @@ class RecursionPageComponent extends React.Component {
         Unfortunately Daniel Shiffman&apos;s P5.js sketch of Game of Life isn&apos;t recursive... or fractal in its nature.
       </p>
       <p>
-        <ReactP5Wrapper sketch={gameOfLifeSketch} />
+        <ReactP5Wrapper sketch={gameOfLifeSketch} screenWidth={width} />
       </p>
       <p>
         However... you will find some self referencing in this mind-blowing video, you must watch it to the end:
       </p>
       <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/xP5-iIeKXE8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <iframe width={width} height="315" src="https://www.youtube.com/embed/xP5-iIeKXE8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       <hr/>
     
       <h3>
         Recursion and Iteration
       </h3>
+      <p>
+        When using iteration, you can achieve the same result as 
+        recursion if you use an in-memory stack.
+      </p>
+      <p>
+        In many cases you can only use recursion, as iteration requires that you
+        know the limits of your data structure. In most cases,
+        data structures like graphs are populated dynamically and can change.
+      </p>
+      <p>
+        Using self reference allows us to dynamically traverse a graph while pushing
+        to the recursive call stack.
+      </p>
       <div>
-        Recursive functions - base case and self referencing recursive case (also helper functions):
+        Recursive functions key points: 1. base case and 2. self referencing recursive case (also 3. helper functions):
+        <p><u>Recursive approach</u>: <b>starRecursiveFn(5)</b> = { starRecursiveFn(5) }</p>
         <CopyBlock
           text={starRecursiveFnCode}
           theme={dracula}
@@ -192,7 +201,7 @@ class RecursionPageComponent extends React.Component {
           showLineNumbers={false}
           wrapLines
         />
-        <p><b>Stars (recursive function)</b>: { starRecursiveFn(5)}</p>
+        <p><u>Iterative approach</u>: <b>starIterativeFn(5)</b> = { starIterativeFn(5) }</p>
         <CopyBlock
           text={starIterativeFnCode}
           theme={dracula}
@@ -200,7 +209,6 @@ class RecursionPageComponent extends React.Component {
           showLineNumbers={false}
           wrapLines
         />
-        <p><b>Stars (iterative function)</b>: { starIterativeFn(5)}</p>
       </div>
     
       <hr/>
@@ -211,7 +219,6 @@ class RecursionPageComponent extends React.Component {
       <p>Content coming soon</p>
     </div>
   </>)
-  }
 }
 
 export default RecursionPageComponent;
