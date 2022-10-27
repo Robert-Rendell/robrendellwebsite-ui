@@ -1,7 +1,7 @@
 import React from 'react';
 import '../page.css';
 
-export function OceanAcidity() {
+export function OceanAcidification() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>

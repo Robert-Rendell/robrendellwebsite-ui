@@ -1,11 +1,13 @@
 import React from 'react';
 import { CopyBlock, dracula } from "react-code-blocks";
 import { ReactP5Wrapper } from "react-p5-wrapper";
+// import { AWSSIHLazyLoadImg as Img } from 'react-aws-sih-loader';
 import { starRecursiveFnCode, starRecursiveFn, starIterativeFn, starIterativeFnCode } from './functions/stars';
 import { doubleHelixSketch } from './p5-sketches/double-helix.sketch';
 import { sutcliffePentagonSketch } from './p5-sketches/sutcliffe-pentagon.sketch';
 import { gameOfLifeSketch } from './p5-sketches/game-of-life.sketch';
 import '../page.css';
+import { goldenSpiralSketch } from './p5-sketches/golden-spiral';
 
 type Props = {
 
@@ -22,121 +24,193 @@ class RecursionPageComponent extends React.Component {
   }
 
   render() {
-    return (<div className="home-page-margins page-styling">
-    <h2>
-      Recursion / Fractals
-    </h2>
-    <p style={{textAlign: "center"}}>
+    return (<>
+    <div className="home-page-margins page-styling">
+      <h2>
+        Recursion and Fractals
+      </h2>
       <hr/>
-       Work in Progress
-       <hr/>
-    </p>    
-    <h3>
-      Recursion in the Natural World
-    </h3>
-    <p>
-      We live in an unordered world and it is necessary for us to create order so we can utilise reliable, deterministic logic.
-      In the natural world, there is no such thing as a call stack keeping track of recursive functions. Instead these natural recursive functions are better described as being painted onto the canvas of the cosmos and that painting is infinitely being imagined.
-      However it is finite on a machine and this is why you might get the stack overflow error if you exceed the call stack limit.
-    </p>
-    <p>
-      Tree fractals: <a href="http://fractal-tree-simulator.surge.sh/">http://fractal-tree-simulator.surge.sh/</a>
-    </p>
-    <p>
-      The Sutcliffe Pentagon is a mathematical formula that allows us to replicate a similar pattern of growth in the leaves of an Ivy.
-    </p>
-    <p>
-      <ReactP5Wrapper sketch={sutcliffePentagonSketch}/>
-    </p>
-    <h3>
-      Recursion / Fractals in music
-    </h3>
-    <p>
-      Adam Neely (Sungazer bassist) has a fantastic video on how rhythm can be the same as pitch.
-    </p>
-    <p>
-      You should watch the full video to understand how this relates to recursion and self referencing patterns.
-    </p>
-    <p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_gCJHNBEdoc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-    </p>
-    <hr/>
-    <h3>
-      Conway&apos;s Game of Life: Cellular Automata
-    </h3>
-    <p>
-      I can&apos;t write about recursion and fractals without going off on an unrelated tangent about Conways Game of Life:
-    </p>
-    <p>
-      Unfortunately Daniel Shiffman&apos;s P5.js sketch of Game of Life isn&apos;t recursive... or fractal in its nature.
-    </p>
-    <p>
-      <ReactP5Wrapper sketch={gameOfLifeSketch} />
-    </p>
-    <p>
-      However... you will find some self referencing in this mind-blowing video, you must watch it to the end:
-    </p>
-    <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/xP5-iIeKXE8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-    </div>
-    <hr/>
-    <h3>
-      DNA
-    </h3>
-    <p>
-    <ul>
-      <li>So why is recursion so important to humans?</li>
-      <li>
-        Recursion is in our DNA! However, our minds prefer to focus on one thing at at time 
-        and are not naturally accustomed to recursively following each rabbit hole.
+      <h3><i>What is Recursion?</i></h3>
+      <p>
+      Recursion is the repeated application of a recursive procedure or definition.
+      </p>
+      <h3>
+        Recursion in the Natural World vs Digital World
+      </h3>
+      <p>
+        We live in an unordered world and it is necessary for humans to
+        create order, in our minds, so we can utilise reliable, deterministic logic.
+        In the natural world, there is no such thing as a recursive call stack 
+        keeping track of recursive functions. Instead these natural 
+        recursive functions are better described as being painted onto 
+        the canvas of the cosmos and that painting is infinitely being imagined.
+        However we need a call stack on a machine so we can create order and this
+        call stack is finite because memory on a machine is finite.
+      </p>
+      <p>
+        When you reach the recursive call stack limit, you&apos;ll see the 
+        classic <u>Stack Overflow</u> error.
+      </p>
+      <h3><i>Why is recursion such an alien concept to beginners?</i></h3>
+      <p>
+        I believe that&apos;s because our minds prefer to focus on one thing at at time and prefer dealing with
+        (and finding solutions for) the problems that are, metaphorically, directly in front of us. 
+      <p>
+        Thinking recursively requires that you dig down past all the problems directly in front
+        and get right to nub of the recursive tree before you start evaluating solutions. 
+      </p>
+      <p>
+        It&apos;s very difficult for our minds to hold that many things in short term memory and remain accurate.
+      </p>
+      <p>
+        In my mind, it makes sense that recursion is working in reverse of iteration with the help of
+        a call stack.
+      </p> 
         Learning to think recursively has been articulated effectively <a href="https://qr.ae/pvutmb">here.</a>
-      </li>
-    </ul>
-    <ReactP5Wrapper sketch={doubleHelixSketch} />
-    https://editor.p5js.org/AlexandraLopez/sketches
-    </p>
-    <hr/>
-    <h3>
-      Recursion and Iteration
-    </h3>
-    <div>
-      Recursive functions - base case and self referencing recursive case (also helper functions):
-      <CopyBlock
-        text={starRecursiveFnCode}
-        theme={dracula}
-        language={'typescript'}
-        showLineNumbers={false}
-        wrapLines
-      />
-      <p><b>Stars (recursive function)</b>: { starRecursiveFn(5)}</p>
-      <CopyBlock
-        text={starIterativeFnCode}
-        theme={dracula}
-        language={'typescript'}
-        showLineNumbers={false}
-        wrapLines
-      />
-      <p><b>Stars (iterative function)</b>: { starIterativeFn(5)}</p>
-    </div>
-    <hr/>
-    <h3>
-      Recursive Algorithms
-    </h3>
+      </p>
+      <hr/>
 
-    <p>Content coming soon</p>
+      <h3><i>What is a Fractal?</i></h3>
+      <p>
+      A <a href="https://fractalfoundation.org/resources/what-are-fractals/">fractal</a> is 
+      a never-ending pattern. Fractals are infinitely complex 
+      patterns that are self-similar across different scales.
+      </p>
+      <h3>Best Visual Examples of Fractals in Nature</h3>
+      <p>
+        Tree fractals: <a href="http://fractal-tree-simulator.surge.sh/">
+          http://fractal-tree-simulator.surge.sh/
+        </a>
+      </p>
+      <p>
+        The Sutcliffe Pentagon is a mathematical formula that allows 
+        us to replicate a similar pattern of growth in leaves.
+      </p>
+      <p>
+        <ReactP5Wrapper sketch={sutcliffePentagonSketch}/>
+      </p>
+      <hr/>
+
+      <h3>
+        Human Genome
+      </h3>
+      <p>
+        <i>So why is recursion important to humans?</i>
+      </p>
+      <p>
+          I&apos;m ignorant to genetics and the human genome 
+          (<a href="https://jameshfisher.com/2019/12/30/browsing-my-genome/">
+          education to follow
+          </a>), 
+          however my feeling is that DNA is recursive in its physicality.
+      </p>
+      <p>
+        Golden Spiral
+      </p>
+      <p>
+        <ReactP5Wrapper sketch={goldenSpiralSketch} />
+      </p>
+      <p>
+        The <a href="https://youtu.be/pktDqFy5IcE" 
+              target="_blank" 
+              rel="noreferrer">
+              Tree of Life
+            </a> shows that all life is connected 
+        and the best designs have survived evolution.
+        We see wonderful recursive patterns in plants which are made up of cells, 
+        the same as all living things.
+      </p>
+      <p>
+        <i>Is it worth contemplating that perhaps DNA in humans is also self referencing?</i>
+      </p>
+      {/* <p>
+      <Img src="self referencing dna.png" 
+            config={{
+                endpoint: 'https://cxjchicdsxdfl3.cloudfront.net',
+                bucket: 'bucket-for-my-images',
+                width: 640, 
+                normalize: true
+            }} />
+        <br/>
+        Source: https://arxiv.org/ftp/arxiv/papers/1804/1804.03430.pdf
+      </p> */}
+      <p>
+        <ReactP5Wrapper sketch={doubleHelixSketch} />
+        Source: https://editor.p5js.org/AlexandraLopez/sketches
+      </p>
+      <hr/>
+
+      <h3>
+        Recursion / Fractals in music
+      </h3>
+      <p>
+        Adam Neely (<a href="https://www.sungazermusic.com/">Sungazer</a> bassist) has a fantastic video on how rhythm can be the same as pitch.
+      </p>
+      <p>
+        You should watch the full video to understand how this relates to recursion and self referencing patterns.
+      </p>
+      <p>
+        <iframe width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/_gCJHNBEdoc"
+                title="YouTube video player" 
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen></iframe>
+      </p>
+      <hr/>
+
+      <h3>
+        Conway&apos;s Game of Life: Cellular Automata
+      </h3>
+      <p>
+        I can&apos;t write about recursion and fractals without going off on an unrelated tangent about Conways Game of Life:
+      </p>
+      <p>
+        Unfortunately Daniel Shiffman&apos;s P5.js sketch of Game of Life isn&apos;t recursive... or fractal in its nature.
+      </p>
+      <p>
+        <ReactP5Wrapper sketch={gameOfLifeSketch} />
+      </p>
+      <p>
+        However... you will find some self referencing in this mind-blowing video, you must watch it to the end:
+      </p>
+      <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xP5-iIeKXE8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
+      <hr/>
     
-    {/* <p>
-    Binary Search Tree
-        <ul>
-          <li>
-          depth first
-          </li>
-          <li>
-          breadth first
-          </li>
-        </ul>
-    </p> */}
-    </div>)
+      <h3>
+        Recursion and Iteration
+      </h3>
+      <div>
+        Recursive functions - base case and self referencing recursive case (also helper functions):
+        <CopyBlock
+          text={starRecursiveFnCode}
+          theme={dracula}
+          language={'typescript'}
+          showLineNumbers={false}
+          wrapLines
+        />
+        <p><b>Stars (recursive function)</b>: { starRecursiveFn(5)}</p>
+        <CopyBlock
+          text={starIterativeFnCode}
+          theme={dracula}
+          language={'typescript'}
+          showLineNumbers={false}
+          wrapLines
+        />
+        <p><b>Stars (iterative function)</b>: { starIterativeFn(5)}</p>
+      </div>
+    
+      <hr/>
+      <h3>
+        Recursive Algorithms
+      </h3>
+
+      <p>Content coming soon</p>
+    </div>
+  </>)
   }
 }
 
