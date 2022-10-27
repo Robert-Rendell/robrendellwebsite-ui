@@ -43,7 +43,7 @@ class SudokuDashboardComponent extends React.Component {
         }
       },
       pagination: {
-          limit: 10,
+        limit: 10,
       }
     }).then((response) => {
       this.setState({ recentSudokus: response.data });
@@ -61,7 +61,7 @@ class SudokuDashboardComponent extends React.Component {
     this.toggleGenerating(true);
     axios.post(`${config.backend}/sudoku/add`, { 
       headers: {'Content-Type': 'application/json'},
-      roberto: "testing",
+      roberto: 'testing',
       difficulty,
       generatorUserName: 'implement on front end',
     }).then((response) => {
@@ -75,8 +75,8 @@ class SudokuDashboardComponent extends React.Component {
         return;
       }
       this.watchSudokuGeneration();
-      console.log("Job Id: " + generationJobId);
-      this.setState({ generationJobId })
+      console.log('Job Id: ' + generationJobId);
+      this.setState({ generationJobId });
       this.setSudokuResult(`Generating ${difficulty} sudoku...`);
     }).catch((reason) => {
       console.error(reason);
@@ -89,7 +89,7 @@ class SudokuDashboardComponent extends React.Component {
   generateVeryHardSudoku() { this.generateSudoku('very-hard'); }
 
   toggleGenerating(toggle) {
-    this.setState({ isGenerating: toggle })
+    this.setState({ isGenerating: toggle });
     document.getElementById(SudokuDashboardComponent.Button.Easy).disabled = toggle;
     document.getElementById(SudokuDashboardComponent.Button.Medium).disabled = toggle;
     document.getElementById(SudokuDashboardComponent.Button.Hard).disabled = toggle;
@@ -133,7 +133,7 @@ class SudokuDashboardComponent extends React.Component {
           this.setSudokuResult(`No response yet, retrying (attempt no.${this.state.retries})...`);
         } else {
           this.
-          this.setSudokuResult(`Sudoku Generation timed out.`);
+            this.setSudokuResult('Sudoku Generation timed out.');
         }
       }
     }).catch((reason) => {
@@ -163,7 +163,7 @@ class SudokuDashboardComponent extends React.Component {
         <td>{item.difficulty}</td>
         <td>{new Date(item.dateGenerated).toDateString()}</td>
         <td><a href={`/sudoku/play/${item.sudokuId}`}>Play!</a></td> 
-      </tr>)
+      </tr>);
     });
     return (
       <div id="sudoku-dashboard">
@@ -210,7 +210,7 @@ class SudokuDashboardComponent extends React.Component {
             </tr>
           </thead>
           <tbody>
-          {recentSudokus}
+            {recentSudokus}
           </tbody>
         </Table>
         <hr/>
@@ -231,11 +231,11 @@ export default SudokuDashboardComponent;
 SudokuDashboardComponent.Div = {
   SudokuGenerationResultsContainer: 'sudoku-gen-results-container',
   SudokuGenerationResults: 'sudoku-gen-results',
-}
+};
 
 SudokuDashboardComponent.Button = {
   Easy: 'btnEasy',
   Medium: 'btnMedium',
   Hard: 'btnHard',
   VeryHard: 'btnVeryHard',
-}
+};

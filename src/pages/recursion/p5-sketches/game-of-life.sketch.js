@@ -32,7 +32,7 @@ const gameOfLifeSketch = (p5) => {
         grid[i][j] = p5.floor(p5.random(2));
       }
     }
-  }
+  };
 
   p5.updateWithProps = (props) => {
     if (props.onReady) {
@@ -81,7 +81,7 @@ const gameOfLifeSketch = (p5) => {
   
     grid = next;
     
-  }
+  };
   
   
   function countNeighbors(grid, x, y) {
@@ -96,6 +96,6 @@ const gameOfLifeSketch = (p5) => {
     sum -= grid[x][y];
     return sum;
   }
-}
+};
 
 export { gameOfLifeSketch };

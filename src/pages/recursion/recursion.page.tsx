@@ -1,6 +1,6 @@
 import React from 'react';
-import { CopyBlock, dracula } from "react-code-blocks";
-import { ReactP5Wrapper } from "react-p5-wrapper";
+import { CopyBlock, dracula } from 'react-code-blocks';
+import { ReactP5Wrapper } from 'react-p5-wrapper';
 import { AWSSIHLazyLoadImg as Img } from 'react-aws-sih-loader';
 import { starRecursiveFnCode, starRecursiveFn, starIterativeFn, starIterativeFnCode } from './functions/stars';
 import { doubleHelixSketch } from './p5-sketches/double-helix.sketch';
@@ -15,8 +15,8 @@ export const RecursionPageComponent = (): any => {
   const width = windowSize[0] - 20;
 
   const onDoubleHelixSketchReady = () => {
-    console.log('Double helix ready')
-  }
+    console.log('Double helix ready');
+  };
   return (<>
     <div className="standard-page-margins standard-page-styling">
       <h2>
@@ -48,17 +48,17 @@ export const RecursionPageComponent = (): any => {
       <p>
         I believe that&apos;s because our minds prefer to focus on one thing at at time and prefer dealing with
         (and finding solutions for) the problems that are, metaphorically, directly in front of us. 
-      <p>
+        <p>
         Thinking recursively requires that you dig down past all the problems directly in front
         and get right to nub of the recursive tree before you start evaluating solutions. 
-      </p>
-      <p>
+        </p>
+        <p>
         It&apos;s very difficult for our minds to hold that many things in short term memory and remain accurate.
-      </p>
-      <p>
+        </p>
+        <p>
         In my mind, it makes sense that recursion is working in reverse of iteration with the help of
         a call stack.
-      </p> 
+        </p> 
         Learning to think recursively has been articulated effectively <a href="https://qr.ae/pvutmb">here.</a>
       </p>
       <hr/>
@@ -102,15 +102,15 @@ export const RecursionPageComponent = (): any => {
           I&apos;m ignorant to genetics and the human genome 
           (<a href="https://jameshfisher.com/2019/12/30/browsing-my-genome/">
           education to follow
-          </a>), 
+        </a>), 
           however my feeling is that DNA is recursive in its physicality.
       </p>
       <p>
         The <a href="https://youtu.be/pktDqFy5IcE" 
-              target="_blank" 
-              rel="noreferrer">
+          target="_blank" 
+          rel="noreferrer">
               Tree of Life
-            </a> shows that all life is connected 
+        </a> shows that all life is connected 
         and the best designs have survived evolution.
         We see wonderful recursive patterns in plants which are made up of cells, 
         the same as all living things.
@@ -119,13 +119,13 @@ export const RecursionPageComponent = (): any => {
         <i>&quot;Is it worth contemplating that perhaps DNA in humans is also self referencing?&quot;</i>
       </p>
       <p>
-      <Img src="self referencing dna.png" 
-            config={{
-                endpoint: 'https://robrendellwebsite-images.s3.eu-west-1.amazonaws.com/recursion/original/self+referencing+dna.png',
-                bucket: 'robrendellwebsite-images',
-                width: 640, 
-                normalize: true,
-            }} />
+        <Img src="self referencing dna.png" 
+          config={{
+            endpoint: 'https://robrendellwebsite-images.s3.eu-west-1.amazonaws.com/recursion/original/self+referencing+dna.png',
+            bucket: 'robrendellwebsite-images',
+            width: 640, 
+            normalize: true,
+          }} />
         <br/>
         Source: https://arxiv.org/ftp/arxiv/papers/1804/1804.03430.pdf
       </p>
@@ -146,12 +146,12 @@ export const RecursionPageComponent = (): any => {
       </p>
       <p>
         <iframe width={width} 
-                height="315"
-                src="https://www.youtube.com/embed/_gCJHNBEdoc"
-                title="YouTube video player" 
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen></iframe>
+          height="315"
+          src="https://www.youtube.com/embed/_gCJHNBEdoc"
+          title="YouTube video player" 
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen></iframe>
       </p>
       <hr/>
 
@@ -218,7 +218,7 @@ export const RecursionPageComponent = (): any => {
 
       <p>Content coming soon</p>
     </div>
-  </>)
-}
+  </>);
+};
 
 export default RecursionPageComponent;

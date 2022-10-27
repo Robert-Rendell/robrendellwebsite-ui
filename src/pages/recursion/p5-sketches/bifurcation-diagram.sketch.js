@@ -24,7 +24,7 @@ const bifurcationDiagramSketch = (p5) => {
     }
   
     animate() {
-      
+      //
     }
   }
   
@@ -135,15 +135,15 @@ const bifurcationDiagramSketch = (p5) => {
     p5.background(0);
     p5.createCanvas(1200,500);
     bf = new Bifurcation();
-  }
+  };
   
   p5.draw = () => {
     bf.draw();
-  }
+  };
   
   // p5.mousePressed = () => {
   //   bf.increment();
   // }
-}
+};
 
-export { bifurcationDiagramSketch }
+export { bifurcationDiagramSketch };

@@ -11,13 +11,13 @@ class SudokuGameComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        date: new Date(),
-        puzzle: [],
-        sudokuBoard: [],
-        submission: [],
-        sudokuId: '',
-        submissionId: '',
-        submitterName: '',
+      date: new Date(),
+      puzzle: [],
+      sudokuBoard: [],
+      submission: [],
+      sudokuId: '',
+      submissionId: '',
+      submitterName: '',
     };
     // Oh my god JavaScript...
     this.readSudokuGrid = this.readSudokuGrid.bind(this);
@@ -104,7 +104,7 @@ class SudokuGameComponent extends React.Component {
     });
   }
 
-    /**
+  /**
    * Response:
    * - leaderboard: []
    * - { 'timeTakenMs' | 'dateSubmitted' | 'submitterName' }
@@ -142,11 +142,11 @@ class SudokuGameComponent extends React.Component {
     axios.post(`${config.backend}/sudoku/submit`,
       { 
         headers: {'Content-Type': 'application/json'},
-        "sudokuId": this.state.sudokuId,
-        "sudokuSubmission": JSON.stringify(sudokuGrid),
-        "sudokuSubmissionId": this.state.submissionId,
-        "timeTaken": 0,
-        "submitterName": submitter,
+        'sudokuId': this.state.sudokuId,
+        'sudokuSubmission': JSON.stringify(sudokuGrid),
+        'sudokuSubmissionId': this.state.submissionId,
+        'timeTaken': 0,
+        'submitterName': submitter,
       }
     ).then((response) => {
       console.log(response.data);
@@ -171,7 +171,7 @@ class SudokuGameComponent extends React.Component {
     }
     const minutes = Math.floor(rounded / 60);
     const seconds = ((rounded / 60) - minutes) * 60;
-    return `${minutes} min ${seconds.toFixed(0)} secs`
+    return `${minutes} min ${seconds.toFixed(0)} secs`;
   }
 
   isSubmissionComplete(sudokuGrid) {
@@ -180,7 +180,7 @@ class SudokuGameComponent extends React.Component {
 
   getSubmitterName() {
     if (this.state.submitterName.length === 0) {
-      const submitterName = prompt('Enter your name or leave blank')
+      const submitterName = prompt('Enter your name or leave blank');
       this.setState({
         submitterName,
       });
@@ -189,20 +189,20 @@ class SudokuGameComponent extends React.Component {
   }
 
   renderSudoku() {
-    if (this.state.sudokuBoard.length === 0) return (<h2>Loading...</h2>)
+    if (this.state.sudokuBoard.length === 0) return (<h2>Loading...</h2>);
     return this.state.sudokuBoard.map((sudokuRow, rowIndex) => {
-        return (
-          <tr key={`row(${rowIndex})`}>
+      return (
+        <tr key={`row(${rowIndex})`}>
           { 
             sudokuRow.map((cell, columnIndex) => {
               return <SudokuCellComponent key={`cell(${rowIndex},${columnIndex})`}
-                                          cell={cell} 
-                                          row={rowIndex} 
-                                          column={columnIndex}/>
+                cell={cell} 
+                row={rowIndex} 
+                column={columnIndex}/>;
             })
           }
-          </tr>
-        );
+        </tr>
+      );
     });
   }
 
@@ -248,10 +248,10 @@ class SudokuGameComponent extends React.Component {
     const leaderboardEntries = this.state.leaderboard?.slice(0,5).map((item, index) => {
       return ( <tr key={`leaderboard-entry-${index}`}>
         <td>{ index + 1 }</td>
-        <td>{ new Date(item.dateSubmitted).toUTCString().replace('GMT',"") }</td>
+        <td>{ new Date(item.dateSubmitted).toUTCString().replace('GMT','') }</td>
         <td>{ item.submitterName || 'anonymous' }</td>
         <td>{ this.getMinutesAndSeconds(item.timeTakenMs) }</td>
-    </tr>)
+      </tr>);
     });
     let leaderboard = '';
     if (leaderboardEntries?.length > 0) {
@@ -259,17 +259,17 @@ class SudokuGameComponent extends React.Component {
         <div id="leaderboard_parent" className="col left-right-padding-5">
           <div id="leaderboard">
             <Table striped bordered hover>
-                <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Date</th>
-                      <th>Name</th>
-                      <th>Time</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  { leaderboardEntries }
-                </tbody>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                { leaderboardEntries }
+              </tbody>
             </Table>
           </div>
         </div>
@@ -279,17 +279,17 @@ class SudokuGameComponent extends React.Component {
       <div id="sudoku-game">
         <div id="sudoku-game-inner" className="row">
           <div id="board-parent" className="col left-right-padding-5">
-              <div id="board" className="sudoku-parent">
-                  <Table striped bordered hover>
-                    <tbody id={SudokuGameComponent.Div.SudokuBoard}>
-                        { this.renderSudoku() }
-                    </tbody>
-                  </Table>
-                  <Button id={SudokuGameComponent.Button.GiveUp} onClick={this.giveUp} disabled>Give Up</Button>
+            <div id="board" className="sudoku-parent">
+              <Table striped bordered hover>
+                <tbody id={SudokuGameComponent.Div.SudokuBoard}>
+                  { this.renderSudoku() }
+                </tbody>
+              </Table>
+              <Button id={SudokuGameComponent.Button.GiveUp} onClick={this.giveUp} disabled>Give Up</Button>
               <Button id={SudokuGameComponent.Button.Validate} onClick={this.submitSudoku}>Check / Validate</Button>
               <Button id={SudokuGameComponent.Button.Reset} onClick={this.reset} disabled>Reset</Button>
-              </div>
-              {/* <input type="text" id="txtShareLink" className="inline form-control"
+            </div>
+            {/* <input type="text" id="txtShareLink" className="inline form-control"
                 onFocus={this.showShareLink(this,'{{ sudoku_id }}')}
                 onBlur={() => this.value = 'click for share link'}
                 value="click for share link"
@@ -307,7 +307,7 @@ export default SudokuGameComponent;
 
 SudokuGameComponent.propTypes = {
   sudokuId: PropTypes.string,
-}
+};
 
 SudokuGameComponent.Div = {
   SudokuBoard: 'render-sudoku-board',
