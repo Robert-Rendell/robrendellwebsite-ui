@@ -11,92 +11,79 @@ import nodeJsLogo from '../resources/nodejs-logo.png';
 import tsLogo from '../resources/ts-logo.png';
 import awsLogo from '../resources/aws-logo.png';
 
-class NavComponent extends React.Component {
-  constructor(props: Record<string, string>) {
-    super(props);
-    this.state = { date: new Date() };
-  }
+export const NavComponent = () => {
+  return (
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Container fluid>
+        <Navbar.Brand href="/">Rob Rendell</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
+          
+            <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
+          
+            <NavDropdown title="Recursion Project" id="recursionProject">
+              <NavDropdown.Item href="/recursion">Recursion / Fractals</NavDropdown.Item>
+              <NavDropdown.Item href="/recursion/bifurcation-logistical-map">Chaos Theory: Bifurcation Logistical Map</NavDropdown.Item>
+            </NavDropdown>
 
-  componentDidMount() {
-    // Loaded
-  }
+            <NavDropdown title="Climate Change" id="climateChange">
+              <NavDropdown.Item href="/climate-change/ruminants">
+              Ruminants / Milk + Beef
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/climate-change/ride-a-bike">
+              Ride a Bike!
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/climate-change/ocean-acidity">
+              Ocean Acidity
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/climate-change/reduce-reuse-recycle">
+              Reduce, Reuse, Recycle (Plastic!)
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/climate-change/renewable-energy">
+              Renewable Energy
+              </NavDropdown.Item>
+              <NavDropdown.Item href="https://www.timeshighereducation.com/impactrankings">
+              World University Impact Sustainability Rankings
+              </NavDropdown.Item>
+            </NavDropdown>
 
-  render() {
-    return (
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <Container fluid>
-          <Navbar.Brand href="/">Rob Rendell</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-            
-              <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
-            
-              <NavDropdown title="Recursion Project" id="recursionProject">
-                <NavDropdown.Item href="/recursion">Recursion / Fractals</NavDropdown.Item>
-                <NavDropdown.Item href="/recursion/bifurcation-logistical-map">Chaos Theory: Bifurcation Logistical Map</NavDropdown.Item>
-              </NavDropdown>
+            <NavDropdown title="Nature" id="nature">
+              <NavDropdown.Item href="/photos-ive-taken/nature/wild-flowers">
+              Wild Flowers
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/photos-ive-taken/nature/insects">
+              Insects
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/photos-ive-taken/nature/lichen">
+              Lichen
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/photos-ive-taken/nature/arachnids">
+              Arachnids
+              </NavDropdown.Item>
+            </NavDropdown>
 
-              <NavDropdown title="Climate Change" id="climateChange">
-                <NavDropdown.Item href="/climate-change/ruminants">
-                Ruminants / Milk + Beef
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/climate-change/ride-a-bike">
-                Ride a Bike!
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/climate-change/ocean-acidity">
-                Ocean Acidity
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/climate-change/reduce-reuse-recycle">
-                Reduce, Reuse, Recycle (Plastic!)
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/climate-change/renewable-energy">
-                Renewable Energy
-                </NavDropdown.Item>
-                <NavDropdown.Item href="https://www.timeshighereducation.com/impactrankings">
-                World University Impact Sustainability Rankings
-                </NavDropdown.Item>
-              </NavDropdown>
+            <NavDropdown title="Music Projects" id="musicProjectsNavbarScrollingDropdown">
+              <NavDropdown.Item href="https://www.shiva-archetypes.com">Shiva Archetypes (band)</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.robcelticfiddle.co.uk">Rob Celtic Fiddle (weddings)</NavDropdown.Item>
+            </NavDropdown>
 
-              <NavDropdown title="Nature" id="nature">
-                <NavDropdown.Item href="/photos-ive-taken/nature/wild-flowers">
-                Wild Flowers
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/photos-ive-taken/nature/insects">
-                Insects
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/photos-ive-taken/nature/lichen">
-                Lichen
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/photos-ive-taken/nature/arachnids">
-                Arachnids
-                </NavDropdown.Item>
-              </NavDropdown>
-
-              <NavDropdown title="Music Projects" id="musicProjectsNavbarScrollingDropdown">
-                <NavDropdown.Item href="https://www.shiva-archetypes.com">Shiva Archetypes (band)</NavDropdown.Item>
-                <NavDropdown.Item href="https://www.robcelticfiddle.co.uk">Rob Celtic Fiddle (weddings)</NavDropdown.Item>
-              </NavDropdown>
-
-              <NavDropdown title="Tech Tests" id="techTestsNavbarScrollingDropdown">
-                <NavDropdown.Item href="/technical-tests/291121">29/11/21 - University data visualiser</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">LinkedIn</Nav.Link>
-            </Nav>
-            <Form className="d-flex">
-              <img src={logo} width="40" height="40" alt="React" />
-              <img src={tsLogo} className="tech-icons" width="30" height="30" alt="TypeScript" />
-              <img src={nodeJsLogo} className="tech-icons nodejs-icon" width="30" height="30" alt="nodeJs" />
-              <div className="tech-icons aws-icon-bg">
-                <img src={awsLogo} className="aws-icon" width="30" height="20" alt="nodeJs" />
-              </div>
-              {/* <Button variant="outline-success" disabled>Enquire</Button> */}
-            </Form>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    );
-  }
-}
-
-export default NavComponent;
+            <NavDropdown title="Tech Tests" id="techTestsNavbarScrollingDropdown">
+              <NavDropdown.Item href="/technical-tests/291121">29/11/21 - University data visualiser</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">LinkedIn</Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+            <img src={logo} width="40" height="40" alt="React" />
+            <img src={tsLogo} className="tech-icons" width="30" height="30" alt="TypeScript" />
+            <img src={nodeJsLogo} className="tech-icons nodejs-icon" width="30" height="30" alt="nodeJs" />
+            <div className="tech-icons aws-icon-bg">
+              <img src={awsLogo} className="aws-icon" width="30" height="20" alt="nodeJs" />
+            </div>
+            {/* <Button variant="outline-success" disabled>Enquire</Button> */}
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};

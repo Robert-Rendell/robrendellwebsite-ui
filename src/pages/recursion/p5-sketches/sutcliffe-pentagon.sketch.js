@@ -4,6 +4,7 @@ const sutcliffePentagonSketch = (p5) => {
   const maxWidth = 500;
   let width = maxWidth;
   const Settings = {
+    color: p5.color(0,255,0),
     branchColor: '#000000',
     nest: 5,
     radius: maxWidth * 0.4,
@@ -69,8 +70,9 @@ const sutcliffePentagonSketch = (p5) => {
     }
   
     draw() {
+      Settings.color = p5.color(100, p5.random(200)+55, 0);
       var weight = (this.level < 5) ? 5 - this.level : 0.5;
-      p5.stroke(0,255,0);
+      p5.stroke(Settings.color);
       p5.strokeWeight(weight);
       // draw outer shape
       for (var i = 0; i < this.outerPoints.length; i++) {
@@ -146,6 +148,10 @@ const sutcliffePentagonSketch = (p5) => {
     if (0 <= p5.mouseX && p5.mouseX < p5.width &&
         0 <= p5.mouseY && p5.mouseY < p5.height) {
       p5.drawFractal();
+      if (Settings.nest === 5) {
+        Settings.nest = 1;
+      }
+      Settings.nest = Settings.nest + 1;
     }
   };
 };

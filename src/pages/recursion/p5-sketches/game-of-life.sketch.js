@@ -43,6 +43,13 @@ const gameOfLifeSketch = (p5) => {
       width = Math.ceil(Math.min(props.screenWidth, maxWidth));
     }
   };
+
+  p5.mouseClicked = () => {
+    if (0 <= p5.mouseX && p5.mouseX < p5.width &&
+        0 <= p5.mouseY && p5.mouseY < p5.height) {
+      p5.setup();
+    }
+  };
   
   p5.draw = () => {
     p5.background(0);

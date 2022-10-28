@@ -1,35 +1,38 @@
 import React from 'react';
 import { CopyBlock, dracula } from 'react-code-blocks';
 import { ReactP5Wrapper } from 'react-p5-wrapper';
-import { AWSSIHLazyLoadImg as Img } from 'react-aws-sih-loader';
 import { starRecursiveFnCode, starRecursiveFn, starIterativeFn, starIterativeFnCode } from './functions/stars';
 import { doubleHelixSketch } from './p5-sketches/double-helix.sketch';
 import { sutcliffePentagonSketch } from './p5-sketches/sutcliffe-pentagon.sketch';
 import { gameOfLifeSketch } from './p5-sketches/game-of-life.sketch';
 import '../page.css';
-import { goldenSpiralSketch } from './p5-sketches/golden-spiral';
+import { fibonacciSketch } from './p5-sketches/fibonacci.sketch';
 import { useWindowSize } from '../../hooks/use-window-size.hook';
+import leaf from '../../resources/leaf.jpg';
+import margarite from '../../resources/margarite.jpg';
+import fibonacciMandelbrot from '../../resources/mandelbrot-fibonacci.jpg';
+import { goldenRatioSketch } from './p5-sketches/golden-ratio.sketch';
 
-export const RecursionPageComponent = (): any => {
+export const RecursionPage = () => {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 20;
 
   const onDoubleHelixSketchReady = () => {
-    console.log('Double helix ready');
+    // 
   };
   return (<>
     <div className="standard-page-margins standard-page-styling">
-      <h2>
+      <h1>
         Recursion and Fractals
-      </h2>
+      </h1>
       <hr/>
-      <h3><i>&quot;What is Recursion?&quot;</i></h3>
+      <h1><i>&quot;What is Recursion?&quot;</i></h1>
       <p>
       Recursion is the repeated application of a recursive procedure or definition.
       </p>
-      <h3>
+      <h2>
         Recursion in the Natural World vs Digital World
-      </h3>
+      </h2>
       <p>
         We live in an unordered world and it is necessary for humans to
         create order, in our minds, so we can utilise reliable, deterministic logic.
@@ -44,7 +47,7 @@ export const RecursionPageComponent = (): any => {
         When you reach the recursive call stack limit, you&apos;ll see the 
         classic <u>Stack Overflow</u> error.
       </p>
-      <h3><i>&quot;Why is recursion such an alien concept to beginners?&quot;</i></h3>
+      <h2><i>&quot;Why is recursion such an alien concept to beginners?&quot;</i></h2>
       <p>
         I believe that&apos;s because our minds prefer to focus on one thing at at time and prefer dealing with
         (and finding solutions for) the problems that are, metaphorically, directly in front of us. 
@@ -63,38 +66,69 @@ export const RecursionPageComponent = (): any => {
       </p>
       <hr/>
 
-      <h3><i>&quot;What is a Fractal?&quot;</i></h3>
+      <h1><i>&quot;What is a Fractal?&quot;</i></h1>
       <p>
       A <a href="https://fractalfoundation.org/resources/what-are-fractals/">fractal</a> is 
       a never-ending pattern. Fractals are infinitely complex 
       patterns that are self-similar across different scales.
       </p>
-      <h3>Best Visual Examples of Fractals in Nature</h3>
-      <h4>Fractal Tree - Trees</h4>
-      <p>
+      <h2 className="centred">
+        Fractal Trees
+      </h2>
+      <p className='centred'>
         <a href="http://fractal-tree-simulator.surge.sh/">
           http://fractal-tree-simulator.surge.sh/
         </a>
       </p>
-      <h4>Sutcliffe Pentagons - Leaves</h4>
-      <p>
-        The Sutcliffe Pentagon is a mathematical formula that allows 
-        us to replicate a similar pattern of growth in leaves.
-      </p>
-      <p>
-        <ReactP5Wrapper sketch={sutcliffePentagonSketch} screenWidth={width}/>
-      </p>
-      <p>
-        Golden Spiral - Nautilus Shell
-      </p>
-      <p>
-        <ReactP5Wrapper sketch={goldenSpiralSketch} />
-      </p>
+      <h2 className="centred">Sutcliffe Pentagons</h2>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm">
+            <ReactP5Wrapper sketch={sutcliffePentagonSketch} screenWidth={width}/>
+          </div>
+          <div className="col-sm centred">
+            <img src={leaf} width={Math.max(width/4, 300)} height={Math.max(width/4, 300)}/>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <h2 className="centred">
+        Golden Ratio
+      </h2>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm centred">
+            <ReactP5Wrapper sketch={goldenRatioSketch} screenWidth={width} />
+          </div>
+          <br/>
+          <div className="col-sm centred">
+            <img src={margarite} width={Math.max(width/4, 300)} height={Math.max(width/4, 300)}/>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <h2 className="centred">
+        Fibonacci Sequence
+      </h2>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm centred">
+            <ReactP5Wrapper sketch={fibonacciSketch} screenWidth={width} />
+          </div>
+          <br/>
+          <div className="col-sm centred">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Nautilus_side.jpg/1920px-Nautilus_side.jpg" width={Math.max(width/4, 300)} height={Math.max(width/5, 235)}/>
+          </div>
+          <div className="col-sm centred">
+            <img src={fibonacciMandelbrot} width={Math.max(width/4, 300)} height={Math.max(width/5, 250)}/>
+          </div>
+        </div>
+      </div>
       <hr/>
 
-      <h3>
+      <h2>
         Human Genome
-      </h3>
+      </h2>
       <p>
         <i>&quot;So why is recursion important to humans?&quot;</i>
       </p>
@@ -119,25 +153,14 @@ export const RecursionPageComponent = (): any => {
         <i>&quot;Is it worth contemplating that perhaps DNA in humans is also self referencing?&quot;</i>
       </p>
       <p>
-        <Img src="self referencing dna.png" 
-          config={{
-            endpoint: 'https://robrendellwebsite-images.s3.eu-west-1.amazonaws.com/recursion/original/self+referencing+dna.png',
-            bucket: 'robrendellwebsite-images',
-            width: 640, 
-            normalize: true,
-          }} />
-        <br/>
-        Source: https://arxiv.org/ftp/arxiv/papers/1804/1804.03430.pdf
-      </p>
-      <p>
         <ReactP5Wrapper sketch={doubleHelixSketch} screenWidth={width} onReady={onDoubleHelixSketchReady}/>
         Source: https://editor.p5js.org/AlexandraLopez/sketches
       </p>
       <hr/>
 
-      <h3>
+      <h2>
         Recursion / Fractals in music
-      </h3>
+      </h2>
       <p>
         Adam Neely (<a href="https://www.sungazermusic.com/">Sungazer</a> bassist) has a fantastic video on how rhythm can be the same as pitch.
       </p>
@@ -155,9 +178,9 @@ export const RecursionPageComponent = (): any => {
       </p>
       <hr/>
 
-      <h3>
+      <h2>
         Conway&apos;s Game of Life: Cellular Automata
-      </h3>
+      </h2>
       <p>
         I can&apos;t write about recursion and fractals without going off on an unrelated tangent about Conways Game of Life:
       </p>
@@ -175,9 +198,9 @@ export const RecursionPageComponent = (): any => {
       </div>
       <hr/>
     
-      <h3>
+      <h2>
         Recursion and Iteration
-      </h3>
+      </h2>
       <p>
         When using iteration, you can achieve the same result as 
         recursion if you use an in-memory stack.
@@ -210,15 +233,6 @@ export const RecursionPageComponent = (): any => {
           wrapLines
         />
       </div>
-    
-      <hr/>
-      <h3>
-        Recursive Algorithms
-      </h3>
-
-      <p>Content coming soon</p>
     </div>
   </>);
 };
-
-export default RecursionPageComponent;
