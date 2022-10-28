@@ -11,7 +11,7 @@ import SudokuDashboardComponent from './pages/sudoku/dashboard/sudoku-dashboard.
 import SudokuGameComponent from './pages/sudoku/game/sudoku-game.component';
 import UniDataVisualiserComponent from './pages/technical-tests/291121/uni-data-visualiser.component';
 import StravaDashboardComponent from './pages/strava-api/strava-dashboard.component';
-import RecursionPageComponent from './pages/recursion/recursion.page';
+import { RecursionPage } from './pages/recursion/recursion.page';
 import { BifurcationLogisticalPage } from './pages/recursion/bifurcation-logistical.page';
 import { RuminantsPage } from './pages/climate-change/ruminants.page';
 import { RideABikePage } from './pages/climate-change/ride-a-bike.page';
@@ -34,7 +34,7 @@ ReactDOM.render(
         <Route path="sudoku/play" element={<SudokuGameComponent />} />
         <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
 
-        <Route path="recursion" element={<RecursionPageComponent />} />
+        <Route path="recursion" element={<RecursionPage />} />
         <Route path="recursion/bifurcation-logistical-map" element={<BifurcationLogisticalPage />} />
 
         <Route path="climate-change/ruminants" element={<RuminantsPage />} />
