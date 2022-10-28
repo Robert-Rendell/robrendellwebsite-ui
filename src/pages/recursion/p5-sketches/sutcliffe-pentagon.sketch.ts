@@ -152,6 +152,7 @@ const sutcliffePentagonSketch = (p5: P5Instance<Props>) => {
   };
   
   const drawFractal = () => {
+    p5.clear(0,0,0,0);
     p5.stroke(Settings.branchColor);
     p5.background('rgba(255,255,255,0)');
     const fractalRoot = new FractalRoot();
