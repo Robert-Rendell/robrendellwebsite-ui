@@ -40,7 +40,7 @@ export const RecursionPage = () => {
         keeping track of recursive functions. Instead these natural 
         recursive functions are better described as being painted onto 
         the canvas of the cosmos and that painting is infinitely being imagined.
-        However we need a call stack on a machine so we can create order and this
+        However, we need a call stack on a machine so we can create order and this
         call stack is finite because memory on a machine is finite.
       </p>
       <p>
@@ -71,6 +71,11 @@ export const RecursionPage = () => {
       A <a href="https://fractalfoundation.org/resources/what-are-fractals/">fractal</a> is 
       a never-ending pattern. Fractals are infinitely complex 
       patterns that are self-similar across different scales.
+      </p>
+      <p>
+        <iframe width={width} height="315" src="https://www.youtube.com/embed/cHZl2naX1Xk?start=70" title="YouTube video player" 
+          frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen></iframe>
       </p>
       <h2 className="centred">
         Fractal Trees
@@ -148,6 +153,11 @@ export const RecursionPage = () => {
         and the best designs have emerged through brutal evolution, over an unimaginable period of time.
         We see wonderful recursive patterns in plants which are made up of cells, 
         the same as all living things.
+      </p>
+      <p>
+        <iframe width={width} height="315" src="https://www.youtube.com/embed/pktDqFy5IcE" title="YouTube video player" 
+          frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen></iframe>
       </p>
       <p>
         <i>&quot;Is it worth contemplating that perhaps DNA in humans is also self referencing?&quot;</i>
