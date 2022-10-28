@@ -197,9 +197,26 @@ export const RecursionPage = () => {
       <p>
         Unfortunately Daniel Shiffman&apos;s P5.js sketch of Game of Life isn&apos;t recursive... or fractal in its nature.
       </p>
-      <p>
-        <ReactP5Wrapper sketch={gameOfLifeSketch} screenWidth={width} />
-      </p>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm centred">
+            <ReactP5Wrapper sketch={gameOfLifeSketch} screenWidth={width-50} />
+          </div>
+          <br/>
+          <div className="col-sm centred">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Game_of_life_animated_glider.gif" width={Math.max(width/5, 300)} height={Math.max(width/5, 235)}/>
+          </div>
+          <br/>
+          <div className="col-sm centred">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Game_of_life_pulsar.gif" width={Math.max(width/5, 300)} height={Math.max(width/5, 250)}/>
+          </div>
+          <br/>
+          <div className="col-sm centred">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Game_of_life_animated_LWSS.gif" width={Math.max(width/5, 300)} height={Math.max(width/5, 250)}/>
+          </div>
+        </div>
+      </div>
+      <br/>
       <p>
         However... you will find some self referencing in this mind-blowing video, you must watch it to the end:
       </p>
@@ -207,7 +224,6 @@ export const RecursionPage = () => {
         <iframe width={width} height="315" src="https://www.youtube.com/embed/xP5-iIeKXE8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       <hr/>
-    
       <h2>
         Recursion and Iteration
       </h2>
