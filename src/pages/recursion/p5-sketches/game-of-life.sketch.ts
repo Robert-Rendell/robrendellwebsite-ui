@@ -2,23 +2,30 @@
 // http://codingtra.in
 // http://patreon.com/codingtrain
 
+import { P5Instance } from 'react-p5-wrapper';
+
 // Game of Life
 // Video: https://youtu.be/FWSR_7kZuYg
 
-const gameOfLifeSketch = (p5) => {
-  function make2DArray(cols, rows) {
-    let arr = new Array(cols);
+type Props = {
+  onReady?: () => void;
+  screenWidth: number;
+}
+
+const gameOfLifeSketch = (p5: P5Instance<Props>) => {
+  function make2DArray(cols: number, rows: number) {
+    const arr = new Array(cols);
     for (let i = 0; i < arr.length; i++) {
       arr[i] = new Array(rows);
     }
     return arr;
   }
   
-  let grid;
-  let cols;
-  let rows;
-  let resolution = 10;
-  let maxWidth = 600;
+  let grid: number[][];
+  let cols: number;
+  let rows: number;
+  const resolution = 10;
+  const maxWidth = 600;
   let width = maxWidth;
   
   p5.setup = () => {
@@ -56,8 +63,8 @@ const gameOfLifeSketch = (p5) => {
   
     for (let i = 0; i < cols; i++) {
       for (let j = 0; j < rows; j++) {
-        let x = i * resolution;
-        let y = j * resolution;
+        const x = i * resolution;
+        const y = j * resolution;
         if (grid[i][j] == 1) {
           p5.fill(255);
           p5.stroke(0);
@@ -66,14 +73,14 @@ const gameOfLifeSketch = (p5) => {
       }
     }
   
-    let next = make2DArray(cols, rows);
+    const next = make2DArray(cols, rows);
   
     // Compute next based on grid
     for (let i = 0; i < cols; i++) {
       for (let j = 0; j < rows; j++) {
-        let state = grid[i][j];
+        const state = grid[i][j];
         // Count live neighbors!
-        let neighbors = countNeighbors(grid, i, j);
+        const neighbors = countNeighbors(grid, i, j);
   
         if (state == 0 && neighbors == 3) {
           next[i][j] = 1;
@@ -91,12 +98,12 @@ const gameOfLifeSketch = (p5) => {
   };
   
   
-  function countNeighbors(grid, x, y) {
+  function countNeighbors(grid: number[][], x: number, y: number) {
     let sum = 0;
     for (let i = -1; i < 2; i++) {
       for (let j = -1; j < 2; j++) {
-        let col = (x + i + cols) % cols;
-        let row = (y + j + rows) % rows;
+        const col = (x + i + cols) % cols;
+        const row = (y + j + rows) % rows;
         sum += grid[col][row];
       }
     }

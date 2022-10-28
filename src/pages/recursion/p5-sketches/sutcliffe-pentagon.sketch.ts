@@ -1,6 +1,13 @@
 // https://github.com/tex2e/p5js-pentagon/blob/master/js/main.js
 
-const sutcliffePentagonSketch = (p5) => {
+import { P5Instance } from 'react-p5-wrapper';
+
+type Props = {
+  onReady?: () => void;
+  screenWidth: number;
+}
+
+const sutcliffePentagonSketch = (p5: P5Instance<Props>) => {
   const maxWidth = 500;
   let width = maxWidth;
   const Settings = {
@@ -15,20 +22,23 @@ const sutcliffePentagonSketch = (p5) => {
   };
   
   class Point {
-    constructor(x, y) {
+    constructor(public x: number, public y: number) {
       this.x = x;
       this.y = y;
     }
   }
   
   class FractalRoot {
+    private points: Point[];
+    private rootBranch: Branch;
+
     constructor() {
       this.points = [];
-      var centerX = p5.width / 2;
-      var centerY = p5.height / 2;
-      var angleStep = 360 / Settings.numSides;
-      var count = 0;
-      for (var i = -90; i < 270; i += angleStep) {
+      const centerX = p5.width / 2;
+      const centerY = p5.height / 2;
+      const angleStep = 360 / Settings.numSides;
+      let count = 0;
+      for (let i = -90; i < 270; i += angleStep) {
         this.points[count] = new Point(
           centerX + (Settings.radius * p5.cos(p5.radians(i))),
           centerY + (Settings.radius * p5.sin(p5.radians(i))),
@@ -44,7 +54,12 @@ const sutcliffePentagonSketch = (p5) => {
   }
   
   class Branch {
-    constructor(level, num, points) {
+    private outerPoints: Point[];
+    private midPoints: Point[];
+    private strutFactor: number;
+    private projPoints: Point[];
+    private maxLevel: number;
+    constructor(private level: number, private num: number, private points: Point[]) {
       this.level = level;
       this.num = num;
       this.outerPoints = points;
@@ -54,16 +69,16 @@ const sutcliffePentagonSketch = (p5) => {
       this.maxLevel = Settings.nest;
   
       if (level + 1 < this.maxLevel) {
-        var childBranch = new Branch(level + 1, 0, this.projPoints);
+        const childBranch = new Branch(level + 1, 0, this.projPoints);
         childBranch.draw();
         //
-        for (var k = 0; k < this.outerPoints.length; k++) {
-          var kNext = (k - 1 + this.outerPoints.length) % this.outerPoints.length;
-          var newPoints = [
+        for (let k = 0; k < this.outerPoints.length; k++) {
+          const kNext = (k - 1 + this.outerPoints.length) % this.outerPoints.length;
+          const newPoints = [
             this.projPoints[k], this.midPoints[k], this.outerPoints[k],
             this.midPoints[kNext], this.projPoints[kNext],
           ];
-          var subChildBranch = new Branch(level + 1, k + 1, newPoints);
+          const subChildBranch = new Branch(level + 1, k + 1, newPoints);
           subChildBranch.draw();
         }
       }
@@ -71,50 +86,50 @@ const sutcliffePentagonSketch = (p5) => {
   
     draw() {
       Settings.color = p5.color(100, p5.random(200)+55, 0);
-      var weight = (this.level < 5) ? 5 - this.level : 0.5;
+      const weight = (this.level < 5) ? 5 - this.level : 0.5;
       p5.stroke(Settings.color);
       p5.strokeWeight(weight);
       // draw outer shape
-      for (var i = 0; i < this.outerPoints.length; i++) {
-        var iNext = (i + 1) % this.outerPoints.length;
+      for (let i = 0; i < this.outerPoints.length; i++) {
+        const iNext = (i + 1) % this.outerPoints.length;
         p5.line(this.outerPoints[i].x, this.outerPoints[i].y,
           this.outerPoints[iNext].x, this.outerPoints[iNext].y);
       }
     }
   
     calcMidPoints() {
-      var midPoints = [];
-      for (var i = 0; i < this.outerPoints.length; i++) {
-        var iNext = (i + 1) % this.outerPoints.length;
+      const midPoints = [];
+      for (let i = 0; i < this.outerPoints.length; i++) {
+        const iNext = (i + 1) % this.outerPoints.length;
         midPoints[i] = this.calcMidPoint(this.outerPoints[i], this.outerPoints[iNext]);
       }
       return midPoints;
     }
   
-    calcMidPoint(end1, end2) {
-      var mx = (end1.x > end2.x) ? end2.x + ((end1.x - end2.x) / 2)
+    calcMidPoint(end1: Point, end2: Point) {
+      const mx = (end1.x > end2.x) ? end2.x + ((end1.x - end2.x) / 2)
         : end1.x + ((end2.x - end1.x) / 2);
-      var my = (end1.y > end2.y) ? end2.y + ((end1.y - end2.y) / 2)
+      const my = (end1.y > end2.y) ? end2.y + ((end1.y - end2.y) / 2)
         : end1.y + ((end2.y - end1.y) / 2);
       return new Point(mx, my);
     }
   
-    calcStrutPoints() {
-      var strutPoints = [];
-      for (var i = 0; i < this.midPoints.length; i++) {
-        var skipNum = (this.num == 0) ? Settings.strutTarget : Settings.subStrutTarget;
-        var iNext = (i + skipNum) % this.outerPoints.length;
+    calcStrutPoints(): Point[] {
+      const strutPoints = [];
+      for (let i = 0; i < this.midPoints.length; i++) {
+        const skipNum = (this.num == 0) ? Settings.strutTarget : Settings.subStrutTarget;
+        const iNext = (i + skipNum) % this.outerPoints.length;
         strutPoints[i] = this.calcStrutPoint(this.midPoints[i], this.outerPoints[iNext]);
       }
       return strutPoints;
     }
   
-    calcStrutPoint(mp, op) {
-      var opp = p5.abs(op.x - mp.x);
-      var adj = p5.abs(op.y - mp.y);
-      var px  = (op.x > mp.x) ? mp.x + (opp * this.strutFactor)
+    calcStrutPoint(mp: Point, op: Point) {
+      const opp = p5.abs(op.x - mp.x);
+      const adj = p5.abs(op.y - mp.y);
+      const px  = (op.x > mp.x) ? mp.x + (opp * this.strutFactor)
         : mp.x - (opp * this.strutFactor);
-      var py  = (op.y > mp.y) ? mp.y + (adj * this.strutFactor)
+      const py  = (op.y > mp.y) ? mp.y + (adj * this.strutFactor)
         : mp.y - (adj * this.strutFactor);
       return new Point(px, py);
     }
@@ -122,7 +137,7 @@ const sutcliffePentagonSketch = (p5) => {
   
   p5.setup = () => {
     p5.createCanvas(width, width);
-    p5.drawFractal();
+    drawFractal();
   };
 
   p5.updateWithProps = (props) => {
@@ -136,18 +151,17 @@ const sutcliffePentagonSketch = (p5) => {
     }
   };
   
-  p5.drawFractal = () => {
-    p5.clear();
+  const drawFractal = () => {
     p5.stroke(Settings.branchColor);
     p5.background('rgba(255,255,255,0)');
-    var fractalRoot = new FractalRoot();
+    const fractalRoot = new FractalRoot();
     fractalRoot.drawShape();
   };
   
   p5.mouseClicked = () => {
     if (0 <= p5.mouseX && p5.mouseX < p5.width &&
         0 <= p5.mouseY && p5.mouseY < p5.height) {
-      p5.drawFractal();
+      drawFractal();
       if (Settings.nest === 5) {
         Settings.nest = 1;
       }
