@@ -4,16 +4,11 @@ import InfinitySpinner from '../../resources/infinity-spinner.svg';
 import { useGetHomePageImageUrls } from './hooks/useGetHomePageImageUrls.hook';
 
 export const HomePage = () => {
-  let initialised = false;
-
   const getHomePageImageUrls = useGetHomePageImageUrls();
 
   useEffect(() => {
-    if (!initialised) {
-      getHomePageImageUrls();
-      initialised = true;
-    }
-  }, [initialised]);
+    getHomePageImageUrls();
+  }, []);
 
   return (
     <div className="standard-page-margins standard-page-styling">
