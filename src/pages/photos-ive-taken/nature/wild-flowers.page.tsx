@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
 import InfinitySpinner from '../../../resources/infinity-spinner.svg';
 import '../../page.css';
-import { useGetWildFlowersImageUrls } from './hooks/useGetWildFlowerImageUrls.hook';
+import { useGetS3ImageUrls } from './hooks/useGetS3ImageUrls.hook';
 
 export function WildFlowersPage() {
-  const getWildFlowersImageUrls = useGetWildFlowersImageUrls();
+  const getWildFlowersImageUrls = useGetS3ImageUrls(
+    '/photos-ive-taken/nature/wild-flowers',
+    'wild-flowers-page-img-div'
+  );
 
   useEffect(() => {
     getWildFlowersImageUrls();
