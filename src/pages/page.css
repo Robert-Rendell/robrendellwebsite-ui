@@ -20,3 +20,7 @@ img {
   -webkit-user-select: none;
   user-select: none;
 }
+
+.s3-loaded-image {
+  max-width: 400px
+}

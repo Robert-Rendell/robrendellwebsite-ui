@@ -4,10 +4,10 @@ import '../../page.css';
 import { useGetS3ImageUrls } from './hooks/useGetS3ImageUrls.hook';
 
 export function LichenPage() {
-  const getLichenImageUrls = useGetS3ImageUrls(
-    '/photos-ive-taken/nature/lichen',
-    'lichen-page-img-div'
-  );
+  const getLichenImageUrls = useGetS3ImageUrls( {
+    endpoint: '/photos-ive-taken/nature/lichen',
+    targetDivId: 'lichen-page-img-div'
+  });
 
   useEffect(() => {
     getLichenImageUrls();
@@ -16,7 +16,7 @@ export function LichenPage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
-        Lichen
+      Photos I&apos;ve Taken: Lichen
       </h1>
       <div id="lichen-page-img-div">
         <h2>Loading images from S3...</h2>
