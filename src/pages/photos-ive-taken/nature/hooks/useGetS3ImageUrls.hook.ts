@@ -2,6 +2,12 @@ import axios from 'axios';
 import { useCallback } from 'react';
 import { config } from '../../../../config';
 
+export type S3ImagePageResponse = {
+    data: {
+        s3ImageUrls: string[];
+    }
+}
+
 const addPageImage = (imgUrl: string) => {
   return '<img src="' + imgUrl + '"/ onClick={activateLasers}>';
 };
@@ -10,7 +16,8 @@ export const useGetS3ImageUrls = (endpoint: string, targetDivId: string) => useC
   axios.get(config.backend + endpoint,
     { headers: {'Content-Type': 'application/json'}}
   ).then((response) => {
-    const imgUrlArray: string[] = response.data['travelImages'];
+    const responseTyped = response as S3ImagePageResponse;
+    const imgUrlArray: string[] = responseTyped.data.s3ImageUrls;
     const imgPanelDiv: HTMLElement | null = document.getElementById(targetDivId);
     if (imgPanelDiv) {
       imgPanelDiv.innerHTML = '';
