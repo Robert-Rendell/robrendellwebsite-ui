@@ -4,10 +4,10 @@ import '../../page.css';
 import { useGetS3ImageUrls } from './hooks/useGetS3ImageUrls.hook';
 
 export function WildFlowersPage() {
-  const getWildFlowersImageUrls = useGetS3ImageUrls(
-    '/photos-ive-taken/nature/wild-flowers',
-    'wild-flowers-page-img-div'
-  );
+  const getWildFlowersImageUrls = useGetS3ImageUrls({
+    endpoint: '/photos-ive-taken/nature/wild-flowers',
+    targetDivId: 'wild-flowers-page-img-div'
+  });
 
   useEffect(() => {
     getWildFlowersImageUrls();
@@ -16,7 +16,7 @@ export function WildFlowersPage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
-        Wild Flowers
+        Photos I&apos;ve Taken: Wild flowers / garden flowers
       </h1>
       <div id="wild-flowers-page-img-div">
         <h2>Loading images from S3...</h2>
