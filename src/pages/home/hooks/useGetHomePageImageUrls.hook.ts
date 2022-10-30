@@ -1,24 +1,14 @@
 import axios from 'axios';
 import { useCallback } from 'react';
+import { S3ImageClickFn } from '../../../components/full-screen-image.component';
+import { S3LoadedImage } from '../../../components/s3-loaded-image.component';
 import { config } from '../../../config';
 
-const addHomePageImage = (imgUrl: string) => {
-  return '<img class="home-page-img" src="' + imgUrl + '"/ onClick={activateLasers}>';
-};
-
-export const useGetHomePageImageUrls = () => useCallback(() => {
-  axios.get(config.backend,
+export const useGetHomePageImageUrls = (handleImageClickedRef: S3ImageClickFn) => useCallback(async () => {
+  const response = await axios.get(config.backend,
     { headers: {'Content-Type': 'application/json'}}
-  ).then((response) => {
-    const imgUrlArray: string[] = response.data['travelImages'];
-    const imgPanelDiv: HTMLElement | null = document.getElementById('home-page-img-div');
-    if (imgPanelDiv) {
-      imgPanelDiv.innerHTML = '';
-      imgUrlArray.forEach((imgUrl) => {
-        imgPanelDiv.innerHTML += addHomePageImage(imgUrl);
-      });
-    } else {
-      throw Error('Could not find div by id: "home-page-img-div"');
-    }
-  });
-}, [config.backend, addHomePageImage]);
+  );
+  const imgUrlArray: string[] = response.data['travelImages'];
+  const images = imgUrlArray.map((imgUrl) => S3LoadedImage(imgUrl, handleImageClickedRef));
+  return images;
+}, [config.backend, S3LoadedImage]);
