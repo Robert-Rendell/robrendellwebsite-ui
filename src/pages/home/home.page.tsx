@@ -16,6 +16,8 @@ export const HomePage = () => {
       <h3>Rob Rendell: Node.js / TypeScript Developer</h3>
       <h4>Recent developments:</h4>
       <ul>
+        <li>30/10/22 @ 10.33 - Completed <a href="photos-ive-taken/nature/wild-flowers">My Flower Photographs</a> project (phase 1)</li>
+        <li>29/10/22 @ 13.50 - Completed <a href="climate-change/">Climate Change</a> project</li>
         <li>27/10/22 @ 10.30 - Added <a href="recursion/">Recursion</a> project</li>
         <li>24/10/22 @ 15.10 - Added infinity spinner for lazy loading on website</li>
         <li>02/01/22 @ 17.40 - Leaderboard feature for time taken to complete <a href="sudoku/">Sudoku</a> using <code>AWS.DynamoDB.query</code> and GSI.</li>

@@ -63,6 +63,21 @@ export const NavComponent = () => {
               </NavDropdown.Item>
             </NavDropdown>
 
+            <NavDropdown title="Misc" id="misc">
+              <NavDropdown.Item disabled>
+                Scotch Whisky
+              </NavDropdown.Item>
+              <NavDropdown.Item disabled>
+                Word of the Day
+              </NavDropdown.Item>
+              <NavDropdown.Item disabled>
+                Interesting Dates in History
+              </NavDropdown.Item>
+              <NavDropdown.Item disabled>
+                Giant Pacific Octopus (Alaskan)
+              </NavDropdown.Item>
+            </NavDropdown>
+
             <NavDropdown title="Music Projects" id="musicProjectsNavbarScrollingDropdown">
               <NavDropdown.Item href="https://www.shiva-archetypes.com">Shiva Archetypes (band)</NavDropdown.Item>
               <NavDropdown.Item href="https://www.robcelticfiddle.co.uk">Rob Celtic Fiddle (weddings)</NavDropdown.Item>
