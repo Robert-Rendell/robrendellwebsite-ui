@@ -3,16 +3,24 @@ import '../page.css';
 import { useGetHomePageImageUrls } from './hooks/useGetHomePageImageUrls.hook';
 import { FullScreenS3ImageComponent } from '../../components/full-screen-image.component';
 import { HomePageImageGallery } from './components/home-page-image-gallery.component';
+import { HomePageOriginalImgsMap } from 'robrendellwebsite-common';
 
 export const HomePage = () => {
   const handleImageClickedRef = useRef();
-  const [images, setImages] = useState<JSX.Element[]>();
+  const [images, setImages] = useState<JSX.Element[]>([]);
+  const originalImages = useRef<HomePageOriginalImgsMap>({});
   const getHomePageImageUrls = useGetHomePageImageUrls(handleImageClickedRef);
 
   const setHomePageImages = useCallback(
     async () => getHomePageImageUrls().then(
-      (success) => setImages(success)),
-    [getHomePageImageUrls]
+      (result) => {
+        console.log(result);
+        const { thumbnails, originalImgUrls } = result;
+        setImages(thumbnails);
+        originalImages.current = originalImgUrls;
+      },
+    ),
+    [getHomePageImageUrls, setImages]
   );
 
   useEffect(() => {
@@ -46,7 +54,7 @@ export const HomePage = () => {
       <hr/>
       <p>Here are some of my own photos from travelling over the years <i>(click to enlarge)</i>:</p>
       <HomePageImageGallery images={images ? images : []} />
-      <FullScreenS3ImageComponent handleShowRef={handleImageClickedRef} />
+      <FullScreenS3ImageComponent handleShowRef={handleImageClickedRef} originals={originalImages.current}/>
     </div>
   );
 };

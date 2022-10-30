@@ -11,6 +11,6 @@ export function HomePageImageGallery(props: Props) {
       <h2>Loading images from S3...</h2>
       <img src={InfinitySpinner}/>
     </>}
-    { props.images.map((image) =>  (<span key={v4()}>{image}</span>)) }
+    { props.images.map((image) => (<span key={v4()}>{image}</span>)) }
   </>);
 }
