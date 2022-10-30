@@ -5,7 +5,6 @@ import '../page.css';
 export function ClimateChangePage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  const height = windowSize[1]-150;
   
   return (
     <div className="standard-page-margins standard-page-styling">
