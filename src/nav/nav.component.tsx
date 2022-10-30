@@ -73,6 +73,9 @@ export const NavComponent = () => {
               <NavDropdown.Item disabled>
                 Interesting Dates in History
               </NavDropdown.Item>
+              <NavDropdown.Item disabled>
+                Giant Pacific Octopus (Alaskan)
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Music Projects" id="musicProjectsNavbarScrollingDropdown">
