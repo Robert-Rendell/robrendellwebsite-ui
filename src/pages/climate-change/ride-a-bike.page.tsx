@@ -1,6 +1,7 @@
 import React from 'react';
 import { useWindowSize } from '../../hooks/use-window-size.hook';
 import '../page.css';
+import { ClimateChangeBackButton } from './components/back-button.component';
 
 export function RideABikePage() {
   const windowSize = useWindowSize();
@@ -10,6 +11,7 @@ export function RideABikePage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
+        <ClimateChangeBackButton/>
         Cycling: ditch the car and get yourself a pannier rack.
       </h1>
       <p>

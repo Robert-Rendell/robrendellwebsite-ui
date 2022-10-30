@@ -35,7 +35,7 @@ export const NavComponent = () => {
               Ride a Bike!
               </NavDropdown.Item>
               <NavDropdown.Item href="/climate-change/ocean-acidification">
-              Ocean Acidity
+              Ocean Acidification
               </NavDropdown.Item>
               <NavDropdown.Item href="/climate-change/reduce-reuse-recycle">
               Reduce, Reuse, Recycle (Plastic!)
