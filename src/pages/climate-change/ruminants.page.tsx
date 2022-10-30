@@ -1,7 +1,11 @@
 import React from 'react';
+import { useWindowSize } from '../../hooks/use-window-size.hook';
 import '../page.css';
 
 export function RuminantsPage() {
+  const windowSize = useWindowSize();
+  const width = windowSize[0] - 40;
+  
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
@@ -24,6 +28,11 @@ export function RuminantsPage() {
             Rumen Microbiology (Wikipedia)
         </a>
       </p>
+            
+      <p>
+        <img src="https://www.mun.ca/biology/scarr/142097_ruminant_digestion.jpg" width={width} height={width/2} />
+      </p>
+      
     </div>
   );
 }
