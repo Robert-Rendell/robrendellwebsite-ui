@@ -1,6 +1,7 @@
 import React from 'react';
 import { useWindowSize } from '../../hooks/use-window-size.hook';
 import '../page.css';
+import { ClimateChangeBackButton } from './components/back-button.component';
 
 export function RenewableEnergyPage() {
   const windowSize = useWindowSize();
@@ -10,6 +11,7 @@ export function RenewableEnergyPage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
+        <ClimateChangeBackButton/>
         Renewable Energy
       </h1>
       <iframe width={width} height={height}
