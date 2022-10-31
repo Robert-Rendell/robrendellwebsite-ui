@@ -1,19 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import '../page.css';
-import InfinitySpinner from '../../resources/infinity-spinner.svg';
 import { useGetHomePageImageUrls } from './hooks/useGetHomePageImageUrls.hook';
+import { FullScreenS3ImageComponent } from '../../components/full-screen-image.component';
+import { HomePageImageGallery } from './components/home-page-image-gallery.component';
+import { HomePageOriginalImgsMap } from 'robrendellwebsite-common';
 
 export const HomePage = () => {
-  const getHomePageImageUrls = useGetHomePageImageUrls();
+  const handleImageClickedRef = useRef();
+  const [images, setImages] = useState<JSX.Element[]>([]);
+  const originalImages = useRef<HomePageOriginalImgsMap>({});
+  const getHomePageImageUrls = useGetHomePageImageUrls(handleImageClickedRef);
+
+  const setHomePageImages = useCallback(
+    async () => getHomePageImageUrls().then(
+      (result) => {
+        console.log(result);
+        const { thumbnails, originalImgUrls } = result;
+        setImages(thumbnails);
+        originalImages.current = originalImgUrls;
+      },
+    ),
+    [getHomePageImageUrls, setImages]
+  );
 
   useEffect(() => {
-    getHomePageImageUrls();
-  }, []);
+    setHomePageImages();
+  }, [setHomePageImages]);
 
   return (
     <div className="standard-page-margins standard-page-styling">
       <h2 className="centred">Welcome to rob-rendell.co.uk</h2>
       <h3>Rob Rendell: Node.js / TypeScript Developer</h3>
+      <hr/>
+      <h1 style={{color: 'red'}}>Experiencing a problem with CORS / AWS S3 at the moment.</h1>
+      <h3 style={{color: 'yellow'}}>I&apos;ll fix it when I get a chance this week</h3>
+      <hr/>
       <h4>Recent developments:</h4>
       <ul>
         <li>30/10/22 @ 10.33 - Completed <a href="photos-ive-taken/nature/wild-flowers">My Flower Photographs</a> project (phase 1)</li>
@@ -30,16 +51,14 @@ export const HomePage = () => {
       <h4>This website is an ongoing personal project using:</h4>
       <ul>
         <li>Node.js</li>
-        <li>TypeScript</li>
+        <li>TypeScript (front and back end)</li>
         <li>AWS</li>
-        <li>React</li>
+        <li>React Hooks</li>
       </ul>
       <hr/>
-      <p>Here are some of my own photos from travelling over the years <i>(click to enlarge - coming soon)</i>:</p>
-      <div id="home-page-img-div">
-        <h2>Loading images from S3...</h2>
-        <img src={InfinitySpinner}/>
-      </div>
+      <p>Here are some of my own photos from travelling over the years <i>(click to enlarge)</i>:</p>
+      <HomePageImageGallery images={images ? images : []} />
+      <FullScreenS3ImageComponent handleShowRef={handleImageClickedRef} originals={originalImages.current}/>
     </div>
   );
 };
