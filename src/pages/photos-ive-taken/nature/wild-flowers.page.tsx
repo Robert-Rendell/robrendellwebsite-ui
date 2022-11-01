@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import InfinitySpinner from '../../../resources/infinity-spinner.svg';
-import '../../page.css';
+import { PhotosIveTakenPage } from '../photos-ive-taken.page';
 import { useGetS3ImageUrls } from './hooks/useGetS3ImageUrls.hook';
 
 export function WildFlowersPage() {
@@ -14,14 +13,9 @@ export function WildFlowersPage() {
   }, []);
   
   return (
-    <div className="standard-page-margins standard-page-styling">
-      <h1>
-        Photos I&apos;ve Taken: Wild flowers / garden flowers
-      </h1>
-      <div id="wild-flowers-page-img-div">
-        <h2>Loading images from S3...</h2>
-        <img src={InfinitySpinner}/>
-      </div>
-    </div>
+    <PhotosIveTakenPage 
+      imgDivId='wild-flowers-page-img-div'
+      title='Photos I&apos;ve Taken: Wild flowers / Garden Flowers'
+    />
   );
 }
