@@ -10,7 +10,6 @@ export const useGetHomePageImageUrls = (handleImageClickedRef: S3ImageClickFn) =
   const response: Response<HomePageResponse>= await axios.get(config.backend,
     { headers: {'Content-Type': 'application/json'}}
   );
-  console.log(response);
   const thumbnailImgUrls: string[] = response.data.travelImages;
   const originalImgUrls: HomePageOriginalImgsMap = response.data.originals;
   const thumbnails = thumbnailImgUrls.map((imgUrl) => S3LoadedImage(imgUrl, handleImageClickedRef));

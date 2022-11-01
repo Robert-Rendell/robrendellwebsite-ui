@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import InfinitySpinner from '../../../resources/infinity-spinner.svg';
 import '../../page.css';
+import { PhotosIveTakenPage } from '../photos-ive-taken.page';
 import { useGetS3ImageUrls } from './hooks/useGetS3ImageUrls.hook';
 
 export function LichenPage() {
@@ -14,14 +14,9 @@ export function LichenPage() {
   }, []);
   
   return (
-    <div className="standard-page-margins standard-page-styling">
-      <h1>
-      Photos I&apos;ve Taken: Lichen
-      </h1>
-      <div id="lichen-page-img-div">
-        <h2>Loading images from S3...</h2>
-        <img src={InfinitySpinner}/>
-      </div>
-    </div>
+    <PhotosIveTakenPage 
+      imgDivId="lichen-page-img-div"
+      title='Photos I&apos;ve Taken: Lichen'
+    />
   );
 }

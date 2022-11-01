@@ -14,7 +14,6 @@ export const HomePage = () => {
   const setHomePageImages = useCallback(
     async () => getHomePageImageUrls().then(
       (result) => {
-        console.log(result);
         const { thumbnails, originalImgUrls } = result;
         setImages(thumbnails);
         originalImages.current = originalImgUrls;
@@ -31,10 +30,6 @@ export const HomePage = () => {
     <div className="standard-page-margins standard-page-styling">
       <h2 className="centred">Welcome to rob-rendell.co.uk</h2>
       <h3>Rob Rendell: Node.js / TypeScript Developer</h3>
-      <hr/>
-      <h1 style={{color: 'red'}}>Experiencing a problem with CORS / AWS S3 at the moment.</h1>
-      <h3 style={{color: 'yellow'}}>I&apos;ll fix it when I get a chance this week</h3>
-      <hr/>
       <h4>Recent developments:</h4>
       <ul>
         <li>30/10/22 @ 10.33 - Completed <a href="photos-ive-taken/nature/wild-flowers">My Flower Photographs</a> project (phase 1)</li>
@@ -58,7 +53,7 @@ export const HomePage = () => {
       <hr/>
       <p>Here are some of my own photos from travelling over the years <i>(click to enlarge)</i>:</p>
       <HomePageImageGallery images={images ? images : []} />
-      <FullScreenS3ImageComponent handleShowRef={handleImageClickedRef} originals={originalImages.current}/>
+      <FullScreenS3ImageComponent handleShowRef={handleImageClickedRef}/>
     </div>
   );
 };
