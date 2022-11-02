@@ -22,7 +22,7 @@ export function PhotosIveTakenPage(props: Props) {
 
   useEffect(() => {
     setPhotosIveTakenGallery();
-  }, [setPhotosIveTakenGallery]);
+  }, []);
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
