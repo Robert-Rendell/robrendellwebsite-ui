@@ -1,35 +1,22 @@
 import axios from 'axios';
 import { useCallback } from 'react';
+import { S3ImagePageResponse } from 'robrendellwebsite-common';
+import { Response } from '../../../../models/axios-response-wrapper';
+import { S3LoadedImage } from '../../../../components/s3-loaded-image.component';
 import { config } from '../../../../config';
+import { S3ImageClickFn } from '../../../../components/full-screen-image.component';
 
-export type S3ImagePageResponse = {
-    data: {
-        s3ImageUrls: string[];
-    }
+type Props = {
+  endpoint: string;
+  handleImageClickedRef: S3ImageClickFn
 }
 
-const addPageImage = (imgUrl: string) => {
-  return '<img class="s3-loaded-image" src="' + imgUrl + '"/ width={width/2}>';
-};
-
-export const useGetS3ImageUrls = (opts: { endpoint: string, targetDivId: string }) => useCallback(() => {
-  axios.get(config.backend + opts.endpoint,
+export const useGetS3ImageUrls = (props: Props) => useCallback(async () => {
+  const response = await axios.get(config.backend + props.endpoint,
     { headers: {'Content-Type': 'application/json'}}
-  ).then((response) => {
-    const responseTyped = response as S3ImagePageResponse;
-    const imgUrlArray: string[] = responseTyped.data.s3ImageUrls.filter((url) => !url.includes('.json'));
-    const imgPanelDiv: HTMLElement | null = document.getElementById(opts.targetDivId);
-    if (imgPanelDiv) {
-      if (imgUrlArray.length === 0) {
-        imgPanelDiv.innerHTML = `No images in S3 bucket for path: ${opts.endpoint}`;
-        return;
-      }
-      imgPanelDiv.innerHTML = '';
-      imgUrlArray.forEach((imgUrl) => {
-        imgPanelDiv.innerHTML += addPageImage(imgUrl);
-      });
-    } else {
-      throw Error(`Could not find div by id: "${opts.targetDivId}"`);
-    }
-  });
-}, [config.backend, addPageImage]);
+  );
+  const responseTyped = response as Response<S3ImagePageResponse>;
+  const imgUrlArray: string[] = responseTyped.data.s3ImageUrls.filter((url: string) => !url.includes('.json'));
+  if (imgUrlArray.length === 0) return [];
+  return imgUrlArray.map((imgUrl) => S3LoadedImage(imgUrl, props.handleImageClickedRef));
+}, [config.backend, props]);
