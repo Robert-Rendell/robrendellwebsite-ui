@@ -26,6 +26,7 @@ export const HomePage = () => {
       <h3>Rob Rendell: Node.js / TypeScript Developer</h3>
       <h4>Recent developments:</h4>
       <ul>
+        <li>03/11/22 @ 08.51 - Completed <a href="miscellaneous/giant-pacific-octopus">Giant Pacific Octopus</a> and <a href="miscellaneous/india">India</a> project</li>
         <li>30/10/22 @ 10.33 - Completed <a href="photos-ive-taken/nature/wild-flowers">My Flower Photographs</a> project (phase 1)</li>
         <li>29/10/22 @ 13.50 - Completed <a href="climate-change/">Climate Change</a> project</li>
         <li>27/10/22 @ 10.30 - Added <a href="recursion/">Recursion</a> project</li>

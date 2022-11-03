@@ -13,7 +13,6 @@ type Props = {
 export function FullScreenS3ImageComponent(props: Props) {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  const height = windowSize[1]-150;
   const [show, setShow] = useState(false);
   const s3ImageSelected = useRef<string | undefined>();
 
@@ -32,7 +31,7 @@ export function FullScreenS3ImageComponent(props: Props) {
           <CloseButton variant="white" onClick={() => setShow(false)}/>
         </Modal.Header>
         <Modal.Body>
-          { s3ImageSelected && (<img src={s3ImageSelected.current || ''} width={width} height={height} />)}
+          { s3ImageSelected && (<img src={s3ImageSelected.current || ''} width={width} />)}
           { !s3ImageSelected && <h1>No image selected!</h1> }
         </Modal.Body>
       </Modal>
