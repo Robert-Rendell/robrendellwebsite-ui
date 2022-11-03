@@ -32,7 +32,7 @@ export function FullScreenS3ImageComponent(props: Props) {
           <CloseButton variant="white" onClick={() => setShow(false)}/>
         </Modal.Header>
         <Modal.Body>
-          { s3ImageSelected && (<img src={s3ImageSelected.current || ''} width={width} height={height} />)}
+          { s3ImageSelected && (<img src={s3ImageSelected.current || ''} width={width} />)}
           { !s3ImageSelected && <h1>No image selected!</h1> }
         </Modal.Body>
       </Modal>
