@@ -58,14 +58,14 @@ export function GiantPacificOctopusPage() {
     Research in Alaska
     </h2>
     <p>
-    This NOAA Fisheries video features spectacular underwater footage of octopus swimming and eggs hatching. 
+    This <a href="https://www.fisheries.noaa.gov/alaska/science-data/octopus-research-alaska">NOAA Fisheries video</a> features spectacular underwater footage of octopus swimming and eggs hatching. 
     NOAA researcher Liz Conners of the Alaska Fisheries Science Center points out the challenges of managing the Pacific octopus in Alaska and how researchers are working to develop new technology to better capture, tag, and study the octopus. The research study is a collaborative effort among the North Pacific Research Board, NOAA’s Alaska Fisheries Science Center, the University of Alaska Fairbanks, and the Alaska fishing community. Learn more about the Pacific Giant Octopus here.
     </p>
     <p>
     To set sustainable catch limits for octopus, managers need to know how many there are and how fast they grow and reproduce.
     </p>
     <p>
-    We are inventing a better way to catch an octopus.
+    We are inventing betters way to catch an octopus.
     </p>
     <p>
     One new method exploits an octopus&apos;s love of hiding places by putting out artificial dens clipped to a long fishing line. 
@@ -76,17 +76,17 @@ export function GiantPacificOctopusPage() {
     Developing species-specific research gear will allow scientists to conduct further experiments and to monitor whether the octopus population changes over time.
     </p>
     <hr/>
-    <h2>Octopus intelligence</h2>
-    <p>Self regulation?: https://youtu.be/dKWssIQplw8</p>
+    <h2>Octopus emotional intelligence</h2>
+    <p>Self regulation: <a href='https://youtu.be/dKWssIQplw8'>https://youtu.be/dKWssIQplw8</a></p>
     <hr/>
     <h2>References</h2>
     <ul>
-      <li>https://youtu.be/dKWssIQplw8</li>
+      <li><a href="https://octolab.tv/category/experiments">https://octolab.tv/category/experiments</a></li>
+      <li><a href="https://youtu.be/dKWssIQplw8">https://youtu.be/dKWssIQplw8</a></li>
       <li>https://octolab.tv/species/giant-pacific-octopus/</li>
       <li>https://www.apnews.com/ba6e3fa5bb804565b9d6d666b6d40a73</li>
       <li>https://www.fisheries.noaa.gov/alaska/science-data/octopus-research-alaska</li>
-      <li>https://www.youtube.com/watch?v=IrdbENkylZM</li>
-      <li>https://octolab.tv/category/experiments/</li>
+      <li><a href="https://www.youtube.com/watch?v=IrdbENkylZM">https://www.youtube.com/watch?v=IrdbENkylZM</a></li>
       <li>https://cdn2.webdamdb.com/1280_ove0emz6YWd3.jpg?1536093455</li>
       <li>https://cdn2.webdamdb.com/1280_YWCNm0iehiKC.jpg?1509390927</li>
       <li>https://cdn2.webdamdb.com/1280_1DWStNwYwLWG.jpg?1509392347</li>

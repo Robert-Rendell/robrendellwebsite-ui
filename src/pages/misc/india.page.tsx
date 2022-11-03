@@ -8,12 +8,14 @@ import './india.page.css';
 export function IndiaPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  return (<div>
-    <h1>India</h1>
+  return (<div id="india-page">
+    <h1>
+      India
+    </h1>
     <hr/>
-    <h2>* 2nd Largest Country by Population *</h2>
+    <h2>2nd Largest Country by Population</h2>
     <hr/>
-    <h2>* Home of the Oldest Belief System: Hinduism *</h2>
+    <h2>Home of the Oldest Belief System: <u>Hinduism</u></h2>
     <hr/>
     <HighchartsReact
       highcharts={Highcharts}
