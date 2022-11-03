@@ -61,6 +61,9 @@ export const NavComponent = () => {
               <NavDropdown.Item href="/photos-ive-taken/nature/arachnids">
               Arachnids
               </NavDropdown.Item>
+              <NavDropdown.Item href="/photos-ive-taken/nature/fungi">
+              Fungi
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Misc" id="misc">

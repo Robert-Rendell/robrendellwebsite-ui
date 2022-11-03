@@ -23,6 +23,7 @@ import { InsectsPage } from './pages/photos-ive-taken/nature/insects.page';
 import { ReduceReuseRecyclePage } from './pages/climate-change/reduce-reuse-recycle.page';
 import { RenewableEnergyPage } from './pages/climate-change/renewable-energy.page';
 import { ClimateChangePage } from './pages/climate-change/climate-change.page';
+import { FungiPage } from './pages/photos-ive-taken/nature/fungi.page';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -49,6 +50,7 @@ ReactDOM.render(
         <Route path="photos-ive-taken/nature/insects" element={<InsectsPage />} />
         <Route path="photos-ive-taken/nature/lichen" element={<LichenPage />} />
         <Route path="photos-ive-taken/nature/wild-flowers" element={<WildFlowersPage />} />
+        <Route path="photos-ive-taken/nature/fungi" element={<FungiPage />} />
           
 
         <Route path="/technical-tests/291121" element={<UniDataVisualiserComponent />} />
