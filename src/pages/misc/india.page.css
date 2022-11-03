@@ -1,8 +1,9 @@
-h1 {
+#india-page h1 {
+    padding-top: 7px;
     text-align: center;
 }
 
-h2 {
+#india-page h2 {
     text-align: center;
     color: black
 }

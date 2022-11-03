@@ -67,6 +67,12 @@ export const NavComponent = () => {
             </NavDropdown>
 
             <NavDropdown title="Misc" id="misc">
+              <NavDropdown.Item href="/miscellaneous/india">
+                India
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/miscellaneous/giant-pacific-octopus">
+                Giant Pacific Octopus (Alaskan)
+              </NavDropdown.Item>
               <NavDropdown.Item disabled>
                 Scotch Whisky
               </NavDropdown.Item>
@@ -75,12 +81,6 @@ export const NavComponent = () => {
               </NavDropdown.Item>
               <NavDropdown.Item disabled>
                 Interesting Dates in History
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/miscellaneous/giant-pacific-octopus">
-                Giant Pacific Octopus (Alaskan)
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/miscellaneous/india">
-                India
               </NavDropdown.Item>
             </NavDropdown>
 
