@@ -13,7 +13,6 @@ type Props = {
 export function FullScreenS3ImageComponent(props: Props) {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  const height = windowSize[1]-150;
   const [show, setShow] = useState(false);
   const s3ImageSelected = useRef<string | undefined>();
 
