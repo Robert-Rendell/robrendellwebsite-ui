@@ -10,7 +10,7 @@ export function GiantPacificOctopusPage() {
     <img width={width} src="https://www.americanoceans.org/wp-content/uploads/2021/01/giant-pacific-octopus-attack-humans-1024x681.jpg"/>
     <img width={width} src="https://media.fisheries.noaa.gov/dam-migration-miss/1280_ove0emz6YWd3.jpg?1536093455" />
     <img width={width} src="https://media.npr.org/assets/img/2011/06/01/gettyimages_73790192_wide-0a0ced315567fc824e9043ed8915c9c57629dc63-s800-c85.webp"/>
-
+    <hr/>
     <p>
       <i>
       One of the largest octopus species in the world lives in Alaskan waters: Giant Pacific Octopus
