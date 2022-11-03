@@ -76,8 +76,11 @@ export const NavComponent = () => {
               <NavDropdown.Item disabled>
                 Interesting Dates in History
               </NavDropdown.Item>
-              <NavDropdown.Item disabled>
+              <NavDropdown.Item href="/miscellaneous/giant-pacific-octopus">
                 Giant Pacific Octopus (Alaskan)
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/miscellaneous/india">
+                India
               </NavDropdown.Item>
             </NavDropdown>
 
