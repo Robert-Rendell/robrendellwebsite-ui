@@ -8,7 +8,7 @@ type Props = {
 export function ImageGallery(props: Props) {
   return (<>
     { props.images.length === 0 && <>
-      <h2>Loading images from S3...</h2>
+      <h2>Loading images from AWS S3...</h2>
       <img src={InfinitySpinner}/>
     </>}
     { props.images.map((image) => (<span key={v4()}>{image}</span>)) }
