@@ -14,9 +14,12 @@ export function NeurochemistryPage() {
     <p>I was so depressed with the job and just wanted to feel some happiness, so I thought about how I felt when I got my uni results.</p>
     <p>Getting my uni results was a moment like no other; the rapture I felt was so strong it seemed like those around me shared my emotional experience.</p>
     <p>
-        The question that came to mind was: <b>Do humans secrete chemicals from their skin when they are elated with happiness?</b>
+        The question that came to mind was: <i>Do humans secrete chemicals from their skin when they are elated with happiness?</i>
     </p>
-    <p>This is how I found Christopher Bergland&apos;s work on The Athlete&apos;s Way. In my eyes a bible for emotional self regulation via exercise.</p>
+    <p>This is how I found Christopher Bergland&apos;s work on <a
+      href="https://www.amazon.co.uk/Athletes-Way-Sweat-Biology-Bliss/dp/0312355866">
+        The Athlete&apos;s Way</a>
+        . In my eyes a bible for emotional self regulation via exercise.</p>
     <hr/>
     <h2 className='centred'>As promised... Here is my Mnemonic</h2>
   
