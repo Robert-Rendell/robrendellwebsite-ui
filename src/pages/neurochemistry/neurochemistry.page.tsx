@@ -34,8 +34,8 @@ export function NeurochemistryPage() {
         <tr>
           <td>M</td>
           <td>Melotonin</td>
-          <th>Regulates sleep / wake cycle</th>
-          <th>Make sure light gets in your eyes, make sure darkness gets in your eyes.</th>
+          <td>Regulates sleep / wake cycle</td>
+          <td>Make sure light gets in your eyes, make sure darkness gets in your eyes.</td>
         </tr>
         <tr>
           <td>C</td>
