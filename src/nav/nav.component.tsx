@@ -27,6 +27,11 @@ export const NavComponent = () => {
               <NavDropdown.Item href="/recursion/bifurcation-logistical-map">Chaos Theory: Bifurcation Logistical Map</NavDropdown.Item>
             </NavDropdown>
 
+            <NavDropdown title="Neurochemistry Project" id="neurochemistry">
+              <NavDropdown.Item href="/neurochemistry/happiness">A Mnemonic for Happiness</NavDropdown.Item>
+              <NavDropdown.Item href="/neurochemistry/zones-of-regulation" disabled>Zones of Regulation</NavDropdown.Item>
+            </NavDropdown>
+
             <NavDropdown title="Climate Change" id="climateChange">
               <NavDropdown.Item href="/climate-change/ruminants">
               Ruminants / Milk + Beef

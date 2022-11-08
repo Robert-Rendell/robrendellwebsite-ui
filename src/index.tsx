@@ -26,6 +26,7 @@ import { ClimateChangePage } from './pages/climate-change/climate-change.page';
 import { FungiPage } from './pages/photos-ive-taken/nature/fungi.page';
 import { IndiaPage } from './pages/misc/india.page';
 import { GiantPacificOctopusPage } from './pages/misc/giant-pacific-octopus.page';
+import { NeurochemistryPage } from './pages/neurochemistry/neurochemistry.page';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -47,6 +48,8 @@ ReactDOM.render(
         <Route path="climate-change/ride-a-bike" element={<RideABikePage />} />
         <Route path="climate-change/renewable-energy" element={<RenewableEnergyPage />} />
         <Route path="climate-change/reduce-reuse-recycle" element={<ReduceReuseRecyclePage />} />
+
+        <Route path="neurochemistry/happiness" element={<NeurochemistryPage />} />
 
         <Route path="miscellaneous/india" element={<IndiaPage />} />
         <Route path="miscellaneous/giant-pacific-octopus" element={<GiantPacificOctopusPage />} />
