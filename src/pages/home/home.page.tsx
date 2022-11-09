@@ -26,6 +26,7 @@ export const HomePage = () => {
       <h3>Rob Rendell: Node.js / TypeScript Developer</h3>
       <h4>Recent developments:</h4>
       <ul>
+        <li>08/11/22 @ 07.30 - Added Neurochemistry project and <a href="neurochemistry/happiness">Mnemonic for Happiness Hormones</a></li>
         <li>03/11/22 @ 08.51 - Completed <a href="miscellaneous/giant-pacific-octopus">Giant Pacific Octopus</a> and <a href="miscellaneous/india">India</a> project</li>
         <li>30/10/22 @ 10.33 - Completed <a href="photos-ive-taken/nature/wild-flowers">My Flower Photographs</a> project (phase 1)</li>
         <li>29/10/22 @ 13.50 - Completed <a href="climate-change/">Climate Change</a> project</li>
@@ -33,8 +34,8 @@ export const HomePage = () => {
         <li>24/10/22 @ 15.10 - Added infinity spinner for lazy loading on website</li>
         <li>02/01/22 @ 17.40 - Leaderboard feature for time taken to complete <a href="sudoku/">Sudoku</a> using <code>AWS.DynamoDB.query</code> and GSI.</li>
         <li>28/11/21 @ 14.00 - AWS Lambda running my Python <a href="sudoku/">Sudoku generation</a> code; triggered by front end.</li>
-        <li>16/11/21 @ 12.45 - Enabled &apos;Validate&apos; <a href="sudoku/play/0/">Sudoku Project</a> button.</li>
-        <li>15/11/21 @ 15.53 - Enabled <a href="sudoku/">Sudoku Project</a>. It is currently using <code>AWS.DynamoDB.getItem</code></li>
+        <li>16/11/21 @ 12.45 - Enabled &apos;Validate&apos; <a href="sudoku/play/0/">Sudoku project</a> button.</li>
+        <li>15/11/21 @ 15.53 - Enabled <a href="sudoku/">Sudoku project</a>. It is currently using <code>AWS.DynamoDB.getItem</code></li>
         <li>05/11/21 @ 09.15 - Home page images loading using <code>AWS.S3.getSignedUrlPromise</code> and <code>AWS.S3.listObjectsV2</code></li>
       </ul>
       <hr/>
