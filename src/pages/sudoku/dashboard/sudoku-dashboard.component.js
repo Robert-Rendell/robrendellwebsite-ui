@@ -196,7 +196,6 @@ class SudokuDashboardComponent extends React.Component {
           </tbody>
         </Table>
         <hr/>
-        <hr/>
         <h2>Generate Sudoku</h2>
         <div id="difficulty-button-panel-parent">
           <div id="difficulty-button-panel">
