@@ -26,7 +26,7 @@ export const HomePage = () => {
       <h3>Rob Rendell: Node.js / TypeScript Developer</h3>
       <h4>Recent developments:</h4>
       <ul>
-        <li>08/11/22 @ 07.30 - Added Neurochemistry project and <a href="neurochemistry/happiness">Mnemonic for Happiness Hormones</a></li>
+        <li>11/11/22 @ 16.40 - Pinned some already played <a href="sudoku/">Sudokus</a> for those who are competitive</li>
         <li>03/11/22 @ 08.51 - Completed <a href="miscellaneous/giant-pacific-octopus">Giant Pacific Octopus</a> and <a href="miscellaneous/india">India</a> project</li>
         <li>30/10/22 @ 10.33 - Completed <a href="photos-ive-taken/nature/wild-flowers">My Flower Photographs</a> project (phase 1)</li>
         <li>29/10/22 @ 13.50 - Completed <a href="climate-change/">Climate Change</a> project</li>
