@@ -193,6 +193,11 @@ class SudokuDashboardComponent extends React.Component {
               <td>Hard</td>
               <td><a href='/sudoku/play/13e44bd2-047a-4cf0-802a-3efd8ba819ed'>Play!</a></td> 
             </tr>
+            <tr>
+              <td>10min 2secs</td>
+              <td>Hard</td>
+              <td><a href='/sudoku/play/2f1f6c5e-c7d2-402a-9975-04cbf0f39de4'>Play!</a></td> 
+            </tr>
           </tbody>
         </Table>
         <hr/>
