@@ -26,11 +26,10 @@ import { ClimateChangePage } from './pages/climate-change/climate-change.page';
 import { FungiPage } from './pages/photos-ive-taken/nature/fungi.page';
 import { IndiaPage } from './pages/misc/india.page';
 import { GiantPacificOctopusPage } from './pages/misc/giant-pacific-octopus.page';
-import { NeurochemistryPage } from './pages/neurochemistry/neurochemistry.page';
+import { MCEDOEGSAPage } from './pages/neurochemistry/mc-edoegsa.page';
 import { ZonesOfRegulationPage } from './pages/neurochemistry/zones-of-regulation.page';
 import { SelfLoveNotNarcissismPage } from './pages/neurochemistry/self-love-not-narcissism.page';
 import { TheRelaxationResponsePage } from './pages/neurochemistry/the-relaxation-response.page';
-import { HappinessIsAChoicePage } from './pages/neurochemistry/happiness-is-a-choice.page';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -53,13 +52,10 @@ ReactDOM.render(
         <Route path="climate-change/renewable-energy" element={<RenewableEnergyPage />} />
         <Route path="climate-change/reduce-reuse-recycle" element={<ReduceReuseRecyclePage />} />
 
-        <Route path="neurochemistry/happiness" element={<NeurochemistryPage />} />
+        <Route path="neurochemistry/happiness" element={<MCEDOEGSAPage />} />
         <Route path="neurochemistry/zones-of-regulation" element={<ZonesOfRegulationPage />} />
         <Route path="neurochemistry/self-love-not-narcissism" element={<SelfLoveNotNarcissismPage/>} />
-        <Route path="neurochemistry/zones-of-regulation" element={<TheRelaxationResponsePage />} />
-        <Route path="neurochemistry/happiness-is-a-choice" element={<HappinessIsAChoicePage />} />
-        
-        the-relaxation-response
+        <Route path="neurochemistry/the-relaxation-response" element={<TheRelaxationResponsePage />} />
 
         <Route path="miscellaneous/india" element={<IndiaPage />} />
         <Route path="miscellaneous/giant-pacific-octopus" element={<GiantPacificOctopusPage />} />
