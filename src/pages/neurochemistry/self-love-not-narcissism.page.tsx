@@ -28,7 +28,7 @@ export function SelfLoveNotNarcissismPage() {
         <li><u>Greed</u>: by accepting economy is an illusion to create balance;</li>
         <li><u>Pride</u>: the world does not revolve around you (it revolves around the sun haha);</li>
         <li><u>Sexuality</u>: know your sexuality intimately and don&apos;t allow your sexuality to be labeled;</li>
-        <li><u>Gender</u>: this is a social institution, not a physical reality;</li>
+        <li><u>Gender</u>: this is a physical and chemical reality - don&apos;t let it be a static category;</li>
         <li><u>Instinctual fears</u>: spiders, heights, wasps, you name it - face them and treat animals kindly!</li>
       </ul>
     </p>
