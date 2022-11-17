@@ -5,7 +5,7 @@ import zones from '../../resources/zones.jpg';
 
 export function ZonesOfRegulationPage() {
   const windowSize = useWindowSize();
-  const width = windowSize[0] - 20;
+  const width = windowSize[0] - 40;
   return (<div className="standard-page-margins standard-page-styling">
     <h1>Zones of Emotional Regulation</h1>
     <p>
