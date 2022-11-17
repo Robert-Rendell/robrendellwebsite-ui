@@ -30,6 +30,7 @@ import { MCEDOEGSAPage } from './pages/neurochemistry/mc-edoegsa.page';
 import { ZonesOfRegulationPage } from './pages/neurochemistry/zones-of-regulation.page';
 import { SelfLoveNotNarcissismPage } from './pages/neurochemistry/self-love-not-narcissism.page';
 import { TheRelaxationResponsePage } from './pages/neurochemistry/the-relaxation-response.page';
+import { NeurochemistryLandingPage } from './pages/neurochemistry/landing.page';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -52,6 +53,7 @@ ReactDOM.render(
         <Route path="climate-change/renewable-energy" element={<RenewableEnergyPage />} />
         <Route path="climate-change/reduce-reuse-recycle" element={<ReduceReuseRecyclePage />} />
 
+        <Route path="neurochemistry/" element={<NeurochemistryLandingPage />} />
         <Route path="neurochemistry/happiness" element={<MCEDOEGSAPage />} />
         <Route path="neurochemistry/zones-of-regulation" element={<ZonesOfRegulationPage />} />
         <Route path="neurochemistry/self-love-not-narcissism" element={<SelfLoveNotNarcissismPage/>} />

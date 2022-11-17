@@ -1,7 +1,7 @@
 import React from 'react';
 import { useWindowSize } from '../../hooks/use-window-size.hook';
 import '../page.css';
-import { ClimateChangeBackButton } from './components/back-button.component';
+import { RobBackButton } from '../../components/back-button.component';
 
 export function ReduceReuseRecyclePage() {
   const windowSize = useWindowSize();
@@ -10,7 +10,7 @@ export function ReduceReuseRecyclePage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
-        <ClimateChangeBackButton/>
+        <RobBackButton/>
         Reduce, Reuse, Recycle
       </h1>
       

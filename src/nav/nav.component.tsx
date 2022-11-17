@@ -30,8 +30,8 @@ export const NavComponent = () => {
             <NavDropdown title="Neurochemistry Project" id="neurochemistry">
               <NavDropdown.Item href="/neurochemistry/happiness">A Mnemonic for Happiness</NavDropdown.Item>
               <NavDropdown.Item href="/neurochemistry/zones-of-regulation">Zones of Regulation</NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/the-relaxation-response">The Relaxation Response</NavDropdown.Item>
               <NavDropdown.Item href="/neurochemistry/self-love-not-narcissism">Self-love (and not Narcissism)</NavDropdown.Item>
+              <NavDropdown.Item href="/neurochemistry/the-relaxation-response">The Relaxation Response</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Climate Change" id="climateChange">

@@ -1,9 +1,10 @@
 import React from 'react';
+import { RobBackButton } from '../../components/back-button.component';
 
 
 export function TheRelaxationResponsePage() {
   return (<div className="standard-page-margins standard-page-styling">
-    <h1>The Relaxation Response</h1>
+    <h1><RobBackButton/> The Relaxation Response</h1>
     <p>
       Got <a href="https://www.nhs.uk/mental-health/conditions/panic-disorder/">anxiety</a>? Here&apos;s the answer:
     </p>
