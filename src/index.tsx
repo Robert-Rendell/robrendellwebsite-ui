@@ -27,6 +27,7 @@ import { FungiPage } from './pages/photos-ive-taken/nature/fungi.page';
 import { IndiaPage } from './pages/misc/india.page';
 import { GiantPacificOctopusPage } from './pages/misc/giant-pacific-octopus.page';
 import { NeurochemistryPage } from './pages/neurochemistry/neurochemistry.page';
+import { ZonesOfRegulationPage } from './pages/neurochemistry/zones-of-regulation.page';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -50,6 +51,7 @@ ReactDOM.render(
         <Route path="climate-change/reduce-reuse-recycle" element={<ReduceReuseRecyclePage />} />
 
         <Route path="neurochemistry/happiness" element={<NeurochemistryPage />} />
+        <Route path="neurochemistry/zones-of-regulation" element={<ZonesOfRegulationPage />} />
 
         <Route path="miscellaneous/india" element={<IndiaPage />} />
         <Route path="miscellaneous/giant-pacific-octopus" element={<GiantPacificOctopusPage />} />
