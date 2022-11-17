@@ -28,6 +28,9 @@ import { IndiaPage } from './pages/misc/india.page';
 import { GiantPacificOctopusPage } from './pages/misc/giant-pacific-octopus.page';
 import { NeurochemistryPage } from './pages/neurochemistry/neurochemistry.page';
 import { ZonesOfRegulationPage } from './pages/neurochemistry/zones-of-regulation.page';
+import { SelfLoveNotNarcissismPage } from './pages/neurochemistry/self-love-not-narcissism.page';
+import { TheRelaxationResponsePage } from './pages/neurochemistry/the-relaxation-response.page';
+import { HappinessIsAChoicePage } from './pages/neurochemistry/happiness-is-a-choice.page';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -52,6 +55,11 @@ ReactDOM.render(
 
         <Route path="neurochemistry/happiness" element={<NeurochemistryPage />} />
         <Route path="neurochemistry/zones-of-regulation" element={<ZonesOfRegulationPage />} />
+        <Route path="neurochemistry/self-love-not-narcissism" element={<SelfLoveNotNarcissismPage/>} />
+        <Route path="neurochemistry/zones-of-regulation" element={<TheRelaxationResponsePage />} />
+        <Route path="neurochemistry/happiness-is-a-choice" element={<HappinessIsAChoicePage />} />
+        
+        the-relaxation-response
 
         <Route path="miscellaneous/india" element={<IndiaPage />} />
         <Route path="miscellaneous/giant-pacific-octopus" element={<GiantPacificOctopusPage />} />
