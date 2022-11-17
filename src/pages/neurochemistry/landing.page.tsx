@@ -1,5 +1,4 @@
 import React from 'react';
-import { useWindowSize } from '../../hooks/use-window-size.hook';
 import '../page.css';
 
 export function NeurochemistryLandingPage() {
