@@ -1,7 +1,7 @@
 import React from 'react';
 import { useWindowSize } from '../../hooks/use-window-size.hook';
 import '../page.css';
-import { ClimateChangeBackButton } from './components/back-button.component';
+import { RobBackButton } from '../../components/back-button.component';
 
 export function RuminantsPage() {
   const windowSize = useWindowSize();
@@ -10,7 +10,7 @@ export function RuminantsPage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
-        <ClimateChangeBackButton/>
+        <RobBackButton/>
         Ruminants: Cut down on Milk and Beef!
       </h1>
       <p>

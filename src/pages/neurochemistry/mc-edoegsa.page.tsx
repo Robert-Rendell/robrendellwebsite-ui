@@ -1,9 +1,10 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import { RobBackButton } from '../../components/back-button.component';
 
 export function MCEDOEGSAPage() {
   return (<div className="standard-page-margins standard-page-styling">
-    <h1>Rob&apos;s Mnemonic for Happiness</h1>
+    <h1><RobBackButton/> Rob&apos;s Mnemonic for Happiness</h1>
     <i>Adapted from Christopher Bergland&apos;s: <a href="https://www.psychologytoday.com/gb/blog/the-athletes-way/201211/the-neurochemicals-happiness">The Neurochemicals of Happiness</a></i>
     <hr/>
     <p className='centred'>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { RobBackButton } from '../../components/back-button.component';
 import { useWindowSize } from '../../hooks/use-window-size.hook';
 import zones from '../../resources/zones.jpg';
 
@@ -7,7 +8,7 @@ export function ZonesOfRegulationPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   return (<div className="standard-page-margins standard-page-styling">
-    <h1>Zones of Emotional Regulation</h1>
+    <h1><RobBackButton/> Zones of Emotional Regulation</h1>
     <p>
       My sister introduced me to the&nbsp;
       <a href="https://d1uvxqwmcz8fl1.cloudfront.net/tes/resources/12068045/01f52aea-5663-46a1-8728-37740dc2363a/image?width=500&height=500&version=1567674337888">
