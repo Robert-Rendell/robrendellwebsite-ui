@@ -8,10 +8,10 @@ const starRecursiveFnCode = `function starRecursiveFn(count: number): string {
 
 function starRecursiveFn(count: number): string {
   // base case
-  if (count === 1) return '*';
+  if (count === 1) return "*";
 
   // recursive case
-  return '*' + starRecursiveFn(count - 1);
+  return "*" + starRecursiveFn(count - 1);
 }
 
 const starIterativeFnCode = `const starIterativeFn = (stars: number): string => {
@@ -23,11 +23,16 @@ const starIterativeFnCode = `const starIterativeFn = (stars: number): string => 
 }`;
 
 const starIterativeFn = (stars: number): string => {
-  let result = '';
+  let result = "";
   for (let i = 0; i < stars; i++) {
-    result = result + '*';
-  } 
+    result = result + "*";
+  }
   return result;
 };
 
-export { starRecursiveFn, starIterativeFn, starRecursiveFnCode, starIterativeFnCode };
+export {
+  starRecursiveFn,
+  starIterativeFn,
+  starRecursiveFnCode,
+  starIterativeFnCode,
+};

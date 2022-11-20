@@ -1,4 +1,4 @@
-import { P5Instance } from 'react-p5-wrapper';
+import { P5Instance } from "react-p5-wrapper";
 
 /*
   Tutorial by me :)
@@ -18,7 +18,7 @@ export const goldenRatioSketch = (p5: P5Instance) => {
   const PHI = (1 + Math.sqrt(5)) / 2;
 
   p5.setup = () => {
-    const size = p5.min(p5.windowWidth/3, p5.windowHeight/3);
+    const size = p5.min(p5.windowWidth / 3, p5.windowHeight / 3);
     p5.createCanvas(size, size);
     p5.colorMode(p5.RGB, 1);
     p5.noStroke();
@@ -31,12 +31,16 @@ export const goldenRatioSketch = (p5: P5Instance) => {
   };
 
   p5.mouseClicked = () => {
-    if (0 <= p5.mouseX && p5.mouseX < p5.width &&
-        0 <= p5.mouseY && p5.mouseY < p5.height) {
+    if (
+      0 <= p5.mouseX &&
+      p5.mouseX < p5.width &&
+      0 <= p5.mouseY &&
+      p5.mouseY < p5.height
+    ) {
       dir = -dir;
     }
   };
-    
+
   p5.draw = () => {
     p5.scale(p5.width, p5.height);
     p5.background(0);
@@ -50,17 +54,17 @@ export const goldenRatioSketch = (p5: P5Instance) => {
         dir = -dir;
       }
     }
-    
+
     for (let i = 1; i < seedCount; i++) {
       const f = i / seedCount;
       const angle = i * PHI;
       const dist = f * radius;
-    
+
       const x = 0.5 + p5.cos(angle * p5.TWO_PI) * dist;
       const y = 0.5 + p5.sin(angle * p5.TWO_PI) * dist;
-    
+
       const r = f * dotSize;
-    
+
       p5.circle(x, y, r);
     }
   };

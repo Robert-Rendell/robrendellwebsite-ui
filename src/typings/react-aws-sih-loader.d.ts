@@ -1,1 +1,1 @@
-declare module 'react-aws-sih-loader';
+declare module "react-aws-sih-loader";

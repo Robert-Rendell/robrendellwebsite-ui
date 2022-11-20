@@ -1,6 +1,6 @@
-.sudoku-input{
-  border:none;
-  width:25px;
+.sudoku-input {
+  border: none;
+  width: 25px;
   padding: 3px;
   color: blue;
   text-align: center;
@@ -8,13 +8,13 @@
 }
 
 /* Chrome, Safari, Edge, Opera */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
--webkit-appearance: none;
-margin: 0;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
--moz-appearance: textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
