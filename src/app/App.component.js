@@ -1,6 +1,6 @@
-import './App.component.css';
-import React from 'react';
-import { NavComponent } from '../nav/nav.component';
+import "./App.component.css";
+import React from "react";
+import { NavComponent } from "../nav/nav.component";
 
 class App extends React.Component {
   constructor(props) {

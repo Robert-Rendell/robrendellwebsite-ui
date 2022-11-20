@@ -1,15 +1,15 @@
-import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Container from 'react-bootstrap/Container';
+import React from "react";
+import Form from "react-bootstrap/Form";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Container from "react-bootstrap/Container";
 // import Button from 'react-bootstrap/Button';
-import './nav.component.css';
-import logo from '../resources/logo.svg';
-import nodeJsLogo from '../resources/nodejs-logo.png';
-import tsLogo from '../resources/ts-logo.png';
-import awsLogo from '../resources/aws-logo.png';
+import "./nav.component.css";
+import logo from "../resources/logo.svg";
+import nodeJsLogo from "../resources/nodejs-logo.png";
+import tsLogo from "../resources/ts-logo.png";
+import awsLogo from "../resources/aws-logo.png";
 
 export const NavComponent = () => {
   return (
@@ -18,58 +18,79 @@ export const NavComponent = () => {
         <Navbar.Brand href="/">Rob Rendell</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-          
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
             <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
-          
+
             <NavDropdown title="Recursion Project" id="recursionProject">
-              <NavDropdown.Item href="/recursion">Recursion / Fractals</NavDropdown.Item>
-              <NavDropdown.Item href="/recursion/bifurcation-logistical-map">Chaos Theory: Bifurcation Logistical Map</NavDropdown.Item>
+              <NavDropdown.Item href="/recursion">
+                Recursion / Fractals
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/recursion/bifurcation-logistical-map">
+                Chaos Theory: Bifurcation Logistical Map
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Neurochemistry Project" id="neurochemistry">
-              <NavDropdown.Item href="/neurochemistry/happiness">A Mnemonic for Happiness</NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/zones-of-regulation">Zones of Regulation</NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/self-love-not-narcissism">Self-love (and not Narcissism)</NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/the-relaxation-response">The Relaxation Response</NavDropdown.Item>
+              <NavDropdown.Item href="/neurochemistry/happiness">
+                A Mnemonic for Happiness
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/neurochemistry/zones-of-regulation">
+                Zones of Regulation
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/neurochemistry/self-love-not-narcissism">
+                Self-love (and not Narcissism)
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/neurochemistry/the-relaxation-response">
+                The Relaxation Response
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/neurochemistry/positive-subconscious-reaction">
+                Positive Subconscious Reaction
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/neurochemistry/positive-subconscious-reaction">
+                Self-actualisation / Peak experiences
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Climate Change" id="climateChange">
               <NavDropdown.Item href="/climate-change/ruminants">
-              Ruminants / Milk + Beef
+                Ruminants / Milk + Beef
               </NavDropdown.Item>
               <NavDropdown.Item href="/climate-change/ride-a-bike">
-              Ride a Bike!
+                Ride a Bike!
               </NavDropdown.Item>
               <NavDropdown.Item href="/climate-change/ocean-acidification">
-              Ocean Acidification
+                Ocean Acidification
               </NavDropdown.Item>
               <NavDropdown.Item href="/climate-change/reduce-reuse-recycle">
-              Reduce, Reuse, Recycle (Plastic!)
+                Reduce, Reuse, Recycle (Plastic!)
               </NavDropdown.Item>
               <NavDropdown.Item href="/climate-change/renewable-energy">
-              Renewable Energy
+                Renewable Energy
               </NavDropdown.Item>
               <NavDropdown.Item href="https://www.timeshighereducation.com/impactrankings">
-              World University Impact Sustainability Rankings
+                World University Impact Sustainability Rankings
               </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Nature" id="nature">
               <NavDropdown.Item href="/photos-ive-taken/nature/wild-flowers">
-              Wild Flowers
+                Wild Flowers
               </NavDropdown.Item>
               <NavDropdown.Item href="/photos-ive-taken/nature/insects">
-              Insects
+                Insects
               </NavDropdown.Item>
               <NavDropdown.Item href="/photos-ive-taken/nature/lichen">
-              Lichen
+                Lichen
               </NavDropdown.Item>
               <NavDropdown.Item href="/photos-ive-taken/nature/arachnids">
-              Arachnids
+                Arachnids
               </NavDropdown.Item>
               <NavDropdown.Item href="/photos-ive-taken/nature/fungi">
-              Fungi
+                Fungi
               </NavDropdown.Item>
             </NavDropdown>
 
@@ -80,33 +101,61 @@ export const NavComponent = () => {
               <NavDropdown.Item href="/miscellaneous/giant-pacific-octopus">
                 Giant Pacific Octopus (Alaskan)
               </NavDropdown.Item>
-              <NavDropdown.Item disabled>
-                Scotch Whisky
-              </NavDropdown.Item>
-              <NavDropdown.Item disabled>
-                Word of the Day
-              </NavDropdown.Item>
+              <NavDropdown.Item disabled>Scotch Whisky</NavDropdown.Item>
+              <NavDropdown.Item disabled>Word of the Day</NavDropdown.Item>
               <NavDropdown.Item disabled>
                 Interesting Dates in History
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="Music Projects" id="musicProjectsNavbarScrollingDropdown">
-              <NavDropdown.Item href="https://www.shiva-archetypes.com">Shiva Archetypes (band)</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.robcelticfiddle.co.uk">Rob Celtic Fiddle (weddings)</NavDropdown.Item>
+            <NavDropdown
+              title="Music Projects"
+              id="musicProjectsNavbarScrollingDropdown"
+            >
+              <NavDropdown.Item href="https://www.shiva-archetypes.com">
+                Shiva Archetypes (band)
+              </NavDropdown.Item>
+              <NavDropdown.Item href="https://www.robcelticfiddle.co.uk">
+                Rob Celtic Fiddle (weddings)
+              </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="Tech Tests" id="techTestsNavbarScrollingDropdown">
-              <NavDropdown.Item href="/technical-tests/291121">29/11/21 - University data visualiser</NavDropdown.Item>
+            <NavDropdown
+              title="Tech Tests"
+              id="techTestsNavbarScrollingDropdown"
+            >
+              <NavDropdown.Item href="/technical-tests/291121">
+                29/11/21 - University data visualiser
+              </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">LinkedIn</Nav.Link>
+            <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">
+              LinkedIn
+            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <img src={logo} width="40" height="40" alt="React" />
-            <img src={tsLogo} className="tech-icons" width="30" height="30" alt="TypeScript" />
-            <img src={nodeJsLogo} className="tech-icons nodejs-icon" width="30" height="30" alt="nodeJs" />
+            <img
+              src={tsLogo}
+              className="tech-icons"
+              width="30"
+              height="30"
+              alt="TypeScript"
+            />
+            <img
+              src={nodeJsLogo}
+              className="tech-icons nodejs-icon"
+              width="30"
+              height="30"
+              alt="nodeJs"
+            />
             <div className="tech-icons aws-icon-bg">
-              <img src={awsLogo} className="aws-icon" width="30" height="20" alt="nodeJs" />
+              <img
+                src={awsLogo}
+                className="aws-icon"
+                width="30"
+                height="20"
+                alt="nodeJs"
+              />
             </div>
             {/* <Button variant="outline-success" disabled>Enquire</Button> */}
           </Form>

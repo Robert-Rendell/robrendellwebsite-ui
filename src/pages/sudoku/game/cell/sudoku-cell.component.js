@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import './sudoku-cell.component.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import "./sudoku-cell.component.css";
 
 class SudokuCellComponent extends Component {
-
   constructor(props) {
     super(props);
     this.createSudokuInputName = this.createSudokuInputName.bind(this);
@@ -28,17 +27,22 @@ class SudokuCellComponent extends Component {
   }
 
   getCellValue() {
-    return parseInt(this.props.cell) > 0 ? this.props.cell : '';
+    return parseInt(this.props.cell) > 0 ? this.props.cell : "";
   }
 
   getId() {
-    return this.createSudokuInputId('sudoku-input',this.props.row, this.props.column);
+    return this.createSudokuInputId(
+      "sudoku-input",
+      this.props.row,
+      this.props.column
+    );
   }
 
   render() {
     return (
       <td>
-        <input id={this.getId()}
+        <input
+          id={this.getId()}
           name={this.createSudokuInputName(this.props.row, this.props.column)}
           type="number"
           defaultValue={this.getCellValue()}

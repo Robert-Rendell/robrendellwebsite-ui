@@ -37,6 +37,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
+    "format": "prettier -w ./src",
     "update-common": "npm install robrendellwebsite-common"
   },
   "eslintConfig": {

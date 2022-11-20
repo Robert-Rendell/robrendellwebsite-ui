@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
-import SudokuCellComponent from './cell/sudoku-cell.component';
-import axios from 'axios';
-import { config } from '../../../config';
-import './sudoku-game.component.css';
+import React from "react";
+import PropTypes from "prop-types";
+import Button from "react-bootstrap/Button";
+import Table from "react-bootstrap/Table";
+import SudokuCellComponent from "./cell/sudoku-cell.component";
+import axios from "axios";
+import { config } from "../../../config";
+import "./sudoku-game.component.css";
 
 class SudokuGameComponent extends React.Component {
   constructor(props) {
@@ -15,9 +15,9 @@ class SudokuGameComponent extends React.Component {
       puzzle: [],
       sudokuBoard: [],
       submission: [],
-      sudokuId: '',
-      submissionId: '',
-      submitterName: '',
+      sudokuId: "",
+      submissionId: "",
+      submitterName: "",
     };
     // Oh my god JavaScript...
     this.readSudokuGrid = this.readSudokuGrid.bind(this);
@@ -54,16 +54,16 @@ class SudokuGameComponent extends React.Component {
   populateSudokuGrid() {
     this.setState({
       sudokuBoard: [
-        [1,2,3,1,2,3,1,2,3],
-        [1,2,3,1,2,3,1,2,3],
-        [1,2,3,1,2,3,1,2,3],
-        [1,2,3,1,2,3,1,2,3],
-        [1,2,3,1,2,3,1,2,3],
-        [1,2,3,1,2,3,1,2,3],
-        [1,2,3,1,2,3,1,2,3],
-        [1,2,3,1,2,3,1,2,3],
-        [1,2,3,1,2,3,1,2,3],
-      ]
+        [1, 2, 3, 1, 2, 3, 1, 2, 3],
+        [1, 2, 3, 1, 2, 3, 1, 2, 3],
+        [1, 2, 3, 1, 2, 3, 1, 2, 3],
+        [1, 2, 3, 1, 2, 3, 1, 2, 3],
+        [1, 2, 3, 1, 2, 3, 1, 2, 3],
+        [1, 2, 3, 1, 2, 3, 1, 2, 3],
+        [1, 2, 3, 1, 2, 3, 1, 2, 3],
+        [1, 2, 3, 1, 2, 3, 1, 2, 3],
+        [1, 2, 3, 1, 2, 3, 1, 2, 3],
+      ],
     });
   }
 
@@ -73,7 +73,9 @@ class SudokuGameComponent extends React.Component {
       const rowCells = [];
       sudokuGrid.push(rowCells);
       for (let col = 0; col < 9; col++) {
-        const v = document.getElementById(`sudoku-input(${row}, ${col})`)?.value;
+        const v = document.getElementById(
+          `sudoku-input(${row}, ${col})`
+        )?.value;
         rowCells.push(v ? parseInt(v) : 0);
       }
     }
@@ -88,20 +90,22 @@ class SudokuGameComponent extends React.Component {
    * - submissionId: SubmissionId,
    */
   getSudoku(id) {
-    axios.get(`${config.backend}/sudoku/play/${id}`,
-      { headers: {'Content-Type': 'application/json'}}
-    ).then((response) => {
-      console.log(response.data);
-      const sudoku = response.data['puzzle'];
-      const submissionId = response.data['submissionId'];
-      const sudokuId = response.data['sudokuId'];
-      this.setState({
-        puzzle: JSON.stringify(sudoku),
-        sudokuBoard: sudoku,
-        submissionId,
-        sudokuId,
+    axios
+      .get(`${config.backend}/sudoku/play/${id}`, {
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((response) => {
+        console.log(response.data);
+        const sudoku = response.data["puzzle"];
+        const submissionId = response.data["submissionId"];
+        const sudokuId = response.data["sudokuId"];
+        this.setState({
+          puzzle: JSON.stringify(sudoku),
+          sudokuBoard: sudoku,
+          submissionId,
+          sudokuId,
+        });
       });
-    });
   }
 
   /**
@@ -110,14 +114,16 @@ class SudokuGameComponent extends React.Component {
    * - { 'timeTakenMs' | 'dateSubmitted' | 'submitterName' }
    */
   getSudokuLeaderboard(id) {
-    axios.get(`${config.backend}/sudoku/leaderboard/${id}`,
-      { headers: {'Content-Type': 'application/json'}}
-    ).then((response) => {
-      console.log(response.data);
-      this.setState({
-        leaderboard: response.data['leaderboard'],
+    axios
+      .get(`${config.backend}/sudoku/leaderboard/${id}`, {
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((response) => {
+        console.log(response.data);
+        this.setState({
+          leaderboard: response.data["leaderboard"],
+        });
       });
-    });
   }
 
   /**
@@ -126,38 +132,38 @@ class SudokuGameComponent extends React.Component {
    * - sudokuId: SudokuId,
    * - sudokuSubmission: string,
    * - sudokuSubmissionId: SubmissionId,
-   * 
+   *
    * Response:
    * - errorMessage: string
    * - complete: boolean
    * - valid: boolean
    */
   submitSudoku() {
-    let submitter = '';
+    let submitter = "";
     this.disableValidateButton();
     const sudokuGrid = this.readSudokuGrid();
     if (this.isSubmissionComplete(sudokuGrid)) {
       submitter = this.getSubmitterName();
     }
-    axios.post(`${config.backend}/sudoku/submit`,
-      { 
-        headers: {'Content-Type': 'application/json'},
-        'sudokuId': this.state.sudokuId,
-        'sudokuSubmission': JSON.stringify(sudokuGrid),
-        'sudokuSubmissionId': this.state.submissionId,
-        'timeTaken': 0,
-        'submitterName': submitter,
-      }
-    ).then((response) => {
-      console.log(response.data);
-      if (response.data.valid && response.data.complete) {
-        this.complete(response.data.timeTakenMs);
-      } else if (response.data.valid) {
-        this.valid();
-      } else if (!response.data.valid) {
-        this.invalid();
-      }
-    });
+    axios
+      .post(`${config.backend}/sudoku/submit`, {
+        headers: { "Content-Type": "application/json" },
+        sudokuId: this.state.sudokuId,
+        sudokuSubmission: JSON.stringify(sudokuGrid),
+        sudokuSubmissionId: this.state.submissionId,
+        timeTaken: 0,
+        submitterName: submitter,
+      })
+      .then((response) => {
+        console.log(response.data);
+        if (response.data.valid && response.data.complete) {
+          this.complete(response.data.timeTakenMs);
+        } else if (response.data.valid) {
+          this.valid();
+        } else if (!response.data.valid) {
+          this.invalid();
+        }
+      });
   }
 
   giveUp() {
@@ -170,17 +176,17 @@ class SudokuGameComponent extends React.Component {
       return `${rounded} secs`;
     }
     const minutes = Math.floor(rounded / 60);
-    const seconds = ((rounded / 60) - minutes) * 60;
+    const seconds = (rounded / 60 - minutes) * 60;
     return `${minutes} min ${seconds.toFixed(0)} secs`;
   }
 
   isSubmissionComplete(sudokuGrid) {
-    return !JSON.stringify(sudokuGrid).includes('0');
+    return !JSON.stringify(sudokuGrid).includes("0");
   }
 
   getSubmitterName() {
     if (this.state.submitterName.length === 0) {
-      const submitterName = prompt('Enter your name or leave blank');
+      const submitterName = prompt("Enter your name or leave blank");
       this.setState({
         submitterName,
       });
@@ -189,18 +195,20 @@ class SudokuGameComponent extends React.Component {
   }
 
   renderSudoku() {
-    if (this.state.sudokuBoard.length === 0) return (<h2>Loading...</h2>);
+    if (this.state.sudokuBoard.length === 0) return <h2>Loading...</h2>;
     return this.state.sudokuBoard.map((sudokuRow, rowIndex) => {
       return (
         <tr key={`row(${rowIndex})`}>
-          { 
-            sudokuRow.map((cell, columnIndex) => {
-              return <SudokuCellComponent key={`cell(${rowIndex},${columnIndex})`}
-                cell={cell} 
-                row={rowIndex} 
-                column={columnIndex}/>;
-            })
-          }
+          {sudokuRow.map((cell, columnIndex) => {
+            return (
+              <SudokuCellComponent
+                key={`cell(${rowIndex},${columnIndex})`}
+                cell={cell}
+                row={rowIndex}
+                column={columnIndex}
+              />
+            );
+          })}
         </tr>
       );
     });
@@ -208,19 +216,23 @@ class SudokuGameComponent extends React.Component {
 
   invalid() {
     this.enableValidateButton();
-    alert('Something is wrong!');
+    alert("Something is wrong!");
   }
 
   valid() {
     this.enableValidateButton();
-    alert('Sudoku is valid! Keep going!');
+    alert("Sudoku is valid! Keep going!");
   }
 
   complete(timeTakenMs) {
     this.getSudokuLeaderboard(this.props.sudokuId);
     this.disableBoard();
     this.disableValidateButton();
-    alert(`Sudoku was completed in ${this.getMinutesAndSeconds(timeTakenMs)}! Well done ${this.state.submitterName}!!`);
+    alert(
+      `Sudoku was completed in ${this.getMinutesAndSeconds(
+        timeTakenMs
+      )}! Well done ${this.state.submitterName}!!`
+    );
   }
 
   disableBoard() {
@@ -229,12 +241,16 @@ class SudokuGameComponent extends React.Component {
   }
 
   disableValidateButton() {
-    const btnValidate = document.getElementById(SudokuGameComponent.Button.Validate);
+    const btnValidate = document.getElementById(
+      SudokuGameComponent.Button.Validate
+    );
     btnValidate.disabled = true;
   }
 
   enableValidateButton() {
-    const btnValidate = document.getElementById(SudokuGameComponent.Button.Validate);
+    const btnValidate = document.getElementById(
+      SudokuGameComponent.Button.Validate
+    );
     btnValidate.disabled = false;
   }
 
@@ -245,15 +261,21 @@ class SudokuGameComponent extends React.Component {
   }
 
   render() {
-    const leaderboardEntries = this.state.leaderboard?.slice(0,5).map((item, index) => {
-      return ( <tr key={`leaderboard-entry-${index}`}>
-        <td>{ index + 1 }</td>
-        <td>{ new Date(item.dateSubmitted).toUTCString().replace('GMT','') }</td>
-        <td>{ item.submitterName || 'anonymous' }</td>
-        <td>{ this.getMinutesAndSeconds(item.timeTakenMs) }</td>
-      </tr>);
-    });
-    let leaderboard = '';
+    const leaderboardEntries = this.state.leaderboard
+      ?.slice(0, 5)
+      .map((item, index) => {
+        return (
+          <tr key={`leaderboard-entry-${index}`}>
+            <td>{index + 1}</td>
+            <td>
+              {new Date(item.dateSubmitted).toUTCString().replace("GMT", "")}
+            </td>
+            <td>{item.submitterName || "anonymous"}</td>
+            <td>{this.getMinutesAndSeconds(item.timeTakenMs)}</td>
+          </tr>
+        );
+      });
+    let leaderboard = "";
     if (leaderboardEntries?.length > 0) {
       leaderboard = (
         <div id="leaderboard_parent" className="col left-right-padding-5">
@@ -267,9 +289,7 @@ class SudokuGameComponent extends React.Component {
                   <th>Time</th>
                 </tr>
               </thead>
-              <tbody>
-                { leaderboardEntries }
-              </tbody>
+              <tbody>{leaderboardEntries}</tbody>
             </Table>
           </div>
         </div>
@@ -282,12 +302,29 @@ class SudokuGameComponent extends React.Component {
             <div id="board" className="sudoku-parent">
               <Table striped bordered hover>
                 <tbody id={SudokuGameComponent.Div.SudokuBoard}>
-                  { this.renderSudoku() }
+                  {this.renderSudoku()}
                 </tbody>
               </Table>
-              <Button id={SudokuGameComponent.Button.GiveUp} onClick={this.giveUp} disabled>Give Up</Button>
-              <Button id={SudokuGameComponent.Button.Validate} onClick={this.submitSudoku}>Check / Validate</Button>
-              <Button id={SudokuGameComponent.Button.Reset} onClick={this.reset} disabled>Reset</Button>
+              <Button
+                id={SudokuGameComponent.Button.GiveUp}
+                onClick={this.giveUp}
+                disabled
+              >
+                Give Up
+              </Button>
+              <Button
+                id={SudokuGameComponent.Button.Validate}
+                onClick={this.submitSudoku}
+              >
+                Check / Validate
+              </Button>
+              <Button
+                id={SudokuGameComponent.Button.Reset}
+                onClick={this.reset}
+                disabled
+              >
+                Reset
+              </Button>
             </div>
             {/* <input type="text" id="txtShareLink" className="inline form-control"
                 onFocus={this.showShareLink(this,'{{ sudoku_id }}')}
@@ -310,11 +347,11 @@ SudokuGameComponent.propTypes = {
 };
 
 SudokuGameComponent.Div = {
-  SudokuBoard: 'render-sudoku-board',
+  SudokuBoard: "render-sudoku-board",
 };
 
 SudokuGameComponent.Button = {
-  GiveUp: 'btnGiveUp',
-  Validate: 'btnValidate',
-  Reset: 'btnReset',
+  GiveUp: "btnGiveUp",
+  Validate: "btnValidate",
+  Reset: "btnReset",
 };

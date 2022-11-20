@@ -22,7 +22,7 @@ img {
 }
 
 .s3-loaded-image {
-  max-width: 400px
+  max-width: 400px;
 }
 
 .numbered-list-margins {
@@ -30,5 +30,5 @@ img {
 }
 
 h2 {
-    color: white;
+  color: white;
 }
