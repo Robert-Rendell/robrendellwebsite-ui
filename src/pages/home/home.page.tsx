@@ -26,6 +26,10 @@ export const HomePage = () => {
       <h4>Recent developments:</h4>
       <ul>
         <li>
+          21/11/22 @ 18.00 - Style makeover for{" "}
+          <a href="neurochemistry/">Neurochemistry</a> project
+        </li>
+        <li>
           17/11/22 @ 14.25 - Completed{" "}
           <a href="neurochemistry/">Neurochemistry</a> project
         </li>

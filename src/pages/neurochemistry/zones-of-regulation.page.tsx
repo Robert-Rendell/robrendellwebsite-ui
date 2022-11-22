@@ -7,7 +7,7 @@ export function ZonesOfRegulationPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   return (
-    <div className="standard-page-margins standard-page-styling">
+    <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
         <RobBackButton /> Zones of Emotional Regulation
       </h1>

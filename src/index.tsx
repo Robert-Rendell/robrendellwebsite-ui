@@ -31,6 +31,9 @@ import { ZonesOfRegulationPage } from "./pages/neurochemistry/zones-of-regulatio
 import { SelfLoveNotNarcissismPage } from "./pages/neurochemistry/self-love-not-narcissism.page";
 import { TheRelaxationResponsePage } from "./pages/neurochemistry/the-relaxation-response.page";
 import { NeurochemistryLandingPage } from "./pages/neurochemistry/landing.page";
+import { SubconsciousPositiveReactionsPage } from "./pages/neurochemistry/subconscious-positive-reactions.page";
+import { SelfActualisationPeakExperiencesPage } from "./pages/neurochemistry/self-actualisation.page";
+import { LearningAndGeneticCodePage } from "./pages/neurochemistry/learning-and-genetic-code.page";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -79,6 +82,19 @@ ReactDOM.render(
           path="neurochemistry/the-relaxation-response"
           element={<TheRelaxationResponsePage />}
         />
+        <Route
+          path="neurochemistry/subconscious-positive-reactions"
+          element={<SubconsciousPositiveReactionsPage />}
+        />
+        <Route
+          path="neurochemistry/self-actualisation-peak-experiences"
+          element={<SelfActualisationPeakExperiencesPage />}
+        />
+        <Route
+          path="neurochemistry/learning-and-genetic-code"
+          element={<LearningAndGeneticCodePage />}
+        />
+
 
         <Route path="miscellaneous/india" element={<IndiaPage />} />
         <Route
