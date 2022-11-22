@@ -6,7 +6,7 @@ export function SelfLoveNotNarcissismPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   return (
-    <div className="standard-page-margins standard-page-styling black-bg">
+    <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
         <RobBackButton /> Self love! (...Is Not Narcissism)
       </h1>
