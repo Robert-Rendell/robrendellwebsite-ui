@@ -31,17 +31,17 @@ export function NeurochemistryLandingPage() {
           </a>
         </li>
         <li>
-          <a href="/neurochemistry/the-relaxation-response">
+          <a href="/neurochemistry/subconscious-positive-reactions">
             Subconscious Positive Reactions
           </a>
         </li>
         <li>
-          <a href="/neurochemistry/the-relaxation-response">
+          <a href="/neurochemistry/self-actualisation-peak-experiences">
             Self-actualisation & Peak experiences
           </a>
         </li>
         <li>
-          <a href="/neurochemistry/the-relaxation-response">
+          <a href="/neurochemistry/learning-and-genetic-code">
             Learning and Genetic Code
           </a>
         </li>

@@ -47,13 +47,13 @@ export const NavComponent = () => {
               <NavDropdown.Item href="/neurochemistry/the-relaxation-response">
                 The Relaxation Response
               </NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/subconscious-positive-reaction" disabled>
+              <NavDropdown.Item href="/neurochemistry/subconscious-positive-reactions">
                 Subconscious Positive Reactions
               </NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/self-actualisation" disabled>
+              <NavDropdown.Item href="/neurochemistry/self-actualisation-peak-experiences">
                 Self-actualisation / Peak experiences
               </NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/learning-and-genetics" disabled>
+              <NavDropdown.Item href="/neurochemistry/learning-and-genetic-code">
                 Learning and Genetic Code
               </NavDropdown.Item>
             </NavDropdown>
