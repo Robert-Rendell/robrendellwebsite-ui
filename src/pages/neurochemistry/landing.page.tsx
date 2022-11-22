@@ -36,10 +36,9 @@ export function NeurochemistryLandingPage() {
           </a>
         </li>
         <li>
-          Self-actualisation & Peak experiences (coming soon)
-          {/* <a href="/neurochemistry/self-actualisation-peak-experiences" aria-disabled>
-            Self-actualisation & Peak experiences
-          </a> */}
+          <a href="/neurochemistry/self-actualisation-peak-experiences" aria-disabled>
+            Self-actualisation & Peak Experiences
+          </a>
         </li>
         <li>
           Learning and Genetic Code (coming soon)
