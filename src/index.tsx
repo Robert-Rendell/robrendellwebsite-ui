@@ -34,6 +34,7 @@ import { NeurochemistryLandingPage } from "./pages/neurochemistry/landing.page";
 import { SubconsciousPositiveReactionsPage } from "./pages/neurochemistry/subconscious-positive-reactions.page";
 import { SelfActualisationPeakExperiencesPage } from "./pages/neurochemistry/self-actualisation.page";
 import { LearningAndGeneticCodePage } from "./pages/neurochemistry/learning-and-genetic-code.page";
+import { LetItGoPage } from "./pages/neurochemistry/let-it-go.page";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -93,6 +94,10 @@ ReactDOM.render(
         <Route
           path="neurochemistry/learning-and-genetic-code"
           element={<LearningAndGeneticCodePage />}
+        />
+        <Route
+          path="neurochemistry/let-it-go"
+          element={<LetItGoPage />}
         />
 
         <Route path="miscellaneous/india" element={<IndiaPage />} />

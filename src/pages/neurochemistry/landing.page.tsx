@@ -48,6 +48,11 @@ export function NeurochemistryLandingPage() {
             Learning and Genetic Code
           </a> */}
         </li>
+        <li>
+          <a href="/neurochemistry/let-it-go">
+            Let it Go / Let it Be
+          </a>
+        </li>
       </ol>
       <img
         width={width}

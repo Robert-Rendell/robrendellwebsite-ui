@@ -59,6 +59,9 @@ export const NavComponent = () => {
               >
                 Learning and Genetic Code
               </NavDropdown.Item>
+              <NavDropdown.Item href="/neurochemistry/let-it-go">
+                Let it Go / Let it Be
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Climate Change" id="climateChange">
