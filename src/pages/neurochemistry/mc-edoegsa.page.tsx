@@ -4,7 +4,7 @@ import { RobBackButton } from "../../components/back-button.component";
 
 export function MCEDOEGSAPage() {
   return (
-    <div className="standard-page-margins standard-page-styling">
+    <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
         <RobBackButton /> Rob&apos;s Mnemonic for Happiness
       </h1>
@@ -48,9 +48,11 @@ export function MCEDOEGSAPage() {
         . In my eyes a bible for emotional self regulation via exercise.
       </p>
       <hr />
-      <h2 className="centred">As promised... Here is my Mnemonic</h2>
+      <h2 className="centred">As promised... here is my mnemonic:</h2>
 
+      <br/>
       <h1 className="centred">MC - EDOEGSA</h1>
+      <br/>
       <Table variant="dark" hover>
         <thead>
           <tr>

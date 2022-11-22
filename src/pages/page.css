@@ -32,3 +32,27 @@ img {
 h2 {
   color: white;
 }
+
+.black-bg {
+  background-color: black;
+  height: 100%;
+}
+
+.black-bg a {
+  color: limegreen;
+}
+
+.black-bg a:hover {
+  color: white;
+}
+
+.black-bg button {
+  background-color: limegreen;
+  color: black;
+  border-color: black;
+}
+
+.black-bg button:hover {
+  background-color: limegreen;
+  border-color: black;
+}

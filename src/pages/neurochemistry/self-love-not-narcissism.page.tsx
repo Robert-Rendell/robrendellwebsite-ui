@@ -1,9 +1,12 @@
 import React from "react";
 import { RobBackButton } from "../../components/back-button.component";
+import { useWindowSize } from "../../hooks/use-window-size.hook";
 
 export function SelfLoveNotNarcissismPage() {
+  const windowSize = useWindowSize();
+  const width = windowSize[0] - 40;
   return (
-    <div className="standard-page-margins standard-page-styling">
+    <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
         <RobBackButton /> Self love! (...Is Not Narcissism)
       </h1>
@@ -74,6 +77,7 @@ export function SelfLoveNotNarcissismPage() {
       <p className="centred">
         <i>Rob Rendell (2022)</i>
       </p>
+      <img src={`https://jmlkanewischer.files.wordpress.com/2020/04/matrix-know-thyself.jpg?w=${width}`} width={width} />
     </div>
   );
 }

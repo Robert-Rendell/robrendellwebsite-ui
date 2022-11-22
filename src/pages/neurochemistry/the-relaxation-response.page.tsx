@@ -3,7 +3,7 @@ import { RobBackButton } from "../../components/back-button.component";
 
 export function TheRelaxationResponsePage() {
   return (
-    <div className="standard-page-margins standard-page-styling">
+    <div className="standard-page-margins standard-page-styling black-bg" style={{height:"100%"}}>
       <h1>
         <RobBackButton /> The Relaxation Response
       </h1>

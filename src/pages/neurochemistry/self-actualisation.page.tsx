@@ -1,9 +1,9 @@
 import React from "react";
 import { RobBackButton } from "../../components/back-button.component";
 
-export function SelfActualisationPage() {
+export function SelfActualisationPeakExperiencesPage() {
   return (
-    <div className="standard-page-margins standard-page-styling">
+    <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
         <RobBackButton /> Self-actualisation & Peak Experiences
       </h1>
