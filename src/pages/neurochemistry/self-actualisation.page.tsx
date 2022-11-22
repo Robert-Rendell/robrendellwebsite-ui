@@ -11,7 +11,7 @@ export function SelfActualisationPeakExperiencesPage() {
         <RobBackButton /> Self-actualisation & Peak Experiences
       </h1>
       <p>
-      Self-actualization is the complete realization of one&apos;s potential, and the full development of one&apos;s abilities and appreciation for life. This concept is at the top of the Maslow hierarchy of needs, so not every human being reaches it.
+      Self-actualisation is the complete realisation of one&apos;s potential, and the full development of one&apos;s abilities and appreciation for life. This concept is at the top of the Maslow hierarchy of needs, so not every human being reaches it.
       </p>
       <p>
         <a href="https://www.simplypsychology.org/self-actualization.html#:~:text=Self%2Dactualization%20is%20the%20complete,every%20human%20being%20reaches%20it.">https://www.simplypsychology.org/self-actualization.html#:~:text=Self%2Dactualization%20is%20the%20complete,every%20human%20being%20reaches%20it.</a>
