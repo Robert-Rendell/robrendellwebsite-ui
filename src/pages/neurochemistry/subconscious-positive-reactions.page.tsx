@@ -62,13 +62,13 @@ export function SubconsciousPositiveReactionsPage() {
         <li>&apos;Have a good day!&apos; - When you are finished in a dialog with another person, say &apos;Have a good day!&apos;;</li>
         <li>Remember to smile (your body&apos;s happy chemicals are connected to the muscles in your face);</li>
         <li>Write down anything that made you happy today (eg. my lunch was tasty, I enjoyed my tea, getting outside was nice);</li>
-        <li>Spend 5 mins with your eyes closed in a quiet space just <a href="https://shineyogauk.com/sun-meditation/">imagining the sun</a> on your face on a hot sunny holiday in Spain;</li>
+        <li>Spend 5 mins with your eyes closed in a quiet space just <a target="_blank" rel="noreferrer" href="https://shineyogauk.com/sun-meditation/">imagining the sun</a> on your face on a hot sunny holiday in Spain;</li>
         <li>Be grateful for: running clean water, shelter, for food, for your hands, for your legs;</li>
-        <li>Think about your <a href="https://www.youtube.com/watch?v=0IagRZBvLtw">favourite things</a> (eg. imagine cuddling dogs or cats);</li>
+        <li>Think about your <a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=0IagRZBvLtw" >favourite things</a> (eg. imagine cuddling dogs or cats);</li>
         <li>If there are lots of negative things going on in your life, approach them with patience;</li>
-        <li>Be kind to yourself and do not allow your <a href="https://en.wikipedia.org/wiki/Id,_ego_and_super-ego">super-ego</a> to torment you.</li>
+        <li>Be kind to yourself and do not allow your <a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Id,_ego_and_super-ego">super-ego</a> to torment you.</li>
         <li>When you hear other people laughing, think this thought &quot;I&apos;m glad they are happy!&quot;</li>
-        <li>Do not <a href="https://en.wikipedia.org/wiki/Bindi_(decoration)">frown</a>!</li>
+        <li>Do not <a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Bindi_(decoration)">frown</a>!</li>
         <li>Write physical notes for yourself reminding you to do the above things.</li>
       </ul>
       <hr/>
