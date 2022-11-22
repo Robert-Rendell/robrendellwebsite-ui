@@ -36,7 +36,10 @@ export function NeurochemistryLandingPage() {
           </a>
         </li>
         <li>
-          <a href="/neurochemistry/self-actualisation-peak-experiences" aria-disabled>
+          <a
+            href="/neurochemistry/self-actualisation-peak-experiences"
+            aria-disabled
+          >
             Self-actualisation & Peak Experiences
           </a>
         </li>
@@ -47,7 +50,10 @@ export function NeurochemistryLandingPage() {
           </a> */}
         </li>
       </ol>
-      <img width={width} src="https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp"/>
+      <img
+        width={width}
+        src="https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp"
+      />
     </div>
   );
 }

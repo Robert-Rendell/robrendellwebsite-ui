@@ -53,7 +53,10 @@ export const NavComponent = () => {
               <NavDropdown.Item href="/neurochemistry/self-actualisation-peak-experiences">
                 Self-actualisation / Peak Experiences
               </NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/learning-and-genetic-code" disabled>
+              <NavDropdown.Item
+                href="/neurochemistry/learning-and-genetic-code"
+                disabled
+              >
                 Learning and Genetic Code
               </NavDropdown.Item>
             </NavDropdown>

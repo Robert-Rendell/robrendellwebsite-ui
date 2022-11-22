@@ -77,7 +77,10 @@ export function SelfLoveNotNarcissismPage() {
       <p className="centred">
         <i>Rob Rendell (2022)</i>
       </p>
-      <img src={`https://jmlkanewischer.files.wordpress.com/2020/04/matrix-know-thyself.jpg?w=${width}`} width={width} />
+      <img
+        src={`https://jmlkanewischer.files.wordpress.com/2020/04/matrix-know-thyself.jpg?w=${width}`}
+        width={width}
+      />
     </div>
   );
 }
