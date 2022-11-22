@@ -13,7 +13,7 @@ export function ZonesOfRegulationPage() {
       </h1>
       <p>
         My sister introduced me to the&nbsp;
-        <a href="https://d1uvxqwmcz8fl1.cloudfront.net/tes/resources/12068045/01f52aea-5663-46a1-8728-37740dc2363a/image?width=500&height=500&version=1567674337888">
+        <a target="_blank" rel="noreferrer" href="https://d1uvxqwmcz8fl1.cloudfront.net/tes/resources/12068045/01f52aea-5663-46a1-8728-37740dc2363a/image?width=500&height=500&version=1567674337888">
           Zones of Regulation
         </a>{" "}
         a few years ago when she was teaching her school kids the topic{" "}
