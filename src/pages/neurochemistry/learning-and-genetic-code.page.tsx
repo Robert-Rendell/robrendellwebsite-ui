@@ -5,11 +5,11 @@ export function LearningAndGeneticCodePage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton /> Learning: Training your reflexes and altering your
+        <RobBackButton /> Learning: Training your frontal brain, subconscious and reflexes then altering your
         generic code.
       </h1>
       <p>To begin, I have no scientific knowledge of genetics.</p>
-      <p>I am drawing this conclusion from learning to play the violin.</p>
+      <p>I am drawing a conclusion on learning and genetics from learning to play the violin.</p>
       <p>
         I am drawing this conclusion from learning judo and talking to those who
         have trained their instinct
