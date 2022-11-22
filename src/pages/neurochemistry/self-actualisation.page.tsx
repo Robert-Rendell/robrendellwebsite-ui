@@ -17,12 +17,12 @@ export function SelfActualisationPeakExperiencesPage() {
       </p>
       <p>
         <a href="https://www.simplypsychology.org/self-actualization.html#:~:text=Self%2Dactualization%20is%20the%20complete,every%20human%20being%20reaches%20it.">
-          https://www.simplypsychology.org/self-actualization.html#:~:text=Self%2Dactualization%20is%20the%20complete,every%20human%20being%20reaches%20it.
+          https://www.simplypsychology.org/self-actualization
         </a>
       </p>
       <p>
         <a href="https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs">
-          https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs
+          https://en.wikipedia.org/wiki/Maslow&apos;s_hierarchy_of_needs
         </a>
       </p>
       <img
