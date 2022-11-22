@@ -95,7 +95,6 @@ ReactDOM.render(
           element={<LearningAndGeneticCodePage />}
         />
 
-
         <Route path="miscellaneous/india" element={<IndiaPage />} />
         <Route
           path="miscellaneous/giant-pacific-octopus"

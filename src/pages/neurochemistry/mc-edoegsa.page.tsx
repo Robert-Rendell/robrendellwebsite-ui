@@ -10,7 +10,11 @@ export function MCEDOEGSAPage() {
       </h1>
       <i>
         Adapted from Christopher Bergland&apos;s:{" "}
-        <a target="_blank" rel="noreferrer" href="https://www.psychologytoday.com/gb/blog/the-athletes-way/201211/the-neurochemicals-happiness">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.psychologytoday.com/gb/blog/the-athletes-way/201211/the-neurochemicals-happiness"
+        >
           The Neurochemicals of Happiness
         </a>
       </i>
@@ -42,7 +46,11 @@ export function MCEDOEGSAPage() {
       </p>
       <p>
         This is how I found Christopher Bergland&apos;s work on{" "}
-        <a target="_blank" rel="noreferrer" href="https://www.amazon.co.uk/Athletes-Way-Sweat-Biology-Bliss/dp/0312355866">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.amazon.co.uk/Athletes-Way-Sweat-Biology-Bliss/dp/0312355866"
+        >
           The Athlete&apos;s Way
         </a>
         . In my eyes a bible for emotional self regulation via exercise.
@@ -50,9 +58,9 @@ export function MCEDOEGSAPage() {
       <hr />
       <h2 className="centred">As promised... here is my mnemonic:</h2>
 
-      <br/>
+      <br />
       <h1 className="centred">MC - EDOEGSA</h1>
-      <br/>
+      <br />
       <Table variant="dark" hover>
         <thead>
           <tr>

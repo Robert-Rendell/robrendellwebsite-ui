@@ -36,18 +36,23 @@ export function NeurochemistryLandingPage() {
           </a>
         </li>
         <li>
-          <a href="/neurochemistry/self-actualisation-peak-experiences" aria-disabled>
+          <a
+            href="/neurochemistry/self-actualisation-peak-experiences"
+          >
             Self-actualisation & Peak Experiences
           </a>
         </li>
         <li>
           Learning and Genetic Code (coming soon)
-          {/* <a href="/neurochemistry/learning-and-genetic-code" aria-disabled>
+          {/* <a href="/neurochemistry/learning-and-genetic-code">
             Learning and Genetic Code
           </a> */}
         </li>
       </ol>
-      <img width={width} src="https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp"/>
+      <img
+        width={width}
+        src="https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp"
+      />
     </div>
   );
 }
