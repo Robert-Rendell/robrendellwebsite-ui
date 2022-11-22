@@ -34,35 +34,7 @@ export const NavComponent = () => {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="Neurochemistry Project" id="neurochemistry">
-              <NavDropdown.Item href="/neurochemistry/happiness">
-                A Mnemonic for Happiness
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/zones-of-regulation">
-                Zones of Regulation
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/self-love-not-narcissism">
-                Self-love (and not Narcissism)
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/the-relaxation-response">
-                The Relaxation Response
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/subconscious-positive-reactions">
-                Subconscious Positive Reactions
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/self-actualisation-peak-experiences">
-                Self-actualisation / Peak Experiences
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href="/neurochemistry/learning-and-genetic-code"
-                disabled
-              >
-                Learning and Genetic Code
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/neurochemistry/let-it-go">
-                Let it Go / Let it Be
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="/neurochemistry">Neurochemistry Project</Nav.Link>
 
             <NavDropdown title="Climate Change" id="climateChange">
               <NavDropdown.Item href="/climate-change/ruminants">

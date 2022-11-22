@@ -53,6 +53,11 @@ export function NeurochemistryLandingPage() {
             Let it Go / Let it Be
           </a>
         </li>
+        <li>
+          <a href="/neurochemistry/advice-from-the-beatles">
+            Advice from The Beatles
+          </a>
+        </li>
       </ol>
       <img
         width={width}
