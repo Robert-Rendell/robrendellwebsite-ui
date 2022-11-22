@@ -13,7 +13,12 @@ export function SelfActualisationPeakExperiencesPage() {
       <p>
       Self-actualization is the complete realization of one&apos;s potential, and the full development of one&apos;s abilities and appreciation for life. This concept is at the top of the Maslow hierarchy of needs, so not every human being reaches it.
       </p>
-      <a href="https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs">https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs</a>
+      <p>
+        <a href="https://www.simplypsychology.org/self-actualization.html#:~:text=Self%2Dactualization%20is%20the%20complete,every%20human%20being%20reaches%20it.">https://www.simplypsychology.org/self-actualization.html#:~:text=Self%2Dactualization%20is%20the%20complete,every%20human%20being%20reaches%20it.</a>
+      </p>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs">https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs</a>
+      </p>
       <img width={width} src="https://www.verywellmind.com/thmb/luJzFVjtfBsCuRanONrj18FQxA4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4136760-article-what-is-maslows-hierarchy-of-needs-5a97179aeb97de003668392e.png"/>
     </div>
   );
