@@ -6,7 +6,7 @@ export function NeurochemistryLandingPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   return (
-    <div className="standard-page-margins standard-page-styling black-bg">
+    <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>Neurochemistry Project: Emotional Intelligence</h1>
       <h2>Topics</h2>
       <ol>
