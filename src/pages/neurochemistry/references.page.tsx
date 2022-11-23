@@ -36,15 +36,26 @@ export function NeurochemistryReferencesPage() {
           Maslow&apos;s Hierarchy of Needs wiki:https://en.wikipedia.org/wiki/Maslow&apos;s_hierarchy_of_needs
         </li>
         <li>
-          
+          The Sound of Music: https://www.youtube.com/watch?v=0IagRZBvLtw
         </li>
         <li>
-          
+          Freud Super-ego: https://en.wikipedia.org/wiki/Id,_ego_and_super-ego
         </li>
         <li>
-          
+          Bindi: https://en.wikipedia.org/wiki/Bindi_(decoration)
         </li>
-
+        <li>
+          Sun Meditation: https://shineyogauk.com/sun-meditation/
+        </li>
+        <li>
+          The Relaxation Response: https://www.amazon.co.uk/Relaxation-Response-Herbert-Benson/dp/0380815958
+        </li>
+        <li>
+          NHS Anxiety: https://www.nhs.uk/mental-health/conditions/panic-disorder/
+        </li>
+        <li>
+          The Relaxation Response book image: https://m.media-amazon.com/images/I/51hYvagEduL._SX406_BO1,204,203,200_.jpg
+        </li>
       </ol>
     </div>
   );
