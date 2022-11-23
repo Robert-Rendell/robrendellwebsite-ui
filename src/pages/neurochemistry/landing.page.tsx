@@ -58,6 +58,9 @@ export function NeurochemistryLandingPage() {
           </a>
         </li>
       </ol>
+      <p>
+        <i><a href="/neurochemistry/references">References</a></i>
+      </p>
       <img
         width={width}
         src="https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp"
