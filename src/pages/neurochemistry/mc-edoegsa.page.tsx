@@ -115,7 +115,7 @@ export function MCEDOEGSAPage() {
             <td>Endorphins</td>
             <td>Self produced painkillers</td>
             <td>
-              HIT class, high intensity exercise (BPM high), jumping jacks
+              HIIT class, high intensity exercise (BPM high), jumping jacks
             </td>
           </tr>
           <tr>

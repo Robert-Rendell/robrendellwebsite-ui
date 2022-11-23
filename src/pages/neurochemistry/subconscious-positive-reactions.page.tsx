@@ -18,7 +18,7 @@ export function SubconsciousPositiveReactionsPage() {
       <p>
         I have experienced both, in life, and I believe it is a result of your{" "}
         <u>current state of mind</u>, your <u>interpretation of reality</u> and
-        your <u>reaction</u> to events.
+        your <u>reaction to events</u>.
       </p>
       <hr />
       <h2 className="centred">

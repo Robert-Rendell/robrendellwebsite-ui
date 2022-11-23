@@ -36,6 +36,7 @@ import { SelfActualisationPeakExperiencesPage } from "./pages/neurochemistry/sel
 import { LearningAndGeneticCodePage } from "./pages/neurochemistry/learning-and-genetic-code.page";
 import { LetItGoPage } from "./pages/neurochemistry/let-it-go.page";
 import { AdviceFromTheBeatlesPage } from "./pages/neurochemistry/advice-from-the-beatles.page";
+import { NeurochemistryReferencesPage } from "./pages/neurochemistry/references.page";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -103,6 +104,10 @@ ReactDOM.render(
         <Route
           path="neurochemistry/advice-from-the-beatles"
           element={<AdviceFromTheBeatlesPage />}
+        />
+        <Route
+          path="neurochemistry/references"
+          element={<NeurochemistryReferencesPage />}
         />
 
         <Route path="miscellaneous/india" element={<IndiaPage />} />

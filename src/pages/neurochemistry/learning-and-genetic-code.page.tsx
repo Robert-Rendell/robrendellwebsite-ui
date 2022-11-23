@@ -55,7 +55,7 @@ export function LearningAndGeneticCodePage() {
         The son (cerebellum) is your inner child, who is listening to all sensory inputs in disorder. An unordered, raw, powerful, tried and tested, reptillian platform on which our primate platform evolved.
       </p>
       <p>
-        The holy ghost is where it all began and it connects your thinking muscles to the rest of the muscles in your body.
+        The holy ghost (brainstem) is where it all began and it connects your thinking muscles to the rest of the muscles in your body.
       </p>
       <div className="centred">
         <img width={width/2} src="https://www.hopkinsmedicine.org/-/media/images/health/1_-conditions/brain/brain-main-parts.ashx"/>
@@ -68,11 +68,11 @@ export function LearningAndGeneticCodePage() {
         <li>Serena Williams - Tennis - she actively decides during a match, when to use brainstem, cerebellum and cerebrum thinking;</li>
         <li>Teaching myself new folk tunes on the fiddle/violin. 1) Learning 2) Habit 3) Reflex;</li>
         <li>Getting taught Judo I have witnessed the speed of which some of those well trained can execute the moves;</li>
-        <li>Watching the speed at which racing car drivers have to perform.</li>
+        <li>Watching the speed at which racing car drivers have to mentally perform.</li>
       </ul>
       <QuestionComponent questionText="What can I take away from this?"/>
       <p>
-        Well... what this means is, we have control over our own programming. Humans are self-programming!
+        Well... I believe what this means is, we have control over our own programming and thus by logic: humans are self-programming!
       </p>
       <p>
         The abstract thinking muscle that is used for music, maths and philosophy is a trait that can be passed on to your children.

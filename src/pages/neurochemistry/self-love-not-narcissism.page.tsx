@@ -8,7 +8,7 @@ export function SelfLoveNotNarcissismPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton /> Self love! (...Is Not Narcissism)
+        <RobBackButton /> Self-love! (...Is Not Narcissism)
       </h1>
       <hr />
       <h2 className="centred">
@@ -24,7 +24,7 @@ export function SelfLoveNotNarcissismPage() {
         <i>What is self-love?</i>
       </h2>
       <hr />
-      <p>Self love is truly accepting your honest self.</p>
+      <p>Self-love is truly accepting your honest self.</p>
       <p>
         You first need to find your honest self by removing mental barriers that
         are holding you back:
@@ -44,7 +44,7 @@ export function SelfLoveNotNarcissismPage() {
           </li>
           <li>
             <u>Sexuality</u>: know your sexuality intimately and don&apos;t
-            allow your sexuality to be labeled;
+            allow your sexuality to be labelled;
           </li>
           <li>
             <u>Gender</u>: this is a physical and chemical reality - don&apos;t
@@ -58,7 +58,7 @@ export function SelfLoveNotNarcissismPage() {
       </p>
       <hr />
       <h2 className="centred">
-        <i>Why is self love important?</i>
+        <i>Why is self-love important?</i>
       </h2>
       <hr />
       <p>
