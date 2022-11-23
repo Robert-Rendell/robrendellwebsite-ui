@@ -7,7 +7,7 @@ export function NeurochemistryReferencesPage() {
       <h1>
         <RobBackButton /> Neurochemistry Project References
       </h1>
-      <ol>
+      <ol className="ol-extra-margins">
         <li>
           Advice from The Beatles: https://i.redd.it/ob5eruy3kfe41.jpg
         </li>
@@ -27,13 +27,13 @@ export function NeurochemistryReferencesPage() {
           The Neurochemicals of Happiness: https://www.psychologytoday.com/gb/blog/the-athletes-way/201211/the-neurochemicals-happiness
         </li>
         <li>
-          
+          Zones of Regulation: https://d1uvxqwmcz8fl1.cloudfront.net/tes/resources/12068045/01f52aea-5663-46a1-8728-37740dc2363a/image?width=500&height=500&version=1567674337888
         </li>
         <li>
-          
+          Maslow&apos;s Hierarchy of Needs image: https://www.verywellmind.com/thmb/luJzFVjtfBsCuRanONrj18FQxA4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4136760-article-what-is-maslows-hierarchy-of-needs-5a97179aeb97de003668392e.png
         </li>
         <li>
-          
+          Maslow&apos;s Hierarchy of Needs wiki:https://en.wikipedia.org/wiki/Maslow&apos;s_hierarchy_of_needs
         </li>
         <li>
           
