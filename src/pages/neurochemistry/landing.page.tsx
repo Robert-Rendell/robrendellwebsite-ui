@@ -43,10 +43,9 @@ export function NeurochemistryLandingPage() {
           </a>
         </li>
         <li>
-          Learning and Genetic Code (coming soon)
-          {/* <a href="/neurochemistry/learning-and-genetic-code">
+          <a href="/neurochemistry/learning-and-genetic-code">
             Learning and Genetic Code
-          </a> */}
+          </a>
         </li>
         <li>
           <a href="/neurochemistry/let-it-go">
