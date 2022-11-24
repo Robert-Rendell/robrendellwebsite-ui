@@ -93,10 +93,10 @@ export const NavComponent = () => {
               title="Music Projects"
               id="musicProjectsNavbarScrollingDropdown"
             >
-              <NavDropdown.Item href="https://www.shiva-archetypes.com">
+              <NavDropdown.Item href="https://www.shiva-archetypes.com" target="_blank" rel="noreferrer">
                 Shiva Archetypes (band)
               </NavDropdown.Item>
-              <NavDropdown.Item href="https://www.robcelticfiddle.co.uk">
+              <NavDropdown.Item href="https://www.robcelticfiddle.co.uk" target="_blank" rel="noreferrer">
                 Rob Celtic Fiddle (weddings)
               </NavDropdown.Item>
             </NavDropdown>
