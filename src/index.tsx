@@ -98,10 +98,7 @@ ReactDOM.render(
           path="neurochemistry/learning-and-genetic-code"
           element={<LearningAndGeneticCodePage />}
         />
-        <Route
-          path="neurochemistry/let-it-go"
-          element={<LetItGoPage />}
-        />
+        <Route path="neurochemistry/let-it-go" element={<LetItGoPage />} />
         <Route
           path="neurochemistry/advice-from-the-beatles"
           element={<AdviceFromTheBeatlesPage />}
@@ -139,7 +136,7 @@ ReactDOM.render(
 
         <Route path="strava-api" element={<StravaDashboardComponent />} />
       </Routes>
-      <RobRendellFooterComponent/>
+      <RobRendellFooterComponent />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

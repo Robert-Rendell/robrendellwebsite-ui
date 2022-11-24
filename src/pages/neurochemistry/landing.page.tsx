@@ -36,9 +36,7 @@ export function NeurochemistryLandingPage() {
           </a>
         </li>
         <li>
-          <a
-            href="/neurochemistry/self-actualisation-peak-experiences"
-          >
+          <a href="/neurochemistry/self-actualisation-peak-experiences">
             Self-actualisation & Peak Experiences
           </a>
         </li>
@@ -48,9 +46,7 @@ export function NeurochemistryLandingPage() {
           </a>
         </li>
         <li>
-          <a href="/neurochemistry/let-it-go">
-            Let it Go / Let it Be
-          </a>
+          <a href="/neurochemistry/let-it-go">Let it Go / Let it Be</a>
         </li>
         <li>
           <a href="/neurochemistry/advice-from-the-beatles">
@@ -59,7 +55,9 @@ export function NeurochemistryLandingPage() {
         </li>
       </ol>
       <p>
-        <i><a href="/neurochemistry/references">References</a></i>
+        <i>
+          <a href="/neurochemistry/references">References</a>
+        </i>
       </p>
       <img
         width={width}

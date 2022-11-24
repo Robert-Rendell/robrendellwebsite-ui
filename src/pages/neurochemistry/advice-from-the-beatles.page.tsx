@@ -10,7 +10,7 @@ export function AdviceFromTheBeatlesPage() {
       <h1>
         <RobBackButton /> Advice from The Beatles
       </h1>
-      <img width={width} src="https://i.redd.it/ob5eruy3kfe41.jpg"/>
+      <img width={width} src="https://i.redd.it/ob5eruy3kfe41.jpg" />
     </div>
   );
 }

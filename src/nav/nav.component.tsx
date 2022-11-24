@@ -10,6 +10,7 @@ import logo from "../resources/logo.svg";
 import nodeJsLogo from "../resources/nodejs-logo.png";
 import tsLogo from "../resources/ts-logo.png";
 import awsLogo from "../resources/aws-logo.png";
+import { SharedText } from "../common/shared-text";
 
 export const NavComponent = () => {
   return (
@@ -38,7 +39,7 @@ export const NavComponent = () => {
 
             <NavDropdown title="Climate Change" id="climateChange">
               <NavDropdown.Item href="/climate-change/ruminants">
-                Ruminants / Milk + Beef
+                {SharedText.Ruminants}
               </NavDropdown.Item>
               <NavDropdown.Item href="/climate-change/ride-a-bike">
                 Ride a Bike!
@@ -93,10 +94,18 @@ export const NavComponent = () => {
               title="Music Projects"
               id="musicProjectsNavbarScrollingDropdown"
             >
-              <NavDropdown.Item href="https://www.shiva-archetypes.com" target="_blank" rel="noreferrer">
+              <NavDropdown.Item
+                href="https://www.shiva-archetypes.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Shiva Archetypes (band)
               </NavDropdown.Item>
-              <NavDropdown.Item href="https://www.robcelticfiddle.co.uk" target="_blank" rel="noreferrer">
+              <NavDropdown.Item
+                href="https://www.robcelticfiddle.co.uk"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Rob Celtic Fiddle (weddings)
               </NavDropdown.Item>
             </NavDropdown>

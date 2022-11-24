@@ -134,7 +134,11 @@ export function GiantPacificOctopusPage() {
       <h2>Research in Alaska</h2>
       <p>
         This{" "}
-        <a href="https://www.fisheries.noaa.gov/alaska/science-data/octopus-research-alaska" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.fisheries.noaa.gov/alaska/science-data/octopus-research-alaska"
+          target="_blank"
+          rel="noreferrer"
+        >
           NOAA Fisheries video
         </a>{" "}
         features spectacular underwater footage of octopus swimming and eggs
@@ -169,18 +173,28 @@ export function GiantPacificOctopusPage() {
       <h2>Octopus emotional intelligence</h2>
       <p>
         Self regulation:{" "}
-        <a href="https://youtu.be/dKWssIQplw8" target="_blank" rel="noreferrer">https://youtu.be/dKWssIQplw8</a>
+        <a href="https://youtu.be/dKWssIQplw8" target="_blank" rel="noreferrer">
+          https://youtu.be/dKWssIQplw8
+        </a>
       </p>
       <hr />
       <h2>References</h2>
       <ul>
         <li>
-          <a href="https://octolab.tv/category/experiments" target="_blank" rel="noreferrer">
+          <a
+            href="https://octolab.tv/category/experiments"
+            target="_blank"
+            rel="noreferrer"
+          >
             https://octolab.tv/category/experiments
           </a>
         </li>
         <li>
-          <a href="https://youtu.be/dKWssIQplw8" target="_blank" rel="noreferrer">
+          <a
+            href="https://youtu.be/dKWssIQplw8"
+            target="_blank"
+            rel="noreferrer"
+          >
             https://youtu.be/dKWssIQplw8
           </a>
         </li>
@@ -190,7 +204,11 @@ export function GiantPacificOctopusPage() {
           https://www.fisheries.noaa.gov/alaska/science-data/octopus-research-alaska
         </li>
         <li>
-          <a href="https://www.youtube.com/watch?v=IrdbENkylZM" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.youtube.com/watch?v=IrdbENkylZM"
+            target="_blank"
+            rel="noreferrer"
+          >
             https://www.youtube.com/watch?v=IrdbENkylZM
           </a>
         </li>
