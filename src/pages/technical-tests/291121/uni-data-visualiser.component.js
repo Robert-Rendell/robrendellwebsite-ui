@@ -177,14 +177,18 @@ class UniDataVisualiserComponent extends React.Component {
           <Table>
             <tbody>
               <tr>
-                {this.state.listOfSubjectsAndWhereToStudy?.map((value, index) => (
-                  <td key={index}>{value.split(":")[0]}</td>
-                ))}
+                {this.state.listOfSubjectsAndWhereToStudy?.map(
+                  (value, index) => (
+                    <td key={index}>{value.split(":")[0]}</td>
+                  )
+                )}
               </tr>
               <tr>
-                {this.state.listOfSubjectsAndWhereToStudy?.map((value, index) => (
-                  <td key={`${index}-2`}>{value.split(":")[1]}</td>
-                ))}
+                {this.state.listOfSubjectsAndWhereToStudy?.map(
+                  (value, index) => (
+                    <td key={`${index}-2`}>{value.split(":")[1]}</td>
+                  )
+                )}
               </tr>
             </tbody>
           </Table>

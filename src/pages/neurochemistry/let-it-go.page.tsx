@@ -11,7 +11,15 @@ export function LetItGoPage() {
       <h1>
         <RobBackButton /> Let it Go / Let it Be ...
       </h1>
-      <iframe width={width} height={height} src="https://www.youtube.com/embed/QDYfEBY9NM4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <iframe
+        width={width}
+        height={height}
+        src="https://www.youtube.com/embed/QDYfEBY9NM4"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 }

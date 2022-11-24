@@ -1,5 +1,7 @@
 import React from "react";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
+import { SharedRoutes } from "../../common/shared-routes";
+import { SharedText } from "../../common/shared-text";
 import "../page.css";
 
 export function ClimateChangePage() {
@@ -12,7 +14,7 @@ export function ClimateChangePage() {
       <h2>Topics</h2>
       <ol>
         <li>
-          <a href="/climate-change/ruminants">Ruminants</a>
+          <a href={SharedRoutes.Ruminants}>{SharedText.Ruminants}</a>
         </li>
         <li>
           <a href="/climate-change/ride-a-bike">Ride a Bike!</a>

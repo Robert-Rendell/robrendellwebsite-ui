@@ -85,7 +85,9 @@ export const HomePage = () => {
         </li>
       </ul>
       <hr />
-      <h4>This website is an <u>ongoing</u> personal project using:</h4>
+      <h4>
+        This website is an <u>ongoing</u> personal project using:
+      </h4>
       <ul>
         <li>Node.js</li>
         <li>TypeScript (front and back end)</li>

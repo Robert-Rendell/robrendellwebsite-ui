@@ -8,56 +8,59 @@ export function NeurochemistryReferencesPage() {
         <RobBackButton /> Neurochemistry Project References
       </h1>
       <ol className="ol-extra-margins">
-        <li>
-          Advice from The Beatles: https://i.redd.it/ob5eruy3kfe41.jpg
-        </li>
+        <li>Advice from The Beatles: https://i.redd.it/ob5eruy3kfe41.jpg</li>
         <li>
           The Beatles - Let it Be: https://www.youtube.com/embed/QDYfEBY9NM4
         </li>
         <li>
-          Self Actualisation: https://www.simplypsychology.org/self-actualization
+          Self Actualisation:
+          https://www.simplypsychology.org/self-actualization
         </li>
         <li>
-          The Athlete&apos;s Way: https://www.amazon.co.uk/Athletes-Way-Sweat-Biology-Bliss/dp/0312355866
+          The Athlete&apos;s Way:
+          https://www.amazon.co.uk/Athletes-Way-Sweat-Biology-Bliss/dp/0312355866
         </li>
         <li>
-          Brain picture: https://www.hopkinsmedicine.org/-/media/images/health/1_-conditions/brain/brain-main-parts.ashx
+          Brain picture:
+          https://www.hopkinsmedicine.org/-/media/images/health/1_-conditions/brain/brain-main-parts.ashx
         </li>
         <li>
-          The Neurochemicals of Happiness: https://www.psychologytoday.com/gb/blog/the-athletes-way/201211/the-neurochemicals-happiness
+          The Neurochemicals of Happiness:
+          https://www.psychologytoday.com/gb/blog/the-athletes-way/201211/the-neurochemicals-happiness
         </li>
         <li>
-          Zones of Regulation: https://d1uvxqwmcz8fl1.cloudfront.net/tes/resources/12068045/01f52aea-5663-46a1-8728-37740dc2363a/image?width=500&height=500&version=1567674337888
+          Zones of Regulation:
+          https://d1uvxqwmcz8fl1.cloudfront.net/tes/resources/12068045/01f52aea-5663-46a1-8728-37740dc2363a/image?width=500&height=500&version=1567674337888
         </li>
         <li>
-          Maslow&apos;s Hierarchy of Needs image: https://www.verywellmind.com/thmb/luJzFVjtfBsCuRanONrj18FQxA4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4136760-article-what-is-maslows-hierarchy-of-needs-5a97179aeb97de003668392e.png
+          Maslow&apos;s Hierarchy of Needs image:
+          https://www.verywellmind.com/thmb/luJzFVjtfBsCuRanONrj18FQxA4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4136760-article-what-is-maslows-hierarchy-of-needs-5a97179aeb97de003668392e.png
         </li>
         <li>
-          Maslow&apos;s Hierarchy of Needs wiki:https://en.wikipedia.org/wiki/Maslow&apos;s_hierarchy_of_needs
+          Maslow&apos;s Hierarchy of Needs
+          wiki:https://en.wikipedia.org/wiki/Maslow&apos;s_hierarchy_of_needs
         </li>
-        <li>
-          The Sound of Music: https://www.youtube.com/watch?v=0IagRZBvLtw
-        </li>
+        <li>The Sound of Music: https://www.youtube.com/watch?v=0IagRZBvLtw</li>
         <li>
           Freud Super-ego: https://en.wikipedia.org/wiki/Id,_ego_and_super-ego
         </li>
+        <li>Bindi: https://en.wikipedia.org/wiki/Bindi_(decoration)</li>
+        <li>Sun Meditation: https://shineyogauk.com/sun-meditation/</li>
         <li>
-          Bindi: https://en.wikipedia.org/wiki/Bindi_(decoration)
+          The Relaxation Response:
+          https://www.amazon.co.uk/Relaxation-Response-Herbert-Benson/dp/0380815958
         </li>
         <li>
-          Sun Meditation: https://shineyogauk.com/sun-meditation/
+          NHS Anxiety:
+          https://www.nhs.uk/mental-health/conditions/panic-disorder/
         </li>
         <li>
-          The Relaxation Response: https://www.amazon.co.uk/Relaxation-Response-Herbert-Benson/dp/0380815958
+          The Relaxation Response book image:
+          https://m.media-amazon.com/images/I/51hYvagEduL._SX406_BO1,204,203,200_.jpg
         </li>
         <li>
-          NHS Anxiety: https://www.nhs.uk/mental-health/conditions/panic-disorder/
-        </li>
-        <li>
-          The Relaxation Response book image: https://m.media-amazon.com/images/I/51hYvagEduL._SX406_BO1,204,203,200_.jpg
-        </li>
-        <li>
-          Matrix hallway picture: https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp
+          Matrix hallway picture:
+          https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp
         </li>
       </ol>
     </div>

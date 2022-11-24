@@ -4,12 +4,13 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
-// import Button from 'react-bootstrap/Button';
 import "./nav.component.css";
 import logo from "../resources/logo.svg";
 import nodeJsLogo from "../resources/nodejs-logo.png";
 import tsLogo from "../resources/ts-logo.png";
 import awsLogo from "../resources/aws-logo.png";
+import { SharedText } from "../common/shared-text";
+import { SharedRoutes } from "../common/shared-routes";
 
 export const NavComponent = () => {
   return (
@@ -37,8 +38,8 @@ export const NavComponent = () => {
             <Nav.Link href="/neurochemistry">Neurochemistry Project</Nav.Link>
 
             <NavDropdown title="Climate Change" id="climateChange">
-              <NavDropdown.Item href="/climate-change/ruminants">
-                Ruminants / Milk + Beef
+              <NavDropdown.Item href={SharedRoutes.Ruminants}>
+                {SharedText.Ruminants}
               </NavDropdown.Item>
               <NavDropdown.Item href="/climate-change/ride-a-bike">
                 Ride a Bike!
@@ -93,10 +94,18 @@ export const NavComponent = () => {
               title="Music Projects"
               id="musicProjectsNavbarScrollingDropdown"
             >
-              <NavDropdown.Item href="https://www.shiva-archetypes.com" target="_blank" rel="noreferrer">
+              <NavDropdown.Item
+                href="https://www.shiva-archetypes.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Shiva Archetypes (band)
               </NavDropdown.Item>
-              <NavDropdown.Item href="https://www.robcelticfiddle.co.uk" target="_blank" rel="noreferrer">
+              <NavDropdown.Item
+                href="https://www.robcelticfiddle.co.uk"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Rob Celtic Fiddle (weddings)
               </NavDropdown.Item>
             </NavDropdown>
