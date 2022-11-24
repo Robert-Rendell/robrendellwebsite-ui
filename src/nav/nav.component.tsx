@@ -4,13 +4,13 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
-// import Button from 'react-bootstrap/Button';
 import "./nav.component.css";
 import logo from "../resources/logo.svg";
 import nodeJsLogo from "../resources/nodejs-logo.png";
 import tsLogo from "../resources/ts-logo.png";
 import awsLogo from "../resources/aws-logo.png";
 import { SharedText } from "../common/shared-text";
+import { SharedRoutes } from "../common/shared-routes";
 
 export const NavComponent = () => {
   return (
@@ -38,7 +38,7 @@ export const NavComponent = () => {
             <Nav.Link href="/neurochemistry">Neurochemistry Project</Nav.Link>
 
             <NavDropdown title="Climate Change" id="climateChange">
-              <NavDropdown.Item href="/climate-change/ruminants">
+              <NavDropdown.Item href={SharedRoutes.Ruminants}>
                 {SharedText.Ruminants}
               </NavDropdown.Item>
               <NavDropdown.Item href="/climate-change/ride-a-bike">
