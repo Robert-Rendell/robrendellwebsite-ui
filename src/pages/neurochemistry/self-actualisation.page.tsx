@@ -16,12 +16,12 @@ export function SelfActualisationPeakExperiencesPage() {
         life. This concept is at the top of Maslow&apos;s Hierarchy of Needs.
       </p>
       <p>
-        <a href="https://www.simplypsychology.org/self-actualization.html#:~:text=Self%2Dactualization%20is%20the%20complete,every%20human%20being%20reaches%20it.">
+        <a href="https://www.simplypsychology.org/self-actualization.html#:~:text=Self%2Dactualization%20is%20the%20complete,every%20human%20being%20reaches%20it." target="_blank" rel="noreferrer">
           https://www.simplypsychology.org/self-actualization
         </a>
       </p>
       <p>
-        <a href="https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs">
+        <a href="https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs" target="_blank" rel="noreferrer">
           https://en.wikipedia.org/wiki/Maslow&apos;s_hierarchy_of_needs
         </a>
       </p>

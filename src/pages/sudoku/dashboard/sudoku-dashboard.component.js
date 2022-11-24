@@ -179,7 +179,7 @@ class SudokuDashboardComponent extends React.Component {
     console.log("Sudoku generated!");
     this.setState({ retries: 0, generationJobId: null });
     this.setSudokuResult(
-      `Sudoku Generated! <a href="/sudoku/play/${sudokuId}">Play</a>`
+      `Sudoku Generated! <a href="/sudoku/play/${sudokuId}" target="_blank" rel="noreferrer">Play</a>`
     );
     this.toggleGenerating(false);
     this.checkGenerationLoop = null;
@@ -195,7 +195,7 @@ class SudokuDashboardComponent extends React.Component {
           <td>{item.difficulty}</td>
           <td>{new Date(item.dateGenerated).toDateString()}</td>
           <td>
-            <a href={`/sudoku/play/${item.sudokuId}`}>Play!</a>
+            <a href={`/sudoku/play/${item.sudokuId}`} target="_blank" rel="noreferrer">Play!</a>
           </td>
         </tr>
       );
@@ -235,7 +235,7 @@ class SudokuDashboardComponent extends React.Component {
               <td>10min 15secs</td>
               <td>Hard</td>
               <td>
-                <a href="/sudoku/play/13e44bd2-047a-4cf0-802a-3efd8ba819ed">
+                <a href="/sudoku/play/13e44bd2-047a-4cf0-802a-3efd8ba819ed" target="_blank" rel="noreferrer">
                   Play!
                 </a>
               </td>
@@ -244,7 +244,7 @@ class SudokuDashboardComponent extends React.Component {
               <td>3min 47secs</td>
               <td>Easy/Medium</td>
               <td>
-                <a href="/sudoku/play/27bbf55e-414c-4b9e-808d-4a5e6181d26a">
+                <a href="/sudoku/play/27bbf55e-414c-4b9e-808d-4a5e6181d26a" target="_blank" rel="noreferrer">
                   Play!
                 </a>
               </td>
@@ -253,7 +253,7 @@ class SudokuDashboardComponent extends React.Component {
               <td>10min 2secs</td>
               <td>Hard</td>
               <td>
-                <a href="/sudoku/play/2f1f6c5e-c7d2-402a-9975-04cbf0f39de4">
+                <a href="/sudoku/play/2f1f6c5e-c7d2-402a-9975-04cbf0f39de4" target="_blank" rel="noreferrer">
                   Play!
                 </a>
               </td>
@@ -312,7 +312,7 @@ class SudokuDashboardComponent extends React.Component {
         <h2>
           Documentation: Swagger API
           <br />
-          <a href="https://app.swaggerhub.com/apis-docs/rob-tea/robrendellwebsite/1.0.0">
+          <a href="https://app.swaggerhub.com/apis-docs/rob-tea/robrendellwebsite/1.0.0" target="_blank" rel="noreferrer">
             https://app.swaggerhub.com/apis-docs/rob-tea/robrendellwebsite/1.0.0
           </a>
         </h2>

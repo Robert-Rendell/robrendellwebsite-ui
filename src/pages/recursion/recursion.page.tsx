@@ -75,7 +75,7 @@ export const RecursionPage = () => {
             iteration with the help of a call stack.
           </p>
           Learning to think recursively has been articulated effectively{" "}
-          <a href="https://qr.ae/pvutmb">here.</a>
+          <a href="https://qr.ae/pvutmb" target="_blank" rel="noreferrer">here.</a>
         </p>
         <hr />
 
@@ -84,7 +84,7 @@ export const RecursionPage = () => {
         </h1>
         <p>
           A{" "}
-          <a href="https://fractalfoundation.org/resources/what-are-fractals/">
+          <a href="https://fractalfoundation.org/resources/what-are-fractals/" target="_blank" rel="noreferrer">
             fractal
           </a>{" "}
           is a never-ending pattern. Fractals are infinitely complex patterns
@@ -103,7 +103,7 @@ export const RecursionPage = () => {
         </p>
         <h2 className="centred">Fractal Trees</h2>
         <p className="centred">
-          <a href="http://fractal-tree-simulator.surge.sh/">
+          <a href="http://fractal-tree-simulator.surge.sh/" target="_blank" rel="noreferrer">
             http://fractal-tree-simulator.surge.sh/
           </a>
         </p>
@@ -174,7 +174,7 @@ export const RecursionPage = () => {
         </p>
         <p>
           I&apos;m ignorant to genetics and the human genome (
-          <a href="https://jameshfisher.com/2019/12/30/browsing-my-genome/">
+          <a href="https://jameshfisher.com/2019/12/30/browsing-my-genome/" target="_blank" rel="noreferrer">
             education to follow
           </a>
           ), however my feeling is that DNA is recursive in its physicality.
@@ -222,7 +222,7 @@ export const RecursionPage = () => {
 
         <h2>Recursion / Fractals in music</h2>
         <p>
-          Adam Neely (<a href="https://www.sungazermusic.com/">Sungazer</a>{" "}
+          Adam Neely (<a href="https://www.sungazermusic.com/" target="_blank" rel="noreferrer">Sungazer</a>{" "}
           bassist) has a fantastic video on how rhythm can be the same as pitch.
         </p>
         <p>

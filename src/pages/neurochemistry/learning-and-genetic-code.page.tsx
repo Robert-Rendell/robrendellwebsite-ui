@@ -25,7 +25,7 @@ export function LearningAndGeneticCodePage() {
         There is a lovely pattern that I see emerge in human culture and especially in our religious belief systems.
       </p>
       <p>
-        In Christianity, that pattern is the <a href="https://en.wikipedia.org/wiki/Trinity">Holy Trinity</a>, or in Hinduism it is the <a href="https://en.wikipedia.org/wiki/Trimurti">Trimurti</a>.
+        In Christianity, that pattern is the <a href="https://en.wikipedia.org/wiki/Trinity" target="_blank" rel="noreferrer">Holy Trinity</a>, or in Hinduism it is the <a href="https://en.wikipedia.org/wiki/Trimurti" target="_blank" rel="noreferrer">Trimurti</a>.
       </p>
       <p>
         In my eyes, it makes sense to me that the father, son and holy ghost of (the Holy Trinity)
