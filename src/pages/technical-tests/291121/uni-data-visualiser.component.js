@@ -172,30 +172,32 @@ class UniDataVisualiserComponent extends React.Component {
   render() {
     return (
       <div id="uni-data-body">
-        <h2>Table of subjects and where to study</h2>
-        <Table>
-          <tbody>
-            <tr>
-              {this.state.listOfSubjectsAndWhereToStudy?.map((value, index) => (
-                <td key={index}>{value.split(":")[0]}</td>
-              ))}
-            </tr>
-            <tr>
-              {this.state.listOfSubjectsAndWhereToStudy?.map((value, index) => (
-                <td key={`${index}-2`}>{value.split(":")[1]}</td>
-              ))}
-            </tr>
-          </tbody>
-        </Table>
-        <hr />
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={this.state.bestUnisForSubjectGraph}
-        />
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={this.state.submissionsPerYear}
-        />
+        <div id="uni-data-inner-body">
+          <h2>Table of subjects and where to study</h2>
+          <Table>
+            <tbody>
+              <tr>
+                {this.state.listOfSubjectsAndWhereToStudy?.map((value, index) => (
+                  <td key={index}>{value.split(":")[0]}</td>
+                ))}
+              </tr>
+              <tr>
+                {this.state.listOfSubjectsAndWhereToStudy?.map((value, index) => (
+                  <td key={`${index}-2`}>{value.split(":")[1]}</td>
+                ))}
+              </tr>
+            </tbody>
+          </Table>
+          <hr />
+          <HighchartsReact
+            highcharts={Highcharts}
+            options={this.state.bestUnisForSubjectGraph}
+          />
+          <HighchartsReact
+            highcharts={Highcharts}
+            options={this.state.submissionsPerYear}
+          />
+        </div>
       </div>
     );
   }
