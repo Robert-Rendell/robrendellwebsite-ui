@@ -37,6 +37,7 @@ import { LearningAndGeneticCodePage } from "./pages/neurochemistry/learning-and-
 import { LetItGoPage } from "./pages/neurochemistry/let-it-go.page";
 import { AdviceFromTheBeatlesPage } from "./pages/neurochemistry/advice-from-the-beatles.page";
 import { NeurochemistryReferencesPage } from "./pages/neurochemistry/references.page";
+import { RobRendellFooterComponent } from "./components/rob-rendell-footer.component";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -138,6 +139,7 @@ ReactDOM.render(
 
         <Route path="strava-api" element={<StravaDashboardComponent />} />
       </Routes>
+      <RobRendellFooterComponent/>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
