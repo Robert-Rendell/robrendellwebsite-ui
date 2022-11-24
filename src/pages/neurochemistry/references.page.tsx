@@ -56,6 +56,9 @@ export function NeurochemistryReferencesPage() {
         <li>
           The Relaxation Response book image: https://m.media-amazon.com/images/I/51hYvagEduL._SX406_BO1,204,203,200_.jpg
         </li>
+        <li>
+          Matrix hallway picture: https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp
+        </li>
       </ol>
     </div>
   );
