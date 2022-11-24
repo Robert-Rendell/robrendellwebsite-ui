@@ -34,6 +34,7 @@ h2 {
 }
 
 .black-bg {
+  word-wrap: break-word;
   background-color: black;
   height: 100%;
 }
