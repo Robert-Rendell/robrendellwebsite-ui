@@ -52,7 +52,7 @@ export function SimpleEquationsInfiniteComplexity() {
         </p>
         <p>
             Another interesting point on Conway&apos;s Game of Life, is that in some implementations, the game reaches an
-            &nbsp;equalibrium, where the state stands still. This, of course, may be deliberate in some implementations.
+            equalibrium, where the state stands still. This, of course, may be deliberate in some implementations.
         </p>
         <p>
             However, is it worth contemplating that our Earth reached a point of equalibrium until humans began to overpopulate Earth?
