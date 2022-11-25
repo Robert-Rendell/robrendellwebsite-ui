@@ -33,16 +33,16 @@ export const NavComponent = () => {
               <NavDropdown.Item href="/recursion/bifurcation-logistical-map">
                 Chaos Theory: Bifurcation Logistical Map
               </NavDropdown.Item>
-              <NavDropdown.Item href="/recursion/bifurcation-logistical-map" disabled>
-                Simple Equations = Infinite complexity
+              <NavDropdown.Item href={ SharedRoutes.Recursion.SimpleEquations }>
+                { SharedText.Recursion.SimpleEquations }
               </NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link href="/neurochemistry">Neurochemistry Project</Nav.Link>
 
             <NavDropdown title="Climate Change" id="climateChange">
-              <NavDropdown.Item href={SharedRoutes.Ruminants}>
-                {SharedText.Ruminants}
+              <NavDropdown.Item href={SharedRoutes.ClimateChange.Ruminants}>
+                {SharedText.ClimateChange.Ruminants}
               </NavDropdown.Item>
               <NavDropdown.Item href="/climate-change/ride-a-bike">
                 Ride a Bike!

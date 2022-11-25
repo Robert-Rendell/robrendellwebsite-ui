@@ -38,6 +38,8 @@ import { LetItGoPage } from "./pages/neurochemistry/let-it-go.page";
 import { AdviceFromTheBeatlesPage } from "./pages/neurochemistry/advice-from-the-beatles.page";
 import { NeurochemistryReferencesPage } from "./pages/neurochemistry/references.page";
 import { RobRendellFooterComponent } from "./components/rob-rendell-footer.component";
+import { SharedRoutes } from "./common/shared-routes";
+import { SimpleEquationsInfiniteComplexity } from "./pages/recursion/simple-equations.page";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -55,9 +57,13 @@ ReactDOM.render(
           path="recursion/bifurcation-logistical-map"
           element={<BifurcationLogisticalPage />}
         />
+        <Route
+          path={ SharedRoutes.Recursion.SimpleEquations }
+          element={<SimpleEquationsInfiniteComplexity />}
+        />
 
         <Route path="climate-change" element={<ClimateChangePage />} />
-        <Route path="climate-change/ruminants" element={<RuminantsPage />} />
+        <Route path={ SharedRoutes.ClimateChange.Ruminants } element={<RuminantsPage />} />
         <Route
           path="climate-change/ocean-acidification"
           element={<OceanAcidification />}
