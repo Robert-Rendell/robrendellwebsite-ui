@@ -57,6 +57,9 @@ export function SimpleEquationsInfiniteComplexity() {
         <p>
             However, is it worth contemplating that our Earth reached a point of equalibrium until humans began to overpopulate Earth?
         </p>
+        <p>
+            I have not finished this page, but I needed somewhere to articulate these ideas so I could continue thinking about them.
+        </p>
       </div>
     </>
   );
