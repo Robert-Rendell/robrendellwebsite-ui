@@ -33,6 +33,9 @@ export const NavComponent = () => {
               <NavDropdown.Item href="/recursion/bifurcation-logistical-map">
                 Chaos Theory: Bifurcation Logistical Map
               </NavDropdown.Item>
+              <NavDropdown.Item href="/recursion/bifurcation-logistical-map" disabled>
+                Simple Equations = Infinite complexity
+              </NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link href="/neurochemistry">Neurochemistry Project</Nav.Link>
