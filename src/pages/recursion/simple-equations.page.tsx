@@ -24,7 +24,7 @@ export function SimpleEquationsInfiniteComplexity() {
         <h2>x<sub>n+1</sub> = rx<sub>n</sub>(1 - x<sub>n</sub>)</h2>
         <hr/>
         <p>
-            The rules of Conway&apos;s Game of Life are, strangely, also very simple.
+            The rules of Conway&apos;s Game of Life (2D environment) are, strangely, also very simple.
         </p>
         <ol>
           <li>
@@ -45,7 +45,18 @@ export function SimpleEquationsInfiniteComplexity() {
             Wikipedia: Conway&apos;s Game of Life
           </NewTabLink>
         </p>
-        <QuestionComponent questionText="Is it worth considering, that the equation that governs humans is also very simple?"></QuestionComponent>
+        <QuestionComponent questionText="Is it worth considering, that the equation that governs our universe is also very simple?"></QuestionComponent>
+        <p>
+            First of all, you need to understand that the way patterns that emerge from Conway&apos;s Game of Life
+            &nbsp;is far too similar to the way in which patterns emerge in our universe.
+        </p>
+        <p>
+            Another interesting point on Conway&apos;s Game of Life, is that in some implementations, the game reaches an
+            &nbsp;equalibrium, where the state stands still. This, of course, may be deliberate in some implementations.
+        </p>
+        <p>
+            However, is it worth contemplating that our Earth reached a point of equalibrium until humans began to overpopulate Earth?
+        </p>
       </div>
     </>
   );
