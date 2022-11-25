@@ -48,11 +48,11 @@ export function SimpleEquationsInfiniteComplexity() {
         <QuestionComponent questionText="Is it worth considering, that the equation that governs our universe is also very simple?"></QuestionComponent>
         <p>
             First of all, you need to understand that the way patterns that emerge from Conway&apos;s Game of Life
-            &nbsp;is far too similar to the way in which patterns emerge in our universe.
+            is far too similar to the way in which patterns emerge in our universe.
         </p>
         <p>
-            Another interesting point on Conway&apos;s Game of Life, is that in some implementations, the game reaches an
-            &nbsp;equalibrium, where the state stands still. This, of course, may be deliberate in some implementations.
+            Another interesting point on Conway&apos;s Game of Life is that in some implementations, the game reaches an
+            equalibrium where the state stands still. This, of course, may be deliberate in some implementations.
         </p>
         <p>
             However, is it worth contemplating that our Earth reached a point of equalibrium until humans began to overpopulate Earth?
