@@ -1,3 +1,8 @@
-export enum SharedText {
-  Ruminants = "Ruminants / Milk + Beef",
-}
+export const SharedText = {
+  ClimateChange: {
+    Ruminants: "Ruminants / Milk + Beef",
+  },
+  Recursion: {
+    SimpleEquations: "Simple Equations = Infinite Complexity",
+  }
+};
