@@ -10,7 +10,7 @@ export function RobRendellFooterComponent() {
       </div>
       <div className="centred">
         <span style={{ color: "white", textAlign: "center" }}>
-        All views and opinions expressed on this website are all my own.
+        All views and opinions expressed on this website are my own.
         </span>
       </div></>
   );
