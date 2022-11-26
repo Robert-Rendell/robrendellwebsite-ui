@@ -4,10 +4,9 @@ export function DateWritten(props: React.PropsWithChildren) {
   return (
     <>
       <hr/>
-      <p style={{textAlign: "right", }}>
+      <span>
         [<i>Date Written: {props.children}</i>]
-      </p>
-      <hr/>
+      </span>
     </>
   );
 }

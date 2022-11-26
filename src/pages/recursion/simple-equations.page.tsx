@@ -4,6 +4,7 @@ import { DateWritten } from "../../components/date-written.component";
 import { Equation } from "../../components/equation.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { ScrollToBottomLink } from "../../components/scroll-to-bottom-link.component";
+import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "../neurochemistry/components/question.component";
 
@@ -12,11 +13,15 @@ export function SimpleEquationsInfiniteComplexity() {
   const width = windowSize[0] - 20;
   return (
     <>
-      <div className="standard-page-margins standard-page-styling">
+      <div id="simple-equations" className="standard-page-margins standard-page-styling">
         <h1>{ SharedText.Recursion.SimpleEquations }</h1>
         <DateWritten>26.11.22</DateWritten>
-        <h3><i>Part of my <a href="recursion/">Recursion</a> project</i></h3>
-        <h4><i>Scroll down to the <ScrollToBottomLink>bottom</ScrollToBottomLink> of this page and unmute the youtube video if you want music while reading :)</i></h4>
+        <span>&nbsp;<i>Part of <a href="recursion/">Recursion</a> project</i>.</span>
+        <p><i>
+          Scroll down to the <ScrollToBottomLink>bottom</ScrollToBottomLink> of this page and
+          play the youtube video if you want music while reading :)
+        </i></p>
+        <hr/>
         <p>
           As far as I understand, the idea of Fractals came from <NewTabLink href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot">Benoit Mandelbrot&apos;s</NewTabLink>
           &nbsp;desire to find a language to describe the fantastic patterns we see in nature.
@@ -95,7 +100,7 @@ export function SimpleEquationsInfiniteComplexity() {
         <p>
           In conclusion, humans should stop being elitist in the, so called, &quot;hierarchy&quot; of Earthly creatures.
         </p>
-        <p className="centred">---&#62; GO VEGGIE; IT IS TASTY AND COLOURFUL &#60;---</p>
+        <p className="centred">&#62;&#62;&#62; GO VEGGIE; IT IS TASTY AND COLOURFUL &#60;&#60;&#60;</p>
         <p>
           If we don&apos;t take care of the world we evolved with, then we are doomed.
         </p>
@@ -105,7 +110,8 @@ export function SimpleEquationsInfiniteComplexity() {
           unnaturally unlocked too many minds and broke the rules LOL</i>)... then let us hope that
           he chose to save the octopuses, flowers, spiders and bees!
         </p>
-        <iframe width={width} height="315" src="https://www.youtube.com/embed/UDVtMYqUAyw?autoplay=1&start=261&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <iframe width={width} height="315" src="https://www.youtube.com/embed/UDVtMYqUAyw?autoplay=1&start=261" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <span>Back to <ScrollToTopLink>top of page</ScrollToTopLink> (also plays the music).</span>
       </div>
     </>
   );
