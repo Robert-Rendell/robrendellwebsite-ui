@@ -2,8 +2,8 @@ import React from "react";
 import { SharedText } from "../../common/shared-text";
 import { DateWritten } from "../../components/date-written.component";
 import { Equation } from "../../components/equation.component";
+import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
-import { ScrollToBottomLink } from "../../components/scroll-to-bottom-link.component";
 import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "../neurochemistry/components/question.component";
@@ -26,13 +26,7 @@ export function SimpleEquationsInfiniteComplexity() {
           </i>
           .
         </span>
-        <p>
-          <i>
-            Scroll down to the <ScrollToBottomLink>bottom</ScrollToBottomLink>{" "}
-            of this page and play the youtube video if you want music while
-            reading :)
-          </i>
-        </p>
+        <MusicScrollDownMesssage/>
         <hr />
         <p>
           As far as I understand, the idea of Fractals came from{" "}
@@ -176,9 +170,7 @@ export function SimpleEquationsInfiniteComplexity() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-        <span>
-          Back to <ScrollToTopLink>top of page</ScrollToTopLink>.
-        </span>
+        <ScrollToTopLink/>
       </div>
     </>
   );

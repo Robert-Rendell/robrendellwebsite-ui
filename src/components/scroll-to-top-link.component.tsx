@@ -1,14 +1,17 @@
 import React from "react";
 
-export function ScrollToTopLink(props: React.PropsWithChildren) {
+export function ScrollToTopLink() {
   return (
     <>
-      <a
-        href=""
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
-        {props.children ?? "scroll to top"}
-      </a>
+      <span>
+        Back to&nbsp;
+        <a
+          href=""
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+        top of page
+        </a>.
+      </span>
     </>
   );
 }
