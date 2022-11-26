@@ -27,8 +27,11 @@ export const HomePage = () => {
       <h4>Recent developments:</h4>
       <ul>
         <li>
-          26/11/22 @ 09.35 - Added&nbsp; 
-          <a href="recursion/simple-equations-infinite-complexity">{SharedText.Recursion.SimpleEquations}</a> page
+          26/11/22 @ 09.35 - Added&nbsp;
+          <a href="recursion/simple-equations-infinite-complexity">
+            {SharedText.Recursion.SimpleEquations}
+          </a>{" "}
+          page
         </li>
         <li>
           21/11/22 @ 18.00 - Style makeover for{" "}

@@ -8,7 +8,7 @@ export function Equation(props: React.PropsWithChildren) {
     <>
       <h2>
         <ul>
-          <li>{ props.children }</li>
+          <li>{props.children}</li>
         </ul>
       </h2>
     </>

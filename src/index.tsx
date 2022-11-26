@@ -58,12 +58,15 @@ ReactDOM.render(
           element={<BifurcationLogisticalPage />}
         />
         <Route
-          path={ SharedRoutes.Recursion.SimpleEquations }
+          path={SharedRoutes.Recursion.SimpleEquations}
           element={<SimpleEquationsInfiniteComplexity />}
         />
 
         <Route path="climate-change" element={<ClimateChangePage />} />
-        <Route path={ SharedRoutes.ClimateChange.Ruminants } element={<RuminantsPage />} />
+        <Route
+          path={SharedRoutes.ClimateChange.Ruminants}
+          element={<RuminantsPage />}
+        />
         <Route
           path="climate-change/ocean-acidification"
           element={<OceanAcidification />}

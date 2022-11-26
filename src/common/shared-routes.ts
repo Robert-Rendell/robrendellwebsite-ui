@@ -4,5 +4,5 @@ export const SharedRoutes = {
   },
   Recursion: {
     SimpleEquations: "/recursion/simple-equations-infinite-complexity",
-  }
+  },
 };

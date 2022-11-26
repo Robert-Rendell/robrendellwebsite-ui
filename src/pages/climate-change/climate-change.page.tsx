@@ -14,7 +14,9 @@ export function ClimateChangePage() {
       <h2>Topics</h2>
       <ol>
         <li>
-          <a href={SharedRoutes.ClimateChange.Ruminants}>{SharedText.ClimateChange.Ruminants}</a>
+          <a href={SharedRoutes.ClimateChange.Ruminants}>
+            {SharedText.ClimateChange.Ruminants}
+          </a>
         </li>
         <li>
           <a href="/climate-change/ride-a-bike">Ride a Bike!</a>
