@@ -17,6 +17,9 @@ import leaf from "../../resources/leaf.jpg";
 import margarite from "../../resources/margarite.jpg";
 import fibonacciMandelbrot from "../../resources/mandelbrot-fibonacci.jpg";
 import { goldenRatioSketch } from "./p5-sketches/golden-ratio.sketch";
+import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
+import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
+import { DateWritten } from "../../components/date-written.component";
 
 export const RecursionPage = () => {
   const windowSize = useWindowSize();
@@ -29,6 +32,8 @@ export const RecursionPage = () => {
     <>
       <div className="standard-page-margins standard-page-styling">
         <h1>Recursion and Fractals</h1>
+        <DateWritten>Nov 2022</DateWritten>
+        <MusicScrollDownMesssage/>
         <hr />
         <h1>
           <i>&quot;What is Recursion?&quot;</i>
@@ -103,7 +108,7 @@ export const RecursionPage = () => {
             src="https://www.youtube.com/embed/cHZl2naX1Xk?start=70"
             title="YouTube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </p>
@@ -214,7 +219,7 @@ export const RecursionPage = () => {
             src="https://www.youtube.com/embed/pktDqFy5IcE"
             title="YouTube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </p>
@@ -257,7 +262,7 @@ export const RecursionPage = () => {
             src="https://www.youtube.com/embed/_gCJHNBEdoc"
             title="YouTube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </p>
@@ -320,7 +325,7 @@ export const RecursionPage = () => {
             src="https://www.youtube.com/embed/xP5-iIeKXE8"
             title="YouTube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
@@ -365,6 +370,9 @@ export const RecursionPage = () => {
             wrapLines
           />
         </div>
+        <hr/>
+        <iframe width={width}height="315" src="https://www.youtube.com/embed/tVvG3X1pcQ8?start=40&autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <ScrollToTopLink/>
       </div>
     </>
   );
