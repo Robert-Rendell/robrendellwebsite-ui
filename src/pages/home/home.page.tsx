@@ -3,6 +3,7 @@ import "../page.css";
 import { useGetHomePageImageUrls } from "./hooks/useGetHomePageImageUrls.hook";
 import { FullScreenS3ImageComponent } from "../../components/full-screen-image.component";
 import { ImageGallery } from "../../components/image-gallery.component";
+import { SharedText } from "../../common/shared-text";
 
 export const HomePage = () => {
   const handleImageClickedRef = useRef();
@@ -25,6 +26,10 @@ export const HomePage = () => {
       <h3>Rob Rendell: Node.js / TypeScript Developer</h3>
       <h4>Recent developments:</h4>
       <ul>
+        <li>
+          26/11/22 @ 09.35 - Added&nbsp; 
+          <a href="recursion/simple-equations-infinite-complexity">{SharedText.Recursion.SimpleEquations}</a> page
+        </li>
         <li>
           21/11/22 @ 18.00 - Style makeover for{" "}
           <a href="neurochemistry/">Neurochemistry</a> project

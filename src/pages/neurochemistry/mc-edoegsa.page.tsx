@@ -53,7 +53,7 @@ export function MCEDOEGSAPage() {
         >
           The Athlete&apos;s Way
         </a>
-        . In my eyes a bible for emotional self regulation via exercise.
+        . In my eyes, a bible for emotional self regulation via exercise.
       </p>
       <hr />
       <h2 className="centred">As promised... here is my mnemonic:</h2>
