@@ -4,5 +4,5 @@ export const SharedText = {
   },
   Recursion: {
     SimpleEquations: "Simple Equations = Infinite Complexity",
-  }
+  },
 };

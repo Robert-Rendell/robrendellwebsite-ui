@@ -1,9 +1,9 @@
 import React from "react";
 
 type Props = {
-    href?: string,
-    label?: string,
-}
+  href?: string;
+  label?: string;
+};
 
 export function NewTabLink(props: React.PropsWithChildren<Props>) {
   if (!props.children) {

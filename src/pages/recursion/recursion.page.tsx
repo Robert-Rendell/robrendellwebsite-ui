@@ -263,15 +263,17 @@ export const RecursionPage = () => {
         </p>
         <hr />
 
-        <h2>Conway&apos;s Game of Life: Cellular Automata</h2>
-        <p>
-          I can&apos;t write about recursion and fractals without going off on
-          an unrelated tangent about Conways Game of Life:
-        </p>
-        <p>
-          Unfortunately Daniel Shiffman&apos;s P5.js sketch of Game of Life
-          isn&apos;t recursive... or fractal in its nature.
-        </p>
+        <div id="game-of-life">
+          <h2>Conway&apos;s Game of Life: Cellular Automata</h2>
+          <p>
+            I can&apos;t write about recursion and fractals without going off on
+            an unrelated tangent about Conways Game of Life:
+          </p>
+          <p>
+            Unfortunately Daniel Shiffman&apos;s P5.js sketch of Game of Life
+            isn&apos;t recursive... or fractal in its nature.
+          </p>
+        </div>
         <div className="container">
           <div className="row">
             <div className="col-sm centred">
