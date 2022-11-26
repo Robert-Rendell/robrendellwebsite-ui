@@ -81,6 +81,11 @@ export function SimpleEquationsInfiniteComplexity() {
           Is human consciousness an illusion?
         </QuestionComponent>
         <p>
+          The reality, I believe, is we have a hard time imagining infinite or deeply intricate recursive patterns
+          and that prevents us from considering that our own <i>&quot;consciousness&quot;</i> (self awareness) is a result of an elaborate electrical,
+          physical and chemical storm. 
+        </p>
+        <p>
           If we are indeed self referencing patterns (through the unimaginable combination of cells in the shape of our DNA), then
           you could say that what we are experiencing in life is the result of a simple equation on an infinite scale and infinite complexity.
         </p>
