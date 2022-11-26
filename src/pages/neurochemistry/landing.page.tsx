@@ -1,4 +1,7 @@
 import React from "react";
+import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
+import { NewTabLink } from "../../components/new-tab-link.component";
+import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import "../page.css";
 
@@ -8,50 +11,53 @@ export function NeurochemistryLandingPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>Neurochemistry Project: Emotional Intelligence</h1>
+      <MusicScrollDownMesssage/>
       <h2>Topics</h2>
       <ol>
         <li>
-          <a href="/neurochemistry/happiness">
+          <NewTabLink href="/neurochemistry/happiness">
             Rob&apos;s Mnemonic for Happiness: MC-EDOEGSA
-          </a>
+          </NewTabLink>
         </li>
         <li>
-          <a href="/neurochemistry/zones-of-regulation">
+          <NewTabLink href="/neurochemistry/zones-of-regulation">
             The Emotional Zones Of Regulation
-          </a>
+          </NewTabLink>
         </li>
         <li>
-          <a href="/neurochemistry/self-love-not-narcissism">
+          <NewTabLink href="/neurochemistry/self-love-not-narcissism">
             Self-love! (... And not Narcissism)
-          </a>
+          </NewTabLink>
         </li>
         <li>
-          <a href="/neurochemistry/the-relaxation-response">
+          <NewTabLink href="/neurochemistry/the-relaxation-response">
             The Relaxation Response
-          </a>
+          </NewTabLink>
         </li>
         <li>
-          <a href="/neurochemistry/subconscious-positive-reactions">
+          <NewTabLink href="/neurochemistry/subconscious-positive-reactions">
             Subconscious Positive Reactions
-          </a>
+          </NewTabLink>
         </li>
         <li>
-          <a href="/neurochemistry/self-actualisation-peak-experiences">
+          <NewTabLink href="/neurochemistry/self-actualisation-peak-experiences">
             Self-actualisation & Peak Experiences
-          </a>
+          </NewTabLink>
         </li>
         <li>
-          <a href="/neurochemistry/learning-and-genetic-code">
+          <NewTabLink href="/neurochemistry/learning-and-genetic-code">
             Learning and Genetic Code
-          </a>
+          </NewTabLink>
         </li>
         <li>
-          <a href="/neurochemistry/let-it-go">Let it Go / Let it Be</a>
+          <NewTabLink href="/neurochemistry/let-it-go">
+            Let it Go / Let it Be
+          </NewTabLink>
         </li>
         <li>
-          <a href="/neurochemistry/advice-from-the-beatles">
+          <NewTabLink href="/neurochemistry/advice-from-the-beatles">
             Advice from The Beatles
-          </a>
+          </NewTabLink>
         </li>
       </ol>
       <p>
@@ -63,6 +69,8 @@ export function NeurochemistryLandingPage() {
         width={width}
         src="https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp"
       />
+      <iframe width={width} height="315" src="https://www.youtube.com/embed/mbcVm8iepQE?start=120&autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <ScrollToTopLink/>
     </div>
   );
 }
