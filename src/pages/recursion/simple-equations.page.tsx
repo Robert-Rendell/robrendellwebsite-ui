@@ -1,5 +1,6 @@
 import React from "react";
 import { SharedText } from "../../common/shared-text";
+import { DateWritten } from "../../components/date-written.component";
 import { Equation } from "../../components/equation.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { ScrollToBottomLink } from "../../components/scroll-to-bottom-link.component";
@@ -13,9 +14,9 @@ export function SimpleEquationsInfiniteComplexity() {
     <>
       <div className="standard-page-margins standard-page-styling">
         <h1>{ SharedText.Recursion.SimpleEquations }</h1>
+        <DateWritten>26.11.22</DateWritten>
         <h3><i>Part of my <a href="recursion/">Recursion</a> project</i></h3>
         <h4><i>Scroll down to the <ScrollToBottomLink>bottom</ScrollToBottomLink> of this page and unmute the youtube video if you want music while reading :)</i></h4>
-        <hr />
         <p>
           As far as I understand, the idea of Fractals came from <NewTabLink href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot">Benoit Mandelbrot&apos;s</NewTabLink>
           &nbsp;desire to find a language to describe the fantastic patterns we see in nature.
