@@ -2,6 +2,7 @@ import React from "react";
 import { SharedText } from "../../common/shared-text";
 import { Equation } from "../../components/equation.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
+import { ScrollToBottomLink } from "../../components/scroll-to-bottom-link.component";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "../neurochemistry/components/question.component";
 
@@ -13,6 +14,7 @@ export function SimpleEquationsInfiniteComplexity() {
       <div className="standard-page-margins standard-page-styling">
         <h1>{ SharedText.Recursion.SimpleEquations }</h1>
         <h3><i>Part of my <a href="recursion/">Recursion</a> project</i></h3>
+        <h4><i>Scroll down to the <ScrollToBottomLink>bottom</ScrollToBottomLink> of this page and unmute the youtube video if you want music while reading :)</i></h4>
         <hr />
         <p>
           As far as I understand, the idea of Fractals came from <NewTabLink href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot">Benoit Mandelbrot&apos;s</NewTabLink>
@@ -38,16 +40,16 @@ export function SimpleEquationsInfiniteComplexity() {
         </p>
         <ol>
           <li>
-            Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+            Any live cell with fewer than two live neighbours dies, as if by <u>underpopulation</u>.
           </li>
           <li>
-            Any live cell with two or three live neighbours lives on to the next generation.
+            Any live cell with two or three live neighbours lives on to the <u>next generation</u>.
           </li>
           <li>
-            Any live cell with more than three live neighbours dies, as if by overpopulation.
+            Any live cell with more than three live neighbours dies, as if by <u>overpopulation</u>.
           </li>
           <li>
-            Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+            Any dead cell with exactly three live neighbours becomes a live cell, as if by <u>reproduction</u>.
           </li>
         </ol>
         <p>
@@ -58,7 +60,7 @@ export function SimpleEquationsInfiniteComplexity() {
         <QuestionComponent questionText="Is it worth considering, that the equation that governs our universe is also very simple?"></QuestionComponent>
         <p>
             First of all, you need to understand that the way creatures (patterns) emerge from Conway&apos;s Game of Life
-            is far too similar to the way in which, said, &quot;creatures&quot; (patterns) emerge in our universe.
+            is far too similar to the way in which, said, biological &quot;creatures&quot; (patterns) emerge in our universe.
         </p>
         <p>
             Another interesting point on Conway&apos;s Game of Life is that in some implementations, the game reaches an
@@ -92,7 +94,7 @@ export function SimpleEquationsInfiniteComplexity() {
         <p>
           In conclusion, humans should stop being elitist in the, so called, &quot;hierarchy&quot; of Earthly creatures.
         </p>
-        <p className="centred">-----&#62; GO VEGGIE; IT IS TASTY AND COLOURFUL &#60;-----</p>
+        <p className="centred">---&#62; GO VEGGIE; IT IS TASTY AND COLOURFUL &#60;---</p>
         <p>
           If we don&apos;t take care of the world we evolved with, then we are doomed.
         </p>
