@@ -16,7 +16,7 @@ export function SimpleEquationsInfiniteComplexity() {
       <div id="simple-equations" className="standard-page-margins standard-page-styling">
         <h1>{ SharedText.Recursion.SimpleEquations }</h1>
         <DateWritten>26.11.22</DateWritten>
-        <span>&nbsp;<i>Part of <a href="recursion/">Recursion</a> project</i>.</span>
+        <span>&nbsp;<i>Part of <a href="/recursion">Recursion</a> project</i>.</span>
         <p><i>
           Scroll down to the <ScrollToBottomLink>bottom</ScrollToBottomLink> of this page and
           play the youtube video if you want music while reading :)
@@ -34,7 +34,7 @@ export function SimpleEquationsInfiniteComplexity() {
           Z<sub>n+1</sub> = Z<sub>n</sub><sup>2</sup> + C
         </Equation>
         <p>
-          The <NewTabLink href="https://en.wikipedia.org/wiki/Mandelbrot_set">Bifurcation Diagram of the Logistical Map</NewTabLink> fractal is, also, generated from a very simple equation:
+          The <NewTabLink href="/recursion/bifurcation-logistical-map">Bifurcation Diagram of the Logistical Map</NewTabLink> fractal is, also, generated from a very simple equation:
         </p>
         <Equation>
           x<sub>n+1</sub> = rx<sub>n</sub>(1 - x<sub>n</sub>)
@@ -100,7 +100,7 @@ export function SimpleEquationsInfiniteComplexity() {
         <p>
           In conclusion, humans should stop being elitist in the, so called, &quot;hierarchy&quot; of Earthly creatures.
         </p>
-        <p className="centred">&#62;&#62;&#62; GO VEGGIE; IT IS TASTY AND COLOURFUL &#60;&#60;&#60;</p>
+        <p className="centred">&#62; GO VEGGIE; IT IS TASTY AND COLOURFUL &#60;</p>
         <p>
           If we don&apos;t take care of the world we evolved with, then we are doomed.
         </p>
@@ -111,7 +111,7 @@ export function SimpleEquationsInfiniteComplexity() {
           he chose to save the octopuses, flowers, spiders and bees!
         </p>
         <iframe width={width} height="315" src="https://www.youtube.com/embed/UDVtMYqUAyw?autoplay=1&start=261" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-        <span>Back to <ScrollToTopLink>top of page</ScrollToTopLink> (also plays the music).</span>
+        <span>Back to <ScrollToTopLink>top of page</ScrollToTopLink>.</span>
       </div>
     </>
   );
