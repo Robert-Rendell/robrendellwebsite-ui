@@ -1,13 +1,12 @@
 import React from "react";
 
-export function ScrollToTopLink() {
+export function ScrollToTopLink() { 
   return (
     <>
       <span>
         Back to&nbsp;
-        <a
-          href=""
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        <a className="scroll-to-top"
+          onClick={() => window.scrollTo({ top: 0 })}
         >
         top of page
         </a>.
