@@ -1,16 +1,19 @@
 import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { DateWritten } from "../../components/date-written.component";
 import { Equation } from "../../components/equation.component";
 import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "../neurochemistry/components/question.component";
 
 export function SimpleEquationsInfiniteComplexity() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 20;
+  usePageView(SharedRoutes.Recursion.SimpleEquations);
   return (
     <>
       <div
