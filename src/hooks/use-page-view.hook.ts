@@ -9,5 +9,5 @@ export function usePageView(pageUrl: string) {
         headers: { "Content-Type": "application/json" },
         pageUrl: pageUrl,
       });
-  }, []);
+  }, [pageUrl]);
 }
