@@ -37,3 +37,19 @@ code {
 .right-align {
   text-align: right;
 }
+
+@media only screen and (min-width: 768px) {
+    .hidden-on-mobile {
+        display: none;
+    }
+}
+
+.scroll-to-top {
+  color: var(--bs-primary);
+  cursor: pointer;
+}
+
+.black-bg .scroll-to-bottom {
+  color: limegreen;
+  cursor: pointer;
+}
