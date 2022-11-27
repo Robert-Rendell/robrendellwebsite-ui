@@ -1,4 +1,5 @@
 import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { DateWritten } from "../../components/date-written.component";
 import { Equation } from "../../components/equation.component";
@@ -12,7 +13,7 @@ import { QuestionComponent } from "../neurochemistry/components/question.compone
 export function SimpleEquationsInfiniteComplexity() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 20;
-  usePageView("/recursion");
+  usePageView(SharedRoutes.Recursion.SimpleEquations);
   return (
     <>
       <div
