@@ -6,13 +6,11 @@ export function MusicScrollDownMesssage() {
     <>
       <p>
         <i>
-            Scroll down to the <ScrollToBottomLink>bottom</ScrollToBottomLink>{" "}
-            of this page and play the youtube video if you want music while
-            reading :)
+          Scroll down to the <ScrollToBottomLink>bottom</ScrollToBottomLink> of
+          this page and play the youtube video if you want music while reading
+          :)
         </i>
       </p>
     </>
   );
 }
-
-

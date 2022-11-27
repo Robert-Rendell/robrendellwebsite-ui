@@ -29,7 +29,7 @@ export function SimpleEquationsInfiniteComplexity() {
           </i>
           .
         </span>
-        <MusicScrollDownMesssage/>
+        <MusicScrollDownMesssage />
         <hr />
         <p>
           As far as I understand, the idea of Fractals came from{" "}
@@ -173,7 +173,7 @@ export function SimpleEquationsInfiniteComplexity() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-        <ScrollToTopLink/>
+        <ScrollToTopLink />
       </div>
     </>
   );
