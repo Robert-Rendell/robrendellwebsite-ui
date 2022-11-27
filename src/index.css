@@ -39,9 +39,9 @@ code {
 }
 
 @media only screen and (min-width: 768px) {
-    .hidden-on-mobile {
-        display: none;
-    }
+  .hidden-on-mobile {
+    display: none;
+  }
 }
 
 .scroll-to-top {

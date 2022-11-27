@@ -33,7 +33,7 @@ export const RecursionPage = () => {
       <div className="standard-page-margins standard-page-styling">
         <h1>Recursion and Fractals</h1>
         <DateWritten>Nov 2022</DateWritten>
-        <MusicScrollDownMesssage/>
+        <MusicScrollDownMesssage />
         <hr />
         <h1>
           <i>&quot;What is Recursion?&quot;</i>
@@ -370,9 +370,17 @@ export const RecursionPage = () => {
             wrapLines
           />
         </div>
-        <hr/>
-        <iframe width={width}height="315" src="https://www.youtube.com/embed/tVvG3X1pcQ8?start=40&autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-        <ScrollToTopLink/>
+        <hr />
+        <iframe
+          width={width}
+          height="315"
+          src="https://www.youtube.com/embed/tVvG3X1pcQ8?start=40&autoplay=1"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <ScrollToTopLink />
       </div>
     </>
   );

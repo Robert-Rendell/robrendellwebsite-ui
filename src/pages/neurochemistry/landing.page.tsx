@@ -15,7 +15,7 @@ export function NeurochemistryLandingPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>Neurochemistry Project: Emotional Intelligence</h1>
-      <MusicScrollDownMesssage/>
+      <MusicScrollDownMesssage />
       <h2>Topics</h2>
       <ol>
         <li>
@@ -73,8 +73,16 @@ export function NeurochemistryLandingPage() {
         width={width}
         src="https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp"
       />
-      <iframe width={width} height="315" src="https://www.youtube.com/embed/mbcVm8iepQE?start=120&autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-      <ScrollToTopLink/>
+      <iframe
+        width={width}
+        height="315"
+        src="https://www.youtube.com/embed/mbcVm8iepQE?start=120&autoplay=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+      <ScrollToTopLink />
     </div>
   );
 }
