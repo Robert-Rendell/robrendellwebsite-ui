@@ -2,12 +2,16 @@ import React from "react";
 import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import "../page.css";
 
 export function NeurochemistryLandingPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+
+  usePageView("/neurochemistry");
+
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>Neurochemistry Project: Emotional Intelligence</h1>
