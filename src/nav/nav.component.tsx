@@ -56,8 +56,17 @@ export const NavComponent = () => {
               <NavDropdown.Item href="/climate-change/renewable-energy">
                 Renewable Energy
               </NavDropdown.Item>
-              <NavDropdown.Item href="https://www.timeshighereducation.com/impactrankings">
+              <NavDropdown.Item
+                href="https://www.timeshighereducation.com/impactrankings"
+                target="_blank"
+              >
                 World University Impact Sustainability Rankings
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href={SharedRoutes.ClimateChange.CarlSagan1985}
+                target="_blank"
+              >
+                {SharedText.ClimateChange.CarlSagan1985}
               </NavDropdown.Item>
             </NavDropdown>
 

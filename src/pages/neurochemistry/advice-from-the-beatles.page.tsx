@@ -8,7 +8,7 @@ export function AdviceFromTheBeatlesPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton /> Advice from The Beatles
+        <RobBackButton closeWindow /> Advice from The Beatles
       </h1>
       <img width={width} src="https://i.redd.it/ob5eruy3kfe41.jpg" />
     </div>

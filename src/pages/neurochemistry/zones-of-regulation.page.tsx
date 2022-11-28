@@ -9,7 +9,7 @@ export function ZonesOfRegulationPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton /> Zones of Emotional Regulation
+        <RobBackButton closeWindow /> Zones of Emotional Regulation
       </h1>
       <p>
         My sister introduced me to the&nbsp;

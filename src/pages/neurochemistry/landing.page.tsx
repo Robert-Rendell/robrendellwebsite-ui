@@ -1,4 +1,6 @@
 import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
+import { SharedText } from "../../common/shared-text";
 import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
@@ -29,8 +31,8 @@ export function NeurochemistryLandingPage() {
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href="/neurochemistry/self-love-not-narcissism">
-            Self-love! (... And not Narcissism)
+          <NewTabLink href={SharedRoutes.Neurochemistry.SelfLove}>
+            {SharedText.Neurochemistry.SelfLove}
           </NewTabLink>
         </li>
         <li>
@@ -53,6 +55,7 @@ export function NeurochemistryLandingPage() {
             Learning and Genetic Code
           </NewTabLink>
         </li>
+        <li>{SharedText.Neurochemistry.GuiltAndForgiveness} (coming soon)</li>
         <li>
           <NewTabLink href="/neurochemistry/let-it-go">
             Let it Go / Let it Be

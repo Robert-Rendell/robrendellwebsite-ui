@@ -5,7 +5,7 @@ export function SubconsciousPositiveReactionsPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton /> Subconscious Positive Reactions
+        <RobBackButton closeWindow /> Subconscious Positive Reactions
       </h1>
       <hr />
       <h2 className="centred">

@@ -3,6 +3,7 @@ import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import "../page.css";
+import { NewTabLink } from "../../components/new-tab-link.component";
 
 export function ClimateChangePage() {
   const windowSize = useWindowSize();
@@ -33,10 +34,15 @@ export function ClimateChangePage() {
           <a href="/climate-change/renewable-energy">Renewable Energy</a>
         </li>
         <li>
-          <a href="https://www.timeshighereducation.com/impactrankings">
+          <NewTabLink href="https://www.timeshighereducation.com/impactrankings">
             World University Rankings: Sustainable Development Goals Impact
             Ranking 2022
-          </a>
+          </NewTabLink>
+        </li>
+        <li>
+          <NewTabLink href={SharedRoutes.ClimateChange.CarlSagan1985}>
+            {SharedText.ClimateChange.CarlSagan1985}
+          </NewTabLink>
         </li>
       </ol>
       <hr />

@@ -20,6 +20,7 @@ import { goldenRatioSketch } from "./p5-sketches/golden-ratio.sketch";
 import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
 import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
 import { DateWritten } from "../../components/date-written.component";
+import { SharedText } from "../../common/shared-text";
 
 export const RecursionPage = () => {
   const windowSize = useWindowSize();
@@ -31,7 +32,7 @@ export const RecursionPage = () => {
   return (
     <>
       <div className="standard-page-margins standard-page-styling">
-        <h1>Recursion and Fractals</h1>
+        <h1>{SharedText.Recursion.RecursionAndFractals}</h1>
         <DateWritten>Nov 2022</DateWritten>
         <MusicScrollDownMesssage />
         <hr />
