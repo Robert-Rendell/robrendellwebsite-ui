@@ -67,6 +67,7 @@ export function NeurochemistryLandingPage() {
             {SharedText.Neurochemistry.AdviceFromTheBeatles}
           </NewTabLink>
         </li>
+        <li>[<u>Conclusion</u>]: {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion} (coming soon)</li>
       </ol>
       <p>
         <i>

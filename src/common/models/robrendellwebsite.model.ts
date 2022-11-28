@@ -11,6 +11,7 @@ export type RobRendellWebsiteModel = {
     SimpleEquations: string;
   };
   Neurochemistry: {
+    PropheciesAndMassAwakeningDiscussion: string;
     MelatoninIsTheKeyToCreativity: string;
     SubconsciousPositiveReactions: string;
     RelaxationResponse: string;
