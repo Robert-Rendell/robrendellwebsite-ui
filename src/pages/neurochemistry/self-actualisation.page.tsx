@@ -12,7 +12,8 @@ export function SelfActualisationPeakExperiencesPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton closeWindow /> {SharedText.Neurochemistry.SelfActualisation}
+        <RobBackButton closeWindow />{" "}
+        {SharedText.Neurochemistry.SelfActualisation}
       </h1>
       <p>
         Self-actualisation is the complete realisation of one&apos;s potential,

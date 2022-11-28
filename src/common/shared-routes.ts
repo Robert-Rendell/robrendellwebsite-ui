@@ -13,6 +13,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     SimpleEquations: "/recursion/simple-equations-infinite-complexity",
   },
   Neurochemistry: {
+    RelaxationResponse: "/neurochemistry/the-relaxation-response",
     ZonesOfRegulation: "/neurochemistry/zones-of-regulation",
     SelfActualisation: "/neurochemistry/self-actualisation-peak-experiences",
     LearningAndGeneticCode: "/neurochemistry/learning-and-genetic-code",

@@ -1,5 +1,7 @@
 import React from "react";
+import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
+import { NewTabLink } from "../../components/new-tab-link.component";
 
 export function TheRelaxationResponsePage() {
   return (
@@ -8,30 +10,23 @@ export function TheRelaxationResponsePage() {
       style={{ height: "100%" }}
     >
       <h1>
-        <RobBackButton closeWindow /> The Relaxation Response
+        <RobBackButton closeWindow />{" "}
+        {SharedText.Neurochemistry.RelaxationResponse}
       </h1>
       <p>
         Got{" "}
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.nhs.uk/mental-health/conditions/panic-disorder/"
-        >
+        <NewTabLink href="https://www.nhs.uk/mental-health/conditions/panic-disorder/">
           anxiety
-        </a>
+        </NewTabLink>
         ? Here&apos;s the answer:
       </p>
       <p>
         <img src="https://m.media-amazon.com/images/I/51hYvagEduL._SX406_BO1,204,203,200_.jpg" />
       </p>
       <p>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.amazon.co.uk/Relaxation-Response-Herbert-Benson/dp/0380815958"
-        >
+        <NewTabLink href="https://www.amazon.co.uk/Relaxation-Response-Herbert-Benson/dp/0380815958">
           https://www.amazon.co.uk/Relaxation-Response-Herbert-Benson/dp/0380815958
-        </a>
+        </NewTabLink>
       </p>
     </div>
   );

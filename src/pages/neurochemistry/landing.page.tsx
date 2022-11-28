@@ -35,8 +35,8 @@ export function NeurochemistryLandingPage() {
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href="/neurochemistry/the-relaxation-response">
-            The Relaxation Response
+          <NewTabLink href={SharedRoutes.Neurochemistry.RelaxationResponse}>
+            {SharedText.Neurochemistry.RelaxationResponse}
           </NewTabLink>
         </li>
         <li>

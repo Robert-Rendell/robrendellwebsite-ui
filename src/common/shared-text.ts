@@ -13,6 +13,7 @@ export const SharedText: RobRendellWebsiteModel = {
     SimpleEquations: "Simple Equations = Infinite Complexity",
   },
   Neurochemistry: {
+    RelaxationResponse: "The Relaxation Response",
     ZonesOfRegulation: "Zones of Emotional Regulation",
     SelfActualisation: "Self-actualisation & Peak Experiences",
     LearningAndGeneticCode: "Learning And Genetic Code",

@@ -21,9 +21,7 @@ export function MCEDOEGSAPage() {
       </h1>
       <i>
         Adapted from Christopher Bergland&apos;s:{" "}
-        <NewTabLink
-          href="https://www.psychologytoday.com/gb/blog/the-athletes-way/201211/the-neurochemicals-happiness"
-        >
+        <NewTabLink href="https://www.psychologytoday.com/gb/blog/the-athletes-way/201211/the-neurochemicals-happiness">
           The Neurochemicals of Happiness
         </NewTabLink>
       </i>
@@ -55,9 +53,7 @@ export function MCEDOEGSAPage() {
       </p>
       <p>
         This is how I found Christopher Bergland&apos;s work on{" "}
-        <NewTabLink
-          href="https://www.amazon.co.uk/Athletes-Way-Sweat-Biology-Bliss/dp/0312355866"
-        >
+        <NewTabLink href="https://www.amazon.co.uk/Athletes-Way-Sweat-Biology-Bliss/dp/0312355866">
           The Athlete&apos;s Way
         </NewTabLink>
         . In my eyes, a bible for emotional self regulation via exercise.
