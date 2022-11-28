@@ -73,7 +73,7 @@ export function MCEDOEGSAPage() {
         <tbody>
           <tr>
             <td>M</td>
-            <td>Melotonin</td>
+            <td>Melatonin</td>
             <td>Regulates sleep / wake cycle</td>
             <td>
               Make sure light gets in your eyes, make sure darkness gets in your
