@@ -13,6 +13,9 @@ export const SharedText: RobRendellWebsiteModel = {
     SimpleEquations: "Simple Equations = Infinite Complexity",
   },
   Neurochemistry: {
+    McEdoegsa: "Rob's Mnemonic for Happiness: MC-EDOEGSA",
+    LetItBe: "Let it Go / Let it Be",
+    AdviceFromTheBeatles: "Advice from The Beatles",
     LandingPage: "Neurochemistry Project: Emotional Intelligence",
     SelfLove: "Self-love! (... And not Narcissism)",
     GuiltAndForgiveness: "GUILT!! ... And Forgiveness",

@@ -20,8 +20,8 @@ export function NeurochemistryLandingPage() {
       <h2>Topics</h2>
       <ol>
         <li>
-          <NewTabLink href="/neurochemistry/happiness">
-            Rob&apos;s Mnemonic for Happiness: MC-EDOEGSA
+          <NewTabLink href={SharedRoutes.Neurochemistry.McEdoegsa}>
+            {SharedText.Neurochemistry.McEdoegsa}
           </NewTabLink>
         </li>
         <li>
@@ -57,13 +57,13 @@ export function NeurochemistryLandingPage() {
         <li>{SharedText.Neurochemistry.GuiltAndForgiveness} (coming soon)</li>
         <li>{SharedText.Neurochemistry.AttachmentAndSharing} (coming soon)</li>
         <li>
-          <NewTabLink href="/neurochemistry/let-it-go">
-            Let it Go / Let it Be
+          <NewTabLink href={SharedRoutes.Neurochemistry.LetItBe}>
+            {SharedText.Neurochemistry.LetItBe}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href="/neurochemistry/advice-from-the-beatles">
-            Advice from The Beatles
+          <NewTabLink href={SharedRoutes.Neurochemistry.AdviceFromTheBeatles}>
+            {SharedText.Neurochemistry.AdviceFromTheBeatles}
           </NewTabLink>
         </li>
       </ol>

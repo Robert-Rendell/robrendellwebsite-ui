@@ -1,28 +1,31 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
+import { SharedRoutes } from "../../common/shared-routes";
+import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
+import { NewTabLink } from "../../components/new-tab-link.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 
 export function MCEDOEGSAPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  usePageView(SharedRoutes.Neurochemistry.McEdoegsa);
   return (
     <div
       id="mc-edoegsa-page"
       className="standard-page-margins standard-page-styling black-bg-auto black-bg"
     >
       <h1>
-        <RobBackButton closeWindow /> Rob&apos;s Mnemonic for Happiness
+        <RobBackButton closeWindow /> {SharedText.Neurochemistry.McEdoegsa}
       </h1>
       <i>
         Adapted from Christopher Bergland&apos;s:{" "}
-        <a
-          target="_blank"
-          rel="noreferrer"
+        <NewTabLink
           href="https://www.psychologytoday.com/gb/blog/the-athletes-way/201211/the-neurochemicals-happiness"
         >
           The Neurochemicals of Happiness
-        </a>
+        </NewTabLink>
       </i>
       <hr />
       <p className="centred">
@@ -52,13 +55,11 @@ export function MCEDOEGSAPage() {
       </p>
       <p>
         This is how I found Christopher Bergland&apos;s work on{" "}
-        <a
-          target="_blank"
-          rel="noreferrer"
+        <NewTabLink
           href="https://www.amazon.co.uk/Athletes-Way-Sweat-Biology-Bliss/dp/0312355866"
         >
           The Athlete&apos;s Way
-        </a>
+        </NewTabLink>
         . In my eyes, a bible for emotional self regulation via exercise.
       </p>
       <hr />

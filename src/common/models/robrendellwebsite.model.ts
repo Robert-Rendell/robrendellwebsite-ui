@@ -11,9 +11,12 @@ export type RobRendellWebsiteModel = {
     SimpleEquations: string;
   };
   Neurochemistry: {
+    McEdoegsa: string;
+    LetItBe: string;
     LandingPage: string;
     GuiltAndForgiveness: string;
     SelfLove: string;
     AttachmentAndSharing: string;
+    AdviceFromTheBeatles: string;
   };
 };

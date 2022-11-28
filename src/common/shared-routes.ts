@@ -13,6 +13,9 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     SimpleEquations: "/recursion/simple-equations-infinite-complexity",
   },
   Neurochemistry: {
+    McEdoegsa: "/neurochemistry/happiness",
+    LetItBe: "/neurochemistry/let-it-go",
+    AdviceFromTheBeatles: "/neurochemistry/advice-from-the-beatles",
     AttachmentAndSharing: "/neurochemistry/attachment-and-sharing",
     LandingPage: "/neurochemistry",
     SelfLove: "/neurochemistry/self-love-not-narcissism",
