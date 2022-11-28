@@ -1,15 +1,20 @@
 import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
+import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import zones from "../../resources/zones.jpg";
 
 export function ZonesOfRegulationPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  usePageView(SharedRoutes.Neurochemistry.ZonesOfRegulation);
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow /> Zones of Emotional Regulation
+        <RobBackButton closeWindow />{" "}
+        {SharedText.Neurochemistry.ZonesOfRegulation}
       </h1>
       <p>
         My sister introduced me to the&nbsp;

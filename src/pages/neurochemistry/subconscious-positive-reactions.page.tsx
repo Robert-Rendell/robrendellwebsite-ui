@@ -1,11 +1,16 @@
 import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
+import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
+import { NewTabLink } from "../../components/new-tab-link.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 
 export function SubconsciousPositiveReactionsPage() {
+  usePageView(SharedRoutes.Neurochemistry.SubconsciousPositiveReactions);
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton closeWindow /> Subconscious Positive Reactions
+        <RobBackButton closeWindow /> {SharedText.Neurochemistry.SubconsciousPositiveReactions}
       </h1>
       <hr />
       <h2 className="centred">
@@ -82,13 +87,11 @@ export function SubconsciousPositiveReactionsPage() {
         </li>
         <li>
           Spend 5 mins with your eyes closed in a quiet space just{" "}
-          <a
-            target="_blank"
-            rel="noreferrer"
+          <NewTabLink
             href="https://shineyogauk.com/sun-meditation/"
           >
             imagining the sun
-          </a>{" "}
+          </NewTabLink>{" "}
           on your face on a hot sunny holiday in Spain;
         </li>
         <li>
@@ -97,13 +100,11 @@ export function SubconsciousPositiveReactionsPage() {
         </li>
         <li>
           Think about your{" "}
-          <a
-            target="_blank"
-            rel="noreferrer"
+          <NewTabLink
             href="https://www.youtube.com/watch?v=0IagRZBvLtw"
           >
             favourite things
-          </a>{" "}
+          </NewTabLink>{" "}
           (eg. imagine cuddling dogs or cats);
         </li>
         <li>
@@ -112,13 +113,11 @@ export function SubconsciousPositiveReactionsPage() {
         </li>
         <li>
           Be kind to yourself and do not allow your{" "}
-          <a
-            target="_blank"
-            rel="noreferrer"
+          <NewTabLink
             href="https://en.wikipedia.org/wiki/Id,_ego_and_super-ego"
           >
             super-ego
-          </a>{" "}
+          </NewTabLink>{" "}
           to torment you.
         </li>
         <li>
@@ -127,13 +126,11 @@ export function SubconsciousPositiveReactionsPage() {
         </li>
         <li>
           Do not{" "}
-          <a
-            target="_blank"
-            rel="noreferrer"
+          <NewTabLink
             href="https://en.wikipedia.org/wiki/Bindi_(decoration)"
           >
             frown
-          </a>
+          </NewTabLink>
           !
         </li>
         <li>

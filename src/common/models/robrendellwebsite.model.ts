@@ -11,9 +11,17 @@ export type RobRendellWebsiteModel = {
     SimpleEquations: string;
   };
   Neurochemistry: {
+    SubconsciousPositiveReactions: string;
+    RelaxationResponse: string;
+    ZonesOfRegulation: string;
+    SelfActualisation: string;
+    LearningAndGeneticCode: string;
+    McEdoegsa: string;
+    LetItBe: string;
     LandingPage: string;
     GuiltAndForgiveness: string;
     SelfLove: string;
     AttachmentAndSharing: string;
+    AdviceFromTheBeatles: string;
   };
 };
