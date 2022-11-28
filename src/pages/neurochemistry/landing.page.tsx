@@ -56,6 +56,7 @@ export function NeurochemistryLandingPage() {
         </li>
         <li>{SharedText.Neurochemistry.GuiltAndForgiveness} (coming soon)</li>
         <li>{SharedText.Neurochemistry.AttachmentAndSharing} (coming soon)</li>
+        <li>{SharedText.Neurochemistry.MelatoninIsTheKeyToCreativity} (coming soon)</li>
         <li>
           <NewTabLink href={SharedRoutes.Neurochemistry.LetItBe}>
             {SharedText.Neurochemistry.LetItBe}
