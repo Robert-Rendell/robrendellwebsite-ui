@@ -1,4 +1,5 @@
 import React from "react";
+import { SharedText } from "../../common/shared-text";
 import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
@@ -52,6 +53,9 @@ export function NeurochemistryLandingPage() {
           <NewTabLink href="/neurochemistry/learning-and-genetic-code">
             Learning and Genetic Code
           </NewTabLink>
+        </li>
+        <li>
+          <p>{SharedText.Neurochemistry.GuiltAndForgiveness} (coming soon)</p>
         </li>
         <li>
           <NewTabLink href="/neurochemistry/let-it-go">
