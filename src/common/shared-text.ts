@@ -1,10 +1,12 @@
-import { RobRendellWebsiteModel } from "../models/robrendellwebsite.model";
+import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 
 export const SharedText: RobRendellWebsiteModel = {
   ClimateChange: {
     LandingPage: "Climate Change Project",
     CarlSagan1985: "Carl Sagan on Green House Gases 1985",
     Ruminants: "Ruminants / Milk + Beef",
+    OceanAcidification: "Ocean Acidification",
+    RideABike: "Ride a Bike!",
   },
   Recursion: {
     RecursionAndFractals: "Recursion and Fractals",
@@ -14,5 +16,6 @@ export const SharedText: RobRendellWebsiteModel = {
     LandingPage: "Neurochemistry Project: Emotional Intelligence",
     SelfLove: "Self-love! (... And not Narcissism)",
     GuiltAndForgiveness: "GUILT!! ... And Forgiveness",
+    AttachmentAndSharing: "Attachment and Sharing",
   },
 };

@@ -12,7 +12,7 @@ export function NeurochemistryLandingPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   usePageView(SharedRoutes.Neurochemistry.LandingPage);
-  
+
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
@@ -55,6 +55,7 @@ export function NeurochemistryLandingPage() {
           </NewTabLink>
         </li>
         <li>{SharedText.Neurochemistry.GuiltAndForgiveness} (coming soon)</li>
+        <li>{SharedText.Neurochemistry.AttachmentAndSharing} (coming soon)</li>
         <li>
           <NewTabLink href="/neurochemistry/let-it-go">
             Let it Go / Let it Be

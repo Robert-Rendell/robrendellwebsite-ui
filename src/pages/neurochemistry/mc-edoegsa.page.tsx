@@ -94,7 +94,19 @@ export function MCEDOEGSAPage() {
           </tr>
           <tr>
             <td>E</td>
-            <td>{width < 600 ? (<>Endo-<br/>canna-<br/>binoids</>) : "Endocannabinoids" }</td>
+            <td>
+              {width < 600 ? (
+                <>
+                  Endo-
+                  <br />
+                  canna-
+                  <br />
+                  binoids
+                </>
+              ) : (
+                "Endocannabinoids"
+              )}
+            </td>
             <td>Relaxation / Anti-Anxiety</td>
             <td>Sustained, regular exercise.</td>
           </tr>

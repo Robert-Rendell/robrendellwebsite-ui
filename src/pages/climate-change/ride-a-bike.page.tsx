@@ -2,11 +2,14 @@ import React from "react";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import "../page.css";
 import { RobBackButton } from "../../components/back-button.component";
+import { SharedRoutes } from "../../common/shared-routes";
+import { usePageView } from "../../hooks/use-page-view.hook";
 
 export function RideABikePage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   const height = windowSize[1] - 150;
+  usePageView(SharedRoutes.ClimateChange.RideABike);
 
   return (
     <div className="standard-page-margins standard-page-styling">

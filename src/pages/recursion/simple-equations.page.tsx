@@ -14,7 +14,7 @@ export function SimpleEquationsInfiniteComplexity() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 20;
   usePageView(SharedRoutes.Recursion.SimpleEquations);
-  
+
   return (
     <>
       <div

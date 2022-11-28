@@ -10,10 +10,10 @@ export function ClimateChangeLandingPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   usePageView(SharedRoutes.ClimateChange.LandingPage);
-  
+
   return (
     <div className="standard-page-margins standard-page-styling">
-      <h1>{ SharedText.ClimateChange.LandingPage }</h1>
+      <h1>{SharedText.ClimateChange.LandingPage}</h1>
       <h2>Topics</h2>
       <ol>
         <li>
@@ -22,10 +22,14 @@ export function ClimateChangeLandingPage() {
           </a>
         </li>
         <li>
-          <a href="/climate-change/ride-a-bike">Ride a Bike!</a>
+          <a href={SharedRoutes.ClimateChange.RideABike}>
+            {SharedText.ClimateChange.RideABike}
+          </a>
         </li>
         <li>
-          <a href="/climate-change/ocean-acidification">Ocean Acidification</a>
+          <a href={SharedRoutes.ClimateChange.OceanAcidification}>
+            {SharedText.ClimateChange.OceanAcidification}
+          </a>
         </li>
         <li>
           <a href="/climate-change/reduce-reuse-recycle">
