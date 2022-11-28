@@ -3,11 +3,14 @@ import { useWindowSize } from "../../hooks/use-window-size.hook";
 import "../page.css";
 import { RobBackButton } from "../../components/back-button.component";
 import { SharedText } from "../../common/shared-text";
+import { usePageView } from "../../hooks/use-page-view.hook";
+import { SharedRoutes } from "../../common/shared-routes";
 
 export function OceanAcidification() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   const height = windowSize[1] - 150;
+  usePageView(SharedRoutes.ClimateChange.OceanAcidification);
 
   return (
     <div className="standard-page-margins standard-page-styling">
