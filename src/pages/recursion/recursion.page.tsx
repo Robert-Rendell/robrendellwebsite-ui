@@ -32,7 +32,7 @@ export const RecursionPage = () => {
   return (
     <>
       <div className="standard-page-margins standard-page-styling">
-        <h1>{ SharedText.Recursion.RecursionAndFractals }</h1>
+        <h1>{SharedText.Recursion.RecursionAndFractals}</h1>
         <DateWritten>Nov 2022</DateWritten>
         <MusicScrollDownMesssage />
         <hr />

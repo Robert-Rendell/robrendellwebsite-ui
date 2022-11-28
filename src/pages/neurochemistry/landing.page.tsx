@@ -54,9 +54,7 @@ export function NeurochemistryLandingPage() {
             Learning and Genetic Code
           </NewTabLink>
         </li>
-        <li>
-          <p>{SharedText.Neurochemistry.GuiltAndForgiveness} (coming soon)</p>
-        </li>
+        <li>{SharedText.Neurochemistry.GuiltAndForgiveness} (coming soon)</li>
         <li>
           <NewTabLink href="/neurochemistry/let-it-go">
             Let it Go / Let it Be
