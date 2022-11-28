@@ -4,7 +4,7 @@ import { RobBackButton } from "../../components/back-button.component";
 
 export function MCEDOEGSAPage() {
   return (
-    <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
+    <div id="mc-edoegsa-page" className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
         <RobBackButton closeWindow /> Rob&apos;s Mnemonic for Happiness
       </h1>

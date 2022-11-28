@@ -9,6 +9,7 @@ export const SharedText: RobRendellWebsiteModel = {
     SimpleEquations: "Simple Equations = Infinite Complexity",
   },
   Neurochemistry: {
-    GuiltAndForgiveness: "GUILT!! ... and Forgiveness",
+    SelfLove: "Self-love! (... And not Narcissism)",
+    GuiltAndForgiveness: "GUILT!! ... And Forgiveness",
   },
 };

@@ -8,5 +8,6 @@ export type RobRendellWebsiteModel = {
   };
   Neurochemistry: {
     GuiltAndForgiveness: string;
+    SelfLove: string;
   };
 };
