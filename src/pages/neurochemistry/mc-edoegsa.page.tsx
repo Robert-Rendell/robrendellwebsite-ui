@@ -1,8 +1,11 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import { RobBackButton } from "../../components/back-button.component";
+import { useWindowSize } from "../../hooks/use-window-size.hook";
 
 export function MCEDOEGSAPage() {
+  const windowSize = useWindowSize();
+  const width = windowSize[0] - 40;
   return (
     <div
       id="mc-edoegsa-page"
@@ -91,7 +94,7 @@ export function MCEDOEGSAPage() {
           </tr>
           <tr>
             <td>E</td>
-            <td>Endocannabinoids</td>
+            <td>{width < 600 ? (<>Endo-<br/>canna-<br/>binoids</>) : "Endocannabinoids" }</td>
             <td>Relaxation / Anti-Anxiety</td>
             <td>Sustained, regular exercise.</td>
           </tr>
