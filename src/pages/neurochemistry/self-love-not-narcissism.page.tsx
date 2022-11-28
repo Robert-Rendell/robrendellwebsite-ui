@@ -51,6 +51,12 @@ export function SelfLoveNotNarcissismPage() {
             let it be a static category;
           </li>
           <li>
+            <u>Attachment / ownership</u>: by means of sharing what you can;
+          </li>
+          <li>
+            <u>Materialism</u>: by means of only buying what you really need;
+          </li>
+          <li>
             <u>Instinctual fears</u>: spiders, heights, wasps, you name it -
             face them and treat animals kindly!
           </li>
