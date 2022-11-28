@@ -4,14 +4,16 @@ import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import "../page.css";
 import { NewTabLink } from "../../components/new-tab-link.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 
-export function ClimateChangePage() {
+export function ClimateChangeLandingPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-
+  usePageView(SharedRoutes.ClimateChange.LandingPage);
+  
   return (
     <div className="standard-page-margins standard-page-styling">
-      <h1>Climate Change Project</h1>
+      <h1>{ SharedText.ClimateChange.LandingPage }</h1>
       <h2>Topics</h2>
       <ol>
         <li>

@@ -22,7 +22,7 @@ import { LichenPage } from "./pages/photos-ive-taken/nature/lichen.page";
 import { InsectsPage } from "./pages/photos-ive-taken/nature/insects.page";
 import { ReduceReuseRecyclePage } from "./pages/climate-change/reduce-reuse-recycle.page";
 import { RenewableEnergyPage } from "./pages/climate-change/renewable-energy.page";
-import { ClimateChangePage } from "./pages/climate-change/landing.page";
+import { ClimateChangeLandingPage } from "./pages/climate-change/landing.page";
 import { FungiPage } from "./pages/photos-ive-taken/nature/fungi.page";
 import { IndiaPage } from "./pages/misc/india.page";
 import { GiantPacificOctopusPage } from "./pages/misc/giant-pacific-octopus.page";
@@ -62,7 +62,7 @@ ReactDOM.render(
           element={<SimpleEquationsInfiniteComplexity />}
         />
 
-        <Route path="climate-change" element={<ClimateChangePage />} />
+        <Route path="climate-change" element={<ClimateChangeLandingPage />} />
         <Route
           path={SharedRoutes.ClimateChange.Ruminants}
           element={<RuminantsPage />}

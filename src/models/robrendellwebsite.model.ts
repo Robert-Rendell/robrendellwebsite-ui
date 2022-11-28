@@ -1,5 +1,6 @@
 export type RobRendellWebsiteModel = {
   ClimateChange: {
+    LandingPage: string;
     Ruminants: string;
     CarlSagan1985: string;
   };
@@ -8,6 +9,7 @@ export type RobRendellWebsiteModel = {
     SimpleEquations: string;
   };
   Neurochemistry: {
+    LandingPage: string;
     GuiltAndForgiveness: string;
     SelfLove: string;
   };
