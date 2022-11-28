@@ -25,8 +25,8 @@ export function NeurochemistryLandingPage() {
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href="/neurochemistry/zones-of-regulation">
-            The Emotional Zones Of Regulation
+          <NewTabLink href={SharedRoutes.Neurochemistry.ZonesOfRegulation}>
+            The {SharedText.Neurochemistry.ZonesOfRegulation}
           </NewTabLink>
         </li>
         <li>

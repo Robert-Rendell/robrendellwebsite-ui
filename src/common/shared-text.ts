@@ -13,6 +13,7 @@ export const SharedText: RobRendellWebsiteModel = {
     SimpleEquations: "Simple Equations = Infinite Complexity",
   },
   Neurochemistry: {
+    ZonesOfRegulation: "Zones of Emotional Regulation",
     SelfActualisation: "Self-actualisation & Peak Experiences",
     LearningAndGeneticCode: "Learning And Genetic Code",
     McEdoegsa: "Rob's Mnemonic for Happiness: MC-EDOEGSA",
