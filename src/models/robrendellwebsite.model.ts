@@ -1,6 +1,7 @@
 export type RobRendellWebsiteModel = {
   ClimateChange: {
     Ruminants: string;
+    CarlSagan1985: string;
   };
   Recursion: {
     RecursionAndFractals: string;

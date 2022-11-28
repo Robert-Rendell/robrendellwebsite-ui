@@ -31,8 +31,8 @@ export function NeurochemistryLandingPage() {
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={ SharedRoutes.Neurochemistry.SelfLove }>
-            { SharedText.Neurochemistry.SelfLove }
+          <NewTabLink href={SharedRoutes.Neurochemistry.SelfLove}>
+            {SharedText.Neurochemistry.SelfLove}
           </NewTabLink>
         </li>
         <li>

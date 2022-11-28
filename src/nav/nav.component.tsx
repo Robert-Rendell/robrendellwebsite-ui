@@ -56,13 +56,18 @@ export const NavComponent = () => {
               <NavDropdown.Item href="/climate-change/renewable-energy">
                 Renewable Energy
               </NavDropdown.Item>
-              <NavDropdown.Item href="https://www.timeshighereducation.com/impactrankings" target="_blank">
+              <NavDropdown.Item
+                href="https://www.timeshighereducation.com/impactrankings"
+                target="_blank"
+              >
                 World University Impact Sustainability Rankings
               </NavDropdown.Item>
-              <NavDropdown.Item href="https://www.youtube.com/watch?v=Wp-WiNXH6hI" target="_blank">
-                Carl Sagan on Green House Gases 1985
+              <NavDropdown.Item
+                href={SharedRoutes.ClimateChange.CarlSagan1985}
+                target="_blank"
+              >
+                {SharedText.ClimateChange.CarlSagan1985}
               </NavDropdown.Item>
-              
             </NavDropdown>
 
             <NavDropdown title="Nature" id="nature">
