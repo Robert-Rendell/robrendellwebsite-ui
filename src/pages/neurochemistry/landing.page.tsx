@@ -40,8 +40,8 @@ export function NeurochemistryLandingPage() {
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href="/neurochemistry/subconscious-positive-reactions">
-            Subconscious Positive Reactions
+          <NewTabLink href={SharedRoutes.Neurochemistry.SubconsciousPositiveReactions}>
+            {SharedText.Neurochemistry.SubconsciousPositiveReactions}
           </NewTabLink>
         </li>
         <li>

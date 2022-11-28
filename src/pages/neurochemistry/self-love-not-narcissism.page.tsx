@@ -1,10 +1,13 @@
 import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
 import { RobBackButton } from "../../components/back-button.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 
 export function SelfLoveNotNarcissismPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  usePageView(SharedRoutes.Neurochemistry.SelfLove);
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
