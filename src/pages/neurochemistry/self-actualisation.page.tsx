@@ -8,7 +8,7 @@ export function SelfActualisationPeakExperiencesPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton /> Self-actualisation & Peak Experiences
+        <RobBackButton closeWindow /> Self-actualisation & Peak Experiences
       </h1>
       <p>
         Self-actualisation is the complete realisation of one&apos;s potential,

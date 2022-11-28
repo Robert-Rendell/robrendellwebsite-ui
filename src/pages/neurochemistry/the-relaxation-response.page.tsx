@@ -8,7 +8,7 @@ export function TheRelaxationResponsePage() {
       style={{ height: "100%" }}
     >
       <h1>
-        <RobBackButton /> The Relaxation Response
+        <RobBackButton closeWindow /> The Relaxation Response
       </h1>
       <p>
         Got{" "}

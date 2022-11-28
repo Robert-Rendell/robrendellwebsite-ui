@@ -9,7 +9,7 @@ export function LetItGoPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton /> Let it Go / Let it Be ...
+        <RobBackButton closeWindow /> Let it Go / Let it Be ...
       </h1>
       <iframe
         width={width}
