@@ -11,6 +11,8 @@ export type RobRendellWebsiteModel = {
     SimpleEquations: string;
   };
   Neurochemistry: {
+    SelfActualisation: string;
+    LearningAndGeneticCode: string;
     McEdoegsa: string;
     LetItBe: string;
     LandingPage: string;

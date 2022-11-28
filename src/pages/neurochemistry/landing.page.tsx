@@ -45,13 +45,13 @@ export function NeurochemistryLandingPage() {
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href="/neurochemistry/self-actualisation-peak-experiences">
-            Self-actualisation & Peak Experiences
+          <NewTabLink href={SharedRoutes.Neurochemistry.SelfActualisation}>
+            {SharedText.Neurochemistry.SelfActualisation}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href="/neurochemistry/learning-and-genetic-code">
-            Learning and Genetic Code
+          <NewTabLink href={SharedRoutes.Neurochemistry.LearningAndGeneticCode}>
+            {SharedText.Neurochemistry.LearningAndGeneticCode}
           </NewTabLink>
         </li>
         <li>{SharedText.Neurochemistry.GuiltAndForgiveness} (coming soon)</li>
