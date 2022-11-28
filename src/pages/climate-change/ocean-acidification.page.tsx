@@ -2,6 +2,7 @@ import React from "react";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import "../page.css";
 import { RobBackButton } from "../../components/back-button.component";
+import { SharedText } from "../../common/shared-text";
 
 export function OceanAcidification() {
   const windowSize = useWindowSize();
@@ -12,7 +13,7 @@ export function OceanAcidification() {
     <div className="standard-page-margins standard-page-styling">
       <h1>
         <RobBackButton />
-        Ocean Acidification
+        {SharedText.ClimateChange.OceanAcidification}
       </h1>
       <iframe
         width={width}

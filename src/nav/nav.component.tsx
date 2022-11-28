@@ -130,7 +130,7 @@ export const NavComponent = () => {
                 29/11/21 - University data visualiser
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="https://www.linkedin.com/in/robert-rendell/">
+            <Nav.Link href="https://www.linkedin.com/in/robert-rendell/" target="_blank">
               LinkedIn
             </Nav.Link>
           </Nav>

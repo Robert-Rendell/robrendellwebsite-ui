@@ -3,6 +3,8 @@ export type RobRendellWebsiteModel = {
     LandingPage: string;
     Ruminants: string;
     CarlSagan1985: string;
+    OceanAcidification: string;
+    RideABike: string;
   };
   Recursion: {
     RecursionAndFractals: string;
@@ -12,5 +14,6 @@ export type RobRendellWebsiteModel = {
     LandingPage: string;
     GuiltAndForgiveness: string;
     SelfLove: string;
+    AttachmentAndSharing: string;
   };
 };
