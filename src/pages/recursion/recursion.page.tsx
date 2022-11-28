@@ -21,10 +21,13 @@ import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
 import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
 import { DateWritten } from "../../components/date-written.component";
 import { SharedText } from "../../common/shared-text";
+import { usePageView } from "../../hooks/use-page-view.hook";
+import { SharedRoutes } from "../../common/shared-routes";
 
 export const RecursionPage = () => {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 20;
+  usePageView(SharedRoutes.Recursion.RecursionAndFractals);
 
   const onDoubleHelixSketchReady = () => {
     //
