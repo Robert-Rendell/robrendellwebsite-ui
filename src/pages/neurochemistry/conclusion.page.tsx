@@ -4,13 +4,9 @@ import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
 import { QuoteComponent } from "../../components/quote.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
-import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "./components/question.component";
 
 export function NeurochemistryConclusionPage() {
-  const windowSize = useWindowSize();
-  const width = windowSize[0] - 40;
-  const height = windowSize[1] - 200;
   usePageView(SharedRoutes.Neurochemistry.PropheciesAndMassAwakeningDiscussion);
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
@@ -18,16 +14,17 @@ export function NeurochemistryConclusionPage() {
         <RobBackButton closeWindow />{" "}
         {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion} ...
       </h1>
-      <p>So. In conclusion, what I will say is this...</p>
+      <p>So! ... In conclusion, what I will say is this...</p>
       <p>
         You need to learn my second mnemonic for happiness (featured below),
         because this website will not last long on the world wide web;
-        &quot;agents&quot; are coming ;).
+        <i>&quot;AGENTS&quot; ARE COMING!</i> ;).
       </p>
+      <p>You must hide this mnemonic deep inside you, in your brain stem.</p>
       <p>
-        You must hide this mnemonic deep inside you, in your brain stem. Learn
-        it well. First in your up brain (cerebrum), then in your habit brain
-        (cerebellum) and finally in your instinctual brain (brain steam).
+        Learn it well. Learn it first in your up brain (cerebrum), then in your
+        habit brain (cerebellum) and finally in your instinctual brain (brain
+        steam).
       </p>
       <ol className="ol-extra-margins">
         <li>M = MC EGOEGSA Mnemonic</li>
@@ -40,8 +37,8 @@ export function NeurochemistryConclusionPage() {
         <li>F = Forgiveness</li>
         <li>S = Sharing</li>
         <li>M = Melatonin (creative juices)</li>
-        <li>L = let it go</li>
-        <li>A = Advice from the beetles</li>
+        <li>L = Let it go</li>
+        <li>A = Advice from The Beatles</li>
       </ol>
       <QuestionComponent>
         <u>M</u>ost <u>Z</u>ion <u>S</u>uper <u>R</u>oads <u>P</u>oint <u>S</u>
@@ -56,6 +53,7 @@ export function NeurochemistryConclusionPage() {
         If you use this knowledge to do bad things, I need do nothing. Karma
         will come for you, as it always does.
       </p>
+      <hr />
       <p>My final piece is this:</p>
       <QuoteComponent year={2022}>
         Remember to fully breath out, before you breath in.
