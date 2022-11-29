@@ -64,7 +64,7 @@ export function NeurochemistryConclusionPage() {
       </QuoteComponent>
       <iframe
         width={width}
-        height={height/2}
+        height={height / 2}
         src="https://www.youtube.com/embed/h24D87SqaLQ"
         title="YouTube video player"
         frameBorder="0"
