@@ -13,7 +13,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     SimpleEquations: "/recursion/simple-equations-infinite-complexity",
   },
   Neurochemistry: {
-    PropheciesAndMassAwakeningDiscussion: "FILL ME IN",
+    PropheciesAndMassAwakeningDiscussion: "/neurochemistry/conclusion",
     MelatoninIsTheKeyToCreativity:
       "/neurochemistry/melatonin-is-the-key-to-creative-insight",
     SubconsciousPositiveReactions:

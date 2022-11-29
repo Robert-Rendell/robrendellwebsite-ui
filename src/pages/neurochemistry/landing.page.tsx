@@ -76,9 +76,14 @@ export function NeurochemistryLandingPage() {
           </NewTabLink>
         </li>
         <li>
-          [<u>Conclusion</u>]:{" "}
-          {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion}{" "}
-          (coming soon)
+          <NewTabLink
+            href={
+              SharedRoutes.Neurochemistry.PropheciesAndMassAwakeningDiscussion
+            }
+          >
+            [<u>Conclusion</u>]:{" "}
+            {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion}
+          </NewTabLink>
         </li>
       </ol>
       <p>

@@ -1,6 +1,7 @@
 import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { RobBackButton } from "../../components/back-button.component";
+import { QuoteComponent } from "../../components/quote.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 
@@ -64,7 +65,8 @@ export function SelfLoveNotNarcissismPage() {
             celebrating Christ-mas?;
           </li>
           <li>
-            <u>Vanity</u>: your cranial muscles are the only ones worth training in this day and age;
+            <u>Vanity</u>: your cranial muscles are the only ones worth training
+            in this day and age;
           </li>
           <li>
             <u>Instinctual fears</u>: spiders, heights, wasps, you name it -
@@ -84,15 +86,10 @@ export function SelfLoveNotNarcissismPage() {
       <p className="centred">Be kind to yourself</p>
       <p className="centred">Be kind to others</p>
       <hr />
-      <h2 className="centred">
-        <i>
-          &quot;Smile, and the world smiles back. (... And if it doesn&apos;t...
-          that smile is for you!)&quot;
-        </i>
-      </h2>
-      <p className="centred">
-        <i>Rob Rendell (2022)</i>
-      </p>
+      <QuoteComponent year={2022}>
+        Smile, and the world smiles back. (... And if it doesn&apos;t... that
+        smile is for you!)
+      </QuoteComponent>
       <img
         src={`https://jmlkanewischer.files.wordpress.com/2020/04/matrix-know-thyself.jpg?w=${width}`}
         width={width}
