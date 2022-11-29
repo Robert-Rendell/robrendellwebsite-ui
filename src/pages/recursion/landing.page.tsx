@@ -1,5 +1,5 @@
 import React from "react";
-import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
+import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
@@ -15,7 +15,7 @@ export function RecursionLandingPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>Neurochemistry Project: Emotional Intelligence</h1>
-      <MusicScrollDownMesssage />
+      <MusicScrollDownMessage />
       <h2>Topics</h2>
       <ol>
         <li>

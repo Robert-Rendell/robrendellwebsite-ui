@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollToBottomLink } from "./scroll-to-bottom-link.component";
 
-export function MusicScrollDownMesssage() {
+export function MusicScrollDownMessage() {
   return (
     <>
       <p>
