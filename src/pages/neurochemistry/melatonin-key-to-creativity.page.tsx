@@ -9,7 +9,6 @@ import { QuestionComponent } from "./components/question.component";
 export function MelatoninIsTheKeyToCreativeInsight() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  const height = windowSize[1] - 200;
   usePageView(SharedRoutes.Neurochemistry.MelatoninIsTheKeyToCreativity);
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
@@ -24,8 +23,8 @@ export function MelatoninIsTheKeyToCreativeInsight() {
       </p>
       <p>Instead, humans had torchlight and fire to pierce the darkness.</p>
       <p>
-        A town under a clear starry night, even lit by torchlight, would be lit
-        up by the moonlight.
+        A town under a clear starry sky, even lit by torchlight, would be lit up
+        by the moonlight.
       </p>
       <hr />
       <p>
@@ -39,11 +38,6 @@ export function MelatoninIsTheKeyToCreativeInsight() {
         So why then, does it have anything to do with creativity?
       </QuestionComponent>
       <p>
-        All of my (fantastic... [oh yeah buddy]) ideas, have come to me in the
-        darkness. Many an epiphany has been had dancing like a crazy
-        person in that bathtub.
-      </p>
-      <p>
         We live in a tiny flat in Newcastle upon Tyne and in that tiny flat we
         have a mouldy as fuck bathroom.
       </p>
@@ -51,11 +45,17 @@ export function MelatoninIsTheKeyToCreativeInsight() {
       <hr />
       <p>
         Occasionally when I&apos;m feeling down, I like to put the music up full
-        in the, mouldy as fuck (landlord SORT IT OUT), bathroom and{" "}
-        <u>switch off the lights</u>.
+        in the, mouldy as fuck (landlord SORT IT OUT you lazy fucker), bathroom
+        and <u>switch off the lights</u>.
       </p>
-      <p>I call this:</p>
+      <p className="centred">I call this:</p>
       <QuestionComponent>DISCO SHOWERS!!!</QuestionComponent>
+      <p>
+        All of my (fantastic... [oh yeah buddy]) ideas, have come to me in the
+        darkness. Many an epiphany has been had dancing like a crazy person in
+        that bathtub.
+      </p>
+      <hr />
       <p>
         The other thing I like to do is lie, on our shitty bed that the landlord
         gave us, in the darkness (and silence) and do some &quot;mindfulness
@@ -78,8 +78,8 @@ export function MelatoninIsTheKeyToCreativeInsight() {
         and Garfunkel.
       </p>
       <p>
-        In my opinion, these two (genius) guys are suggesting that you can reach into your
-        dreams, subconscious mind, through melatonin... enjoy!
+        In my opinion, these two (genius) guys are suggesting that you can reach
+        into your dreams, the subconscious mind, through melatonin... enjoy!
       </p>
       <iframe
         width={width}
