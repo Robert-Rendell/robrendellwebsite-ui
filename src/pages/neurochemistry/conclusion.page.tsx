@@ -46,7 +46,7 @@ export function NeurochemistryConclusionPage() {
         <u>L</u>ongbenton <u>A</u>ristocracy
       </QuestionComponent>
       <p>
-        If you reject these ideas I have articulated in this, they will only
+        If you reject these ideas I have articulated in this project, they will only
         consume you.
       </p>
       <p>
