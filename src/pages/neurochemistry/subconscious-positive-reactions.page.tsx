@@ -10,7 +10,8 @@ export function SubconsciousPositiveReactionsPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton closeWindow /> {SharedText.Neurochemistry.SubconsciousPositiveReactions}
+        <RobBackButton closeWindow />{" "}
+        {SharedText.Neurochemistry.SubconsciousPositiveReactions}
       </h1>
       <hr />
       <h2 className="centred">
@@ -87,9 +88,7 @@ export function SubconsciousPositiveReactionsPage() {
         </li>
         <li>
           Spend 5 mins with your eyes closed in a quiet space just{" "}
-          <NewTabLink
-            href="https://shineyogauk.com/sun-meditation/"
-          >
+          <NewTabLink href="https://shineyogauk.com/sun-meditation/">
             imagining the sun
           </NewTabLink>{" "}
           on your face on a hot sunny holiday in Spain;
@@ -100,9 +99,7 @@ export function SubconsciousPositiveReactionsPage() {
         </li>
         <li>
           Think about your{" "}
-          <NewTabLink
-            href="https://www.youtube.com/watch?v=0IagRZBvLtw"
-          >
+          <NewTabLink href="https://www.youtube.com/watch?v=0IagRZBvLtw">
             favourite things
           </NewTabLink>{" "}
           (eg. imagine cuddling dogs or cats);
@@ -113,9 +110,7 @@ export function SubconsciousPositiveReactionsPage() {
         </li>
         <li>
           Be kind to yourself and do not allow your{" "}
-          <NewTabLink
-            href="https://en.wikipedia.org/wiki/Id,_ego_and_super-ego"
-          >
+          <NewTabLink href="https://en.wikipedia.org/wiki/Id,_ego_and_super-ego">
             super-ego
           </NewTabLink>{" "}
           to torment you.
@@ -126,9 +121,7 @@ export function SubconsciousPositiveReactionsPage() {
         </li>
         <li>
           Do not{" "}
-          <NewTabLink
-            href="https://en.wikipedia.org/wiki/Bindi_(decoration)"
-          >
+          <NewTabLink href="https://en.wikipedia.org/wiki/Bindi_(decoration)">
             frown
           </NewTabLink>
           !

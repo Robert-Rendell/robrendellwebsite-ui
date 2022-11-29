@@ -14,8 +14,10 @@ export const SharedRoutes: RobRendellWebsiteModel = {
   },
   Neurochemistry: {
     PropheciesAndMassAwakeningDiscussion: "FILL ME IN",
-    MelatoninIsTheKeyToCreativity: "FILL ME IN",
-    SubconsciousPositiveReactions: "/neurochemistry/subconscious-positive-reactions",
+    MelatoninIsTheKeyToCreativity:
+      "/neurochemistry/melatonin-is-the-key-to-creative-insight",
+    SubconsciousPositiveReactions:
+      "/neurochemistry/subconscious-positive-reactions",
     RelaxationResponse: "/neurochemistry/the-relaxation-response",
     ZonesOfRegulation: "/neurochemistry/zones-of-regulation",
     SelfActualisation: "/neurochemistry/self-actualisation-peak-experiences",

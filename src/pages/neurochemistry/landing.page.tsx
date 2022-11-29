@@ -1,7 +1,7 @@
 import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
-import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
+import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
@@ -16,7 +16,7 @@ export function NeurochemistryLandingPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
-      <MusicScrollDownMesssage />
+      <MusicScrollDownMessage />
       <h2>Topics</h2>
       <ol>
         <li>
@@ -40,7 +40,9 @@ export function NeurochemistryLandingPage() {
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.SubconsciousPositiveReactions}>
+          <NewTabLink
+            href={SharedRoutes.Neurochemistry.SubconsciousPositiveReactions}
+          >
             {SharedText.Neurochemistry.SubconsciousPositiveReactions}
           </NewTabLink>
         </li>
@@ -56,7 +58,13 @@ export function NeurochemistryLandingPage() {
         </li>
         <li>{SharedText.Neurochemistry.GuiltAndForgiveness} (coming soon)</li>
         <li>{SharedText.Neurochemistry.AttachmentAndSharing} (coming soon)</li>
-        <li>{SharedText.Neurochemistry.MelatoninIsTheKeyToCreativity} (coming soon)</li>
+        <li>
+          <NewTabLink
+            href={SharedRoutes.Neurochemistry.MelatoninIsTheKeyToCreativity}
+          >
+            {SharedText.Neurochemistry.MelatoninIsTheKeyToCreativity}
+          </NewTabLink>
+        </li>
         <li>
           <NewTabLink href={SharedRoutes.Neurochemistry.LetItBe}>
             {SharedText.Neurochemistry.LetItBe}
@@ -67,7 +75,11 @@ export function NeurochemistryLandingPage() {
             {SharedText.Neurochemistry.AdviceFromTheBeatles}
           </NewTabLink>
         </li>
-        <li>[<u>Conclusion</u>]: {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion} (coming soon)</li>
+        <li>
+          [<u>Conclusion</u>]:{" "}
+          {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion}{" "}
+          (coming soon)
+        </li>
       </ol>
       <p>
         <i>

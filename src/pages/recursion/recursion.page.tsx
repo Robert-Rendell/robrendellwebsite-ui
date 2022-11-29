@@ -18,7 +18,7 @@ import margarite from "../../resources/margarite.jpg";
 import fibonacciMandelbrot from "../../resources/mandelbrot-fibonacci.jpg";
 import { goldenRatioSketch } from "./p5-sketches/golden-ratio.sketch";
 import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
-import { MusicScrollDownMesssage } from "../../components/music-scroll-down.component";
+import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { DateWritten } from "../../components/date-written.component";
 import { SharedText } from "../../common/shared-text";
 import { usePageView } from "../../hooks/use-page-view.hook";
@@ -37,7 +37,7 @@ export const RecursionPage = () => {
       <div className="standard-page-margins standard-page-styling">
         <h1>{SharedText.Recursion.RecursionAndFractals}</h1>
         <DateWritten>Nov 2022</DateWritten>
-        <MusicScrollDownMesssage />
+        <MusicScrollDownMessage />
         <hr />
         <h1>
           <i>&quot;What is Recursion?&quot;</i>
