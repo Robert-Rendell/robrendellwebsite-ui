@@ -81,6 +81,11 @@ export function MelatoninIsTheKeyToCreativeInsight() {
         In my opinion, these two (genius) guys are suggesting that you can reach
         into your dreams, the subconscious mind, through melatonin... enjoy!
       </p>
+      <p>
+        Write about shedding your fear of the dark (be honest with yourself,
+        would you work alone in the dark woods without a torch- No? I would).
+        Fear is holding you back.
+      </p>
       <iframe
         width={width}
         height="315"
