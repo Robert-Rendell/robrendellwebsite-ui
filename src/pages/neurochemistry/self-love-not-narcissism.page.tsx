@@ -64,6 +64,9 @@ export function SelfLoveNotNarcissismPage() {
             celebrating Christ-mas?;
           </li>
           <li>
+            <u>Vanity</u>: your cranial muscles are the only ones worth training in this day and age;
+          </li>
+          <li>
             <u>Instinctual fears</u>: spiders, heights, wasps, you name it -
             face them and treat animals kindly!
           </li>
