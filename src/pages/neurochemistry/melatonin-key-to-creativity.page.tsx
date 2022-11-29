@@ -39,8 +39,9 @@ export function LetItGoPage() {
         So why then, does it have anything to do with creativity?
       </QuestionComponent>
       <p>
-        All of my (fantastic... oh yeah buddy) ideas, have come to me in the
-        darkness.
+        All of my (fantastic... [oh yeah buddy]) ideas, have come to me in the
+        darkness. Many an epiphany has been had dancing like a crazy
+        person in that bathtub.
       </p>
       <p>
         We live in a tiny flat in Newcastle upon Tyne and in that tiny flat we
