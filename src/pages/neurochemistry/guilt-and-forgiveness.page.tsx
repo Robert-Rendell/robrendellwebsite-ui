@@ -94,7 +94,7 @@ export function GuiltAndForgiveness() {
       <QuestionComponent>What about forgiveness?</QuestionComponent>
       <p>
         Well if you&apos; have read&nbsp;
-        <NewTabLink href="../happiness">my sob story</NewTabLink>
+        <NewTabLink href="happiness">my sob story</NewTabLink>
         &nbsp;about being bullied, then you will know I have had to forgive that
         terrible man who inflicted it upon me.
       </p>
