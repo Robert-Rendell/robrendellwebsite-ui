@@ -43,6 +43,7 @@ import { SimpleEquationsInfiniteComplexity } from "./pages/recursion/simple-equa
 import { MelatoninIsTheKeyToCreativeInsight } from "./pages/neurochemistry/melatonin-key-to-creativity.page";
 import { NeurochemistryConclusionPage } from "./pages/neurochemistry/conclusion.page";
 import { GuiltAndForgiveness } from "./pages/neurochemistry/guilt-and-forgiveness.page";
+import { AttachmentAndSharing } from "./pages/neurochemistry/attachment-and-sharing.page";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -122,6 +123,10 @@ ReactDOM.render(
         <Route
           path="neurochemistry/guilt-and-forgiveness"
           element={<GuiltAndForgiveness />}
+        />
+        <Route
+          path="neurochemistry/attachment-and-sharing"
+          element={<AttachmentAndSharing />}
         />
         <Route
           path="neurochemistry/conclusion"

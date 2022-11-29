@@ -145,9 +145,7 @@ export function SimpleEquationsInfiniteComplexity() {
           In conclusion, humans should stop being elitist in the, so called,
           &quot;hierarchy&quot; of Earthly creatures.
         </p>
-        <Emphasised>
-          GO VEGGIE; IT IS TASTY AND COLOURFUL
-        </Emphasised>
+        <Emphasised>GO VEGGIE; IT IS TASTY AND COLOURFUL</Emphasised>
         <p>
           If we don&apos;t take care of the world we evolved with, then we are
           doomed.
