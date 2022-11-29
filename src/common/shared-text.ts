@@ -27,6 +27,6 @@ export const SharedText: RobRendellWebsiteModel = {
     LandingPage: "Neurochemistry Project: Emotional Intelligence",
     SelfLove: "Self-love! (... And not Narcissism)",
     GuiltAndForgiveness: "GUILT!! ... And Forgiveness",
-    AttachmentAndSharing: "Attachment and Sharing",
+    AttachmentAndSharing: "Attachment & Sharing",
   },
 };

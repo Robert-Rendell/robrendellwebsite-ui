@@ -2,6 +2,7 @@ import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
+import { Emphasised } from "../../components/emphasised.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "./components/question.component";
@@ -14,7 +15,7 @@ export function MelatoninIsTheKeyToCreativeInsight() {
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
         <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.MelatoninIsTheKeyToCreativity} ...
+        {SharedText.Neurochemistry.MelatoninIsTheKeyToCreativity}
       </h1>
       <p>Humans have been around for a long, long time.</p>
       <p>
@@ -71,6 +72,11 @@ export function MelatoninIsTheKeyToCreativeInsight() {
         Again, it&apos;s melatonin! Some of my best ideas come from sitting in
         the dark and silence.
       </p>
+      <p>
+        You should try to shed any fear of the dark (be honest with yourself,
+        would you walk alone in the dark woods without a torch- No? I would).
+      </p>
+      <Emphasised>Fear is holding you back.</Emphasised>
       <hr />
       <p>
         So for the last part of this lesson today, I just want you to close your
@@ -80,11 +86,6 @@ export function MelatoninIsTheKeyToCreativeInsight() {
       <p>
         In my opinion, these two (genius) guys are suggesting that you can reach
         into your dreams, the subconscious mind, through melatonin... enjoy!
-      </p>
-      <p>
-        Write about shedding your fear of the dark (be honest with yourself,
-        would you work alone in the dark woods without a torch- No? I would).
-        Fear is holding you back.
       </p>
       <iframe
         width={width}
