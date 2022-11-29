@@ -1,0 +1,87 @@
+import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
+import { SharedText } from "../../common/shared-text";
+import { RobBackButton } from "../../components/back-button.component";
+import { NewTabLink } from "../../components/new-tab-link.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
+import { QuestionComponent } from "./components/question.component";
+import { useWindowSize } from "../../hooks/use-window-size.hook";
+
+export function GuiltAndForgiveness() {
+  const windowSize = useWindowSize();
+  const width = windowSize[0] - 40;
+  usePageView(SharedRoutes.Neurochemistry.LetItBe);
+  return (
+    <div className="standard-page-margins standard-page-styling black-bg">
+      <h1>
+        <RobBackButton closeWindow />{" "}
+        {SharedText.Neurochemistry.GuiltAndForgiveness} ...
+      </h1>
+      <hr />
+      <p>First of all, be kind to yourself and others.</p>
+      <p>
+        The law is there for a reason and it demonstrates society&apos;s current
+        morale standards.
+      </p>
+      <p>
+        The law is always changing, keep an eye on it. Most of us don&apos;t get
+        a say in what changes are made.
+      </p>
+      <p>
+        Ensure you actively and openly disagree, with changes in the UK Law,
+        when you see changes being made that you disagree with.
+      </p>
+      <p>
+        Many, many people have fought wars to make sure we could have democracy.
+      </p>
+      <p>Be bold; use your vote and your voice.</p>
+      <hr />
+      <p>
+        Educate yourself and learn about UK Law in this rich book of knowledge:
+        <br />
+        <li>
+          <NewTabLink href="https://www.amazon.co.uk/Secret-Barrister-Stories-Law-Broken/dp/1509841148/ref=sr_1_2_sspa?crid=3AF3HOA53J2A7&keywords=the+secret+barrister&qid=1669727462&sprefix=the+secret+barriste%2Caps%2C77&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">
+            The Secret Barrister
+          </NewTabLink>
+        </li>
+      </p>
+      <QuestionComponent>What is the super-ego?</QuestionComponent>
+      <div className="centred">
+        <img
+          src="https://m.media-amazon.com/images/I/511AC30M93L._SX291_BO1,204,203,200_.jpg"
+          width={width / 3}
+        ></img>
+      </div>
+      <p>
+        As far as I know, the super-ego is a construct that your parents imprint
+        on you as you are growing up as a child.
+      </p>
+      <p>
+        You may have heard of the <u>inner policeman</u>, who is your voice
+        telling you inside what you think is right and wrong.
+      </p>
+      <p>
+        The inner policeman, usually, stops you from doing bad things and
+        hurting people.
+      </p>
+      <p>
+        Unfortunately though, we don&apos;t all deserve to bear children because
+        we haven&apos; truly become an adult ourselves.
+      </p>
+      <QuestionComponent>
+        What does &quot;adulthood&quot; actually mean?
+      </QuestionComponent>
+      <p>
+        Adulthood, in my opinion, is when you have the skills to train your child to be a kind person.
+      </p>
+      <p>
+        I believe true adulthood requires self-actualisation be achieved by one or both parents.
+      </p>
+      <p>
+        Sam Fender has written a fantastic song about people having kids when they aren&apos;t responsible enough
+        to look after other human beings.
+      </p>
+      <iframe width={width} height="315" src="https://www.youtube.com/embed/8HsCNzk-TAY" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+    </div>
+  );
+}

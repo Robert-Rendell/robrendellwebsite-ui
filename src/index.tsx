@@ -42,6 +42,7 @@ import { SharedRoutes } from "./common/shared-routes";
 import { SimpleEquationsInfiniteComplexity } from "./pages/recursion/simple-equations.page";
 import { MelatoninIsTheKeyToCreativeInsight } from "./pages/neurochemistry/melatonin-key-to-creativity.page";
 import { NeurochemistryConclusionPage } from "./pages/neurochemistry/conclusion.page";
+import { GuiltAndForgiveness } from "./pages/neurochemistry/guilt-and-forgiveness.page";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -117,6 +118,10 @@ ReactDOM.render(
         <Route
           path="neurochemistry/melatonin-is-the-key-to-creative-insight"
           element={<MelatoninIsTheKeyToCreativeInsight />}
+        />
+        <Route
+          path="neurochemistry/guilt-and-forgiveness"
+          element={<GuiltAndForgiveness />}
         />
         <Route
           path="neurochemistry/conclusion"

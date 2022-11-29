@@ -65,6 +65,10 @@ export function NeurochemistryReferencesPage() {
         <li>
           Watchmen (2009) film intro: https://www.youtube.com/embed/h24D87SqaLQ
         </li>
+        <li>
+          Priscilla Roth - The Super-ego:
+          https://m.media-amazon.com/images/I/511AC30M93L._SX291_BO1,204,203,200_.jpg
+        </li>
       </ol>
     </div>
   );

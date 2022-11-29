@@ -56,7 +56,11 @@ export function NeurochemistryLandingPage() {
             {SharedText.Neurochemistry.LearningAndGeneticCode}
           </NewTabLink>
         </li>
-        <li>{SharedText.Neurochemistry.GuiltAndForgiveness} (coming soon)</li>
+        <li>
+          <NewTabLink href={SharedRoutes.Neurochemistry.GuiltAndForgiveness}>
+            {SharedText.Neurochemistry.GuiltAndForgiveness}
+          </NewTabLink>
+        </li>
         <li>{SharedText.Neurochemistry.AttachmentAndSharing} (coming soon)</li>
         <li>
           <NewTabLink
