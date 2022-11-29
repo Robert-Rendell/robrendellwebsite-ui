@@ -2,6 +2,7 @@ import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { DateWritten } from "../../components/date-written.component";
+import { Emphasised } from "../../components/emphasised.component";
 import { Equation } from "../../components/equation.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
@@ -144,9 +145,9 @@ export function SimpleEquationsInfiniteComplexity() {
           In conclusion, humans should stop being elitist in the, so called,
           &quot;hierarchy&quot; of Earthly creatures.
         </p>
-        <p className="centred">
-          &#62; GO VEGGIE; IT IS TASTY AND COLOURFUL &#60;
-        </p>
+        <Emphasised>
+          GO VEGGIE; IT IS TASTY AND COLOURFUL
+        </Emphasised>
         <p>
           If we don&apos;t take care of the world we evolved with, then we are
           doomed.

@@ -82,6 +82,43 @@ export function GuiltAndForgiveness() {
         to look after other human beings.
       </p>
       <iframe width={width} height="315" src="https://www.youtube.com/embed/8HsCNzk-TAY" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <QuestionComponent>
+        What about forgiveness?
+      </QuestionComponent>
+      <p>
+        Well if you&apos; have read&nbsp;
+        <NewTabLink href="../happiness">
+        my sob story
+        </NewTabLink>
+        &nbsp;about being bullied, then you will know I have had to forgive that terrible man who inflicted it upon me.
+      </p>
+      <p>
+        I struggled to understand why I was being treated the way I was but I believe my manager in Edinburgh was also suffering.
+      </p>
+      <p>
+        He had little to no managerial experience and also a dangerous deficiency in emotional intelligence (should be required for managers).
+        Though there was one huge mental blocker he simply could not overcome:
+      </p>
+      <QuestionComponent>
+        Mental Blocker: Survival Instinct
+      </QuestionComponent>
+      <p>
+        I believe this man was threatened by me (without me being threatening to him and actually, it was in fact him that verbally threatened me!).
+      </p>
+      <p>
+        Forgiveness is so important because everyone makes mistakes and everyone deserves second changes.
+      </p>
+      <p>
+        I have forgiven my Edinburgh manager and the passage of time may have changed him anyway. However, I do worry sometimes, if he doesn&apos;t get some training in emotional intelligence,
+        he will inflict further suffering on people as their manager.
+      </p>
+      <hr/>
+      <p>
+        Make room in your life for forgiveness, we are all human and we all make mistakes.
+      </p>
+      <p>
+        After all, how are we to learn if we can&apos;t be allowed to make a mistake in the first place?
+      </p>
     </div>
   );
 }
