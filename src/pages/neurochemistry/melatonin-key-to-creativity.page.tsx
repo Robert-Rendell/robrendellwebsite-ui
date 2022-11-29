@@ -6,7 +6,7 @@ import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "./components/question.component";
 
-export function LetItGoPage() {
+export function MelatoninIsTheKeyToCreativeInsight() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   const height = windowSize[1] - 200;
@@ -78,8 +78,8 @@ export function LetItGoPage() {
         and Garfunkel.
       </p>
       <p>
-        In my opinion, these guys are suggesting that you can reach into your
-        dreams (subconscious mind) through melatonin... enjoy!
+        In my opinion, these two (genius) guys are suggesting that you can reach into your
+        dreams, subconscious mind, through melatonin... enjoy!
       </p>
       <iframe
         width={width}
