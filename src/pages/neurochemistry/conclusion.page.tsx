@@ -4,9 +4,13 @@ import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
 import { QuoteComponent } from "../../components/quote.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
+import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "./components/question.component";
 
 export function NeurochemistryConclusionPage() {
+  const windowSize = useWindowSize();
+  const width = windowSize[0] - 40;
+  const height = windowSize[1];
   usePageView(SharedRoutes.Neurochemistry.PropheciesAndMassAwakeningDiscussion);
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
@@ -46,8 +50,8 @@ export function NeurochemistryConclusionPage() {
         <u>L</u>ongbenton <u>A</u>ristocracy
       </QuestionComponent>
       <p>
-        If you reject these ideas I have articulated in this project, they will only
-        consume you.
+        If you reject these ideas I have articulated in this project, they will
+        only consume you.
       </p>
       <p>
         If you use this knowledge to do bad things, I need do nothing. Karma
@@ -58,6 +62,15 @@ export function NeurochemistryConclusionPage() {
       <QuoteComponent year={2022}>
         Remember to fully breath out, before you breath in.
       </QuoteComponent>
+      <iframe
+        width={width}
+        height={height/2}
+        src="https://www.youtube.com/embed/h24D87SqaLQ"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 }
