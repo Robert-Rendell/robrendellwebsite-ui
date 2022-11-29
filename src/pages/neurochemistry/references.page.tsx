@@ -62,6 +62,9 @@ export function NeurochemistryReferencesPage() {
           Matrix hallway picture:
           https://wallpapers.com/images/hd/human-holos-in-green-matrix-hallway-9y0kbjdasshb9q2a-9y0kbjdasshb9q2a.webp
         </li>
+        <li>
+          Watchmen (2009) film intro: https://www.youtube.com/embed/h24D87SqaLQ
+        </li>
       </ol>
     </div>
   );
