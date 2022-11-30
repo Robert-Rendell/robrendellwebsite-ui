@@ -16,7 +16,7 @@ export function NeurochemistryLandingPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
-      <MusicScrollDownMessage youtubeVideoEmbedId="mbcVm8iepQE">
+      <MusicScrollDownMessage youtubeVideoEmbedId="mbcVm8iepQE" start={120}>
         <p>
           Are you sick of terrible, emotionally unaware managers, bosses and
           leaders in your life?
