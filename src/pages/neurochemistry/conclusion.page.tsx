@@ -18,10 +18,11 @@ export function NeurochemistryConclusionPage() {
         <RobBackButton closeWindow />{" "}
         {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion} ...
       </h1>
+      <hr/>
       <p>So! ... In conclusion, what I will say is this...</p>
       <p>
-        You need to learn my second mnemonic for happiness (featured below),
-        because this website will not last long on the world wide web;
+        You must learn my second mnemonic for happiness (featured below),
+        because this website will not last long on the world wide web;&nbsp;
         <i>&quot;AGENTS&quot; ARE COMING!</i> ;).
       </p>
       <p>You must hide this mnemonic deep inside you, in your brain stem.</p>
