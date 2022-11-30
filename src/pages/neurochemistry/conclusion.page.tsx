@@ -15,7 +15,7 @@ export function NeurochemistryConclusionPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
+        <RobBackButton />{" "}
         {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion} ...
       </h1>
       <hr />

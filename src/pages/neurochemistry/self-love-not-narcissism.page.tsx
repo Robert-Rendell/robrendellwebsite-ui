@@ -12,7 +12,7 @@ export function SelfLoveNotNarcissismPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton closeWindow /> Self-love! (...Is Not Narcissism)
+        <RobBackButton /> Self-love! (...Is Not Narcissism)
       </h1>
       <hr />
       <h2 className="centred">

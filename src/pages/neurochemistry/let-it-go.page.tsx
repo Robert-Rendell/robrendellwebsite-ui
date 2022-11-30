@@ -13,7 +13,7 @@ export function LetItGoPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow /> {SharedText.Neurochemistry.LetItBe} ...
+        <RobBackButton /> {SharedText.Neurochemistry.LetItBe} ...
       </h1>
       <iframe
         width={width}

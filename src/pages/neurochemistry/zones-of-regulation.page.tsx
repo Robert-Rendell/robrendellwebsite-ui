@@ -13,8 +13,7 @@ export function ZonesOfRegulationPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.ZonesOfRegulation}
+        <RobBackButton /> {SharedText.Neurochemistry.ZonesOfRegulation}
       </h1>
       <p>
         My sister introduced me to the&nbsp;

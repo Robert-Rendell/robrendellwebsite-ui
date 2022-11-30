@@ -26,7 +26,7 @@ export function NeurochemistryLandingPage() {
       <p>Need some wisdom to deal with depression or anxiety?</p>
       <p>
         You are in the right place... get ready to{" "}
-        <NewTabLink href="https://www.imdb.com/title/tt1219289/">
+        <NewTabLink href="https://www.imdb.com/title/tt1219289/" noNewTab>
           unlock your mind&apos;s full potential
         </NewTabLink>
         .
@@ -47,66 +47,89 @@ export function NeurochemistryLandingPage() {
       <h2>Topics</h2>
       <ol>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.McEdoegsa}>
+          <NewTabLink href={SharedRoutes.Neurochemistry.McEdoegsa} noNewTab>
             {SharedText.Neurochemistry.McEdoegsa}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.ZonesOfRegulation}>
+          <NewTabLink
+            href={SharedRoutes.Neurochemistry.ZonesOfRegulation}
+            noNewTab
+          >
             The {SharedText.Neurochemistry.ZonesOfRegulation}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.SelfLove}>
+          <NewTabLink href={SharedRoutes.Neurochemistry.SelfLove} noNewTab>
             {SharedText.Neurochemistry.SelfLove}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.RelaxationResponse}>
+          <NewTabLink
+            href={SharedRoutes.Neurochemistry.RelaxationResponse}
+            noNewTab
+          >
             {SharedText.Neurochemistry.RelaxationResponse}
           </NewTabLink>
         </li>
         <li>
           <NewTabLink
             href={SharedRoutes.Neurochemistry.SubconsciousPositiveReactions}
+            noNewTab
           >
             {SharedText.Neurochemistry.SubconsciousPositiveReactions}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.SelfActualisation}>
+          <NewTabLink
+            href={SharedRoutes.Neurochemistry.SelfActualisation}
+            noNewTab
+          >
             {SharedText.Neurochemistry.SelfActualisation}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.LearningAndGeneticCode}>
+          <NewTabLink
+            href={SharedRoutes.Neurochemistry.LearningAndGeneticCode}
+            noNewTab
+          >
             {SharedText.Neurochemistry.LearningAndGeneticCode}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.GuiltAndForgiveness}>
+          <NewTabLink
+            href={SharedRoutes.Neurochemistry.GuiltAndForgiveness}
+            noNewTab
+          >
             {SharedText.Neurochemistry.GuiltAndForgiveness}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.AttachmentAndSharing}>
+          <NewTabLink
+            href={SharedRoutes.Neurochemistry.AttachmentAndSharing}
+            noNewTab
+          >
             {SharedText.Neurochemistry.AttachmentAndSharing}
           </NewTabLink>
         </li>
         <li>
           <NewTabLink
             href={SharedRoutes.Neurochemistry.MelatoninIsTheKeyToCreativity}
+            noNewTab
           >
             {SharedText.Neurochemistry.MelatoninIsTheKeyToCreativity}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.LetItBe}>
+          <NewTabLink href={SharedRoutes.Neurochemistry.LetItBe} noNewTab>
             {SharedText.Neurochemistry.LetItBe}
           </NewTabLink>
         </li>
         <li>
-          <NewTabLink href={SharedRoutes.Neurochemistry.AdviceFromTheBeatles}>
+          <NewTabLink
+            href={SharedRoutes.Neurochemistry.AdviceFromTheBeatles}
+            noNewTab
+          >
             {SharedText.Neurochemistry.AdviceFromTheBeatles}
           </NewTabLink>
         </li>
@@ -115,6 +138,7 @@ export function NeurochemistryLandingPage() {
             href={
               SharedRoutes.Neurochemistry.PropheciesAndMassAwakeningDiscussion
             }
+            noNewTab
           >
             [<u>Conclusion</u>]:{" "}
             {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion}

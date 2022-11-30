@@ -17,7 +17,7 @@ export function MCEDOEGSAPage() {
       className="standard-page-margins standard-page-styling black-bg-auto black-bg"
     >
       <h1>
-        <RobBackButton closeWindow /> {SharedText.Neurochemistry.McEdoegsa}
+        <RobBackButton /> {SharedText.Neurochemistry.McEdoegsa}
       </h1>
       <i>
         Adapted from Christopher Bergland&apos;s:{" "}

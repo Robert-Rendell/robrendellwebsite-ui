@@ -10,7 +10,7 @@ export function SubconsciousPositiveReactionsPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
+        <RobBackButton />{" "}
         {SharedText.Neurochemistry.SubconsciousPositiveReactions}
       </h1>
       <hr />

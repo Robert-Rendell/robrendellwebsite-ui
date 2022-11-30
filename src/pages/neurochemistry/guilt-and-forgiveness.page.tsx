@@ -14,8 +14,7 @@ export function GuiltAndForgiveness() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.GuiltAndForgiveness}
+        <RobBackButton /> {SharedText.Neurochemistry.GuiltAndForgiveness}
       </h1>
       <hr />
       <p>First of all, be kind to yourself and others.</p>

@@ -5,7 +5,7 @@ export function NeurochemistryReferencesPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow /> Neurochemistry Project References
+        <RobBackButton /> Neurochemistry Project References
       </h1>
       <ol className="ol-extra-margins">
         <li>Advice from The Beatles: https://i.redd.it/ob5eruy3kfe41.jpg</li>

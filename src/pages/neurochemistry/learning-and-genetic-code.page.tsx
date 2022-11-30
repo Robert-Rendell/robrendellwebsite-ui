@@ -13,8 +13,7 @@ export function LearningAndGeneticCodePage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.LearningAndGeneticCode}
+        <RobBackButton /> {SharedText.Neurochemistry.LearningAndGeneticCode}
       </h1>
       <QuestionComponent
         questionText="Training your frontal brain, subconscious and finally, altering your
