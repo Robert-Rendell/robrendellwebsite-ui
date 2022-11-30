@@ -42,15 +42,11 @@ export function LearningAndGeneticCodePage() {
       </p>
       <p>
         In Christianity, that pattern is the{" "}
-        <NewTabLink
-          href="https://en.wikipedia.org/wiki/Trinity"
-        >
+        <NewTabLink href="https://en.wikipedia.org/wiki/Trinity">
           Holy Trinity
         </NewTabLink>
         , or in Hinduism it is the{" "}
-        <NewTabLink
-          href="https://en.wikipedia.org/wiki/Trimurti"
-        >
+        <NewTabLink href="https://en.wikipedia.org/wiki/Trimurti">
           Trimurti
         </NewTabLink>
         .
