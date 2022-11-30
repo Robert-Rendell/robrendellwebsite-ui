@@ -18,7 +18,6 @@ export function NeurochemistryLandingPage() {
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
       <MusicScrollDownMessage />
-      { pageViews && (<>Minds unlocked: <Badge bg="dark"><>{ pageViews.total }</></Badge></>)}
       <hr />
       <p>
         Are you sick of terrible, emotionally unaware managers, bosses and
@@ -32,6 +31,7 @@ export function NeurochemistryLandingPage() {
         </NewTabLink>
         .
       </p>
+      { pageViews && (<>Minds unlocked: <Badge bg="dark"><>{ pageViews.total }</></Badge></>)}
       <hr />
       <p>
         Warning!! All brain chemicals mentioned in this work are completely self
