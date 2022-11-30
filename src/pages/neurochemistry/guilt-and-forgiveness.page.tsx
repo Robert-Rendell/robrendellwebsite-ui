@@ -17,7 +17,7 @@ export function GuiltAndForgiveness() {
       <h1>
         <RobBackButton /> {SharedText.Neurochemistry.GuiltAndForgiveness}
       </h1>
-      <MusicScrollDownMessage youtubeVideoUrl="https://www.youtube.com/embed/FwkrrU2WYKg">
+      <MusicScrollDownMessage youtubeVideoUrl="https://www.youtube.com/embed/FwkrrU2WYKg" start={32}>
         <p>First of all, be kind to yourself and others.</p>
         <p>
           The law is there for a reason and it demonstrates society&apos;s
