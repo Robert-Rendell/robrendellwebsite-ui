@@ -82,17 +82,9 @@ export function GuiltAndForgiveness() {
           one or both parents.
         </p>
         <p>
-          Sam Fender has written a fantastic song about people having kids when
+          Sam Fender has written <NewTabLink href="https://www.youtube.com/watch?v=8HsCNzk-TAY">a fantastic song</NewTabLink> about people having kids when
           they aren&apos;t responsible enough to look after other human beings.
         </p>
-        <iframe
-          width={width}
-          height="315"
-          src="https://www.youtube.com/embed/8HsCNzk-TAY&autoplay=1"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
         <QuestionComponent>What about forgiveness?</QuestionComponent>
         <p>
           Well if you&apos; have read&nbsp;
