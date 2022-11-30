@@ -27,6 +27,7 @@ export function MusicScrollDownMessage(props: React.PropsWithChildren<Props>) {
     youtubeLink = props.youtubeVideoUrl;
   }
   if (typeof youtubeLink !== "undefined") {
+    youtubeLink += "?";
     if (!props.doNotAutoplay) {
       youtubeLink += youtubeAutoPlay;
     }
