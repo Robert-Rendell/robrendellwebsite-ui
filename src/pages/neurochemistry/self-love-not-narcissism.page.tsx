@@ -61,7 +61,7 @@ export function SelfLoveNotNarcissismPage() {
             <u>Materialism</u>: by means of only buying what you really need;
           </li>
           <li>
-            <u>Consumerism</u>: if you aren&apos; Christian, why are you
+            <u>Consumerism</u>: if you aren&apos;t Christian, why are you
             celebrating Christ-mas?;
           </li>
           <li>
