@@ -1,22 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import Badge from "react-bootstrap/Badge";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
-import { usePageView } from "../../hooks/use-page-view.hook";
+import { PageViewResponse, usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import "../page.css";
 
 export function NeurochemistryLandingPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  usePageView(SharedRoutes.Neurochemistry.LandingPage);
-
+  const [pageViews, setPageViews] = useState<PageViewResponse>();
+  usePageView(SharedRoutes.Neurochemistry.LandingPage, setPageViews);
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
       <MusicScrollDownMessage />
+      { pageViews && (<>Page Views: <Badge bg="dark"><>{ pageViews.total.N }</></Badge></>)}
+      <hr />
+      <p>
+        Are you sick of terrible, emotionally unaware managers, bosses and
+        leaders in your life?
+      </p>
+      <p>Need some wisdom to deal with depression or anxiety?</p>
+      <p>
+        You are in the right place... get ready to{" "}
+        <NewTabLink href="https://www.imdb.com/title/tt1219289/">
+          unlock your mind&apos;s full potential
+        </NewTabLink>
+        .
+      </p>
+      <hr />
+      <p>
+        Warning!! All brain chemicals mentioned in this work are completely self
+        produced (inside your body).
+      </p>
       <h2>Topics</h2>
       <ol>
         <li>
