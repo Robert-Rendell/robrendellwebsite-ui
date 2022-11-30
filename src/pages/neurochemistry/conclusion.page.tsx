@@ -29,7 +29,7 @@ export function NeurochemistryConclusionPage() {
         <p>
           Learn it well. Learn it first in your up brain (cerebrum), then in
           your habit brain (cerebellum) and finally in your instinctual brain
-          (brain steam).
+          (brain stem).
         </p>
         <ol className="ol-extra-margins">
           <li>M = MC EGOEGSA Mnemonic</li>
