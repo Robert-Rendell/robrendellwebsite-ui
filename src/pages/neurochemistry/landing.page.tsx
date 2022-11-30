@@ -4,7 +4,6 @@ import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
-import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
 import { PageViewResponse, usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import "../page.css";
@@ -19,20 +18,20 @@ export function NeurochemistryLandingPage() {
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="mbcVm8iepQE">
         <p>
-        Are you sick of terrible, emotionally unaware managers, bosses and
-        leaders in your life?
+          Are you sick of terrible, emotionally unaware managers, bosses and
+          leaders in your life?
         </p>
         <p>Need some wisdom to deal with depression or anxiety?</p>
         <p>
-        You are in the right place... get ready to{" "}
+          You are in the right place... get ready to{" "}
           <NewTabLink href="https://www.imdb.com/title/tt1219289/" noNewTab>
-          unlock your mind&apos;s full potential
+            unlock your mind&apos;s full potential
           </NewTabLink>
-        .
+          .
         </p>
         {pageViews && (
           <>
-          Minds unlocked:{" "}
+            Minds unlocked:{" "}
             <Badge bg="dark">
               <>{pageViews.total}</>
             </Badge>
@@ -40,8 +39,8 @@ export function NeurochemistryLandingPage() {
         )}
         <hr />
         <p>
-        Warning!! All brain chemicals mentioned in this work are completely self
-        produced (inside your body).
+          Warning!! All brain chemicals mentioned in this work are completely
+          self produced (inside your body).
         </p>
         <h2>Topics</h2>
         <ol>
@@ -55,7 +54,7 @@ export function NeurochemistryLandingPage() {
               href={SharedRoutes.Neurochemistry.ZonesOfRegulation}
               noNewTab
             >
-            The {SharedText.Neurochemistry.ZonesOfRegulation}
+              The {SharedText.Neurochemistry.ZonesOfRegulation}
             </NewTabLink>
           </li>
           <li>
@@ -139,7 +138,7 @@ export function NeurochemistryLandingPage() {
               }
               noNewTab
             >
-            [<u>Conclusion</u>]:{" "}
+              [<u>Conclusion</u>]:{" "}
               {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion}
             </NewTabLink>
           </li>

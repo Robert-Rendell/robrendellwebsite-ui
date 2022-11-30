@@ -15,18 +15,18 @@ export function TheRelaxationResponsePage() {
       </h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="dsmfIAyiois">
         <p>
-        Got{" "}
+          Got{" "}
           <NewTabLink href="https://www.nhs.uk/mental-health/conditions/panic-disorder/">
-          anxiety
+            anxiety
           </NewTabLink>
-        ? Here&apos;s the answer:
+          ? Here&apos;s the answer:
         </p>
         <p>
           <img src="https://m.media-amazon.com/images/I/51hYvagEduL._SX406_BO1,204,203,200_.jpg" />
         </p>
         <p>
           <NewTabLink href="https://www.amazon.co.uk/Relaxation-Response-Herbert-Benson/dp/0380815958">
-          https://www.amazon.co.uk/Relaxation-Response-Herbert-Benson/dp/0380815958
+            https://www.amazon.co.uk/Relaxation-Response-Herbert-Benson/dp/0380815958
           </NewTabLink>
         </p>
       </MusicScrollDownMessage>

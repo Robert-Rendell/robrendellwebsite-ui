@@ -27,7 +27,7 @@ export function MusicScrollDownMessage(props: React.PropsWithChildren<Props>) {
     youtubeLink = props.youtubeVideoUrl;
   }
   if (typeof youtubeLink !== "undefined") {
-    if (!props.doNotAutoplay ) {
+    if (!props.doNotAutoplay) {
       youtubeLink += youtubeAutoPlay;
     }
     if (props.start) {
@@ -49,7 +49,7 @@ export function MusicScrollDownMessage(props: React.PropsWithChildren<Props>) {
       </p>
       <hr />
       {props.children}
-      {(youtubeLink) && (
+      {youtubeLink && (
         <>
           <hr />
           <iframe
