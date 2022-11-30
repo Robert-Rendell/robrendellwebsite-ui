@@ -3,14 +3,14 @@ import { useEffect } from "react";
 import { config } from "../config";
 
 export type PageView = {
-  ipAddress: { S: string };
-  dateTime: { T: Date };
+  ipAddress: string;
+  dateTime: string;
 };
 
 export type PageViewResponse = {
-  total: { N: number },
-  views: PageView[],
-  pageUrl: { S: string },
+  total: number;
+  views: PageView[];
+  pageUrl: string;
 }
 
 export function usePageView(pageUrl: string, pageViewsSetFn?: (val: PageViewResponse) => void) {
