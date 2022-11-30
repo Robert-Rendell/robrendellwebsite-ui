@@ -94,7 +94,7 @@ export function SelfLoveNotNarcissismPage() {
         src={`https://jmlkanewischer.files.wordpress.com/2020/04/matrix-know-thyself.jpg?w=${width}`}
         width={width}
       />
-      <hr/>
+      <hr />
       <iframe
         width={width}
         height="315"
