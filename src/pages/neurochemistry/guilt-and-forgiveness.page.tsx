@@ -64,22 +64,24 @@ export function GuiltAndForgiveness() {
         </p>
         <p>
           The inner policeman, usually, stops you from doing bad things and
-          hurting people.
+          hurting people. Ideally, it should be in line with the morales of 
+          the majority of other kind and loving human beings.
         </p>
         <p>
-          Unfortunately though, we don&apos;t all deserve to bear children
-          because we haven&apos; truly become an adult ourselves.
+          There are many reasons why a person might not have a strong, grounded
+          inner policeman (super-ego), but ultimately the responsibility should
+          lie with their parents.
         </p>
         <QuestionComponent>
           What does &quot;adulthood&quot; actually mean?
         </QuestionComponent>
         <p>
-          Adulthood, in my opinion, is when you have the skills to train your
-          child to be a kind person.
+          Adulthood, in my opinion, is when you have the mental experience to train your
+          inner child (subconscious) and your physical children to be kind people.
         </p>
         <p>
           I believe true adulthood requires self-actualisation be achieved by
-          one or both parents.
+          one or both parents, otherwise the mistakes follow through the generations, iteratively.
         </p>
         <p>
           Sam Fender has written <NewTabLink href="https://www.youtube.com/watch?v=8HsCNzk-TAY">a fantastic song</NewTabLink> about people having kids when
