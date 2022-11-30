@@ -85,7 +85,7 @@ export function GuiltAndForgiveness() {
       <iframe
         width={width}
         height="315"
-        src="https://www.youtube.com/embed/8HsCNzk-TAY"
+        src="https://www.youtube.com/embed/8HsCNzk-TAY&autoplay=1"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
