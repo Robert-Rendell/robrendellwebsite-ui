@@ -64,7 +64,6 @@ export function NeurochemistryConclusionPage() {
         <QuoteComponent year={2022}>
           Remember to fully breath out, before you breath in.
         </QuoteComponent>
-        <hr />
       </MusicScrollDownMessage>
     </div>
   );
