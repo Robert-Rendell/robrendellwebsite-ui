@@ -25,11 +25,11 @@ export function NeurochemistryConclusionPage() {
           because this website will not last long on the world wide web;&nbsp;
           <i>&quot;AGENTS&quot; ARE COMING!</i> ;).
         </p>
-        <p>You must hide this mnemonic deep inside you, in your brain stem.</p>
+        <p>You must hide this mnemonic deep inside you, in your .</p>
         <p>
           Learn it well. Learn it first in your up brain (cerebrum), then in
           your habit brain (cerebellum) and finally in your instinctual brain
-          (brain stem).
+          (brainstem).
         </p>
         <ol className="ol-extra-margins">
           <li>M = MC EGOEGSA Mnemonic</li>
