@@ -18,7 +18,7 @@ export function NeurochemistryConclusionPage() {
         <RobBackButton closeWindow />{" "}
         {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion} ...
       </h1>
-      <hr/>
+      <hr />
       <p>So! ... In conclusion, what I will say is this...</p>
       <p>
         You must learn my second mnemonic for happiness (featured below),
@@ -63,6 +63,7 @@ export function NeurochemistryConclusionPage() {
       <QuoteComponent year={2022}>
         Remember to fully breath out, before you breath in.
       </QuoteComponent>
+      <hr />
       <iframe
         width={width}
         height={height / 2}

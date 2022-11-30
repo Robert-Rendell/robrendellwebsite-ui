@@ -94,7 +94,15 @@ export function SelfLoveNotNarcissismPage() {
         src={`https://jmlkanewischer.files.wordpress.com/2020/04/matrix-know-thyself.jpg?w=${width}`}
         width={width}
       />
-      <iframe width={width} height="315" src="https://www.youtube.com/embed/M8iLdUinHl4?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <iframe
+        width={width}
+        height="315"
+        src="https://www.youtube.com/embed/M8iLdUinHl4?autoplay=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 }

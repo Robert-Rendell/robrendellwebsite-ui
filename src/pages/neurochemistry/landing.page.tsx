@@ -31,7 +31,14 @@ export function NeurochemistryLandingPage() {
         </NewTabLink>
         .
       </p>
-      { pageViews && (<>Minds unlocked: <Badge bg="dark"><>{ pageViews.total }</></Badge></>)}
+      {pageViews && (
+        <>
+          Minds unlocked:{" "}
+          <Badge bg="dark">
+            <>{pageViews.total}</>
+          </Badge>
+        </>
+      )}
       <hr />
       <p>
         Warning!! All brain chemicals mentioned in this work are completely self
