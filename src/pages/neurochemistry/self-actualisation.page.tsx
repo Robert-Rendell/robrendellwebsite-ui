@@ -2,6 +2,7 @@ import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
+import { NewTabLink } from "../../components/new-tab-link.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 
@@ -12,8 +13,7 @@ export function SelfActualisationPeakExperiencesPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.SelfActualisation}
+        <RobBackButton /> {SharedText.Neurochemistry.SelfActualisation}
       </h1>
       <p>
         Self-actualisation is the complete realisation of one&apos;s potential,
@@ -21,22 +21,18 @@ export function SelfActualisationPeakExperiencesPage() {
         life. This concept is at the top of Maslow&apos;s Hierarchy of Needs.
       </p>
       <p>
-        <a
+        <NewTabLink
           href="https://www.simplypsychology.org/self-actualization.html#:~:text=Self%2Dactualization%20is%20the%20complete,every%20human%20being%20reaches%20it."
-          target="_blank"
-          rel="noreferrer"
         >
           https://www.simplypsychology.org/self-actualization
-        </a>
+        </NewTabLink>
       </p>
       <p>
-        <a
+        <NewTabLink
           href="https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs"
-          target="_blank"
-          rel="noreferrer"
         >
           https://en.wikipedia.org/wiki/Maslow&apos;s_hierarchy_of_needs
-        </a>
+        </NewTabLink>
       </p>
       <img
         width={width}

@@ -13,8 +13,7 @@ export function AttachmentAndSharing() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.AttachmentAndSharing}
+        <RobBackButton /> {SharedText.Neurochemistry.AttachmentAndSharing}
       </h1>
       <hr />
       <p>One of the hardest mental blockers to remove is attachment.</p>

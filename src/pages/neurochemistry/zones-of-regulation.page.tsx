@@ -2,6 +2,7 @@ import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
+import { NewTabLink } from "../../components/new-tab-link.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import zones from "../../resources/zones.jpg";
@@ -13,18 +14,15 @@ export function ZonesOfRegulationPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.ZonesOfRegulation}
+        <RobBackButton /> {SharedText.Neurochemistry.ZonesOfRegulation}
       </h1>
       <p>
         My sister introduced me to the&nbsp;
-        <a
-          target="_blank"
-          rel="noreferrer"
+        <NewTabLink
           href="https://d1uvxqwmcz8fl1.cloudfront.net/tes/resources/12068045/01f52aea-5663-46a1-8728-37740dc2363a/image?width=500&height=500&version=1567674337888"
         >
           Zones of Regulation
-        </a>{" "}
+        </NewTabLink>{" "}
         a few years ago when she was teaching her school kids the topic{" "}
         <i>(Helen: you are a fantastic teacher)</i>.
       </p>

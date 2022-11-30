@@ -2,6 +2,7 @@ import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
+import { NewTabLink } from "../../components/new-tab-link.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "./components/question.component";
@@ -13,8 +14,7 @@ export function LearningAndGeneticCodePage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.LearningAndGeneticCode}
+        <RobBackButton /> {SharedText.Neurochemistry.LearningAndGeneticCode}
       </h1>
       <QuestionComponent
         questionText="Training your frontal brain, subconscious and finally, altering your
@@ -42,21 +42,17 @@ export function LearningAndGeneticCodePage() {
       </p>
       <p>
         In Christianity, that pattern is the{" "}
-        <a
+        <NewTabLink
           href="https://en.wikipedia.org/wiki/Trinity"
-          target="_blank"
-          rel="noreferrer"
         >
           Holy Trinity
-        </a>
+        </NewTabLink>
         , or in Hinduism it is the{" "}
-        <a
+        <NewTabLink
           href="https://en.wikipedia.org/wiki/Trimurti"
-          target="_blank"
-          rel="noreferrer"
         >
           Trimurti
-        </a>
+        </NewTabLink>
         .
       </p>
       <p>
@@ -142,6 +138,16 @@ export function LearningAndGeneticCodePage() {
         You can actively influence your genetic programming (on a daily basis)
         and have a say in what traits, those inheriting from you, receive.
       </p>
+      <hr />
+      <iframe
+        width={width}
+        height="315"
+        src="https://www.youtube.com/embed/F3xa8BVFF4k?autoplay=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 }

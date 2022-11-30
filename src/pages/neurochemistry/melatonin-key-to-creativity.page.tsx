@@ -14,7 +14,7 @@ export function MelatoninIsTheKeyToCreativeInsight() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
+        <RobBackButton />{" "}
         {SharedText.Neurochemistry.MelatoninIsTheKeyToCreativity}
       </h1>
       <p>Humans have been around for a long, long time.</p>

@@ -15,13 +15,14 @@ export function NeurochemistryConclusionPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
+        <RobBackButton />{" "}
         {SharedText.Neurochemistry.PropheciesAndMassAwakeningDiscussion} ...
       </h1>
+      <hr />
       <p>So! ... In conclusion, what I will say is this...</p>
       <p>
-        You need to learn my second mnemonic for happiness (featured below),
-        because this website will not last long on the world wide web;
+        You must learn my second mnemonic for happiness (featured below),
+        because this website will not last long on the world wide web;&nbsp;
         <i>&quot;AGENTS&quot; ARE COMING!</i> ;).
       </p>
       <p>You must hide this mnemonic deep inside you, in your brain stem.</p>
@@ -62,10 +63,11 @@ export function NeurochemistryConclusionPage() {
       <QuoteComponent year={2022}>
         Remember to fully breath out, before you breath in.
       </QuoteComponent>
+      <hr />
       <iframe
         width={width}
         height={height / 2}
-        src="https://www.youtube.com/embed/h24D87SqaLQ"
+        src="https://www.youtube.com/embed/h24D87SqaLQ&autoplay=1"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

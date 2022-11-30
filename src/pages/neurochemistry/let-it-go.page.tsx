@@ -13,12 +13,12 @@ export function LetItGoPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow /> {SharedText.Neurochemistry.LetItBe} ...
+        <RobBackButton /> {SharedText.Neurochemistry.LetItBe} ...
       </h1>
       <iframe
         width={width}
         height={height}
-        src="https://www.youtube.com/embed/QDYfEBY9NM4"
+        src="https://www.youtube.com/embed/QDYfEBY9NM4&autoplay=1"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

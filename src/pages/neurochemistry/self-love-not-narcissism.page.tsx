@@ -12,7 +12,7 @@ export function SelfLoveNotNarcissismPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton closeWindow /> Self-love! (...Is Not Narcissism)
+        <RobBackButton /> Self-love! (...Is Not Narcissism)
       </h1>
       <hr />
       <h2 className="centred">
@@ -94,6 +94,16 @@ export function SelfLoveNotNarcissismPage() {
         src={`https://jmlkanewischer.files.wordpress.com/2020/04/matrix-know-thyself.jpg?w=${width}`}
         width={width}
       />
+      <hr/>
+      <iframe
+        width={width}
+        height="315"
+        src="https://www.youtube.com/embed/M8iLdUinHl4?autoplay=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export function MCEDOEGSAPage() {
       className="standard-page-margins standard-page-styling black-bg-auto black-bg"
     >
       <h1>
-        <RobBackButton closeWindow /> {SharedText.Neurochemistry.McEdoegsa}
+        <RobBackButton /> {SharedText.Neurochemistry.McEdoegsa}
       </h1>
       <i>
         Adapted from Christopher Bergland&apos;s:{" "}
@@ -158,6 +158,16 @@ export function MCEDOEGSAPage() {
           </tr>
         </tbody>
       </Table>
+      <hr />
+      <iframe
+        width={width}
+        height="315"
+        src="https://www.youtube.com/embed/NZwYNrHL-rw?autoplay=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 }

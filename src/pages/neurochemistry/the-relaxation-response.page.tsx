@@ -10,8 +10,7 @@ export function TheRelaxationResponsePage() {
       style={{ height: "100%" }}
     >
       <h1>
-        <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.RelaxationResponse}
+        <RobBackButton /> {SharedText.Neurochemistry.RelaxationResponse}
       </h1>
       <p>
         Got{" "}

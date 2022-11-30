@@ -12,8 +12,7 @@ export function AdviceFromTheBeatlesPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.AdviceFromTheBeatles}
+        <RobBackButton /> {SharedText.Neurochemistry.AdviceFromTheBeatles}
       </h1>
       <img width={width} src="https://i.redd.it/ob5eruy3kfe41.jpg" />
     </div>

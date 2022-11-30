@@ -14,8 +14,7 @@ export function GuiltAndForgiveness() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg">
       <h1>
-        <RobBackButton closeWindow />{" "}
-        {SharedText.Neurochemistry.GuiltAndForgiveness}
+        <RobBackButton /> {SharedText.Neurochemistry.GuiltAndForgiveness}
       </h1>
       <hr />
       <p>First of all, be kind to yourself and others.</p>
@@ -86,7 +85,7 @@ export function GuiltAndForgiveness() {
       <iframe
         width={width}
         height="315"
-        src="https://www.youtube.com/embed/8HsCNzk-TAY"
+        src="https://www.youtube.com/embed/8HsCNzk-TAY&autoplay=1"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

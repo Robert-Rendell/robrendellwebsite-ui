@@ -11,9 +11,12 @@ export type PageViewResponse = {
   total: number;
   views: PageView[];
   pageUrl: string;
-}
+};
 
-export function usePageView(pageUrl: string, pageViewsSetFn?: (val: PageViewResponse) => void) {
+export function usePageView(
+  pageUrl: string,
+  pageViewsSetFn?: (val: PageViewResponse) => void
+) {
   useEffect(() => {
     axios
       .post(`${config.backend}/view-page`, {
