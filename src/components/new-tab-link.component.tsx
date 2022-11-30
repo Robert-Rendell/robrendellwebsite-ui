@@ -3,6 +3,12 @@ import React from "react";
 type Props = {
   href?: string;
   label?: string;
+  noNewTab?: boolean;
+};
+
+const newTabAttributes = {
+  target: "_blank",
+  rel: "noreferrer"
 };
 
 export function NewTabLink(props: React.PropsWithChildren<Props>) {
@@ -13,8 +19,7 @@ export function NewTabLink(props: React.PropsWithChildren<Props>) {
       <>
         <a
           href={props.href ?? String(props.children)}
-          target="_blank"
-          rel="noreferrer"
+          { ...((!props.noNewTab) ? newTabAttributes : {}) }
         >
           {props.label ?? props.children}
         </a>
