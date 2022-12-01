@@ -22,7 +22,7 @@ export function ZonesOfRegulationPage() {
           Zones of Regulation
         </NewTabLink>{" "}
         a few years ago when she was teaching her school kids the topic{" "}
-        <i>(Helen: you are a fantastic teacher)</i>.
+        <i>(Sister: you are a fantastic teacher)</i>.
       </p>
       <p>
         In that same conversation we shared our similar experiences of suffering

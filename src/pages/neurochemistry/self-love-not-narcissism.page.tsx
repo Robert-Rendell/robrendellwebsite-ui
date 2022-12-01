@@ -70,7 +70,7 @@ export function SelfLoveNotNarcissismPage() {
           </li>
           <li>
             <u>Instinctual fears</u>: spiders, heights, wasps, you name it -
-            face them and treat animals kindly!
+            face your fears and treat animals kindly!
           </li>
         </ul>
       </p>
