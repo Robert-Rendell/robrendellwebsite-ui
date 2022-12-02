@@ -6,6 +6,7 @@ import { MusicScrollDownMessage } from "../../components/music-scroll-down.compo
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { PageViewResponse, usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
+import InfinitySpinner from "../../resources/infinity-spinner.svg";
 import "../page.css";
 
 export function NeurochemistryLandingPage() {
@@ -17,18 +18,7 @@ export function NeurochemistryLandingPage() {
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="mbcVm8iepQE" start={120}>
-        <p>
-          Are you sick of terrible, emotionally unaware managers, bosses and
-          leaders in your life?
-        </p>
-        <p>Need some wisdom to deal with depression or anxiety?</p>
-        <p>
-          You are in the right place... get ready to{" "}
-          <NewTabLink href="https://www.imdb.com/title/tt1219289/" noNewTab>
-            unlock your mind&apos;s full potential
-          </NewTabLink>
-          .
-        </p>
+        {typeof pageViews === "undefined" && <img src={InfinitySpinner} height={50} />}
         {pageViews && (
           <>
             Minds unlocked:{" "}
@@ -37,7 +27,6 @@ export function NeurochemistryLandingPage() {
             </Badge>
           </>
         )}
-        <hr />
         <p>
           Warning!! All brain chemicals mentioned in this work are completely
           self produced (inside your body).
