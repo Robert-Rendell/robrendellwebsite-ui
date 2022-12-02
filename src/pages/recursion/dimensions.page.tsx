@@ -35,7 +35,7 @@ export function DimensionsPage() {
           </p>
           <div className="centred">
             <img
-              width={width / 2}
+              width={(width <= 600 ? width : width / 2)}
               src="https://t4.ftcdn.net/jpg/05/12/86/27/240_F_512862789_abYbb2RPLzpN8aAjteTBb4xGnRgqVSyw.jpg"
             />
           </div>
