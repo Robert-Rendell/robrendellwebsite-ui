@@ -26,18 +26,7 @@ export const NavComponent = () => {
           >
             <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
 
-            <NavDropdown title="Recursion Project" id="recursionProject">
-              <NavDropdown.Item href="/recursion">
-                Recursion / Fractals
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/recursion/bifurcation-logistical-map">
-                Chaos Theory: Bifurcation Logistical Map
-              </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.Recursion.SimpleEquations}>
-                {SharedText.Recursion.SimpleEquations}
-              </NavDropdown.Item>
-            </NavDropdown>
-
+            <Nav.Link href="/recursion">Recursion Project</Nav.Link>
             <Nav.Link href="/neurochemistry">Neurochemistry Project</Nav.Link>
 
             <NavDropdown title="Climate Change" id="climateChange">

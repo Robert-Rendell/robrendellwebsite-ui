@@ -12,10 +12,9 @@ export function RecursionLandingPage() {
   return (
     <>
       <div className="standard-page-margins standard-page-styling">
-        <h1>Recursion / Fractals Project</h1>
-
-        <h2>Topics</h2>
-        <MusicScrollDownMessage youtubeVideoEmbedId="">
+        <h1>{SharedText.Recursion.RecursionAndFractals}</h1>
+        <MusicScrollDownMessage youtubeVideoEmbedId="GRQDOyO68kY" start={3}>
+          <h2>Topics</h2>
           <ol>
             <li>
               <NewTabLink href={SharedRoutes.Recursion.RecursionAndFractals}>
@@ -32,6 +31,11 @@ export function RecursionLandingPage() {
             <li>
               <NewTabLink href={SharedRoutes.Recursion.SimpleEquations}>
                 {SharedText.Recursion.SimpleEquations}
+              </NewTabLink>
+            </li>
+            <li>
+              <NewTabLink href={SharedRoutes.Recursion.Dimensions}>
+                {SharedText.Recursion.Dimensions}
               </NewTabLink>
             </li>
           </ol>
