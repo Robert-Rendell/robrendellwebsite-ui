@@ -131,7 +131,7 @@ export const TesseractHypercube4dSketch = (p5: P5Instance<Props>) => {
   }
 
   let angle = 0;
-
+  let sketchColor = p5.color(255);
   const points: P4Vector[] = [];
 
   p5.setup = () => {
@@ -156,7 +156,7 @@ export const TesseractHypercube4dSketch = (p5: P5Instance<Props>) => {
   };
 
   p5.draw = () => {
-    p5.background(0);
+    p5.background(p5.color(40, 44, 52));
     p5.rotateX(-p5.PI / 2);
     const projected3d = [];
 
@@ -193,8 +193,8 @@ export const TesseractHypercube4dSketch = (p5: P5Instance<Props>) => {
       projected.mult(p5.width / 8);
       projected3d[i] = projected;
 
-      p5.stroke(255, 200);
-      p5.strokeWeight(16);
+      p5.stroke(sketchColor);
+      p5.strokeWeight(8);
       p5.noFill();
 
       p5.point(projected.x, projected.y, projected.z);
@@ -222,10 +222,14 @@ export const TesseractHypercube4dSketch = (p5: P5Instance<Props>) => {
   };
 
   function connect(offset: number, i: number, j: number, points: P4Vector[]) {
-    p5.strokeWeight(4);
-    p5.stroke(255);
+    p5.strokeWeight(2);
+    p5.stroke(sketchColor);
     const a = points[i + offset];
     const b = points[j + offset];
     p5.line(a.x, a.y, a.z, b.x, b.y, b.z);
   }
+
+  p5.mousePressed = () => {
+    sketchColor = p5.color(p5.random(255), p5.random(255), p5.random(255));
+  };
 };
