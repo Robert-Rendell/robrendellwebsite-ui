@@ -21,7 +21,9 @@ export function LearningAndGeneticCodePage() {
         <QuestionComponent
           questionText="Training your frontal brain, subconscious and finally, altering your
         genetic code."
+          hrOff
         />
+        <hr />
         <p>
           To begin, it&apos;s worth noting I have no scientific knowledge of
           genetics.
@@ -43,7 +45,10 @@ export function LearningAndGeneticCodePage() {
           especially in our religious belief systems.
         </p>
         <p>
-          In Christianity, that pattern is the{" "}
+          <NewTabLink href="https://en.wikipedia.org/wiki/Bismillah">
+            Bismillah
+          </NewTabLink>
+          ! In Christianity, that pattern is the{" "}
           <NewTabLink href="https://en.wikipedia.org/wiki/Trinity">
             Holy Trinity
           </NewTabLink>
