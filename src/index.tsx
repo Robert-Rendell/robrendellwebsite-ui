@@ -11,7 +11,6 @@ import SudokuDashboardComponent from "./pages/sudoku/dashboard/sudoku-dashboard.
 import SudokuGameComponent from "./pages/sudoku/game/sudoku-game.component";
 import UniDataVisualiserComponent from "./pages/technical-tests/291121/uni-data-visualiser.component";
 import StravaDashboardComponent from "./pages/strava-api/strava-dashboard.component";
-import { RecursionPage } from "./pages/recursion/recursion.page";
 import { BifurcationLogisticalPage } from "./pages/recursion/bifurcation-logistical.page";
 import { RuminantsPage } from "./pages/climate-change/ruminants.page";
 import { RideABikePage } from "./pages/climate-change/ride-a-bike.page";
@@ -44,6 +43,9 @@ import { MelatoninIsTheKeyToCreativeInsight } from "./pages/neurochemistry/melat
 import { NeurochemistryConclusionPage } from "./pages/neurochemistry/conclusion.page";
 import { GuiltAndForgiveness } from "./pages/neurochemistry/guilt-and-forgiveness.page";
 import { AttachmentAndSharing } from "./pages/neurochemistry/attachment-and-sharing.page";
+import { RecursionLandingPage } from "./pages/recursion/landing.page";
+import { DimensionsPage } from "./pages/recursion/dimensions.page";
+import { RecursionAndFractalsPage } from "./pages/recursion/recursion-and-fractals.page";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -52,20 +54,34 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<HomePage />} />
 
+        {/* //////////////////////////////////// */}
         <Route path="sudoku" element={<SudokuDashboardComponent />} />
         <Route path="sudoku/play" element={<SudokuGameComponent />} />
         <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
 
-        <Route path="recursion" element={<RecursionPage />} />
+        {/* //////////////////////////////////// */}
         <Route
-          path="recursion/bifurcation-logistical-map"
+          path={SharedRoutes.Recursion.LandingPage}
+          element={<RecursionLandingPage />}
+        />
+        <Route
+          path={SharedRoutes.Recursion.RecursionAndFractals}
+          element={<RecursionAndFractalsPage />}
+        />
+        <Route
+          path={SharedRoutes.Recursion.BifurcationLogisticalMap}
           element={<BifurcationLogisticalPage />}
         />
         <Route
           path={SharedRoutes.Recursion.SimpleEquations}
           element={<SimpleEquationsInfiniteComplexity />}
         />
+        <Route
+          path={SharedRoutes.Recursion.Dimensions}
+          element={<DimensionsPage />}
+        />
 
+        {/* //////////////////////////////////// */}
         <Route path="climate-change" element={<ClimateChangeLandingPage />} />
         <Route
           path={SharedRoutes.ClimateChange.Ruminants}
@@ -85,6 +101,7 @@ ReactDOM.render(
           element={<ReduceReuseRecyclePage />}
         />
 
+        {/* //////////////////////////////////// */}
         <Route path="neurochemistry/" element={<NeurochemistryLandingPage />} />
         <Route path="neurochemistry/happiness" element={<MCEDOEGSAPage />} />
         <Route
@@ -137,12 +154,14 @@ ReactDOM.render(
           element={<NeurochemistryReferencesPage />}
         />
 
+        {/* //////////////////////////////////// */}
         <Route path="miscellaneous/india" element={<IndiaPage />} />
         <Route
           path="miscellaneous/giant-pacific-octopus"
           element={<GiantPacificOctopusPage />}
         />
 
+        {/* //////////////////////////////////// */}
         <Route
           path="photos-ive-taken/nature/arachnids"
           element={<ArachnidsPage />}
@@ -158,11 +177,13 @@ ReactDOM.render(
         />
         <Route path="photos-ive-taken/nature/fungi" element={<FungiPage />} />
 
+        {/* //////////////////////////////////// */}
         <Route
           path="/technical-tests/291121"
           element={<UniDataVisualiserComponent />}
         />
 
+        {/* //////////////////////////////////// */}
         <Route path="strava-api" element={<StravaDashboardComponent />} />
       </Routes>
       <RobRendellFooterComponent />

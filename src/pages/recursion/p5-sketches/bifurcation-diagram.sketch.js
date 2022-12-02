@@ -141,6 +141,10 @@ const bifurcationDiagramSketch = (p5) => {
     bf.draw();
   };
 
+  p5.mousePressed = () => {
+    p5.setup();
+  };
+
   // p5.mousePressed = () => {
   //   bf.increment();
   // }

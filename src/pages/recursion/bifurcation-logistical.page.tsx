@@ -2,24 +2,20 @@ import React from "react";
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import { bifurcationDiagramSketch } from "./p5-sketches/bifurcation-diagram.sketch";
 import "../page.css";
+import { SharedText } from "../../common/shared-text";
+import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
+import { RobBackButton } from "../../components/back-button.component";
 
-class BifurcationLogisticalPage extends React.Component {
-  constructor(props: Record<string, string>) {
-    super(props);
-    this.state = { date: new Date() };
-  }
-
-  componentDidMount() {
-    // nothing
-  }
-
-  render() {
-    return (
-      <div className="standard-page-margins standard-page-styling">
+export function BifurcationLogisticalPage() {
+  return (
+    <div className="standard-page-margins standard-page-styling">
+      <h1>
+        <RobBackButton /> Chaos Theory:{" "}
+        {SharedText.Recursion.BifurcationLogisticalMap}
+      </h1>
+      <MusicScrollDownMessage youtubeVideoEmbedId="ovJcsL7vyrk" msg=" ">
         <ReactP5Wrapper sketch={bifurcationDiagramSketch} />
-      </div>
-    );
-  }
+      </MusicScrollDownMessage>
+    </div>
+  );
 }
-
-export { BifurcationLogisticalPage };

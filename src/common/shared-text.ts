@@ -9,6 +9,9 @@ export const SharedText: RobRendellWebsiteModel = {
     RideABike: "Ride a Bike!",
   },
   Recursion: {
+    LandingPage: "Recursion / Fractals Project",
+    Dimensions: "Dimensions: 1D, 2D, 3D, 4D and ∞D",
+    BifurcationLogisticalMap: "Bifurcation of the Logistical Map",
     RecursionAndFractals: "Recursion and Fractals",
     SimpleEquations: "Simple Equations = Infinite Complexity",
   },

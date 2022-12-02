@@ -9,10 +9,17 @@ type Props = {
   doNotAutoplay?: boolean;
   heightPercent?: number;
   start?: number;
+  msg?: string;
 };
 
 const youtubeAutoPlay = "autoplay=1";
 const youtubeEmbedSrc = "https://www.youtube.com/embed/";
+const defaultMsg = (
+  <>
+    Scroll down to the <ScrollToBottomLink>bottom</ScrollToBottomLink> of this
+    page and play the youtube video if you want music while reading :)
+  </>
+);
 
 export function MusicScrollDownMessage(props: React.PropsWithChildren<Props>) {
   const windowSize = useWindowSize();
@@ -42,11 +49,7 @@ export function MusicScrollDownMessage(props: React.PropsWithChildren<Props>) {
   return (
     <>
       <p>
-        <i>
-          Scroll down to the <ScrollToBottomLink>bottom</ScrollToBottomLink> of
-          this page and play the youtube video if you want music while reading
-          :)
-        </i>
+        <i>{props.msg ? props.msg : defaultMsg}</i>
       </p>
       <hr />
       {props.children}

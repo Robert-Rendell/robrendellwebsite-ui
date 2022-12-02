@@ -1,4 +1,5 @@
 {
+    "ignorePatterns": ["toxiclibs.js", "toxichelper.js", "4d-hypercube.sketch.ts"],
     "env": {
         "browser": true,
         "es2021": true

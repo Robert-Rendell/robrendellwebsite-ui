@@ -9,7 +9,10 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     RideABike: "/climate-change/ride-a-bike",
   },
   Recursion: {
-    RecursionAndFractals: "/recursion",
+    LandingPage: "/recursion",
+    Dimensions: "/recursion/dimensions",
+    BifurcationLogisticalMap: "/recursion/bifurcation-logistical-map",
+    RecursionAndFractals: "/recursion/fractals",
     SimpleEquations: "/recursion/simple-equations-infinite-complexity",
   },
   Neurochemistry: {
