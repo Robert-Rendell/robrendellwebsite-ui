@@ -1,6 +1,7 @@
 import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
+import { RobBackButton } from "../../components/back-button.component";
 import { DateWritten } from "../../components/date-written.component";
 import { Emphasised } from "../../components/emphasised.component";
 import { Equation } from "../../components/equation.component";
@@ -22,7 +23,9 @@ export function SimpleEquationsInfiniteComplexity() {
         id="simple-equations"
         className="standard-page-margins standard-page-styling"
       >
-        <h1>{SharedText.Recursion.SimpleEquations}</h1>
+        <h1>
+          <RobBackButton /> {SharedText.Recursion.SimpleEquations}
+        </h1>
         <DateWritten>26.11.22</DateWritten>
         <span>
           &nbsp;

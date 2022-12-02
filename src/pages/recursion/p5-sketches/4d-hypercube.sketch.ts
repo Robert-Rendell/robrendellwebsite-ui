@@ -12,10 +12,10 @@ import { P5Instance } from "react-p5-wrapper";
 
 type Matrix = number[][];
 type Props = {
-  //
+  screenWidth: number;
 };
 
-const TesseractHypercube4dSketch = (p5: P5Instance<Props>) => {
+export const TesseractHypercube4dSketch = (p5: P5Instance<Props>) => {
   type Vector = ReturnType<typeof p5.createVector>;
   class P4Vector {
     constructor(
@@ -135,7 +135,7 @@ const TesseractHypercube4dSketch = (p5: P5Instance<Props>) => {
   const points: P4Vector[] = [];
 
   p5.setup = () => {
-    const size = p5.min(p5.windowWidth, p5.windowHeight);
+    const size = p5.min(p5.windowWidth / 2, p5.windowHeight / 2);
     p5.createCanvas(size, size, p5.WEBGL);
     points[0] = new P4Vector(-1, -1, -1, 1);
     points[1] = new P4Vector(1, -1, -1, 1);
@@ -194,7 +194,7 @@ const TesseractHypercube4dSketch = (p5: P5Instance<Props>) => {
       projected3d[i] = projected;
 
       p5.stroke(255, 200);
-      p5.strokeWeight(32);
+      p5.strokeWeight(16);
       p5.noFill();
 
       p5.point(projected.x, projected.y, projected.z);

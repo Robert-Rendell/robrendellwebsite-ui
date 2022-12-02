@@ -17,12 +17,12 @@ import leaf from "../../resources/leaf.jpg";
 import margarite from "../../resources/margarite.jpg";
 import fibonacciMandelbrot from "../../resources/mandelbrot-fibonacci.jpg";
 import { goldenRatioSketch } from "./p5-sketches/golden-ratio.sketch";
-import { ScrollToTopLink } from "../../components/scroll-to-top-link.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { DateWritten } from "../../components/date-written.component";
 import { SharedText } from "../../common/shared-text";
 import { usePageView } from "../../hooks/use-page-view.hook";
 import { SharedRoutes } from "../../common/shared-routes";
+import { RobBackButton } from "../../components/back-button.component";
 
 export const RecursionAndFractalsPage = () => {
   const windowSize = useWindowSize();
@@ -35,7 +35,9 @@ export const RecursionAndFractalsPage = () => {
   return (
     <>
       <div className="standard-page-margins standard-page-styling">
-        <h1>{SharedText.Recursion.RecursionAndFractals}</h1>
+        <h1>
+          <RobBackButton /> {SharedText.Recursion.RecursionAndFractals}
+        </h1>
         <DateWritten>Nov 2022</DateWritten>
         <MusicScrollDownMessage youtubeVideoEmbedId="tVvG3X1pcQ8" start={40}>
           <h1>
