@@ -9,6 +9,7 @@ export const SharedText: RobRendellWebsiteModel = {
     RideABike: "Ride a Bike!",
   },
   Recursion: {
+    BifurcationLogisticalMap: "Bifurcation of the Logistical Map",
     RecursionAndFractals: "Recursion and Fractals",
     SimpleEquations: "Simple Equations = Infinite Complexity",
   },

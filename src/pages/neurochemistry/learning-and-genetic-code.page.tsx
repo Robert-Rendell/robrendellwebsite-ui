@@ -57,10 +57,12 @@ export function LearningAndGeneticCodePage() {
         </p>
         <p>
           In my eyes, it makes sense to me that the father, son and holy ghost
-          of (the Holy Trinity) is a perfect shape to represent the human brain.&nbsp;
-          (<NewTabLink href="https://en.wikipedia.org/wiki/Bismillah">
-          Bismillah
-          </NewTabLink>!)
+          of (the Holy Trinity) is a perfect shape to represent the human
+          brain.&nbsp; (
+          <NewTabLink href="https://en.wikipedia.org/wiki/Bismillah">
+            Bismillah
+          </NewTabLink>
+          !)
         </p>
         <hr />
         <p>

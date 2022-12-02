@@ -7,6 +7,7 @@ export type RobRendellWebsiteModel = {
     RideABike: string;
   };
   Recursion: {
+    BifurcationLogisticalMap: string;
     RecursionAndFractals: string;
     SimpleEquations: string;
   };
