@@ -69,7 +69,8 @@ export function SelfLoveNotNarcissismPage() {
             in this day and age;
           </li>
           <li>
-            <u>Retribution/Revenge</u>: anger is wasted energy because it makes you less rational / less logical.
+            <u>Retribution / revenge</u>: anger is wasted energy because it
+            makes you less rational / less logical.
           </li>
           <li>
             <u>Instinctual fears</u>: spiders, heights, wasps, you name it -

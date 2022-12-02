@@ -17,7 +17,10 @@ export function GuiltAndForgiveness() {
       <h1>
         <RobBackButton /> {SharedText.Neurochemistry.GuiltAndForgiveness}
       </h1>
-      <MusicScrollDownMessage youtubeVideoUrl="https://www.youtube.com/embed/FwkrrU2WYKg" start={32}>
+      <MusicScrollDownMessage
+        youtubeVideoUrl="https://www.youtube.com/embed/FwkrrU2WYKg"
+        start={32}
+      >
         <p>First of all, be kind to yourself and others.</p>
         <p>
           The law is there for a reason and it demonstrates society&apos;s
@@ -64,8 +67,8 @@ export function GuiltAndForgiveness() {
         </p>
         <p>
           The inner policeman, usually, stops you from doing bad things and
-          hurting people. Ideally, it should be in line with the morales of 
-          the majority of other kind and loving human beings.
+          hurting people. Ideally, it should be in line with the morales of the
+          majority of other kind and loving human beings.
         </p>
         <p>
           There are many reasons why a person might not have a strong, grounded
@@ -76,16 +79,22 @@ export function GuiltAndForgiveness() {
           What does &quot;adulthood&quot; actually mean?
         </QuestionComponent>
         <p>
-          Adulthood, in my opinion, is when you have the mental experience to train your
-          inner child (subconscious) and your physical children to be kind people.
+          Adulthood, in my opinion, is when you have the mental experience to
+          train your inner child (subconscious) and your physical children to be
+          kind people.
         </p>
         <p>
           I believe true adulthood requires self-actualisation be achieved by
-          one or both parents, otherwise the mistakes follow through the generations, iteratively.
+          one or both parents, otherwise the mistakes follow through the
+          generations, iteratively.
         </p>
         <p>
-          Sam Fender has written <NewTabLink href="https://www.youtube.com/watch?v=8HsCNzk-TAY">a fantastic song</NewTabLink> about people having kids when
-          they aren&apos;t responsible enough to look after other human beings.
+          Sam Fender has written{" "}
+          <NewTabLink href="https://www.youtube.com/watch?v=8HsCNzk-TAY">
+            a fantastic song
+          </NewTabLink>{" "}
+          about people having kids when they aren&apos;t responsible enough to
+          look after other human beings.
         </p>
         <QuestionComponent>What about forgiveness?</QuestionComponent>
         <p>
