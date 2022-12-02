@@ -25,7 +25,7 @@ export function NeurochemistryConclusionPage() {
           because this website will not last long on the world wide web;&nbsp;
           <i>&quot;AGENTS&quot; ARE COMING!</i> ;).
         </p>
-        <p>You must hide this mnemonic deep inside you, in your .</p>
+        <p>You must hide this mnemonic deep inside you - in your brainstem - so your emotional intelligence is reflex and lightning fast!</p>
         <p>
           Learn it well. Learn it first in your up brain (cerebrum), then in
           your habit brain (cerebellum) and finally in your instinctual brain
