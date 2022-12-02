@@ -45,10 +45,7 @@ export function LearningAndGeneticCodePage() {
           especially in our religious belief systems.
         </p>
         <p>
-          <NewTabLink href="https://en.wikipedia.org/wiki/Bismillah">
-            Bismillah
-          </NewTabLink>
-          ! In Christianity, that pattern is the{" "}
+          In Christianity, that pattern is the{" "}
           <NewTabLink href="https://en.wikipedia.org/wiki/Trinity">
             Holy Trinity
           </NewTabLink>
@@ -60,7 +57,10 @@ export function LearningAndGeneticCodePage() {
         </p>
         <p>
           In my eyes, it makes sense to me that the father, son and holy ghost
-          of (the Holy Trinity) is a perfect shape to represent the human brain.
+          of (the Holy Trinity) is a perfect shape to represent the human brain.&nbsp;
+          (<NewTabLink href="https://en.wikipedia.org/wiki/Bismillah">
+          Bismillah
+          </NewTabLink>!)
         </p>
         <hr />
         <p>
