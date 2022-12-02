@@ -28,36 +28,7 @@ export const NavComponent = () => {
 
             <Nav.Link href="/recursion">Recursion Project</Nav.Link>
             <Nav.Link href="/neurochemistry">Neurochemistry Project</Nav.Link>
-
-            <NavDropdown title="Climate Change" id="climateChange">
-              <NavDropdown.Item href={SharedRoutes.ClimateChange.Ruminants}>
-                {SharedText.ClimateChange.Ruminants}
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/climate-change/ride-a-bike">
-                Ride a Bike!
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/climate-change/ocean-acidification">
-                Ocean Acidification
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/climate-change/reduce-reuse-recycle">
-                Reduce, Reuse, Recycle (Plastic!)
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/climate-change/renewable-energy">
-                Renewable Energy
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href="https://www.timeshighereducation.com/impactrankings"
-                target="_blank"
-              >
-                World University Impact Sustainability Rankings
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href={SharedRoutes.ClimateChange.CarlSagan1985}
-                target="_blank"
-              >
-                {SharedText.ClimateChange.CarlSagan1985}
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="/climate-change">Climate Change</Nav.Link>
 
             <NavDropdown title="Nature" id="nature">
               <NavDropdown.Item href="/photos-ive-taken/nature/wild-flowers">

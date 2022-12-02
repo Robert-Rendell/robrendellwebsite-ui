@@ -45,6 +45,7 @@ import { GuiltAndForgiveness } from "./pages/neurochemistry/guilt-and-forgivenes
 import { AttachmentAndSharing } from "./pages/neurochemistry/attachment-and-sharing.page";
 import { RecursionLandingPage } from "./pages/recursion/landing.page";
 import { DimensionsPage } from "./pages/recursion/dimensions.page";
+import { RecursionAndFractalsPage } from "./pages/recursion/recursion-and-fractals.page";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -59,7 +60,14 @@ ReactDOM.render(
         <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
 
         {/* //////////////////////////////////// */}
-        <Route path="recursion" element={<RecursionLandingPage />} />
+        <Route
+          path={SharedRoutes.Recursion.LandingPage}
+          element={<RecursionLandingPage />}
+        />
+        <Route
+          path={SharedRoutes.Recursion.RecursionAndFractals}
+          element={<RecursionAndFractalsPage />}
+        />
         <Route
           path={SharedRoutes.Recursion.BifurcationLogisticalMap}
           element={<BifurcationLogisticalPage />}

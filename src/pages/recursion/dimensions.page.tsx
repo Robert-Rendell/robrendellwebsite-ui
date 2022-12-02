@@ -16,7 +16,8 @@ export function DimensionsPage() {
       >
         <h1>{SharedText.Recursion.Dimensions}</h1>
         <MusicScrollDownMessage youtubeVideoEmbedId="_2vRbNehGB0">
-          <QuestionComponent>What is 1D, 2D and 3D?</QuestionComponent>
+          <QuestionComponent hrOff>What is 1D, 2D and 3D?</QuestionComponent>
+          <p></p>
         </MusicScrollDownMessage>
       </div>
     </>
