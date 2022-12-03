@@ -5,8 +5,11 @@ import "../page.css";
 import { SharedText } from "../../common/shared-text";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { RobBackButton } from "../../components/back-button.component";
+import { useWindowSize } from "../../hooks/use-window-size.hook";
 
 export function BifurcationLogisticalPage() {
+  const windowSize = useWindowSize();
+  const width = windowSize[0] - 20;
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
@@ -14,7 +17,7 @@ export function BifurcationLogisticalPage() {
         {SharedText.Recursion.BifurcationLogisticalMap}
       </h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="ovJcsL7vyrk" msg=" ">
-        <ReactP5Wrapper sketch={bifurcationDiagramSketch} />
+        <ReactP5Wrapper sketch={bifurcationDiagramSketch} screenWidth={width} />
       </MusicScrollDownMessage>
     </div>
   );

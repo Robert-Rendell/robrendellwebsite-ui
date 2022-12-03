@@ -133,7 +133,7 @@ const bifurcationDiagramSketch = (p5) => {
 
   p5.setup = () => {
     p5.background(0);
-    p5.createCanvas(1200, 500);
+    p5.createCanvas(p5.screenWidth, 500);
     bf = new Bifurcation();
   };
 
