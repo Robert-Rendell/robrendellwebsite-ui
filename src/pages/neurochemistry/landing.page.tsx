@@ -18,7 +18,9 @@ export function NeurochemistryLandingPage() {
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="mbcVm8iepQE" start={120}>
-        {typeof pageViews === "undefined" && <img src={InfinitySpinner} height={50} />}
+        {typeof pageViews === "undefined" && (
+          <img src={InfinitySpinner} height={50} />
+        )}
         {pageViews && (
           <>
             Minds unlocked:{" "}
