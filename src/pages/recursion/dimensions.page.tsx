@@ -59,11 +59,13 @@ export function DimensionsPage() {
             is currently rotating inside 4D space.
           </p>
           <p>
-            The animation below is the shadow (if there is such a thing in 4D), of the tesseract shape.
-            By rule of extrapolation, 3D objects cast a 2D shadow; and 2D objects cast a 1D shadow.
+            The animation below is the shadow (if there is such a thing in 4D),
+            of the tesseract shape. By rule of extrapolation, 3D objects cast a
+            2D shadow; and 2D objects cast a 1D shadow.
           </p>
           <p>
-            Using this rule, we can say 4D objects cast a 3D shadow. This is what we are looking at below:
+            Using this rule, we can say 4D objects cast a 3D shadow. This is
+            what we are looking at below:
           </p>
           <hr />
           <div className="centred">
@@ -73,9 +75,9 @@ export function DimensionsPage() {
             />
           </div>
           <QuestionComponent>
-            What is it like to have lived and evolved in 4D?
+            What is it like to live and to have evolved in 4D?
           </QuestionComponent>
-          <p>Imagine our eyes can see in 3D inside a 4D environment.</p>
+          <p>Imagine our eyes could see in 3D... inside a 4D environment.</p>
           <p>
             With our perspective (viewpoint) we can see all sides of the
             tesseract shape at once.
@@ -85,10 +87,11 @@ export function DimensionsPage() {
             everything beyond 3D).
           </p>
           <p>
-            I believe this is the point where this article relates to recursion.
+            I believe <i>this</i> is the point where this article relates to
+            recursion.
           </p>
           <p>
-            I believe that if there was a species that lived and evolved in 4D,
+            I believe that, if there was a species that lived and evolved in 4D,
             their minds would be fully at peace with recursion and infinity.
           </p>
         </MusicScrollDownMessage>
