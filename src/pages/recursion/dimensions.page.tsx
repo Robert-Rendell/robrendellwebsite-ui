@@ -42,12 +42,58 @@ export function DimensionsPage() {
           <hr />
           <p></p>
           <h2>The Tesseract: 4D rotating object shadow</h2>
+          <p>
+            We cannot possibly see, smell, feel, touch or hear in 4 dimensions.
+            The closest thing we can get is to see a shadow in 3D of a 4D shape.
+          </p>
+          <p>
+            As we are beings inside of a 3D environment, perspective is a huge
+            part of this and our eyes are a single viewpoint where the light
+            arrives into our cornea. Our eyes always see in 2D; despite our mind
+            being able to remember and build a 3d model in our imagination (and
+            keep track of that model).
+          </p>
+          <hr />
+          <p>
+            The Tesseract is a 4D object that, for the purposes of this article,
+            is currently rotating inside 4D space.
+          </p>
+          <p>
+            The animation below is the shadow (if there is such a thing in 4D),
+            of the tesseract shape. By rule of extrapolation, 3D objects cast a
+            2D shadow; and 2D objects cast a 1D shadow.
+          </p>
+          <p>
+            Using this rule, we can say 4D objects cast a 3D shadow. This is
+            what we are looking at below:
+          </p>
+          <hr />
           <div className="centred">
             <ReactP5Wrapper
               sketch={TesseractHypercube4dSketch}
               screenWidth={width - 50}
             />
           </div>
+          <QuestionComponent>
+            What is it like to live and to have evolved in 4D?
+          </QuestionComponent>
+          <p>Imagine our eyes could see in 3D... inside a 4D environment.</p>
+          <p>
+            With our perspective (viewpoint) we can see all sides of the
+            tesseract shape at once.
+          </p>
+          <p>
+            Our minds, however, are able to imagine ∞D space (I believe ∞D is
+            everything beyond 3D).
+          </p>
+          <p>
+            I believe <i>this</i> is the point where this article relates to
+            recursion.
+          </p>
+          <p>
+            I believe that, if there was a species that lived and evolved in 4D,
+            their minds would be fully at peace with recursion and infinity.
+          </p>
         </MusicScrollDownMessage>
       </div>
     </>
