@@ -1,8 +1,19 @@
-const bifurcationDiagramSketch = (p5) => {
-  let bf;
+import { P5Instance } from "react-p5-wrapper";
+
+type Props = {
+  screenWidth: number;
+}
+
+const bifurcationDiagramSketch = (p5: P5Instance<Props>) => {
+  let bf: Bifurcation;
+  let width: number;
 
   class Animated {
-    constructor(interval) {
+    private interval: number;
+    private lastTime: number;
+    public enabled: boolean;
+
+    constructor(interval: number) {
       this.interval = interval;
       this.lastTime = p5.millis();
       this.enabled = true;
@@ -29,6 +40,20 @@ const bifurcationDiagramSketch = (p5) => {
   }
 
   class Bifurcation extends Animated {
+    private ps: any[];
+    private xLines: any[];
+    private initialX: number;
+    private xIncrement: number;
+    private stepSize: number;
+    private iterationNum: number;
+    private xOffset: number;
+    private xOffsetIncrement: number;
+    private stepSizeIncrement: number;
+    private currentX: number;
+    private previousX: number;
+    private currentIndex: number;
+    private totalAtCurrentX: number;
+
     constructor() {
       super(1000);
       this.ps = [];
@@ -47,7 +72,7 @@ const bifurcationDiagramSketch = (p5) => {
       this.plot();
     }
 
-    logistic(a, x) {
+    logistic(a: number, x: number) {
       return a * x * (1 - x);
     }
 
@@ -98,7 +123,7 @@ const bifurcationDiagramSketch = (p5) => {
       this.currentX += this.xIncrement;
     }
 
-    plotPoint(x, y) {
+    plotPoint(x: number, y: number) {
       this.ps.push(p5.createVector(x, y));
     }
 
@@ -118,12 +143,12 @@ const bifurcationDiagramSketch = (p5) => {
         for (i = 0; i < this.iterationNum; i++) {
           x = this.logistic(a, x);
           if (i > 100 && a > 2) {
-            let px =
+            const px =
               -this.xOffset +
               (a * ((p5.width + this.xOffset) / 4) -
                 (p5.width + this.xOffset) / 2) *
                 2;
-            let py = p5.height - x * p5.height;
+            const py = p5.height - x * p5.height;
             this.plotPoint(px, py);
           }
         }
@@ -131,9 +156,15 @@ const bifurcationDiagramSketch = (p5) => {
     }
   }
 
+  p5.updateWithProps = (props: Props) => {
+    if (props.screenWidth) {
+      width = props.screenWidth;
+    }
+  };
+
   p5.setup = () => {
     p5.background(0);
-    p5.createCanvas(p5.screenWidth, 500);
+    p5.createCanvas(width, 500);
     bf = new Bifurcation();
   };
 
