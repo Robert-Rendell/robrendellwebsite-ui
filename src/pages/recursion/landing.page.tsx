@@ -17,24 +17,31 @@ export function RecursionLandingPage() {
           <h2>Topics</h2>
           <ol>
             <li>
-              <NewTabLink href={SharedRoutes.Recursion.RecursionAndFractals}>
+              <NewTabLink
+                href={SharedRoutes.Recursion.RecursionAndFractals}
+                noNewTab
+              >
                 {SharedText.Recursion.RecursionAndFractals}
               </NewTabLink>
             </li>
             <li>
               <NewTabLink
                 href={SharedRoutes.Recursion.BifurcationLogisticalMap}
+                noNewTab
               >
                 {SharedText.Recursion.BifurcationLogisticalMap}
               </NewTabLink>
             </li>
             <li>
-              <NewTabLink href={SharedRoutes.Recursion.SimpleEquations}>
+              <NewTabLink
+                href={SharedRoutes.Recursion.SimpleEquations}
+                noNewTab
+              >
                 {SharedText.Recursion.SimpleEquations}
               </NewTabLink>
             </li>
             <li>
-              <NewTabLink href={SharedRoutes.Recursion.Dimensions}>
+              <NewTabLink href={SharedRoutes.Recursion.Dimensions} noNewTab>
                 {SharedText.Recursion.Dimensions}
               </NewTabLink>
             </li>

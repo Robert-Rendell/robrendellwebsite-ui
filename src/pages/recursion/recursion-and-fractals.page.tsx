@@ -36,7 +36,7 @@ export const RecursionAndFractalsPage = () => {
     <>
       <div className="standard-page-margins standard-page-styling">
         <h1>
-          <RobBackButton /> {SharedText.Recursion.RecursionAndFractals}
+          <RobBackButton closeWindow /> {SharedText.Recursion.RecursionAndFractals}
         </h1>
         <DateWritten>Nov 2022</DateWritten>
         <MusicScrollDownMessage youtubeVideoEmbedId="tVvG3X1pcQ8" start={40}>
