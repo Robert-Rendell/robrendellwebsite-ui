@@ -34,149 +34,140 @@ export function SimpleEquationsInfiniteComplexity() {
           </i>
           .
         </span>
-        <MusicScrollDownMessage />
-        <hr />
-        <p>
+        <MusicScrollDownMessage youtubeVideoEmbedId="UDVtMYqUAyw" start={261}>
+          <hr />
+          <p>
           As far as I understand, the idea of Fractals came from{" "}
-          <NewTabLink href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot">
+            <NewTabLink href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot">
             Benoit Mandelbrot&apos;s
-          </NewTabLink>
+            </NewTabLink>
           &nbsp;desire to find a language to describe the fantastic patterns we
           see in nature.
-        </p>
-        <hr />
-        <p>
+          </p>
+          <hr />
+          <p>
           The{" "}
-          <NewTabLink href="https://en.wikipedia.org/wiki/Mandelbrot_set">
+            <NewTabLink href="https://en.wikipedia.org/wiki/Mandelbrot_set">
             Mandelbrot set
-          </NewTabLink>{" "}
+            </NewTabLink>{" "}
           fractal is generated from a very simple equation:
-        </p>
-        <Equation>
+          </p>
+          <Equation>
           Z<sub>n+1</sub> = Z<sub>n</sub>
-          <sup>2</sup> + C
-        </Equation>
-        <p>
+            <sup>2</sup> + C
+          </Equation>
+          <p>
           The{" "}
-          <NewTabLink href="/recursion/bifurcation-logistical-map">
+            <NewTabLink href="/recursion/bifurcation-logistical-map">
             Bifurcation Diagram of the Logistical Map
-          </NewTabLink>{" "}
+            </NewTabLink>{" "}
           fractal is, also, generated from a very simple equation:
-        </p>
-        <Equation>
+          </p>
+          <Equation>
           x<sub>n+1</sub> = rx<sub>n</sub>(1 - x<sub>n</sub>)
-        </Equation>
-        <hr />
-        <p>
+          </Equation>
+          <hr />
+          <p>
           The rules of{" "}
-          <NewTabLink href="/recursion#game-of-life">
+            <NewTabLink href="/recursion#game-of-life">
             Conway&apos;s Game of Life
-          </NewTabLink>{" "}
+            </NewTabLink>{" "}
           (2d environment) are, strangely, also very simple - despite the
           incredible diversity of creatures (patterns) that emerge through
           it&apos;s infinite iteration. Here are the rules:
-        </p>
-        <ol>
-          <li>
+          </p>
+          <ol>
+            <li>
             Any live cell with fewer than two live neighbours dies, as if by{" "}
-            <u>underpopulation</u>.
-          </li>
-          <li>
+              <u>underpopulation</u>.
+            </li>
+            <li>
             Any live cell with two or three live neighbours lives on to the{" "}
-            <u>next generation</u>.
-          </li>
-          <li>
+              <u>next generation</u>.
+            </li>
+            <li>
             Any live cell with more than three live neighbours dies, as if by{" "}
-            <u>overpopulation</u>.
-          </li>
-          <li>
+              <u>overpopulation</u>.
+            </li>
+            <li>
             Any dead cell with exactly three live neighbours becomes a live
             cell, as if by <u>reproduction</u>.
-          </li>
-        </ol>
-        <p>
-          <NewTabLink href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules">
+            </li>
+          </ol>
+          <p>
+            <NewTabLink href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules">
             Wikipedia: Conway&apos;s Game of Life
-          </NewTabLink>
-        </p>
-        <QuestionComponent questionText="Is it worth considering, that the equation that governs our universe is also very simple?"></QuestionComponent>
-        <p>
+            </NewTabLink>
+          </p>
+          <QuestionComponent questionText="Is it worth considering, that the equation that governs our universe is also very simple?"></QuestionComponent>
+          <p>
           First of all, you need to understand that the way creatures (patterns)
           emerge from Conway&apos;s Game of Life is far too similar to the way
           in which, said, biological &quot;creatures&quot; (patterns) emerge in
           our universe.
-        </p>
-        <p>
+          </p>
+          <p>
           Another interesting point on Conway&apos;s Game of Life is that in
           some implementations, the game reaches an equilibrium where the 2d
           world stands still in harmony. This, of course, may be deliberate in
           some implementations.
-        </p>
-        <QuestionComponent questionText="However, is it worth contemplating that our Earth reached a point of equilibrium until humans began to overpopulate Earth?" />
-        <p>
+          </p>
+          <QuestionComponent questionText="However, is it worth contemplating that our Earth reached a point of equilibrium until humans began to overpopulate Earth?" />
+          <p>
           Ok everyone put on your space hats; it&apos;s about to get wacky in
           here.
-        </p>
-        <p>
+          </p>
+          <p>
           The human mind is still a mystery to us, even though we all have one
           (at least most of us do hehe). We believe that we are these
           fantastically intelligent beings because we are constantly comparing
           ourselves to other creatures of the world.
-        </p>
-        <p>
+          </p>
+          <p>
           We should, in my opinion, stop for a second to consider that all the
           life we see on Earth is beautiful, rich in variety and deeply
           intricate. However... I want you to imagine this idea:
-        </p>
-        <QuestionComponent>
+          </p>
+          <QuestionComponent>
           Is human consciousness an illusion?
-        </QuestionComponent>
-        <p>
+          </QuestionComponent>
+          <p>
           The reality, I believe, is we have a hard time imagining infinite or
           deeply intricate recursive patterns and that prevents us from
           considering that our own <i>&quot;consciousness&quot;</i> (self
           awareness) is a result of an elaborate electrical, physical and
           chemical storm.
-        </p>
-        <p>
+          </p>
+          <p>
           If we are indeed self referencing patterns (through the unimaginable
           combination of cells in the shape of our DNA), then you could say that
           what we are experiencing in life is the result of a simple equation on
           an infinite scale and infinite complexity.
-        </p>
-        <p>
+          </p>
+          <p>
           In conclusion, humans should stop being elitist in the, so called,
           &quot;hierarchy&quot; of Earthly creatures.
-        </p>
-        <Emphasised>GO VEGGIE; IT IS TASTY AND COLOURFUL</Emphasised>
-        <p>
+          </p>
+          <Emphasised>GO VEGGIE; IT IS TASTY AND COLOURFUL</Emphasised>
+          <p>
           If we don&apos;t take care of the world we evolved with, then we are
           doomed.
-        </p>
-        <p>
+          </p>
+          <p>
           Luckily,{" "}
-          <NewTabLink href="https://en.wikipedia.org/wiki/Noah%27s_Ark">
+            <NewTabLink href="https://en.wikipedia.org/wiki/Noah%27s_Ark">
             Elon Musk is probably building an Ark
-          </NewTabLink>
+            </NewTabLink>
           &nbsp;to save all the biodiversity in the world. And, in the case
           where the world falls to bits (
-          <i>
+            <i>
             because we unnaturally unlocked too many minds and broke the rules
             LOL
-          </i>
+            </i>
           )... then let us hope that he chose to save the octopuses, flowers,
           spiders and bees!
-        </p>
-        <iframe
-          width={width}
-          height="315"
-          src="https://www.youtube.com/embed/UDVtMYqUAyw?autoplay=1&start=261"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-        <ScrollToTopLink />
+          </p>
+        </MusicScrollDownMessage>
       </div>
     </>
   );
