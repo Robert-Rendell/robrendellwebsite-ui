@@ -2,7 +2,7 @@ import { P5Instance } from "react-p5-wrapper";
 
 type Props = {
   screenWidth: number;
-}
+};
 
 const bifurcationDiagramSketch = (p5: P5Instance<Props>) => {
   let bf: Bifurcation;

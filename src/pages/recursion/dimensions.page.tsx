@@ -94,6 +94,37 @@ export function DimensionsPage() {
             I believe that, if there was a species that lived and evolved in 4D,
             their minds would be fully at peace with recursion and infinity.
           </p>
+          <QuestionComponent>
+            Is there such a thing as a &quot;shadow&quot; in 4D?
+          </QuestionComponent>
+          <p>
+            Ok, so if you are living in a 4D environment and all your senses
+            operate in 3D, then it does make you wonder, what happens to light in this situation?
+          </p>
+          <p>
+            In our 3D environment, most creatures need light to enter their eyes
+            to see objects in 2D.
+          </p>
+          <p>
+            In 4D, you might still need light to enter your eyes... except you
+            are seeing all light at all times.
+          </p>
+          <p>
+            That is why you can see the 3D shape with your eyes (in your 4D
+            environment.)
+          </p>
+          <QuestionComponent>
+            Rob, how did you get onto the topic of recursion with
+            this? ... Are dimensions recursive / self referencing?
+          </QuestionComponent>
+          <p>
+            I believe as soon as you start imagining 4D, you need to be at peace with 
+            infinity and recursion. Understanding infinity can be as simple as drawing
+            a circle.
+          </p>
+          <p>
+            There could be an infinite number of 3D environments/universes in a 4D container.
+          </p>
         </MusicScrollDownMessage>
       </div>
     </>
