@@ -49,13 +49,13 @@ export function MelatoninIsTheKeyToCreativeInsight() {
         <p>
           Occasionally when I&apos;m feeling down, I like to put the music up
           full in the, mouldy as fuck (landlord SORT IT OUT you lazy fucker),
-          bathroom and <u>switch off the lights</u>.
+          bathroom and <u>close my eyes</u>.
         </p>
         <p className="centred">I call this:</p>
         <QuestionComponent>DISCO SHOWERS!!!</QuestionComponent>
         <p>
           All of my (fantastic... [oh yeah buddy]) ideas, have come to me in the
-          darkness. Many an epiphany has been had dancing like a crazy person in
+          darkness of my eyelids. Many an epiphany has been had dancing like a crazy person in
           that bathtub.
         </p>
         <hr />
