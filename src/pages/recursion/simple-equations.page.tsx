@@ -20,7 +20,7 @@ export function SimpleEquationsInfiniteComplexity() {
         className="standard-page-margins standard-page-styling"
       >
         <h1>
-          <RobBackButton closeWindow /> {SharedText.Recursion.SimpleEquations}
+          <RobBackButton /> {SharedText.Recursion.SimpleEquations}
         </h1>
         <DateWritten>26.11.22</DateWritten>
         <span>
