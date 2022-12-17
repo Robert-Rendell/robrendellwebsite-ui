@@ -46,148 +46,179 @@ import { AttachmentAndSharing } from "./pages/neurochemistry/attachment-and-shar
 import { RecursionLandingPage } from "./pages/recursion/landing.page";
 import { DimensionsPage } from "./pages/recursion/dimensions.page";
 import { RecursionAndFractalsPage } from "./pages/recursion/recursion-and-fractals.page";
+import { Compass } from "react-bootstrap-icons";
+
+const maintenanceMode = true;
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
+    {maintenanceMode ? (
+      <>
+        <div style={{ color: "white", background: "black" }}>
+          ... Be back soon! <Compass />
+        </div>
+      </>
+    ) : (
+      <div>
+        <BrowserRouter>
+          <App />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
 
-        {/* //////////////////////////////////// */}
-        <Route path="sudoku" element={<SudokuDashboardComponent />} />
-        <Route path="sudoku/play" element={<SudokuGameComponent />} />
-        <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
+            {/* //////////////////////////////////// */}
+            <Route path="sudoku" element={<SudokuDashboardComponent />} />
+            <Route path="sudoku/play" element={<SudokuGameComponent />} />
+            <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
 
-        {/* //////////////////////////////////// */}
-        <Route
-          path={SharedRoutes.Recursion.LandingPage}
-          element={<RecursionLandingPage />}
-        />
-        <Route
-          path={SharedRoutes.Recursion.RecursionAndFractals}
-          element={<RecursionAndFractalsPage />}
-        />
-        <Route
-          path={SharedRoutes.Recursion.BifurcationLogisticalMap}
-          element={<BifurcationLogisticalPage />}
-        />
-        <Route
-          path={SharedRoutes.Recursion.SimpleEquations}
-          element={<SimpleEquationsInfiniteComplexity />}
-        />
-        <Route
-          path={SharedRoutes.Recursion.Dimensions}
-          element={<DimensionsPage />}
-        />
+            {/* //////////////////////////////////// */}
+            <Route
+              path={SharedRoutes.Recursion.LandingPage}
+              element={<RecursionLandingPage />}
+            />
+            <Route
+              path={SharedRoutes.Recursion.RecursionAndFractals}
+              element={<RecursionAndFractalsPage />}
+            />
+            <Route
+              path={SharedRoutes.Recursion.BifurcationLogisticalMap}
+              element={<BifurcationLogisticalPage />}
+            />
+            <Route
+              path={SharedRoutes.Recursion.SimpleEquations}
+              element={<SimpleEquationsInfiniteComplexity />}
+            />
+            <Route
+              path={SharedRoutes.Recursion.Dimensions}
+              element={<DimensionsPage />}
+            />
 
-        {/* //////////////////////////////////// */}
-        <Route path="climate-change" element={<ClimateChangeLandingPage />} />
-        <Route
-          path={SharedRoutes.ClimateChange.Ruminants}
-          element={<RuminantsPage />}
-        />
-        <Route
-          path="climate-change/ocean-acidification"
-          element={<OceanAcidification />}
-        />
-        <Route path="climate-change/ride-a-bike" element={<RideABikePage />} />
-        <Route
-          path="climate-change/renewable-energy"
-          element={<RenewableEnergyPage />}
-        />
-        <Route
-          path="climate-change/reduce-reuse-recycle"
-          element={<ReduceReuseRecyclePage />}
-        />
+            {/* //////////////////////////////////// */}
+            <Route
+              path="climate-change"
+              element={<ClimateChangeLandingPage />}
+            />
+            <Route
+              path={SharedRoutes.ClimateChange.Ruminants}
+              element={<RuminantsPage />}
+            />
+            <Route
+              path="climate-change/ocean-acidification"
+              element={<OceanAcidification />}
+            />
+            <Route
+              path="climate-change/ride-a-bike"
+              element={<RideABikePage />}
+            />
+            <Route
+              path="climate-change/renewable-energy"
+              element={<RenewableEnergyPage />}
+            />
+            <Route
+              path="climate-change/reduce-reuse-recycle"
+              element={<ReduceReuseRecyclePage />}
+            />
 
-        {/* //////////////////////////////////// */}
-        <Route path="neurochemistry/" element={<NeurochemistryLandingPage />} />
-        <Route path="neurochemistry/happiness" element={<MCEDOEGSAPage />} />
-        <Route
-          path="neurochemistry/zones-of-regulation"
-          element={<ZonesOfRegulationPage />}
-        />
-        <Route
-          path="neurochemistry/self-love-not-narcissism"
-          element={<SelfLoveNotNarcissismPage />}
-        />
-        <Route
-          path="neurochemistry/the-relaxation-response"
-          element={<TheRelaxationResponsePage />}
-        />
-        <Route
-          path="neurochemistry/subconscious-positive-reactions"
-          element={<SubconsciousPositiveReactionsPage />}
-        />
-        <Route
-          path="neurochemistry/self-actualisation-peak-experiences"
-          element={<SelfActualisationPeakExperiencesPage />}
-        />
-        <Route
-          path="neurochemistry/learning-and-genetic-code"
-          element={<LearningAndGeneticCodePage />}
-        />
-        <Route path="neurochemistry/let-it-go" element={<LetItGoPage />} />
-        <Route
-          path="neurochemistry/advice-from-the-beatles"
-          element={<AdviceFromTheBeatlesPage />}
-        />
-        <Route
-          path="neurochemistry/melatonin-is-the-key-to-creative-insight"
-          element={<MelatoninIsTheKeyToCreativeInsight />}
-        />
-        <Route
-          path="neurochemistry/guilt-and-forgiveness"
-          element={<GuiltAndForgiveness />}
-        />
-        <Route
-          path="neurochemistry/attachment-and-sharing"
-          element={<AttachmentAndSharing />}
-        />
-        <Route
-          path="neurochemistry/conclusion"
-          element={<NeurochemistryConclusionPage />}
-        />
-        <Route
-          path="neurochemistry/references"
-          element={<NeurochemistryReferencesPage />}
-        />
+            {/* //////////////////////////////////// */}
+            <Route
+              path="neurochemistry/"
+              element={<NeurochemistryLandingPage />}
+            />
+            <Route
+              path="neurochemistry/happiness"
+              element={<MCEDOEGSAPage />}
+            />
+            <Route
+              path="neurochemistry/zones-of-regulation"
+              element={<ZonesOfRegulationPage />}
+            />
+            <Route
+              path="neurochemistry/self-love-not-narcissism"
+              element={<SelfLoveNotNarcissismPage />}
+            />
+            <Route
+              path="neurochemistry/the-relaxation-response"
+              element={<TheRelaxationResponsePage />}
+            />
+            <Route
+              path="neurochemistry/subconscious-positive-reactions"
+              element={<SubconsciousPositiveReactionsPage />}
+            />
+            <Route
+              path="neurochemistry/self-actualisation-peak-experiences"
+              element={<SelfActualisationPeakExperiencesPage />}
+            />
+            <Route
+              path="neurochemistry/learning-and-genetic-code"
+              element={<LearningAndGeneticCodePage />}
+            />
+            <Route path="neurochemistry/let-it-go" element={<LetItGoPage />} />
+            <Route
+              path="neurochemistry/advice-from-the-beatles"
+              element={<AdviceFromTheBeatlesPage />}
+            />
+            <Route
+              path="neurochemistry/melatonin-is-the-key-to-creative-insight"
+              element={<MelatoninIsTheKeyToCreativeInsight />}
+            />
+            <Route
+              path="neurochemistry/guilt-and-forgiveness"
+              element={<GuiltAndForgiveness />}
+            />
+            <Route
+              path="neurochemistry/attachment-and-sharing"
+              element={<AttachmentAndSharing />}
+            />
+            <Route
+              path="neurochemistry/conclusion"
+              element={<NeurochemistryConclusionPage />}
+            />
+            <Route
+              path="neurochemistry/references"
+              element={<NeurochemistryReferencesPage />}
+            />
 
-        {/* //////////////////////////////////// */}
-        <Route path="miscellaneous/india" element={<IndiaPage />} />
-        <Route
-          path="miscellaneous/giant-pacific-octopus"
-          element={<GiantPacificOctopusPage />}
-        />
+            {/* //////////////////////////////////// */}
+            <Route path="miscellaneous/india" element={<IndiaPage />} />
+            <Route
+              path="miscellaneous/giant-pacific-octopus"
+              element={<GiantPacificOctopusPage />}
+            />
 
-        {/* //////////////////////////////////// */}
-        <Route
-          path="photos-ive-taken/nature/arachnids"
-          element={<ArachnidsPage />}
-        />
-        <Route
-          path="photos-ive-taken/nature/insects"
-          element={<InsectsPage />}
-        />
-        <Route path="photos-ive-taken/nature/lichen" element={<LichenPage />} />
-        <Route
-          path="photos-ive-taken/nature/wild-flowers"
-          element={<WildFlowersPage />}
-        />
-        <Route path="photos-ive-taken/nature/fungi" element={<FungiPage />} />
+            {/* //////////////////////////////////// */}
+            <Route
+              path="photos-ive-taken/nature/arachnids"
+              element={<ArachnidsPage />}
+            />
+            <Route
+              path="photos-ive-taken/nature/insects"
+              element={<InsectsPage />}
+            />
+            <Route
+              path="photos-ive-taken/nature/lichen"
+              element={<LichenPage />}
+            />
+            <Route
+              path="photos-ive-taken/nature/wild-flowers"
+              element={<WildFlowersPage />}
+            />
+            <Route
+              path="photos-ive-taken/nature/fungi"
+              element={<FungiPage />}
+            />
 
-        {/* //////////////////////////////////// */}
-        <Route
-          path="/technical-tests/291121"
-          element={<UniDataVisualiserComponent />}
-        />
+            {/* //////////////////////////////////// */}
+            <Route
+              path="/technical-tests/291121"
+              element={<UniDataVisualiserComponent />}
+            />
 
-        {/* //////////////////////////////////// */}
-        <Route path="strava-api" element={<StravaDashboardComponent />} />
-      </Routes>
-      <RobRendellFooterComponent />
-    </BrowserRouter>
+            {/* //////////////////////////////////// */}
+            <Route path="strava-api" element={<StravaDashboardComponent />} />
+          </Routes>
+          <RobRendellFooterComponent />
+        </BrowserRouter>
+      </div>
+    )}
   </React.StrictMode>,
   document.getElementById("root")
 );
