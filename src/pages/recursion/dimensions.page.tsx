@@ -99,7 +99,8 @@ export function DimensionsPage() {
           </QuestionComponent>
           <p>
             Ok, so if you are living in a 4D environment and all your senses
-            operate in 3D, then it does make you wonder, what happens to light in this situation?
+            operate in 3D, then it does make you wonder, what happens to light
+            in this situation?
           </p>
           <p>
             In our 3D environment, most creatures need light to enter their eyes
@@ -114,16 +115,17 @@ export function DimensionsPage() {
             environment.)
           </p>
           <QuestionComponent>
-            Rob, how did you get onto the topic of recursion with
-            this? ... Are dimensions recursive / self referencing?
+            Rob, how did you get onto the topic of recursion with this? ... Are
+            dimensions recursive / self referencing?
           </QuestionComponent>
           <p>
-            I believe as soon as you start imagining 4D, you need to be at peace with 
-            infinity and recursion. Understanding infinity can be as simple as drawing
-            a circle.
+            I believe as soon as you start imagining 4D, you need to be at peace
+            with infinity and recursion. Understanding infinity can be as simple
+            as drawing a circle.
           </p>
           <p>
-            There could be an infinite number of 3D environments/universes in a 4D container.
+            There could be an infinite number of 3D environments/universes in a
+            4D container.
           </p>
         </MusicScrollDownMessage>
       </div>

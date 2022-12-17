@@ -23,6 +23,7 @@ import { SharedText } from "../../common/shared-text";
 import { usePageView } from "../../hooks/use-page-view.hook";
 import { SharedRoutes } from "../../common/shared-routes";
 import { RobBackButton } from "../../components/back-button.component";
+import { QuestionComponent } from "../neurochemistry/components/question.component";
 
 export const RecursionAndFractalsPage = () => {
   const windowSize = useWindowSize();
@@ -40,9 +41,8 @@ export const RecursionAndFractalsPage = () => {
         </h1>
         <DateWritten>Nov 2022</DateWritten>
         <MusicScrollDownMessage youtubeVideoEmbedId="tVvG3X1pcQ8" start={40}>
-          <h1>
-            <i>&quot;What is Recursion?&quot;</i>
-          </h1>
+          <QuestionComponent hrOff>What is Recursion?</QuestionComponent>
+          <hr/>
           <p>
             Recursion is the repeated application of a recursive procedure or
             definition.
@@ -63,11 +63,9 @@ export const RecursionAndFractalsPage = () => {
             When you reach the recursive call stack limit, you&apos;ll see the
             classic <u>Stack Overflow</u> error.
           </p>
-          <h2>
-            <i>
-              &quot;Why is recursion such an alien concept to beginners?&quot;
-            </i>
-          </h2>
+          <QuestionComponent>
+          Why is recursion such an alien concept to beginners?
+          </QuestionComponent>
           <p>
             I believe that&apos;s because our minds prefer to focus on one thing
             at at time and prefer dealing with (and finding solutions for) the
@@ -90,11 +88,9 @@ export const RecursionAndFractalsPage = () => {
               here.
             </a>
           </p>
-          <hr />
-
-          <h1>
-            <i>&quot;What is a Fractal?&quot;</i>
-          </h1>
+          <QuestionComponent>
+          What is a Fractal?
+          </QuestionComponent>
           <p>
             A{" "}
             <a
@@ -190,12 +186,10 @@ export const RecursionAndFractalsPage = () => {
               </div>
             </div>
           </div>
-          <hr />
-
+          <QuestionComponent>
+          So why is recursion important to humans?
+          </QuestionComponent>
           <h2>Human Genome</h2>
-          <p>
-            <i>&quot;So why is recursion important to humans?&quot;</i>
-          </p>
           <p>
             I&apos;m ignorant to genetics and the human genome (
             <a
@@ -232,20 +226,21 @@ export const RecursionAndFractalsPage = () => {
               allowFullScreen
             ></iframe>
           </p>
-          <p>
-            <i>
-              &quot;Is it worth contemplating that perhaps DNA in humans is also
-              self referencing?&quot;
-            </i>
-          </p>
-          <p>
-            <ReactP5Wrapper
-              sketch={doubleHelixSketch}
-              screenWidth={width}
-              onReady={onDoubleHelixSketchReady}
-            />
+          <QuestionComponent>
+          Is it worth contemplating that perhaps DNA in humans is also
+              self referencing?
+          </QuestionComponent>
+          <div className="centred">
+            <p>
+              <ReactP5Wrapper
+                sketch={doubleHelixSketch}
+                screenWidth={width}
+                onReady={onDoubleHelixSketchReady}
+              />
             Source: https://editor.p5js.org/AlexandraLopez/sketches
-          </p>
+            </p>
+          </div>
+
           <hr />
 
           <h2>Recursion / Fractals in music</h2>
