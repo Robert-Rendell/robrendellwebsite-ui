@@ -13,7 +13,7 @@ export function BifurcationLogisticalPage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
-        <RobBackButton/> Chaos Theory:{" "}
+        <RobBackButton /> Chaos Theory:{" "}
         {SharedText.Recursion.BifurcationLogisticalMap}
       </h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="ovJcsL7vyrk" msg=" ">

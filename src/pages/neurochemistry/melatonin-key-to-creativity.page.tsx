@@ -55,8 +55,8 @@ export function MelatoninIsTheKeyToCreativeInsight() {
         <QuestionComponent>DISCO SHOWERS!!!</QuestionComponent>
         <p>
           All of my (fantastic... [oh yeah buddy]) ideas, have come to me in the
-          darkness of my eyelids. Many an epiphany has been had dancing like a crazy person in
-          that bathtub.
+          darkness of my eyelids. Many an epiphany has been had dancing like a
+          crazy person in that bathtub.
         </p>
         <hr />
         <p>
