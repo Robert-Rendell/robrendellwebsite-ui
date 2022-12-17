@@ -42,7 +42,7 @@ export const RecursionAndFractalsPage = () => {
         <DateWritten>Nov 2022</DateWritten>
         <MusicScrollDownMessage youtubeVideoEmbedId="tVvG3X1pcQ8" start={40}>
           <QuestionComponent hrOff>What is Recursion?</QuestionComponent>
-          <hr/>
+          <hr />
           <p>
             Recursion is the repeated application of a recursive procedure or
             definition.
@@ -64,7 +64,7 @@ export const RecursionAndFractalsPage = () => {
             classic <u>Stack Overflow</u> error.
           </p>
           <QuestionComponent>
-          Why is recursion such an alien concept to beginners?
+            Why is recursion such an alien concept to beginners?
           </QuestionComponent>
           <p>
             I believe that&apos;s because our minds prefer to focus on one thing
@@ -88,9 +88,7 @@ export const RecursionAndFractalsPage = () => {
               here.
             </a>
           </p>
-          <QuestionComponent>
-          What is a Fractal?
-          </QuestionComponent>
+          <QuestionComponent>What is a Fractal?</QuestionComponent>
           <p>
             A{" "}
             <a
@@ -187,7 +185,7 @@ export const RecursionAndFractalsPage = () => {
             </div>
           </div>
           <QuestionComponent>
-          So why is recursion important to humans?
+            So why is recursion important to humans?
           </QuestionComponent>
           <h2>Human Genome</h2>
           <p>
@@ -227,8 +225,8 @@ export const RecursionAndFractalsPage = () => {
             ></iframe>
           </p>
           <QuestionComponent>
-          Is it worth contemplating that perhaps DNA in humans is also
-              self referencing?
+            Is it worth contemplating that perhaps DNA in humans is also self
+            referencing?
           </QuestionComponent>
           <div className="centred">
             <p>
@@ -237,7 +235,7 @@ export const RecursionAndFractalsPage = () => {
                 screenWidth={width}
                 onReady={onDoubleHelixSketchReady}
               />
-            Source: https://editor.p5js.org/AlexandraLopez/sketches
+              Source: https://editor.p5js.org/AlexandraLopez/sketches
             </p>
           </div>
 
