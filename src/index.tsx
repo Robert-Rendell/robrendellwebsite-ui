@@ -48,7 +48,7 @@ import { DimensionsPage } from "./pages/recursion/dimensions.page";
 import { RecursionAndFractalsPage } from "./pages/recursion/recursion-and-fractals.page";
 import { Compass } from "react-bootstrap-icons";
 
-const maintenanceMode = true;
+const maintenanceMode = false;
 
 ReactDOM.render(
   <React.StrictMode>
