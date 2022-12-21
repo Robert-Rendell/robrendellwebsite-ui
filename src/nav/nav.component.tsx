@@ -11,6 +11,7 @@ import tsLogo from "../resources/ts-logo.png";
 import awsLogo from "../resources/aws-logo.png";
 import { SharedText } from "../common/shared-text";
 import { SharedRoutes } from "../common/shared-routes";
+import { config } from "../config";
 
 export const NavComponent = () => {
   return (
@@ -91,10 +92,10 @@ export const NavComponent = () => {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link
-              href="https://www.linkedin.com/in/robert-rendell/"
+              href={`${config.backend}/cv`}
               target="_blank"
             >
-              LinkedIn
+              Download CV
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
