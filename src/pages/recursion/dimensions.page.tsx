@@ -127,6 +127,21 @@ export function DimensionsPage() {
             There could be an infinite number of 3D environments/universes in a
             4D container.
           </p>
+          <hr />
+          <p>
+            Check out this video featuring Carl Sagan talking about 2D vs 3D. It
+            is, literally, so good that it hasn&apos;t, as far as I know, been
+            superseded with something better yet.
+          </p>
+          <iframe
+            width={width}
+            height="500"
+            src="https://www.youtube.com/embed/UnURElCzGc0?start=3"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </MusicScrollDownMessage>
       </div>
     </>

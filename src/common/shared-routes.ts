@@ -14,6 +14,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     BifurcationLogisticalMap: "/recursion/bifurcation-logistical-map",
     RecursionAndFractals: "/recursion/fractals",
     SimpleEquations: "/recursion/simple-equations-infinite-complexity",
+    IsImaginationASense: "/recursion/is-imagination-a-sense",
   },
   Neurochemistry: {
     PropheciesAndMassAwakeningDiscussion: "/neurochemistry/conclusion",

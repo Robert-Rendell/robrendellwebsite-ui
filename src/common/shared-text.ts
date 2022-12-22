@@ -14,6 +14,7 @@ export const SharedText: RobRendellWebsiteModel = {
     BifurcationLogisticalMap: "Bifurcation of the Logistical Map",
     RecursionAndFractals: "Recursion and Fractals",
     SimpleEquations: "Simple Equations = Infinite Complexity",
+    IsImaginationASense: "Is Imagination a Sense?",
   },
   Neurochemistry: {
     PropheciesAndMassAwakeningDiscussion:
