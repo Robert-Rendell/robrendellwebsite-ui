@@ -92,9 +92,9 @@ export const NavComponent = () => {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link
-              href={`${config.backend}/cv`}
-              target="_blank"
-              //disabled
+              // href={`${config.backend}/cv`}
+              // target="_blank"
+              disabled
             >
               Download CV
             </Nav.Link>

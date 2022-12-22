@@ -5,12 +5,9 @@ import { RobBackButton } from "../../components/back-button.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
-import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "../neurochemistry/components/question.component";
 
 export function IsImaginationASensePage() {
-  const windowSize = useWindowSize();
-  const width = windowSize[0] - 20;
   usePageView(SharedRoutes.Recursion.IsImaginationASense);
   return (
     <>
