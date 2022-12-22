@@ -47,6 +47,7 @@ import { RecursionLandingPage } from "./pages/recursion/landing.page";
 import { DimensionsPage } from "./pages/recursion/dimensions.page";
 import { RecursionAndFractalsPage } from "./pages/recursion/recursion-and-fractals.page";
 import { Compass } from "react-bootstrap-icons";
+import { IsImaginationASensePage } from "./pages/recursion/is-imagination-a-sense.page";
 
 const maintenanceMode = false;
 
@@ -90,6 +91,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Recursion.Dimensions}
               element={<DimensionsPage />}
+            />
+            <Route
+              path={SharedRoutes.Recursion.IsImaginationASense}
+              element={<IsImaginationASensePage />}
             />
 
             {/* //////////////////////////////////// */}

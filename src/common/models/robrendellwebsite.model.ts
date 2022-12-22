@@ -12,6 +12,7 @@ export type RobRendellWebsiteModel = {
     BifurcationLogisticalMap: string;
     RecursionAndFractals: string;
     SimpleEquations: string;
+    IsImaginationASense: string;
   };
   Neurochemistry: {
     PropheciesAndMassAwakeningDiscussion: string;

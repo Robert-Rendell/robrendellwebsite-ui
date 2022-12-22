@@ -45,6 +45,14 @@ export function RecursionLandingPage() {
                 {SharedText.Recursion.Dimensions}
               </NewTabLink>
             </li>
+            <li>
+              <NewTabLink
+                href={SharedRoutes.Recursion.IsImaginationASense}
+                noNewTab
+              >
+                {SharedText.Recursion.IsImaginationASense}
+              </NewTabLink>
+            </li>
           </ol>
         </MusicScrollDownMessage>
       </div>

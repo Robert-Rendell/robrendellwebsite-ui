@@ -31,7 +31,6 @@ export function SimpleEquationsInfiniteComplexity() {
           .
         </span>
         <MusicScrollDownMessage youtubeVideoEmbedId="UDVtMYqUAyw" start={261}>
-          <hr />
           <p>
             As far as I understand, the idea of Fractals came from{" "}
             <NewTabLink href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot">
