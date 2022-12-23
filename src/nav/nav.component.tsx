@@ -29,6 +29,7 @@ export const NavComponent = () => {
 
             <Nav.Link href="/recursion">Recursion Project</Nav.Link>
             <Nav.Link href="/neurochemistry">Neurochemistry Project</Nav.Link>
+            <Nav.Link href="/biomagnetism">Biomagnetism Project</Nav.Link>
             <Nav.Link href="/climate-change">Climate Change</Nav.Link>
 
             <NavDropdown title="Nature" id="nature">

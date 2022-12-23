@@ -48,6 +48,9 @@ import { DimensionsPage } from "./pages/recursion/dimensions.page";
 import { RecursionAndFractalsPage } from "./pages/recursion/recursion-and-fractals.page";
 import { Compass } from "react-bootstrap-icons";
 import { IsImaginationASensePage } from "./pages/recursion/is-imagination-a-sense.page";
+import { BiomagnetismLandingPage } from "./pages/biomagnetism/landing.page";
+import { MigratingBirdsPage } from "./pages/biomagnetism/migrating-birds.page";
+import { BiomagnetismReferencesPage } from "./pages/biomagnetism/references.page";
 
 const maintenanceMode = false;
 
@@ -181,7 +184,19 @@ ReactDOM.render(
               path="neurochemistry/references"
               element={<NeurochemistryReferencesPage />}
             />
-
+            {/* //////////////////////////////////// */}
+            <Route
+              path={SharedRoutes.Biomagnetism.LandingPage}
+              element={<BiomagnetismLandingPage />}
+            />
+            <Route
+              path={SharedRoutes.Biomagnetism.MigratingBirds}
+              element={<MigratingBirdsPage />}
+            />
+            <Route
+              path="biomagnetism/references"
+              element={<BiomagnetismReferencesPage />}
+            />
             {/* //////////////////////////////////// */}
             <Route path="miscellaneous/india" element={<IndiaPage />} />
             <Route

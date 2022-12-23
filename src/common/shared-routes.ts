@@ -1,6 +1,13 @@
 import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 
 export const SharedRoutes: RobRendellWebsiteModel = {
+  Biomagnetism: {
+    LandingPage: "/biomagnetism",
+    MigratingBirds: "/biomagnetism/migrating-birds",
+    WhatAreVibes: "/biomagnetism/what-are-vibes",
+    BiomagnetismInTheOcean: "/biomagnetism/biomagnetism-in-the-ocean",
+    MagnetismInHydroElectricPower: "/biomagnetism/hydro-electric-power",
+  },
   ClimateChange: {
     LandingPage: "/climate-change",
     CarlSagan1985: "https://www.youtube.com/watch?v=Wp-WiNXH6hI",
