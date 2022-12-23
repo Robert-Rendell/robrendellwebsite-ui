@@ -51,6 +51,9 @@ import { IsImaginationASensePage } from "./pages/recursion/is-imagination-a-sens
 import { BiomagnetismLandingPage } from "./pages/biomagnetism/landing.page";
 import { MigratingBirdsPage } from "./pages/biomagnetism/migrating-birds.page";
 import { BiomagnetismReferencesPage } from "./pages/biomagnetism/references.page";
+import { BiomagnetismInTheOceanPage } from "./pages/biomagnetism/biomagnetism-in-the-ocean.page";
+import { MagnetismInHydroElectricPowerPage } from "./pages/biomagnetism/hydro-electric-power.page";
+import { HumanToHumanAttractionPage } from "./pages/biomagnetism/human-to-human-attraction.page";
 
 const maintenanceMode = false;
 
@@ -192,6 +195,18 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Biomagnetism.MigratingBirds}
               element={<MigratingBirdsPage />}
+            />
+            <Route
+              path={SharedRoutes.Biomagnetism.BiomagnetismInTheOcean}
+              element={<BiomagnetismInTheOceanPage />}
+            />
+            <Route
+              path={SharedRoutes.Biomagnetism.MagnetismInHydroElectricPower}
+              element={<MagnetismInHydroElectricPowerPage />}
+            />
+            <Route
+              path={SharedRoutes.Biomagnetism.HumanToHumanAttraction}
+              element={<HumanToHumanAttractionPage />}
             />
             <Route
               path="biomagnetism/references"

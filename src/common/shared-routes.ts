@@ -7,6 +7,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     WhatAreVibes: "/biomagnetism/what-are-vibes",
     BiomagnetismInTheOcean: "/biomagnetism/biomagnetism-in-the-ocean",
     MagnetismInHydroElectricPower: "/biomagnetism/hydro-electric-power",
+    HumanToHumanAttraction: "/biomagnetism/human-to-human-attraction"
   },
   ClimateChange: {
     LandingPage: "/climate-change",

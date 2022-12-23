@@ -16,33 +16,43 @@ export function BiomagnetismLandingPage() {
         <h2>Topics</h2>
         <ol>
           <li>
-            <NewTabLink
+            {/* <NewTabLink
               href={SharedRoutes.Biomagnetism.MigratingBirds}
               noNewTab
             >
               {SharedText.Biomagnetism.MigratingBirds}
-            </NewTabLink>
+            </NewTabLink> */}
+            {SharedText.Biomagnetism.MigratingBirds}... coming soon
           </li>
           <li>
-            <NewTabLink
+            {/* <NewTabLink
               href={SharedRoutes.Biomagnetism.BiomagnetismInTheOcean}
               noNewTab
             >
               {SharedText.Biomagnetism.BiomagnetismInTheOcean}
-            </NewTabLink>
+            </NewTabLink> */}
+            {SharedText.Biomagnetism.BiomagnetismInTheOcean}... coming soon
           </li>
           <li>
-            <NewTabLink
-              href={SharedRoutes.Biomagnetism.BiomagnetismInTheOcean}
+            {/* <NewTabLink
+              href={SharedRoutes.Biomagnetism.MagnetismInHydroElectricPower}
               noNewTab
             >
-              {SharedText.Biomagnetism.BiomagnetismInTheOcean}
-            </NewTabLink>
+              {SharedText.Biomagnetism.MagnetismInHydroElectricPower}
+            </NewTabLink> */}
+            {SharedText.Biomagnetism.MagnetismInHydroElectricPower}... coming soon
           </li>
           <li>
-            <NewTabLink href={SharedRoutes.Biomagnetism.WhatAreVibes} noNewTab>
+            {/* <NewTabLink href={SharedRoutes.Biomagnetism.WhatAreVibes} noNewTab>
               {SharedText.Biomagnetism.WhatAreVibes}
-            </NewTabLink>
+            </NewTabLink> */}
+            {SharedText.Biomagnetism.WhatAreVibes}... coming soon
+          </li>
+          <li>
+            {/* <NewTabLink href={SharedRoutes.Biomagnetism.HumanToHumanAttraction} noNewTab>
+              {SharedText.Biomagnetism.HumanToHumanAttraction}
+            </NewTabLink> */}
+            {SharedText.Biomagnetism.HumanToHumanAttraction}... coming soon
           </li>
         </ol>
         <p>
