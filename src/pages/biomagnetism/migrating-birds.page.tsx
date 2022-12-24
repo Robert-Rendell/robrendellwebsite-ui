@@ -1,6 +1,7 @@
 import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
+import { RobBackButton } from "../../components/back-button.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
@@ -11,8 +12,41 @@ export function MigratingBirdsPage() {
   const width = windowSize[0] - 40;
   return (
     <div className="standard-page-margins standard-page-styling">
-      <h1>{SharedText.Biomagnetism.MigratingBirds}</h1>
-      <MusicScrollDownMessage youtubeVideoEmbedId=""></MusicScrollDownMessage>
+      <h1>
+        <RobBackButton /> {SharedText.Biomagnetism.MigratingBirds}
+      </h1>
+      <MusicScrollDownMessage youtubeVideoEmbedId="">
+        <p>
+          Bird migrations were recorded in Europe from at least 3,000 years ago
+          by the Ancient Greek writers Hesiod, Homer, Herodotus and Aristotle.
+        </p>
+        <p>
+          Migrating birds navigate using celestial cues from the sun and stars,{" "}
+          <u>the earth&apos;s magnetic field</u>, and mental maps.
+        </p>
+        <p>
+          There is a small spot on the beak of pigeons and
+          some other birds that contains <NewTabLink href="https://en.wikipedia.org/wiki/Magnetite">magnetite</NewTabLink>.
+        </p>
+        <p>
+          Magnetite is a magnetised rock, which may act as a tiny GPS unit for
+          homing pigeons by giving it information about its position relative
+          to Earth&apos;s poles.
+        </p>
+        <p>
+          It is thought that birds can use both the beak magnetite and the eye
+          sensors to travel long distances over areas that do not have many
+          landmarks, such as the ocean.
+        </p>
+        <p>
+          The homing pigeon has an innate homing ability, meaning that it will generally return to its nest using <i>magnetoreception</i>.
+        </p>
+        <hr/>
+        <p>
+          In humans, deposits of magnetite have been found in bones in our
+          noses.
+        </p>
+      </MusicScrollDownMessage>
     </div>
   );
 }
