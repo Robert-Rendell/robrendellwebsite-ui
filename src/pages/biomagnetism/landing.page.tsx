@@ -16,13 +16,12 @@ export function BiomagnetismLandingPage() {
         <h2>Topics</h2>
         <ol>
           <li>
-            {/* <NewTabLink
+            <NewTabLink
               href={SharedRoutes.Biomagnetism.MigratingBirds}
               noNewTab
             >
               {SharedText.Biomagnetism.MigratingBirds}
-            </NewTabLink> */}
-            {SharedText.Biomagnetism.MigratingBirds}... coming soon
+            </NewTabLink>
           </li>
           <li>
             {/* <NewTabLink
@@ -40,7 +39,8 @@ export function BiomagnetismLandingPage() {
             >
               {SharedText.Biomagnetism.MagnetismInHydroElectricPower}
             </NewTabLink> */}
-            {SharedText.Biomagnetism.MagnetismInHydroElectricPower}... coming soon
+            {SharedText.Biomagnetism.MagnetismInHydroElectricPower}... coming
+            soon
           </li>
           <li>
             {/* <NewTabLink href={SharedRoutes.Biomagnetism.WhatAreVibes} noNewTab>

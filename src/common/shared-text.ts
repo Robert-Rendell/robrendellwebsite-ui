@@ -3,8 +3,8 @@ import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 export const SharedText: RobRendellWebsiteModel = {
   Biomagnetism: {
     LandingPage: "Biomagnetism",
-    MigratingBirds: "Migrating Birds",
-    WhatAreVibes: "What are 'Vibes'?",
+    MigratingBirds: "Biomagnetism: Migrating Birds",
+    WhatAreVibes: "Biomagnetism: What are 'Vibes'?",
     BiomagnetismInTheOcean: "Biomagnetism in the Ocean",
     MagnetismInHydroElectricPower:
       "Magnetism in Hydroelectric Power Generation",

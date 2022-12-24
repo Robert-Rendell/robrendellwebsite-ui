@@ -8,10 +8,11 @@ export function BiomagnetismReferencesPage() {
         <RobBackButton /> Biochemistry Project References
       </h1>
       <ol className="ol-extra-margins">
-        <li>Advice from The Beatles: https://i.redd.it/ob5eruy3kfe41.jpg</li>
-        <li>
-          The Beatles - Let it Be: https://www.youtube.com/embed/QDYfEBY9NM4
-        </li>
+        <li>https://en.wikipedia.org/wiki/Bird_migration</li>
+        <li>https://ssec.si.edu/stemvisions-blog/how-do-birds-navigate#:~:text=Researchers%20have%20discovered%20a%20small,position%20relative%20to%20Earth&apos;s%20poles.</li>
+        <li>https://www.realclearscience.com/blog/2019/06/11/why_is_there_magnetite_in_the_human_brain.html</li>
+        <li>https://en.wikipedia.org/wiki/Homing_pigeon</li>
+        <li>https://www.telegraph.co.uk/news/science/science-news/10021789/Iron-spheres-in-ears-may-help-birds-navigate.html#:~:text=Scientists%20have%20found%20tiny%20clumps,are%20flying%20north%20or%20south.</li>
       </ol>
     </div>
   );
