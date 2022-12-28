@@ -25,13 +25,17 @@ export function MigratingBirdsPage() {
           <u>the earth&apos;s magnetic field</u>, and mental maps.
         </p>
         <p>
-          There is a small spot on the beak of pigeons and
-          some other birds that contains <NewTabLink href="https://en.wikipedia.org/wiki/Magnetite">magnetite</NewTabLink>.
+          There is a small spot on the beak of pigeons and some other birds that
+          contains{" "}
+          <NewTabLink href="https://en.wikipedia.org/wiki/Magnetite">
+            magnetite
+          </NewTabLink>
+          .
         </p>
         <p>
           Magnetite is a magnetised rock, which may act as a tiny GPS unit for
-          homing pigeons by giving it information about its position relative
-          to Earth&apos;s poles.
+          homing pigeons by giving it information about its position relative to
+          Earth&apos;s poles.
         </p>
         <p>
           It is thought that birds can use both the beak magnetite and the eye
@@ -39,12 +43,21 @@ export function MigratingBirdsPage() {
           landmarks, such as the ocean.
         </p>
         <p>
-          The homing pigeon has an innate homing ability, meaning that it will generally return to its nest using <i>magnetoreception</i>.
+          The homing pigeon has an innate homing ability, meaning that it will
+          generally return to its nest using <i>magnetoreception</i>.
         </p>
-        <hr/>
+        <p>
+          We already know about lots of animals and birds that use magnetic
+          material in their bodies to help them understand where they are.
+        </p>
+        <hr />
         <p>
           In humans, deposits of magnetite have been found in bones in our
           noses.
+        </p>
+        <p>So... what about this!!</p>
+        <p>
+          <img src="https://cdn.the-scientist.com/assets/articleNo/38949/iImg/20738/462c987f-677d-4028-8e6d-11d3d854b249-bird-infograph.jpg" />
         </p>
       </MusicScrollDownMessage>
     </div>

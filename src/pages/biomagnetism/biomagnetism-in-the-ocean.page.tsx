@@ -13,6 +13,15 @@ export function BiomagnetismInTheOceanPage() {
     <div className="standard-page-margins standard-page-styling">
       <h1>{SharedText.Biomagnetism.BiomagnetismInTheOcean}</h1>
       <MusicScrollDownMessage youtubeVideoEmbedId=""></MusicScrollDownMessage>
+      <p>
+        Cartilaginous fish including sharks and stingrays can detect small
+        variations in electric potential with their electroreceptive organs, the
+        <NewTabLink href="https://en.wikipedia.org/wiki/Ampullae_of_Lorenzini">
+          ampullae of Lorenzini
+        </NewTabLink>
+        . These appear to be able to detect magnetic fields by induction. There
+        is some evidence that these fish use magnetic fields in navigation.
+      </p>
     </div>
   );
 }
