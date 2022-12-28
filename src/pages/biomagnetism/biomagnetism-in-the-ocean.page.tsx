@@ -1,5 +1,4 @@
 import React from "react";
-import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
@@ -12,16 +11,22 @@ export function BiomagnetismInTheOceanPage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>{SharedText.Biomagnetism.BiomagnetismInTheOcean}</h1>
-      <MusicScrollDownMessage youtubeVideoEmbedId=""></MusicScrollDownMessage>
-      <p>
-        Cartilaginous fish including sharks and stingrays can detect small
-        variations in electric potential with their electroreceptive organs, the
-        <NewTabLink href="https://en.wikipedia.org/wiki/Ampullae_of_Lorenzini">
-          ampullae of Lorenzini
-        </NewTabLink>
-        . These appear to be able to detect magnetic fields by induction. There
-        is some evidence that these fish use magnetic fields in navigation.
-      </p>
+      <MusicScrollDownMessage youtubeVideoEmbedId="">
+        <p>
+          Cartilaginous fish including sharks and stingrays can detect small
+          variations in electric potential with their electroreceptive organs,
+          the&nbsp;
+          <NewTabLink href="https://en.wikipedia.org/wiki/Ampullae_of_Lorenzini">
+            ampullae of Lorenzini
+          </NewTabLink>
+          . These appear to be able to detect{" "}
+          <NewTabLink href="https://en.wikipedia.org/wiki/Ampullae_of_Lorenzini#Magnetoreception">
+            magnetic fields by induction
+          </NewTabLink>
+          . There is some evidence that these fish use magnetic fields in
+          navigation.
+        </p>
+      </MusicScrollDownMessage>
     </div>
   );
 }
