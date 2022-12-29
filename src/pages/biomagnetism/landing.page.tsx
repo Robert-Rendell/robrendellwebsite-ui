@@ -32,6 +32,14 @@ export function BiomagnetismLandingPage() {
             </NewTabLink>
           </li>
           <li>
+            <NewTabLink
+              href={SharedRoutes.Biomagnetism.MagneticFieldOnEarth}
+              noNewTab
+            >
+              {SharedText.Biomagnetism.MagneticFieldOnEarth}
+            </NewTabLink>
+          </li>
+          <li>
             {/* <NewTabLink
               href={SharedRoutes.Biomagnetism.MagnetismInHydroElectricPower}
               noNewTab
@@ -40,14 +48,6 @@ export function BiomagnetismLandingPage() {
             </NewTabLink> */}
             {SharedText.Biomagnetism.MagnetismInHydroElectricPower}... coming
             soon
-          </li>
-          <li>
-            <NewTabLink
-              href={SharedRoutes.Biomagnetism.MagneticFieldOnEarth}
-              noNewTab
-            >
-              {SharedText.Biomagnetism.MagneticFieldOnEarth}
-            </NewTabLink>
           </li>
           <li>
             {/* <NewTabLink
@@ -69,6 +69,12 @@ export function BiomagnetismLandingPage() {
               {SharedText.Biomagnetism.HumanToHumanAttraction}
             </NewTabLink> */}
             {SharedText.Biomagnetism.HumanToHumanAttraction}... coming soon
+          </li>
+          <li>
+            {/* <NewTabLink href={SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem} noNewTab>
+              {SharedText.Biomagnetism.MagnetismInTheHumanEndocrineSystem}
+            </NewTabLink> */}
+            {SharedText.Biomagnetism.MagnetismInTheHumanEndocrineSystem}... coming soon
           </li>
         </ol>
         <p>

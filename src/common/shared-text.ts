@@ -5,13 +5,14 @@ export const SharedText: RobRendellWebsiteModel = {
     LandingPage: "Biomagnetism",
     MigratingBirds: "Biomagnetism: Migrating Birds",
     WhatAreVibes: "What are 'Vibes'? ... Well, Not Biomagnetism",
-    BiomagnetismInTheOcean: "Biomagnetism in Marine Animals",
+    BiomagnetismInTheOcean: "Biomagnetism: Marine Animals",
     MagnetismInHydroElectricPower:
       "Magnetism in Hydroelectric Power Generation",
     HumanToHumanAttraction: "Human to Human Attraction",
     DiamagnetismFerromagnetismParamagnetism:
       "Diamagnetism, Ferromagnetism and Paramagnetism",
     MagneticFieldOnEarth: "Cause of Magnetic Field on Earth",
+    MagnetismInTheHumanEndocrineSystem: "Biomagnetism in the Human Endocrine System"
   },
   ClimateChange: {
     LandingPage: "Climate Change Project",
