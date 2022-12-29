@@ -26,6 +26,7 @@ export function BiomagnetismReferencesPage() {
         <li>
           https://www.vedantu.com/physics/diamagnetism-ferromagnetism-and-paramagnetism
         </li>
+        <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3929526/</li>
       </ol>
     </div>
   );

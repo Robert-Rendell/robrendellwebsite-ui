@@ -10,6 +10,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     HumanToHumanAttraction: "/biomagnetism/human-to-human-attraction",
     DiamagnetismFerromagnetismParamagnetism:
       "/biomagnetism/dia-ferro-para-magnetism",
+    MagneticFieldOnEarth: "/biomagnetism/magnetic-field-on-earth",
   },
   ClimateChange: {
     LandingPage: "/climate-change",
