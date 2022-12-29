@@ -23,6 +23,10 @@ export function BiomagnetismReferencesPage() {
           https://www.the-scientist.com/cover-story/a-sense-of-mystery-38949
         </li>
         <li>https://en.wikipedia.org/wiki/Ampullae_of_Lorenzini</li>
+        <li>
+          https://www.vedantu.com/physics/diamagnetism-ferromagnetism-and-paramagnetism
+        </li>
+        <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3929526/</li>
       </ol>
     </div>
   );

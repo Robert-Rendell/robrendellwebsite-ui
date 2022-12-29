@@ -54,6 +54,8 @@ import { BiomagnetismReferencesPage } from "./pages/biomagnetism/references.page
 import { BiomagnetismInTheOceanPage } from "./pages/biomagnetism/biomagnetism-in-the-ocean.page";
 import { MagnetismInHydroElectricPowerPage } from "./pages/biomagnetism/hydro-electric-power.page";
 import { HumanToHumanAttractionPage } from "./pages/biomagnetism/human-to-human-attraction.page";
+import { WhatAreVibesPage } from "./pages/biomagnetism/what-are-vibes.page";
+import { MagneticFieldOnEarthPage } from "./pages/biomagnetism/magnetic-field-on-earth.page";
 
 const maintenanceMode = false;
 
@@ -205,8 +207,16 @@ ReactDOM.render(
               element={<MagnetismInHydroElectricPowerPage />}
             />
             <Route
+              path={SharedRoutes.Biomagnetism.MagneticFieldOnEarth}
+              element={<MagneticFieldOnEarthPage />}
+            />
+            <Route
               path={SharedRoutes.Biomagnetism.HumanToHumanAttraction}
               element={<HumanToHumanAttractionPage />}
+            />
+            <Route
+              path={SharedRoutes.Biomagnetism.WhatAreVibes}
+              element={<WhatAreVibesPage />}
             />
             <Route
               path="biomagnetism/references"

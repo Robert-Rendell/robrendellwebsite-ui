@@ -42,10 +42,27 @@ export function BiomagnetismLandingPage() {
             soon
           </li>
           <li>
-            {/* <NewTabLink href={SharedRoutes.Biomagnetism.WhatAreVibes} noNewTab>
-              {SharedText.Biomagnetism.WhatAreVibes}
+            <NewTabLink
+              href={SharedRoutes.Biomagnetism.MagneticFieldOnEarth}
+              noNewTab
+            >
+              {SharedText.Biomagnetism.MagneticFieldOnEarth}
+            </NewTabLink>
+          </li>
+          <li>
+            {/* <NewTabLink
+              href={SharedRoutes.Biomagnetism.MagnetismInHydroElectricPower}
+              noNewTab
+            >
+              {SharedText.Biomagnetism.MagnetismInHydroElectricPower}
             </NewTabLink> */}
-            {SharedText.Biomagnetism.WhatAreVibes}... coming soon
+            {SharedText.Biomagnetism.DiamagnetismFerromagnetismParamagnetism}...
+            coming soon
+          </li>
+          <li>
+            <NewTabLink href={SharedRoutes.Biomagnetism.WhatAreVibes} noNewTab>
+              {SharedText.Biomagnetism.WhatAreVibes}
+            </NewTabLink>
           </li>
           <li>
             {/* <NewTabLink href={SharedRoutes.Biomagnetism.HumanToHumanAttraction} noNewTab>
