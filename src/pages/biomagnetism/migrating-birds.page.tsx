@@ -14,7 +14,7 @@ export function MigratingBirdsPage() {
       <h1>
         <RobBackButton /> {SharedText.Biomagnetism.MigratingBirds}
       </h1>
-      <MusicScrollDownMessage youtubeVideoEmbedId="">
+      <MusicScrollDownMessage youtubeVideoEmbedId="tbONsqxGCHQ" start={13}>
         <p>
           Bird migrations were recorded in Europe from at least 3,000 years ago
           by the Ancient Greek writers Hesiod, Homer, Herodotus and Aristotle.
