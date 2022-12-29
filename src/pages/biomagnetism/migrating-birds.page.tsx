@@ -41,17 +41,24 @@ export function MigratingBirdsPage() {
           sensors to travel long distances over areas that do not have many
           landmarks, such as the ocean.
         </p>
-        <p>
-          The homing pigeon has an innate homing ability, meaning that it will
-          generally return to its nest using <i>magnetoreception</i>.
-        </p>
+        <hr />
         <p>
           We already know about lots of animals and birds that use magnetic
           material in their bodies to help them understand where they are.
         </p>
         <p>
-          <img src="https://cdn.the-scientist.com/assets/articleNo/38949/iImg/20738/462c987f-677d-4028-8e6d-11d3d854b249-bird-infograph.jpg" />
+          The homing pigeon has an innate homing ability, meaning that it will
+          generally return to its nest using{" "}
+          <NewTabLink href="https://en.wikipedia.org/wiki/Magnetoreception">
+            magnetoreception
+          </NewTabLink>
+          .
         </p>
+        <div style={{ width: "100%", background: "white" }} className="centred">
+          <p>
+            <img src="https://cdn.the-scientist.com/assets/articleNo/38949/iImg/20738/462c987f-677d-4028-8e6d-11d3d854b249-bird-infograph.jpg" />
+          </p>
+        </div>
       </MusicScrollDownMessage>
     </div>
   );

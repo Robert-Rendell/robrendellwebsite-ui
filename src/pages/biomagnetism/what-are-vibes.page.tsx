@@ -1,4 +1,5 @@
 import React from "react";
+import Table from "react-bootstrap/Table";
 import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
@@ -12,7 +13,9 @@ export function WhatAreVibesPage() {
   const width = windowSize[0] - 40;
   return (
     <div className="standard-page-margins standard-page-styling">
-      <h1><RobBackButton /> {SharedText.Biomagnetism.WhatAreVibes}</h1>
+      <h1>
+        <RobBackButton /> {SharedText.Biomagnetism.WhatAreVibes}
+      </h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="sYJXPfMu8cY" start={3}>
         <p>
           People often talk about &apos;vibes&apos; (or &apos;vibrations&apos;)
@@ -25,15 +28,15 @@ export function WhatAreVibesPage() {
         <p>
           Vibes are certainly not forms of biomagnetism and the reason I felt it
           was important to tackle this topic is because I believe humans may use
-          magnetism - just not in these particular social situations.
+          magnetism - just not in social situations.
         </p>
         <QuestionComponent>Tell us then, what are vibes?</QuestionComponent>
         <p>
-          In my opinion, vibes are the resulting feeling (of {" "}
+          In my opinion, vibes are the resulting feeling (of{" "}
           <NewTabLink href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3929526/">
             friend or foe
           </NewTabLink>
-          ) that we get from a social interpretation equation inside our
+          ) that we get from a <u>social interpretation equation</u> inside our
           mind. This feeling is calculated automatically in our subconscious and
           instinctual minds (away from our conscious up brain).
         </p>
@@ -54,12 +57,13 @@ export function WhatAreVibesPage() {
           &apos;vibes&apos; into the following:
           <ul className="ol-extra-margins">
             <li>
-              <b>hearing</b> - humans communicate using language and word choice
-              is important in conveying feelings;
+              <b>seeing</b> - humans communicate using body language and facial
+              cues; light always travels the fastest and provides the quickest
+              result;
             </li>
             <li>
-              <b>seeing</b> - humans communicate using body language and facial
-              cues;
+              <b>hearing</b> - humans communicate using language and word choice
+              is important in conveying feelings;
             </li>
             <li>
               <b>smelling</b> - human are association machines, we use
@@ -67,7 +71,7 @@ export function WhatAreVibesPage() {
             </li>
             <li>
               <b>your current state of mind</b> - constitutes possible bias (or
-              skew) in the social interpretation equation.
+              skew) in the <u>social interpretation equation</u>.
             </li>
           </ul>
         </p>
@@ -77,7 +81,7 @@ export function WhatAreVibesPage() {
           <NewTabLink href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3929526/">
             friend or foe
           </NewTabLink>{" "}
-          instinctual & subconscious outcome.
+          subconscious & instinctual outcome.
         </p>
         <p>
           Notice I have named 3 of the 5 known human senses, that is because the
@@ -86,6 +90,138 @@ export function WhatAreVibesPage() {
           time you are at a distance where taste and touch might be possible, it
           might also be too late for it to matter!
         </p>
+        <QuestionComponent>
+          How does this all work in the above &quot;example A&quot;?
+        </QuestionComponent>
+        <p>
+          <u>Example A:</u>
+          <br />
+          <i>
+            You meet a group of people for the first time and you instantly have
+            a feeling about this group of people.
+          </i>
+        </p>
+        <p>
+          <i>
+            You feel that there is a positive vibe but you can&apos;t put your
+            finger on the reasons why.
+          </i>
+        </p>
+        <p>
+          Let us break down the steps again and analyse what our hidden minds
+          (subconscious & instinctual minds) have calculated:
+        </p>
+        <p>
+          <ul className="ol-extra-margins">
+            <li>seeing;</li>
+            <li>hearing;</li>
+            <li>smelling;</li>
+            <li>your current state of mind.</li>
+          </ul>
+        </p>
+        <p>
+          Using these steps we can create a table of facts and interpretation
+          and that removes the need to list state of mind.
+        </p>
+        <p>
+          Let&apos;s do this assuming a <u>positive</u> state of mind (a.k.a
+          mindset):
+        </p>
+        <div>
+          <Table variant="dark" hover>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Seeing</th>
+                <th>Hearing</th>
+                <th>Smelling</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <b>Fact</b>
+                </td>
+                <td>The group are laughing and smiling</td>
+                <td>
+                  The group are talking using ambiguous phrases/words that could
+                  be misinterpreted (eg. glass half full <i>or</i> glass half
+                  empty)
+                </td>
+                <td>
+                  The group smell of smoke because they are smoking cigarettes
+                  together
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <b>Interpretation</b>
+                </td>
+                <td>&quot;I like these people, they are happy&quot;</td>
+                <td>&quot;glass half full&quot;</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colSpan={1}>
+                  <b>Friend or Foe?</b>
+                </td>
+                <td colSpan={3}>
+                  Friend (based on vibes and <u>positive</u> mindset)
+                </td>
+              </tr>
+            </tbody>
+          </Table>
+        </div>
+
+        <p>
+          Now... let&apos;s do the same thing again assuming a <u>negative</u>{" "}
+          state of mind (a.k.a mindset):
+        </p>
+        <div>
+          <Table variant="dark" hover>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Seeing</th>
+                <th>Hearing</th>
+                <th>Smelling</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <b>Fact</b>
+                </td>
+                <td>The group are laughing and smiling</td>
+                <td>
+                  The group are talking using ambiguous phrases/words that could
+                  be misinterpreted (eg. glass half full <i>or</i> glass half
+                  empty)
+                </td>
+                <td>
+                  The group smell of smoke because they are smoking cigarettes
+                  together
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <b>Interpretation</b>
+                </td>
+                <td>&quot;I like these people, they are happy&quot;</td>
+                <td>&quot;glass half empty&quot;</td>
+                <td>&quot;I hate the smell of smoke&quot;</td>
+              </tr>
+              <tr>
+                <td colSpan={1}>
+                  <b>Friend or Foe?</b>
+                </td>
+                <td colSpan={3}>
+                  Foe (based on vibes and <u>negative</u> mindset)
+                </td>
+              </tr>
+            </tbody>
+          </Table>
+        </div>
       </MusicScrollDownMessage>
     </div>
   );
