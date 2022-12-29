@@ -56,7 +56,7 @@ export function MigratingBirdsPage() {
         </p>
         <div style={{ width: "100%", background: "white" }} className="centred">
           <p>
-            <img src="https://cdn.the-scientist.com/assets/articleNo/38949/iImg/20738/462c987f-677d-4028-8e6d-11d3d854b249-bird-infograph.jpg" />
+            <img width={width} src="https://cdn.the-scientist.com/assets/articleNo/38949/iImg/20738/462c987f-677d-4028-8e6d-11d3d854b249-bird-infograph.jpg" />
           </p>
         </div>
       </MusicScrollDownMessage>

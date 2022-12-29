@@ -56,6 +56,7 @@ import { MagnetismInHydroElectricPowerPage } from "./pages/biomagnetism/hydro-el
 import { HumanToHumanAttractionPage } from "./pages/biomagnetism/human-to-human-attraction.page";
 import { WhatAreVibesPage } from "./pages/biomagnetism/what-are-vibes.page";
 import { MagneticFieldOnEarthPage } from "./pages/biomagnetism/magnetic-field-on-earth.page";
+import { BiomagnetismInHumanEndocrineSystemPage } from "./pages/biomagnetism/human-endocrine-system.page";
 
 const maintenanceMode = false;
 
@@ -217,6 +218,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Biomagnetism.WhatAreVibes}
               element={<WhatAreVibesPage />}
+            />
+            <Route
+              path={SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem}
+              element={<BiomagnetismInHumanEndocrineSystemPage />}
             />
             <Route
               path="biomagnetism/references"

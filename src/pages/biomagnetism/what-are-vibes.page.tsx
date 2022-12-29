@@ -159,14 +159,14 @@ export function WhatAreVibesPage() {
                 </td>
                 <td>&quot;I like these people, they are happy&quot;</td>
                 <td>&quot;glass half full&quot;</td>
-                <td></td>
+                <td>&quot;My favourite grandad used to smoke&quot;</td>
               </tr>
               <tr>
                 <td colSpan={1}>
                   <b>Friend or Foe?</b>
                 </td>
                 <td colSpan={3}>
-                  Friend (based on vibes and <u>positive</u> mindset)
+                  Friend - based on vibes and <u>positive</u> mindset :)
                 </td>
               </tr>
             </tbody>
@@ -207,7 +207,7 @@ export function WhatAreVibesPage() {
                 <td>
                   <b>Interpretation</b>
                 </td>
-                <td>&quot;I like these people, they are happy&quot;</td>
+                <td>&quot;These people are laughing at me and I do not know them&quot;</td>
                 <td>&quot;glass half empty&quot;</td>
                 <td>&quot;I hate the smell of smoke&quot;</td>
               </tr>
@@ -216,7 +216,7 @@ export function WhatAreVibesPage() {
                   <b>Friend or Foe?</b>
                 </td>
                 <td colSpan={3}>
-                  Foe (based on vibes and <u>negative</u> mindset)
+                  Foe - based on vibes and <u>negative</u> mindset :(
                 </td>
               </tr>
             </tbody>
