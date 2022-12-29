@@ -9,6 +9,8 @@ export const SharedText: RobRendellWebsiteModel = {
     MagnetismInHydroElectricPower:
       "Magnetism in Hydroelectric Power Generation",
     HumanToHumanAttraction: "Human to Human Attraction",
+    DiamagnetismFerromagnetismParamagnetism:
+      "Diamagnetism, Ferromagnetism and Paramagnetism",
   },
   ClimateChange: {
     LandingPage: "Climate Change Project",

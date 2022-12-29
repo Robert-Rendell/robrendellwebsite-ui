@@ -6,6 +6,7 @@ export type RobRendellWebsiteModel = {
     MagnetismInHydroElectricPower: string;
     WhatAreVibes: string;
     HumanToHumanAttraction: string;
+    DiamagnetismFerromagnetismParamagnetism: string;
   };
   ClimateChange: {
     LandingPage: string;
