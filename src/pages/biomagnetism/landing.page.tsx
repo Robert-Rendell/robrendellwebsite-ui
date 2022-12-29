@@ -12,7 +12,7 @@ export function BiomagnetismLandingPage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>{SharedText.Biomagnetism.LandingPage}</h1>
-      <MusicScrollDownMessage youtubeVideoEmbedId="" start={120}>
+      <MusicScrollDownMessage youtubeVideoEmbedId="F0NraYVUuvw">
         <h2>Topics</h2>
         <ol>
           <li>
@@ -24,13 +24,12 @@ export function BiomagnetismLandingPage() {
             </NewTabLink>
           </li>
           <li>
-            {/* <NewTabLink
+            <NewTabLink
               href={SharedRoutes.Biomagnetism.BiomagnetismInTheOcean}
               noNewTab
             >
               {SharedText.Biomagnetism.BiomagnetismInTheOcean}
-            </NewTabLink> */}
-            {SharedText.Biomagnetism.BiomagnetismInTheOcean}... coming soon
+            </NewTabLink>
           </li>
           <li>
             {/* <NewTabLink
