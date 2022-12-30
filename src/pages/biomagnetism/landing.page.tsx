@@ -71,10 +71,14 @@ export function BiomagnetismLandingPage() {
             {SharedText.Biomagnetism.HumanToHumanAttraction}... coming soon
           </li>
           <li>
-            {/* <NewTabLink href={SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem} noNewTab>
+            <NewTabLink
+              href={
+                SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem
+              }
+              noNewTab
+            >
               {SharedText.Biomagnetism.MagnetismInTheHumanEndocrineSystem}
-            </NewTabLink> */}
-            {SharedText.Biomagnetism.MagnetismInTheHumanEndocrineSystem}... coming soon
+            </NewTabLink>
           </li>
         </ol>
         <p>

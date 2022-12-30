@@ -27,6 +27,9 @@ export function BiomagnetismReferencesPage() {
           https://www.vedantu.com/physics/diamagnetism-ferromagnetism-and-paramagnetism
         </li>
         <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3929526/</li>
+        <li>
+          https://www.quora.com/Why-does-an-EMP-disable-electronic-devices-but-not-human-brains
+        </li>
       </ol>
     </div>
   );

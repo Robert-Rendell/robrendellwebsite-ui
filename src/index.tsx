@@ -220,7 +220,9 @@ ReactDOM.render(
               element={<WhatAreVibesPage />}
             />
             <Route
-              path={SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem}
+              path={
+                SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem
+              }
               element={<BiomagnetismInHumanEndocrineSystemPage />}
             />
             <Route
