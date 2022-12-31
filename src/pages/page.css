@@ -76,3 +76,13 @@ h2 {
 #mc-edoegsa-page {
   overflow: hidden;
 }
+
+#neurotransmitter-table {
+  width: 100%;
+  background: white;
+  color: black;
+}
+
+#neurotransmitter-table table td {
+  text-align: center;
+}
