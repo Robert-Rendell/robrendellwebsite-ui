@@ -12,7 +12,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   return (
-    <div className="standard-page-margins standard-page-styling">
+    <div id="human-endocrine-page" className="standard-page-margins standard-page-styling">
       <h1>
         <RobBackButton />{" "}
         {SharedText.Biomagnetism.MagnetismInTheHumanEndocrineSystem}
