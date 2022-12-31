@@ -12,7 +12,10 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   return (
-    <div id="human-endocrine-page" className="standard-page-margins standard-page-styling">
+    <div
+      id="human-endocrine-page"
+      className="standard-page-margins standard-page-styling"
+    >
       <h1>
         <RobBackButton />{" "}
         {SharedText.Biomagnetism.MagnetismInTheHumanEndocrineSystem}
@@ -45,7 +48,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
         </p>
         <p>
           Many people see a pattern that has emerged from thousands of years of
-          religion and ancient egyptian hieroglyphs.
+          religion and ancient Egyptian hieroglyphs.
         </p>
         <p>
           There has been, however, a&nbsp;
@@ -136,9 +139,12 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           in both circadian and seasonal cycles.
         </p>
         <p>
-          The pineal gland is located in the epithalamus, near the center of the
-          brain, between the two hemispheres, tucked in a groove where the two
-          halves of the thalamus join.
+          The pineal gland is located in the{" "}
+          <NewTabLink href="https://en.wikipedia.org/wiki/Epithalamus">
+            epithalamus
+          </NewTabLink>
+          , near the center of the brain, between the two hemispheres, tucked in
+          a groove where the two halves of the thalamus join.
         </p>
         <div style={{ width: "100%", background: "white" }} className="centred">
           <img
@@ -229,11 +235,14 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           />
         </div>
         <p>
-          In this book, the following molecular chemicals are shown to fit into serotonin receptors because of their similar shape.
+          In this book, the following molecular chemicals are shown to fit into
+          serotonin receptors because of their similar shape.
         </p>
         <p>
-          The idea presented is that, each chemical fits into the serotonin receptors like different keys that can all unlock the
-          serotonin receptor lock, however each lifts different &quot;tumblers&quot; when opening the lock.
+          The idea presented is that, each chemical fits into the serotonin
+          receptors like different keys that can all unlock the serotonin
+          receptor lock, however each lifts different &quot;tumblers&quot; when
+          opening the lock.
         </p>
         <div style={{ width: "100%", background: "white" }}>
           <img
