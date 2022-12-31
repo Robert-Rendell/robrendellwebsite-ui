@@ -393,7 +393,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           :
           <ul className="ol-extra-margins">
             <li>
-              epiphanies and creative insight through neurotransmitters;
+              <b>epiphanies and creative insight through neurotransmitters</b>;
               melatonin and dimethyltryptamine molecule secretion. It is a
               simple idea that I can back up with experience. The connection
               with halos is probably just a symbol of enlightenment through
@@ -402,15 +402,15 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
               their imagination.
             </li>
             <li>
-              the pineal gland is the electrical source of thoughts; we know our
+              <b>the pineal gland is the electrical source of thoughts</b>; we know our
               brain is a muscle and it uses electricity through neurons to
               produce an experience. If piezoelectricity is present in the
               pineal gland, then is this where the electric current begins? In
               this theory, I&apos;m not sure what halos would represent.
             </li>
             <li>
-              bioelectromagnetism induction through piezoelectric &quot;radio
-              receivers&quot; in the pineal gland; there could be an{" "}
+              <b>bioelectromagnetism induction through piezoelectric &quot;radio
+              receivers&quot; in the pineal gland</b>; there could be an{" "}
               <i>internal</i> ethereal plane that we cannot see with our 5 known
               senses that allows us to see into our genetic past and see the
               learnings of ancestors before us who have{" "}
@@ -427,10 +427,10 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
               eyes to see your imagination.
             </li>
             <li>
-              bioelectromagnetism induction: humans who have strong magnetic
+              <b>bioelectromagnetism induction: humans who have strong magnetic
               fields originating from their pineal glands could possibly
               interact with other human beings who have a similar biological
-              mechanism. Telepathy is known to be possible through similar
+              mechanism</b>. Telepathy is known to be possible through similar
               mappings of neural networks for people that live together for long
               periods of time. The traditional telepathy isn&apos; of radio
               waves, it is only of slow synchonisation of grown neural networks
