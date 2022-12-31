@@ -447,9 +447,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
               same solution (or network) for the same problems. It is as simple
               as finishing sentences for one another, or not having to use words
               to understand. The telepathy I speak of in bioelectromagnetism
-              could in fact be a step beyond traditional telepathy. I have often
-              wondered how such fantastic ideas have arrived into my mind and it
-              sometimes feels as if knowledge is floating through the air.
+              could in fact be a step beyond traditional telepathy.
             </li>
           </ul>
         </p>
