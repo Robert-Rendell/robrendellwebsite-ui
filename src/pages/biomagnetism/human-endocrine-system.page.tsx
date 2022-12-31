@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
+import { PageViewsComponent } from "../../components/page-views.component";
+import { PageViewResponse, usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "../neurochemistry/components/question.component";
 import "../page.css";
@@ -11,6 +13,8 @@ import "../page.css";
 export function BiomagnetismInHumanEndocrineSystemPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  const [pageViews, setPageViews] = useState<PageViewResponse>();
+  usePageView(SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem, setPageViews);
   return (
     <div
       id="human-endocrine-page"
@@ -21,7 +25,8 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
         {SharedText.Biomagnetism.MagnetismInTheHumanEndocrineSystem}
       </h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="HxK3zqZidqo">
-        <QuestionComponent hrOff>
+        <PageViewsComponent pageViews={pageViews} caption="How many now know the truth ="/>
+        <QuestionComponent>
           What connects the{" "}
           <NewTabLink href="https://en.wikipedia.org/wiki/Eye_of_Horus">
             Egyptian Eye of Horus hieroglyphic
@@ -41,7 +46,6 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           </NewTabLink>
           ?
         </QuestionComponent>
-        <hr />
         <p>
           Humans have evolved to recognise patterns because it is vital for our
           survival to adapt to changing environments.
