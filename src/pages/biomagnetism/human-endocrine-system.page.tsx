@@ -20,7 +20,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
         <RobBackButton />{" "}
         {SharedText.Biomagnetism.MagnetismInTheHumanEndocrineSystem}
       </h1>
-      <MusicScrollDownMessage youtubeVideoEmbedId="BSy6b-mg7vQ">
+      <MusicScrollDownMessage youtubeVideoEmbedId="HxK3zqZidqo">
         <QuestionComponent hrOff>
           What connects the{" "}
           <NewTabLink href="https://en.wikipedia.org/wiki/Eye_of_Horus">
@@ -276,6 +276,14 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
             </tr>
           </table>
         </div>
+        <hr />
+        <p>
+          In &apos;The Cosmic Serpent&apos;, shaman rituals using ayahuasca
+          (Dimethyltryptamine) usually involve sitting in absolute darkness in
+          the rainforest; in my eyes this means a much greater melatonin
+          secretion in the pineal gland compared to in daylight.
+        </p>
+
         <p></p>
         <QuestionComponent>
           And how does this all link to magnetism?
@@ -285,12 +293,107 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           microcrystals present in the pineal gland.
         </p>
         <p>
-          There is a possibility that this type of material could be capable
-          of&nbsp;
+          There is a possibility that this type of crystalline material could be
+          capable of&nbsp;
           <NewTabLink href="https://en.wikipedia.org/wiki/Piezoelectricity">
             Piezoelectricity
           </NewTabLink>
           .
+        </p>
+        <p>
+          Crystals capable of piezoelectricity turn kinetic energy into
+          electrical energy, meaning when they are squeezed they produce a
+          current.
+        </p>
+        <hr />
+        <p>
+          Here is an excerpt from a{" "}
+          <NewTabLink href="https://www.researchgate.net/publication/247112683_Piezoelectricity_in_the_human_pineal_gland">
+            research paper
+          </NewTabLink>
+          , 1996{" "}
+          <NewTabLink href="https://www.researchgate.net/profile/Sidney-Lang">
+            Sidney Lang
+          </NewTabLink>{" "}
+          (of Israel), on the topic:
+        </p>
+        <p>
+          <i>
+            &quot; Melatonin secretion by the pineal gland has been reported to
+            be affected by exposure to electromagnetic fields (EMFs). In an
+            initial investigation to determine if calcifications commonly found
+            in the pineal gland could respond to EMFs by a transducer mechanism,
+            studies were conducted to ascertain if pineal tissues were
+            piezoelectric. Second harmonic generation (SHG) measurements showed
+            that pineal tissues contained noncentrosymmetric crystals, thus
+            proving the presence of piezoelectricity. Both mulberry-like and
+            faceted crystalline calcifications were observed by scanning
+            electron microscopy (SEM). Some of the calcifications had
+            compositions similar to that of hydroxyapatite; others contained a
+            high concentration of aluminum.&quot;
+          </i>
+        </p>
+        <QuestionComponent>
+          What could humans possibly be using EMF (electromagnetic fields) for
+          in the pineal gland?
+        </QuestionComponent>
+        <div className="centred">
+          <img
+            width={width / 2}
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Simon_ushakov_last_supper_1685.jpg"
+          />
+          <img
+            width={width / 2}
+            src="https://cdn-attachments.timesofmalta.com/a43f02717b96e58bd06774fcc18273275a1a82fe-1630825057-11e8efa5-960x640.jpg"
+          />
+        </div>
+        <hr />
+        <p>
+          I believe religions and cultures through the ages have been trying to
+          tell us about this bioelectromagnetism through{" "}
+          <NewTabLink href="https://en.wikipedia.org/wiki/Halo_(religious_iconography)">
+            halos
+          </NewTabLink>
+          .
+        </p>
+        <p>
+          I see this pattern in stained glass of churches, on buddhist Tibetan
+          art and in Hindu paintings of the trimurti.
+        </p>
+        <p>
+          I have a few theories for{" "}
+          <NewTabLink href="https://en.wikipedia.org/wiki/Halo_(religious_iconography)">
+            halos
+          </NewTabLink>{" "}
+          and{" "}
+          <NewTabLink href="https://www.researchgate.net/publication/3340377_Calcite_microcrystals_in_the_pineal_gland_of_the_human_brain_Second_harmonic_generators_and_possible_piezoelectric_transducers">
+            bioelectromagnetism
+          </NewTabLink>
+          :
+          <ul className="ol-extra-margins">
+            <li>
+              epiphanies and creative insight through neurotransmitters;
+              melatonin and dimethyltryptamine molecule secretion. It is a
+              simple idea that I can back up with experience.
+            </li>
+            <li>
+              bioelectromagnetism induction through &quot;radio receivers&quot;
+              in the pineal gland; which could be the source of electrical
+              signals in our brain - the source of thoughts. There could be an
+              ethereal plane that we cannot see with our 5 known senses which
+              allows us to see into our genetic past and the learnings of
+              ancestors before us who have{" "}
+              <NewTabLink
+                href={SharedRoutes.Neurochemistry.LearningAndGeneticCode}
+              >
+                shaped our DNA
+              </NewTabLink>
+              . This ethereal plane might be visible with our eyes (not just
+              third eye) when one is flooded with dimethyltryptamine, for
+              instance in a Amazonian ayahuasca ritual. I might add that this
+              ethereal plane is a dimension within one&apos;s self.
+            </li>
+          </ul>
         </p>
       </MusicScrollDownMessage>
     </div>

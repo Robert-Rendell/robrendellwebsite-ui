@@ -77,8 +77,7 @@ export function BiomagnetismLandingPage() {
             >
               {SharedText.Biomagnetism.IsBloodMagnetic}
             </NewTabLink> */}
-            {SharedText.Biomagnetism.IsBloodMagnetic}... coming
-            soon
+            {SharedText.Biomagnetism.IsBloodMagnetic}... coming soon
           </li>
           <li>
             <NewTabLink

@@ -43,6 +43,9 @@ export function BiomagnetismReferencesPage() {
         </li>
         <li>https://www.bems.org/</li>
         <li>https://onlinelibrary.wiley.com/doi/epdf/10.1002/bem.10053</li>
+        <li>
+          https://www.researchgate.net/publication/247112683_Piezoelectricity_in_the_human_pineal_gland
+        </li>
       </ol>
     </div>
   );
