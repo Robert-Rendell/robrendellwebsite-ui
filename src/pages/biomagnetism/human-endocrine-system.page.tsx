@@ -26,7 +26,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
       </h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="HxK3zqZidqo">
         <PageViewsComponent pageViews={pageViews} caption="How many now know the truth ="/>
-        <QuestionComponent hrOff>
+        <QuestionComponent>
           What connects the{" "}
           <NewTabLink href="https://en.wikipedia.org/wiki/Eye_of_Horus">
             Egyptian Eye of Horus hieroglyphic
@@ -46,7 +46,6 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           </NewTabLink>
           ?
         </QuestionComponent>
-        <hr />
         <p>
           Humans have evolved to recognise patterns because it is vital for our
           survival to adapt to changing environments.
