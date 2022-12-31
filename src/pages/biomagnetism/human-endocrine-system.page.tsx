@@ -56,7 +56,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
             journal entry
           </NewTabLink>
           &nbsp;written to separate science from myth. I am citing this as to
-          write in a balanced manner.
+          write in a balanced and grounded manner.
         </p>
         <QuestionComponent>
           When does the pattern first emerge?
