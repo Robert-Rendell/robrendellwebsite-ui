@@ -71,6 +71,16 @@ export function BiomagnetismLandingPage() {
             {SharedText.Biomagnetism.HumanToHumanAttraction}... coming soon
           </li>
           <li>
+            {/* <NewTabLink
+              href={SharedRoutes.Biomagnetism.IsBloodMagnetic}
+              noNewTab
+            >
+              {SharedText.Biomagnetism.IsBloodMagnetic}
+            </NewTabLink> */}
+            {SharedText.Biomagnetism.IsBloodMagnetic}... coming
+            soon
+          </li>
+          <li>
             <NewTabLink
               href={
                 SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem

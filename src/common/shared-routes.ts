@@ -13,6 +13,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     MagneticFieldOnEarth: "/biomagnetism/magnetic-field-on-earth",
     MagnetismInTheHumanEndocrineSystem: "/biomagnetism/human-endocrine-system",
     ElectromagneticPulse: "/biomagnetism/electromagnetic-pulse",
+    IsBloodMagnetic: "/biomagnetism/is-blood-magnetic"
   },
   ClimateChange: {
     LandingPage: "/climate-change",

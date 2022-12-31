@@ -10,6 +10,7 @@ export type RobRendellWebsiteModel = {
     MagneticFieldOnEarth: string;
     MagnetismInTheHumanEndocrineSystem: string;
     ElectromagneticPulse: string;
+    IsBloodMagnetic: string;
   };
   ClimateChange: {
     LandingPage: string;

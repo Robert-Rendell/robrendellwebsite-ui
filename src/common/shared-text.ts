@@ -15,6 +15,7 @@ export const SharedText: RobRendellWebsiteModel = {
     MagnetismInTheHumanEndocrineSystem:
       "Biomagnetism in the Human Endocrine System",
     ElectromagneticPulse: "Electromagnetic Pulses",
+    IsBloodMagnetic: "Is Blood Magnetic?"
   },
   ClimateChange: {
     LandingPage: "Climate Change Project",

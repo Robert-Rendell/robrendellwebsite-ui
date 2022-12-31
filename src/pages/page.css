@@ -77,6 +77,10 @@ h2 {
   overflow: hidden;
 }
 
+#human-endocrine-page {
+  overflow: hidden;
+}
+
 #neurotransmitter-table {
   width: 100%;
   background: white;

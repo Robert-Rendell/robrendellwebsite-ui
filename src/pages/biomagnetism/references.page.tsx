@@ -30,6 +30,19 @@ export function BiomagnetismReferencesPage() {
         <li>
           https://www.quora.com/Why-does-an-EMP-disable-electronic-devices-but-not-human-brains
         </li>
+        <li>
+          https://revibeenergy.com/piezoelectric-electromagnetic-harvesting/
+        </li>
+        <li>https://pubmed.ncbi.nlm.nih.gov/12224052/ (2002)</li>
+        <li>https://pubmed.ncbi.nlm.nih.gov/21894451/ (2012)</li>
+        <li>https://pubmed.ncbi.nlm.nih.gov/21544842/ (2011)</li>
+        <li>https://pubmed.ncbi.nlm.nih.gov/36403265/ (2022 October)</li>
+        <li>https://en.wikipedia.org/wiki/Ferroelectricity</li>
+        <li>
+          https://www.amazon.co.uk/Piezoelectricity-Springer-Materials-Science-Heywang/dp/3540686800/ref=sr_1_1?keywords=Piezoelectricity%3A+Evolution+and+Future+of+a+Technology&qid=1672409630&sr=8-1
+        </li>
+        <li>https://www.bems.org/</li>
+        <li>https://onlinelibrary.wiley.com/doi/epdf/10.1002/bem.10053</li>
       </ol>
     </div>
   );
