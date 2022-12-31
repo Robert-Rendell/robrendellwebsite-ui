@@ -4,6 +4,7 @@ import { useGetHomePageImageUrls } from "./hooks/useGetHomePageImageUrls.hook";
 import { FullScreenS3ImageComponent } from "../../components/full-screen-image.component";
 import { ImageGallery } from "../../components/image-gallery.component";
 import { SharedText } from "../../common/shared-text";
+import { SharedRoutes } from "../../common/shared-routes";
 
 export const HomePage = () => {
   const handleImageClickedRef = useRef();
@@ -26,6 +27,13 @@ export const HomePage = () => {
       <h3>Rob Rendell: Node.js / TypeScript Developer</h3>
       <h4>Recent developments:</h4>
       <ul>
+        <li>
+          31/12/22 @ 11.30 - Added&nbsp;
+          <a href={SharedRoutes.Biomagnetism.LandingPage}>
+            {SharedText.Biomagnetism.LandingPage}
+          </a>{" "}
+          page
+        </li>
         <li>
           26/11/22 @ 09.35 - Added&nbsp;
           <a href="recursion/simple-equations-infinite-complexity">
