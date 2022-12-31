@@ -403,7 +403,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
               with halos is probably just a symbol of enlightenment through
               wisdom, discipline and insight. It requires a human that is fully
               able to self regulate their neurochemistry (and emotions) through
-              their imagination.
+              their imagination. Hello world!
             </li>
             <li>
               <b>the pineal gland is the electrical source of thoughts</b>; we
