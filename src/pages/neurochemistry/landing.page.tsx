@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import Badge from "react-bootstrap/Badge";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
+import { PageViewsComponent } from "../../components/page-views.component";
 import { PageViewResponse, usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
-import InfinitySpinner from "../../resources/infinity-spinner.svg";
 import "../page.css";
 
 export function NeurochemistryLandingPage() {
@@ -18,17 +17,7 @@ export function NeurochemistryLandingPage() {
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="mbcVm8iepQE" start={120}>
-        {typeof pageViews === "undefined" && (
-          <img src={InfinitySpinner} height={50} />
-        )}
-        {pageViews && (
-          <>
-            Minds unlocked:{" "}
-            <Badge bg="dark">
-              <>{pageViews.total}</>
-            </Badge>
-          </>
-        )}
+        <PageViewsComponent pageViews={pageViews}/>
         <p>
           Warning!! All brain chemicals mentioned in this work are completely
           self produced (inside your body).
