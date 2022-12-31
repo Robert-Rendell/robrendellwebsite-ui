@@ -225,18 +225,22 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           (Dimethyltryptamine)?
         </QuestionComponent>
         <p>
-          Dimethyltryptamine has been found to be secreted by the pineal gland
-          too.
+          Dimethyltryptamine{" "}
+          <NewTabLink href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6088236/">
+            has been found
+          </NewTabLink>{" "}
+          to be secreted by the pineal gland too.
         </p>
         <div className="centred">
           <img
-            width={width / 3}
+            width={300}
             src="https://m.media-amazon.com/images/I/5171wSAYylL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
           />
         </div>
         <p>
-          In this book, the following molecular chemicals are shown to fit into
-          serotonin receptors because of their similar shape.
+          In &apos;The Cosmic Serpent&apos; by <i>Jeremy Narby</i>, the
+          following molecular chemicals are shown to fit into serotonin
+          receptors because of their similar shape.
         </p>
         <p>
           The idea presented is that, each chemical fits into the serotonin
@@ -288,33 +292,6 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           </NewTabLink>
           .
         </p>
-        <p></p>
-        <p>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6088236/ -dmt</p>
-        <p>
-          https://revibeenergy.com/piezoelectric-electromagnetic-harvesting/
-        </p>
-        <p>https://pubmed.ncbi.nlm.nih.gov/12224052/ 2002</p>
-        <p>https://pubmed.ncbi.nlm.nih.gov/21894451/ 2012</p>
-        <p>https://pubmed.ncbi.nlm.nih.gov/21544842/ 2011</p>
-        <p>https://pubmed.ncbi.nlm.nih.gov/36403265/ 2022 October</p>
-        <p>https://en.wikipedia.org/wiki/Ferroelectricity</p>
-        <p>
-          https://www.sciencelearn.org.nz/resources/1010-does-blood-have-magnetic-properties#:~:text=The%20iron%20part%20of%20haeme,or%20paramagnetic%20than%20oxygenated%20blood.
-          In the 1930s, it was found that haemoglobin has magnetic properties
-          that are different depending on whether it is carrying oxygen or not.
-          When the haemoglobin is not carrying oxygen it is more sensitive or
-          paramagnetic than oxygenated blood. The earth also has a magnetic
-          field, which is caused by electrical currents within the earth. The
-          strength of a magnetic field is measured in teslas (T). The Earth’s
-          magnetic field is about 50µT in New Zealand. Find out more about this
-          in our article, fossil compass. Much higher magnetic fields are used
-          in other magnets.
-        </p>
-        <p>
-          https://www.amazon.co.uk/Piezoelectricity-Springer-Materials-Science-Heywang/dp/3540686800/ref=sr_1_1?keywords=Piezoelectricity%3A+Evolution+and+Future+of+a+Technology&qid=1672409630&sr=8-1
-        </p>
-        <p>https://www.bems.org/</p>
-        <p>https://onlinelibrary.wiley.com/doi/epdf/10.1002/bem.10053</p>
       </MusicScrollDownMessage>
     </div>
   );
