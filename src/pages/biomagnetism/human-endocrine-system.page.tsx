@@ -56,7 +56,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
             journal entry
           </NewTabLink>
           &nbsp;written to separate science from myth. I am citing this as to
-          write in a balanced manner.
+          write in a balanced and grounded manner.
         </p>
         <QuestionComponent>
           When does the pattern first emerge?
@@ -162,9 +162,10 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
         </p>
         <QuestionComponent>What is melatonin?</QuestionComponent>
         <p>
-          Melatonin was discovered in 1958. It is primarily known in animals as
-          a hormone released by the pineal gland in the brain at night and has
-          long been associated with control of the sleep–wake cycle.
+          Melatonin was discovered in 1958 by Aaron Lerner. It is primarily
+          known in animals as a hormone released by the pineal gland in the
+          brain at night and has long been associated with control of the
+          sleep–wake cycle.
         </p>
         <hr />
         <p>
@@ -284,13 +285,33 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           secretion in the pineal gland compared to in daylight.
         </p>
 
-        <p></p>
+        <p>
+          Another crucial part of the ritual is for the shaman guide to sing a
+          melody.
+        </p>
+        <p>
+          It is fascinating that music plays a part in this story as well but I
+          won&apos;t explore that idea today.
+        </p>
         <QuestionComponent>
-          And how does this all link to magnetism?
+          How does this all link to magnetism?
         </QuestionComponent>
         <p>
-          In the last 20 years, researchers in Grenoble have found calcite
-          microcrystals present in the pineal gland.
+          In the last 20 years,{" "}
+          <NewTabLink href="https://www.researchgate.net/profile/Simon-Baconnier-2">
+            researchers in Grenoble
+          </NewTabLink>{" "}
+          found{" "}
+          <NewTabLink href="https://www.researchgate.net/publication/3340377_Calcite_microcrystals_in_the_pineal_gland_of_the_human_brain_Second_harmonic_generators_and_possible_piezoelectric_transducers">
+            calcite microcrystals
+          </NewTabLink>{" "}
+          present in the pineal gland. These experiments took place at the{" "}
+          <NewTabLink href="https://www.esrf.fr/">
+            European Synchrotron Radiation Facility (ESRF)
+          </NewTabLink>{" "}
+          in Grenoble where researchers are also working on Nanotechnology.
+          Nanotechnology is the next step in understanding the human brain as it
+          will allow us to experience the brain from the bloodstream.
         </p>
         <p>
           There is a possibility that this type of crystalline material could be
@@ -372,17 +393,29 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           :
           <ul className="ol-extra-margins">
             <li>
-              epiphanies and creative insight through neurotransmitters;
+              <b>epiphanies and creative insight through neurotransmitters</b>;
               melatonin and dimethyltryptamine molecule secretion. It is a
-              simple idea that I can back up with experience.
+              simple idea that I can back up with experience. The connection
+              with halos is probably just a symbol of enlightenment through
+              wisdom, discipline and insight. It requires a human that is fully
+              able to self regulate their neurochemistry (and emotions) through
+              their imagination.
             </li>
             <li>
-              bioelectromagnetism induction through &quot;radio receivers&quot;
-              in the pineal gland; which could be the source of electrical
-              signals in our brain - the source of thoughts. There could be an
-              ethereal plane that we cannot see with our 5 known senses which
-              allows us to see into our genetic past and the learnings of
-              ancestors before us who have{" "}
+              <b>the pineal gland is the electrical source of thoughts</b>; we
+              know our brain is a muscle and it uses electricity through neurons
+              to produce an experience. If piezoelectricity is present in the
+              pineal gland, then is this where the electric current begins? In
+              this theory, I&apos;m not sure what halos would represent.
+            </li>
+            <li>
+              <b>
+                bioelectromagnetism induction through piezoelectric &quot;radio
+                receivers&quot; in the pineal gland
+              </b>
+              ; there could be an <i>internal</i> ethereal plane that we cannot
+              see with our 5 known senses that allows us to see into our genetic
+              past and see the learnings of ancestors before us who have{" "}
               <NewTabLink
                 href={SharedRoutes.Neurochemistry.LearningAndGeneticCode}
               >
@@ -391,7 +424,28 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
               . This ethereal plane might be visible with our eyes (not just
               third eye) when one is flooded with dimethyltryptamine, for
               instance in a Amazonian ayahuasca ritual. I might add that this
-              ethereal plane is a dimension within one&apos;s self.
+              ethereal plane would have to be a dimension within one&apos;s
+              self. In simple terms, you wouldn&apos;t even have to close your
+              eyes to see your imagination.
+            </li>
+            <li>
+              <b>
+                bioelectromagnetism induction: humans who have strong magnetic
+                fields originating from their pineal glands could possibly
+                interact with other human beings who have a similar biological
+                mechanism
+              </b>
+              . Telepathy is known to be possible through similar mappings of
+              neural networks for people that live together for long periods of
+              time. The traditional telepathy isn&apos;t a form of radio waves
+              like pop culture would suggest, it is only of slow synchonisation
+              of grown neural networks between the two humans who agree on the
+              same solution (or network) for the same problems. It is as simple
+              as finishing sentences for one another, or not having to use words
+              to understand. The telepathy I speak of in bioelectromagnetism
+              could in fact be a step beyond traditional telepathy. I have often
+              wondered how such fantastic ideas have arrived into my mind and it
+              sometimes feels as if knowledge is floating through the air.
             </li>
           </ul>
         </p>
