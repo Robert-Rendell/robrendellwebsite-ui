@@ -12,7 +12,9 @@ export const SharedText: RobRendellWebsiteModel = {
     DiamagnetismFerromagnetismParamagnetism:
       "Diamagnetism, Ferromagnetism and Paramagnetism",
     MagneticFieldOnEarth: "Cause of Magnetic Field on Earth",
-    MagnetismInTheHumanEndocrineSystem: "Biomagnetism in the Human Endocrine System"
+    MagnetismInTheHumanEndocrineSystem:
+      "Biomagnetism in the Human Endocrine System",
+    ElectromagneticPulse: "Electromagnetic Pulses",
   },
   ClimateChange: {
     LandingPage: "Climate Change Project",

@@ -9,6 +9,7 @@ export type RobRendellWebsiteModel = {
     DiamagnetismFerromagnetismParamagnetism: string;
     MagneticFieldOnEarth: string;
     MagnetismInTheHumanEndocrineSystem: string;
+    ElectromagneticPulse: string;
   };
   ClimateChange: {
     LandingPage: string;

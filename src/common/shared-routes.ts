@@ -11,7 +11,8 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     DiamagnetismFerromagnetismParamagnetism:
       "/biomagnetism/dia-ferro-para-magnetism",
     MagneticFieldOnEarth: "/biomagnetism/magnetic-field-on-earth",
-    MagnetismInTheHumanEndocrineSystem: "/biomagnetism/human-endocrine-system"
+    MagnetismInTheHumanEndocrineSystem: "/biomagnetism/human-endocrine-system",
+    ElectromagneticPulse: "/biomagnetism/electromagnetic-pulse",
   },
   ClimateChange: {
     LandingPage: "/climate-change",

@@ -207,7 +207,10 @@ export function WhatAreVibesPage() {
                 <td>
                   <b>Interpretation</b>
                 </td>
-                <td>&quot;These people are laughing at me and I do not know them&quot;</td>
+                <td>
+                  &quot;These people are laughing at me and I do not know
+                  them&quot;
+                </td>
                 <td>&quot;glass half empty&quot;</td>
                 <td>&quot;I hate the smell of smoke&quot;</td>
               </tr>
