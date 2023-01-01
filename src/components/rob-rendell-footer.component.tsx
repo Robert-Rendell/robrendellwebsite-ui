@@ -5,7 +5,7 @@ export function RobRendellFooterComponent() {
     <>
       <div className="centred">
         <span style={{ color: "white", textAlign: "center" }}>
-          Copyright &copy; 2022 Robert Rendell. All rights reserved.
+          Copyright &copy; 2023 Robert Rendell. All rights reserved.
         </span>
       </div>
       <div className="centred">
