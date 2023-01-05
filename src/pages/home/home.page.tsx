@@ -63,7 +63,7 @@ export const HomePage = () => {
         <li>
           30/10/22 @ 10.33 - Completed{" "}
           <a href="photos-ive-taken/nature/wild-flowers">
-            My Flower PhotographsoriginalTravelImageS3Urls
+            My Flower Photographs
           </a>{" "}
           project (phase 1)
         </li>
