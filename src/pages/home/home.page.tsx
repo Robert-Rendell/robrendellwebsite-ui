@@ -32,7 +32,7 @@ export const HomePage = () => {
           <a href={SharedRoutes.Biomagnetism.LandingPage}>
             {SharedText.Biomagnetism.LandingPage}
           </a>{" "}
-          page
+          project
         </li>
         <li>
           26/11/22 @ 09.35 - Added&nbsp;

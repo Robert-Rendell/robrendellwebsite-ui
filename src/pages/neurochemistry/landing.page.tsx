@@ -17,7 +17,7 @@ export function NeurochemistryLandingPage() {
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="mbcVm8iepQE" start={120}>
-        <PageViewsComponent pageViews={pageViews}/>
+        <PageViewsComponent pageViews={pageViews} />
         <p>
           Warning!! All brain chemicals mentioned in this work are completely
           self produced (inside your body).
