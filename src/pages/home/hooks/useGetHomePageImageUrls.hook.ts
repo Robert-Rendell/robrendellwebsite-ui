@@ -10,7 +10,7 @@ import { getS3ImageFilenameFromUrl } from "../../../common/get-s3-image-filename
 export type UseGetHomePageImageUrlsReturnType = {
   thumbnails: JSX.Element[];
   originalImgUrls: string[];
-}
+};
 
 export const useGetHomePageImageUrls = (
   handleImageClickedRef: S3ImageClickFn
@@ -23,11 +23,18 @@ export const useGetHomePageImageUrls = (
     const thumbnailImgUrls: string[] = response.data.travelImages;
     const originalImgUrls: string[] = response.data.originalTravelImages;
     const thumbnails = thumbnailImgUrls.map((imgUrl) => {
-      const originalUrl = originalImgUrls.find((item) => imgUrl.includes(getS3ImageFilenameFromUrl(item)));
-      return S3LoadedThumbnail({ imgUrl, originalUrl, onClick: handleImageClickedRef });
-    }
-
-    );
-    const output: UseGetHomePageImageUrlsReturnType = { thumbnails, originalImgUrls };
+      const originalUrl = originalImgUrls.find((item) =>
+        imgUrl.includes(getS3ImageFilenameFromUrl(item))
+      );
+      return S3LoadedThumbnail({
+        imgUrl,
+        originalUrl,
+        onClick: handleImageClickedRef,
+      });
+    });
+    const output: UseGetHomePageImageUrlsReturnType = {
+      thumbnails,
+      originalImgUrls,
+    };
     return output;
   }, [config.backend, S3LoadedThumbnail]);

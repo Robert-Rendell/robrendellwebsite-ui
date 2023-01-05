@@ -14,7 +14,10 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   const [pageViews, setPageViews] = useState<PageViewResponse>();
-  usePageView(SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem, setPageViews);
+  usePageView(
+    SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem,
+    setPageViews
+  );
   return (
     <div
       id="human-endocrine-page"
@@ -25,7 +28,10 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
         {SharedText.Biomagnetism.MagnetismInTheHumanEndocrineSystem}
       </h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="HxK3zqZidqo">
-        <PageViewsComponent pageViews={pageViews} caption="How many now know the truth ="/>
+        <PageViewsComponent
+          pageViews={pageViews}
+          caption="How many now know the truth ="
+        />
         <QuestionComponent>
           What connects the{" "}
           <NewTabLink href="https://en.wikipedia.org/wiki/Eye_of_Horus">
