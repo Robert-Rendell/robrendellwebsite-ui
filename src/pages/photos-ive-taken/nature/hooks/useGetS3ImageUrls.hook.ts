@@ -2,7 +2,7 @@ import axios from "axios";
 import { useCallback } from "react";
 import { S3ImagePageResponse } from "robrendellwebsite-common";
 import { Response } from "../../../../models/axios-response-wrapper";
-import { S3LoadedImage } from "../../../../components/s3-loaded-image.component";
+import { S3LoadedThumbnail } from "../../../../components/s3-loaded-image.component";
 import { config } from "../../../../config";
 import { S3ImageClickFn } from "../../../../components/full-screen-image.component";
 
@@ -22,6 +22,6 @@ export const useGetS3ImageUrls = (props: Props) =>
     );
     if (imgUrlArray.length === 0) return [];
     return imgUrlArray.map((imgUrl) =>
-      S3LoadedImage(imgUrl, props.handleImageClickedRef)
+      S3LoadedThumbnail({ imgUrl, onClick: props.handleImageClickedRef })
     );
   }, [config.backend, props]);
