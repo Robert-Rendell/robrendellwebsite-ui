@@ -2,10 +2,10 @@ import axios from "axios";
 import { useCallback } from "react";
 import { Response } from "../../../models/axios-response-wrapper";
 import { HomePageResponse } from "robrendellwebsite-common";
-import { S3ImageClickFn } from "../../../components/full-screen-image.component";
 import { S3LoadedThumbnail } from "../../../components/s3-loaded-image.component";
 import { config } from "../../../config";
 import { getS3ImageFilenameFromUrl } from "../../../common/get-s3-image-filename";
+import { S3ImageClickFn } from "../../../components/full-screen-image/types/types";
 
 export type UseGetHomePageImageUrlsReturnType = {
   thumbnails: JSX.Element[];

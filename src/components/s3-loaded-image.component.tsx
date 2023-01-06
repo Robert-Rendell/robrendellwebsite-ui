@@ -1,10 +1,15 @@
 import React from "react";
 import { getS3ImageFilenameFromUrl } from "../common/get-s3-image-filename";
-import { S3ImageClickFn } from "./full-screen-image.component";
+import {
+  FullScreenImageClickProps,
+  S3ImageClickFn,
+  S3ImageUrlWithData,
+} from "./full-screen-image/types/types";
 
 type Props = {
   imgUrl: string;
   originalUrl?: string;
+  dataJsonUrl?: string;
   onClick: S3ImageClickFn;
 };
 export function S3LoadedThumbnail(props: Props) {
@@ -14,10 +19,18 @@ export function S3LoadedThumbnail(props: Props) {
       src={props.imgUrl}
       title={getS3ImageFilenameFromUrl(props.imgUrl)}
       onClick={() => {
-        if (props.onClick.current)
-          props.onClick.current(
-            props.originalUrl ? props.originalUrl : props.imgUrl
-          );
+        if (props.onClick.current) {
+          let getCurrentS3Image: FullScreenImageClickProps = props.imgUrl;
+          if (props.originalUrl) getCurrentS3Image = props.originalUrl;
+          if (props.dataJsonUrl) {
+            const imgWithData: S3ImageUrlWithData = {
+              imageS3Url: props.imgUrl,
+              dataJsonUrl: props.dataJsonUrl,
+            };
+            getCurrentS3Image = imgWithData;
+          }
+          props.onClick.current(getCurrentS3Image);
+        }
       }}
     />
   );
