@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { KeepNote } from "robrendellwebsite-common";
 import { useGetImageData } from "./hooks/useGetImageData";
 import { S3ImageUrlWithData } from "./types/types";
@@ -10,16 +10,16 @@ export function FullScreenImageTitle(props: Props) {
   const getImageData = useGetImageData({
     jsonDataS3Url: props.s3ImageSelected?.dataJsonUrl || "",
   });
-  const jsonData = useRef<KeepNote | undefined>();
+  const [jsonData, setJsonData] = useState<KeepNote | undefined>();
   useEffect(() => {
     getImageData().then((val) => {
-      jsonData.current = val;
+      setJsonData(val);
     });
   }, []);
   return (
     <>
-      {jsonData.current ? (
-        <span>{jsonData.current?.title}</span>
+      {jsonData ? (
+        <span>{jsonData?.title}</span>
       ) : (
         "Loading photo data..."
       )}
