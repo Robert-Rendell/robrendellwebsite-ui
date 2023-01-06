@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { FullScreenS3ImageComponent } from "../../components/full-screen-image.component";
+import { FullScreenS3ImageComponent } from "../../components/full-screen-image/full-screen-image.component";
 import { ImageGallery } from "../../components/image-gallery.component";
 import "../page.css";
 import { useGetS3ImageUrls } from "./nature/hooks/useGetS3ImageUrls.hook";

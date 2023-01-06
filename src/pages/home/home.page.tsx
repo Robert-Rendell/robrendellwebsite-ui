@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import "../page.css";
 import { useGetHomePageImageUrls } from "./hooks/useGetHomePageImageUrls.hook";
-import { FullScreenS3ImageComponent } from "../../components/full-screen-image.component";
+import { FullScreenS3ImageComponent } from "../../components/full-screen-image/full-screen-image.component";
 import { ImageGallery } from "../../components/image-gallery.component";
 import { SharedText } from "../../common/shared-text";
 import { SharedRoutes } from "../../common/shared-routes";
