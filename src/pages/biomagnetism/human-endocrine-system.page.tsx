@@ -13,6 +13,8 @@ import "../page.css";
 export function BiomagnetismInHumanEndocrineSystemPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  const onMobile = width < 600;
+  const moleculeImgWidth = !onMobile ? width / 4 : width / 3;
   const [pageViews, setPageViews] = useState<PageViewResponse>();
   usePageView(
     SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem,
@@ -261,29 +263,31 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
         </p>
         <div style={{ width: "100%", background: "white" }}>
           <img
-            width={width / 4}
+            width={moleculeImgWidth}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Serotonin-2D-skeletal.svg/1280px-Serotonin-2D-skeletal.svg.png"
           />
           <img
-            width={width / 4}
+            width={moleculeImgWidth}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Melatonin.svg/1280px-Melatonin.svg.png"
           />
           <img
-            width={width / 4}
+            width={moleculeImgWidth}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/DMT.svg/1920px-DMT.svg.png"
           />
-          <img
-            width={width / 4}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Psilocybn.svg/1280px-Psilocybn.svg.png"
-          />
+          {!onMobile && (
+            <img
+              width={width / 4}
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Psilocybn.svg/1280px-Psilocybn.svg.png"
+            />
+          )}
         </div>
         <div id="neurotransmitter-table">
           <table width={width}>
             <tr>
               <td style={{ textAlign: "center" }}>Serotonin</td>
-              <td>Melatonin</td>
-              <td>Dimethyltryptamine (DMT)</td>
-              <td>Psilocybin</td>
+              <td style={{ textAlign: "center" }}>Melatonin</td>
+              <td style={{ textAlign: "center" }}>Dimethyltryptamine { !onMobile && (<span>(DMT)</span>) }</td>
+              {!onMobile && <td>Psilocybin</td>}
             </tr>
           </table>
         </div>
