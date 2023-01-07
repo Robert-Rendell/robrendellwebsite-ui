@@ -1,6 +1,7 @@
 import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
+import { DateWritten } from "../../components/date-written.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import "../page.css";
@@ -9,6 +10,9 @@ export function BiomagnetismLandingPage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>{SharedText.Biomagnetism.LandingPage}</h1>
+      <DateWritten>
+          December 2022 and Jan 2023
+      </DateWritten>
       <MusicScrollDownMessage youtubeVideoEmbedId="F0NraYVUuvw">
         <h2>Topics</h2>
         <ol className="ol-extra-margins">

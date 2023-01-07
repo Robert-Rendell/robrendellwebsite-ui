@@ -22,14 +22,6 @@ export function SimpleEquationsInfiniteComplexity() {
         <h1>
           <RobBackButton /> {SharedText.Recursion.SimpleEquations}
         </h1>
-        <DateWritten>26.11.22</DateWritten>
-        <span>
-          &nbsp;
-          <i>
-            Part of <a href="/recursion">Recursion</a> project
-          </i>
-          .
-        </span>
         <MusicScrollDownMessage youtubeVideoEmbedId="UDVtMYqUAyw" start={261}>
           <p>
             As far as I understand, the idea of Fractals came from{" "}

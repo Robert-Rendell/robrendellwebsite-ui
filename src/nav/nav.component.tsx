@@ -8,6 +8,7 @@ import "./nav.component.css";
 import { SharedRoutes } from "../common/shared-routes";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import { TechIconsComponent } from "../components/tech-icons.component";
+import { SharedText } from "../common/shared-text";
 
 export const NavComponent = () => {
   const windowSize = useWindowSize();
@@ -37,7 +38,7 @@ export const NavComponent = () => {
               Neurochemistry Project
             </Nav.Link>
             <Nav.Link href={SharedRoutes.Biomagnetism.LandingPage}>
-              Biomagnetism Project
+              {SharedText.Biomagnetism.LandingPage}
             </Nav.Link>
             <Nav.Link href={SharedRoutes.ClimateChange.LandingPage}>
               Climate Change
