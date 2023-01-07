@@ -401,50 +401,51 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
             bioelectromagnetism
           </NewTabLink>
           :
-          <ul className="ol-extra-margins">
-            <li>
-              <b>epiphanies and creative insight through neurotransmitters</b>;
+        </p>
+        <ol>
+          <li>
+            <b>epiphanies and creative insight through neurotransmitters</b>;
               melatonin and dimethyltryptamine molecule secretion. It is a
               simple idea that I can back up with experience. The connection
               with halos is probably just a symbol of enlightenment through
               wisdom, discipline and insight. It requires a human that is fully
               able to self regulate their neurochemistry (and emotions) through
               their imagination. Hello world!
-            </li>
-            <li>
-              <b>the pineal gland is the electrical source of thoughts</b>; we
+          </li>
+          <li>
+            <b>the pineal gland is the electrical source of thoughts</b>; we
               know our brain is a muscle and it uses electricity through neurons
               to produce an experience. If piezoelectricity is present in the
               pineal gland, then is this where the electric current begins? In
               this theory, I&apos;m not sure what halos would represent.
-            </li>
-            <li>
-              <b>
+          </li>
+          <li>
+            <b>
                 bioelectromagnetism induction through piezoelectric &quot;radio
                 receivers&quot; in the pineal gland
-              </b>
+            </b>
               ; there could be an <i>internal</i> ethereal plane that we cannot
               see with our 5 known senses that allows us to see into our genetic
               past and see the learnings of ancestors before us who have{" "}
-              <NewTabLink
-                href={SharedRoutes.Neurochemistry.LearningAndGeneticCode}
-              >
+            <NewTabLink
+              href={SharedRoutes.Neurochemistry.LearningAndGeneticCode}
+            >
                 shaped our DNA
-              </NewTabLink>
+            </NewTabLink>
               . This ethereal plane might be visible with our eyes (not just
               third eye) when one is flooded with dimethyltryptamine, for
               instance in a Amazonian ayahuasca ritual. I might add that this
               ethereal plane would have to be a dimension within one&apos;s
               self. In simple terms, you wouldn&apos;t even have to close your
               eyes to see your imagination.
-            </li>
-            <li>
-              <b>
+          </li>
+          <li>
+            <b>
                 bioelectromagnetism induction: humans who have strong magnetic
                 fields originating from their pineal glands could possibly
                 interact with other human beings who have a similar biological
                 mechanism
-              </b>
+            </b>
               . Telepathy is known to be possible through similar mappings of
               neural networks for people that live together for long periods of
               time. The traditional telepathy isn&apos;t a form of radio waves
@@ -454,9 +455,8 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
               as finishing sentences for one another, or not having to use words
               to understand. The telepathy I speak of in bioelectromagnetism
               could in fact be a step beyond traditional telepathy.
-            </li>
-          </ul>
-        </p>
+          </li>
+        </ol>
       </MusicScrollDownMessage>
     </div>
   );
