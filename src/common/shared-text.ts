@@ -10,8 +10,8 @@ export const SharedText: RobRendellWebsiteModel = {
       "Magnetism in Hydroelectric Power Generation",
     HumanToHumanAttraction:
       "Human to Human Attraction (Chemistry and not Magnetism)",
-    DiamagnetismFerromagnetismParamagnetism:
-      "Diamagnetism, Ferromagnetism and Paramagnetism",
+    FerromagnetismParamagnetismDiamagnetism:
+      "Ferromagnetism, Paramagnetism and Diamagnetism",
     MagneticFieldOnEarth: "Cause of Magnetic Field on Earth",
     MagnetismInTheHumanEndocrineSystem:
       "Biomagnetism in the Human Endocrine System",

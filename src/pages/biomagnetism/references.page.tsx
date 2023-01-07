@@ -46,6 +46,9 @@ export function BiomagnetismReferencesPage() {
         <li>
           https://www.researchgate.net/publication/247112683_Piezoelectricity_in_the_human_pineal_gland
         </li>
+        <li>
+          https://qph.cf2.quoracdn.net/main-qimg-c8a315afa199c474132e19c6eb1f98ae-lq
+        </li>
       </ol>
     </div>
   );

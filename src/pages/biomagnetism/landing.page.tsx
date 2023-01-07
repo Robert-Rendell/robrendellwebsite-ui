@@ -45,14 +45,15 @@ export function BiomagnetismLandingPage() {
             </NewTabLink>
           </li>
           <li>
-            {/* <NewTabLink
-              href={SharedRoutes.Biomagnetism.MagnetismInHydroElectricPower}
+            <NewTabLink
+              href={
+                SharedRoutes.Biomagnetism
+                  .FerromagnetismParamagnetismDiamagnetism
+              }
               noNewTab
             >
-              {SharedText.Biomagnetism.MagnetismInHydroElectricPower}
-            </NewTabLink> */}
-            {SharedText.Biomagnetism.DiamagnetismFerromagnetismParamagnetism}...
-            coming soon
+              {SharedText.Biomagnetism.FerromagnetismParamagnetismDiamagnetism}
+            </NewTabLink>
           </li>
           <li>
             <NewTabLink href={SharedRoutes.Biomagnetism.WhatAreVibes} noNewTab>
