@@ -5,22 +5,20 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import "./nav.component.css";
-import logo from "../resources/logo.svg";
-import nodeJsLogo from "../resources/nodejs-logo.png";
-import tsLogo from "../resources/ts-logo.png";
-import awsLogo from "../resources/aws-logo.png";
 import { SharedRoutes } from "../common/shared-routes";
 import { useWindowSize } from "../hooks/use-window-size.hook";
+import { TechIconsComponent } from "../components/tech-icons.component";
 
 export const NavComponent = () => {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
 
-  const centredOnMobile = width < 600 ? "centred" : "";
+  const onMobile = width < 600;
+  const centredOnMobile = onMobile ? "centred" : "";
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">Rob Rendell</Navbar.Brand>
+        <Navbar.Brand href="/">Rob Rendell { onMobile && (<TechIconsComponent/>)}</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -144,30 +142,7 @@ export const NavComponent = () => {
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
-            <img src={logo} width="40" height="40" alt="React" />
-            <img
-              src={tsLogo}
-              className="tech-icons"
-              width="30"
-              height="30"
-              alt="TypeScript"
-            />
-            <img
-              src={nodeJsLogo}
-              className="tech-icons nodejs-icon"
-              width="30"
-              height="30"
-              alt="nodeJs"
-            />
-            <div className="tech-icons aws-icon-bg">
-              <img
-                src={awsLogo}
-                className="aws-icon"
-                width="30"
-                height="20"
-                alt="nodeJs"
-              />
-            </div>
+            { !onMobile && (<TechIconsComponent/>)}
             {/* <Button variant="outline-success" disabled>Enquire</Button> */}
           </Form>
         </Navbar.Collapse>
