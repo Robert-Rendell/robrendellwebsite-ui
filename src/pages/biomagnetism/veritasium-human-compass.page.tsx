@@ -26,7 +26,13 @@ export function VeritasiumHumanCompassPage() {
       <QuestionComponent>Need a recap on the video?</QuestionComponent>
       <p>Here&apos;s the juicy details:</p>
       <ul>
-        <li>Experiment at CalTech Biology;</li>
+        <li>
+          Experiment at{" "}
+          <NewTabLink href="https://www.bbe.caltech.edu/">
+            CalTech Biology
+          </NewTabLink>
+          ;
+        </li>
         <li>
           Research paper question:{" "}
           <i>Do humans have any brain response to a magnetic field?</i>;
@@ -41,16 +47,23 @@ export function VeritasiumHumanCompassPage() {
         </li>
         <li>Humans are not exceptions among other mammals;</li>
         <li>
-          Robin Baker studies around English countryside, students asked which
-          direction they came from; Princeton then repeated the experiment but
-          failed to get substantial behavioural results;
+          <NewTabLink href="https://www.sciencedirect.com/science/article/abs/pii/S0003347287801057">
+            Robin Baker studies
+          </NewTabLink>{" "}
+          around English countryside, students asked which direction they came
+          from; Princeton then repeated the experiment but failed to get
+          substantial behavioural results;
         </li>
       </ul>
       <p>CalTech experiment details:</p>
       <ul>
         <li>
-          3D Modified Faraday Cage; 4 square coils in all three directions;
-          designed to create a magnetic field in any direction
+          3D Modified{" "}
+          <NewTabLink href="https://en.wikipedia.org/wiki/Faraday_cage">
+            Faraday Cage
+          </NewTabLink>
+          ; 4 square coils in all three directions; designed to create a
+          magnetic field in any direction;
         </li>
         <li>Uniform magnetic field in the centre of the cage;</li>
         <li>
@@ -64,23 +77,31 @@ export function VeritasiumHumanCompassPage() {
         </li>
         <li>
           Using 64 electrodes around the skull to pick up electrical signals in
-          the brain.
+          the brain;
         </li>
         <li>
           Alpha wave brain signals operate at 10Hz; known to be an indicator of
           relaxing but not sleeping; Alpha wave is suppressed (drops) when brain
-          detects something from your senses;
+          detects something from your senses.
         </li>
       </ul>
-      <p>Conclusions from EEG results (electrodes):</p>
+      <p>
+        Conclusions from{" "}
+        <NewTabLink href="https://en.wikipedia.org/wiki/Electroencephalography">
+          EEG
+        </NewTabLink>{" "}
+        results (electrodes):
+      </p>
       <ul>
-        <li>Non-conscious / implicit use of magnetic fields;</li>
-        <li>3db alpha power decrease (counter-clockwise);</li>
-        <li>Humans vary </li>
+        <li>Humans have a non-conscious or implicit use of magnetic fields;</li>
         <li>
-          Theories: some languages use cardinal directions rather than words
-          like &apos;front&apos;, &apos;back&apos;, &apos;left&apos; and
-          &apos;right&apos;. These native speakers may have a comparatively
+          Humans vary (from person to person) on how strong their sense is for
+          magnetic fields;
+        </li>
+        <li>
+          Additional theories: some languages use cardinal directions rather
+          than words like &apos;front&apos;, &apos;back&apos;, &apos;left&apos;
+          and &apos;right&apos;. These native speakers may have a comparatively
           higher reception to magnetism to other humans of different languages
           that don&apos;t use cardinal directions. These native speakers may
           have built an association with their language and the magnetism senses

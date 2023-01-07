@@ -54,7 +54,16 @@ export function BiomagnetismReferencesPage() {
           https://www.theguardian.com/news/datablog/2014/jan/08/dogs-defecate-earths-magnetic-field-research-finds
         </li>
         <li>
-          Veritasium youtube on magnetism in humans: https://www.youtube.com/watch?v=dg3pza4y2ws&t=229s
+          Veritasium youtube on magnetism in humans:
+          https://www.youtube.com/watch?v=dg3pza4y2ws&t=229s
+        </li>
+        <li>
+          Robin Baker search paper on magnetoreception in humans:
+          https://www.sciencedirect.com/science/article/abs/pii/S0003347287801057
+        </li>
+        <li>
+          Is Blood Magnetic:
+          https://www.sciencelearn.org.nz/resources/1010-does-blood-have-magnetic-properties#:~:text=The%20iron%20part%20of%20haeme,or%20paramagnetic%20than%20oxygenated%20blood
         </li>
       </ol>
     </div>
