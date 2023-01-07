@@ -6,7 +6,7 @@ export type RobRendellWebsiteModel = {
     MagnetismInHydroElectricPower: string;
     WhatAreVibes: string;
     HumanToHumanAttraction: string;
-    DiamagnetismFerromagnetismParamagnetism: string;
+    FerromagnetismParamagnetismDiamagnetism: string;
     MagneticFieldOnEarth: string;
     MagnetismInTheHumanEndocrineSystem: string;
     ElectromagneticPulse: string;

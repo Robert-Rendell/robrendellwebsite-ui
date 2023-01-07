@@ -8,7 +8,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     BiomagnetismInTheOcean: "/biomagnetism/biomagnetism-in-the-ocean",
     MagnetismInHydroElectricPower: "/biomagnetism/hydro-electric-power",
     HumanToHumanAttraction: "/biomagnetism/human-to-human-attraction",
-    DiamagnetismFerromagnetismParamagnetism:
+    FerromagnetismParamagnetismDiamagnetism:
       "/biomagnetism/dia-ferro-para-magnetism",
     MagneticFieldOnEarth: "/biomagnetism/magnetic-field-on-earth",
     MagnetismInTheHumanEndocrineSystem: "/biomagnetism/human-endocrine-system",

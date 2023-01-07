@@ -18,7 +18,9 @@ export const NavComponent = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">Rob Rendell { onMobile && (<TechIconsComponent/>)}</Navbar.Brand>
+        <Navbar.Brand href="/">
+          Rob Rendell {onMobile && <TechIconsComponent />}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -142,7 +144,7 @@ export const NavComponent = () => {
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
-            { !onMobile && (<TechIconsComponent/>)}
+            {!onMobile && <TechIconsComponent />}
             {/* <Button variant="outline-success" disabled>Enquire</Button> */}
           </Form>
         </Navbar.Collapse>
