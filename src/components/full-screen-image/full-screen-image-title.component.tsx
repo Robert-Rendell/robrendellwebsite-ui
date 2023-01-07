@@ -18,9 +18,14 @@ export function FullScreenImageTitle(props: Props) {
   }, []);
   return (
     <>
-      {jsonData ? (<>
-        <span><u>{jsonData?.title}</u></span><span>: {jsonData?.textContent}</span>
-      </>) : (
+      {jsonData ? (
+        <>
+          <span>
+            <u>{jsonData?.title}</u>
+          </span>
+          <span>: {jsonData?.textContent}</span>
+        </>
+      ) : (
         "Loading photo data..."
       )}
     </>

@@ -40,7 +40,9 @@ const bifurcationDiagramSketch = (p5: P5Instance<Props>) => {
   }
 
   class Bifurcation extends Animated {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private ps: any[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private xLines: any[];
     private initialX: number;
     private xIncrement: number;
