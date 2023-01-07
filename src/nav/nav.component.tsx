@@ -9,9 +9,7 @@ import logo from "../resources/logo.svg";
 import nodeJsLogo from "../resources/nodejs-logo.png";
 import tsLogo from "../resources/ts-logo.png";
 import awsLogo from "../resources/aws-logo.png";
-import { SharedText } from "../common/shared-text";
 import { SharedRoutes } from "../common/shared-routes";
-import { config } from "../config";
 
 export const NavComponent = () => {
   return (
@@ -27,13 +25,13 @@ export const NavComponent = () => {
           >
             <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
 
-            <Nav.Link href="/recursion">Recursion Project</Nav.Link>
-            <Nav.Link href="/neurochemistry">Neurochemistry Project</Nav.Link>
-            <Nav.Link href="/biomagnetism">Biomagnetism Project</Nav.Link>
-            <Nav.Link href="/climate-change">Climate Change</Nav.Link>
+            <Nav.Link href={SharedRoutes.Recursion.LandingPage}>Recursion Project</Nav.Link>
+            <Nav.Link href={SharedRoutes.Neurochemistry.LandingPage}>Neurochemistry Project</Nav.Link>
+            <Nav.Link href={SharedRoutes.Biomagnetism.LandingPage}>Biomagnetism Project</Nav.Link>
+            <Nav.Link href={SharedRoutes.ClimateChange.LandingPage}>Climate Change</Nav.Link>
 
             <NavDropdown title="Nature" id="nature">
-              <NavDropdown.Item href="/photos-ive-taken/nature/wild-flowers">
+              <NavDropdown.Item href={"/photos-ive-taken/nature/wild-flowers"}>
                 Wild Flowers
               </NavDropdown.Item>
               <NavDropdown.Item href="/photos-ive-taken/nature/insects">
