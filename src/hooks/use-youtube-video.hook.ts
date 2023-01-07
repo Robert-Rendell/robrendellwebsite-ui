@@ -5,6 +5,7 @@ export type YouTubeVideoProps = {
   width: number;
   height?: number;
 };
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function useYouTubeVideo(props: YouTubeVideoProps) {
   return useMemo(() => {
     return;
