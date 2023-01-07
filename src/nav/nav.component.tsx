@@ -5,19 +5,20 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import "./nav.component.css";
-import logo from "../resources/logo.svg";
-import nodeJsLogo from "../resources/nodejs-logo.png";
-import tsLogo from "../resources/ts-logo.png";
-import awsLogo from "../resources/aws-logo.png";
-import { SharedText } from "../common/shared-text";
 import { SharedRoutes } from "../common/shared-routes";
-import { config } from "../config";
+import { useWindowSize } from "../hooks/use-window-size.hook";
+import { TechIconsComponent } from "../components/tech-icons.component";
 
 export const NavComponent = () => {
+  const windowSize = useWindowSize();
+  const width = windowSize[0] - 40;
+
+  const onMobile = width < 600;
+  const centredOnMobile = onMobile ? "centred" : "";
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">Rob Rendell</Navbar.Brand>
+        <Navbar.Brand href="/">Rob Rendell { onMobile && (<TechIconsComponent/>)}</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -27,39 +28,72 @@ export const NavComponent = () => {
           >
             <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
 
-            <Nav.Link href="/recursion">Recursion Project</Nav.Link>
-            <Nav.Link href="/neurochemistry">Neurochemistry Project</Nav.Link>
-            <Nav.Link href="/biomagnetism">Biomagnetism Project</Nav.Link>
-            <Nav.Link href="/climate-change">Climate Change</Nav.Link>
+            <Nav.Link href={SharedRoutes.Recursion.LandingPage}>
+              Recursion Project
+            </Nav.Link>
+            <Nav.Link href={SharedRoutes.Neurochemistry.LandingPage}>
+              Neurochemistry Project
+            </Nav.Link>
+            <Nav.Link href={SharedRoutes.Biomagnetism.LandingPage}>
+              Biomagnetism Project
+            </Nav.Link>
+            <Nav.Link href={SharedRoutes.ClimateChange.LandingPage}>
+              Climate Change
+            </Nav.Link>
 
-            <NavDropdown title="Nature" id="nature">
-              <NavDropdown.Item href="/photos-ive-taken/nature/wild-flowers">
+            <NavDropdown menuVariant="dark" title="Nature" id="nature">
+              <NavDropdown.Item
+                href={"/photos-ive-taken/nature/wild-flowers"}
+                className={centredOnMobile}
+              >
                 Wild Flowers
               </NavDropdown.Item>
-              <NavDropdown.Item href="/photos-ive-taken/nature/insects">
+              <NavDropdown.Item
+                href="/photos-ive-taken/nature/insects"
+                className={centredOnMobile}
+              >
                 Insects
               </NavDropdown.Item>
-              <NavDropdown.Item href="/photos-ive-taken/nature/lichen">
+              <NavDropdown.Item
+                href="/photos-ive-taken/nature/lichen"
+                className={centredOnMobile}
+              >
                 Lichen
               </NavDropdown.Item>
-              <NavDropdown.Item href="/photos-ive-taken/nature/arachnids">
+              <NavDropdown.Item
+                href="/photos-ive-taken/nature/arachnids"
+                className={centredOnMobile}
+              >
                 Arachnids
               </NavDropdown.Item>
-              <NavDropdown.Item href="/photos-ive-taken/nature/fungi">
+              <NavDropdown.Item
+                href="/photos-ive-taken/nature/fungi"
+                className={centredOnMobile}
+              >
                 Fungi
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="Misc" id="misc">
-              <NavDropdown.Item href="/miscellaneous/india">
+            <NavDropdown title="Misc" id="misc" menuVariant="dark">
+              <NavDropdown.Item
+                href="/miscellaneous/india"
+                className={centredOnMobile}
+              >
                 India
               </NavDropdown.Item>
-              <NavDropdown.Item href="/miscellaneous/giant-pacific-octopus">
+              <NavDropdown.Item
+                href="/miscellaneous/giant-pacific-octopus"
+                className={centredOnMobile}
+              >
                 Giant Pacific Octopus (Alaskan)
               </NavDropdown.Item>
-              <NavDropdown.Item disabled>Scotch Whisky</NavDropdown.Item>
-              <NavDropdown.Item disabled>Word of the Day</NavDropdown.Item>
-              <NavDropdown.Item disabled>
+              <NavDropdown.Item disabled className={centredOnMobile}>
+                Scotch Whisky
+              </NavDropdown.Item>
+              <NavDropdown.Item disabled className={centredOnMobile}>
+                Word of the Day
+              </NavDropdown.Item>
+              <NavDropdown.Item disabled className={centredOnMobile}>
                 Interesting Dates in History
               </NavDropdown.Item>
             </NavDropdown>
@@ -67,11 +101,13 @@ export const NavComponent = () => {
             <NavDropdown
               title="Music Projects"
               id="musicProjectsNavbarScrollingDropdown"
+              menuVariant="dark"
             >
               <NavDropdown.Item
                 href="https://www.shiva-archetypes.com"
                 target="_blank"
                 rel="noreferrer"
+                className={centredOnMobile}
               >
                 Shiva Archetypes (band)
               </NavDropdown.Item>
@@ -79,6 +115,7 @@ export const NavComponent = () => {
                 href="https://www.robcelticfiddle.co.uk"
                 target="_blank"
                 rel="noreferrer"
+                className={centredOnMobile}
               >
                 Rob Celtic Fiddle (weddings)
               </NavDropdown.Item>
@@ -87,8 +124,12 @@ export const NavComponent = () => {
             <NavDropdown
               title="Tech Tests"
               id="techTestsNavbarScrollingDropdown"
+              menuVariant="dark"
             >
-              <NavDropdown.Item href="/technical-tests/291121">
+              <NavDropdown.Item
+                href="/technical-tests/291121"
+                className={centredOnMobile}
+              >
                 29/11/21 - University data visualiser
               </NavDropdown.Item>
             </NavDropdown>
@@ -101,30 +142,7 @@ export const NavComponent = () => {
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
-            <img src={logo} width="40" height="40" alt="React" />
-            <img
-              src={tsLogo}
-              className="tech-icons"
-              width="30"
-              height="30"
-              alt="TypeScript"
-            />
-            <img
-              src={nodeJsLogo}
-              className="tech-icons nodejs-icon"
-              width="30"
-              height="30"
-              alt="nodeJs"
-            />
-            <div className="tech-icons aws-icon-bg">
-              <img
-                src={awsLogo}
-                className="aws-icon"
-                width="30"
-                height="20"
-                alt="nodeJs"
-              />
-            </div>
+            { !onMobile && (<TechIconsComponent/>)}
             {/* <Button variant="outline-success" disabled>Enquire</Button> */}
           </Form>
         </Navbar.Collapse>

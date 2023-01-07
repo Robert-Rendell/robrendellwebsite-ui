@@ -13,7 +13,7 @@ export function MagneticFieldOnEarthPage() {
       <h1>
         <RobBackButton /> {SharedText.Biomagnetism.MagneticFieldOnEarth}
       </h1>
-      <hr/>
+      <hr />
       <p>
         The flow of liquid iron at the center of the Earth generates an electric
         current that produces magnetic fields. Earth&apos;s magnetic field is
