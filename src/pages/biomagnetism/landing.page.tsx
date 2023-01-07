@@ -40,14 +40,12 @@ export function BiomagnetismLandingPage() {
             </NewTabLink>
           </li>
           <li>
-            {/* <NewTabLink
+            <NewTabLink
               href={SharedRoutes.Biomagnetism.MagnetismInHydroElectricPower}
               noNewTab
             >
               {SharedText.Biomagnetism.MagnetismInHydroElectricPower}
-            </NewTabLink> */}
-            {SharedText.Biomagnetism.MagnetismInHydroElectricPower}... coming
-            soon
+            </NewTabLink>
           </li>
           <li>
             {/* <NewTabLink
