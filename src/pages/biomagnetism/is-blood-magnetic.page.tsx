@@ -12,7 +12,7 @@ export function IsBloodMagneticPage() {
       <h1>
         <RobBackButton /> {SharedText.Biomagnetism.IsBloodMagnetic}
       </h1>
-      <hr/>
+      <hr />
       <p>
         In the 1930s, it was found that haemoglobin has magnetic properties that
         are different depending on whether it is carrying oxygen or not. When
