@@ -8,7 +8,8 @@ export const SharedText: RobRendellWebsiteModel = {
     BiomagnetismInTheOcean: "Biomagnetism: Marine Animals",
     MagnetismInHydroElectricPower:
       "Magnetism in Hydroelectric Power Generation",
-    HumanToHumanAttraction: "Human to Human Attraction (Chemistry and not Magnetism)",
+    HumanToHumanAttraction:
+      "Human to Human Attraction (Chemistry and not Magnetism)",
     DiamagnetismFerromagnetismParamagnetism:
       "Diamagnetism, Ferromagnetism and Paramagnetism",
     MagneticFieldOnEarth: "Cause of Magnetic Field on Earth",
