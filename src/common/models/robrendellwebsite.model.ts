@@ -9,7 +9,7 @@ export type RobRendellWebsiteModel = {
     FerromagnetismParamagnetismDiamagnetism: string;
     MagneticFieldOnEarth: string;
     MagnetismInTheHumanEndocrineSystem: string;
-    ElectromagneticPulse: string;
+    ElectromagneticPulses: string;
     IsBloodMagnetic: string;
     VeritasiumHumanCompass: string;
   };

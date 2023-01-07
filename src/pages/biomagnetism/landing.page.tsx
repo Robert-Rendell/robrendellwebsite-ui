@@ -10,9 +10,7 @@ export function BiomagnetismLandingPage() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>{SharedText.Biomagnetism.LandingPage}</h1>
-      <DateWritten>
-          December 2022 and Jan 2023
-      </DateWritten>
+      <DateWritten>December 2022 and Jan 2023</DateWritten>
       <MusicScrollDownMessage youtubeVideoEmbedId="F0NraYVUuvw">
         <h2>Topics</h2>
         <ol className="ol-extra-margins">
@@ -79,13 +77,12 @@ export function BiomagnetismLandingPage() {
             </NewTabLink>
           </li>
           <li>
-            {/* <NewTabLink
-              href={SharedRoutes.Biomagnetism.IsBloodMagnetic}
+            <NewTabLink
+              href={SharedRoutes.Biomagnetism.ElectromagneticPulses}
               noNewTab
             >
-              {SharedText.Biomagnetism.IsBloodMagnetic}
-            </NewTabLink> */}
-            {SharedText.Biomagnetism.ElectromagneticPulse}... coming soon
+              {SharedText.Biomagnetism.ElectromagneticPulses}
+            </NewTabLink>
           </li>
           <li>
             <NewTabLink

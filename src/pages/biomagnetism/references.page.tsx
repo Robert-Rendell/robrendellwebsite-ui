@@ -65,6 +65,10 @@ export function BiomagnetismReferencesPage() {
           Is Blood Magnetic:
           https://www.sciencelearn.org.nz/resources/1010-does-blood-have-magnetic-properties#:~:text=The%20iron%20part%20of%20haeme,or%20paramagnetic%20than%20oxygenated%20blood
         </li>
+        <li>
+          Quora answer:
+          https://www.quora.com/Why-does-an-EMP-disable-electronic-devices-but-not-human-brains
+        </li>
       </ol>
     </div>
   );
