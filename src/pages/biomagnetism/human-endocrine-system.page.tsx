@@ -30,7 +30,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
       <MusicScrollDownMessage youtubeVideoEmbedId="HxK3zqZidqo">
         <PageViewsComponent
           pageViews={pageViews}
-          caption="How many now know the truth ="
+          caption="Unique page views ="
         />
         <QuestionComponent>
           What connects the{" "}

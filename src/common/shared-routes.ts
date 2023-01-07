@@ -14,6 +14,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     MagnetismInTheHumanEndocrineSystem: "/biomagnetism/human-endocrine-system",
     ElectromagneticPulse: "/biomagnetism/electromagnetic-pulse",
     IsBloodMagnetic: "/biomagnetism/is-blood-magnetic",
+    VeritasiumHumanCompass: "/biomagnetism/veritasium-human-compass",
   },
   ClimateChange: {
     LandingPage: "/climate-change",

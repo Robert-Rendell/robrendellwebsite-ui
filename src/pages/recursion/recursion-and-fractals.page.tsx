@@ -18,7 +18,6 @@ import margarite from "../../resources/margarite.jpg";
 import fibonacciMandelbrot from "../../resources/mandelbrot-fibonacci.jpg";
 import { goldenRatioSketch } from "./p5-sketches/golden-ratio.sketch";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
-import { DateWritten } from "../../components/date-written.component";
 import { SharedText } from "../../common/shared-text";
 import { usePageView } from "../../hooks/use-page-view.hook";
 import { SharedRoutes } from "../../common/shared-routes";
@@ -39,7 +38,6 @@ export const RecursionAndFractalsPage = () => {
         <h1>
           <RobBackButton /> {SharedText.Recursion.RecursionAndFractals}
         </h1>
-        <DateWritten>Nov 2022</DateWritten>
         <MusicScrollDownMessage youtubeVideoEmbedId="tVvG3X1pcQ8" start={40}>
           <QuestionComponent hrOff>What is Recursion?</QuestionComponent>
           <hr />

@@ -2,7 +2,7 @@ import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 
 export const SharedText: RobRendellWebsiteModel = {
   Biomagnetism: {
-    LandingPage: "Biomagnetism",
+    LandingPage: "Biomagnetism Project",
     MigratingBirds: "Biomagnetism: Migrating Birds",
     WhatAreVibes: "What are 'Vibes'? ... Well, not Biomagnetism",
     BiomagnetismInTheOcean: "Biomagnetism: Marine Animals",
@@ -17,6 +17,7 @@ export const SharedText: RobRendellWebsiteModel = {
       "Biomagnetism in the Human Endocrine System",
     ElectromagneticPulse: "Electromagnetic Pulses: Do They Affect Biology?",
     IsBloodMagnetic: "Is Blood Magnetic?",
+    VeritasiumHumanCompass: "Veritasium: Can Humans Sense Magnetic Fields?",
   },
   ClimateChange: {
     LandingPage: "Climate Change Project",
