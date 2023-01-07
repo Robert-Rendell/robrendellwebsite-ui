@@ -458,7 +458,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
             grown neural networks between the two humans who agree on the same
             solution (or network) for the same problems. It is as simple as
             finishing sentences for one another, or not having to use words to
-            understand. The telepathy I speak of in bioelectromagnetism could in
+            understand one another. The telepathy I speak of in bioelectromagnetism could in
             fact be a step beyond traditional telepathy. Halos, in this
             instance, could again (as in theory 3.) represent the shape of the
             invisible biomagnetic field around the pineal gland.
