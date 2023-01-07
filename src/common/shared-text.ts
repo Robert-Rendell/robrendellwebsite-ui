@@ -17,6 +17,7 @@ export const SharedText: RobRendellWebsiteModel = {
       "Biomagnetism in the Human Endocrine System",
     ElectromagneticPulse: "Electromagnetic Pulses: Do They Affect Biology?",
     IsBloodMagnetic: "Is Blood Magnetic?",
+    VeritasiumHumanCompass: "Veritasium: Can Humans Sense Magnetic Fields?",
   },
   ClimateChange: {
     LandingPage: "Climate Change Project",

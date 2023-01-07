@@ -11,7 +11,7 @@ export function BiomagnetismLandingPage() {
       <h1>{SharedText.Biomagnetism.LandingPage}</h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="F0NraYVUuvw">
         <h2>Topics</h2>
-        <ol>
+        <ol className="ol-extra-margins">
           <li>
             <NewTabLink
               href={SharedRoutes.Biomagnetism.MigratingBirds}
@@ -83,6 +83,14 @@ export function BiomagnetismLandingPage() {
               {SharedText.Biomagnetism.IsBloodMagnetic}
             </NewTabLink> */}
             {SharedText.Biomagnetism.ElectromagneticPulse}... coming soon
+          </li>
+          <li>
+            <NewTabLink
+              href={SharedRoutes.Biomagnetism.VeritasiumHumanCompass}
+              noNewTab
+            >
+              {SharedText.Biomagnetism.VeritasiumHumanCompass}
+            </NewTabLink>
           </li>
           <li>
             <NewTabLink

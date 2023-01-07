@@ -49,6 +49,13 @@ export function BiomagnetismReferencesPage() {
         <li>
           https://qph.cf2.quoracdn.net/main-qimg-c8a315afa199c474132e19c6eb1f98ae-lq
         </li>
+        <li>
+          Magnetism in dogs:
+          https://www.theguardian.com/news/datablog/2014/jan/08/dogs-defecate-earths-magnetic-field-research-finds
+        </li>
+        <li>
+          Veritasium youtube on magnetism in humans: https://www.youtube.com/watch?v=dg3pza4y2ws&t=229s
+        </li>
       </ol>
     </div>
   );

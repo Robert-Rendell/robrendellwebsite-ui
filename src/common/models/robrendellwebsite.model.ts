@@ -11,6 +11,7 @@ export type RobRendellWebsiteModel = {
     MagnetismInTheHumanEndocrineSystem: string;
     ElectromagneticPulse: string;
     IsBloodMagnetic: string;
+    VeritasiumHumanCompass: string;
   };
   ClimateChange: {
     LandingPage: string;
