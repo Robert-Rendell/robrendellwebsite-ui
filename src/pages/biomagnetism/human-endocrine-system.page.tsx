@@ -13,6 +13,8 @@ import "../page.css";
 export function BiomagnetismInHumanEndocrineSystemPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  const onMobile = width < 600;
+  const moleculeImgWidth = !onMobile ? width / 4 : width / 3;
   const [pageViews, setPageViews] = useState<PageViewResponse>();
   usePageView(
     SharedRoutes.Biomagnetism.MagnetismInTheHumanEndocrineSystem,
@@ -261,29 +263,31 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
         </p>
         <div style={{ width: "100%", background: "white" }}>
           <img
-            width={width / 4}
+            width={moleculeImgWidth}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Serotonin-2D-skeletal.svg/1280px-Serotonin-2D-skeletal.svg.png"
           />
           <img
-            width={width / 4}
+            width={moleculeImgWidth}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Melatonin.svg/1280px-Melatonin.svg.png"
           />
           <img
-            width={width / 4}
+            width={moleculeImgWidth}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/DMT.svg/1920px-DMT.svg.png"
           />
-          <img
-            width={width / 4}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Psilocybn.svg/1280px-Psilocybn.svg.png"
-          />
+          {!onMobile && (
+            <img
+              width={width / 4}
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Psilocybn.svg/1280px-Psilocybn.svg.png"
+            />
+          )}
         </div>
         <div id="neurotransmitter-table">
           <table width={width}>
             <tr>
               <td style={{ textAlign: "center" }}>Serotonin</td>
-              <td>Melatonin</td>
-              <td>Dimethyltryptamine (DMT)</td>
-              <td>Psilocybin</td>
+              <td style={{ textAlign: "center" }}>Melatonin</td>
+              <td style={{ textAlign: "center" }}>Dimethyltryptamine { !onMobile && (<span>(DMT)</span>) }</td>
+              {!onMobile && <td>Psilocybin</td>}
             </tr>
           </table>
         </div>
@@ -401,62 +405,65 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
             bioelectromagnetism
           </NewTabLink>
           :
-          <ul className="ol-extra-margins">
-            <li>
-              <b>epiphanies and creative insight through neurotransmitters</b>;
-              melatonin and dimethyltryptamine molecule secretion. It is a
-              simple idea that I can back up with experience. The connection
-              with halos is probably just a symbol of enlightenment through
-              wisdom, discipline and insight. It requires a human that is fully
-              able to self regulate their neurochemistry (and emotions) through
-              their imagination. Hello world!
-            </li>
-            <li>
-              <b>the pineal gland is the electrical source of thoughts</b>; we
-              know our brain is a muscle and it uses electricity through neurons
-              to produce an experience. If piezoelectricity is present in the
-              pineal gland, then is this where the electric current begins? In
-              this theory, I&apos;m not sure what halos would represent.
-            </li>
-            <li>
-              <b>
-                bioelectromagnetism induction through piezoelectric &quot;radio
-                receivers&quot; in the pineal gland
-              </b>
-              ; there could be an <i>internal</i> ethereal plane that we cannot
-              see with our 5 known senses that allows us to see into our genetic
-              past and see the learnings of ancestors before us who have{" "}
-              <NewTabLink
-                href={SharedRoutes.Neurochemistry.LearningAndGeneticCode}
-              >
-                shaped our DNA
-              </NewTabLink>
-              . This ethereal plane might be visible with our eyes (not just
-              third eye) when one is flooded with dimethyltryptamine, for
-              instance in a Amazonian ayahuasca ritual. I might add that this
-              ethereal plane would have to be a dimension within one&apos;s
-              self. In simple terms, you wouldn&apos;t even have to close your
-              eyes to see your imagination.
-            </li>
-            <li>
-              <b>
-                bioelectromagnetism induction: humans who have strong magnetic
-                fields originating from their pineal glands could possibly
-                interact with other human beings who have a similar biological
-                mechanism
-              </b>
-              . Telepathy is known to be possible through similar mappings of
-              neural networks for people that live together for long periods of
-              time. The traditional telepathy isn&apos;t a form of radio waves
-              like pop culture would suggest, it is only of slow synchonisation
-              of grown neural networks between the two humans who agree on the
-              same solution (or network) for the same problems. It is as simple
-              as finishing sentences for one another, or not having to use words
-              to understand. The telepathy I speak of in bioelectromagnetism
-              could in fact be a step beyond traditional telepathy.
-            </li>
-          </ul>
         </p>
+        <ol>
+          <li>
+            <b>epiphanies and creative insight through neurotransmitters</b>;
+            melatonin and dimethyltryptamine molecule secretion. It is a simple
+            idea that I can back up with experience. The connection with halos
+            is probably just a symbol of enlightenment through wisdom,
+            discipline and insight. It requires a human that is fully able to
+            self regulate their neurochemistry (and emotions) through their
+            imagination. Hello world!
+          </li>
+          <li>
+            <b>the pineal gland is the electrical source of thoughts</b>; we
+            know our brain is a muscle and it uses electricity through neurons
+            to produce an experience. If piezoelectricity is present in the
+            pineal gland, then is this where the electric current begins? In
+            this theory, I&apos;m not sure what halos would represent.
+          </li>
+          <li>
+            <b>
+              bioelectromagnetism induction through piezoelectric &quot;radio
+              receivers&quot; in the pineal gland
+            </b>
+            ; there could be an <i>internal</i> ethereal plane that we cannot
+            see with our 5 known senses that allows us to see into our genetic
+            past and see the learnings of ancestors before us who have{" "}
+            <NewTabLink
+              href={SharedRoutes.Neurochemistry.LearningAndGeneticCode}
+            >
+              shaped our DNA
+            </NewTabLink>
+            . This ethereal plane might be visible with our eyes (not just third
+            eye) when one is flooded with dimethyltryptamine, for instance in a
+            Amazonian ayahuasca ritual. I might add that this ethereal plane
+            would have to be a dimension within one&apos;s self. In simple
+            terms, you wouldn&apos;t even have to close your eyes to see your
+            imagination. Halos, in this instance, could represent the shape of
+            the invisible biomagnetic field around the pineal gland.
+          </li>
+          <li>
+            <b>
+              bioelectromagnetism induction: humans who have strong magnetic
+              fields originating from their pineal glands could possibly
+              interact with other human beings who have a similar biological
+              mechanism
+            </b>
+            . Telepathy is known to be possible through similar mappings of
+            neural networks for people that live together for long periods of
+            time. The traditional telepathy isn&apos;t a form of radio waves
+            like pop culture would suggest, it is only of slow synchonisation of
+            grown neural networks between the two humans who agree on the same
+            solution (or network) for the same problems. It is as simple as
+            finishing sentences for one another, or not having to use words to
+            understand one another. The telepathy I speak of in bioelectromagnetism could in
+            fact be a step beyond traditional telepathy. Halos, in this
+            instance, could again (as in theory 3.) represent the shape of the
+            invisible biomagnetic field around the pineal gland.
+          </li>
+        </ol>
       </MusicScrollDownMessage>
     </div>
   );
