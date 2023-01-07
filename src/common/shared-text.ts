@@ -15,7 +15,7 @@ export const SharedText: RobRendellWebsiteModel = {
     MagneticFieldOnEarth: "Cause of Magnetic Field on Earth",
     MagnetismInTheHumanEndocrineSystem:
       "Biomagnetism in the Human Endocrine System",
-    ElectromagneticPulse: "Electromagnetic Pulses: Do They Affect Biology?",
+    ElectromagneticPulses: "Electromagnetic Pulses: Do They Affect Biology?",
     IsBloodMagnetic: "Is Blood Magnetic?",
     VeritasiumHumanCompass: "Veritasium: Can Humans Sense Magnetic Fields?",
   },

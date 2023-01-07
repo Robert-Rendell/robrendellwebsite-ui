@@ -60,6 +60,7 @@ import { BiomagnetismInHumanEndocrineSystemPage } from "./pages/biomagnetism/hum
 import { FerroParaDiaMagnetismPage } from "./pages/biomagnetism/ferro-para-diag-magnetism.page";
 import { VeritasiumHumanCompassPage } from "./pages/biomagnetism/veritasium-human-compass.page";
 import { IsBloodMagneticPage } from "./pages/biomagnetism/is-blood-magnetic.page";
+import { ElectromagneticPulsesPage } from "./pages/biomagnetism/emp.page";
 
 const maintenanceMode = false;
 
@@ -242,6 +243,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Biomagnetism.IsBloodMagnetic}
               element={<IsBloodMagneticPage />}
+            />
+            <Route
+              path={SharedRoutes.Biomagnetism.ElectromagneticPulses}
+              element={<ElectromagneticPulsesPage />}
             />
             <Route
               path="biomagnetism/references"

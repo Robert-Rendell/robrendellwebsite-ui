@@ -2,6 +2,7 @@ import React from "react";
 
 type Props = {
   year: number;
+  author?: string;
 };
 
 export function QuoteComponent(props: React.PropsWithChildren<Props>) {
@@ -11,7 +12,9 @@ export function QuoteComponent(props: React.PropsWithChildren<Props>) {
         <i>&quot;{props.children}&quot;</i>
       </h2>
       <p className="centred">
-        <i>Rob Rendell ({props.year})</i>
+        <i>{`${props.author ? props.author : "Rob Rendell"} (${
+          props.year
+        })`}</i>
       </p>
     </>
   );

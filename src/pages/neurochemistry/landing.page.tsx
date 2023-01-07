@@ -17,9 +17,7 @@ export function NeurochemistryLandingPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
-      <DateWritten>
-        December 2022
-      </DateWritten>
+      <DateWritten>December 2022</DateWritten>
       <MusicScrollDownMessage youtubeVideoEmbedId="mbcVm8iepQE" start={120}>
         <PageViewsComponent pageViews={pageViews} />
         <p>
