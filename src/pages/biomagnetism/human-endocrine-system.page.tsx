@@ -74,7 +74,7 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
           When does the pattern first emerge?
         </QuestionComponent>
         <p>
-          This journey of joining the dots begins with human&apos;s ability to
+          This journey, joining the dots, begins with humanity&apos;s ability to
           imagine.
         </p>
         <p>
