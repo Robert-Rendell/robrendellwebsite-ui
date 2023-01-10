@@ -61,6 +61,7 @@ import { FerroParaDiaMagnetismPage } from "./pages/biomagnetism/ferro-para-diag-
 import { VeritasiumHumanCompassPage } from "./pages/biomagnetism/veritasium-human-compass.page";
 import { IsBloodMagneticPage } from "./pages/biomagnetism/is-blood-magnetic.page";
 import { ElectromagneticPulsesPage } from "./pages/biomagnetism/emp.page";
+import { OperationsDashboardPage } from "./operations/dashboard.page";
 
 const maintenanceMode = false;
 
@@ -78,6 +79,7 @@ ReactDOM.render(
           <App />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/operations" element={<OperationsDashboardPage />} />
 
             {/* //////////////////////////////////// */}
             <Route path="sudoku" element={<SudokuDashboardComponent />} />

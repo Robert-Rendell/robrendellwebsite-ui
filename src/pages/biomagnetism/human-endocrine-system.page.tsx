@@ -469,12 +469,11 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
               <li>
                 &quot;<i>Humans aren&apos;t telepathic Rob...</i>&quot;; I
                 realise this, but what I am suggesting is that simple ideas or
-                emotions may be able to be transferred through biomagnetic induction, at
-                subconscious level, when two of these invisible fields intersect between humans.
+                emotions may be able to be transferred through biomagnetic
+                induction, at subconscious level, when two of these invisible
+                fields intersect between humans.
               </li>
-              <li>
-                Have you ever wondered where your ideas come from?
-              </li>
+              <li>Have you ever wondered where your ideas come from?</li>
             </ul>
           </li>
         </ol>

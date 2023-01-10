@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -9,6 +9,7 @@ import { SharedRoutes } from "../common/shared-routes";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import { TechIconsComponent } from "../components/tech-icons.component";
 import { SharedText } from "../common/shared-text";
+import { useIsMyIPAddress } from "../hooks/use-is-my-ip-address.hook";
 
 export const NavComponent = () => {
   const windowSize = useWindowSize();
@@ -16,10 +17,29 @@ export const NavComponent = () => {
 
   const onMobile = width < 600;
   const centredOnMobile = onMobile ? "centred" : "";
+
+  const [hasAccess, setHasAccess] = useState<boolean>(false);
+
+  const hasAccessCallback = (success: boolean, error?: string) => {
+    setHasAccess(success);
+    if (error) {
+      console.error("There was an error Rob.");
+    }
+  };
+  useIsMyIPAddress(hasAccessCallback);
+
+  const onNavBarClick = () => {
+    if (hasAccess) {
+      window.location.href = "/operations";
+    } else {
+      window.location.href = "/";
+    }
+  };
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">
+        <Navbar.Brand className="brand" onClick={onNavBarClick}>
           Rob Rendell {onMobile && <TechIconsComponent />}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
