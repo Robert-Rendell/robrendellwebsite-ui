@@ -64,8 +64,15 @@ export function DimensionsPage() {
             2D shadow; and 2D objects cast a 1D shadow.
           </p>
           <p>
-            Using this rule, we can say 4D objects cast a 3D shadow. This is
-            what we are looking at below:
+            Using this rule, we can say 4D objects cast a 3D shadow. What we are
+            looking at below, however, is not actually 3D; it is only a 2D
+            projection on the computer screen of a 3D object.
+          </p>
+          <p>
+            The shadow of the rotating 4D Tesseract (hence the animation) is
+            what you see below (3D shadow drawn on 2D screen). If you ever see
+            this 3D shape floating around your house, you know there is a
+            tesseract spinning in 4D:
           </p>
           <hr />
           <div className="centred">
@@ -112,7 +119,7 @@ export function DimensionsPage() {
           </p>
           <p>
             That is why you can see the 3D shape with your eyes (in your 4D
-            environment.)
+            environment).
           </p>
           <QuestionComponent>
             Rob, how did you get onto the topic of recursion with this? ... Are
@@ -130,8 +137,8 @@ export function DimensionsPage() {
           <hr />
           <p>
             Check out this video featuring Carl Sagan talking about 2D vs 3D. It
-            is, literally, so good that it hasn&apos;t, as far as I know, been
-            superseded with something better yet.
+            is, literally, so fantastically good that it hasn&apos;t, as far as
+            I know, been superseded with something articulating it better yet.
           </p>
           <iframe
             width={width}

@@ -25,3 +25,7 @@
   background: white;
   border-radius: 30%;
 }
+
+.brand {
+  cursor: pointer;
+}

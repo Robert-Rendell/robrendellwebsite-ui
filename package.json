@@ -38,7 +38,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
     "format": "prettier -w ./src",
-    "update-common": "npm install robrendellwebsite-common"
+    "update-common": "npm install robrendellwebsite-common",
+    "backend": "cd ../robrendellwebsite/ && npm run dev"
   },
   "eslintConfig": {
     "extends": [
