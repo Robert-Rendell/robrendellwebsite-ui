@@ -9,7 +9,11 @@ import { SharedRoutes } from "../common/shared-routes";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import { TechIconsComponent } from "../components/tech-icons.component";
 import { SharedText } from "../common/shared-text";
-import { IsMyIPAddressCallbackFn, IsMyIPAddressProps, useIsMyIPAddress } from "../hooks/use-is-my-ip-address.hook";
+import {
+  IsMyIPAddressCallbackFn,
+  IsMyIPAddressProps,
+  useIsMyIPAddress,
+} from "../hooks/use-is-my-ip-address.hook";
 
 export const NavComponent = () => {
   const windowSize = useWindowSize();
@@ -19,7 +23,9 @@ export const NavComponent = () => {
   const centredOnMobile = onMobile ? "centred" : "";
 
   const [hasAccess, setHasAccess] = useState<boolean>(false);
-  const hasAccessCallback: IsMyIPAddressCallbackFn = (args: IsMyIPAddressProps) => {
+  const hasAccessCallback: IsMyIPAddressCallbackFn = (
+    args: IsMyIPAddressProps
+  ) => {
     setHasAccess(args.success);
     if (args.error) {
       console.error("There was an error Rob.");
