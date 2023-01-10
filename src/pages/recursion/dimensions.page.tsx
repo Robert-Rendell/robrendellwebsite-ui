@@ -137,8 +137,8 @@ export function DimensionsPage() {
           <hr />
           <p>
             Check out this video featuring Carl Sagan talking about 2D vs 3D. It
-            is, literally, so fantastically good that it hasn&apos;t, as far as I know, been
-            superseded with something articulating it better yet.
+            is, literally, so fantastically good that it hasn&apos;t, as far as
+            I know, been superseded with something articulating it better yet.
           </p>
           <iframe
             width={width}

@@ -8,7 +8,7 @@ export function useIsMyIPAddress(
   useEffect(() => {
     axios
       .get(`${config.backend}/knock-knock`)
-      .then((_res) => {
+      .then(() => {
         callback(true);
       })
       .catch((reason) => {
