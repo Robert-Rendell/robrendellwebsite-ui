@@ -68,6 +68,7 @@ export const NavComponent = () => {
               <NavDropdown.Item
                 href="/photos-ive-taken/nature/insects"
                 className={centredOnMobile}
+                disabled
               >
                 Insects
               </NavDropdown.Item>
