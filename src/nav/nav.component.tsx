@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -68,6 +68,7 @@ export const NavComponent = () => {
               <NavDropdown.Item
                 href="/photos-ive-taken/nature/insects"
                 className={centredOnMobile}
+                disabled
               >
                 Insects
               </NavDropdown.Item>
