@@ -1,9 +1,7 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { Table } from "react-bootstrap";
 import { SharedRoutes } from "../common/shared-routes";
 import {
-  IsMyIPAddressCallbackFn,
-  IsMyIPAddressProps,
   useIsMyIPAddress,
 } from "../hooks/use-is-my-ip-address.hook";
 import "../pages/page.css";
@@ -11,16 +9,7 @@ import { useOpsDashboard } from "./hooks/use-ops-dashboard.hook";
 import InfinitySpinner from "../resources/infinity-spinner.svg";
 
 export function OperationsDashboardPage() {
-  const [hasAccess, setHasAccess] = useState<boolean>(false);
-  const hasAccessCallback: IsMyIPAddressCallbackFn = (
-    args: IsMyIPAddressProps
-  ) => {
-    setHasAccess(args.success);
-    if (args.error) {
-      console.error("There was an error Rob.");
-    }
-  };
-  useIsMyIPAddress(hasAccessCallback);
+  const [hasAccess] = useIsMyIPAddress();
   const allRoutes = useMemo(() => {
     return Object.values(SharedRoutes)
       .map((sharedRoute) => Object.values(sharedRoute))
