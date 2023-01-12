@@ -25,25 +25,30 @@ export function OpsPageViewDetailComponent(props: Props) {
             </tr>
           </thead>
           <tbody style={{ borderTop: "none" }}>
-            {props.pagePageViews?.views.map((pageView: any, index: number) => {
-              return (
-                <>
-                  <tr key={index}>
-                    <td>
-                      {pageView.dateTime.replace(
-                        "GMT+0000 (Coordinated Universal Time)",
-                        ""
-                      )}
-                    </td>
-                    <td>{pageView.ipAddress}</td>
-                    <td>{pageView.ipLocation?.city || pageView.ipLocation?.timezone}</td>
-                    <td>{pageView.ipLocation?.region}</td>
-                    <td>{pageView.ipLocation?.country}</td>
-                    <td>{pageView.ipLocation?.ll}</td>
-                  </tr>
-                </>
-              );
-            })}
+            {props.pagePageViews?.views
+              .map((pageView: any, index: number) => {
+                return (
+                  <>
+                    <tr key={index}>
+                      <td>
+                        {pageView.dateTime.replace(
+                          "GMT+0000 (Coordinated Universal Time)",
+                          ""
+                        )}
+                      </td>
+                      <td>{pageView.ipAddress}</td>
+                      <td>
+                        {pageView.ipLocation?.city ||
+                          pageView.ipLocation?.timezone}
+                      </td>
+                      <td>{pageView.ipLocation?.region}</td>
+                      <td>{pageView.ipLocation?.country}</td>
+                      <td>{pageView.ipLocation?.ll}</td>
+                    </tr>
+                  </>
+                );
+              })
+              .reverse()}
           </tbody>
         </Table>
       </div>
