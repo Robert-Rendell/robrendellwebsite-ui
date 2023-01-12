@@ -5,11 +5,9 @@ import { config } from "../config";
 export function useIsMyIPAddress() {
   const [isMyIpAddress, setIsMyIpAddress] = useState<boolean>(false);
   useEffect(() => {
-    axios
-      .get(`${config.backend}/knock-knock`)
-      .then(() => {
-        setIsMyIpAddress(true);
-      });
+    axios.get(`${config.backend}/knock-knock`).then(() => {
+      setIsMyIpAddress(true);
+    });
   }, []);
   return [isMyIpAddress];
 }

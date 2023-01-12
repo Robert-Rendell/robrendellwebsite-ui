@@ -90,3 +90,7 @@ h2 {
 #neurotransmitter-table table td {
   text-align: center;
 }
+
+.small-table {
+  font-size: small;
+}
