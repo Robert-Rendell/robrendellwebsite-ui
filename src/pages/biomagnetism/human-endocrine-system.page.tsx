@@ -5,6 +5,7 @@ import { RobBackButton } from "../../components/back-button.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { PageViewsComponent } from "../../components/page-views.component";
+import { QuoteComponent } from "../../components/quote.component";
 import { PageViewResponse, usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "../neurochemistry/components/question.component";
@@ -473,7 +474,22 @@ export function BiomagnetismInHumanEndocrineSystemPage() {
                 induction, at subconscious level, when two of these invisible
                 fields intersect between humans.
               </li>
-              <li>Have you ever wondered where your ideas come from?</li>
+              <li>
+                Have you ever wondered where your ideas come from?
+                <ul>
+                  <li>
+                    But... isn&apos;t a more reasonable explanation that your
+                    subconscious is listening to all your senses all the time?
+                    ... And your ideas come from a combination of your
+                    subconscious and your ability to fit shapes / geometry in
+                    different (interesting) ways -- creativity?
+                  </li>
+                </ul>
+              </li>
+              <QuoteComponent author="Alice (... in Wonderland)" year={1865}>
+                And what is the use of a book... without pictures or
+                conversation?
+              </QuoteComponent>
             </ul>
           </li>
         </ol>
