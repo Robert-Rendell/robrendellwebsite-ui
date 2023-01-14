@@ -1,12 +1,16 @@
 import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
+import { SharedText } from "../../common/shared-text";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 
 export function GiantPacificOctopusPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  usePageView(SharedRoutes.Miscellaneous.GiantPacificOctopus);
   return (
     <div className="standard-page-margins standard-page-styling">
-      <h1>Giant Pacific Octopus (Alaskan)</h1>
+      <h1>{SharedText.Miscellaneous.GiantPacificOctopus}</h1>
       <p>22 Facts: Self-regulating Cephalopods</p>
       <img
         width={width}

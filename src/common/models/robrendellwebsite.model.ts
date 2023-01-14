@@ -1,4 +1,8 @@
 export type RobRendellWebsiteModel = {
+  Miscellaneous: {
+    India: string;
+    GiantPacificOctopus: string;
+  },
   Biomagnetism: {
     LandingPage: string;
     MigratingBirds: string;

@@ -6,10 +6,13 @@ import { SharedText } from "../../common/shared-text";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { RobBackButton } from "../../components/back-button.component";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
+import { usePageView } from "../../hooks/use-page-view.hook";
+import { SharedRoutes } from "../../common/shared-routes";
 
 export function BifurcationLogisticalPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  usePageView(SharedRoutes.Recursion.BifurcationLogisticalMap);
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>

@@ -1,5 +1,7 @@
 import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "../neurochemistry/components/question.component";
 import "../page.css";
@@ -7,6 +9,7 @@ import "../page.css";
 export function MagnetismInHydroElectricPowerPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  usePageView(SharedRoutes.Biomagnetism.MagnetismInHydroElectricPower);
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>{SharedText.Biomagnetism.MagnetismInHydroElectricPower}</h1>
