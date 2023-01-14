@@ -1,12 +1,15 @@
 import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { QuoteComponent } from "../../components/quote.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import "../page.css";
 
 export function ElectromagneticPulsesPage() {
+  usePageView(SharedRoutes.Biomagnetism.ElectromagneticPulses);
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>

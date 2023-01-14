@@ -1,9 +1,11 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
+import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "../neurochemistry/components/question.component";
 import "../page.css";
@@ -11,6 +13,7 @@ import "../page.css";
 export function WhatAreVibesPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  usePageView(SharedRoutes.Biomagnetism.WhatAreVibes);
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>

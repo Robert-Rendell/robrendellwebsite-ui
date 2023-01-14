@@ -8,8 +8,7 @@ import { usePageView } from "../../hooks/use-page-view.hook";
 import "../page.css";
 
 export function RecursionLandingPage() {
-  usePageView("/recursion");
-
+  usePageView(SharedRoutes.Recursion.LandingPage);
   return (
     <>
       <div className="standard-page-margins standard-page-styling">

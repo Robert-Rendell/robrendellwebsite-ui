@@ -4,13 +4,17 @@ import HighchartsReact from "highcharts-react-official";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { IndianBeliefsPieChart } from "./components/indian-beliefs.component";
 import "./india.page.css";
+import { usePageView } from "../../hooks/use-page-view.hook";
+import { SharedRoutes } from "../../common/shared-routes";
+import { SharedText } from "../../common/shared-text";
 
 export function IndiaPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
+  usePageView(SharedRoutes.Miscellaneous.India);
   return (
     <div id="india-page">
-      <h1>India</h1>
+      <h1>{SharedText.Miscellaneous.India}</h1>
       <hr />
       <h2>2nd Largest Country by Population</h2>
       <hr />

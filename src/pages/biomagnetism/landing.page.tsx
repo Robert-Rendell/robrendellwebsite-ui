@@ -4,9 +4,11 @@ import { SharedText } from "../../common/shared-text";
 import { DateWritten } from "../../components/date-written.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import "../page.css";
 
 export function BiomagnetismLandingPage() {
+  usePageView(SharedRoutes.Biomagnetism.LandingPage);
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>{SharedText.Biomagnetism.LandingPage}</h1>

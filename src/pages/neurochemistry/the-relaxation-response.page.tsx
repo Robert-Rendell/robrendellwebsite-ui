@@ -1,10 +1,13 @@
 import React from "react";
+import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 
 export function TheRelaxationResponsePage() {
+  usePageView(SharedRoutes.Neurochemistry.RelaxationResponse);
   return (
     <div
       className="standard-page-margins standard-page-styling black-bg"

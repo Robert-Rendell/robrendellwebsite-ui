@@ -1,6 +1,10 @@
 import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 
 export const SharedText: RobRendellWebsiteModel = {
+  Miscellaneous: {
+    India: "India",
+    GiantPacificOctopus: "Giant Pacific Octopus (Alaskan)"
+  },
   Biomagnetism: {
     LandingPage: "Biomagnetism Project",
     MigratingBirds: "Biomagnetism: Migrating Birds",

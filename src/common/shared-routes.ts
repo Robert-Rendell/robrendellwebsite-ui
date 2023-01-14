@@ -1,6 +1,10 @@
 import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 
 export const SharedRoutes: RobRendellWebsiteModel = {
+  Miscellaneous: {
+    India: "/miscellaneous/india",
+    GiantPacificOctopus: "/miscellaneous/giant-pacific-octopus"
+  },
   Biomagnetism: {
     LandingPage: "/biomagnetism",
     MigratingBirds: "/biomagnetism/migrating-birds",
