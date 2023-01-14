@@ -17,11 +17,11 @@ h2 {
 tr {
   background-color: white;
 }
-#board tr:nth-child(3) td,
+#board tr:nth-child(3) td, #board
 tr:nth-child(6) td {
   border-bottom: 3px solid grey;
 }
-#board tr td:nth-child(3),
+#board tr td:nth-child(3), #board
 tr td:nth-child(6) {
   border-right: 3px solid grey;
 }
