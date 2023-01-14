@@ -1,19 +1,24 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import {
+  OperationsDashboardRequest,
+  OperationsDashboardResponse,
+  PageViewerDocument,
+} from "robrendellwebsite-common";
 import { config } from "../../config";
+import { Response } from "../../models/axios-response-wrapper";
 
-type Props = {
-  pageUrls: string[];
-};
-export function useOpsDashboard(props: Props) {
-  const [pageViews, setPageViews] = useState();
+export function useOpsDashboard(request: OperationsDashboardRequest) {
+  const [pageViews, setPageViews] = useState<
+    (PageViewerDocument | undefined)[] | undefined
+  >();
   useEffect(() => {
     axios
       .post(`${config.backend}/operations`, {
         headers: { "Content-Type": "application/json" },
-        pageUrls: props.pageUrls,
+        pageUrls: request.pageUrls,
       })
-      .then((res) => {
+      .then((res: Response<OperationsDashboardResponse>) => {
         setPageViews(res.data.pageViews);
       });
   }, []);

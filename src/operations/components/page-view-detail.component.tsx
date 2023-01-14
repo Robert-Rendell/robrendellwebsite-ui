@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Table } from "react-bootstrap";
-import { NewTabLink } from "../../components/new-tab-link.component";
+import { PageView, PageViewerDocument } from "robrendellwebsite-common";
+import { GoogleMapLink } from "../../components/google-map-link.component";
+import { GoogleSearchLink } from "../../components/google-search-link.component";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import "../../pages/page.css";
 
 type Props = {
-  pagePageViews?: any;
+  pageViewerDoc?: PageViewerDocument;
 };
 
 export function OpsPageViewDetailComponent(props: Props) {
@@ -13,15 +15,6 @@ export function OpsPageViewDetailComponent(props: Props) {
   const width = windowSize[0] - 40;
   const onMobile = width < 600;
   const [drilldown, setDrilldown] = useState<boolean>(false);
-  const GoogleMapLink = (ll: any) => {
-    return (
-      <NewTabLink
-        href={`https://www.google.com/maps/search/${ll.ll[0]},${ll.ll[1]}`}
-      >
-        See on map
-      </NewTabLink>
-    );
-  };
   return (
     <>
       <div className="standard-page-margins standard-page-styling">
@@ -45,8 +38,8 @@ export function OpsPageViewDetailComponent(props: Props) {
             </tr>
           </thead>
           <tbody style={{ borderTop: "none" }}>
-            {props.pagePageViews?.views
-              .map((pageView: any, index: number) => {
+            {props.pageViewerDoc?.views
+              .map((pageView: PageView, index: number) => {
                 return (
                   <>
                     <tr
@@ -63,7 +56,9 @@ export function OpsPageViewDetailComponent(props: Props) {
                               ""
                             )}
                           </td>
-                          <td>{pageView.ipAddress}</td>
+                          <td>
+                            <GoogleSearchLink query={pageView.ipAddress} />
+                          </td>
                           <td>
                             {pageView.ipLocation?.city ||
                               pageView.ipLocation?.timezone}

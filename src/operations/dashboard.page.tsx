@@ -7,6 +7,7 @@ import { useOpsDashboard } from "./hooks/use-ops-dashboard.hook";
 import InfinitySpinner from "../resources/infinity-spinner.svg";
 import { OpsPageViewDetailComponent } from "./components/page-view-detail.component";
 import { useWindowSize } from "../hooks/use-window-size.hook";
+import { PageViewerDocument } from "robrendellwebsite-common";
 
 export function OperationsDashboardPage() {
   const windowSize = useWindowSize();
@@ -19,7 +20,9 @@ export function OperationsDashboardPage() {
       .filter((sharedRoute) => !sharedRoute.includes("www.youtube.com"));
   }, []);
   const [pageViews] = useOpsDashboard({ pageUrls: allRoutes });
-  const [selectedPageViews, setSelectedPageViews] = useState();
+  const [selectedPageViews, setSelectedPageViews] = useState<
+    PageViewerDocument | undefined
+  >();
   const onMobile = width < 600;
   return (
     <>
@@ -32,13 +35,13 @@ export function OperationsDashboardPage() {
             {selectedPageViews && (
               <>
                 <h2>
-                  {(selectedPageViews as any).pageUrl}{" "}
+                  {selectedPageViews.pageUrl}{" "}
                   <Button onClick={() => setSelectedPageViews(undefined)}>
                     X
                   </Button>
                 </h2>
 
-                <OpsPageViewDetailComponent pagePageViews={selectedPageViews} />
+                <OpsPageViewDetailComponent pageViewerDoc={selectedPageViews} />
               </>
             )}
             {typeof pageViews === "undefined" && (
@@ -56,7 +59,7 @@ export function OperationsDashboardPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {(pageViews as Array<any>)
+                  {pageViews
                     .filter((pageView) => pageView !== null)
                     .map((pageView, index) => {
                       return (
@@ -72,8 +75,8 @@ export function OperationsDashboardPage() {
                               <Button>View</Button>
                             </td>
                           )}
-                          <td>{pageView.pageUrl}</td>
-                          <td>{pageView.total}</td>
+                          <td>{pageView?.pageUrl}</td>
+                          <td>{pageView?.total}</td>
                         </tr>
                       );
                     })}
