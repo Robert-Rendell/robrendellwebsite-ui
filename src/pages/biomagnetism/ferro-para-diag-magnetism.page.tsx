@@ -9,7 +9,9 @@ import "../page.css";
 export function FerroParaDiaMagnetismPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  usePageView(SharedRoutes.Biomagnetism.FerromagnetismParamagnetismDiamagnetism);
+  usePageView(
+    SharedRoutes.Biomagnetism.FerromagnetismParamagnetismDiamagnetism
+  );
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>
