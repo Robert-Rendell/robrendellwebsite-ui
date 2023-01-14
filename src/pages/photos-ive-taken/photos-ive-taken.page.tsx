@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { SharedRoutes } from "../../common/shared-routes";
 import { FullScreenS3ImageComponent } from "../../components/full-screen-image/full-screen-image.component";
 import { ImageGallery } from "../../components/image-gallery.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
