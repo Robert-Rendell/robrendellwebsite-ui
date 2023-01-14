@@ -21,6 +21,7 @@ export function OpsPageViewDetailComponent(props: Props) {
         <Table variant="dark" hover className="small-table" width={width / 2}>
           <thead>
             <tr>
+              <td></td>
               {!drilldown && (
                 <>
                   <th>Date</th>
@@ -48,6 +49,7 @@ export function OpsPageViewDetailComponent(props: Props) {
                         if (onMobile) setDrilldown(!drilldown);
                       }}
                     >
+                      <td>{index}</td>
                       {!drilldown && (
                         <>
                           <td>
