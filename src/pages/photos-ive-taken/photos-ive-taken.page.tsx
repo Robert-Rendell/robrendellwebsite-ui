@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { SharedRoutes } from "../../common/shared-routes";
 import { FullScreenS3ImageComponent } from "../../components/full-screen-image/full-screen-image.component";
 import { ImageGallery } from "../../components/image-gallery.component";
+import { usePageView } from "../../hooks/use-page-view.hook";
 import "../page.css";
 import { useGetS3ImageUrls } from "./nature/hooks/useGetS3ImageUrls.hook";
 
@@ -15,6 +17,7 @@ export function PhotosIveTakenPage(props: Props) {
     endpoint: props.endpoint,
     handleImageClickedRef,
   });
+  usePageView(props.endpoint);
 
   const setPhotosIveTakenGallery = useCallback(
     async () =>
