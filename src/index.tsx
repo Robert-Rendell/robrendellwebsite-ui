@@ -64,6 +64,7 @@ import { ElectromagneticPulsesPage } from "./pages/biomagnetism/emp.page";
 import { OperationsDashboardPage } from "./operations/dashboard.page";
 import { ScotchWhiskyPage } from "./pages/misc/scotch-whisky.page";
 import { WordOfTheDayPage } from "./pages/misc/word-of-the-day.page";
+import { InterestingDatesInHistoryPage } from "./pages/misc/interesting-dates-in-history.page";
 
 const maintenanceMode = false;
 
@@ -268,6 +269,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Miscellaneous.WordOfTheDay}
               element={<WordOfTheDayPage />}
+            />
+            <Route
+              path={SharedRoutes.Miscellaneous.InterestingDatesInHistory}
+              element={<InterestingDatesInHistoryPage />}
             />
             <Route
               path={SharedRoutes.Miscellaneous.GiantPacificOctopus}

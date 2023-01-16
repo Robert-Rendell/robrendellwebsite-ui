@@ -28,6 +28,13 @@ export const HomePage = () => {
       <h4>Recent developments:</h4>
       <ul>
         <li>
+          16/01/23 @ 17.53 - Added&nbsp;
+          <a href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}>
+            {SharedText.Miscellaneous.InterestingDatesInHistory}
+          </a>{" "}
+          page
+        </li>
+        <li>
           16/01/23 @ 17.24 - Added&nbsp;
           <a href={SharedRoutes.Miscellaneous.WordOfTheDay}>
             {SharedText.Miscellaneous.WordOfTheDay}
