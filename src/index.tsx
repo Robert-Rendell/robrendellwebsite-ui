@@ -63,6 +63,7 @@ import { IsBloodMagneticPage } from "./pages/biomagnetism/is-blood-magnetic.page
 import { ElectromagneticPulsesPage } from "./pages/biomagnetism/emp.page";
 import { OperationsDashboardPage } from "./operations/dashboard.page";
 import { ScotchWhiskyPage } from "./pages/misc/scotch-whisky.page";
+import { WordOfTheDayPage } from "./pages/misc/word-of-the-day.page";
 
 const maintenanceMode = false;
 
@@ -256,10 +257,20 @@ ReactDOM.render(
               element={<BiomagnetismReferencesPage />}
             />
             {/* //////////////////////////////////// */}
-            <Route path="miscellaneous/india" element={<IndiaPage />} />
-            <Route path="miscellaneous/scotch-whisky" element={<ScotchWhiskyPage />} />
             <Route
-              path="miscellaneous/giant-pacific-octopus"
+              path={SharedRoutes.Miscellaneous.India}
+              element={<IndiaPage />}
+            />
+            <Route
+              path={SharedRoutes.Miscellaneous.ScotchWhisky}
+              element={<ScotchWhiskyPage />}
+            />
+            <Route
+              path={SharedRoutes.Miscellaneous.WordOfTheDay}
+              element={<WordOfTheDayPage />}
+            />
+            <Route
+              path={SharedRoutes.Miscellaneous.GiantPacificOctopus}
               element={<GiantPacificOctopusPage />}
             />
 
