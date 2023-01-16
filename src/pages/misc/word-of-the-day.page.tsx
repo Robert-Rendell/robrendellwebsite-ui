@@ -13,7 +13,6 @@ export function WordOfTheDayPage() {
   usePageView(SharedRoutes.Miscellaneous.WordOfTheDay);
   const onMobile = width < 600;
   const [wordOfTheDay] = useWordOfTheDay();
-  if (wordOfTheDay) console.log(wordOfTheDay);
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>{SharedText.Miscellaneous.WordOfTheDay}</h1>
