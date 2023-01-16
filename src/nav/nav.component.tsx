@@ -92,18 +92,18 @@ export const NavComponent = () => {
 
             <NavDropdown title="Misc" id="misc" menuVariant="dark">
               <NavDropdown.Item
-                href="/miscellaneous/india"
+                href={SharedRoutes.Miscellaneous.India}
                 className={centredOnMobile}
               >
                 India
               </NavDropdown.Item>
               <NavDropdown.Item
-                href="/miscellaneous/giant-pacific-octopus"
+                href={SharedRoutes.Miscellaneous.GiantPacificOctopus}
                 className={centredOnMobile}
               >
                 Giant Pacific Octopus (Alaskan)
               </NavDropdown.Item>
-              <NavDropdown.Item disabled className={centredOnMobile}>
+              <NavDropdown.Item className={centredOnMobile} href={SharedRoutes.Miscellaneous.ScotchWhisky}>
                 Scotch Whisky
               </NavDropdown.Item>
               <NavDropdown.Item disabled className={centredOnMobile}>
