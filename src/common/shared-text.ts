@@ -6,6 +6,7 @@ export const SharedText: RobRendellWebsiteModel = {
     GiantPacificOctopus: "Giant Pacific Octopus (Alaskan)",
     ScotchWhisky: "Scottish Whisky",
     WordOfTheDay: "Word of the Day",
+    InterestingDatesInHistory: "Interesting Dates in History",
   },
   Biomagnetism: {
     LandingPage: "Biomagnetism Project",

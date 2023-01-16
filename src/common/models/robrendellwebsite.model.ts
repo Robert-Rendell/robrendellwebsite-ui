@@ -4,6 +4,7 @@ export type RobRendellWebsiteModel = {
     GiantPacificOctopus: string;
     ScotchWhisky: string;
     WordOfTheDay: string;
+    InterestingDatesInHistory: string;
   };
   Biomagnetism: {
     LandingPage: string;

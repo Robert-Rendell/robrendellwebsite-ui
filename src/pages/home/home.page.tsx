@@ -28,11 +28,25 @@ export const HomePage = () => {
       <h4>Recent developments:</h4>
       <ul>
         <li>
-          31/12/22 @ 11.30 - Added&nbsp;
-          <a href={SharedRoutes.Biomagnetism.LandingPage}>
-            {SharedText.Biomagnetism.LandingPage}
+          16/01/23 @ 17.53 - Added&nbsp;
+          <a href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}>
+            {SharedText.Miscellaneous.InterestingDatesInHistory}
           </a>{" "}
-          project
+          page
+        </li>
+        <li>
+          16/01/23 @ 17.24 - Added&nbsp;
+          <a href={SharedRoutes.Miscellaneous.WordOfTheDay}>
+            {SharedText.Miscellaneous.WordOfTheDay}
+          </a>{" "}
+          page
+        </li>
+        <li>
+          16/01/23 @ 17.15 - Added&nbsp;
+          <a href={SharedRoutes.Miscellaneous.ScotchWhisky}>
+            {SharedText.Miscellaneous.ScotchWhisky}
+          </a>{" "}
+          page
         </li>
         <li>
           26/11/22 @ 09.35 - Added&nbsp;

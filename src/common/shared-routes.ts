@@ -6,6 +6,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     GiantPacificOctopus: "/miscellaneous/giant-pacific-octopus",
     ScotchWhisky: "/miscellaneous/scotch-whisky",
     WordOfTheDay: "/miscellaneous/word-of-the-day",
+    InterestingDatesInHistory: "/miscellaneous/interesting-dates-in-history",
   },
   Biomagnetism: {
     LandingPage: "/biomagnetism",
