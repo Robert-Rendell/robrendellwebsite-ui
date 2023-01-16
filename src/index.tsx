@@ -62,6 +62,7 @@ import { VeritasiumHumanCompassPage } from "./pages/biomagnetism/veritasium-huma
 import { IsBloodMagneticPage } from "./pages/biomagnetism/is-blood-magnetic.page";
 import { ElectromagneticPulsesPage } from "./pages/biomagnetism/emp.page";
 import { OperationsDashboardPage } from "./operations/dashboard.page";
+import { ScotchWhiskyPage } from "./pages/misc/scotch-whisky.page";
 
 const maintenanceMode = false;
 
@@ -256,6 +257,7 @@ ReactDOM.render(
             />
             {/* //////////////////////////////////// */}
             <Route path="miscellaneous/india" element={<IndiaPage />} />
+            <Route path="miscellaneous/scotch-whisky" element={<ScotchWhiskyPage />} />
             <Route
               path="miscellaneous/giant-pacific-octopus"
               element={<GiantPacificOctopusPage />}

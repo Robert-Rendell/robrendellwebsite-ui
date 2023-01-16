@@ -4,6 +4,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
   Miscellaneous: {
     India: "/miscellaneous/india",
     GiantPacificOctopus: "/miscellaneous/giant-pacific-octopus",
+    ScotchWhisky: "/miscellaneous/scotch-whisky"
   },
   Biomagnetism: {
     LandingPage: "/biomagnetism",
