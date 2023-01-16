@@ -30,38 +30,36 @@ export function InterestingDatesInHistoryPage() {
         <tbody>
           {datesInHistory?.map((dateInHistory, index) => {
             return (
-              index > 0 && (
-                <tr key={index}>
-                  <td>{dateInHistory.date}</td>
+              <tr key={index}>
+                <td>{dateInHistory.date}</td>
 
-                  <td>
-                    {dateInHistory.event.length < maxLengthOnMobile ||
-                    expandedDateIndex === index ||
-                    !onMobile ? (
-                      dateInHistory.event
-                    ) : (
-                      <>
-                        {dateInHistory.event.substring(0, maxLengthOnMobile)}{" "}
-                        <Button
-                          size="sm"
-                          onClick={() => setExpandedDateIndex(index)}
-                        >
-                          ...
-                        </Button>
-                      </>
-                    )}
-                    {expandedDateIndex === index && (
+                <td>
+                  {dateInHistory.event.length < maxLengthOnMobile ||
+                  expandedDateIndex === index ||
+                  !onMobile ? (
+                    dateInHistory.event
+                  ) : (
+                    <>
+                      {dateInHistory.event.substring(0, maxLengthOnMobile)}{" "}
                       <Button
                         size="sm"
-                        onClick={() => setExpandedDateIndex(undefined)}
+                        onClick={() => setExpandedDateIndex(index)}
                       >
-                        x
+                        ...
                       </Button>
-                    )}
-                  </td>
-                  <td>{dateInHistory.school}</td>
-                </tr>
-              )
+                    </>
+                  )}
+                  {expandedDateIndex === index && (
+                    <Button
+                      size="sm"
+                      onClick={() => setExpandedDateIndex(undefined)}
+                    >
+                      x
+                    </Button>
+                  )}
+                </td>
+                <td>{dateInHistory.school}</td>
+              </tr>
             );
           })}
         </tbody>
