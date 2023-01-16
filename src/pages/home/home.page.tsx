@@ -49,6 +49,13 @@ export const HomePage = () => {
           page
         </li>
         <li>
+          31/12/22 @ 11.30 - Added&nbsp;
+          <a href={SharedRoutes.Biomagnetism.LandingPage}>
+            {SharedText.Biomagnetism.LandingPage}
+          </a>{" "}
+          project
+        </li>
+        <li>
           26/11/22 @ 09.35 - Added&nbsp;
           <a href="recursion/simple-equations-infinite-complexity">
             {SharedText.Recursion.SimpleEquations}
