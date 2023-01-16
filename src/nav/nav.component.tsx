@@ -115,7 +115,10 @@ export const NavComponent = () => {
               >
                 Word of the Day
               </NavDropdown.Item>
-              <NavDropdown.Item disabled className={centredOnMobile}>
+              <NavDropdown.Item
+                className={centredOnMobile}
+                href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}
+              >
                 Interesting Dates in History
               </NavDropdown.Item>
             </NavDropdown>
