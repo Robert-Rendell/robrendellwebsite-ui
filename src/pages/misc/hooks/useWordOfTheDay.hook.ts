@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { WordOfTheDay } from "../models/word-of-the-day";
 import { Response } from "../../../models/axios-response-wrapper";
 
