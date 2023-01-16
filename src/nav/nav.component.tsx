@@ -103,10 +103,16 @@ export const NavComponent = () => {
               >
                 Giant Pacific Octopus (Alaskan)
               </NavDropdown.Item>
-              <NavDropdown.Item className={centredOnMobile} href={SharedRoutes.Miscellaneous.ScotchWhisky}>
+              <NavDropdown.Item
+                className={centredOnMobile}
+                href={SharedRoutes.Miscellaneous.ScotchWhisky}
+              >
                 Scotch Whisky
               </NavDropdown.Item>
-              <NavDropdown.Item disabled className={centredOnMobile}>
+              <NavDropdown.Item
+                className={centredOnMobile}
+                href={SharedRoutes.Miscellaneous.WordOfTheDay}
+              >
                 Word of the Day
               </NavDropdown.Item>
               <NavDropdown.Item disabled className={centredOnMobile}>

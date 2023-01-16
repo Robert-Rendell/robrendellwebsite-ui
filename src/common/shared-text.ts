@@ -4,7 +4,8 @@ export const SharedText: RobRendellWebsiteModel = {
   Miscellaneous: {
     India: "India",
     GiantPacificOctopus: "Giant Pacific Octopus (Alaskan)",
-    ScotchWhisky: "Scottish Whisky"
+    ScotchWhisky: "Scottish Whisky",
+    WordOfTheDay: "Word of the Day",
   },
   Biomagnetism: {
     LandingPage: "Biomagnetism Project",

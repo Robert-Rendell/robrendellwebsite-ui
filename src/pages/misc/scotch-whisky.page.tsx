@@ -28,9 +28,9 @@ export function ScotchWhiskyPage() {
           </div>
         </div>
       </div>
-      <hr/>
+      <hr />
       <p>Source: Edinburgh Student Union - 5th August 2018</p>
-      <hr/>
+      <hr />
     </div>
   );
 }

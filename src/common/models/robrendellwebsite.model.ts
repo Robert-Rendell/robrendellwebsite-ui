@@ -3,6 +3,7 @@ export type RobRendellWebsiteModel = {
     India: string;
     GiantPacificOctopus: string;
     ScotchWhisky: string;
+    WordOfTheDay: string;
   };
   Biomagnetism: {
     LandingPage: string;
