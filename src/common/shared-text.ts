@@ -4,9 +4,6 @@ export const SharedText: RobRendellWebsiteModel = {
   HomePage: "",
   Operations: {
     Dashboard: "Operations Dashboard",
-    WordOfTheDay: "Word of the Day",
-    InterestingDatesInHistory: "Interesting Dates in History",
-    PageViews: "Page Views",
   },
   Miscellaneous: {
     India: "India",

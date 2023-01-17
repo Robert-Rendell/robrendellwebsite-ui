@@ -2,9 +2,9 @@ export type RobRendellWebsiteModel = {
   HomePage: string;
   Operations: {
     Dashboard: string;
-    PageViews: string;
-    WordOfTheDay: string;
-    InterestingDatesInHistory: string;
+    PageViews?: string;
+    WordOfTheDay?: string;
+    InterestingDatesInHistory?: string;
   };
   Miscellaneous: {
     India: string;

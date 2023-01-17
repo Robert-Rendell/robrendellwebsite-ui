@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { Button } from "react-bootstrap";
-import { SharedRoutes } from "../common/shared-routes";
+import React from "react";
+import { Tab, Tabs } from "react-bootstrap";
 import { useIsMyIPAddress } from "../hooks/use-is-my-ip-address.hook";
 import { SharedText } from "../common/shared-text";
 import { OpsPageViewsComponent } from "./components/page-views.component";
@@ -11,53 +10,27 @@ import { AddInterestingDateInHistoryComponent } from "./components/add-date-in-h
 
 export function OperationsDashboardPage() {
   const [hasAccess] = useIsMyIPAddress();
-
-  const [selectedView, setSelectedView] = useState<string>();
   return (
     <>
       <div className="standard-page-margins standard-page-styling">
         {hasAccess && (
           <>
             <h1>{SharedText.Operations.Dashboard}</h1>
-            <div className="ops-dashboard-menu">
-              <Button href="/">Home</Button>&nbsp;|&nbsp;
-              <Button
-                onClick={() =>
-                  setSelectedView(SharedRoutes.Operations.PageViews)
-                }
-              >
-                {SharedText.Operations.PageViews}
-              </Button>
-              &nbsp;|&nbsp;
-              <Button
-                onClick={() =>
-                  setSelectedView(SharedRoutes.Operations.WordOfTheDay)
-                }
-              >
-                {SharedText.Operations.WordOfTheDay}
-              </Button>
-              &nbsp;|&nbsp;
-              <Button
-                onClick={() =>
-                  setSelectedView(
-                    SharedRoutes.Operations.InterestingDatesInHistory
-                  )
-                }
-              >
-                {SharedText.Operations.InterestingDatesInHistory}
-              </Button>
-            </div>
-            <hr />
-            {selectedView === SharedRoutes.Operations.PageViews && (
-              <OpsPageViewsComponent />
-            )}
-            {selectedView === SharedRoutes.Operations.WordOfTheDay && (
-              <AddWordOfDayComponent />
-            )}
-            {selectedView ===
-              SharedRoutes.Operations.InterestingDatesInHistory && (
-              <AddInterestingDateInHistoryComponent />
-            )}
+            <Tabs
+              defaultActiveKey="page-views"
+              id="uncontrolled-tab-example"
+              className="mb-3"
+            >
+              <Tab eventKey="page-views" title="Page Views">
+                <OpsPageViewsComponent />
+              </Tab>
+              <Tab eventKey="word-of-the-day" title="Word of the Day">
+                <AddWordOfDayComponent />
+              </Tab>
+              <Tab eventKey="dates-in-history" title="Dates in History">
+                <AddInterestingDateInHistoryComponent />
+              </Tab>
+            </Tabs>
           </>
         )}
       </div>

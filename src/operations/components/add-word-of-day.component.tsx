@@ -4,7 +4,6 @@ import { useAddWordOfDay } from "../hooks/use-add-word-of-day.hook";
 import InfinitySpinner from "../../resources/infinity-spinner.svg";
 import { FormGroup, FormLabel } from "react-bootstrap";
 import "../operations.page.css";
-import { SharedText } from "../../common/shared-text";
 
 export function isWordOfTheDay(
   response: WordOfTheDay | ErrorResponse
@@ -24,7 +23,6 @@ export function AddWordOfDayComponent() {
 
   return (
     <>
-      <h1>{SharedText.Operations.WordOfTheDay}</h1>
       <form
         className="add-form"
         onSubmit={(event) => {
