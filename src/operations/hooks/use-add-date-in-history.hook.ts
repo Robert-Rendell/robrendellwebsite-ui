@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import {
   AddDateInHistoryRequest,
   AddDateInHistoryResponse,
-  InterestingDateInHistory,
 } from "robrendellwebsite-common";
 import { config } from "../../config";
 import { Response } from "../../models/axios-response-wrapper";
@@ -27,7 +26,7 @@ export function useAddDateInHistory(
             },
           }
         )
-        .then((success: Response<InterestingDateInHistory>) => {
+        .then((success: Response<AddDateInHistoryResponse>) => {
           setResponse(success.data);
         });
     }
