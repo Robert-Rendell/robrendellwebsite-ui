@@ -31,15 +31,15 @@ export function WordOfTheDayPage() {
         </thead>
         <tbody>
           {wordOfTheDay?.map((wordDef, index) => {
-            const word = `${wordDef.word[0].toUpperCase()}${wordDef.word.slice(1)}`;
+            const word = `${wordDef.word[0].toUpperCase()}${wordDef.word.slice(
+              1
+            )}`;
             return (
               index > 0 && (
                 <tr key={index}>
-                  <td>{wordDef.date.replace(/\//g,".")}</td>
+                  <td>{wordDef.date.replace(/\//g, ".")}</td>
                   <td>
-                    {!onMobile ? word : (
-                      <GoogleSearchLink query={word} />
-                    )}
+                    {!onMobile ? word : <GoogleSearchLink query={word} />}
                   </td>
                   {!onMobile && (
                     <>

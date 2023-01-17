@@ -21,10 +21,12 @@ export const NavComponent = () => {
   const [hasAccess] = useIsMyIPAddress();
 
   const onNavBarClick = () => {
-    if (hasAccess) {
-      window.location.href = "/operations";
+    console.log(window.location.href);
+    if (hasAccess && !window.location.href.includes(SharedRoutes.Operations.Dashboard)) {
+      window.location.href = SharedRoutes.Operations.Dashboard;
     } else {
-      window.location.href = "/";
+      console.log(window.location.href);
+      window.location.href = SharedRoutes.HomePage;
     }
   };
 

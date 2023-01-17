@@ -24,7 +24,6 @@ export function AddWordOfDayComponent() {
 
   return (
     <>
-      <h1>{SharedText.Operations.WordOfTheDay}</h1>
       <form
         className="add-form"
         onSubmit={(event) => {

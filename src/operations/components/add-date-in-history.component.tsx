@@ -28,7 +28,6 @@ export function AddInterestingDateInHistoryComponent() {
 
   return (
     <>
-      <h1>{SharedText.Operations.InterestingDatesInHistory}</h1>
       <form
         onSubmit={(event) => {
           onSubmit(event);
