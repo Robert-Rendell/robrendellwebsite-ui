@@ -1,6 +1,7 @@
 import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 
 export const SharedRoutes: RobRendellWebsiteModel = {
+  HomePage: "/",
   Operations: {
     Dashboard: "/operations",
     PageViews: "/operations/page-views",

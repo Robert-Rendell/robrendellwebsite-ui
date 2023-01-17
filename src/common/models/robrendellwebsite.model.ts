@@ -1,4 +1,5 @@
 export type RobRendellWebsiteModel = {
+  HomePage: string;
   Operations: {
     Dashboard: string;
     PageViews: string;
