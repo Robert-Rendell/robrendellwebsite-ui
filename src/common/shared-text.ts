@@ -1,6 +1,7 @@
 import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 
 export const SharedText: RobRendellWebsiteModel = {
+  HomePage: "",
   Operations: {
     Dashboard: "Operations Dashboard",
     WordOfTheDay: "Word of the Day",

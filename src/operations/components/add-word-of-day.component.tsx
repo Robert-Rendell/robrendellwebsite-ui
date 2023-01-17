@@ -45,7 +45,7 @@ export function AddWordOfDayComponent() {
           <br />
           <FormLabel>Definition</FormLabel>
           <br />
-          <input name="definition"></input>
+          <textarea name="definition" rows={5} cols={24}></textarea>
           <br />
           <FormLabel>Context</FormLabel>
           <br />

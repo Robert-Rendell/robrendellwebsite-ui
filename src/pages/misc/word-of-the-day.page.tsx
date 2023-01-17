@@ -21,26 +21,31 @@ export function WordOfTheDayPage() {
           <tr>
             <th>Date</th>
             <th>Word</th>
-            <th>Definition</th>
-            {!onMobile && <th>Context</th>}
+            {!onMobile && (
+              <>
+                <th>Definition</th>
+                <th>Context</th>
+              </>
+            )}
           </tr>
         </thead>
         <tbody>
           {wordOfTheDay?.map((wordDef, index) => {
+            const word = `${wordDef.word[0].toUpperCase()}${wordDef.word.slice(1)}`;
             return (
               index > 0 && (
                 <tr key={index}>
-                  <td>{wordDef.date}</td>
-                  <td>{wordDef.word}</td>
+                  <td>{wordDef.date.replace(/\//g,".")}</td>
                   <td>
-                    {!onMobile ? (
-                      wordDef.definition
-                    ) : (
-                      <GoogleSearchLink query={wordDef.word} />
+                    {!onMobile ? word : (
+                      <GoogleSearchLink query={word} />
                     )}
                   </td>
                   {!onMobile && (
-                    <td>{wordDef.context.replace(/Nicole/g, "Yin")}</td>
+                    <>
+                      <td>{wordDef.definition}</td>
+                      <td>{wordDef.context.replace(/Nicole/g, "Yin")}</td>
+                    </>
                   )}
                 </tr>
               )
