@@ -41,7 +41,7 @@ export function AddInterestingDateInHistoryComponent() {
           <br />
           <FormLabel>Event</FormLabel>
           <br />
-          <input name="event"></input>
+          <textarea name="event" rows={5} cols={24}></textarea>
           <br />
           <FormLabel>School</FormLabel>
           <br />
