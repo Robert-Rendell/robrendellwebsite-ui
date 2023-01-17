@@ -45,6 +45,10 @@ export function AddInterestingDateInHistoryComponent() {
           <br />
           <input name="school"></input>
           <br />
+          <FormLabel>Insertion index (optional)</FormLabel>
+          <br />
+          <input name="insertionIndex" type="number"></input>
+          <br />
 
           <input type="submit"></input>
           <br />
