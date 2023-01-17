@@ -82,7 +82,10 @@ ReactDOM.render(
           <App />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/operations" element={<OperationsDashboardPage />} />
+            <Route
+              path={SharedRoutes.Operations.Dashboard}
+              element={<OperationsDashboardPage />}
+            />
 
             {/* //////////////////////////////////// */}
             <Route path="sudoku" element={<SudokuDashboardComponent />} />

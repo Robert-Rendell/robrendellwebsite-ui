@@ -1,6 +1,12 @@
 import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 
 export const SharedRoutes: RobRendellWebsiteModel = {
+  Operations: {
+    Dashboard: "/operations",
+    PageViews: "/operations/page-views",
+    WordOfTheDay: "/operations/word-of-the-day",
+    InterestingDatesInHistory: "/operations/dates-in-history",
+  },
   Miscellaneous: {
     India: "/miscellaneous/india",
     GiantPacificOctopus: "/miscellaneous/giant-pacific-octopus",

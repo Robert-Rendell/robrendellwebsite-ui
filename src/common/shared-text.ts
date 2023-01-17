@@ -1,6 +1,12 @@
 import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 
 export const SharedText: RobRendellWebsiteModel = {
+  Operations: {
+    Dashboard: "Operations Dashboard",
+    WordOfTheDay: "Word of the Day",
+    InterestingDatesInHistory: "Interesting Dates in History",
+    PageViews: "Page Views",
+  },
   Miscellaneous: {
     India: "India",
     GiantPacificOctopus: "Giant Pacific Octopus (Alaskan)",
