@@ -1,17 +1,18 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import {
-  ErrorResponse,
+  AddDateInHistoryRequest,
+  AddDateInHistoryResponse,
   InterestingDateInHistory,
 } from "robrendellwebsite-common";
 import { config } from "../../config";
 import { Response } from "../../models/axios-response-wrapper";
 
 export function useAddDateInHistory(
-  dateInHistory: InterestingDateInHistory | undefined
+  dateInHistory: AddDateInHistoryRequest | undefined
 ) {
   const [response, setResponse] = useState<
-    InterestingDateInHistory | ErrorResponse | null | undefined
+    AddDateInHistoryResponse | null | undefined
   >();
   useEffect(() => {
     if (typeof dateInHistory !== "undefined" && dateInHistory !== null) {
