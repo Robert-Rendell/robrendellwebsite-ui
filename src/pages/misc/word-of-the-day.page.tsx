@@ -35,7 +35,7 @@ export function WordOfTheDayPage() {
             return (
               index > 0 && (
                 <tr key={index}>
-                  <td>{wordDef.date}</td>
+                  <td>{wordDef.date.replace(/\//g,".")}</td>
                   <td>
                     {!onMobile ? word : (
                       <GoogleSearchLink query={word} />
