@@ -1,4 +1,10 @@
 export type RobRendellWebsiteModel = {
+  Operations: {
+    Dashboard: string;
+    PageViews: string;
+    WordOfTheDay: string;
+    InterestingDatesInHistory: string;
+  };
   Miscellaneous: {
     India: string;
     GiantPacificOctopus: string;

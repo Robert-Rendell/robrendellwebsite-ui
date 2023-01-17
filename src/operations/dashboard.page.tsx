@@ -1,87 +1,62 @@
-import React, { useMemo, useState } from "react";
-import { Button, Table } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import { SharedRoutes } from "../common/shared-routes";
 import { useIsMyIPAddress } from "../hooks/use-is-my-ip-address.hook";
+import { SharedText } from "../common/shared-text";
+import { OpsPageViewsComponent } from "./components/page-views.component";
 import "../pages/page.css";
-import { useOpsDashboard } from "./hooks/use-ops-dashboard.hook";
-import InfinitySpinner from "../resources/infinity-spinner.svg";
-import { OpsPageViewDetailComponent } from "./components/page-view-detail.component";
-import { useWindowSize } from "../hooks/use-window-size.hook";
-import { PageViewerDocument } from "robrendellwebsite-common";
+import "./operations.page.css";
+import { AddWordOfDayComponent } from "./components/add-word-of-day.component";
+import { AddInterestingDateInHistoryComponent } from "./components/add-date-in-history.component";
 
 export function OperationsDashboardPage() {
-  const windowSize = useWindowSize();
-  const width = windowSize[0] - 40;
   const [hasAccess] = useIsMyIPAddress();
-  const allRoutes = useMemo(() => {
-    return Object.values(SharedRoutes)
-      .map((sharedRoute) => Object.values(sharedRoute))
-      .flat()
-      .filter((sharedRoute) => !sharedRoute.includes("www.youtube.com"));
-  }, []);
-  const [pageViews] = useOpsDashboard({ pageUrls: allRoutes });
-  const [selectedPageViews, setSelectedPageViews] = useState<
-    PageViewerDocument | undefined
-  >();
-  const onMobile = width < 600;
+
+  const [selectedView, setSelectedView] = useState<string>();
   return (
     <>
       <div className="standard-page-margins standard-page-styling">
         {hasAccess && (
           <>
-            <h1>Operations Dashboard</h1>
-            <a href="/">Home</a>
+            <h1>{SharedText.Operations.Dashboard}</h1>
+            <div className="ops-dashboard-menu">
+              <Button href="/">Home</Button>&nbsp;|&nbsp;
+              <Button
+                onClick={() =>
+                  setSelectedView(SharedRoutes.Operations.PageViews)
+                }
+              >
+                {SharedText.Operations.PageViews}
+              </Button>
+              &nbsp;|&nbsp;
+              <Button
+                onClick={() =>
+                  setSelectedView(SharedRoutes.Operations.WordOfTheDay)
+                }
+              >
+                {SharedText.Operations.WordOfTheDay}
+              </Button>
+              &nbsp;|&nbsp;
+              <Button
+                onClick={() =>
+                  setSelectedView(
+                    SharedRoutes.Operations.InterestingDatesInHistory
+                  )
+                }
+              >
+                {SharedText.Operations.InterestingDatesInHistory}
+              </Button>
+            </div>
             <hr />
-            {selectedPageViews && (
-              <>
-                <h2>
-                  {selectedPageViews.pageUrl}{" "}
-                  <Button onClick={() => setSelectedPageViews(undefined)}>
-                    X
-                  </Button>
-                </h2>
-
-                <OpsPageViewDetailComponent pageViewerDoc={selectedPageViews} />
-              </>
+            {selectedView === SharedRoutes.Operations.PageViews && (
+              <OpsPageViewsComponent />
             )}
-            {typeof pageViews === "undefined" && (
-              <p>
-                Loading page views: <img src={InfinitySpinner} height={50} />
-              </p>
+            {selectedView === SharedRoutes.Operations.WordOfTheDay && (
+              <AddWordOfDayComponent />
             )}
-            {typeof pageViews !== "undefined" && (
-              <Table variant="dark" hover>
-                <thead>
-                  <tr>
-                    {!onMobile && <th></th>}
-                    <th>Route</th>
-                    <th>Page views</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {pageViews
-                    .filter((pageView) => pageView !== null)
-                    .map((pageView, index) => {
-                      return (
-                        <tr
-                          key={index}
-                          onClick={() => {
-                            window.scrollTo({ top: 0 });
-                            setSelectedPageViews(pageView);
-                          }}
-                        >
-                          {!onMobile && (
-                            <td>
-                              <Button>View</Button>
-                            </td>
-                          )}
-                          <td>{pageView?.pageUrl}</td>
-                          <td>{pageView?.total}</td>
-                        </tr>
-                      );
-                    })}
-                </tbody>
-              </Table>
+            {selectedView ===
+              SharedRoutes.Operations.InterestingDatesInHistory && (
+              <AddInterestingDateInHistoryComponent />
             )}
           </>
         )}
