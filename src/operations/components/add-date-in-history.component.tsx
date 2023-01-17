@@ -7,7 +7,6 @@ import InfinitySpinner from "../../resources/infinity-spinner.svg";
 import { FormGroup, FormLabel } from "react-bootstrap";
 import "../operations.page.css";
 import { useAddDateInHistory } from "../hooks/use-add-date-in-history.hook";
-import { SharedText } from "../../common/shared-text";
 
 export function isDateInHistory(
   response: InterestingDateInHistory | ErrorResponse

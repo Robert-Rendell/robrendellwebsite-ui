@@ -22,7 +22,10 @@ export const NavComponent = () => {
 
   const onNavBarClick = () => {
     console.log(window.location.href);
-    if (hasAccess && !window.location.href.includes(SharedRoutes.Operations.Dashboard)) {
+    if (
+      hasAccess &&
+      !window.location.href.includes(SharedRoutes.Operations.Dashboard)
+    ) {
       window.location.href = SharedRoutes.Operations.Dashboard;
     } else {
       console.log(window.location.href);

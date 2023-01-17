@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { Button, Tab, Tabs } from "react-bootstrap";
-import { SharedRoutes } from "../common/shared-routes";
+import React from "react";
+import { Tab, Tabs } from "react-bootstrap";
 import { useIsMyIPAddress } from "../hooks/use-is-my-ip-address.hook";
 import { SharedText } from "../common/shared-text";
 import { OpsPageViewsComponent } from "./components/page-views.component";
