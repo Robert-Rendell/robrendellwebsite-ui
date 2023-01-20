@@ -42,14 +42,32 @@ export function ImportanceOfStretchingPage() {
           predators!
         </p>
         <p>
-          The problem with being a biped didn&apos; emerge until recent years
+          The problem with being a biped didn&apos;t emerge until recent years
           when mankind decided they would rather sit down for 8 hours a day,
           every day of the week, instead of the hunter gatherer approach which
           involved a LOT of exercise. This unavoidable exercise, in days gone
           by, meant our brains were regularly getting fresh, nutrients through
           our blood.
         </p>
-        <QuestionComponent>How long have we known about stretching?</QuestionComponent>
+        <QuestionComponent>
+          How does this apply to the other muscles in the body?
+        </QuestionComponent>
+        <p>
+          The brain is a muscle, in the same way we have muscles in our limbs to
+          manipulate external objects. All of these muscles in our bodies are
+          working together to produce a desired movement.
+        </p>
+        <p>
+          All of the muscles in our body need oxygen absorbed through the lungs
+          from the air.
+        </p>
+        <p>
+          Our muscles are in constant use and require fresh nutrients similar to
+          the way our brain does.
+        </p>
+        <QuestionComponent>
+          How long have we known about stretching?
+        </QuestionComponent>
         <p>
           In Islam, people use prayer mats at the call to prayer and lower their
           heads to the ground. Muslims do this multiple times on a daily basis,
@@ -60,9 +78,7 @@ export function ImportanceOfStretchingPage() {
           In Hinduism, yoga (stretching and meditation) is an essential
           ingredient in paying respects to the trimurti.
         </p>
-        <p>
-          The answer to the above question, is at least 5000 years.
-        </p>
+        <p>The answer to the above question, is at least 5000 years.</p>
       </MusicScrollDownMessage>
     </div>
   );
