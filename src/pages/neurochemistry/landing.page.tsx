@@ -53,6 +53,24 @@ export function NeurochemistryLandingPage() {
             </NewTabLink>
           </li>
           <li>
+            {/* <NewTabLink
+              href={SharedRoutes.Neurochemistry.ColdShowers}
+              noNewTab
+            >
+              {SharedText.Neurochemistry.ColdShowers}
+            </NewTabLink> */}
+            {SharedText.Neurochemistry.ColdShowers} ... coming soon!
+          </li>
+          <li>
+            {/* <NewTabLink
+              href={SharedRoutes.Neurochemistry.Paranoia}
+              noNewTab
+            >
+              {SharedText.Neurochemistry.Paranoia}
+            </NewTabLink> */}
+            {SharedText.Neurochemistry.Paranoia} ... coming soon!
+          </li>
+          <li>
             <NewTabLink
               href={SharedRoutes.Neurochemistry.SubconsciousPositiveReactions}
               noNewTab
@@ -75,6 +93,15 @@ export function NeurochemistryLandingPage() {
             >
               {SharedText.Neurochemistry.LearningAndGeneticCode}
             </NewTabLink>
+          </li>
+          <li>
+            {/* <NewTabLink
+              href={SharedRoutes.Neurochemistry.ImportanceOfStretching}
+              noNewTab
+            >
+              {SharedText.Neurochemistry.ImportanceOfStretching}
+            </NewTabLink> */}
+            {SharedText.Neurochemistry.ImportanceOfStretching} ... coming soon!
           </li>
           <li>
             <NewTabLink
@@ -112,6 +139,15 @@ export function NeurochemistryLandingPage() {
             >
               {SharedText.Neurochemistry.AdviceFromTheBeatles}
             </NewTabLink>
+          </li>
+          <li>
+            {/* <NewTabLink
+              href={SharedRoutes.Neurochemistry.ImaginationAndVisualisation}
+              noNewTab
+            >
+              {SharedText.Neurochemistry.ImaginationAndVisualisation}
+            </NewTabLink> */}
+            {SharedText.Neurochemistry.ImaginationAndVisualisation} ... coming soon!
           </li>
           <li>
             <NewTabLink
