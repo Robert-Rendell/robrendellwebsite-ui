@@ -36,7 +36,7 @@ export function ColdShowersPage() {
         <p>
         Research shows that taking a cold shower in the evening may affect your
         sleep in a bad way. This is because exposure to cold increases your
-        cortisol level, which may lead to a poor night&apos;s sleep.
+        cortisol level, which may lead to a poor night of sleep.
         </p>
         <p>Answer: in the morning.</p>
       </MusicScrollDownMessage>
