@@ -59,7 +59,7 @@ export const SharedText: RobRendellWebsiteModel = {
     LetItBe: "Emotional Extremes: Let it Go / Let it Be",
     AdviceFromTheBeatles: "Emotional Extremes: Advice from The Beatles",
     LandingPage: "Neurochemistry Project: Emotional Intelligence",
-    SelfLove: "Self-love! (... And not Narcissism)",
+    SelfLove: "Oxytocin: Self-love is not Narcissism!",
     GuiltAndForgiveness: "GUILT!! ... And Forgiveness",
     AttachmentAndSharing: "Attachment & Sharing",
     Paranoia: "Adrenaline & Cortisol: Paranoia",
