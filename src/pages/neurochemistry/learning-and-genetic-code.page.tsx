@@ -168,8 +168,9 @@ export function LearningAndGeneticCodePage() {
           - and a step further, attribute it all to inherited DNA.
         </p>
         <p>
-          However, over thousands of generations, repeated training of the same muscles (in your
-          brain, for example) surely would eventually result in visible inherited traits.
+          However, over thousands of generations, repeated training of the same
+          muscles (in your brain, for example) surely would eventually result in
+          visible inherited traits.
         </p>
         <p>
           However, in that same space, over a single generation there are so
