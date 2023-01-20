@@ -65,6 +65,7 @@ import { OperationsDashboardPage } from "./operations/dashboard.page";
 import { ScotchWhiskyPage } from "./pages/misc/scotch-whisky.page";
 import { WordOfTheDayPage } from "./pages/misc/word-of-the-day.page";
 import { InterestingDatesInHistoryPage } from "./pages/misc/interesting-dates-in-history.page";
+import { ImportanceOfStretchingPage } from "./pages/neurochemistry/importance-of-stretching.page";
 
 const maintenanceMode = false;
 
@@ -146,56 +147,65 @@ ReactDOM.render(
 
             {/* //////////////////////////////////// */}
             <Route
-              path="neurochemistry/"
+              path={SharedRoutes.Neurochemistry.LandingPage}
               element={<NeurochemistryLandingPage />}
             />
             <Route
-              path="neurochemistry/happiness"
+              path={SharedRoutes.Neurochemistry.McEdoegsa}
               element={<MCEDOEGSAPage />}
             />
             <Route
-              path="neurochemistry/zones-of-regulation"
+              path={SharedRoutes.Neurochemistry.ZonesOfRegulation}
               element={<ZonesOfRegulationPage />}
             />
             <Route
-              path="neurochemistry/self-love-not-narcissism"
+              path={SharedRoutes.Neurochemistry.SelfLove}
               element={<SelfLoveNotNarcissismPage />}
             />
             <Route
-              path="neurochemistry/the-relaxation-response"
+              path={SharedRoutes.Neurochemistry.RelaxationResponse}
               element={<TheRelaxationResponsePage />}
             />
             <Route
-              path="neurochemistry/subconscious-positive-reactions"
+              path={SharedRoutes.Neurochemistry.SubconsciousPositiveReactions}
               element={<SubconsciousPositiveReactionsPage />}
             />
             <Route
-              path="neurochemistry/self-actualisation-peak-experiences"
+              path={SharedRoutes.Neurochemistry.SelfActualisation}
               element={<SelfActualisationPeakExperiencesPage />}
             />
             <Route
-              path="neurochemistry/learning-and-genetic-code"
+              path={SharedRoutes.Neurochemistry.LearningAndGeneticCode}
               element={<LearningAndGeneticCodePage />}
             />
-            <Route path="neurochemistry/let-it-go" element={<LetItGoPage />} />
             <Route
-              path="neurochemistry/advice-from-the-beatles"
+              path={SharedRoutes.Neurochemistry.LetItBe}
+              element={<LetItGoPage />}
+            />
+            <Route
+              path={SharedRoutes.Neurochemistry.AdviceFromTheBeatles}
               element={<AdviceFromTheBeatlesPage />}
             />
             <Route
-              path="neurochemistry/melatonin-is-the-key-to-creative-insight"
+              path={SharedRoutes.Neurochemistry.MelatoninIsTheKeyToCreativity}
               element={<MelatoninIsTheKeyToCreativeInsight />}
             />
             <Route
-              path="neurochemistry/guilt-and-forgiveness"
+              path={SharedRoutes.Neurochemistry.ImportanceOfStretching}
+              element={<ImportanceOfStretchingPage />}
+            />
+            <Route
+              path={SharedRoutes.Neurochemistry.GuiltAndForgiveness}
               element={<GuiltAndForgiveness />}
             />
             <Route
-              path="neurochemistry/attachment-and-sharing"
+              path={SharedRoutes.Neurochemistry.AttachmentAndSharing}
               element={<AttachmentAndSharing />}
             />
             <Route
-              path="neurochemistry/conclusion"
+              path={
+                SharedRoutes.Neurochemistry.PropheciesAndMassAwakeningDiscussion
+              }
               element={<NeurochemistryConclusionPage />}
             />
             <Route

@@ -118,13 +118,12 @@ export function NeurochemistryLandingPage() {
             </NewTabLink>
           </li>
           <li>
-            {/* <NewTabLink
+            <NewTabLink
               href={SharedRoutes.Neurochemistry.ImportanceOfStretching}
               noNewTab
             >
               {SharedText.Neurochemistry.ImportanceOfStretching}
-            </NewTabLink> */}
-            {SharedText.Neurochemistry.ImportanceOfStretching} ... coming soon!
+            </NewTabLink>
           </li>
           <li>
             <NewTabLink
