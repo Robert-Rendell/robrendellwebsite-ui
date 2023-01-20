@@ -154,8 +154,8 @@ export function LearningAndGeneticCodePage() {
           a hundred times before, but with my slant included:
         </p>
         <QuoteComponent year={2023}>
-          Practice makes perfect; practice also makes it available to your
-          subconscious (firstly cerebellar, then instinctual).
+          Practice makes perfect; practice also makes learning available to your
+          subconscious mind (firstly cerebellar, then instinctual).
         </QuoteComponent>
         <QuestionComponent>
           Rob... Isn&apos;t a huge part of what you call &quot;inheriting
@@ -168,8 +168,9 @@ export function LearningAndGeneticCodePage() {
           - and a step further, attribute it all to inherited DNA.
         </p>
         <p>
-          However, over thousands of generations, repeated training of the same muscles (in your
-          brain, for example) surely would eventually result in visible inherited traits.
+          However, over thousands of generations, repeated training of the same
+          muscles (in your brain, for example) surely would eventually result in
+          visible inherited traits.
         </p>
         <p>
           However, in that same space, over a single generation there are so
