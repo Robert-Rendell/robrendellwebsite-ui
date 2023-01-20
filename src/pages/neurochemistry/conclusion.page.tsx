@@ -6,7 +6,6 @@ import { MusicScrollDownMessage } from "../../components/music-scroll-down.compo
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { QuoteComponent } from "../../components/quote.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
-import { QuestionComponent } from "./components/question.component";
 
 export function NeurochemistryConclusionPage() {
   usePageView(SharedRoutes.Neurochemistry.PropheciesAndMassAwakeningDiscussion);
