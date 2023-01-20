@@ -40,7 +40,7 @@ export function ImportanceOfStretchingPage() {
           are higher from the ground on two feet. Imagine a meerkat on alert for
           predators!
         </p>
-        <hr/>
+        <hr />
         <p>
           In Islam, people use prayer mats at the call to prayer and lower their
           heads to the ground. Muslims do this multiple times on a daily basis,
