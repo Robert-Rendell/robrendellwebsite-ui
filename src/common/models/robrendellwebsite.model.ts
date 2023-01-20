@@ -51,11 +51,15 @@ export type RobRendellWebsiteModel = {
     SelfActualisation: string;
     LearningAndGeneticCode: string;
     McEdoegsa: string;
+    Paranoia: string;
     LetItBe: string;
     LandingPage: string;
     GuiltAndForgiveness: string;
     SelfLove: string;
     AttachmentAndSharing: string;
     AdviceFromTheBeatles: string;
+    ImportanceOfStretching: string;
+    ColdShowers: string;
+    ImaginationAndVisualisation: string;
   };
 };

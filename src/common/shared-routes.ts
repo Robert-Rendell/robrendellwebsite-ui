@@ -62,5 +62,10 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     LandingPage: "/neurochemistry",
     SelfLove: "/neurochemistry/self-love-not-narcissism",
     GuiltAndForgiveness: "/neurochemistry/GUILT-and-forgiveness",
+    Paranoia: "/neurochemistry/paranoia",
+    ImportanceOfStretching: "/neurochemistry/stretching",
+    ImaginationAndVisualisation:
+      "/neurochemistry/imagination-and-visualisation",
+    ColdShowers: "/neurochemistry/cold-showers",
   },
 };
