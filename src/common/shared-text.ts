@@ -50,7 +50,7 @@ export const SharedText: RobRendellWebsiteModel = {
       "Prophecies and a Discussion on Mass Awakening",
     MelatoninIsTheKeyToCreativity: "Melatonin: The Key to Creative Insight",
     SubconsciousPositiveReactions: "Subconscious Positive Reactions",
-    RelaxationResponse: "Adrenaline: Anxiety & The Relaxation Response",
+    RelaxationResponse: "Adrenaline & Cortisol: Anxiety & The Relaxation Response",
     ZonesOfRegulation: "Zones of Emotional Regulation",
     SelfActualisation: "Self-actualisation & Peak Experiences",
     LearningAndGeneticCode: "Learning and Genetic Code",
@@ -61,7 +61,7 @@ export const SharedText: RobRendellWebsiteModel = {
     SelfLove: "Self-love! (... And not Narcissism)",
     GuiltAndForgiveness: "GUILT!! ... And Forgiveness",
     AttachmentAndSharing: "Attachment & Sharing",
-    Paranoia: "Adrenaline: Paranoia",
+    Paranoia: "Adrenaline & Cortisol: Paranoia",
     ImportanceOfStretching: "The Importance of Stretching",
     ImaginationAndVisualisation:
       "Controlling Neurochemistry: Imagination and Visualisation",
