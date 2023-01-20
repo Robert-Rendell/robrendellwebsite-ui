@@ -19,7 +19,7 @@ export function ImportanceOfStretchingPage() {
       </h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="tHlYLt7Vt2c">
         <QuestionComponent hrOff>Why do we need to stretch?</QuestionComponent>
-        <hr/>
+        <hr />
         <p>
           We were not always <NewTabLink href="bipeds">bipeds</NewTabLink>. A
           long time ago, we used to scramble around on{" "}
@@ -41,7 +41,15 @@ export function ImportanceOfStretchingPage() {
           are higher from the ground on two feet. Imagine a meerkat on alert for
           predators!
         </p>
-        <hr />
+        <p>
+          The problem with being a biped didn&apos; emerge until recent years
+          when mankind decided they would rather sit down for 8 hours a day,
+          every day of the week, instead of the hunter gatherer approach which
+          involved a LOT of exercise. This unavoidable exercise, in days gone
+          by, meant our brains were regularly getting fresh, nutrients through
+          our blood.
+        </p>
+        <QuestionComponent>How long have we known about stretching?</QuestionComponent>
         <p>
           In Islam, people use prayer mats at the call to prayer and lower their
           heads to the ground. Muslims do this multiple times on a daily basis,
@@ -51,6 +59,9 @@ export function ImportanceOfStretchingPage() {
         <p>
           In Hinduism, yoga (stretching and meditation) is an essential
           ingredient in paying respects to the trimurti.
+        </p>
+        <p>
+          The answer to the above question, is at least 5000 years.
         </p>
       </MusicScrollDownMessage>
     </div>

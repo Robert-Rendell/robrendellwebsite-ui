@@ -178,7 +178,10 @@ ReactDOM.render(
               path={SharedRoutes.Neurochemistry.LearningAndGeneticCode}
               element={<LearningAndGeneticCodePage />}
             />
-            <Route path={SharedRoutes.Neurochemistry.LetItBe} element={<LetItGoPage />} />
+            <Route
+              path={SharedRoutes.Neurochemistry.LetItBe}
+              element={<LetItGoPage />}
+            />
             <Route
               path={SharedRoutes.Neurochemistry.AdviceFromTheBeatles}
               element={<AdviceFromTheBeatlesPage />}
@@ -200,7 +203,9 @@ ReactDOM.render(
               element={<AttachmentAndSharing />}
             />
             <Route
-              path={SharedRoutes.Neurochemistry.PropheciesAndMassAwakeningDiscussion}
+              path={
+                SharedRoutes.Neurochemistry.PropheciesAndMassAwakeningDiscussion
+              }
               element={<NeurochemistryConclusionPage />}
             />
             <Route
