@@ -1,15 +1,20 @@
 import React from "react";
 
 type Props = {
-  dateStarted?: boolean
-}
+  dateStarted?: boolean;
+};
 
 export function DateWritten(props: React.PropsWithChildren<Props>) {
   return (
     <>
       <hr />
       <span>
-        [<i>Date { props.dateStarted ? "Project Started" : "Written" }: {props.children}</i>]
+        [
+        <i>
+          Date {props.dateStarted ? "Project Started" : "Written"}:{" "}
+          {props.children}
+        </i>
+        ]
       </span>
     </>
   );

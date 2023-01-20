@@ -108,7 +108,7 @@ export function NeurochemistryLandingPage() {
               {SharedText.Neurochemistry.LetItBe}
             </NewTabLink>
           </li>
-          
+
           <li>
             <NewTabLink
               href={SharedRoutes.Neurochemistry.AdviceFromTheBeatles}
@@ -157,7 +157,8 @@ export function NeurochemistryLandingPage() {
             >
               {SharedText.Neurochemistry.ImaginationAndVisualisation}
             </NewTabLink> */}
-            {SharedText.Neurochemistry.ImaginationAndVisualisation} ... coming soon!
+            {SharedText.Neurochemistry.ImaginationAndVisualisation} ... coming
+            soon!
           </li>
           <li>
             <NewTabLink

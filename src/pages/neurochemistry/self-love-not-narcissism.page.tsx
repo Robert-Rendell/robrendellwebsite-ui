@@ -1,5 +1,6 @@
 import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
+import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { QuoteComponent } from "../../components/quote.component";
@@ -13,7 +14,7 @@ export function SelfLoveNotNarcissismPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>
-        <RobBackButton /> Self-love! (...Is Not Narcissism)
+        <RobBackButton /> {SharedText.Neurochemistry.SelfLove}
       </h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="M8iLdUinHl4">
         <h2 className="centred">
