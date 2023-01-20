@@ -67,6 +67,7 @@ import { WordOfTheDayPage } from "./pages/misc/word-of-the-day.page";
 import { InterestingDatesInHistoryPage } from "./pages/misc/interesting-dates-in-history.page";
 import { ImportanceOfStretchingPage } from "./pages/neurochemistry/importance-of-stretching.page";
 import { ColdShowersPage } from "./pages/neurochemistry/cold-showers.page";
+import { ExercisePage } from "./pages/neurochemistry/exercise.page";
 
 const maintenanceMode = false;
 
@@ -194,6 +195,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Neurochemistry.ImportanceOfStretching}
               element={<ImportanceOfStretchingPage />}
+            />
+            <Route
+              path={SharedRoutes.Neurochemistry.Exercise}
+              element={<ExercisePage />}
             />
             <Route
               path={SharedRoutes.Neurochemistry.ColdShowers}
