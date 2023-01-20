@@ -32,7 +32,8 @@ export function ImportanceOfStretchingPage() {
         </p>
         <p>
           Blood carries the required nutrients to grow cells and provide
-          building blocks for new neurons and learning networks.
+          building blocks for new neurons and neural networks grown as a result
+          of learning.
         </p>
         <p>
           I believe we evolved to standing on two feet, primarily, so we had two
