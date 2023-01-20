@@ -154,8 +154,8 @@ export function LearningAndGeneticCodePage() {
           a hundred times before, but with my slant included:
         </p>
         <QuoteComponent year={2023}>
-          Practice makes perfect; practice also makes it available to your
-          subconscious (firstly cerebellar, then instinctual).
+          Practice makes perfect; practice also makes learning available to your
+          subconscious mind (firstly cerebellar, then instinctual).
         </QuoteComponent>
         <QuestionComponent>
           Rob... Isn&apos;t a huge part of what you call &quot;inheriting
