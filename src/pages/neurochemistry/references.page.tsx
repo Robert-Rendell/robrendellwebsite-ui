@@ -69,6 +69,12 @@ export function NeurochemistryReferencesPage() {
           Priscilla Roth - The Super-ego:
           https://m.media-amazon.com/images/I/511AC30M93L._SX291_BO1,204,203,200_.jpg
         </li>
+        <li>
+          Wim Hof method, immune system: https://www.wimhofmethod.com/benefits-of-cold-showers#:~:text=Scientific%20studies%20have%20found%20that,which%20stimulates%20the%20immune%20response.
+        </li>
+        <li>
+          Wim Hof method, adrenaline and cortisol: https://www.wimhofmethod.com/blog/cold-showers-vs-hot-showers#:~:text=Cold%20showers%20for%20mental%20health&text=Cold%20showers%20have%20been%20proven,norepinephrine%2C%20cortisol%2C%20and%20adrenaline.
+        </li>
       </ol>
     </div>
   );
