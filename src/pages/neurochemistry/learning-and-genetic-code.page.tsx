@@ -4,6 +4,7 @@ import { SharedText } from "../../common/shared-text";
 import { RobBackButton } from "../../components/back-button.component";
 import { MusicScrollDownMessage } from "../../components/music-scroll-down.component";
 import { NewTabLink } from "../../components/new-tab-link.component";
+import { QuoteComponent } from "../../components/quote.component";
 import { usePageView } from "../../hooks/use-page-view.hook";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { QuestionComponent } from "./components/question.component";
@@ -137,12 +138,43 @@ export function LearningAndGeneticCodePage() {
           programming and thus by logic: humans are self-programming!
         </p>
         <p>
-          The abstract thinking muscle that is used for music, maths and
+          The abstract thinking muscle that is used for art, music, maths and
           philosophy is a trait that can be passed on to your children.
         </p>
         <p>
-          You can actively influence your genetic programming (on a daily basis)
-          and have a say in what traits, those inheriting from you, receive.
+          I believe you can{" "}
+          <NewTabLink href="https://genome.gov/genetics-glossary/Mutation#:~:text=Mutations%20can%20result%20from%20errors,cells)%20are%20not%20passed%20on">
+            actively influence
+          </NewTabLink>{" "}
+          your genetic programming (on a daily basis) and have a say in what
+          traits, those inheriting from you, receive.
+        </p>
+        <p>
+          The other big takeaway is confirmation of something you&apos;ve heard
+          a hundred times before, but with my slant included:
+        </p>
+        <QuoteComponent year={2023}>
+          Practice makes perfect; practice also makes it available to your
+          subconscious (firstly cerebellar, then instinctual).
+        </QuoteComponent>
+        <QuestionComponent>
+          Rob... Isn&apos;t a huge part of what you call &quot;inheriting
+          traits&quot;, actually just the socio-economic factor?
+        </QuestionComponent>
+        <p>
+          It&apos;s undoubtedly true that within a single generation (or
+          iteration) of humans, your DNA surely cannot mutate enough to the
+          point where we can detect it in complex human behaviours (or talents)
+          - and a step further, attribute it all to inherited DNA.
+        </p>
+        <p>
+          However, over thousands of generations, repeated training of the same muscles (in your
+          brain, for example) surely would eventually result in visible inherited traits.
+        </p>
+        <p>
+          However, in that same space, over a single generation there are so
+          many socio-economic factors that also play a fundamental role in the
+          muscles you use: influence; without naming all other factors.
         </p>
       </MusicScrollDownMessage>
     </div>
