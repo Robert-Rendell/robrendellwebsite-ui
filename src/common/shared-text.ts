@@ -49,22 +49,23 @@ export const SharedText: RobRendellWebsiteModel = {
     PropheciesAndMassAwakeningDiscussion:
       "Prophecies and a Discussion on Mass Awakening",
     MelatoninIsTheKeyToCreativity: "Melatonin: The Key to Creative Insight",
-    SubconsciousPositiveReactions: "Subconscious Positive Reactions",
+    SubconsciousPositiveReactions: "Serotonin: Subconscious Positive Reactions",
     RelaxationResponse: "Adrenaline & Cortisol: Anxiety & The Relaxation Response",
     ZonesOfRegulation: "Zones of Emotional Regulation",
     SelfActualisation: "Self-actualisation & Peak Experiences",
-    LearningAndGeneticCode: "Learning and Genetic Code",
+    LearningAndGeneticCode: "Dopamine: Learning and Genetic Code",
     McEdoegsa: "Rob's Mnemonic for Happiness: MC-EDOEGSA",
     LetItBe: "Emotional Extremes: Let it Go / Let it Be",
-    AdviceFromTheBeatles: "Advice from The Beatles",
+    AdviceFromTheBeatles: "Emotional Extremes: Advice from The Beatles",
     LandingPage: "Neurochemistry Project: Emotional Intelligence",
     SelfLove: "Self-love! (... And not Narcissism)",
     GuiltAndForgiveness: "GUILT!! ... And Forgiveness",
     AttachmentAndSharing: "Attachment & Sharing",
     Paranoia: "Adrenaline & Cortisol: Paranoia",
-    ImportanceOfStretching: "The Importance of Stretching",
+    ImportanceOfStretching: "The Importance of Stretching When You Are Fully Awake",
     ImaginationAndVisualisation:
       "Controlling Neurochemistry: Imagination and Visualisation",
     ColdShowers: "Adrenaline & Cortisol: Cold Showers",
+    Exercise: "Endocannabinoids, Endorphins, Dopamine and Serotonin: Exercise"
   },
 };

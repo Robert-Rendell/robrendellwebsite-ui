@@ -67,5 +67,6 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     ImaginationAndVisualisation:
       "/neurochemistry/imagination-and-visualisation",
     ColdShowers: "/neurochemistry/cold-showers",
+    Exercise: "/neurochemistry/exercise"
   },
 };

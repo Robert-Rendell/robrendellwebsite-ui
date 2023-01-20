@@ -17,7 +17,7 @@ export function NeurochemistryLandingPage() {
   return (
     <div className="standard-page-margins standard-page-styling black-bg-auto black-bg">
       <h1>{SharedText.Neurochemistry.LandingPage}</h1>
-      <DateWritten>December 2022</DateWritten>
+      <DateWritten dateStarted>December 2022</DateWritten>
       <MusicScrollDownMessage youtubeVideoEmbedId="mbcVm8iepQE" start={120}>
         <PageViewsComponent pageViews={pageViews} />
         <p>
@@ -43,6 +43,15 @@ export function NeurochemistryLandingPage() {
             <NewTabLink href={SharedRoutes.Neurochemistry.SelfLove} noNewTab>
               {SharedText.Neurochemistry.SelfLove}
             </NewTabLink>
+          </li>
+          <li>
+            {/* <NewTabLink
+              href={SharedRoutes.Neurochemistry.Exercise}
+              noNewTab
+            >
+              {SharedText.Neurochemistry.Exercise}
+            </NewTabLink> */}
+            {SharedText.Neurochemistry.Exercise} ... coming soon!
           </li>
           <li>
             <NewTabLink
@@ -80,18 +89,32 @@ export function NeurochemistryLandingPage() {
           </li>
           <li>
             <NewTabLink
-              href={SharedRoutes.Neurochemistry.SelfActualisation}
-              noNewTab
-            >
-              {SharedText.Neurochemistry.SelfActualisation}
-            </NewTabLink>
-          </li>
-          <li>
-            <NewTabLink
               href={SharedRoutes.Neurochemistry.LearningAndGeneticCode}
               noNewTab
             >
               {SharedText.Neurochemistry.LearningAndGeneticCode}
+            </NewTabLink>
+          </li>
+          <li>
+            <NewTabLink
+              href={SharedRoutes.Neurochemistry.MelatoninIsTheKeyToCreativity}
+              noNewTab
+            >
+              {SharedText.Neurochemistry.MelatoninIsTheKeyToCreativity}
+            </NewTabLink>
+          </li>
+          <li>
+            <NewTabLink href={SharedRoutes.Neurochemistry.LetItBe} noNewTab>
+              {SharedText.Neurochemistry.LetItBe}
+            </NewTabLink>
+          </li>
+          
+          <li>
+            <NewTabLink
+              href={SharedRoutes.Neurochemistry.AdviceFromTheBeatles}
+              noNewTab
+            >
+              {SharedText.Neurochemistry.AdviceFromTheBeatles}
             </NewTabLink>
           </li>
           <li>
@@ -121,23 +144,10 @@ export function NeurochemistryLandingPage() {
           </li>
           <li>
             <NewTabLink
-              href={SharedRoutes.Neurochemistry.MelatoninIsTheKeyToCreativity}
+              href={SharedRoutes.Neurochemistry.SelfActualisation}
               noNewTab
             >
-              {SharedText.Neurochemistry.MelatoninIsTheKeyToCreativity}
-            </NewTabLink>
-          </li>
-          <li>
-            <NewTabLink href={SharedRoutes.Neurochemistry.LetItBe} noNewTab>
-              {SharedText.Neurochemistry.LetItBe}
-            </NewTabLink>
-          </li>
-          <li>
-            <NewTabLink
-              href={SharedRoutes.Neurochemistry.AdviceFromTheBeatles}
-              noNewTab
-            >
-              {SharedText.Neurochemistry.AdviceFromTheBeatles}
+              {SharedText.Neurochemistry.SelfActualisation}
             </NewTabLink>
           </li>
           <li>

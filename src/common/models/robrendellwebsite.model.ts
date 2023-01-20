@@ -61,5 +61,6 @@ export type RobRendellWebsiteModel = {
     ImportanceOfStretching: string;
     ColdShowers: string;
     ImaginationAndVisualisation: string;
+    Exercise: string;
   };
 };
