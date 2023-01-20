@@ -18,7 +18,8 @@ export function ImportanceOfStretchingPage() {
         <RobBackButton /> {SharedText.Neurochemistry.ImportanceOfStretching}
       </h1>
       <MusicScrollDownMessage youtubeVideoEmbedId="tHlYLt7Vt2c">
-        <QuestionComponent>Why do we need to stretch?</QuestionComponent>
+        <QuestionComponent hrOff>Why do we need to stretch?</QuestionComponent>
+        <hr/>
         <p>
           We were not always <NewTabLink href="bipeds">bipeds</NewTabLink>. A
           long time ago, we used to scramble around on{" "}
