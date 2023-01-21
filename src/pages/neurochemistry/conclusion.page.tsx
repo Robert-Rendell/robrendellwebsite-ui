@@ -20,7 +20,10 @@ export function NeurochemistryConclusionPage() {
         heightPercent={0.5}
       >
         <p>
-          <NewTabLink href="https://www.urbandictionary.com/define.php?term=tl%3Bdr">TL;DR</NewTabLink>? Too bad. Go back a few steps ya numpty.
+          <NewTabLink href="https://www.urbandictionary.com/define.php?term=tl%3Bdr">
+            TL;DR
+          </NewTabLink>
+          ? Too bad. Go back a few steps ya numpty.
         </p>
         <p>
           If you reject these ideas I have articulated in this project, they

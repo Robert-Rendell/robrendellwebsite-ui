@@ -9,8 +9,16 @@ export function RobRendellFooterComponent() {
   return (
     <>
       <div className="centred">
-        <img src={Northumberland} width={width/20} style={{margin: "10px", float:"left"}}/>
-        <img src={Saltire} width={width/20} style={{margin: "10px", float:"right"}}/>
+        <img
+          src={Northumberland}
+          width={width / 20}
+          style={{ margin: "10px", float: "left" }}
+        />
+        <img
+          src={Saltire}
+          width={width / 20}
+          style={{ margin: "10px", float: "right" }}
+        />
         <span style={{ color: "white", textAlign: "center" }}>
           Copyright &copy; 2021-2023 Robert Rendell. All rights reserved.
         </span>
