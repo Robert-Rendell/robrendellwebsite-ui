@@ -45,10 +45,7 @@ export function NeurochemistryLandingPage() {
             </NewTabLink>
           </li>
           <li>
-            <NewTabLink
-              href={SharedRoutes.Neurochemistry.Exercise}
-              noNewTab
-            >
+            <NewTabLink href={SharedRoutes.Neurochemistry.Exercise} noNewTab>
               {SharedText.Neurochemistry.Exercise}
             </NewTabLink>
           </li>

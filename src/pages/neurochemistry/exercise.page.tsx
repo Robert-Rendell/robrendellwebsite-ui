@@ -17,7 +17,7 @@ export function ExercisePage() {
       <h1>
         <RobBackButton /> {SharedText.Neurochemistry.Exercise}
       </h1>
-      <MusicScrollDownMessage youtubeVideoEmbedId="ndqyUDPVBt0">
+      <MusicScrollDownMessage youtubeVideoEmbedId="8RkCi6yPjII">
         <p>
           Exercising is the single best course of action to improve your quality
           of life.
@@ -42,9 +42,8 @@ export function ExercisePage() {
           also a buzz in my head for at least 15-20 mins.
         </p>
         <p>
-          If I continue a regular pattern of at least 1-3 runs a week, I
-          definitely can feel an inner calm change the shade of all my
-          experiences throughout the week.
+          If I continue a regular pattern of at least 1-3 runs a week, I feel an
+          inner calm change the shade of all my experiences throughout the week.
         </p>
         <p>
           Endocannabinoids are produced in the brain and these molecules
@@ -52,39 +51,40 @@ export function ExercisePage() {
           and will almost certainly have an positive impact on your emotional
           reactions to events throughout the week.
         </p>
-        <QuestionComponent>
-          Is walking exercise?
-        </QuestionComponent>
+        <QuestionComponent>Is walking exercise?</QuestionComponent>
         <p>
-          Yes walking is exercise. You can invoke the release of endocannabinoids through walking.
+          Yes walking is exercise. You can invoke the release of
+          endocannabinoids through walking.
         </p>
         <QuestionComponent>
           What do Serotonin and Dopamine have to do with exercise?
         </QuestionComponent>
         <p>
-          You get a double hit of serotonin and dopamine every time you push yourself to put your shoes on and get out for some exercise. &quot;I did it!&quot;
+          You get a double hit of serotonin and dopamine every time you push
+          yourself to put your shoes on and get out for some exercise. &quot;I
+          did it!&quot;
         </p>
         <p>
-          Christopher Bergland always says: think about how you feel before the exercise and then how you feel afterwards.
+          Christopher Bergland always says: think about how you feel before the
+          exercise and then how you feel afterwards.
         </p>
         <p>
-          The hardest part is putting on your shoes to get out, once you are out the door, there&apos;s no turning back!
+          The hardest part is putting on your shoes to get out, once you are out
+          the door, there&apos;s no turning back!
         </p>
         <QuestionComponent>
           What role do Endorphins play in exercise?
         </QuestionComponent>
         <p>
-          Endorphins are definitely the most widely known neurotransmitter, but also most widely misunderstood.
+          Endorphins are definitely the most widely known neurotransmitter, but
+          also most widely misunderstood.
         </p>
         <p>
-          Endorphins are natural painkillers that are scientifically associated with high beats per minute of the heart.
+          Endorphins are natural painkillers that are scientifically associated
+          with high beats per minute of the heart.
         </p>
-        <p>
-          This means high intensity training.
-        </p>
-        <p>
-          It also means that, yes, sweaty sex is on that list too.
-        </p>
+        <p>This means high intensity training.</p>
+        <p>It also means that, yes, sweaty sex is on that list too.</p>
       </MusicScrollDownMessage>
     </div>
   );
