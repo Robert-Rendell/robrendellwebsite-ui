@@ -147,14 +147,12 @@ export function NeurochemistryLandingPage() {
             </NewTabLink>
           </li>
           <li>
-            {/* <NewTabLink
+            <NewTabLink
               href={SharedRoutes.Neurochemistry.ImaginationAndVisualisation}
               noNewTab
             >
               {SharedText.Neurochemistry.ImaginationAndVisualisation}
-            </NewTabLink> */}
-            {SharedText.Neurochemistry.ImaginationAndVisualisation} ... coming
-            soon!
+            </NewTabLink>
           </li>
           <li>
             <NewTabLink

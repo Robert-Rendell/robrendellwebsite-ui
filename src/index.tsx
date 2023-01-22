@@ -69,6 +69,7 @@ import { ImportanceOfStretchingPage } from "./pages/neurochemistry/importance-of
 import { ColdShowersPage } from "./pages/neurochemistry/cold-showers.page";
 import { ExercisePage } from "./pages/neurochemistry/exercise.page";
 import { VitaminDIsAHormonePage } from "./pages/neurochemistry/vitamin-d-is-a-hormone.page";
+import { ImaginationAndVisualisationPage } from "./pages/neurochemistry/imagination-and-visualisation.page";
 
 const maintenanceMode = false;
 
@@ -216,6 +217,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Neurochemistry.AttachmentAndSharing}
               element={<AttachmentAndSharing />}
+            />
+            <Route
+              path={SharedRoutes.Neurochemistry.ImaginationAndVisualisation}
+              element={<ImaginationAndVisualisationPage />}
             />
             <Route
               path={
