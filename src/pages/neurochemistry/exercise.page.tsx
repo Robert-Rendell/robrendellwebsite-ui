@@ -38,7 +38,7 @@ export function ExercisePage() {
           endocannabinoids.
         </p>
         <p>
-          Directly after sprinting a 5k run, I experience the adrenaline and
+          Directly after sprinting a 5km run, I experience the adrenaline and
           also a buzz in my head for at least 15-20 mins.
         </p>
         <p>

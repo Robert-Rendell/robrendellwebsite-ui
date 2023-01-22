@@ -68,6 +68,7 @@ import { InterestingDatesInHistoryPage } from "./pages/misc/interesting-dates-in
 import { ImportanceOfStretchingPage } from "./pages/neurochemistry/importance-of-stretching.page";
 import { ColdShowersPage } from "./pages/neurochemistry/cold-showers.page";
 import { ExercisePage } from "./pages/neurochemistry/exercise.page";
+import { VitaminDIsAHormonePage } from "./pages/neurochemistry/vitamin-d-is-a-hormone.page";
 
 const maintenanceMode = false;
 
@@ -191,6 +192,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Neurochemistry.MelatoninIsTheKeyToCreativity}
               element={<MelatoninIsTheKeyToCreativeInsight />}
+            />
+            <Route
+              path={SharedRoutes.Neurochemistry.VitaminD}
+              element={<VitaminDIsAHormonePage />}
             />
             <Route
               path={SharedRoutes.Neurochemistry.ImportanceOfStretching}
