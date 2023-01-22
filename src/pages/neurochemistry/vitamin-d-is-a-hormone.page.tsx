@@ -61,8 +61,9 @@ export function VitaminDIsAHormonePage() {
               prescribed a weekly dose of 20,000 or even 80,000 units;
             </li>
             <li>
-              Vitamin Stored in the body, not water soluble, that is why we
-              don&apos;t vitamin D in our urine.
+              Vitamin D is stored in the body and is not water soluble, that is
+              why we don&apos;t excrete vitamin D in our urine (and also why we
+              can be prescribed large single dosages).
             </li>
           </ul>
         </p>
