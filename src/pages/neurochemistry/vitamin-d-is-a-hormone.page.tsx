@@ -55,10 +55,15 @@ export function VitaminDIsAHormonePage() {
               legged) and as osteomalacia in adults (reduced bone density which
               can lead to bone fractures);
             </li>
-            <li>10umg = 400 units, weekly dose of 20,000 or 80,000 units;</li>
             <li>
-              Stored in the body, not water soluble, that is why we don&apos;t
-              vitamin D in our urine.
+              A single tablet of vitamin D is 10&micro;mg, which in clinical
+              terms is 400 units. Some people who are vitamin D deficient are
+              prescribed a weekly dose of 20,000 or even 80,000 units;
+            </li>
+            <li>
+              Vitamin D is stored in the body and is not water soluble, that is
+              why we don&apos;t excrete vitamin D in our urine (and also why we
+              can be prescribed large single dosages).
             </li>
           </ul>
         </p>
