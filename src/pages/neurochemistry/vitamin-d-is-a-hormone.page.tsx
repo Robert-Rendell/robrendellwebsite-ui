@@ -102,10 +102,21 @@ export function VitaminDIsAHormonePage() {
           Drinking lots of cups of hot squash or tea and eating hot soup
           immediately warms you up.
         </p>
+        <p>
+          Martin Lewis, money saving expert, says &quot;Heat the human, not the
+          home!&quot; and this means even in a warm home/work, you may still be
+          cold; so the best way to keep warm is to keep moving regularly... or
+          even better, exercise!
+        </p>
         <QuestionComponent>What can I take away from this?</QuestionComponent>
         <p>
           <ul>
-            <li>Take vitamin D supplements from October to March!</li>
+            <li>
+              Vitamin D is an extremely important prohormone, meaning it is a
+              precursor to many hormones in the body, which undoubtedly have an
+              impact on your emotional being.
+            </li>
+            <li>Take vitamin D supplements from October to March in the UK!</li>
             <li>Prioritise keeping warm in winter!</li>
           </ul>
         </p>
