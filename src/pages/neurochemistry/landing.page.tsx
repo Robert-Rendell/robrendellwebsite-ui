@@ -96,6 +96,11 @@ export function NeurochemistryLandingPage() {
             </NewTabLink>
           </li>
           <li>
+            <NewTabLink href={SharedRoutes.Neurochemistry.VitaminD} noNewTab>
+              {SharedText.Neurochemistry.VitaminD}
+            </NewTabLink>
+          </li>
+          <li>
             <NewTabLink href={SharedRoutes.Neurochemistry.LetItBe} noNewTab>
               {SharedText.Neurochemistry.LetItBe}
             </NewTabLink>

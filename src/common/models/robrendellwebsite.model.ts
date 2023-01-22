@@ -62,5 +62,6 @@ export type RobRendellWebsiteModel = {
     ColdShowers: string;
     ImaginationAndVisualisation: string;
     Exercise: string;
+    VitaminD: string;
   };
 };
