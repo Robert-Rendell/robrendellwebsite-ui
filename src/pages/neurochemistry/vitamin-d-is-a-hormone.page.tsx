@@ -67,6 +67,48 @@ export function VitaminDIsAHormonePage() {
             </li>
           </ul>
         </p>
+        <QuestionComponent>
+          What is Seasonal Affective Disorder?
+        </QuestionComponent>
+        <p>
+          <NewTabLink href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/seasonal-affective-disorder-sad/about-sad/">
+            Seasonal Affective Disorder (SAD)
+          </NewTabLink>
+          &nbsp;is a type of depression that you experience during particular
+          seasons or times of year.
+        </p>
+        <p>
+          Taking vitamin D supplements in the UK is part of tackling S.A.D, but
+          it is not the whole story.
+        </p>
+        <QuestionComponent>
+          Seasonal Affective Disorder: Why is Keeping Warm Important?
+        </QuestionComponent>
+        <p>
+          In my opinion, part of Seasonal Affective Disorder is actually keeping
+          your body temperature at a stable level when winter comes around.
+        </p>
+        <p>
+          Keeping warm when your living / working environment is cold requires a
+          lot of energy from your body&apos;s supplies.
+        </p>
+        <p>
+          In the current economic climate (2023), electric blankets are a
+          fantastic way to keep warm because they don&apos;t draw a lot of
+          electricity in comparison to heating your entire home.
+        </p>
+        <p>Having baths is a great way to keep warm in winter.</p>
+        <p>
+          Drinking lots of cups of hot squash or tea and eating hot soup
+          immediately warms you up.
+        </p>
+        <QuestionComponent>What can I take away from this?</QuestionComponent>
+        <p>
+          <ul>
+            <li>Take vitamin D supplements from October to March!</li>
+            <li>Prioritise keeping warm in winter!</li>
+          </ul>
+        </p>
       </MusicScrollDownMessage>
     </div>
   );

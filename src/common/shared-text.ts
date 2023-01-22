@@ -69,6 +69,6 @@ export const SharedText: RobRendellWebsiteModel = {
       "Controlling Neurochemistry: Imagination and Visualisation",
     ColdShowers: "Adrenaline & Cortisol: Cold Showers",
     Exercise: "Endocannabinoids, Endorphins, Dopamine and Serotonin: Exercise",
-    VitaminD: "Vitamin D: is it a Hormone / Neurotransmitter?",
+    VitaminD: "Vitamin D is a Prohormone & Seasonal Affective Disorder",
   },
 };
