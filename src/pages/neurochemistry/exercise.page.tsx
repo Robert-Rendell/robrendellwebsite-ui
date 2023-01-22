@@ -83,8 +83,7 @@ export function ExercisePage() {
           Endorphins are natural painkillers that are scientifically associated
           with high beats per minute of the heart.
         </p>
-        <p>This means high intensity training.</p>
-        <p>It also means that, yes, sweaty sex is on that list too.</p>
+        <p>This means high intensity training, for example HIIT class.</p>
       </MusicScrollDownMessage>
     </div>
   );
