@@ -20,7 +20,7 @@ export function ImaginationAndVisualisationPage() {
         <RobBackButton />{" "}
         {SharedText.Neurochemistry.ImaginationAndVisualisation}
       </h1>
-      <MusicScrollDownMessage youtubeVideoEmbedId="jEXBJ1JFj-s">
+      <MusicScrollDownMessage youtubeVideoEmbedId="88_KyOrLLsg">
         <p>
           There are a multitude of ways to control your neurochemistry, as
           mentioned on my{" "}
