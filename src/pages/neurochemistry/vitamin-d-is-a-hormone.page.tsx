@@ -28,8 +28,7 @@ export function VitaminDIsAHormonePage() {
           <NewTabLink href="https://en.wikipedia.org/wiki/Prohormone">
             prohormone
           </NewTabLink>
-          . This is because vitamin D plays contributes to many processes in the
-          body.
+          . This is because vitamin D contributes to many processes in the body.
         </p>
         <p>
           <ul>
