@@ -1,8 +1,9 @@
 import React, { FormEvent, useState } from "react";
+import { FormGroup, FormLabel } from "react-bootstrap";
 import { ErrorResponse, WordOfTheDay } from "robrendellwebsite-common";
 import { useAddWordOfDay } from "../hooks/use-add-word-of-day.hook";
 import InfinitySpinner from "../../resources/infinity-spinner.svg";
-import { FormGroup, FormLabel } from "react-bootstrap";
+import { useToday } from "../hooks/use-today.hook";
 import "../operations.page.css";
 
 export function isWordOfTheDay(
@@ -19,7 +20,9 @@ export function AddWordOfDayComponent() {
     const formData = new FormData(event.currentTarget);
     const formProps = Object.fromEntries(formData);
     setWordOfDay(formProps as WordOfTheDay);
+    event.currentTarget.reset();
   };
+  const today = useToday();
 
   return (
     <>
@@ -35,6 +38,7 @@ export function AddWordOfDayComponent() {
           <input
             pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{2}"
             name="date"
+            defaultValue={today}
           ></input>
           <br />
           <FormLabel>Word</FormLabel>
