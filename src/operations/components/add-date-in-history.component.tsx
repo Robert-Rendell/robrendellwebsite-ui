@@ -23,9 +23,6 @@ export function AddInterestingDateInHistoryComponent() {
     const formData = new FormData(event.currentTarget);
     const formProps = Object.fromEntries(formData);
     setDateInHistory(formProps as InterestingDateInHistory);
-    if (event.isDefaultPrevented()) {
-      console.log("error");
-    }
     event.currentTarget.reset();
   };
 

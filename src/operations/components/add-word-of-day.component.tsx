@@ -20,6 +20,7 @@ export function AddWordOfDayComponent() {
     const formData = new FormData(event.currentTarget);
     const formProps = Object.fromEntries(formData);
     setWordOfDay(formProps as WordOfTheDay);
+    event.currentTarget.reset();
   };
   const today = useToday();
 
