@@ -7,6 +7,7 @@ import InfinitySpinner from "../../resources/infinity-spinner.svg";
 import { FormGroup, FormLabel } from "react-bootstrap";
 import "../operations.page.css";
 import { useAddDateInHistory } from "../hooks/use-add-date-in-history.hook";
+import { useToday } from "../hooks/use-today.hook";
 
 export function isDateInHistory(
   response: InterestingDateInHistory | ErrorResponse
@@ -24,6 +25,7 @@ export function AddInterestingDateInHistoryComponent() {
     const formProps = Object.fromEntries(formData);
     setDateInHistory(formProps as InterestingDateInHistory);
   };
+  const today = useToday();
 
   return (
     <>
@@ -35,7 +37,7 @@ export function AddInterestingDateInHistoryComponent() {
         <FormGroup>
           <FormLabel>Date</FormLabel>
           <br />
-          <input name="date"></input>
+          <input name="date" defaultValue={today}></input>
           <br />
           <FormLabel>Event</FormLabel>
           <br />
