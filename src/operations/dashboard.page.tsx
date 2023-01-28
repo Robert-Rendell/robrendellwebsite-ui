@@ -1,5 +1,5 @@
 import React from "react";
-import { Tab, Tabs } from "react-bootstrap";
+import { Button, Tab, Tabs } from "react-bootstrap";
 import { useKnockKnock } from "../hooks/knock-knock.hook";
 import { SharedText } from "../common/shared-text";
 import { OpsPageViewsComponent } from "./components/page-views.component";
@@ -7,15 +7,20 @@ import "../pages/page.css";
 import "./operations.page.css";
 import { AddWordOfDayComponent } from "./components/add-word-of-day.component";
 import { AddInterestingDateInHistoryComponent } from "./components/add-date-in-history.component";
+import { KNOCK_KNOCK_SECURITY_KEY } from "../common/constants";
 
 export function OperationsDashboardPage() {
   const [hasAccess] = useKnockKnock();
+  const clearToken = () => {
+    localStorage.removeItem(KNOCK_KNOCK_SECURITY_KEY);
+  };
   return (
     <>
       <div className="standard-page-margins standard-page-styling">
         {hasAccess && (
           <>
             <h1>{SharedText.Operations.Dashboard}</h1>
+            <Button onClick={clearToken}>Clear token</Button>
             <Tabs
               defaultActiveKey="page-views"
               id="uncontrolled-tab-example"

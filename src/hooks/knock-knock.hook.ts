@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { KNOCK_KNOCK_SECURITY_KEY } from "../common/constants";
 import { config } from "../config";
-
-const KNOCK_KNOCK_SECURITY_KEY = "KNOCK_KNOCK_SECURITY_KEY";
 
 export function useKnockKnock() {
   const [isMyIpAddress, setIsMyIpAddress] = useState<boolean>(false);
