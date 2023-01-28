@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Tab, Tabs } from "react-bootstrap";
-import { useKnockKnock } from "../hooks/knock-knock.hook";
+import { useKnockKnock } from "../hooks/use-knock-knock.hook";
 import { SharedText } from "../common/shared-text";
 import { OpsPageViewsComponent } from "./components/page-views.component";
 import "../pages/page.css";
@@ -19,8 +19,11 @@ export function OperationsDashboardPage() {
       <div className="standard-page-margins standard-page-styling">
         {hasAccess && (
           <>
-            <h1>{SharedText.Operations.Dashboard}</h1>
-            <Button onClick={clearToken}>Clear token</Button>
+            <h1>
+              {SharedText.Operations.Dashboard}{" "}
+              <Button onClick={clearToken}>Clear token</Button>
+            </h1>
+
             <Tabs
               defaultActiveKey="page-views"
               id="uncontrolled-tab-example"

@@ -9,13 +9,14 @@ import { SharedRoutes } from "../common/shared-routes";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import { TechIconsComponent } from "../components/tech-icons.component";
 import { SharedText } from "../common/shared-text";
-import { useKnockKnock } from "../hooks/knock-knock.hook";
+import { useKnockKnock } from "../hooks/use-knock-knock.hook";
 
 export const NavComponent = () => {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
 
   const onMobile = width < 600;
+  const smallerScreen = width < 985;
   const centredOnMobile = onMobile ? "centred" : "";
 
   const [hasAccess] = useKnockKnock();
@@ -49,16 +50,16 @@ export const NavComponent = () => {
             <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
 
             <Nav.Link href={SharedRoutes.Recursion.LandingPage}>
-              Recursion Project
+              Recursion{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
             <Nav.Link href={SharedRoutes.Neurochemistry.LandingPage}>
-              Neurochemistry Project
+              Neurochemistry{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
             <Nav.Link href={SharedRoutes.Biomagnetism.LandingPage}>
-              {SharedText.Biomagnetism.LandingPage}
+              Biomagnetism{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
             <Nav.Link href={SharedRoutes.ClimateChange.LandingPage}>
-              Climate Change
+              Climate{!smallerScreen && <>&nbsp;Change</>}
             </Nav.Link>
 
             <NavDropdown menuVariant="dark" title="Nature" id="nature">
