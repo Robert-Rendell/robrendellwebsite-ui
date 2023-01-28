@@ -12,7 +12,7 @@ import { KNOCK_KNOCK_SECURITY_KEY } from "../common/constants";
 export function OperationsDashboardPage() {
   const [hasAccess] = useKnockKnock();
   const clearToken = () => {
-    localStorage.removeItem(KNOCK_KNOCK_SECURITY_KEY);
+    localStorage.setItem(KNOCK_KNOCK_SECURITY_KEY, "");
   };
   return (
     <>
