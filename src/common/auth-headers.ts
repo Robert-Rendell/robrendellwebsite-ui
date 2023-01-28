@@ -1,6 +1,8 @@
-import { AxiosRequestHeaders } from "axios";
+import { AxiosRequestConfig } from "axios";
 import { KNOCK_KNOCK_SECURITY_KEY } from "./constants";
 
-export const authorizationHeader: AxiosRequestHeaders = {
-  headers: localStorage.getItem(KNOCK_KNOCK_SECURITY_KEY) || "",
+export const authorizationHeader: AxiosRequestConfig = {
+  headers: {
+    authorization: localStorage.getItem(KNOCK_KNOCK_SECURITY_KEY) || "",
+  },
 };
