@@ -50,16 +50,16 @@ export const NavComponent = () => {
             <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
 
             <Nav.Link href={SharedRoutes.Recursion.LandingPage}>
-              Recursion{ !smallerScreen && <>&nbsp;Project</>}
+              Recursion{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
             <Nav.Link href={SharedRoutes.Neurochemistry.LandingPage}>
-              Neurochemistry{ !smallerScreen && <>&nbsp;Project</>}
+              Neurochemistry{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
             <Nav.Link href={SharedRoutes.Biomagnetism.LandingPage}>
-              Biomagnetism{ !smallerScreen && <>&nbsp;Project</>}
+              Biomagnetism{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
             <Nav.Link href={SharedRoutes.ClimateChange.LandingPage}>
-              Climate{ !smallerScreen && <>&nbsp;Change</>}
+              Climate{!smallerScreen && <>&nbsp;Change</>}
             </Nav.Link>
 
             <NavDropdown menuVariant="dark" title="Nature" id="nature">

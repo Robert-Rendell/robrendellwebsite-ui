@@ -19,8 +19,11 @@ export function OperationsDashboardPage() {
       <div className="standard-page-margins standard-page-styling">
         {hasAccess && (
           <>
-            <h1>{SharedText.Operations.Dashboard} <Button onClick={clearToken}>Clear token</Button></h1>
-            
+            <h1>
+              {SharedText.Operations.Dashboard}{" "}
+              <Button onClick={clearToken}>Clear token</Button>
+            </h1>
+
             <Tabs
               defaultActiveKey="page-views"
               id="uncontrolled-tab-example"

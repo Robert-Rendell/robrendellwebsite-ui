@@ -6,12 +6,9 @@ import { config } from "../config";
 export function useKnockKnock() {
   const [isMyIpAddress, setIsMyIpAddress] = useState<boolean>(false);
   useEffect(() => {
-    
-    axios
-      .get(`${config.backend}/knock-knock`, authorizationHeader)
-      .then(() => {
-        setIsMyIpAddress(true);
-      });
+    axios.get(`${config.backend}/knock-knock`, authorizationHeader).then(() => {
+      setIsMyIpAddress(true);
+    });
   }, []);
   return [isMyIpAddress];
 }
