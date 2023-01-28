@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ErrorResponse, WordOfTheDay } from "robrendellwebsite-common";
+import { authorizationHeader } from "../../common/auth-headers";
 import { config } from "../../config";
 import { Response } from "../../models/axios-response-wrapper";
 
@@ -13,6 +14,7 @@ export function useAddWordOfDay(wordOfDay: WordOfTheDay | undefined) {
       setResponse(null);
       axios
         .post(config.backend + "/operations/word-of-the-day/add", wordOfDay, {
+          ...authorizationHeader,
           validateStatus: function (status) {
             return status >= 200 && status <= 400;
           },

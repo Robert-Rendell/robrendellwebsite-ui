@@ -4,6 +4,7 @@ import {
   AddDateInHistoryRequest,
   AddDateInHistoryResponse,
 } from "robrendellwebsite-common";
+import { authorizationHeader } from "../../common/auth-headers";
 import { config } from "../../config";
 import { Response } from "../../models/axios-response-wrapper";
 
@@ -21,6 +22,7 @@ export function useAddDateInHistory(
           config.backend + "/operations/dates-in-history/add",
           dateInHistory,
           {
+            ...authorizationHeader,
             validateStatus: function (status) {
               return status >= 200 && status <= 400;
             },
