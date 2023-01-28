@@ -8,7 +8,6 @@ import "./nav.component.css";
 import { SharedRoutes } from "../common/shared-routes";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import { TechIconsComponent } from "../components/tech-icons.component";
-import { SharedText } from "../common/shared-text";
 import { useKnockKnock } from "../hooks/use-knock-knock.hook";
 
 export const NavComponent = () => {
@@ -22,17 +21,17 @@ export const NavComponent = () => {
   const [hasAccess] = useKnockKnock();
 
   const onNavBarClick = () => {
-    console.log(window.location.href);
     if (
       hasAccess &&
       !window.location.href.includes(SharedRoutes.Operations.Dashboard)
     ) {
       window.location.href = SharedRoutes.Operations.Dashboard;
     } else {
-      console.log(window.location.href);
       window.location.href = SharedRoutes.HomePage;
     }
   };
+
+  const projectNavText = !smallerScreen ? <>&nbsp;Project</> : <></>;
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
@@ -47,16 +46,15 @@ export const NavComponent = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/sudoku">Sudoku Project</Nav.Link>
-
+            <Nav.Link href="/sudoku">Sudoku{projectNavText}</Nav.Link>
             <Nav.Link href={SharedRoutes.Recursion.LandingPage}>
-              Recursion{!smallerScreen && <>&nbsp;Project</>}
+              Recursion{projectNavText}
             </Nav.Link>
             <Nav.Link href={SharedRoutes.Neurochemistry.LandingPage}>
-              Neurochemistry{!smallerScreen && <>&nbsp;Project</>}
+              Neurochemistry{projectNavText}
             </Nav.Link>
             <Nav.Link href={SharedRoutes.Biomagnetism.LandingPage}>
-              Biomagnetism{!smallerScreen && <>&nbsp;Project</>}
+              Biomagnetism{projectNavText}
             </Nav.Link>
             <Nav.Link href={SharedRoutes.ClimateChange.LandingPage}>
               Climate{!smallerScreen && <>&nbsp;Change</>}
