@@ -9,7 +9,7 @@ import { SharedRoutes } from "../common/shared-routes";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import { TechIconsComponent } from "../components/tech-icons.component";
 import { SharedText } from "../common/shared-text";
-import { useIsMyIPAddress } from "../hooks/use-is-my-ip-address.hook";
+import { useKnockKnock } from "../hooks/knock-knock.hook";
 
 export const NavComponent = () => {
   const windowSize = useWindowSize();
@@ -18,7 +18,7 @@ export const NavComponent = () => {
   const onMobile = width < 600;
   const centredOnMobile = onMobile ? "centred" : "";
 
-  const [hasAccess] = useIsMyIPAddress();
+  const [hasAccess] = useKnockKnock();
 
   const onNavBarClick = () => {
     console.log(window.location.href);
