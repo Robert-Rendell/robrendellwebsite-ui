@@ -9,7 +9,7 @@ import { SharedRoutes } from "../common/shared-routes";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import { TechIconsComponent } from "../components/tech-icons.component";
 import { SharedText } from "../common/shared-text";
-import { useKnockKnock } from "../hooks/knock-knock.hook";
+import { useKnockKnock } from "../hooks/use-knock-knock.hook";
 
 export const NavComponent = () => {
   const windowSize = useWindowSize();
