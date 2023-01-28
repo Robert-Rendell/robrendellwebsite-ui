@@ -11,6 +11,7 @@ import { KNOCK_KNOCK_SECURITY_KEY } from "../common/constants";
 
 export function OperationsDashboardPage() {
   const [hasAccess] = useKnockKnock();
+  const hasToken = Boolean(localStorage.getItem(KNOCK_KNOCK_SECURITY_KEY));
   const clearToken = () => {
     localStorage.setItem(KNOCK_KNOCK_SECURITY_KEY, "");
   };
@@ -21,7 +22,7 @@ export function OperationsDashboardPage() {
           <>
             <h1>
               {SharedText.Operations.Dashboard}{" "}
-              <Button onClick={clearToken}>Clear token</Button>
+              { hasToken && <Button onClick={clearToken}>Clear token</Button> }
             </h1>
 
             <Tabs
