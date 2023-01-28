@@ -1,6 +1,6 @@
 import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
-import { useIsMyIPAddress } from "../hooks/use-is-my-ip-address.hook";
+import { useKnockKnock } from "../hooks/knock-knock.hook";
 import { SharedText } from "../common/shared-text";
 import { OpsPageViewsComponent } from "./components/page-views.component";
 import "../pages/page.css";
@@ -9,7 +9,7 @@ import { AddWordOfDayComponent } from "./components/add-word-of-day.component";
 import { AddInterestingDateInHistoryComponent } from "./components/add-date-in-history.component";
 
 export function OperationsDashboardPage() {
-  const [hasAccess] = useIsMyIPAddress();
+  const [hasAccess] = useKnockKnock();
   return (
     <>
       <div className="standard-page-margins standard-page-styling">
