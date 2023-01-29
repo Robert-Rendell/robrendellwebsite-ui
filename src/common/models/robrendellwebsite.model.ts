@@ -12,6 +12,7 @@ export type RobRendellWebsiteModel = {
     ScotchWhisky: string;
     WordOfTheDay: string;
     InterestingDatesInHistory: string;
+    Philosophy: string;
   };
   Biomagnetism: {
     LandingPage: string;

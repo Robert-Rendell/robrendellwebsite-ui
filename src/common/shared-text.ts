@@ -11,6 +11,7 @@ export const SharedText: RobRendellWebsiteModel = {
     ScotchWhisky: "Scottish Whisky",
     WordOfTheDay: "Word of the Day",
     InterestingDatesInHistory: "Interesting Dates in History",
+    Philosophy: "Philosophy",
   },
   Biomagnetism: {
     LandingPage: "Biomagnetism Project",

@@ -143,6 +143,12 @@ export const NavComponent = () => {
               >
                 Interesting Dates in History
               </NavDropdown.Item>
+              <NavDropdown.Item
+                className={centredOnMobile}
+                href={SharedRoutes.Miscellaneous.Philosophy}
+              >
+                Philosophy
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
