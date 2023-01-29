@@ -15,7 +15,7 @@ export const NavComponent = () => {
   const width = windowSize[0] - 40;
 
   const onMobile = width < 600;
-  const smallerScreen = width < 985;
+  const smallerScreen = (!onMobile && width < 985);
   const centredOnMobile = onMobile ? "centred" : "";
 
   const [hasAccess] = useKnockKnock();
