@@ -31,8 +31,6 @@ export const NavComponent = () => {
     }
   };
 
-  const projectNavText = !smallerScreen ? <>&nbsp;Project</> : <></>;
-
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
