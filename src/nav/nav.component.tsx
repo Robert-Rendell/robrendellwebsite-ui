@@ -143,6 +143,12 @@ export const NavComponent = () => {
               >
                 Interesting Dates in History
               </NavDropdown.Item>
+              <NavDropdown.Item
+                className={centredOnMobile}
+                href={SharedRoutes.Miscellaneous.Philosophy}
+              >
+                Philosophy
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
@@ -163,6 +169,7 @@ export const NavComponent = () => {
                 target="_blank"
                 rel="noreferrer"
                 className={centredOnMobile}
+                disabled
               >
                 Rob Celtic Fiddle (weddings)
               </NavDropdown.Item>

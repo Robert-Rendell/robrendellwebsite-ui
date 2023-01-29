@@ -63,10 +63,6 @@ export const HomePage = () => {
           page using my <code>AWS.DynamoDB</code> page views feature.
         </li>
         <li>
-          21/11/22 @ 18.00 - Style makeover for{" "}
-          <a href="neurochemistry/">Neurochemistry</a> project
-        </li>
-        <li>
           17/11/22 @ 14.25 - Completed{" "}
           <a href="neurochemistry/">Neurochemistry</a> project using my{" "}
           <code>AWS.DynamoDB</code> page views feature.

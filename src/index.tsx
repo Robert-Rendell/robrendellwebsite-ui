@@ -70,6 +70,7 @@ import { ColdShowersPage } from "./pages/neurochemistry/cold-showers.page";
 import { ExercisePage } from "./pages/neurochemistry/exercise.page";
 import { VitaminDIsAHormonePage } from "./pages/neurochemistry/vitamin-d-is-a-hormone.page";
 import { ImaginationAndVisualisationPage } from "./pages/neurochemistry/imagination-and-visualisation.page";
+import { PhilosophyPage } from "./pages/misc/philosophy.page";
 
 const maintenanceMode = false;
 
@@ -125,7 +126,7 @@ ReactDOM.render(
 
             {/* //////////////////////////////////// */}
             <Route
-              path="climate-change"
+              path={SharedRoutes.ClimateChange.LandingPage}
               element={<ClimateChangeLandingPage />}
             />
             <Route
@@ -133,19 +134,19 @@ ReactDOM.render(
               element={<RuminantsPage />}
             />
             <Route
-              path="climate-change/ocean-acidification"
+              path={SharedRoutes.ClimateChange.OceanAcidification}
               element={<OceanAcidification />}
             />
             <Route
-              path="climate-change/ride-a-bike"
+              path={SharedRoutes.ClimateChange.RideABike}
               element={<RideABikePage />}
             />
             <Route
-              path="climate-change/renewable-energy"
+              path={"climate-change/renewable-energy"}
               element={<RenewableEnergyPage />}
             />
             <Route
-              path="climate-change/reduce-reuse-recycle"
+              path={"climate-change/reduce-reuse-recycle"}
               element={<ReduceReuseRecyclePage />}
             />
 
@@ -311,7 +312,10 @@ ReactDOM.render(
               path={SharedRoutes.Miscellaneous.GiantPacificOctopus}
               element={<GiantPacificOctopusPage />}
             />
-
+            <Route
+              path={SharedRoutes.Miscellaneous.Philosophy}
+              element={<PhilosophyPage />}
+            />
             {/* //////////////////////////////////// */}
             <Route
               path="photos-ive-taken/nature/arachnids"
