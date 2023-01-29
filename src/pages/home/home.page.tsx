@@ -32,14 +32,14 @@ export const HomePage = () => {
           <a href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}>
             {SharedText.Miscellaneous.InterestingDatesInHistory}
           </a>{" "}
-          page
+          page using <code>AWS.S3</code>
         </li>
         <li>
           16/01/23 @ 17.24 - Added&nbsp;
           <a href={SharedRoutes.Miscellaneous.WordOfTheDay}>
             {SharedText.Miscellaneous.WordOfTheDay}
           </a>{" "}
-          page
+          page using <code>AWS.S3</code>
         </li>
         <li>
           16/01/23 @ 17.15 - Added&nbsp;
@@ -53,14 +53,14 @@ export const HomePage = () => {
           <a href={SharedRoutes.Biomagnetism.LandingPage}>
             {SharedText.Biomagnetism.LandingPage}
           </a>{" "}
-          project
+          project using my <code>AWS.DynamoDB</code> page views feature.
         </li>
         <li>
           26/11/22 @ 09.35 - Added&nbsp;
           <a href="recursion/simple-equations-infinite-complexity">
             {SharedText.Recursion.SimpleEquations}
           </a>{" "}
-          page
+          page using my <code>AWS.DynamoDB</code> page views feature.
         </li>
         <li>
           21/11/22 @ 18.00 - Style makeover for{" "}
@@ -68,7 +68,8 @@ export const HomePage = () => {
         </li>
         <li>
           17/11/22 @ 14.25 - Completed{" "}
-          <a href="neurochemistry/">Neurochemistry</a> project
+          <a href="neurochemistry/">Neurochemistry</a> project using my{" "}
+          <code>AWS.DynamoDB</code> page views feature.
         </li>
         <li>
           11/11/22 @ 16.40 - Pinned some already played{" "}
@@ -86,7 +87,7 @@ export const HomePage = () => {
           <a href="photos-ive-taken/nature/wild-flowers">
             My Flower Photographs
           </a>{" "}
-          project (phase 1)
+          project (phase 1) using <code>AWS.DynamoDB</code>
         </li>
         <li>
           29/10/22 @ 13.50 - Completed{" "}
@@ -94,6 +95,7 @@ export const HomePage = () => {
         </li>
         <li>
           27/10/22 @ 10.30 - Added <a href="recursion/">Recursion</a> project
+          using <code>P5.js</code>
         </li>
         <li>
           24/10/22 @ 15.10 - Added infinity spinner for lazy loading on website
