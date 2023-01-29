@@ -96,7 +96,7 @@ export function PhilosophyPage() {
         </li>
       </ul>
       <hr />
-      <h2>Rene Descartes</h2>
+      <h2>René Descartes</h2>
       <p>
         René Descartes was a French philosopher, mathematician, and scientist
         who is considered a key figure in the development of the scientific
