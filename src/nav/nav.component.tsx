@@ -15,7 +15,7 @@ export const NavComponent = () => {
   const width = windowSize[0] - 40;
 
   const onMobile = width < 600;
-  const smallerScreen = (!onMobile && width < 985);
+  const smallerScreen = !onMobile && width <= 1100;
   const centredOnMobile = onMobile ? "centred" : "";
 
   const [hasAccess] = useKnockKnock();
@@ -31,8 +31,6 @@ export const NavComponent = () => {
     }
   };
 
-  const projectNavText = !smallerScreen ? <>&nbsp;Project</> : <></>;
-
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
@@ -46,19 +44,39 @@ export const NavComponent = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/sudoku">Sudoku{projectNavText}</Nav.Link>
-            <Nav.Link href={SharedRoutes.Recursion.LandingPage}>
-              Recursion{projectNavText}
+            <Nav.Link href={"/sudoku"}>
+              Sudoku{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
-            <Nav.Link href={SharedRoutes.Neurochemistry.LandingPage}>
-              Neurochemistry{projectNavText}
-            </Nav.Link>
-            <Nav.Link href={SharedRoutes.Biomagnetism.LandingPage}>
-              Biomagnetism{projectNavText}
-            </Nav.Link>
-            <Nav.Link href={SharedRoutes.ClimateChange.LandingPage}>
-              Climate{!smallerScreen && <>&nbsp;Change</>}
-            </Nav.Link>
+            <NavDropdown
+              menuVariant="dark"
+              title="Creative Writing"
+              id="creative-projects"
+            >
+              <NavDropdown.Item
+                href={SharedRoutes.Recursion.LandingPage}
+                className={centredOnMobile}
+              >
+                Recursion Project
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href={SharedRoutes.Neurochemistry.LandingPage}
+                className={centredOnMobile}
+              >
+                Neurochemistry Project
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href={SharedRoutes.Biomagnetism.LandingPage}
+                className={centredOnMobile}
+              >
+                Biomagnetism Project
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href={SharedRoutes.ClimateChange.LandingPage}
+                className={centredOnMobile}
+              >
+                Climate Change
+              </NavDropdown.Item>
+            </NavDropdown>
 
             <NavDropdown menuVariant="dark" title="Nature" id="nature">
               <NavDropdown.Item
