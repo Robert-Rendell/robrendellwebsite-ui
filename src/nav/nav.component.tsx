@@ -167,7 +167,7 @@ export const NavComponent = () => {
               // target="_blank"
               disabled
             >
-              Download CV
+              {!smallerScreen && <>Download&nbsp;</>}CV
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
