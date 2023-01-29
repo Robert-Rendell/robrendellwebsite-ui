@@ -22,7 +22,7 @@ export function OperationsDashboardPage() {
           <>
             <h1>
               {SharedText.Operations.Dashboard}{" "}
-              { hasToken && <Button onClick={clearToken}>Clear token</Button> }
+              {hasToken && <Button onClick={clearToken}>Clear token</Button>}
             </h1>
 
             <Tabs
