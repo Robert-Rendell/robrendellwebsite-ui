@@ -163,6 +163,7 @@ export const NavComponent = () => {
                 target="_blank"
                 rel="noreferrer"
                 className={centredOnMobile}
+                disabled
               >
                 Rob Celtic Fiddle (weddings)
               </NavDropdown.Item>
