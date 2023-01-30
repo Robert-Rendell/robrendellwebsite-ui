@@ -37,7 +37,7 @@ export function PhilosophyPage() {
           &quot;Knowledge which is acquired under compulsion obtains no hold on
           the mind.&quot;
         </li>
-        <li>&quot;The measure of a man is what he does with power.&quot;</li>
+        <li>&quot;The measure of a human is what he does with power.&quot;</li>
         <li>
           &quot;One of the penalties for refusing to participate in politics is
           that you end up being governed by your inferiors.&quot;
@@ -77,7 +77,7 @@ export function PhilosophyPage() {
           but a habit.&quot;
         </li>
         <li>
-          &quot;The best friend is the man who in wishing me well wishes it for
+          &quot;The best friend is the human who in wishing me well wishes it for
           my sake.&quot;
         </li>
         <li>
@@ -175,7 +175,7 @@ export function PhilosophyPage() {
           it.&quot;
         </li>
         <li>
-          &quot;Waste no more time arguing about what a good man should be. Be
+          &quot;Waste no more time arguing about what a good human should be. Be
           one.&quot;
         </li>
         <li>

@@ -72,7 +72,7 @@ import { VitaminDIsAHormonePage } from "./pages/neurochemistry/vitamin-d-is-a-ho
 import { ImaginationAndVisualisationPage } from "./pages/neurochemistry/imagination-and-visualisation.page";
 import { PhilosophyPage } from "./pages/misc/philosophy.page";
 
-const maintenanceMode = false;
+const maintenanceMode = true;
 
 ReactDOM.render(
   <React.StrictMode>
