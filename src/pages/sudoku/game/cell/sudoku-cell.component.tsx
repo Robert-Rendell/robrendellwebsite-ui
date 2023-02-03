@@ -22,7 +22,7 @@ export function SudokuCellComponent(props: Props) {
     return `${inputName}${createSudokuInputName(row, col)}`;
   }
   function keyDown(event: React.KeyboardEvent<HTMLInputElement>) {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" || event.key === "Tab") {
       document.getElementById(getId())?.blur();
     }
   }
