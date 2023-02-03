@@ -6,6 +6,9 @@ export type RobRendellWebsiteModel = {
     WordOfTheDay?: string;
     InterestingDatesInHistory?: string;
   };
+  Sudoku: {
+    Dashboard: string;
+  };
   Miscellaneous: {
     India: string;
     GiantPacificOctopus: string;

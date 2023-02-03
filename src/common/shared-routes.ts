@@ -8,6 +8,9 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     WordOfTheDay: "/operations/word-of-the-day",
     InterestingDatesInHistory: "/operations/dates-in-history",
   },
+  Sudoku: {
+    Dashboard: "/sudoku",
+  },
   Miscellaneous: {
     India: "/miscellaneous/india",
     GiantPacificOctopus: "/miscellaneous/giant-pacific-octopus",

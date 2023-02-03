@@ -28,6 +28,13 @@ export const HomePage = () => {
       <h4>Recent developments:</h4>
       <ul>
         <li>
+          04/02/23 @ 15.21 - Converted&nbsp;
+          <a href={SharedRoutes.Sudoku.Dashboard}>
+            {SharedText.Sudoku.Dashboard}
+          </a>{" "}
+          to <code>React Hooks</code> + <code>TypeScript</code>
+        </li>
+        <li>
           16/01/23 @ 17.53 - Added&nbsp;
           <a href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}>
             {SharedText.Miscellaneous.InterestingDatesInHistory}
@@ -102,7 +109,7 @@ export const HomePage = () => {
           GSI.
         </li>
         <li>
-          28/11/21 @ 14.00 - AWS Lambda running my Python{" "}
+          28/11/21 @ 14.00 - <code>AWS.Lambda</code> running my Python{" "}
           <a href="sudoku/">Sudoku generation</a> code; triggered by front end.
         </li>
         <li>
