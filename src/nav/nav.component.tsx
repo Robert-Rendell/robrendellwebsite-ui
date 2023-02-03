@@ -44,7 +44,7 @@ export const NavComponent = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href={"/sudoku"}>
+            <Nav.Link href={SharedRoutes.Sudoku.Dashboard}>
               Sudoku{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
             <NavDropdown
