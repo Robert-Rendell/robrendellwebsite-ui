@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
-import { SudokuCellComponent } from "./cell/sudoku-cell.component";
-import "./sudoku-game.component.css";
 import { SudokuLeaderboardComponent } from "./leaderboard/sudoku-leaderboard.component";
 import { useConvertMsToMinsSecs } from "../hooks/useConvertMsToMinSecs.hook";
 import { useGetSudoku } from "../hooks/useGetSudoku.hook";
@@ -11,6 +9,7 @@ import InfinitySpinner from "../../../resources/infinity-spinner.svg";
 import { useSubmitSudoku } from "../hooks/useSubmitSudoku.hook";
 import { SudokuGrid } from "../types/sudoku-grid";
 import { SudokuBoardComponent } from "./board/sudoku-board.component";
+import "./sudoku-game.component.css";
 
 const SudokuGameComponents = {
   Div: {
@@ -28,10 +27,9 @@ type Props = {
 export function SudokuGameComponent(props: Props) {
   const sudokuGrid = useRef<SudokuGrid | undefined>();
   const [submitting, setSubmitting] = useState<boolean>(false);
-  const { sudokuBoard, submissionId, sudokuId } = useGetSudoku(
-    props.sudokuId
-  );
   const [submitterName, setSubmitterName] = useState("");
+  const [disabled, setDisabled] = useState(false);
+  const { sudokuBoard, submissionId, sudokuId } = useGetSudoku(props.sudokuId);
   const { completed } = useSubmitSudoku({
     submissionId,
     submitterName,
@@ -105,13 +103,10 @@ export function SudokuGameComponent(props: Props) {
   }
 
   function toggleControls(enabled: boolean) {
-    const board = document.getElementById(
-      SudokuGameComponents.Div.SudokuBoard
-    ) as any;
-    board.disabled = !enabled;
+    setDisabled(true);
     const btnValidate = document.getElementById(
       SudokuGameComponents.Button.Validate
-    ) as any;
+    ) as HTMLButtonElement;
     btnValidate.disabled = !enabled;
   }
 
@@ -128,7 +123,10 @@ export function SudokuGameComponent(props: Props) {
               <>
                 <Table striped bordered hover>
                   <tbody id={SudokuGameComponents.Div.SudokuBoard}>
-                    <SudokuBoardComponent sudokuBoard={sudokuBoard} />
+                    <SudokuBoardComponent
+                      sudokuBoard={sudokuBoard}
+                      disabled={disabled}
+                    />
                   </tbody>
                 </Table>
                 <Button

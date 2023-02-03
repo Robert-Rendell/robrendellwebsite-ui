@@ -5,9 +5,16 @@ type Props = {
   cell: number | string;
   row: number;
   column: number;
+  disabled?: boolean;
 };
 
 export function SudokuCellComponent(props: Props) {
+  function getCellValue() {
+    return parseInt(`${props.cell}`) > 0 ? props.cell : "";
+  }
+  function isDisabled() {
+    return props.disabled || Boolean(getCellValue());
+  }
   function createSudokuInputName(row: number, col: number) {
     return `(${row}, ${col})`;
   }
@@ -18,9 +25,6 @@ export function SudokuCellComponent(props: Props) {
     if (event.key === "Enter") {
       document.getElementById(getId())?.blur();
     }
-  }
-  function getCellValue() {
-    return parseInt(`${props.cell}`) > 0 ? props.cell : "";
   }
 
   function getId() {
@@ -36,7 +40,7 @@ export function SudokuCellComponent(props: Props) {
         defaultValue={getCellValue()}
         className="sudoku-input"
         onKeyDown={keyDown}
-        disabled={getCellValue() ? true : false}
+        disabled={isDisabled()}
       />
     </td>
   );

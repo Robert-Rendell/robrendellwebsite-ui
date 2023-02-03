@@ -4,6 +4,7 @@ import { SudokuCellComponent } from "../cell/sudoku-cell.component";
 
 type Props = {
   sudokuBoard: SudokuGrid;
+  disabled: boolean;
 };
 
 export function SudokuBoardComponent(props: Props) {
@@ -18,6 +19,7 @@ export function SudokuBoardComponent(props: Props) {
                 cell={cell}
                 row={rowIndex}
                 column={columnIndex}
+                disabled={props.disabled}
               />
             );
           })}
