@@ -133,7 +133,14 @@ export function SudokuGameComponent(props: Props) {
                   id={SudokuGameComponents.Button.Validate}
                   onClick={onValidateClick}
                 >
-                  Check / Validate
+                  {!completed && submitting && (
+                    <>
+                      <span>Checking...</span>
+                      <img src={InfinitySpinner} width="30px" />
+                    </>
+                  )}
+                  {!completed && !submitting && "Check / Validate"}
+                  {completed && <span>Finished!</span>}
                 </Button>
               </>
             )}
