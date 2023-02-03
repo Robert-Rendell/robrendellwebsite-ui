@@ -7,7 +7,7 @@ export function RobRendellFooterComponent() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   return (
-    <>
+    <div>
       <div className="centred">
         <img
           src={Northumberland}
@@ -34,6 +34,6 @@ export function RobRendellFooterComponent() {
           responsibility for you, nor do I accept any liability; go see your GP.
         </span>
       </div>
-    </>
+    </div>
   );
 }

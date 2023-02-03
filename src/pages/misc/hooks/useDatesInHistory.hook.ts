@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Response } from "../../../models/axios-response-wrapper";
 import { InterestingDateInHistory } from "../models/dates-in-history";
 
 export function useDatesInHistory() {
@@ -8,12 +7,12 @@ export function useDatesInHistory() {
     useState<InterestingDateInHistory[]>();
   useEffect(() => {
     axios
-      .get(
+      .get<InterestingDateInHistory[]>(
         "https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/dates-in-history.json",
         { headers: { "Content-Type": "application/json" } }
       )
       .then(
-        (success: Response<InterestingDateInHistory[]>) => {
+        (success) => {
           setDatesInHistory(success.data);
         },
         (error) => {

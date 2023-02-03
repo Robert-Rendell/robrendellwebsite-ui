@@ -6,7 +6,6 @@ import {
 } from "robrendellwebsite-common";
 import { authorizationHeader } from "../../common/auth-headers";
 import { config } from "../../config";
-import { Response } from "../../models/axios-response-wrapper";
 
 export function useAddDateInHistory(
   dateInHistory: AddDateInHistoryRequest | undefined
@@ -18,7 +17,7 @@ export function useAddDateInHistory(
     if (typeof dateInHistory !== "undefined" && dateInHistory !== null) {
       setResponse(null);
       axios
-        .post(
+        .post<AddDateInHistoryResponse>(
           config.backend + "/operations/dates-in-history/add",
           dateInHistory,
           {
@@ -28,7 +27,7 @@ export function useAddDateInHistory(
             },
           }
         )
-        .then((success: Response<AddDateInHistoryResponse>) => {
+        .then((success) => {
           setResponse(success.data);
         });
     }

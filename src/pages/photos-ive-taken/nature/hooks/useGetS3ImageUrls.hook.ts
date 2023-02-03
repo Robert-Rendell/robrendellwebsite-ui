@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useCallback } from "react";
 import { S3ImagePageResponse } from "robrendellwebsite-common";
-import { Response } from "../../../../models/axios-response-wrapper";
 import { S3LoadedThumbnail } from "../../../../components/s3-loaded-image.component";
 import { config } from "../../../../config";
 import { getS3ImageFilenameFolderFromUrl } from "../../../../common/get-s3-image-filename";
@@ -14,14 +13,16 @@ type Props = {
 
 export const useGetS3ImageUrls = (props: Props) =>
   useCallback(async () => {
-    const response = await axios.get(config.backend + props.endpoint, {
-      headers: { "Content-Type": "application/json" },
-    });
-    const responseTyped = response as Response<S3ImagePageResponse>;
-    const dataJsonUrls: string[] = responseTyped.data.s3ImageUrls.filter(
+    const response = await axios.get<S3ImagePageResponse>(
+      config.backend + props.endpoint,
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    const dataJsonUrls: string[] = response.data.s3ImageUrls.filter(
       (url: string) => url.includes(".json")
     );
-    const imgUrlArray: string[] = responseTyped.data.s3ImageUrls.filter(
+    const imgUrlArray: string[] = response.data.s3ImageUrls.filter(
       (url: string) => !url.includes(".json")
     );
     if (imgUrlArray.length === 0) return [];
