@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { MutableRefObject, useEffect, useState } from "react";
 import axios from "axios";
 import { config } from "../../../config";
 import { SubmissionId, SudokuId } from "robrendellwebsite-common";
@@ -8,7 +8,7 @@ import { SudokuGrid } from "../types/sudoku-grid";
 
 type Props = {
   submitting: boolean;
-  sudokuGrid?: SudokuGrid;
+  sudokuGrid?: MutableRefObject<SudokuGrid | undefined>;
   sudokuId: SudokuId;
   submissionId: SubmissionId;
   submitterName: string;
@@ -31,13 +31,12 @@ type Props = {
  */
 export const useSubmitSudoku = (props: Props) => {
   const [completed, setCompleted] = useState(false);
-  console.log("got here", props);
   useEffect(() => {
     if (props.submitting && props.sudokuId && props.sudokuGrid) {
       const data: PostSubmissionRequest = {
         dateSubmitted: "--- tackled by back end now",
         sudokuId: props.sudokuId,
-        sudokuSubmission: JSON.stringify(props.sudokuGrid),
+        sudokuSubmission: JSON.stringify(props.sudokuGrid.current),
         sudokuSubmissionId: props.submissionId,
         timeTaken: 0,
         submitterName: props.submitterName,

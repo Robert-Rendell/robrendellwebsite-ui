@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import { SudokuCellComponent } from "./cell/sudoku-cell.component";
@@ -26,9 +26,9 @@ type Props = {
   sudokuId?: string;
 };
 export function SudokuGameComponent(props: Props) {
-  const [sudokuGrid, setSudokuGrid] = useState<SudokuGrid>();
+  const sudokuGrid = useRef<SudokuGrid | undefined>();
   const [submitting, setSubmitting] = useState<boolean>(false);
-  const { puzzle, sudokuBoard, submissionId, sudokuId } = useGetSudoku(
+  const { sudokuBoard, submissionId, sudokuId } = useGetSudoku(
     props.sudokuId
   );
   const [submitterName, setSubmitterName] = useState("");
@@ -48,7 +48,7 @@ export function SudokuGameComponent(props: Props) {
     onInvalid: () => {
       toggleControls(true);
       setSubmitting(false);
-      alert("Something is wrong!");
+      alert("Sudoku is wrong!");
     },
     onValid: () => {
       toggleControls(true);
@@ -59,11 +59,19 @@ export function SudokuGameComponent(props: Props) {
   });
   const leaderboard = useGetSudokuLeaderboard(props.sudokuId, completed);
   const convertMsToMinsSecs = useConvertMsToMinsSecs();
+  useEffect(() => {
+    if (sudokuId) {
+      readSudokuGrid();
+    }
+  }, [sudokuId]);
+
   const onValidateClick = () => {
     readSudokuGrid();
     toggleControls(false);
-    if (isSubmissionComplete() && !submitterName) {
-      getSubmitterName();
+    if (isSubmissionComplete() && submitterName.length === 0) {
+      getSubmitterName(
+        "Looks like you are done - let me do a final check!\n\nEnter your name or leave it blank..."
+      );
     }
     setSubmitting(true);
   };
@@ -82,16 +90,16 @@ export function SudokuGameComponent(props: Props) {
         rowCells.push(v ? parseInt(v) : 0);
       }
     }
-    setSudokuGrid(grid);
+    sudokuGrid.current = grid;
   }
 
   function isSubmissionComplete() {
     return !JSON.stringify(sudokuGrid).includes("0");
   }
 
-  function getSubmitterName() {
+  function getSubmitterName(promptMessage: string) {
     if (submitterName.length === 0) {
-      const submitterName = prompt("Enter your name or leave blank");
+      const submitterName = prompt(promptMessage);
       setSubmitterName(submitterName || "");
     }
   }
@@ -106,12 +114,6 @@ export function SudokuGameComponent(props: Props) {
     ) as any;
     btnValidate.disabled = !enabled;
   }
-
-  useEffect(() => {
-    if (sudokuId) {
-      readSudokuGrid();
-    }
-  }, [sudokuId]);
 
   return (
     <div id="sudoku-game">
