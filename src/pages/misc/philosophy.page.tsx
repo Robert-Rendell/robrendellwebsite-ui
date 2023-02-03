@@ -77,8 +77,8 @@ export function PhilosophyPage() {
           but a habit.&quot;
         </li>
         <li>
-          &quot;The best friend is the human who in wishing me well wishes it for
-          my sake.&quot;
+          &quot;The best friend is the human who in wishing me well wishes it
+          for my sake.&quot;
         </li>
         <li>
           &quot;The only true wisdom is in knowing you know nothing.&quot;

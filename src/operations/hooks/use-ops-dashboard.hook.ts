@@ -6,7 +6,6 @@ import {
   PageViewerDocument,
 } from "robrendellwebsite-common";
 import { config } from "../../config";
-import { Response } from "../../models/axios-response-wrapper";
 
 export function useOpsDashboard(request: OperationsDashboardRequest) {
   const [pageViews, setPageViews] = useState<
@@ -14,11 +13,11 @@ export function useOpsDashboard(request: OperationsDashboardRequest) {
   >();
   useEffect(() => {
     axios
-      .post(`${config.backend}/operations`, {
+      .post<OperationsDashboardResponse>(`${config.backend}/operations`, {
         headers: { "Content-Type": "application/json" },
         pageUrls: request.pageUrls,
       })
-      .then((res: Response<OperationsDashboardResponse>) => {
+      .then((res) => {
         setPageViews(res.data.pageViews);
       });
   }, []);
