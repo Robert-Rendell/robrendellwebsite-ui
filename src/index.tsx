@@ -8,7 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./app/App.component";
 import { HomePage } from "./pages/home/home.page";
 import SudokuDashboardComponent from "./pages/sudoku/dashboard/sudoku-dashboard.component";
-import SudokuGameComponent from "./pages/sudoku/game/sudoku-game.component";
+import { SudokuGameComponent } from "./pages/sudoku/game/sudoku-game.component";
 import UniDataVisualiserComponent from "./pages/technical-tests/291121/uni-data-visualiser.component";
 import StravaDashboardComponent from "./pages/strava-api/strava-dashboard.component";
 import { BifurcationLogisticalPage } from "./pages/recursion/bifurcation-logistical.page";
