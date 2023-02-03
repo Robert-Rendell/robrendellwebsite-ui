@@ -103,7 +103,7 @@ export function SudokuGameComponent(props: Props) {
   }
 
   function toggleControls(enabled: boolean) {
-    setDisabled(true);
+    setDisabled(enabled);
     const btnValidate = document.getElementById(
       SudokuGameComponents.Button.Validate
     ) as HTMLButtonElement;
