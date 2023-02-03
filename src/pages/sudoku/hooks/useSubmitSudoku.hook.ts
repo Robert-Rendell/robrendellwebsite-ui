@@ -7,28 +7,28 @@ import { SubmitSudokuBasicResponse } from "robrendellwebsite-common";
 import { SudokuGrid } from "../types/sudoku-grid";
 
 type Props = {
-    submitting: boolean;
-    sudokuGrid?: SudokuGrid;
-    sudokuId: SudokuId;
-    submissionId: SubmissionId;
-    submitterName: string;
-    onComplete: (timeTakenMs: number) => void;
-    onInvalid: () => void;
-    onValid: () => void;
-}
+  submitting: boolean;
+  sudokuGrid?: SudokuGrid;
+  sudokuId: SudokuId;
+  submissionId: SubmissionId;
+  submitterName: string;
+  onComplete: (timeTakenMs: number) => void;
+  onInvalid: () => void;
+  onValid: () => void;
+};
 
 /**
-   * API call to POST /sudoku/submit
-   * Request:
-   * - sudokuId: SudokuId,
-   * - sudokuSubmission: string,
-   * - sudokuSubmissionId: SubmissionId,
-   *
-   * Response:
-   * - errorMessage: string
-   * - complete: boolean
-   * - valid: boolean
-   */
+ * API call to POST /sudoku/submit
+ * Request:
+ * - sudokuId: SudokuId,
+ * - sudokuSubmission: string,
+ * - sudokuSubmissionId: SubmissionId,
+ *
+ * Response:
+ * - errorMessage: string
+ * - complete: boolean
+ * - valid: boolean
+ */
 export const useSubmitSudoku = (props: Props) => {
   const [completed, setCompleted] = useState(false);
   console.log("got here", props);

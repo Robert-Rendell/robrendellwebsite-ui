@@ -211,6 +211,9 @@ class SudokuDashboardComponent extends React.Component {
         <h1>Sudoku!</h1>
         <b>Progress Updates:</b>
         <p>
+          - 04/02/23 @ 14.22 - Converted Sudoku game from JavaScript / React
+          classes / OOP to TypeScript / React Hooks / Functional programming
+          <br />
           - 11/11/22 @ 16.40 - Pinned some already played sudokus for those who
           are competitive
           <br />

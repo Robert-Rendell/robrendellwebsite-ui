@@ -12,7 +12,6 @@ import { useSubmitSudoku } from "../hooks/useSubmitSudoku.hook";
 import { SudokuGrid } from "../types/sudoku-grid";
 import { SudokuBoardComponent } from "./board/sudoku-board.component";
 
-
 const SudokuGameComponents = {
   Div: {
     SudokuBoard: "render-sudoku-board",
@@ -36,7 +35,8 @@ export function SudokuGameComponent(props: Props) {
   const { completed } = useSubmitSudoku({
     submissionId,
     submitterName,
-    sudokuGrid, sudokuId,
+    sudokuGrid,
+    sudokuId,
     onComplete: (timeTakenMs: number) => {
       toggleControls(false);
       alert(
@@ -67,7 +67,7 @@ export function SudokuGameComponent(props: Props) {
     }
     setSubmitting(true);
   };
-  
+
   function readSudokuGrid() {
     const grid = [];
     for (let row = 0; row < 9; row++) {
@@ -126,7 +126,7 @@ export function SudokuGameComponent(props: Props) {
               <>
                 <Table striped bordered hover>
                   <tbody id={SudokuGameComponents.Div.SudokuBoard}>
-                    <SudokuBoardComponent sudokuBoard={sudokuBoard}/>
+                    <SudokuBoardComponent sudokuBoard={sudokuBoard} />
                   </tbody>
                 </Table>
                 <Button
