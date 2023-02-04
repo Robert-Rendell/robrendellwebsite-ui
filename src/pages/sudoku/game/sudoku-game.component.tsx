@@ -12,6 +12,7 @@ import { SudokuBoardComponent } from "./board/sudoku-board.component";
 import "./sudoku-game.component.css";
 import { SudokuValidationIssue } from "robrendellwebsite-common";
 import { KeyDownInCellFn } from "./cell/sudoku-cell.component";
+import { Check, X } from "react-bootstrap-icons";
 
 const SudokuGameComponents = {
   Div: {
@@ -160,7 +161,15 @@ export function SudokuGameComponent(props: Props) {
                   {!completed && !submitting && "Check / Validate"}
                   {completed && <span>Finished!</span>}
                 </Button>
-                <span>{validationMessage.current}</span>
+                <span>
+                  {validationMessage.current.includes("valid") && (
+                    <Check color="green" size="30" />
+                  )}
+                  {validationMessage.current.length > 0 && !validationMessage.current.includes("valid") && (
+                    <X color="red" size="30" />
+                  )}
+                  {validationMessage.current}
+                </span>
               </>
             )}
           </div>
