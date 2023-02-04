@@ -10,6 +10,8 @@ import { useSubmitSudoku } from "../hooks/useSubmitSudoku.hook";
 import { SudokuGrid } from "../types/sudoku-grid";
 import { SudokuBoardComponent } from "./board/sudoku-board.component";
 import "./sudoku-game.component.css";
+import { SudokuValidationIssue } from "robrendellwebsite-common";
+import { KeyDownInCellFn } from "./cell/sudoku-cell.component";
 
 const SudokuGameComponents = {
   Div: {
@@ -26,7 +28,18 @@ type Props = {
 };
 export function SudokuGameComponent(props: Props) {
   const sudokuGrid = useRef<SudokuGrid | undefined>();
+  const validationMessage = useRef<string>("");
   const [submitting, setSubmitting] = useState<boolean>(false);
+  const [validationIssues, setValidationIssues] = useState<
+    SudokuValidationIssue[]
+  >([]);
+  const keyDownInCell: KeyDownInCellFn = (row: number, col: number) => {
+    const localValidationIssues = validationIssues.filter(
+      (issue) => !(issue.row === row && issue.col === col)
+    );
+    if (localValidationIssues.length === 0) validationMessage.current = "";
+    setValidationIssues(localValidationIssues);
+  };
   const [submitterName, setSubmitterName] = useState("");
   const [disabled, setDisabled] = useState(false);
   const { sudokuBoard, submissionId, sudokuId } = useGetSudoku(props.sudokuId);
@@ -36,6 +49,7 @@ export function SudokuGameComponent(props: Props) {
     sudokuGrid,
     sudokuId,
     onComplete: (timeTakenMs: number) => {
+      validationMessage.current = "";
       toggleControls(false);
       alert(
         `Sudoku was completed in ${convertMsToMinsSecs(
@@ -43,15 +57,16 @@ export function SudokuGameComponent(props: Props) {
         )}! Well done ${submitterName}!!`
       );
     },
-    onInvalid: () => {
+    onInvalid: (validationIssues: SudokuValidationIssue[]) => {
+      validationMessage.current = "Sudoku is wrong!";
       toggleControls(true);
       setSubmitting(false);
-      alert("Sudoku is wrong!");
+      setValidationIssues(validationIssues);
     },
     onValid: () => {
+      validationMessage.current = "Sudoku is valid! Keep going!";
       toggleControls(true);
       setSubmitting(false);
-      alert("Sudoku is valid! Keep going!");
     },
     submitting,
   });
@@ -64,6 +79,7 @@ export function SudokuGameComponent(props: Props) {
   }, [sudokuId]);
 
   const onValidateClick = () => {
+    setValidationIssues([]);
     readSudokuGrid();
     toggleControls(false);
     if (isSubmissionComplete() && submitterName.length === 0) {
@@ -124,8 +140,10 @@ export function SudokuGameComponent(props: Props) {
                 <Table striped bordered hover>
                   <tbody id={SudokuGameComponents.Div.SudokuBoard}>
                     <SudokuBoardComponent
+                      validationIssues={validationIssues}
                       sudokuBoard={sudokuBoard}
                       disabled={disabled}
+                      cellKeyDownFn={keyDownInCell}
                     />
                   </tbody>
                 </Table>
@@ -142,6 +160,7 @@ export function SudokuGameComponent(props: Props) {
                   {!completed && !submitting && "Check / Validate"}
                   {completed && <span>Finished!</span>}
                 </Button>
+                <span>{validationMessage.current}</span>
               </>
             )}
           </div>

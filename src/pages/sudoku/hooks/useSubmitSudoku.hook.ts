@@ -1,9 +1,13 @@
 import { MutableRefObject, useEffect, useState } from "react";
 import axios from "axios";
 import { config } from "../../../config";
-import { SubmissionId, SudokuId } from "robrendellwebsite-common";
+import {
+  ExtendedSubmitSudokuResponse,
+  SubmissionId,
+  SudokuId,
+  SudokuValidationIssue,
+} from "robrendellwebsite-common";
 import PostSubmissionRequest from "robrendellwebsite-common/src/contract/sudoku/request/submission.post";
-import { SubmitSudokuBasicResponse } from "robrendellwebsite-common";
 import { SudokuGrid } from "../types/sudoku-grid";
 
 type Props = {
@@ -13,7 +17,7 @@ type Props = {
   submissionId: SubmissionId;
   submitterName: string;
   onComplete: (timeTakenMs: number) => void;
-  onInvalid: () => void;
+  onInvalid: (validationIssues: SudokuValidationIssue[]) => void;
   onValid: () => void;
 };
 
@@ -42,7 +46,7 @@ export const useSubmitSudoku = (props: Props) => {
         submitterName: props.submitterName,
       };
       axios
-        .post<SubmitSudokuBasicResponse>(`${config.backend}/sudoku/submit`, {
+        .post<ExtendedSubmitSudokuResponse>(`${config.backend}/sudoku/submit`, {
           headers: { "Content-Type": "application/json" },
           ...data,
         })
@@ -53,7 +57,7 @@ export const useSubmitSudoku = (props: Props) => {
           } else if (response.data.valid) {
             props.onValid();
           } else if (!response.data.valid) {
-            props.onInvalid();
+            props.onInvalid(response.data.validationIssues);
           }
         });
     }
