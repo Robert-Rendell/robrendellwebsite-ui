@@ -115,6 +115,7 @@ export function PhilosophyPage() {
           goal of true education.&quot;
         </li>
       </ul>
+      <hr/>
       <h2>Marcus Aurelius</h2>
       <p>
         Marcus Aurelius was a Roman emperor and philosopher who ruled from 161
