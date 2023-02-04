@@ -7,6 +7,10 @@
   background-color: transparent;
 }
 
+.sudoku-cell-invalid {
+  color: red;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
