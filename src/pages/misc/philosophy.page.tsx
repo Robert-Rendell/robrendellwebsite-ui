@@ -59,6 +59,62 @@ export function PhilosophyPage() {
         <li>&quot;The good man is the friend of all living things.&quot;</li>
       </ul>
       <hr />
+      <h2>Martin Luther King Jr</h2>
+      <p>
+        Martin Luther King Jr. (1929-1968) was an American Baptist minister and
+        activist who became the most visible spokesperson and leader in the
+        civil rights movement from 1954 until his assassination in 1968. He is
+        best known for his role in the advancement of civil rights using
+        nonviolent civil disobedience based on his Christian beliefs.
+      </p>
+      <p>
+        His campaigns and peaceful protests helped to end the legal segregation
+        of African American citizens in the South and other areas of the United
+        States. King&apos;s efforts and message of equality and justice had a
+        profound impact on the Civil Rights Movement and continue to inspire
+        social justice and human rights movements around the world.
+      </p>
+      <ul>
+        <li>
+          &quot;I have a dream that my four little children will one day live in
+          a nation where they will not be judged by the color of their skin but
+          by the content of their character.&quot;
+        </li>
+        <li>
+          &quot;Darkness cannot drive out darkness; only light can do that. Hate
+          cannot drive out hate; only love can do that.&quot;
+        </li>
+        <li>&quot;The time is always right to do what is right.&quot;</li>
+        <li>
+          &quot;Injustice anywhere is a threat to justice everywhere.&quot;
+        </li>
+        <li>
+          &quot;Faith is taking the first step even when you don&apos;t see the
+          whole staircase.&quot;
+        </li>
+        <li>
+          &quot;Our lives begin to end the day we become silent about things
+          that matter.&quot;
+        </li>
+        <li>
+          &quot;I have decided to stick with love. Hate is too great a burden to
+          bear.&quot;
+        </li>
+        <li>
+          &quot;The ultimate measure of a man is not where he stands in moments
+          of comfort and convenience, but where he stands at times of challenge
+          and controversy.&quot;
+        </li>
+        <li>
+          &quot;The nonviolent resister does not seek to humiliate or defeat the
+          opponent but to win his friendship and understanding.&quot;
+        </li>
+        <li>
+          &quot;The function of education is to teach one to think intensively
+          and to think critically. Intelligence plus character - that is the
+          goal of true education.&quot;
+        </li>
+      </ul>
       <h2>Marcus Aurelius</h2>
       <p>
         Marcus Aurelius was a Roman emperor and philosopher who ruled from 161
