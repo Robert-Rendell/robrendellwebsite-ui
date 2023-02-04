@@ -9,7 +9,7 @@ import {
 type Props = {
   sudokuBoard: SudokuGrid;
   disabled: boolean;
-  validationIssues: SudokuValidationIssue[];
+  validationIssues?: SudokuValidationIssue[];
   cellKeyDownFn: KeyDownInCellFn;
 };
 
@@ -27,7 +27,7 @@ export function SudokuBoardComponent(props: Props) {
                 column={columnIndex}
                 disabled={props.disabled}
                 invalid={Boolean(
-                  props.validationIssues.find(
+                  props.validationIssues?.find(
                     (issue) =>
                       issue.row === rowIndex && issue.col === columnIndex
                   )
