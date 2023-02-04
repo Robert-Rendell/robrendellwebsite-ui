@@ -11,6 +11,54 @@ export function PhilosophyPage() {
     <div className="standard-page-margins standard-page-styling">
       <h1>{SharedText.Miscellaneous.Philosophy}</h1>
       <hr />
+      <h2>Mahatma Gandhi</h2>
+      <p>
+        Mahatma Gandhi (1869-1948) was an Indian independence activist who was
+        the leader of India&apos;s non-violent independence movement against
+        British rule. He was known for his philosophy of nonviolent resistance,
+        which he applied in his political activism and civil rights movements.
+      </p>
+      <p>
+        Gandhi&apos;s belief in non-violence and civil disobedience inspired
+        social justice and freedom movements around the world, including the
+        American civil rights movement led by Martin Luther King Jr. He is
+        widely regarded as one of the greatest leaders in modern history.
+      </p>
+      <ul>
+        <li>
+          &quot;The weak can never forgive. Forgiveness is the attribute of the
+          strong.&quot;
+        </li>
+        <li>
+          &quot;An eye for an eye will only make the whole world blind.&quot;
+        </li>
+        <li>
+          &quot;Strength does not come from physical capacity. It comes from an
+          indomitable will.&quot;
+        </li>
+        <li>
+          &quot;The best way to find yourself is to lose yourself in the service
+          of others.&quot;
+        </li>
+        <li>
+          &quot;Happiness is when what you think, what you say, and what you do
+          are in harmony.&quot;
+        </li>
+        <li>
+          &quot;You must be the change you wish to see in the world.&quot;
+        </li>
+        <li>
+          &quot;The difference between what we do and what we are capable of
+          doing would suffice to solve most of the worlds problems.&quot;
+        </li>
+        <li>&quot;In a gentle way, you can shake the world.&quot;</li>
+        <li>
+          &quot;Non-violence is a powerful and just weapon, which cuts without
+          wounding and ennobles the man who wields it.&quot;
+        </li>
+        <li>&quot;The good man is the friend of all living things.&quot;</li>
+      </ul>
+      <hr />
       <h2>Marcus Aurelius</h2>
       <p>
         Marcus Aurelius was a Roman emperor and philosopher who ruled from 161
@@ -119,7 +167,7 @@ export function PhilosophyPage() {
           of the greatest virtues.&quot;
         </li>
       </ul>
-      <hr/>
+      <hr />
       <h2>Aristotle</h2>
       <p>
         Aristotle was a Greek philosopher and polymath who lived from 384 BCE to
@@ -170,7 +218,7 @@ export function PhilosophyPage() {
           &quot;The roots of education are bitter, but the fruit is sweet.&quot;
         </li>
       </ul>
-      <hr/>
+      <hr />
       <h2>Plato</h2>
       <p>
         Plato lived in ancient Greece in the 5th and 4th century BCE. He was a

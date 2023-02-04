@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, { useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
@@ -165,9 +166,10 @@ export function SudokuGameComponent(props: Props) {
                   {validationMessage.current.includes("valid") && (
                     <Check color="green" size="30" />
                   )}
-                  {validationMessage.current.length > 0 && !validationMessage.current.includes("valid") && (
-                    <X color="red" size="30" />
-                  )}
+                  {validationMessage.current.length > 0 &&
+                    !validationMessage.current.includes("valid") && (
+                      <X color="red" size="30" />
+                    )}
                   {validationMessage.current}
                 </span>
               </>
