@@ -209,26 +209,54 @@ class SudokuDashboardComponent extends React.Component {
     return (
       <div id="sudoku-dashboard">
         <h1>Sudoku!</h1>
-        <b>Progress Updates:</b>
-        <p>
-          - 04/02/23 @ 14.22 - Converted Sudoku game from JavaScript / React
-          classes / OOP to TypeScript / React Hooks / Functional programming
-          <br />
-          - 11/11/22 @ 16.40 - Pinned some already played sudokus for those who
-          are competitive
-          <br />
-          - 02/01/22 @ 17.40 - Leaderboard feature for time taken to complete
-          using DynamoDB query and GSI
-          <br />
-          - 01/01/22 @ 23.32 - List generated sudokus when generated
-          <br />
-          - 28/11/21 @ 14.00 - Generate sudoku using S3 upload to trigger AWS
-          Lambda (keeping costs down)
-          <br />
-          - 16/11/21 @ 14.43 - Developed endpoint for user to submit
-          partial/completed sudokus and have it validated.
-          <br />- 15/11/21 @ 15.53 - Sudoku loaded from AWS DynamoDB
-        </p>
+        <hr />
+        <h2>Generate Sudoku</h2>
+        <div id="difficulty-button-panel-parent">
+          <div id="difficulty-button-panel">
+            <Button
+              id={SudokuDashboardComponent.Button.Easy}
+              onClick={this.generateEasySudoku}
+            >
+              Easy
+            </Button>
+            <Button
+              id={SudokuDashboardComponent.Button.Medium}
+              onClick={this.generateMediumSudoku}
+            >
+              Medium
+            </Button>
+            <Button
+              id={SudokuDashboardComponent.Button.Hard}
+              onClick={this.generateHardSudoku}
+            >
+              Hard
+            </Button>
+            {/* <Button id={SudokuDashboardComponent.Button.VeryHard} onClick={this.generateVeryHardSudoku}>
+              Very Hard
+            </Button> */}
+          </div>
+          <div
+            id={SudokuDashboardComponent.Div.SudokuGenerationResultsContainer}
+          >
+            {this.state.isGenerating && <img src={InfinitySpinner} />}
+            <div
+              id={SudokuDashboardComponent.Div.SudokuGenerationResults}
+            ></div>
+          </div>
+        </div>
+        <hr />
+        <h2>Play Sudoku</h2>
+        <Table striped bordered hover variant="dark">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Difficulty</th>
+              <th>Generated</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>{recentSudokus}</tbody>
+        </Table>
         <hr />
         <h2>Pinned Sudokus: for those who are competitive!</h2>
         <Table striped bordered hover variant="dark">
@@ -282,55 +310,29 @@ class SudokuDashboardComponent extends React.Component {
           </tbody>
         </Table>
         <hr />
-        <h2>Generate Sudoku</h2>
-        <div id="difficulty-button-panel-parent">
-          <div id="difficulty-button-panel">
-            <Button
-              id={SudokuDashboardComponent.Button.Easy}
-              onClick={this.generateEasySudoku}
-            >
-              Easy
-            </Button>
-            <Button
-              id={SudokuDashboardComponent.Button.Medium}
-              onClick={this.generateMediumSudoku}
-            >
-              Medium
-            </Button>
-            <Button
-              id={SudokuDashboardComponent.Button.Hard}
-              onClick={this.generateHardSudoku}
-            >
-              Hard
-            </Button>
-            {/* <Button id={SudokuDashboardComponent.Button.VeryHard} onClick={this.generateVeryHardSudoku}>
-              Very Hard
-            </Button> */}
-          </div>
-          <div
-            id={SudokuDashboardComponent.Div.SudokuGenerationResultsContainer}
-          >
-            {this.state.isGenerating && <img src={InfinitySpinner} />}
-            <div
-              id={SudokuDashboardComponent.Div.SudokuGenerationResults}
-            ></div>
-          </div>
-        </div>
+        <b>Progress Updates:</b>
+        <p>
+          - 04/02/23 @ 14.22 - Converted Sudoku game from [JavaScript / React
+          classes / Object oriented programming] to [TypeScript / React Hooks /
+          Functional programming]
+          <br />
+          - 11/11/22 @ 16.40 - Pinned some already played sudokus for those who
+          are competitive
+          <br />
+          - 02/01/22 @ 17.40 - Leaderboard feature for time taken to complete
+          using DynamoDB query and GSI
+          <br />
+          - 01/01/22 @ 23.32 - List generated sudokus when generated
+          <br />
+          - 28/11/21 @ 14.00 - Generate sudoku using S3 upload to trigger AWS
+          Lambda (keeping costs down)
+          <br />
+          - 16/11/21 @ 14.43 - Developed endpoint for user to submit
+          partial/completed sudokus and have it validated.
+          <br />- 15/11/21 @ 15.53 - Sudoku loaded from AWS DynamoDB
+        </p>
         <hr />
-        <h2>Play Sudoku</h2>
-        <Table striped bordered hover variant="dark">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Difficulty</th>
-              <th>Generated</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>{recentSudokus}</tbody>
-        </Table>
-        <hr />
-        <h2>
+        <h3>
           Documentation: Swagger API
           <br />
           <a
@@ -340,7 +342,8 @@ class SudokuDashboardComponent extends React.Component {
           >
             https://app.swaggerhub.com/apis-docs/rob-tea/robrendellwebsite/1.0.0
           </a>
-        </h2>
+        </h3>
+        <hr />
       </div>
     );
   }
