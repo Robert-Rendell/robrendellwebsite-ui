@@ -139,7 +139,7 @@ export function SudokuGameComponent(props: Props) {
               </div>
             ) : (
               <>
-                <Table striped bordered hover>
+                <Table striped bordered>
                   <tbody id={SudokuGameComponents.Div.SudokuBoard}>
                     <SudokuBoardComponent
                       validationIssues={validationIssues}
