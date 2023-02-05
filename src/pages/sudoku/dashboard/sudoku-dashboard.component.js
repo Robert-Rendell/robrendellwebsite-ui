@@ -312,29 +312,29 @@ class SudokuDashboardComponent extends React.Component {
         <hr />
         <b>Progress Updates:</b>
         <p>
-          - 04/02/23 @ 14.22 - Converted Sudoku game from [JavaScript / React
-          classes / Object oriented programming] to [TypeScript / React Hooks /
-          Functional programming]
+          - 04/02/23 @ 14.22 - Converted Sudoku game from [
+          <code>JavaScript</code> / <code>React (classes)</code>/{" "}
+          <code>OO programming</code>] to [<code>TypeScript</code> /{" "}
+          <code>React Hooks</code> /<code>functional programming</code>]
           <br />
           - 11/11/22 @ 16.40 - Pinned some already played sudokus for those who
           are competitive
-          <br />
-          - 02/01/22 @ 17.40 - Leaderboard feature for time taken to complete
-          using DynamoDB query and GSI
+          <br />- 02/01/22 @ 17.40 - Leaderboard feature for time taken to
+          complete using <code>AWS.DynamoDB.query</code>and <code>GSI</code>
           <br />
           - 01/01/22 @ 23.32 - List generated sudokus when generated
-          <br />
-          - 28/11/21 @ 14.00 - Generate sudoku using S3 upload to trigger AWS
-          Lambda (keeping costs down)
+          <br />- 28/11/21 @ 14.00 - Generate sudoku using{" "}
+          <code>S3.putObject</code> to trigger <code>AWS.Lambda</code>
+          &nbsp;(keeping costs down)
           <br />
           - 16/11/21 @ 14.43 - Developed endpoint for user to submit
-          partial/completed sudokus and have it validated.
-          <br />- 15/11/21 @ 15.53 - Sudoku loaded from AWS DynamoDB
+          partial/completed sudokus and have it validated
+          <br />- 15/11/21 @ 15.53 - Sudoku loaded from{" "}
+          <code>AWS.DynamoDB</code>
         </p>
         <hr />
-        <h3>
-          Documentation: Swagger API
-          <br />
+        <h2>Documentation: Swagger API</h2>
+        <p>
           <a
             href="https://app.swaggerhub.com/apis-docs/rob-tea/robrendellwebsite/1.0.0"
             target="_blank"
@@ -342,7 +342,7 @@ class SudokuDashboardComponent extends React.Component {
           >
             https://app.swaggerhub.com/apis-docs/rob-tea/robrendellwebsite/1.0.0
           </a>
-        </h3>
+        </p>
         <hr />
       </div>
     );
