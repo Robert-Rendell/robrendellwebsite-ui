@@ -21,11 +21,15 @@ export const SharedText: RobRendellWebsiteModel = {
     MigratingBirds: "Biomagnetism: Migrating Birds",
     WhatAreVibes: "What are 'Vibes'? ... Well, not Biomagnetism",
     BiomagnetismInTheOcean: "Biomagnetism: Marine Animals",
-    MagnetismInHydroElectricPower: "Magnetism in Hydroelectric Power Generation",
-    HumanToHumanAttraction: "Human to Human Attraction (Chemistry and not Magnetism)",
-    FerromagnetismParamagnetismDiamagnetism: "Ferromagnetism, Paramagnetism and Diamagnetism",
+    MagnetismInHydroElectricPower:
+      "Magnetism in Hydroelectric Power Generation",
+    HumanToHumanAttraction:
+      "Human to Human Attraction (Chemistry and not Magnetism)",
+    FerromagnetismParamagnetismDiamagnetism:
+      "Ferromagnetism, Paramagnetism and Diamagnetism",
     MagneticFieldOnEarth: "Cause of Magnetic Field on Earth",
-    MagnetismInTheHumanEndocrineSystem: "Biomagnetism in the Human Endocrine System",
+    MagnetismInTheHumanEndocrineSystem:
+      "Biomagnetism in the Human Endocrine System",
     ElectromagneticPulses: "Electromagnetic Pulses: Do They Affect Biology?",
     IsBloodMagnetic: "Is Blood Magnetic?",
     VeritasiumHumanCompass: "Veritasium: Can Humans Sense Magnetic Fields?",
@@ -46,10 +50,12 @@ export const SharedText: RobRendellWebsiteModel = {
     IsImaginationASense: "Is Imagination a Sense?",
   },
   Neurochemistry: {
-    PropheciesAndMassAwakeningDiscussion: "Prophecies and a Discussion on Mass Awakening",
+    PropheciesAndMassAwakeningDiscussion:
+      "Prophecies and a Discussion on Mass Awakening",
     MelatoninIsTheKeyToCreativity: "Melatonin: The Key to Creative Insight",
     SubconsciousPositiveReactions: "Serotonin: Subconscious Positive Reactions",
-    RelaxationResponse: "Adrenaline & Cortisol: Anxiety & The Relaxation Response",
+    RelaxationResponse:
+      "Adrenaline & Cortisol: Anxiety & The Relaxation Response",
     ZonesOfRegulation: "Zones of Emotional Regulation",
     SelfActualisation: "Self-actualisation & Peak Experiences",
     LearningAndGeneticCode: "Dopamine: Learning and Genetic Code",
@@ -61,8 +67,10 @@ export const SharedText: RobRendellWebsiteModel = {
     GuiltAndForgiveness: "GUILT!! ... And Forgiveness",
     AttachmentAndSharing: "Attachment & Sharing",
     Paranoia: "Adrenaline & Cortisol: Paranoia",
-    ImportanceOfStretching: "The Importance of Stretching When You Are Fully Awake",
-    ImaginationAndVisualisation: "Controlling Neurochemistry: Imagination and Visualisation",
+    ImportanceOfStretching:
+      "The Importance of Stretching When You Are Fully Awake",
+    ImaginationAndVisualisation:
+      "Controlling Neurochemistry: Imagination and Visualisation",
     ColdShowers: "Adrenaline & Cortisol: Cold Showers",
     Exercise: "Endocannabinoids, Endorphins, Dopamine and Serotonin: Exercise",
     VitaminD: "Vitamin D is a Prohormone & Seasonal Affective Disorder",
@@ -73,7 +81,7 @@ export const SharedText: RobRendellWebsiteModel = {
       Fungi: "Fungi",
       Insects: "Insects",
       Lichen: "Lichen",
-      WildFlowers: "Wild Flowers / Garden Flowers"
-    }
-  }
+      WildFlowers: "Wild Flowers / Garden Flowers",
+    },
+  },
 };

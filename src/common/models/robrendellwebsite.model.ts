@@ -24,8 +24,8 @@ export type RobRendellWebsiteModel = {
       Insects: string;
       Lichen: string;
       WildFlowers: string;
-    }
-  }
+    };
+  };
   Biomagnetism: {
     LandingPage: string;
     MigratingBirds: string;
