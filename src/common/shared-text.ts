@@ -75,4 +75,13 @@ export const SharedText: RobRendellWebsiteModel = {
     Exercise: "Endocannabinoids, Endorphins, Dopamine and Serotonin: Exercise",
     VitaminD: "Vitamin D is a Prohormone & Seasonal Affective Disorder",
   },
+  PhotosIveTaken: {
+    Nature: {
+      Arachnids: "Arachnids",
+      Fungi: "Fungi",
+      Insects: "Insects",
+      Lichen: "Lichen",
+      WildFlowers: "Wild Flowers / Garden Flowers",
+    },
+  },
 };

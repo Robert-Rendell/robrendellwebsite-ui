@@ -74,4 +74,13 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     Exercise: "/neurochemistry/exercise",
     VitaminD: "/neurochemistry/vitamin-d",
   },
+  PhotosIveTaken: {
+    Nature: {
+      Arachnids: "/photos-ive-taken/nature/arachnids",
+      Fungi: "/photos-ive-taken/nature/fungi",
+      Insects: "/photos-ive-taken/nature/insects",
+      Lichen: "/photos-ive-taken/nature/lichen",
+      WildFlowers: "/photos-ive-taken/nature/wild-flowers",
+    },
+  },
 };

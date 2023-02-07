@@ -17,6 +17,15 @@ export type RobRendellWebsiteModel = {
     InterestingDatesInHistory: string;
     Philosophy: string;
   };
+  PhotosIveTaken: {
+    Nature: {
+      Arachnids: string;
+      Fungi: string;
+      Insects: string;
+      Lichen: string;
+      WildFlowers: string;
+    };
+  };
   Biomagnetism: {
     LandingPage: string;
     MigratingBirds: string;
