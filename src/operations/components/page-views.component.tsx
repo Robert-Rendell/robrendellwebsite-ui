@@ -11,12 +11,19 @@ export function OpsPageViewsComponent() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   const allRoutes = useMemo(() => {
-    return Object.values(SharedRoutes)
+    const routes = Object.values(SharedRoutes)
       .map((sharedRoute) => Object.values(sharedRoute))
       .flat()
-      .filter((sharedRoute) => !sharedRoute.includes("www.youtube.com"));
+      .filter(
+        (sharedRoute) =>
+          typeof sharedRoute === "string" &&
+          !sharedRoute.includes("www.youtube.com")
+      );
+    routes.push(...Object.values(SharedRoutes.PhotosIveTaken.Nature));
+    return routes;
   }, []);
   const [pageViews] = useOpsDashboard({ pageUrls: allRoutes });
+
   const [selectedPageViews, setSelectedPageViews] = useState<
     PageViewerDocument | undefined
   >();
