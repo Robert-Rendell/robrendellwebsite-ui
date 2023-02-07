@@ -1,12 +1,14 @@
 import React from "react";
+import { SharedRoutes } from "../../../common/shared-routes";
+import { SharedText } from "../../../common/shared-text";
 import "../../page.css";
 import { PhotosIveTakenPage } from "../photos-ive-taken.page";
 
 export function FungiPage() {
   return (
     <PhotosIveTakenPage
-      endpoint="/photos-ive-taken/nature/fungi"
-      title="Photos I've Taken: Fungi"
+      endpoint={SharedRoutes.PhotosIveTaken.Nature.Fungi}
+      title={SharedText.PhotosIveTaken.Nature.Fungi}
     />
   );
 }

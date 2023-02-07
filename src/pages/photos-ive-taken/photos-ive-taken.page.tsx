@@ -29,7 +29,7 @@ export function PhotosIveTakenPage(props: Props) {
   }, []);
   return (
     <div className="standard-page-margins standard-page-styling">
-      <h1>{props.title}</h1>
+      <h1>Photos I&apos;ve Taken: {props.title}</h1>
       <ImageGallery images={images ? images : []} />
       <FullScreenS3ImageComponent handleShowRef={handleImageClickedRef} />
     </div>

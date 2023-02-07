@@ -26,8 +26,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     BiomagnetismInTheOcean: "/biomagnetism/biomagnetism-in-the-ocean",
     MagnetismInHydroElectricPower: "/biomagnetism/hydro-electric-power",
     HumanToHumanAttraction: "/biomagnetism/human-to-human-attraction",
-    FerromagnetismParamagnetismDiamagnetism:
-      "/biomagnetism/dia-ferro-para-magnetism",
+    FerromagnetismParamagnetismDiamagnetism: "/biomagnetism/dia-ferro-para-magnetism",
     MagneticFieldOnEarth: "/biomagnetism/magnetic-field-on-earth",
     MagnetismInTheHumanEndocrineSystem: "/biomagnetism/human-endocrine-system",
     ElectromagneticPulses: "/biomagnetism/electromagnetic-pulse",
@@ -51,10 +50,8 @@ export const SharedRoutes: RobRendellWebsiteModel = {
   },
   Neurochemistry: {
     PropheciesAndMassAwakeningDiscussion: "/neurochemistry/conclusion",
-    MelatoninIsTheKeyToCreativity:
-      "/neurochemistry/melatonin-is-the-key-to-creative-insight",
-    SubconsciousPositiveReactions:
-      "/neurochemistry/subconscious-positive-reactions",
+    MelatoninIsTheKeyToCreativity: "/neurochemistry/melatonin-is-the-key-to-creative-insight",
+    SubconsciousPositiveReactions: "/neurochemistry/subconscious-positive-reactions",
     RelaxationResponse: "/neurochemistry/the-relaxation-response",
     ZonesOfRegulation: "/neurochemistry/zones-of-regulation",
     SelfActualisation: "/neurochemistry/self-actualisation-peak-experiences",
@@ -68,10 +65,18 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     GuiltAndForgiveness: "/neurochemistry/GUILT-and-forgiveness",
     Paranoia: "/neurochemistry/paranoia",
     ImportanceOfStretching: "/neurochemistry/stretching",
-    ImaginationAndVisualisation:
-      "/neurochemistry/imagination-and-visualisation",
+    ImaginationAndVisualisation: "/neurochemistry/imagination-and-visualisation",
     ColdShowers: "/neurochemistry/cold-showers",
     Exercise: "/neurochemistry/exercise",
     VitaminD: "/neurochemistry/vitamin-d",
   },
+  PhotosIveTaken: {
+    Nature: {
+      Arachnids: "/photos-ive-taken/nature/arachnids",
+      Fungi: "/photos-ive-taken/nature/fungi",
+      Insects: "/photos-ive-taken/nature/insects",
+      Lichen: "/photos-ive-taken/nature/lichen",
+      WildFlowers: "/photos-ive-taken/nature/wild-flowers"
+    }
+  }
 };
