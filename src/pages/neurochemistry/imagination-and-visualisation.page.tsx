@@ -46,25 +46,10 @@ export function ImaginationAndVisualisationPage() {
           alone.
         </p>
         <p>
-          To repeat some of these:
-          <ul>
-            <li>
-              deeply imagining your favourite things (eg. cats/dogs/pets);
-            </li>
-            <li>
-              deeply imagining the hot sun on your face, on a sunny day in
-              Spain;
-            </li>
-            <li>
-              reacting positively to events with thought (eg. positive
-              perspective when you are faced with social ambiguity).
-            </li>
-          </ul>
-        </p>
-        <p>
           Let&apos;s go into more detail into some of the hormones /
           neurotransmitters involved:
         </p>
+        and content
         <Table variant="dark">
           <thead>
             <tr>
@@ -74,6 +59,40 @@ export function ImaginationAndVisualisationPage() {
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>
+                Serotonin
+                <ArrowUp />
+              </td>
+              <td>
+                reacting positively to events with thought (eg. positive
+                perspective when you are faced with social ambiguity).
+              </td>
+              <td>Feel happier and more confident.</td>
+            </tr>
+            <tr>
+              <td>
+                Serotonin
+                <ArrowUp />
+              </td>
+              <td>
+                deeply imagining the hot sun on your face, on a sunny day in
+                Spain;
+              </td>
+              <td>Feel happier.</td>
+            </tr>
+            <tr>
+              <td>
+                Oxytocin
+                <ArrowUp />
+                Serotonin
+                <ArrowUp />
+              </td>
+              <td>
+                deeply imagining your favourite things (eg. cats/dogs/pets)
+              </td>
+              <td>Feel comforted and happier!</td>
+            </tr>
             <tr>
               <td>
                 Adrenaline
