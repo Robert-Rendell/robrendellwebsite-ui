@@ -48,9 +48,7 @@ export function ImaginationAndVisualisationPage() {
         <p>
           To repeat some of these:
           <ul>
-            <li>
-              deeply imagining your favourite things (eg. cats/dogs/pets);
-            </li>
+            <li></li>
             <li>
               deeply imagining the hot sun on your face, on a sunny day in
               Spain;
@@ -74,6 +72,16 @@ export function ImaginationAndVisualisationPage() {
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>
+                Oxytocin
+                <ArrowUp />
+              </td>
+              <td>
+                deeply imagining your favourite things (eg. cats/dogs/pets)
+              </td>
+              <td>Feel comforted and content</td>
+            </tr>
             <tr>
               <td>
                 Adrenaline
