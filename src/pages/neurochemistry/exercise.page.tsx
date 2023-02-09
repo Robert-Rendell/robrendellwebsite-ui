@@ -35,12 +35,25 @@ export function ExercisePage() {
           endocannabinoids.
         </p>
         <p>
-          Directly after sprinting a 5km run, I experience the adrenaline and
-          also a buzz in my head for at least 15-20 mins.
+          We first need to start with the feeling following a release of
+          adrenaline and endorphins.
         </p>
         <p>
-          If I continue a regular pattern of at least 1-3 runs a week, I feel an
-          inner calm change the shade of all my experiences throughout the week.
+          Directly after sprinting a 5km run, I experience the adrenaline and
+          also an intense euphoric buzz in my head (endorphins) for at least
+          15-20 mins.
+        </p>
+        <p>
+          If I continue a regular pattern of at least 1-3 runs a week, this is
+          when the endocannabinoids manifest a feeling of inner calm, which
+          change the shade of all my experiences throughout the week. I will
+          also undoubtedly experience a sublime sense of content.
+        </p>
+        <p>
+          On longer runs up to 10km, if I push through when my body is telling
+          me to stop, I find I get rewarded with the same buzz of endorphins
+          multiple separate times while running. It is exhilarating and keeps
+          you hungry for more!
         </p>
         <p>
           Endocannabinoids are produced in the brain and these molecules
