@@ -49,7 +49,6 @@ export function ImaginationAndVisualisationPage() {
           Let&apos;s go into more detail into some of the hormones /
           neurotransmitters involved:
         </p>
-        and content
         <Table variant="dark">
           <thead>
             <tr>
