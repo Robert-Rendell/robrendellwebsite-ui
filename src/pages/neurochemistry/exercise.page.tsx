@@ -46,8 +46,8 @@ export function ExercisePage() {
         <p>
           If I continue a regular pattern of at least 1-3 runs a week, this is
           when the endocannabinoids manifest a feeling of inner calm, which
-          change the shade of all my experiences throughout the week. I will
-          also undoubtedly experience a sublime sense of content.
+          changes the shade of all my experiences throughout the week. I will
+          also undoubtedly experience a sublime sense of contentment.
         </p>
         <p>
           On longer runs up to 10km, if I push through when my body is telling
