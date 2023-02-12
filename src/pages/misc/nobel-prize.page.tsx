@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import InfinitySpinner from "../../resources/infinity-spinner.svg";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { usePageView } from "../../hooks/use-page-view.hook";
-import { useWindowSize } from "../../hooks/use-window-size.hook";
 import { useNobelPrize } from "./hooks/useNobelPrize.hook";
 import { NewTabLink } from "../../components/new-tab-link.component";
 
 export function NobelPrizePage() {
-  const windowSize = useWindowSize();
-  const width = windowSize[0] - 40;
   usePageView(SharedRoutes.Miscellaneous.NobelPrize);
   const { nobelPrize, categories } = useNobelPrize();
   const [filter, setFilter] = useState<string | undefined>();
@@ -64,7 +61,6 @@ export function NobelPrizePage() {
         })}
         {!nobelPrize && <img src={InfinitySpinner} />}
       </>
-      <hr />
     </div>
   );
 }
