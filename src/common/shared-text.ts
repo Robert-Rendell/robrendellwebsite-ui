@@ -49,6 +49,7 @@ export const SharedText: RobRendellWebsiteModel = {
     RecursionAndFractals: "Recursion and Fractals",
     SimpleEquations: "Simple Equations = Infinite Complexity",
     IsImaginationASense: "Is Imagination a Sense?",
+    BestMandelbrotZooms: "Best Mandelbrot Zooms! (...Highly recommended!)",
   },
   Neurochemistry: {
     PropheciesAndMassAwakeningDiscussion:

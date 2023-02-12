@@ -49,6 +49,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     RecursionAndFractals: "/recursion/fractals",
     SimpleEquations: "/recursion/simple-equations-infinite-complexity",
     IsImaginationASense: "/recursion/is-imagination-a-sense",
+    BestMandelbrotZooms: "/recursion/best-mandelbrot-zooms",
   },
   Neurochemistry: {
     PropheciesAndMassAwakeningDiscussion: "/neurochemistry/conclusion",
