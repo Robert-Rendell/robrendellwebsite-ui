@@ -15,7 +15,7 @@ export const SharedText: RobRendellWebsiteModel = {
     WordOfTheDay: "Word of the Day",
     InterestingDatesInHistory: "Interesting Dates in History",
     Philosophy: "Philosophy",
-    NobelPrize: "Nobel Prize Winners"
+    NobelPrize: "Nobel Prize Winners",
   },
   Biomagnetism: {
     LandingPage: "Biomagnetism Project",
