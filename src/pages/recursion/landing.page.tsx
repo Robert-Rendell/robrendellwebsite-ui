@@ -13,7 +13,7 @@ export function RecursionLandingPage() {
     <>
       <div className="standard-page-margins standard-page-styling">
         <h1>{SharedText.Recursion.RecursionAndFractals}</h1>
-        <DateWritten>Nov 2022</DateWritten>
+        <DateWritten dateStarted>Nov 2022</DateWritten>
         <MusicScrollDownMessage youtubeVideoEmbedId="GRQDOyO68kY" start={3}>
           <h2>Topics</h2>
           <ol>
@@ -52,6 +52,14 @@ export function RecursionLandingPage() {
                 noNewTab
               >
                 {SharedText.Recursion.IsImaginationASense}
+              </NewTabLink>
+            </li>
+            <li>
+              <NewTabLink
+                href={SharedRoutes.Recursion.BestMandelbrotZooms}
+                noNewTab
+              >
+                {SharedText.Recursion.BestMandelbrotZooms}
               </NewTabLink>
             </li>
           </ol>

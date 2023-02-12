@@ -72,6 +72,7 @@ import { VitaminDIsAHormonePage } from "./pages/neurochemistry/vitamin-d-is-a-ho
 import { ImaginationAndVisualisationPage } from "./pages/neurochemistry/imagination-and-visualisation.page";
 import { PhilosophyPage } from "./pages/misc/philosophy.page";
 import { NobelPrizePage } from "./pages/misc/nobel-prize.page";
+import { BestMandelbrotZoomsPage } from "./pages/recursion/best-mandelbrot-zooms.page";
 
 const maintenanceMode = false;
 
@@ -123,6 +124,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Recursion.IsImaginationASense}
               element={<IsImaginationASensePage />}
+            />
+            <Route
+              path={SharedRoutes.Recursion.BestMandelbrotZooms}
+              element={<BestMandelbrotZoomsPage />}
             />
 
             {/* //////////////////////////////////// */}
