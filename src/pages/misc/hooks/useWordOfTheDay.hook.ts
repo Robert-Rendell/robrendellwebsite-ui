@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { WordOfTheDay } from "../models/word-of-the-day";
+import { WordOfTheDay } from "robrendellwebsite-common";
 
 export function useWordOfTheDay() {
   const [wordOfTheDay, setWordOfTheDay] = useState<WordOfTheDay[]>();

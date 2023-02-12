@@ -149,6 +149,12 @@ export const NavComponent = () => {
               >
                 Philosophy
               </NavDropdown.Item>
+              <NavDropdown.Item
+                className={centredOnMobile}
+                href={SharedRoutes.Miscellaneous.NobelPrize}
+              >
+                Nobel Prize
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
