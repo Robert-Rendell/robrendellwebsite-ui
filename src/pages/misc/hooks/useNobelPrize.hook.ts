@@ -1,6 +1,6 @@
 import axios from "axios";
+import { NobelPrizeJson } from "robrendellwebsite-common";
 import { useEffect, useRef, useState } from "react";
-import { NobelPrizeJson } from "../nobel-prize";
 
 export function useNobelPrize() {
   const [nobelPrize, setNobelPrize] = useState<NobelPrizeJson>();
