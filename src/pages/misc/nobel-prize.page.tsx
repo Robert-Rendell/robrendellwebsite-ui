@@ -20,6 +20,7 @@ export function NobelPrizePage() {
               setFilter(ev.target.value);
             }}
           >
+            <option label={"--- Select a category ---"}></option>
             {categories.current?.map((c, ci) => (
               <option key={`ci${ci}`} value={c} label={c}></option>
             ))}
