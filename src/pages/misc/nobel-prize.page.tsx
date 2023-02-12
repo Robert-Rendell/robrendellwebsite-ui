@@ -5,6 +5,7 @@ import { SharedText } from "../../common/shared-text";
 import { usePageView } from "../../hooks/use-page-view.hook";
 import { useNobelPrize } from "./hooks/useNobelPrize.hook";
 import { NewTabLink } from "../../components/new-tab-link.component";
+import { NobelPrize } from "robrendellwebsite-common";
 
 export function NobelPrizePage() {
   usePageView(SharedRoutes.Miscellaneous.NobelPrize);
@@ -30,6 +31,8 @@ export function NobelPrizePage() {
       )}
       <>
         {nobelPrize?.nobelPrizes.map((prize, i) => {
+          const hasSameMotivation =
+            new Set(prize.laureates?.map((l) => l.motivation.en)).size === 1;
           return (
             (!filter || prize.category.en === filter) && (
               <div key={i}>
@@ -37,6 +40,7 @@ export function NobelPrizePage() {
                   [{prize.awardYear}] {prize.categoryFullName.en}
                 </p>
                 <ul>
+                  {!prize.laureates && <p>No prize awarded.</p>}
                   {prize.laureates?.map((l, lik) => (
                     <li key={`li-${lik}`}>
                       <li>
@@ -51,11 +55,18 @@ export function NobelPrizePage() {
                           </NewTabLink>
                         </>
                       </li>
-                      <ul>
-                        <li>{l.motivation.en}</li>
-                      </ul>
+                      {!hasSameMotivation && (
+                        <ul>
+                          <li>{l.motivation.en}</li>
+                        </ul>
+                      )}
                     </li>
                   ))}
+                  {hasSameMotivation && (
+                    <ul>
+                      <li>{prize.laureates?.[0].motivation.en}</li>
+                    </ul>
+                  )}
                 </ul>
                 <hr />
               </div>
