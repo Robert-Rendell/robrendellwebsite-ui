@@ -14,15 +14,18 @@ export function NobelPrizePage() {
     <div className="standard-page-margins standard-page-styling">
       <h1>{SharedText.Miscellaneous.NobelPrize}</h1>
       {nobelPrize && (
-        <select
-          onChange={(ev) => {
-            setFilter(ev.target.value);
-          }}
-        >
-          {categories.current?.map((c, ci) => (
-            <option key={`ci${ci}`} value={c} label={c}></option>
-          ))}
-        </select>
+        <>
+          <select
+            onChange={(ev) => {
+              setFilter(ev.target.value);
+            }}
+          >
+            {categories.current?.map((c, ci) => (
+              <option key={`ci${ci}`} value={c} label={c}></option>
+            ))}
+          </select>
+          <hr />
+        </>
       )}
       <>
         {nobelPrize?.nobelPrizes.map((prize, i) => {
@@ -34,7 +37,6 @@ export function NobelPrizePage() {
                 </p>
                 <ul>
                   {prize.laureates?.map((l, lik) => (
-
                     <li key={`li-${lik}`}>
                       <li>
                         <>
