@@ -71,6 +71,7 @@ import { ExercisePage } from "./pages/neurochemistry/exercise.page";
 import { VitaminDIsAHormonePage } from "./pages/neurochemistry/vitamin-d-is-a-hormone.page";
 import { ImaginationAndVisualisationPage } from "./pages/neurochemistry/imagination-and-visualisation.page";
 import { PhilosophyPage } from "./pages/misc/philosophy.page";
+import { NobelPrizePage } from "./pages/misc/nobel-prize.page";
 
 const maintenanceMode = false;
 
@@ -315,6 +316,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Miscellaneous.Philosophy}
               element={<PhilosophyPage />}
+            />
+            <Route
+              path={SharedRoutes.Miscellaneous.NobelPrize}
+              element={<NobelPrizePage />}
             />
             {/* //////////////////////////////////// */}
             <Route

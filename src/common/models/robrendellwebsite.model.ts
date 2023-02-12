@@ -16,6 +16,7 @@ export type RobRendellWebsiteModel = {
     WordOfTheDay: string;
     InterestingDatesInHistory: string;
     Philosophy: string;
+    NobelPrize: string;
   };
   PhotosIveTaken: {
     Nature: {

@@ -18,6 +18,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     WordOfTheDay: "/miscellaneous/word-of-the-day",
     InterestingDatesInHistory: "/miscellaneous/interesting-dates-in-history",
     Philosophy: "/miscellaneous/philosophy",
+    NobelPrize: "/miscellaneous/nobel-prize"
   },
   Biomagnetism: {
     LandingPage: "/biomagnetism",

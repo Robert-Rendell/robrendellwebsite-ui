@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { InterestingDateInHistory } from "../models/dates-in-history";
+import { InterestingDateInHistory } from "robrendellwebsite-common";
 
 export function useDatesInHistory() {
   const [datesInHistory, setDatesInHistory] =
