@@ -28,6 +28,13 @@ export const HomePage = () => {
       <h4>Recent developments:</h4>
       <ul>
         <li>
+          12/02/23 @ 14.45 - Added&nbsp;
+          <a href={SharedRoutes.Miscellaneous.NobelPrize}>
+            {SharedText.Miscellaneous.NobelPrize}
+          </a>{" "}
+          page using <code>AWS.S3</code> and <code>api.nobelprize.org</code>
+        </li>
+        <li>
           04/02/23 @ 15.21 - Converted&nbsp;
           <a href={SharedRoutes.Sudoku.Dashboard}>
             {SharedText.Sudoku.Dashboard}
@@ -60,19 +67,19 @@ export const HomePage = () => {
           <a href={SharedRoutes.Biomagnetism.LandingPage}>
             {SharedText.Biomagnetism.LandingPage}
           </a>{" "}
-          project using my <code>AWS.DynamoDB</code> page views feature.
+          project using my <code>AWS.DynamoDB</code> page views feature
         </li>
         <li>
           26/11/22 @ 09.35 - Added&nbsp;
           <a href="recursion/simple-equations-infinite-complexity">
             {SharedText.Recursion.SimpleEquations}
           </a>{" "}
-          page using my <code>AWS.DynamoDB</code> page views feature.
+          page using my <code>AWS.DynamoDB</code> page views feature
         </li>
         <li>
           17/11/22 @ 14.25 - Completed{" "}
           <a href="neurochemistry/">Neurochemistry</a> project using my{" "}
-          <code>AWS.DynamoDB</code> page views feature.
+          <code>AWS.DynamoDB</code> page views feature
         </li>
         <li>
           11/11/22 @ 16.40 - Pinned some already played{" "}
@@ -106,15 +113,15 @@ export const HomePage = () => {
         <li>
           02/01/22 @ 17.40 - Leaderboard feature for time taken to complete{" "}
           <a href="sudoku/">Sudoku</a> using <code>AWS.DynamoDB.query</code> and
-          GSI.
+          GSI
         </li>
         <li>
           28/11/21 @ 14.00 - <code>AWS.Lambda</code> running my Python{" "}
-          <a href="sudoku/">Sudoku generation</a> code; triggered by front end.
+          <a href="sudoku/">Sudoku generation</a> code; triggered by front end
         </li>
         <li>
           16/11/21 @ 12.45 - Enabled &apos;Validate&apos;{" "}
-          <a href="sudoku/play/0/">Sudoku project</a> button.
+          <a href="sudoku/play/0/">Sudoku project</a> button
         </li>
         <li>
           15/11/21 @ 15.53 - Enabled <a href="sudoku/">Sudoku project</a>. It is
