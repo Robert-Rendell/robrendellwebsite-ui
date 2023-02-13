@@ -8,7 +8,7 @@ import { useWindowSize } from "../../hooks/use-window-size.hook";
 
 export function FractalForumsPage() {
   const windowSize = useWindowSize();
-  const width = windowSize[0] - 20;
+  const width = windowSize[0] - 40;
   usePageView(SharedRoutes.Recursion.FractalForums);
 
   return (
