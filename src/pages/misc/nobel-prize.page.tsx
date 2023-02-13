@@ -30,7 +30,7 @@ export function NobelPrizePage() {
         </>
       )}
       <>
-        {nobelPrize?.nobelPrizes.map((prize, i) => {
+        {nobelPrize?.nobelPrizes.map((prize: NobelPrize, i) => {
           const hasSameMotivation =
             new Set(prize.laureates?.map((l) => l.motivation.en)).size === 1;
           return (

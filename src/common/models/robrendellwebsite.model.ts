@@ -56,6 +56,7 @@ export type RobRendellWebsiteModel = {
     SimpleEquations: string;
     IsImaginationASense: string;
     BestMandelbrotZooms: string;
+    FractalForums: string;
   };
   Neurochemistry: {
     PropheciesAndMassAwakeningDiscussion: string;

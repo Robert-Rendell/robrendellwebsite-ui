@@ -50,6 +50,7 @@ export const SharedText: RobRendellWebsiteModel = {
     SimpleEquations: "Simple Equations = Infinite Complexity",
     IsImaginationASense: "Is Imagination a Sense?",
     BestMandelbrotZooms: "Best Mandelbrot Zooms! (...Highly recommended!)",
+    FractalForums: "fractalforums.org",
   },
   Neurochemistry: {
     PropheciesAndMassAwakeningDiscussion:

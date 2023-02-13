@@ -62,6 +62,11 @@ export function RecursionLandingPage() {
                 {SharedText.Recursion.BestMandelbrotZooms}
               </NewTabLink>
             </li>
+            <li>
+              <NewTabLink href={SharedRoutes.Recursion.FractalForums} noNewTab>
+                {SharedText.Recursion.FractalForums}
+              </NewTabLink>
+            </li>
           </ol>
         </MusicScrollDownMessage>
       </div>

@@ -34,6 +34,13 @@ export function RobRendellFooterComponent() {
           responsibility for you, nor do I accept any liability; go see your GP.
         </span>
       </div>
+      <div className="centred">
+        <span style={{ color: "white", textAlign: "center" }}>
+          [GDPR / Privacy]: By visiting any page other than the home page, you
+          consent to me storing your IP address on AWS DynamoDB for educational
+          purposes.
+        </span>
+      </div>
     </div>
   );
 }
