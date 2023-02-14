@@ -43,8 +43,8 @@ export function WordOfTheDayPage() {
                   </td>
                   {!onMobile && (
                     <>
-                      <td>{wordDef.definition}</td>
-                      <td>{wordDef.context.replace(/Nicole/g, "Yin")}</td>
+                      <td className="word-wrap">{wordDef.definition}</td>
+                      <td className="word-wrap">{wordDef.context.replace(/Nicole/g, "Yin")}</td>
                     </>
                   )}
                 </tr>

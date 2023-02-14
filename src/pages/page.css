@@ -94,3 +94,8 @@ h2 {
 .small-table {
   font-size: small;
 }
+
+.word-wrap {
+  word-wrap: break-word;
+  word-break: break-all;
+}
