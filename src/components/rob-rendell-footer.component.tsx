@@ -1,12 +1,17 @@
 import React from "react";
+import { usePreferences } from "../hooks/use-preferences.hook";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import Northumberland from "../resources/flag-of-northumberland.svg";
 import Saltire from "../resources/saltire.svg";
 
 export function RobRendellFooterComponent() {
+  const { preferences } = usePreferences();
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  return (
+  const isFullScreen =
+    preferences?.fullscreen &&
+    window.location.pathname.includes(preferences.fullscreen);
+  return !isFullScreen ? (
     <div>
       <div className="centred">
         <img
@@ -42,5 +47,7 @@ export function RobRendellFooterComponent() {
         </span>
       </div>
     </div>
+  ) : (
+    <></>
   );
 }
