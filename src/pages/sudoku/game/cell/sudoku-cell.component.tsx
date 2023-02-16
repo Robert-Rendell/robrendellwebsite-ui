@@ -37,6 +37,7 @@ export function SudokuCellComponent(props: Props) {
   }
 
   function getClassName() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     return useMemo(() => {
       let className = "sudoku-input";
       if (props.invalid) {

@@ -1,5 +1,7 @@
 import React from "react";
+import { usePreferences } from "../hooks/use-preferences.hook";
 import { useWindowSize } from "../hooks/use-window-size.hook";
+import { AutoplayToggleComponent } from "./autoplay-toggle.component";
 import { ScrollToBottomLink } from "./scroll-to-bottom-link.component";
 import { ScrollToTopLink } from "./scroll-to-top-link.component";
 
@@ -12,7 +14,6 @@ type Props = {
   msg?: string;
 };
 
-const youtubeAutoPlay = "autoplay=1";
 const youtubeEmbedSrc = "https://www.youtube.com/embed/";
 const defaultMsg = (
   <>
@@ -22,9 +23,11 @@ const defaultMsg = (
 );
 
 export function MusicScrollDownMessage(props: React.PropsWithChildren<Props>) {
+  const { preferences } = usePreferences();
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   const height = windowSize[1];
+  const youtubeAutoPlay = `autoplay=${preferences?.autoplayEnabled ? 1 : 0}`;
 
   let youtubeLink;
   if (props.youtubeVideoEmbedId) {
@@ -50,6 +53,7 @@ export function MusicScrollDownMessage(props: React.PropsWithChildren<Props>) {
     <>
       <p>
         <i>{props.msg ? props.msg : defaultMsg}</i>
+        <AutoplayToggleComponent />
       </p>
       <hr />
       {props.children}
@@ -65,7 +69,6 @@ export function MusicScrollDownMessage(props: React.PropsWithChildren<Props>) {
             }
             src={youtubeLink}
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
