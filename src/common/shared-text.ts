@@ -16,6 +16,7 @@ export const SharedText: RobRendellWebsiteModel = {
     InterestingDatesInHistory: "Interesting Dates in History",
     Philosophy: "Philosophy",
     NobelPrize: "Nobel Prize Winners",
+    Midjourney: "Midjourney: Image Generator AI",
   },
   Biomagnetism: {
     LandingPage: "Biomagnetism Project",

@@ -161,6 +161,12 @@ export const NavComponent = () => {
               >
                 Nobel Prize
               </NavDropdown.Item>
+              <NavDropdown.Item
+                className={centredOnMobile}
+                href={SharedRoutes.Miscellaneous.Midjourney}
+              >
+                Midjourney AI
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
