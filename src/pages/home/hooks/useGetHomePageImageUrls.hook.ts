@@ -35,4 +35,4 @@ export const useGetHomePageImageUrls = (
       originalImgUrls,
     };
     return output;
-  }, [config.backend, S3LoadedThumbnail]);
+  }, [handleImageClickedRef]);

@@ -14,6 +14,8 @@ import "./sudoku-game.component.css";
 import { SudokuValidationIssue } from "robrendellwebsite-common";
 import { KeyDownInCellFn } from "./cell/sudoku-cell.component";
 import { Check, X } from "react-bootstrap-icons";
+import { FullScreenToggleComponent } from "../../../components/full-screen-toggle.component";
+import { RobBackButton } from "../../../components/back-button.component";
 
 const SudokuGameComponents = {
   Div: {
@@ -139,6 +141,15 @@ export function SudokuGameComponent(props: Props) {
               </div>
             ) : (
               <>
+                <div style={{ marginBottom: "4px" }}>
+                  <RobBackButton backTwo />
+                  <FullScreenToggleComponent
+                    path={window.location.pathname
+                      .split("/")
+                      .slice(0, -1)
+                      .join("/")}
+                  />
+                </div>
                 <Table striped bordered>
                   <tbody id={SudokuGameComponents.Div.SudokuBoard}>
                     <SudokuBoardComponent

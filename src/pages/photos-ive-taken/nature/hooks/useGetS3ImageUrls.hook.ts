@@ -37,4 +37,4 @@ export const useGetS3ImageUrls = (props: Props) =>
         onClick: props.handleImageClickedRef,
       });
     });
-  }, [config.backend, props]);
+  }, [props]);
