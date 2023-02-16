@@ -68,6 +68,7 @@
     "@typescript-eslint/parser": "^5.41.0",
     "eslint": "^8.26.0",
     "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
     "react-svg-loader": "^3.0.3",
