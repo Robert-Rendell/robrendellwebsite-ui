@@ -74,6 +74,7 @@ import { PhilosophyPage } from "./pages/misc/philosophy.page";
 import { NobelPrizePage } from "./pages/misc/nobel-prize.page";
 import { BestMandelbrotZoomsPage } from "./pages/recursion/best-mandelbrot-zooms.page";
 import { FractalForumsPage } from "./pages/recursion/fractalforums.page";
+import { MidJourney } from "./pages/misc/midjourney.page";
 
 const maintenanceMode = false;
 
@@ -330,6 +331,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Miscellaneous.NobelPrize}
               element={<NobelPrizePage />}
+            />
+            <Route
+              path={SharedRoutes.Miscellaneous.Midjourney}
+              element={<MidJourney />}
             />
             {/* //////////////////////////////////// */}
             <Route

@@ -19,6 +19,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     InterestingDatesInHistory: "/miscellaneous/interesting-dates-in-history",
     Philosophy: "/miscellaneous/philosophy",
     NobelPrize: "/miscellaneous/nobel-prize",
+    Midjourney: "/miscellaneous/midjourney-ai",
   },
   Biomagnetism: {
     LandingPage: "/biomagnetism",
