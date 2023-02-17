@@ -20,19 +20,6 @@ export const NavComponent = () => {
   const smallerScreen = !onMobile && width <= 1100;
   const centredOnMobile = onMobile ? "centred" : "";
 
-  const [hasAccess] = useKnockKnock();
-
-  const onNavBarClick = () => {
-    if (
-      hasAccess &&
-      !window.location.href.includes(SharedRoutes.Operations.Dashboard)
-    ) {
-      window.location.href = SharedRoutes.Operations.Dashboard;
-    } else {
-      window.location.href = SharedRoutes.HomePage;
-    }
-  };
-
   const isFullScreen =
     preferences?.fullscreen &&
     window.location.pathname.includes(preferences.fullscreen);
@@ -40,7 +27,7 @@ export const NavComponent = () => {
   return !isFullScreen ? (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand className="brand" onClick={onNavBarClick}>
+        <Navbar.Brand className="brand" href="/">
           Rob Rendell {onMobile && <TechIconsComponent />}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
