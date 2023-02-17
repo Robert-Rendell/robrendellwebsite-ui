@@ -1,5 +1,8 @@
 import { P5CanvasInstance } from "react-p5-wrapper";
 
+type Props = {
+  screenWidth: number;
+}
 /*
   Tutorial by me :)
     https://www.youtube.com/watch?v=RrSOv9FH6uo
@@ -8,7 +11,7 @@ import { P5CanvasInstance } from "react-p5-wrapper";
     Numberphile - The Golden Ratio (why it is so irrational)
     https://www.youtube.com/watch?v=sj8Sg8qnjOg
 */
-export const goldenRatioSketch = (p5: P5CanvasInstance) => {
+export const goldenRatioSketch = (p5: P5CanvasInstance<Props>) => {
   const minSeedCount = 200;
   const maxSeedCount = 1350;
   let seedCount = maxSeedCount;
@@ -24,7 +27,7 @@ export const goldenRatioSketch = (p5: P5CanvasInstance) => {
     p5.noStroke();
   };
 
-  p5.updateWithProps = (props: any) => {
+  p5.updateWithProps = (props: Props) => {
     if (props.screenWidth) {
       p5.setup();
     }

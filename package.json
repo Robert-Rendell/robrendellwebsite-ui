@@ -32,7 +32,8 @@
     "lint": "eslint ./src",
     "format": "prettier -w ./src",
     "update-common": "npm install robrendellwebsite-common",
-    "backend": "cd ../robrendellwebsite/ && npm run dev"
+    "backend": "cd ../robrendellwebsite/ && npm run dev",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
