@@ -1,7 +1,7 @@
-import { P5Instance } from "react-p5-wrapper";
+import { P5CanvasInstance } from "react-p5-wrapper";
 
 export const goldenSpiralAuthor = "https://editor.p5js.org/ktorn/sketches";
-export const fibonacciSketch = (p5: P5Instance) => {
+export const fibonacciSketch = (p5: P5CanvasInstance) => {
   let size: number;
   let selected = 8;
 

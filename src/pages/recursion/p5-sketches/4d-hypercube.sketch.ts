@@ -1,4 +1,4 @@
-import { P5Instance } from "react-p5-wrapper";
+import { P5CanvasInstance } from "react-p5-wrapper";
 // Daniel Shiffman
 // http://youtube.com/thecodingtrain
 // http://codingtra.in
@@ -15,7 +15,7 @@ type Props = {
   screenWidth: number;
 };
 
-export const TesseractHypercube4dSketch = (p5: P5Instance<Props>) => {
+export const TesseractHypercube4dSketch = (p5: P5CanvasInstance<Props>) => {
   type Vector = ReturnType<typeof p5.createVector>;
   class P4Vector {
     constructor(
