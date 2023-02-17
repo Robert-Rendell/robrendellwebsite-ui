@@ -2,7 +2,7 @@
 // http://codingtra.in
 // http://patreon.com/codingtrain
 
-import { P5Instance } from "react-p5-wrapper";
+import { P5CanvasInstance } from "react-p5-wrapper";
 
 // Game of Life
 // Video: https://youtu.be/FWSR_7kZuYg
@@ -12,7 +12,7 @@ type Props = {
   screenWidth: number;
 };
 
-const gameOfLifeSketch = (p5: P5Instance<Props>) => {
+const gameOfLifeSketch = (p5: P5CanvasInstance<Props>) => {
   function make2DArray(cols: number, rows: number) {
     const arr = new Array(cols);
     for (let i = 0; i < arr.length; i++) {
@@ -41,7 +41,7 @@ const gameOfLifeSketch = (p5: P5Instance<Props>) => {
     }
   };
 
-  p5.updateWithProps = (props) => {
+  p5.updateWithProps = (props: Props) => {
     if (props.onReady) {
       props.onReady();
       delete props.onReady;

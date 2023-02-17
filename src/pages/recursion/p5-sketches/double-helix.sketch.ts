@@ -1,11 +1,11 @@
-import { P5Instance } from "react-p5-wrapper";
+import { P5CanvasInstance } from "react-p5-wrapper";
 
 type Props = {
   screenWidth: number;
   onReady: (() => void) | undefined;
 };
 
-const doubleHelixSketch = (p5: P5Instance<Props>) => {
+const doubleHelixSketch = (p5: P5CanvasInstance<Props>) => {
   let CircleNum: number;
   const Diameter = 10;
   let width = 480;
@@ -16,7 +16,7 @@ const doubleHelixSketch = (p5: P5Instance<Props>) => {
     CircleNum = 100;
   };
 
-  p5.updateWithProps = (props) => {
+  p5.updateWithProps = (props: Props) => {
     if (!firstDraw && props.onReady) {
       props.onReady();
       delete props.onReady;

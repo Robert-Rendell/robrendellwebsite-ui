@@ -1,5 +1,4 @@
 import React from "react";
-import { CopyBlock, dracula } from "react-code-blocks";
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import {
   starRecursiveFnCode,
@@ -352,24 +351,20 @@ export const RecursionAndFractalsPage = () => {
               <u>Recursive approach</u>: <b>starRecursiveFn(5)</b> ={" "}
               {starRecursiveFn(5)}
             </p>
-            <CopyBlock
-              text={starRecursiveFnCode}
-              theme={dracula}
-              language={"typescript"}
-              showLineNumbers={false}
-              wrapLines
-            />
+            <code>
+              <pre>
+                {starRecursiveFnCode}
+              </pre>
+            </code>
             <p>
               <u>Iterative approach</u>: <b>starIterativeFn(5)</b> ={" "}
               {starIterativeFn(5)}
             </p>
-            <CopyBlock
-              text={starIterativeFnCode}
-              theme={dracula}
-              language={"typescript"}
-              showLineNumbers={false}
-              wrapLines
-            />
+            <code>
+              <pre>
+                {starIterativeFnCode}
+              </pre>
+            </code>
           </div>
         </MusicScrollDownMessage>
       </div>

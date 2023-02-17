@@ -1,10 +1,10 @@
-import { P5Instance } from "react-p5-wrapper";
+import { P5CanvasInstance } from "react-p5-wrapper";
 
 type Props = {
   screenWidth: number;
 };
 
-const bifurcationDiagramSketch = (p5: P5Instance<Props>) => {
+const bifurcationDiagramSketch = (p5: P5CanvasInstance<Props>) => {
   let bf: Bifurcation;
   let width: number;
 

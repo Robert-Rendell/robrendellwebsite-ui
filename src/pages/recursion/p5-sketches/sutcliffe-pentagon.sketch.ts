@@ -1,13 +1,13 @@
 // https://github.com/tex2e/p5js-pentagon/blob/master/js/main.js
 
-import { P5Instance } from "react-p5-wrapper";
+import { P5CanvasInstance } from "react-p5-wrapper";
 
 type Props = {
   onReady?: () => void;
   screenWidth: number;
 };
 
-const sutcliffePentagonSketch = (p5: P5Instance<Props>) => {
+const sutcliffePentagonSketch = (p5: P5CanvasInstance<Props>) => {
   const maxWidth = 500;
   let width = maxWidth;
   const Settings = {
@@ -167,7 +167,7 @@ const sutcliffePentagonSketch = (p5: P5Instance<Props>) => {
     drawFractal();
   };
 
-  p5.updateWithProps = (props) => {
+  p5.updateWithProps = (props: any) => {
     if (props.onReady) {
       props.onReady();
       delete props.onReady;
