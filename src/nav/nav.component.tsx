@@ -8,7 +8,6 @@ import "./nav.component.css";
 import { SharedRoutes } from "../common/shared-routes";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import { TechIconsComponent } from "../components/tech-icons.component";
-import { useKnockKnock } from "../hooks/use-knock-knock.hook";
 import { usePreferences } from "../hooks/use-preferences.hook";
 
 export const NavComponent = () => {
