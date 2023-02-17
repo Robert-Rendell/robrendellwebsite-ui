@@ -352,14 +352,18 @@ export const RecursionAndFractalsPage = () => {
               {starRecursiveFn(5)}
             </p>
             <code>
-              {starRecursiveFnCode}
+              <pre>
+                {starRecursiveFnCode}
+              </pre>
             </code>
             <p>
               <u>Iterative approach</u>: <b>starIterativeFn(5)</b> ={" "}
               {starIterativeFn(5)}
             </p>
             <code>
-              {starIterativeFnCode}
+              <pre>
+                {starIterativeFnCode}
+              </pre>
             </code>
           </div>
         </MusicScrollDownMessage>
