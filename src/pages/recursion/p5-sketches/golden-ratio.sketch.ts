@@ -2,7 +2,7 @@ import { P5CanvasInstance } from "react-p5-wrapper";
 
 type Props = {
   screenWidth: number;
-}
+};
 /*
   Tutorial by me :)
     https://www.youtube.com/watch?v=RrSOv9FH6uo
