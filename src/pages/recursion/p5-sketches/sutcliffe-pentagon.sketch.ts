@@ -167,7 +167,7 @@ const sutcliffePentagonSketch = (p5: P5CanvasInstance<Props>) => {
     drawFractal();
   };
 
-  p5.updateWithProps = (props: any) => {
+  p5.updateWithProps = (props: Props) => {
     if (props.onReady) {
       props.onReady();
       delete props.onReady;
