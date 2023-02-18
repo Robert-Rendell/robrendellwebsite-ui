@@ -26,7 +26,8 @@ export function SudokuCellComponent(props: Props) {
     return `${inputName}${createSudokuInputName(row, col)}`;
   }
   function keyDown(event: React.KeyboardEvent<HTMLInputElement>) {
-    if (event.key === "Enter" || event.key === "Tab") {
+    if (/[1-9]/.test(event.key)) {
+      event.currentTarget.value = event.key;
       document.getElementById(getId())?.blur();
     }
     props.keyDownFn(props.row, props.column);
@@ -36,15 +37,17 @@ export function SudokuCellComponent(props: Props) {
     return createSudokuInputId("sudoku-input", props.row, props.column);
   }
 
-  function getClassName() {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+  function useClassName() {
     return useMemo(() => {
       let className = "sudoku-input";
       if (props.invalid) {
         className += " sudoku-cell-invalid";
       }
+      if (isDisabled()) {
+        className += " sudoku-input-disabled";
+      }
       return className;
-    }, [props.invalid]);
+    }, [props.invalid, props.disabled]);
   }
 
   return (
@@ -54,7 +57,7 @@ export function SudokuCellComponent(props: Props) {
         name={createSudokuInputName(props.row, props.column)}
         type="number"
         defaultValue={getCellValue()}
-        className={getClassName()}
+        className={useClassName()}
         onKeyDown={keyDown}
         disabled={isDisabled()}
         max={99}
