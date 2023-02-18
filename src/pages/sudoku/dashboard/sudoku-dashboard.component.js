@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import InfinitySpinner from "../../../resources/infinity-spinner.svg";
 import "./sudoku-dashboard.component.css";
+import { InfinitySpinnerComponent } from "../../../components/infinity-spinner.component";
 
 class SudokuDashboardComponent extends React.Component {
   constructor(props) {
@@ -246,17 +247,20 @@ class SudokuDashboardComponent extends React.Component {
         </div>
         <hr />
         <h2>Play Sudoku</h2>
-        <Table striped bordered hover variant="dark">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Difficulty</th>
-              <th>Generated</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>{recentSudokus}</tbody>
-        </Table>
+        {recentSudokus.length > 0 && (
+          <Table striped bordered hover variant="dark">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Difficulty</th>
+                <th>Generated</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>{recentSudokus}</tbody>
+          </Table>
+        )}
+        {recentSudokus.length === 0 && <InfinitySpinnerComponent />}
         <hr />
         <h2>Pinned Sudokus: for those who are competitive!</h2>
         <Table striped bordered hover variant="dark">

@@ -119,7 +119,8 @@ export function SudokuGameComponent(props: Props) {
 
   function getSubmitterName(promptMessage: string) {
     if (submitterName.length === 0) {
-      const submitterName = prompt(promptMessage, preferences?.sudoku?.submitterName) || "";
+      const submitterName =
+        prompt(promptMessage, preferences?.sudoku?.submitterName) || "";
       setSubmitterName(submitterName);
       savePreferences({ sudoku: { submitterName } });
     }
