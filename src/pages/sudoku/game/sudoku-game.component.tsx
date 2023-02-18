@@ -16,6 +16,7 @@ import { KeyDownInCellFn } from "./cell/sudoku-cell.component";
 import { Check, X } from "react-bootstrap-icons";
 import { FullScreenToggleComponent } from "../../../components/full-screen-toggle.component";
 import { RobBackButton } from "../../../components/back-button.component";
+import { usePreferences } from "../../../hooks/use-preferences.hook";
 
 const SudokuGameComponents = {
   Div: {
@@ -31,6 +32,7 @@ type Props = {
   sudokuId?: string;
 };
 export function SudokuGameComponent(props: Props) {
+  const { preferences, savePreferences } = usePreferences();
   const sudokuGrid = useRef<SudokuGrid | undefined>();
   const validationMessage = useRef<string>("");
   const [submitting, setSubmitting] = useState<boolean>(false);
@@ -117,8 +119,9 @@ export function SudokuGameComponent(props: Props) {
 
   function getSubmitterName(promptMessage: string) {
     if (submitterName.length === 0) {
-      const submitterName = prompt(promptMessage);
-      setSubmitterName(submitterName || "");
+      const submitterName = prompt(promptMessage, preferences?.sudoku?.submitterName) || "";
+      setSubmitterName(submitterName);
+      savePreferences({ sudoku: { submitterName } });
     }
   }
 
