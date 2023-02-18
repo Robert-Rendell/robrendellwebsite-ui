@@ -159,7 +159,7 @@ class SudokuDashboardComponent extends React.Component {
               `No response yet, retrying (attempt no.${this.state.retries})...`
             );
           } else {
-            this.this.setSudokuResult("Sudoku Generation timed out.");
+            this.setSudokuResult("Sudoku Generation timed out.");
           }
         }
       })
