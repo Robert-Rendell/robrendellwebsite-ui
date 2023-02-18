@@ -149,7 +149,7 @@ class SudokuDashboardComponent extends React.Component {
           const sudokuId = response.data[0]["sudokuId"];
           this.sudokuGenerated(sudokuId);
         } else {
-          if (this.state.retries < 1) {
+          if (this.state.retries < 2) {
             this.setState({ retries: this.state.retries + 1 });
             this.checkGenerationLoop = setInterval(
               () => this.checkSudokuGeneration(),
@@ -159,7 +159,7 @@ class SudokuDashboardComponent extends React.Component {
               `No response yet, retrying (attempt no.${this.state.retries})...`
             );
           } else {
-            this.this.setSudokuResult("Sudoku Generation timed out.");
+            this.setSudokuResult("Sudoku Generation timed out.");
           }
         }
       })
