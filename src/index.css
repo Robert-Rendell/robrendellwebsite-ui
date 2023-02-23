@@ -53,3 +53,8 @@ code {
   color: limegreen;
   cursor: pointer;
 }
+
+.home-page-img {
+  width: 125px;
+  height: 94px;
+}

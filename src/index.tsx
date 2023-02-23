@@ -5,7 +5,6 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import reportWebVitals from "./reportWebVitals";
-import App from "./app/App.component";
 import { HomePage } from "./pages/home/home.page";
 import SudokuDashboardComponent from "./pages/sudoku/dashboard/sudoku-dashboard.component";
 import { SudokuGameComponent } from "./pages/sudoku/game/sudoku-game.component";
@@ -75,6 +74,7 @@ import { NobelPrizePage } from "./pages/misc/nobel-prize.page";
 import { BestMandelbrotZoomsPage } from "./pages/recursion/best-mandelbrot-zooms.page";
 import { FractalForumsPage } from "./pages/recursion/fractalforums.page";
 import { MidJourney } from "./pages/misc/midjourney.page";
+import { NavComponent } from "./nav/nav.component";
 
 const maintenanceMode = false;
 
@@ -89,7 +89,7 @@ ReactDOM.render(
     ) : (
       <div>
         <BrowserRouter>
-          <App />
+          <NavComponent />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route
