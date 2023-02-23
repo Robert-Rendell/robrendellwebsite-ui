@@ -5,6 +5,7 @@ import {
   OperationsDashboardResponse,
   PageViewerDocument,
 } from "robrendellwebsite-common";
+import { authorizationHeader } from "../../common/auth-headers";
 import { config } from "../../config";
 
 export function useOpsDashboard(request: OperationsDashboardRequest) {
@@ -13,10 +14,18 @@ export function useOpsDashboard(request: OperationsDashboardRequest) {
   >();
   useEffect(() => {
     axios
-      .post<OperationsDashboardResponse>(`${config.backend}/operations`, {
-        headers: { "Content-Type": "application/json" },
-        pageUrls: request.pageUrls,
-      })
+      .post<OperationsDashboardResponse>(
+        `${config.backend}/operations`,
+        {
+          pageUrls: request.pageUrls,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            ...authorizationHeader.headers,
+          },
+        }
+      )
       .then((res) => {
         setPageViews(res.data.pageViews);
       });
