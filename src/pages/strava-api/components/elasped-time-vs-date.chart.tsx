@@ -100,7 +100,10 @@ class ElapsedTimeVsDateChart extends React.Component<any> {
       "Rendering elapsed time vs date chart - [" + this.props.title + "]"
     );
     return (
-      <DashboardChart title={this.props.title} options={this.buildGraph()} />
+      <>
+        <h2>{this.props.title}</h2>
+        <DashboardChart title={this.props.title} options={this.buildGraph()} />
+      </>
     );
   }
 }
