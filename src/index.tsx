@@ -9,7 +9,6 @@ import { HomePage } from "./pages/home/home.page";
 import SudokuDashboardComponent from "./pages/sudoku/dashboard/sudoku-dashboard.component";
 import { SudokuGameComponent } from "./pages/sudoku/game/sudoku-game.component";
 import UniDataVisualiserComponent from "./pages/technical-tests/291121/uni-data-visualiser.component";
-import StravaDashboardComponent from "./pages/strava-api/strava-dashboard.component";
 import { BifurcationLogisticalPage } from "./pages/recursion/bifurcation-logistical.page";
 import { RuminantsPage } from "./pages/climate-change/ruminants.page";
 import { RideABikePage } from "./pages/climate-change/ride-a-bike.page";
@@ -75,6 +74,7 @@ import { BestMandelbrotZoomsPage } from "./pages/recursion/best-mandelbrot-zooms
 import { FractalForumsPage } from "./pages/recursion/fractalforums.page";
 import { MidJourney } from "./pages/misc/midjourney.page";
 import { NavComponent } from "./nav/nav.component";
+import { StravaDashboardHistoricalComponent } from "./pages/strava-api/strava-dashboard-historical.component";
 
 const maintenanceMode = false;
 
@@ -365,7 +365,10 @@ ReactDOM.render(
             />
 
             {/* //////////////////////////////////// */}
-            <Route path="strava-api" element={<StravaDashboardComponent />} />
+            <Route
+              path="strava-api"
+              element={<StravaDashboardHistoricalComponent />}
+            />
           </Routes>
           <RobRendellFooterComponent />
         </BrowserRouter>
