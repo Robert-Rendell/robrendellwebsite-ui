@@ -153,6 +153,12 @@ export const NavComponent = () => {
               >
                 Midjourney AI
               </NavDropdown.Item>
+              <NavDropdown.Item
+                className={centredOnMobile}
+                href={SharedRoutes.StravaAPI.Historical}
+              >
+                Strava Historical Stats
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown

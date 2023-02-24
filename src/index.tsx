@@ -366,7 +366,7 @@ ReactDOM.render(
 
             {/* //////////////////////////////////// */}
             <Route
-              path="strava-api"
+              path={SharedRoutes.StravaAPI.Historical}
               element={<StravaDashboardHistoricalComponent />}
             />
           </Routes>

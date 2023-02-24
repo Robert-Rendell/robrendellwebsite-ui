@@ -5,15 +5,16 @@ import DistanceVsDateChart from "./components/distance-vs-date.chart";
 import ElapsedTimeVsDateChart from "./components/elasped-time-vs-date.chart";
 import { useHistoricalStravaData } from "./hooks/useHistoricalStravaData.hook";
 import "./components/dashboard.chart.css";
+import "../page.css";
 
 export function StravaDashboardHistoricalComponent() {
   const [stravaGraphs] = useHistoricalStravaData();
-  console.log(stravaGraphs);
   return (
-    <>
-      {!stravaGraphs && <InfinitySpinnerComponent/>}
+    <div className="standard-page-margins standard-page-styling">
+      <h1>Historical Strava Charts</h1>
+      {!stravaGraphs && <InfinitySpinnerComponent />}
       {stravaGraphs && (
-        <div id="historical-stats-container">
+        <>
           <DateRangeChart
             series={stravaGraphs.accumulated_monthly_run_miles_graph}
             yAxisText="Miles"
@@ -74,8 +75,8 @@ export function StravaDashboardHistoricalComponent() {
             subtitle="20km"
             type="spline"
           />
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 }
