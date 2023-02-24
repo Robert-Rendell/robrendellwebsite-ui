@@ -316,7 +316,9 @@ class SudokuDashboardComponent extends React.Component {
         <hr />
         <b>Progress Updates:</b>
         <p>
-          - 04/02/23 @ 14.22 - Converted Sudoku game from [
+          - 25/02/23 @ 11.05 - Added notes feature to sudoku grid to aid with
+          number pairing; added times validated on leaderboard.
+          <br />- 04/02/23 @ 14.22 - Converted Sudoku game from [
           <code>JavaScript</code> / <code>React (classes)</code>/{" "}
           <code>OO programming</code>] to [<code>TypeScript</code> /{" "}
           <code>React Hooks</code> /<code>functional programming</code>]
