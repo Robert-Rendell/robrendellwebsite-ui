@@ -88,4 +88,7 @@ export const SharedText: RobRendellWebsiteModel = {
       WildFlowers: "Wild Flowers / Garden Flowers",
     },
   },
+  StravaAPI: {
+    Historical: "Strava API: Historical Stats",
+  },
 };

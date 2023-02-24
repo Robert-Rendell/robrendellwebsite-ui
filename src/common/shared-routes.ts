@@ -87,4 +87,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
       WildFlowers: "/photos-ive-taken/nature/wild-flowers",
     },
   },
+  StravaAPI: {
+    Historical: "/strava-api/historical",
+  },
 };
