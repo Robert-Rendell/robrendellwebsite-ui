@@ -12,6 +12,9 @@ export function StravaDashboardHistoricalComponent() {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>Historical Strava Charts</h1>
+      <p>
+        I got injured in 2021 which ruined my motivation and confidence!
+      </p>
       {!stravaGraphs && <InfinitySpinnerComponent />}
       {stravaGraphs && (
         <>
