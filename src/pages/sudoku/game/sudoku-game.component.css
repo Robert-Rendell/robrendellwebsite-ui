@@ -120,3 +120,16 @@ td {
 .no-scroll::-webkit-scrollbar {
   display: none;
 }
+
+.notes-mode-button-enabled {
+  background: transparent;
+}
+
+#sudoku-top-buttons {
+  position: relative;
+}
+
+#notes-mode-button {
+  position: absolute;
+  right: 0%;
+}

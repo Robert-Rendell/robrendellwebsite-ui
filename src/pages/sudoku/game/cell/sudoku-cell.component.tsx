@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import "./sudoku-cell.component.css";
 
 type Props = {
@@ -7,12 +7,16 @@ type Props = {
   column: number;
   disabled?: boolean;
   invalid?: boolean;
+  notesMode?: boolean;
   keyDownFn: KeyDownInCellFn;
 };
 
 export type KeyDownInCellFn = (row: number, col: number) => void;
 
+const maxNotesLength = 4;
+
 export function SudokuCellComponent(props: Props) {
+  const [notes, setNotes] = useState<string[]>([]);
   function getCellValue() {
     return parseInt(`${props.cell}`) > 0 ? props.cell : "";
   }
@@ -26,9 +30,22 @@ export function SudokuCellComponent(props: Props) {
     return `${inputName}${createSudokuInputName(row, col)}`;
   }
   function keyDown(event: React.KeyboardEvent<HTMLInputElement>) {
-    if (/[1-9]/.test(event.key)) {
-      event.currentTarget.value = event.key;
-      document.getElementById(getId())?.blur();
+    if (/[123456789]/.test(event.key)) {
+      if (props.notesMode) {
+        if (notes.length < maxNotesLength) {
+          notes.push(event.key);
+        }
+        event.preventDefault();
+      } else {
+        document.getElementById(getId())?.blur();
+        event.currentTarget.value = event.key;
+      }
+    }
+    if (event.key === "Backspace" && props.notesMode) {
+      setNotes(notes.slice(0, -1));
+    }
+    if (event.key === "Enter") {
+      event.currentTarget.blur();
     }
     props.keyDownFn(props.row, props.column);
   }
@@ -51,7 +68,7 @@ export function SudokuCellComponent(props: Props) {
   }
 
   return (
-    <td>
+    <td className="sudoku-cell-td">
       <input
         id={getId()}
         name={createSudokuInputName(props.row, props.column)}
@@ -62,6 +79,18 @@ export function SudokuCellComponent(props: Props) {
         disabled={isDisabled()}
         max={99}
       />
+      <span id="sudoku-note-tl" className="sudoku-note">
+        {notes[0]}
+      </span>
+      <span id="sudoku-note-tr" className="sudoku-note">
+        {notes[1]}
+      </span>
+      <span id="sudoku-note-bl" className="sudoku-note">
+        {notes[2]}
+      </span>
+      <span id="sudoku-note-br" className="sudoku-note">
+        {notes[3]}
+      </span>
     </td>
   );
 }

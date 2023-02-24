@@ -13,7 +13,7 @@ import { SudokuBoardComponent } from "./board/sudoku-board.component";
 import "./sudoku-game.component.css";
 import { SudokuValidationIssue } from "robrendellwebsite-common";
 import { KeyDownInCellFn } from "./cell/sudoku-cell.component";
-import { Check, X } from "react-bootstrap-icons";
+import { Check, X, Pen, PenFill } from "react-bootstrap-icons";
 import { FullScreenToggleComponent } from "../../../components/full-screen-toggle.component";
 import { RobBackButton } from "../../../components/back-button.component";
 import { usePreferences } from "../../../hooks/use-preferences.hook";
@@ -36,6 +36,7 @@ export function SudokuGameComponent(props: Props) {
   const sudokuGrid = useRef<SudokuGrid | undefined>();
   const validationMessage = useRef<string>("");
   const [submitting, setSubmitting] = useState<boolean>(false);
+  const [notesMode, setNotesMode] = useState<boolean>(false);
   const [validationIssues, setValidationIssues] = useState<
     SudokuValidationIssue[]
   >([]);
@@ -145,7 +146,7 @@ export function SudokuGameComponent(props: Props) {
               </div>
             ) : (
               <>
-                <div style={{ marginBottom: "4px" }}>
+                <div id="sudoku-top-buttons" style={{ marginBottom: "4px" }}>
                   <RobBackButton backTwo />
                   <FullScreenToggleComponent
                     path={window.location.pathname
@@ -153,6 +154,13 @@ export function SudokuGameComponent(props: Props) {
                       .slice(0, -1)
                       .join("/")}
                   />
+                  <Button
+                    id="notes-mode-button"
+                    className={notesMode ? "notes-mode-button-enabled" : ""}
+                    onClick={() => setNotesMode(!notesMode)}
+                  >
+                    {notesMode ? <Pen /> : <PenFill />}
+                  </Button>
                 </div>
                 <Table striped bordered>
                   <tbody id={SudokuGameComponents.Div.SudokuBoard}>
@@ -161,6 +169,7 @@ export function SudokuGameComponent(props: Props) {
                       sudokuBoard={sudokuBoard}
                       disabled={disabled}
                       cellKeyDownFn={keyDownInCell}
+                      notesMode={notesMode}
                     />
                   </tbody>
                 </Table>

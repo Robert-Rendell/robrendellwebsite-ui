@@ -11,6 +11,7 @@ type Props = {
   disabled: boolean;
   validationIssues?: SudokuValidationIssue[];
   cellKeyDownFn: KeyDownInCellFn;
+  notesMode: boolean;
 };
 
 export function SudokuBoardComponent(props: Props) {
@@ -33,6 +34,7 @@ export function SudokuBoardComponent(props: Props) {
                   )
                 )}
                 keyDownFn={props.cellKeyDownFn}
+                notesMode={props.notesMode}
               />
             );
           })}
