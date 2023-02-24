@@ -6,15 +6,19 @@ import ElapsedTimeVsDateChart from "./components/elasped-time-vs-date.chart";
 import { useHistoricalStravaData } from "./hooks/useHistoricalStravaData.hook";
 import "./components/dashboard.chart.css";
 import "../page.css";
+import { useWindowSize } from "../../hooks/use-window-size.hook";
 
 export function StravaDashboardHistoricalComponent() {
   const [stravaGraphs] = useHistoricalStravaData();
+  const windowSize = useWindowSize();
+  const width = windowSize[0] - 40;
+
+  const onMobile = width < 600;
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>Historical Strava Charts</h1>
-      <p>
-        I got injured in 2021 which ruined my motivation and confidence!
-      </p>
+      <p>I got injured in 2021 which ruined my motivation and confidence!</p>
+      {onMobile && <p>This page is best viewed landscape!</p>}
       {!stravaGraphs && <InfinitySpinnerComponent />}
       {stravaGraphs && (
         <>
