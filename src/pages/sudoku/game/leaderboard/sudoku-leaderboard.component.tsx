@@ -15,10 +15,11 @@ export function SudokuLeaderboardComponent(props: Props) {
         <tr key={`leaderboard-entry-${index}`}>
           <td>{index + 1}</td>
           <td>
-            {new Date(item.dateSubmitted).toUTCString().replace("GMT", "")}
+            {new Date(item.dateCompleted || (item as any).dateSubmitted).toUTCString().replace("GMT", "")}
           </td>
           <td>{item.submitterName || "anonymous"}</td>
           <td>{convertMsToMinsSecs(item.timeTakenMs)}</td>
+          <td>{item.timesValidated || "-"}</td>
         </tr>
       );
     });
@@ -32,6 +33,7 @@ export function SudokuLeaderboardComponent(props: Props) {
               <th>Date</th>
               <th>Name</th>
               <th>Time</th>
+              <th>Checks</th>
             </tr>
           </thead>
           <tbody>{leaderboardEntries}</tbody>
