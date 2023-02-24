@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { SharedRoutes } from "../common/shared-routes";
 import { usePreferences } from "../hooks/use-preferences.hook";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import Northumberland from "../resources/flag-of-northumberland.svg";
@@ -11,8 +12,19 @@ export function RobRendellFooterComponent() {
   const isFullScreen =
     preferences?.fullscreen &&
     window.location.pathname.includes(preferences.fullscreen);
+
+  const matrixTheme = useMemo(
+    () =>
+      window.location.pathname.includes(
+        SharedRoutes.Neurochemistry.LandingPage
+      ),
+    []
+  );
+
   return !isFullScreen ? (
-    <div>
+    <div
+      style={matrixTheme ? { background: "black" } : { background: "#282c34" }}
+    >
       <div className="centred">
         <img
           src={Northumberland}
