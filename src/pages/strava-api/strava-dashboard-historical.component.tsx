@@ -30,7 +30,7 @@ export function StravaDashboardHistoricalComponent() {
           />
 
           <DistanceVsDateChart
-            series={stravaGraphs.big_rides_this_year}
+            series={stravaGraphs.big_rides_2021}
             yAxisText="Distance (m)"
             title="Long cycles 2021 - over 20km"
             seriesName="2021"
@@ -41,10 +41,21 @@ export function StravaDashboardHistoricalComponent() {
           />
 
           <DistanceVsDateChart
-            series={stravaGraphs.big_rides_last_year}
+            series={stravaGraphs.big_rides_2020}
             yAxisText="Distance (m)"
             title="Long cycles 2020 - over 20km"
             seriesName="2020"
+            colour="green"
+            xAxis="date"
+            type="scatter"
+            crosshair="both"
+          />
+
+          <DistanceVsDateChart
+            series={stravaGraphs.big_rides_2019}
+            yAxisText="Distance (m)"
+            title="Long cycles 2019 - over 20km"
+            seriesName="2019"
             colour="green"
             xAxis="date"
             type="scatter"

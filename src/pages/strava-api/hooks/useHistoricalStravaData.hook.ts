@@ -6,7 +6,7 @@ export function useHistoricalStravaData() {
   useEffect(() => {
     axios
       .get<any>(
-        "https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/strava-dashboard-graphs-2020-21.json",
+        "https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/strava-dashboard-graphs-2019-2021.json",
         { headers: { "Content-Type": "application/json" } }
       )
       .then(
