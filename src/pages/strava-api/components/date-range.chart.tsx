@@ -49,7 +49,6 @@ class DateRangeChart extends React.Component<any> {
     console.log("Rendering date range chart - [" + this.props.title + "]");
     return (
       <>
-        <h2>{this.props.title}</h2>
         <DashboardChart title={this.props.title} options={this.buildGraph()} />
       </>
     );
