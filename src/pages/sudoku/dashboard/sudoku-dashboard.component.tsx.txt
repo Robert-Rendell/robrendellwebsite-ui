@@ -1,0 +1,143 @@
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { config } from "../../../config";
+
+interface SudokuGenerationResponse {
+  generationJobId?: string;
+}
+
+interface SudokuRecord {
+  dateGenerated: string;
+  puzzle: string;
+  solution: string;
+}
+
+interface DashboardProps {}
+
+type Filters = {
+    generatorJobId: string;
+  };
+  
+  type Response = {
+    data: {
+      sudokuId: string;
+    }[];
+  };
+
+const SudokuDashboardComponent: React.FC<DashboardProps> = () => {
+  const [generationJobId, setGenerationJobId] = useState<string>();
+  const [retries, setRetries] = useState<number>(0);
+  const [recentSudokus, setRecentSudokus] = useState<SudokuRecord[]>([]);
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+
+  const generateSudoku = (difficulty: string) => {
+    toggleGenerating(true);
+    axios
+      .post<SudokuGenerationResponse>(`${config.backend}/sudoku/add`, {
+        headers: { "Content-Type": "application/json" },
+        roberto: "testing",
+        difficulty,
+        generatorUserName: "implement on front end",
+      })
+      .then((response) => {
+        const generationJobId = response.data?.generationJobId;
+        if (!generationJobId) {
+          console.error("There was a problem getting the generationJobId");
+          return;
+        }
+        if (checkGenerationLoop) {
+          console.error("Already checking for a generation...");
+          return;
+        }
+        watchSudokuGeneration();
+        console.log("Job Id: " + generationJobId);
+        setGenerationJobId(generationJobId);
+        setSudokuResult(`Generating ${difficulty} sudoku...`);
+      })
+      .catch((reason) => {
+        console.error(reason);
+      });
+  };
+
+  const generateEasySudoku = () => {
+    generateSudoku("easy");
+  };
+  const generateMediumSudoku = () => {
+    generateSudoku("medium");
+  };
+  const generateHardSudoku = () => {
+    generateSudoku("hard");
+  };
+  const generateVeryHardSudoku = () => {
+    generateSudoku("very-hard");
+  };
+
+  const toggleGenerating = (toggle: boolean) => {
+    setIsGenerating(toggle);
+    // document.getElementById(SudokuDashboardComponent.Button.Easy).disabled = toggle;
+    // document.getElementById(SudokuDashboardComponent.Button.Medium).disabled = toggle;
+    // document.getElementById(SudokuDashboardComponent.Button.Hard).disabled = toggle;
+    // document.getElementById(SudokuDashboardComponent.Button.VeryHard).disabled = toggle;
+  };
+
+
+
+  const useCheckSudokuGeneration = (generationJobId: string): void => {
+    const [retries, setRetries] = useState(0);
+
+    useEffect(() => {
+      let checkGenerationLoop: NodeJS.Timeout;
+
+      const fetchSudoku = async () => {
+        try {
+          const response = await axios.post<Response>(
+            `${config.backend}/sudoku/list`,
+            {
+              headers: { "Content-Type": "application/json" },
+              filters: { generatorJobId },
+              generatorUserName: "implement on front end",
+            }
+          );
+
+          if (response.data.length > 0) {
+            const sudokuId = response.data[0].sudokuId;
+            sudokuGenerated(sudokuId);
+          } else {
+            if (retries < 2) {
+              setRetries(retries + 1);
+              checkGenerationLoop = setInterval(
+                () => fetchSudoku(),
+                10000
+              );
+              setSudokuResult(
+                `No response yet, retrying (attempt no.${retries + 1})...`
+              );
+            } else {
+              setSudokuResult("Sudoku Generation timed out.");
+            }
+          }
+        } catch (error) {
+          console.error(error);
+        }
+        clearTimeout(checkGenerationLoop);
+      };
+
+      fetchSudoku();
+
+      return () => {
+        clearTimeout(checkGenerationLoop);
+      };
+    }, [generationJobId, retries]);
+
+    const sudokuGenerated = (sudokuId: string) => {
+    // handle sudokuId here
+    };
+
+    const setSudokuResult = (result: string) => {
+    // handle setSudokuResult here
+    };
+  };
+
+
+  return (<></>);
+};

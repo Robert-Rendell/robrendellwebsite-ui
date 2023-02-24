@@ -5,6 +5,7 @@
   color: blue;
   text-align: center;
   background-color: transparent;
+  z-index: 1;
 }
 
 .sudoku-input-disabled {
@@ -25,4 +26,33 @@ input[type="number"]::-webkit-outer-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.sudoku-note {
+  font-size: small;
+  position: absolute;
+  background-color: transparent;
+  color: grey;
+}
+
+#sudoku-note-tl {
+  left: 0%;
+  top: 0%;
+}
+
+#sudoku-note-bl {
+  left: 0%;
+  bottom: 0%;
+}
+
+#sudoku-note-tr {
+  top: 0%;
+}
+
+#sudoku-note-br {
+  bottom: 0%;
+}
+
+.sudoku-cell-td {
+  position: relative;
 }
