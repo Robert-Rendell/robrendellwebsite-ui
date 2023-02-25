@@ -104,7 +104,6 @@ export function InterestingDatesInHistoryPage() {
           </Table>
         </>
       )}
-      ;
     </div>
   );
 }
