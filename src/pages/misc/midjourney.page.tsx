@@ -6,7 +6,7 @@ import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { NewTabLink } from "../../components/new-tab-link.component";
 
-export function MidJourney() {
+export function MidJourneyPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   usePageView(SharedRoutes.Miscellaneous.Midjourney);
