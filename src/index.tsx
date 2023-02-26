@@ -72,9 +72,10 @@ import { PhilosophyPage } from "./pages/misc/philosophy.page";
 import { NobelPrizePage } from "./pages/misc/nobel-prize.page";
 import { BestMandelbrotZoomsPage } from "./pages/recursion/best-mandelbrot-zooms.page";
 import { FractalForumsPage } from "./pages/recursion/fractalforums.page";
-import { MidJourney } from "./pages/misc/midjourney.page";
+import { MidJourneyPage } from "./pages/misc/midjourney.page";
 import { NavComponent } from "./nav/nav.component";
 import { StravaDashboardHistoricalComponent } from "./pages/strava-api/strava-dashboard-historical.component";
+import { JamesWebbTelescopePage } from "./pages/misc/james-webb-telescope.page";
 
 const maintenanceMode = false;
 
@@ -334,7 +335,11 @@ ReactDOM.render(
             />
             <Route
               path={SharedRoutes.Miscellaneous.Midjourney}
-              element={<MidJourney />}
+              element={<MidJourneyPage />}
+            />
+            <Route
+              path={SharedRoutes.Miscellaneous.JamesWebbTelescope}
+              element={<JamesWebbTelescopePage />}
             />
             {/* //////////////////////////////////// */}
             <Route

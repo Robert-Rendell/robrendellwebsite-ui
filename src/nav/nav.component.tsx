@@ -159,6 +159,12 @@ export const NavComponent = () => {
               >
                 Strava Historical Stats
               </NavDropdown.Item>
+              <NavDropdown.Item
+                className={centredOnMobile}
+                href={SharedRoutes.Miscellaneous.JamesWebbTelescope}
+              >
+                James Webb Telescope
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
