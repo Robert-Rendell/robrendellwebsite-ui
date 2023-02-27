@@ -22,6 +22,7 @@ export type RobRendellWebsiteModel = {
     NobelPrize: string;
     Midjourney: string;
     JamesWebbTelescope: string;
+    PaintingsAndArt: string;
   };
   PhotosIveTaken: {
     Nature: {

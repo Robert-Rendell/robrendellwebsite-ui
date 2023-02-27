@@ -21,6 +21,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     NobelPrize: "/miscellaneous/nobel-prize",
     Midjourney: "/miscellaneous/midjourney-ai",
     JamesWebbTelescope: "/miscellaneous/james-webb-telescope",
+    PaintingsAndArt: "/miscellaneous/paintings-and-art",
   },
   Biomagnetism: {
     LandingPage: "/biomagnetism",

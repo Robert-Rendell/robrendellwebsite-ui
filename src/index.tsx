@@ -76,6 +76,7 @@ import { MidJourneyPage } from "./pages/misc/midjourney.page";
 import { NavComponent } from "./nav/nav.component";
 import { StravaDashboardHistoricalComponent } from "./pages/strava-api/strava-dashboard-historical.component";
 import { JamesWebbTelescopePage } from "./pages/misc/james-webb-telescope.page";
+import { PaintingAndArt } from "./pages/misc/paintings-and-art.page";
 
 const maintenanceMode = false;
 
@@ -340,6 +341,10 @@ ReactDOM.render(
             <Route
               path={SharedRoutes.Miscellaneous.JamesWebbTelescope}
               element={<JamesWebbTelescopePage />}
+            />
+            <Route
+              path={SharedRoutes.Miscellaneous.JamesWebbTelescope}
+              element={<PaintingAndArt />}
             />
             {/* //////////////////////////////////// */}
             <Route

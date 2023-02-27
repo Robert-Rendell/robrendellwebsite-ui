@@ -165,6 +165,12 @@ export const NavComponent = () => {
               >
                 James Webb Telescope
               </NavDropdown.Item>
+              <NavDropdown.Item
+                className={centredOnMobile}
+                href={SharedRoutes.Miscellaneous.PaintingsAndArt}
+              >
+                Paintings and Art
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
