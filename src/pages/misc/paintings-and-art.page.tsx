@@ -4,7 +4,7 @@ import { SharedText } from "../../common/shared-text";
 import { PageComponent } from "../../components/page.component";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
 
-export function PaintingAndArt() {
+export function PaintingsAndArtPage() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   return (
