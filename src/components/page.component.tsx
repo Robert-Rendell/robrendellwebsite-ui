@@ -12,7 +12,7 @@ export function PageComponent(props: React.PropsWithChildren<Props>) {
       <h1>{props.title}</h1>
       <hr />
       {props.children}
-      <hr/>
+      <hr />
     </div>
   );
 }

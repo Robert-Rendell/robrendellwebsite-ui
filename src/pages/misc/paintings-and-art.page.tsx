@@ -17,7 +17,7 @@ export function PaintingsAndArtPage() {
         The Scream,<i>Edvard Munch (1893)</i>
       </h2>
       <img
-        width={height/2}
+        width={height / 2}
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/800px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg"
       />
       <p>
@@ -33,7 +33,7 @@ export function PaintingsAndArtPage() {
         The Starry Night,<i>Vincent van Gogh (1889)</i>
       </h2>
       <img
-        width={width/2}
+        width={width / 2}
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
       />
       <p>
