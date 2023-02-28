@@ -34,15 +34,15 @@ export function JamesWebbTelescopePage() {
       <NewTabLink href="https://webbtelescope.org/webb-science/the-observatory/infrared-astronomy">
         Infrared Astronomy
       </NewTabLink>
-
+      <br/>
       <NewTabLink href="https://webbtelescope.org/resource-gallery/images">
         Official Image Gallery
       </NewTabLink>
-
+      <br/>
       <NewTabLink href="https://webbtelescope.org/resource-gallery/videos">
         Videos
       </NewTabLink>
-
+      <br/>
       <NewTabLink href="https://webbtelescope.org/glossary">
         Glossary
       </NewTabLink>
