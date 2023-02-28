@@ -5,7 +5,7 @@ type Props = {
   author: string;
   year: number;
   imageUrl: string;
-  era: "Romanticism" | "Impressionist" | "Expressionism";
+  era: "Romanticism" | "Impressionist" | "Expressionism" | "Surrealism";
   medium: string;
   orientation: "portrait" | "landscape";
 };
