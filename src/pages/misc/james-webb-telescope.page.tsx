@@ -3,6 +3,7 @@ import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { NewTabLink } from "../../components/new-tab-link.component";
 import { PageComponent } from "../../components/page.component";
+import { YouTubeVideoComponent } from "../../components/youtube-video.component";
 
 export function JamesWebbTelescopePage() {
   return (
@@ -30,7 +31,6 @@ export function JamesWebbTelescopePage() {
           </NewTabLink>
         </li>
       </ul>
-
       <NewTabLink href="httpshttps://www.nasa.gov/sites/default/files/thumbnails/image/main_image_star-forming_region_carina_nircam_final-5mb.jpg://webbtelescope.org/webb-science/the-observatory/infrared-astronomy">
         Infrared Astronomy
       </NewTabLink>
@@ -47,37 +47,49 @@ export function JamesWebbTelescopePage() {
         Glossary
       </NewTabLink>
       <hr />
+      <h2>The Pillars of Creation</h2>
+      <YouTubeVideoComponent youtubeVideoEmbedId="1__KBHIo_xs" />
+      <hr />
+      <h2>
+        <NewTabLink href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-reveals-cosmic-cliffs-glittering-landscape-of-star-birth">
+          Carina Nebula
+        </NewTabLink>
+      </h2>
       <img
         width="100%"
         src="https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_star-forming_region_carina_nircam_final-5mb.jpg"
       />
-      <NewTabLink href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-reveals-cosmic-cliffs-glittering-landscape-of-star-birth">
-        Carina Nebula
-      </NewTabLink>
       <hr />
+      <h2>
+        <NewTabLink href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-sheds-light-on-galaxy-evolution-black-holes">
+          Stefan&apos;s Quintet
+        </NewTabLink>
+      </h2>
+
       <img
         width="100%"
         src="https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_galaxies_stephans_quintet_sq_nircam_miri_final-5mb.jpg"
       />
-      <NewTabLink href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-sheds-light-on-galaxy-evolution-black-holes">
-        Stefan&apos;s Quintet
-      </NewTabLink>
       <hr />
+      <h2>
+        <NewTabLink href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-captures-dying-star-s-final-performance-in-fine-detail">
+          Southern Ring Nebula
+        </NewTabLink>
+      </h2>
       <img
         width="100%"
         src="https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_stellar_death_s_ring_miri_nircam_sidebyside-5mb.jpg"
       />
-      <NewTabLink href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-captures-dying-star-s-final-performance-in-fine-detail">
-        Southern Ring Nebula
-      </NewTabLink>
       <hr />
+      <h2>
+        <NewTabLink href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-delivers-deepest-infrared-image-of-universe-yet">
+          Webb&apos;s First Deep Field
+        </NewTabLink>
+      </h2>
       <img
         width="100%"
         src="https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_deep_field_smacs0723-5mb.jpg"
       />
-      <NewTabLink href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-delivers-deepest-infrared-image-of-universe-yet">
-        Webb&apos;s First Deep Field
-      </NewTabLink>
     </PageComponent>
   );
 }
