@@ -31,7 +31,7 @@ export function JamesWebbTelescopePage() {
         </li>
       </ul>
 
-      <NewTabLink href="https://webbtelescope.org/webb-science/the-observatory/infrared-astronomy">
+      <NewTabLink href="httpshttps://www.nasa.gov/sites/default/files/thumbnails/image/main_image_star-forming_region_carina_nircam_final-5mb.jpg://webbtelescope.org/webb-science/the-observatory/infrared-astronomy">
         Infrared Astronomy
       </NewTabLink>
       <br/>
@@ -46,6 +46,8 @@ export function JamesWebbTelescopePage() {
       <NewTabLink href="https://webbtelescope.org/glossary">
         Glossary
       </NewTabLink>
+      <hr/>
+      <img width="100%" src="https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_star-forming_region_carina_nircam_final-5mb.jpg"/>
     </PageComponent>
   );
 }
