@@ -2,6 +2,7 @@ import React from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { PageComponent } from "../../components/page.component";
+import { ArtworkComponent } from "./components/artwork.component";
 
 export function PaintingsAndArtPage() {
   return (
@@ -9,38 +10,82 @@ export function PaintingsAndArtPage() {
       route={SharedRoutes.Miscellaneous.PaintingsAndArt}
       title={SharedText.Miscellaneous.PaintingsAndArt}
     >
-      <h2>
-        The Scream,<i>Edvard Munch (1893)</i>
-      </h2>
-      <img
-        width="50%"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/800px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg"
-      />
-      <p>
+      <ArtworkComponent
+        title="The Persistence of Memory"
+        author="Salvador Dalí"
+        year={1931}
+        imageUrl={
+          "https://pixelz.cc/wp-content/uploads/2018/07/the-persistence-of-memory-painting-by-salvador-dali-uhd-4k-wallpaper.jpg"
+        }
+        era="Surrealism"
+        medium="Oil on canvas"
+        orientation="landscape"
+      >
+        The Persistence of Memory (Catalan: La persistència de la memòria) is a
+        1931 painting by artist Salvador Dalí and one of the most recognizable
+        works of Surrealism. First shown at the Julien Levy Gallery in 1932,
+        since 1934 the painting has been in the collection of the Museum of
+        Modern Art (MoMA) in New York City, which received it from an anonymous
+        donor. It is widely recognized and frequently referred to in popular
+        culture and sometimes referred to by more descriptive titles, such as
+        &quot;Melting Clocks&quot;, &quot;The Soft Watches&quot; or &quot;The
+        Melting Watches&quot;.
+      </ArtworkComponent>
+      <hr />
+      <ArtworkComponent
+        title="Liberty Leading the People"
+        author="Eugène Delacroix"
+        year={1830}
+        imageUrl={
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg/1280px-Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg"
+        }
+        era="Expressionism"
+        medium="Oil on canvas"
+        orientation="landscape"
+      >
+        Liberty Leading the People commemorates the July Revolution of 1830,
+        which toppled King Charles X. A woman of the people with a Phrygian cap
+        personifying the concept of Liberty leads a varied group of people
+        forward over a barricade and the bodies of the fallen, holding the flag
+        of the French Revolution - the tricolour, which again became
+        France&apos;s national flag after these events - in one hand and
+        brandishing a bayonetted musket with the other.
+      </ArtworkComponent>
+      <hr />
+      <ArtworkComponent
+        title="The Scream"
+        author="Edvard Munch"
+        year={1893}
+        imageUrl={
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/800px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg"
+        }
+        era="Expressionism"
+        medium="Oil, tempera, pastel and crayon on cardboard"
+        orientation="portrait"
+      >
         The Scream is a composition created by Norwegian artist Edvard Munch in
         1893. The Norwegian name of the piece is Skrik (Shriek), and the German
         title under which it was first exhibited is Der Schrei der Natur (The
         Scream of Nature)
-      </p>
-      <p>Expressionism</p>
-      <p>Oil, tempera, pastel and crayon on cardboard</p>
+      </ArtworkComponent>
       <hr />
-      <h2>
-        The Starry Night,<i>Vincent van Gogh (1889)</i>
-      </h2>
-      <img
-        width="100%"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
-      />
-      <p>
+      <ArtworkComponent
+        title="The Starry Night"
+        author="Vincent van Gogh"
+        year={1889}
+        imageUrl={
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+        }
+        era="Impressionist"
+        medium="Oil on canvas"
+        orientation="landscape"
+      >
         The Starry Night (Dutch: De sterrennacht) is an oil-on-canvas painting
         by the Dutch Post-Impressionist painter Vincent van Gogh. Painted in
         June 1889, it depicts the view from the east-facing window of his asylum
         room at Saint-Rémy-de-P Oil on canvasrovence, just before sunrise, with
         the addition of an imaginary village.
-      </p>
-      <p>Impressionist</p>
-      <p>Oil on canvas</p>
+      </ArtworkComponent>
     </PageComponent>
   );
 }
