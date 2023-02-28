@@ -91,6 +91,9 @@ export function JamesWebbTelescopePage() {
         src="https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_deep_field_smacs0723-5mb.jpg"
       />
       <p>
+        Joe Biden unveiled this image at The White House on 11 July 2022.
+      </p>
+      <p>
         Planets &#x2329; Solar System &#x2329; Galaxy &#x2329; 3D Universe
         &#x2329; 4D container
       </p>
