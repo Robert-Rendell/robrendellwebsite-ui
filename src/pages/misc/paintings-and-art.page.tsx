@@ -56,7 +56,7 @@ export function PaintingsAndArtPage() {
         }
         era="Impressionist"
         medium="Oil on canvas"
-        orientation="portrait"
+        orientation="landscape"
       >
         The Starry Night (Dutch: De sterrennacht) is an oil-on-canvas painting
         by the Dutch Post-Impressionist painter Vincent van Gogh. Painted in
