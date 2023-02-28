@@ -17,7 +17,6 @@ export const NavComponent = () => {
 
   const onMobile = width < 600;
   const smallerScreen = !onMobile && width <= 1100;
-  const centredOnMobile = onMobile ? "centred" : "";
 
   const isFullScreen =
     preferences?.fullscreen &&
@@ -33,7 +32,7 @@ export const NavComponent = () => {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
+            style={{ maxHeight: "200px" }}
             navbarScroll
           >
             <Nav.Link href={SharedRoutes.Sudoku.Dashboard}>
@@ -44,129 +43,79 @@ export const NavComponent = () => {
               title="Creative Writing"
               id="creative-projects"
             >
-              <NavDropdown.Item
-                href={SharedRoutes.Recursion.LandingPage}
-                className={centredOnMobile}
-              >
+              <NavDropdown.Item href={SharedRoutes.Recursion.LandingPage}>
                 Recursion Project
               </NavDropdown.Item>
-              <NavDropdown.Item
-                href={SharedRoutes.Neurochemistry.LandingPage}
-                className={centredOnMobile}
-              >
+              <NavDropdown.Item href={SharedRoutes.Neurochemistry.LandingPage}>
                 Neurochemistry Project
               </NavDropdown.Item>
-              <NavDropdown.Item
-                href={SharedRoutes.Biomagnetism.LandingPage}
-                className={centredOnMobile}
-              >
+              <NavDropdown.Item href={SharedRoutes.Biomagnetism.LandingPage}>
                 Biomagnetism Project
               </NavDropdown.Item>
-              <NavDropdown.Item
-                href={SharedRoutes.ClimateChange.LandingPage}
-                className={centredOnMobile}
-              >
+              <NavDropdown.Item href={SharedRoutes.ClimateChange.LandingPage}>
                 Climate Change
               </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown menuVariant="dark" title="Nature" id="nature">
-              <NavDropdown.Item
-                href={"/photos-ive-taken/nature/wild-flowers"}
-                className={centredOnMobile}
-              >
+              <NavDropdown.Item href={"/photos-ive-taken/nature/wild-flowers"}>
                 Wild Flowers
               </NavDropdown.Item>
               <NavDropdown.Item
                 href="/photos-ive-taken/nature/insects"
-                className={centredOnMobile}
                 disabled
               >
                 Insects
               </NavDropdown.Item>
-              <NavDropdown.Item
-                href="/photos-ive-taken/nature/lichen"
-                className={centredOnMobile}
-              >
+              <NavDropdown.Item href="/photos-ive-taken/nature/lichen">
                 Lichen
               </NavDropdown.Item>
-              <NavDropdown.Item
-                href="/photos-ive-taken/nature/arachnids"
-                className={centredOnMobile}
-              >
+              <NavDropdown.Item href="/photos-ive-taken/nature/arachnids">
                 Arachnids
               </NavDropdown.Item>
-              <NavDropdown.Item
-                href="/photos-ive-taken/nature/fungi"
-                className={centredOnMobile}
-              >
+              <NavDropdown.Item href="/photos-ive-taken/nature/fungi">
                 Fungi
               </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Misc" id="misc" menuVariant="dark">
-              <NavDropdown.Item
-                href={SharedRoutes.Miscellaneous.India}
-                className={centredOnMobile}
-              >
+              <NavDropdown.Item href={SharedRoutes.Miscellaneous.India}>
                 India
               </NavDropdown.Item>
               <NavDropdown.Item
                 href={SharedRoutes.Miscellaneous.GiantPacificOctopus}
-                className={centredOnMobile}
               >
                 Giant Pacific Octopus (Alaskan)
               </NavDropdown.Item>
-              <NavDropdown.Item
-                className={centredOnMobile}
-                href={SharedRoutes.Miscellaneous.ScotchWhisky}
-              >
+              <NavDropdown.Item href={SharedRoutes.Miscellaneous.ScotchWhisky}>
                 Scotch Whisky
               </NavDropdown.Item>
-              <NavDropdown.Item
-                className={centredOnMobile}
-                href={SharedRoutes.Miscellaneous.WordOfTheDay}
-              >
+              <NavDropdown.Item href={SharedRoutes.Miscellaneous.WordOfTheDay}>
                 Word of the Day
               </NavDropdown.Item>
               <NavDropdown.Item
-                className={centredOnMobile}
                 href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}
               >
                 Interesting Dates in History
               </NavDropdown.Item>
-              <NavDropdown.Item
-                className={centredOnMobile}
-                href={SharedRoutes.Miscellaneous.Philosophy}
-              >
+              <NavDropdown.Item href={SharedRoutes.Miscellaneous.Philosophy}>
                 Philosophy
               </NavDropdown.Item>
-              <NavDropdown.Item
-                className={centredOnMobile}
-                href={SharedRoutes.Miscellaneous.NobelPrize}
-              >
+              <NavDropdown.Item href={SharedRoutes.Miscellaneous.NobelPrize}>
                 Nobel Prize
               </NavDropdown.Item>
-              <NavDropdown.Item
-                className={centredOnMobile}
-                href={SharedRoutes.Miscellaneous.Midjourney}
-              >
+              <NavDropdown.Item href={SharedRoutes.Miscellaneous.Midjourney}>
                 Midjourney AI
               </NavDropdown.Item>
-              <NavDropdown.Item
-                className={centredOnMobile}
-                href={SharedRoutes.StravaAPI.Historical}
-              >
+              <NavDropdown.Item href={SharedRoutes.StravaAPI.Historical}>
                 Strava Historical Stats
               </NavDropdown.Item>
               <NavDropdown.Item
-                className={centredOnMobile}
                 href={SharedRoutes.Miscellaneous.JamesWebbTelescope}
               >
                 James Webb Telescope
               </NavDropdown.Item>
               <NavDropdown.Item
-                className={centredOnMobile}
                 href={SharedRoutes.Miscellaneous.PaintingsAndArt}
               >
                 Paintings and Art
@@ -182,7 +131,6 @@ export const NavComponent = () => {
                 href="https://www.shiva-archetypes.com"
                 target="_blank"
                 rel="noreferrer"
-                className={centredOnMobile}
               >
                 Shiva Archetypes (band)
               </NavDropdown.Item>
@@ -190,7 +138,6 @@ export const NavComponent = () => {
                 href="https://www.robcelticfiddle.co.uk"
                 target="_blank"
                 rel="noreferrer"
-                className={centredOnMobile}
                 disabled
               >
                 Rob Celtic Fiddle (weddings)
@@ -202,10 +149,7 @@ export const NavComponent = () => {
               id="techTestsNavbarScrollingDropdown"
               menuVariant="dark"
             >
-              <NavDropdown.Item
-                href="/technical-tests/291121"
-                className={centredOnMobile}
-              >
+              <NavDropdown.Item href="/technical-tests/291121">
                 29/11/21 - University data visualiser
               </NavDropdown.Item>
             </NavDropdown>
