@@ -49,6 +49,9 @@ export function JamesWebbTelescopePage() {
       <hr />
       <h2>The Pillars of Creation</h2>
       <YouTubeVideoComponent youtubeVideoEmbedId="1__KBHIo_xs" />
+      <NewTabLink href="https://stsci-opo.org/STScI-01GK2KMYS6HADS6ND8NRHG53RP.png">
+        See full resolution image here
+      </NewTabLink>
       <hr />
       <h2>
         <NewTabLink href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-reveals-cosmic-cliffs-glittering-landscape-of-star-birth">
