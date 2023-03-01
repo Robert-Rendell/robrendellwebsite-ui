@@ -58,6 +58,19 @@ export function JamesWebbTelescopePage() {
         See full resolution image here
       </NewTabLink>
       <hr />
+      <h2>Pandora&apos;s Cluster</h2>
+      <img
+        width="100%"
+        src="https://stsci-opo.org/STScI-01GQQF2ZQN2F3SP59XFHNYKQ4V.png"
+      ></img>
+      <NewTabLink href="https://webbtelescope.org/contents/news-releases/2023/news-2023-107">
+        News Release [15 February, 2023]
+      </NewTabLink>
+      <br />
+      <NewTabLink href="https://stsci-opo.org/STScI-01GQQF9WVPFVMCVHRZY54N2TAR.png">
+        Full resolution super zoom image (NIRCam): 186MB
+      </NewTabLink>
+      <hr />
       <h2>
         <NewTabLink href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-reveals-cosmic-cliffs-glittering-landscape-of-star-birth">
           Carina Nebula
