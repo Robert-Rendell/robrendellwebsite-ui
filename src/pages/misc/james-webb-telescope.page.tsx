@@ -47,6 +47,11 @@ export function JamesWebbTelescopePage() {
         Glossary
       </NewTabLink>
       <hr />
+      <img
+        width="100%"
+        src="https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/images/james-webb-telescope/Screenshot+from+2023-03-01+20-26-53.png"
+      />
+      <hr />
       <h2>The Pillars of Creation</h2>
       <YouTubeVideoComponent youtubeVideoEmbedId="1__KBHIo_xs" />
       <NewTabLink href="https://stsci-opo.org/STScI-01GK2KMYS6HADS6ND8NRHG53RP.png">
@@ -98,6 +103,28 @@ export function JamesWebbTelescopePage() {
         &infin; Planets &#x2329; &infin; Solar Systems &#x2329; &infin; Galaxies
         &#x2329; &infin; 3D Universes &#x2329; 4D container
       </p>
+      <hr />
+      <h2>James Webb and Hubble Telescopes</h2>
+      <img
+        width="100%"
+        src="https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/images/james-webb-telescope/Screenshot+from+2023-03-01+20-24-24.png"
+      />
+      <img
+        width="100%"
+        src="https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/images/james-webb-telescope/Screenshot+from+2023-03-01+20-25-02.png"
+      />
+      <img
+        width="100%"
+        src="https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/images/james-webb-telescope/Screenshot+from+2023-03-01+20-25-24.png"
+      />
+      <img
+        width="100%"
+        src="https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/images/james-webb-telescope/Screenshot+from+2023-03-01+20-26-16.png"
+      />
+      <img
+        width="100%"
+        src="https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/images/james-webb-telescope/Screenshot+from+2023-03-01+20-27-25.png"
+      />
     </PageComponent>
   );
 }
