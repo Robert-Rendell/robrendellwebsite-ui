@@ -9,6 +9,9 @@ import { SharedRoutes } from "../common/shared-routes";
 import { useWindowSize } from "../hooks/use-window-size.hook";
 import { TechIconsComponent } from "../components/tech-icons.component";
 import { usePreferences } from "../hooks/use-preferences.hook";
+import { GitHubIcon } from "../components/icons/github.icon";
+import { NewTabLink } from "../components/new-tab-link.component";
+import { StackOverflowIcon } from "../components/icons/stack-overflow.icon";
 
 export const NavComponent = () => {
   const { preferences } = usePreferences();
@@ -23,16 +26,32 @@ export const NavComponent = () => {
     window.location.pathname.includes(preferences.fullscreen);
 
   return !isFullScreen ? (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container fluid>
-        <Navbar.Brand className="brand" href="/">
-          Rob Rendell {onMobile && <TechIconsComponent />}
+        <Navbar.Brand>
+          <span
+            className="pointer"
+            style={{ marginRight: "5px" }}
+            onClick={() => (window.location.href = "/")}
+          >
+            Rob Rendell
+          </span>{" "}
+          <span className="tech-icons pointer">
+            <NewTabLink href="https://github.com/Robert-Rendell">
+              <GitHubIcon />
+            </NewTabLink>
+          </span>
+          <span className="tech-icons pointer">
+            <NewTabLink href="https://stackoverflow.com/users/4529555/robert-rendell">
+              <StackOverflowIcon />
+            </NewTabLink>
+          </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "200px" }}
+            style={{ maxHeight: "175px" }}
             navbarScroll
           >
             <Nav.Link href={SharedRoutes.Sudoku.Dashboard}>
@@ -79,6 +98,19 @@ export const NavComponent = () => {
             </NavDropdown>
 
             <NavDropdown title="Misc" id="misc" menuVariant="dark">
+              <NavDropdown.Item href={SharedRoutes.StravaAPI.Historical}>
+                Strava Historical Stats
+              </NavDropdown.Item>
+              <NavDropdown.Divider color="grey" />
+              <NavDropdown.Item href={SharedRoutes.Miscellaneous.WordOfTheDay}>
+                Word of the Day
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}
+              >
+                Interesting Dates in History
+              </NavDropdown.Item>
+              <NavDropdown.Divider color="grey" />
               <NavDropdown.Item href={SharedRoutes.Miscellaneous.India}>
                 India
               </NavDropdown.Item>
@@ -90,35 +122,25 @@ export const NavComponent = () => {
               <NavDropdown.Item href={SharedRoutes.Miscellaneous.ScotchWhisky}>
                 Scotch Whisky
               </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.Miscellaneous.WordOfTheDay}>
-                Word of the Day
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}
-              >
-                Interesting Dates in History
-              </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.Miscellaneous.Philosophy}>
-                Philosophy
-              </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.Miscellaneous.NobelPrize}>
-                Nobel Prize
-              </NavDropdown.Item>
               <NavDropdown.Item href={SharedRoutes.Miscellaneous.Midjourney}>
                 Midjourney AI
               </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.StravaAPI.Historical}>
-                Strava Historical Stats
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href={SharedRoutes.Miscellaneous.JamesWebbTelescope}
-              >
-                James Webb Telescope
+              <NavDropdown.Divider color="grey" />
+              <NavDropdown.Item href={SharedRoutes.Miscellaneous.Philosophy}>
+                Philosophy
               </NavDropdown.Item>
               <NavDropdown.Item
                 href={SharedRoutes.Miscellaneous.PaintingsAndArt}
               >
                 Paintings and Art
+              </NavDropdown.Item>
+              <NavDropdown.Item href={SharedRoutes.Miscellaneous.NobelPrize}>
+                Nobel Prize
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href={SharedRoutes.Miscellaneous.JamesWebbTelescope}
+              >
+                James Webb Telescope
               </NavDropdown.Item>
             </NavDropdown>
 
@@ -162,7 +184,7 @@ export const NavComponent = () => {
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
-            {!onMobile && <TechIconsComponent />}
+            <TechIconsComponent />
             {/* <Button variant="outline-success" disabled>Enquire</Button> */}
           </Form>
         </Navbar.Collapse>

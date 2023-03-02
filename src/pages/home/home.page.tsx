@@ -24,8 +24,9 @@ export const HomePage = () => {
   return (
     <div className="standard-page-margins standard-page-styling">
       <h2 className="centred">Welcome to rob-rendell.co.uk</h2>
-      <h3>Rob Rendell: Node.js / TypeScript Developer</h3>
-      <h4>Recent developments:</h4>
+      <h3>Rob Rendell: TypeScript / Node.js Developer</h3>
+      <hr />
+      <h5>Recent developments:</h5>
       <ul>
         <li>
           12/02/23 @ 14.45 - Added&nbsp;
