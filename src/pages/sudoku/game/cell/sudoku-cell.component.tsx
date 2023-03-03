@@ -11,7 +11,7 @@ type Props = {
   keyDownFn: KeyDownInCellFn;
 };
 
-export type KeyDownInCellFn = (row: number, col: number) => void;
+export type KeyDownInCellFn = (key: string, row: number, col: number) => void;
 
 const maxNotesLength = 4;
 
@@ -47,7 +47,7 @@ export function SudokuCellComponent(props: Props) {
     if (event.key === "Enter") {
       event.currentTarget.blur();
     }
-    props.keyDownFn(props.row, props.column);
+    props.keyDownFn(event.key, props.row, props.column);
   }
 
   function getId() {

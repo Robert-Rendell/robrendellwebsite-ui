@@ -30,6 +30,12 @@ export function AddInterestingDateInHistoryComponent() {
 
   return (
     <>
+      <p>
+        <NewTabLink href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}>
+          Dates in History page
+        </NewTabLink>
+      </p>
+      <hr />
       <form
         onSubmit={(event) => {
           onSubmit(event);
@@ -57,12 +63,6 @@ export function AddInterestingDateInHistoryComponent() {
           <br />
         </FormGroup>
       </form>
-      <hr />
-      <p>
-        <NewTabLink href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}>
-          Dates in History page
-        </NewTabLink>
-      </p>
       {response === null && <img src={InfinitySpinner} />}
       {response && isDateInHistory(response) && (
         <p>

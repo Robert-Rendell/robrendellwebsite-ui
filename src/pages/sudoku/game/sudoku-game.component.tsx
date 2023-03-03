@@ -40,11 +40,18 @@ export function SudokuGameComponent(props: Props) {
   const [validationIssues, setValidationIssues] = useState<
     SudokuValidationIssue[]
   >([]);
-  const keyDownInCell: KeyDownInCellFn = (row: number, col: number) => {
+  const keyDownInCell: KeyDownInCellFn = (
+    key: string,
+    row: number,
+    col: number
+  ) => {
     const localValidationIssues = validationIssues.filter(
       (issue) => !(issue.row === row && issue.col === col)
     );
     if (localValidationIssues.length === 0) validationMessage.current = "";
+    if (key === "p") {
+      setNotesMode(!notesMode);
+    }
     setValidationIssues(localValidationIssues);
   };
   const [submitterName, setSubmitterName] = useState("");
@@ -158,6 +165,7 @@ export function SudokuGameComponent(props: Props) {
                     id="notes-mode-button"
                     className={notesMode ? "notes-mode-button-enabled" : ""}
                     onClick={() => setNotesMode(!notesMode)}
+                    title="Press 'p' in a cell to toggle pen mode"
                   >
                     {notesMode ? <Pen /> : <PenFill />}
                   </Button>
