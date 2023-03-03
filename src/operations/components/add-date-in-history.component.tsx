@@ -7,6 +7,8 @@ import InfinitySpinner from "../../resources/infinity-spinner.svg";
 import { FormGroup, FormLabel } from "react-bootstrap";
 import "../operations.page.css";
 import { useAddDateInHistory } from "../hooks/use-add-date-in-history.hook";
+import { NewTabLink } from "../../components/new-tab-link.component";
+import { SharedRoutes } from "../../common/shared-routes";
 
 export function isDateInHistory(
   response: InterestingDateInHistory | ErrorResponse
@@ -55,6 +57,12 @@ export function AddInterestingDateInHistoryComponent() {
           <br />
         </FormGroup>
       </form>
+      <hr />
+      <p>
+        <NewTabLink href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}>
+          Dates in History page
+        </NewTabLink>
+      </p>
       {response === null && <img src={InfinitySpinner} />}
       {response && isDateInHistory(response) && (
         <p>

@@ -4,9 +4,6 @@ import nodeJsLogo from "../resources/nodejs-logo.png";
 import tsLogo from "../resources/ts-logo.png";
 import awsLogo from "../resources/aws-logo.png";
 import "../nav/nav.component.css";
-import { StackOverflowIcon } from "./icons/stack-overflow.icon";
-import { GitHubIcon } from "./icons/github.icon";
-import { NewTabLink } from "./new-tab-link.component";
 
 export function TechIconsComponent() {
   return (
