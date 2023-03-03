@@ -1,5 +1,3 @@
-import Highcharts from "highcharts";
-
 export default {
   seriesDataTemplate: function (name, y) {
     return { name: name, data: y };
