@@ -5,6 +5,9 @@ export type Preferences = {
   sudoku?: {
     submitterName?: string;
   };
+  battleships?: {
+    username?: string;
+  };
   fullscreen?: keyof RobRendellWebsiteModel | string;
   language?: string;
 };
