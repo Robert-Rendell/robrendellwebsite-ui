@@ -9,6 +9,9 @@ export type RobRendellWebsiteModel = {
   Sudoku: {
     Dashboard: string;
   };
+  Battleships: {
+    Dashboard: string;
+  };
   StravaAPI: {
     Historical: string;
   };
