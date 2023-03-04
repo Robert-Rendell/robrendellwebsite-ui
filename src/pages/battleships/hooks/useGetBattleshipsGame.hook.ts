@@ -39,6 +39,7 @@ export function useGetBattleshipsGame(props: Props) {
             setGame(response.data);
           } else {
             console.error(response.data.errorMessage, response.data.meta);
+            alert(response.data.errorMessage);
           }
         },
         (error) => {
