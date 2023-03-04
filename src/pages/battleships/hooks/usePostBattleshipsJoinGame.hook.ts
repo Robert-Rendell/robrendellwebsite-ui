@@ -47,7 +47,7 @@ export function usePostBattleshipsJoinGame(props: Props) {
               setGame(response.data);
               props.reset();
             } else {
-              console.error(response.data);
+              console.error(response.data.errorMessage, response.data.meta);
             }
           },
           (error) => {
