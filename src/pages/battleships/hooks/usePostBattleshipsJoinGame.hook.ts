@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import {
   BattleshipsErrorResponse,
   BattleshipsGame,
-  GetBattleshipsGameResponse,
   PostBattleshipsJoinGameRequest,
   PostBattleshipsJoinGameResponse,
 } from "robrendellwebsite-common";
