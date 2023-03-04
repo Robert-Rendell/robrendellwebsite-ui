@@ -1,0 +1,10 @@
+.battleships-td {
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+}
+
+.battleships-table {
+  height: 500px;
+  width: 500px;
+}
