@@ -51,10 +51,15 @@ export function BattleshipsDashboardComponent() {
         route={SharedRoutes.Battleships.Dashboard}
       >
         <BattleshipsUserComponent userState={userState} />
-        <Button onClick={() => !isCreatingGame && setIsCreatingGame(true)}>
+        <Button
+          onClick={() => !isCreatingGame && setIsCreatingGame(true)}
+          disabled={!user}
+        >
           Create Game
         </Button>
-        <Button onClick={joinGame}>Join Game</Button>
+        <Button onClick={joinGame} disabled={!user}>
+          Join Game
+        </Button>
         {joinedGame && (
           <>
             {" "}
