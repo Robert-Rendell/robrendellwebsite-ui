@@ -43,6 +43,13 @@ export const HomePage = () => {
           page
         </li>
         <li>
+          26/02/23 @ 14.53 - Added&nbsp;
+          <a href={SharedRoutes.StravaAPI.Historical}>
+            {SharedText.StravaAPI.Historical}
+          </a>{" "}
+          page; shows my Strava 2019 - 2021 data pulled from the Strava API.
+        </li>
+        <li>
           12/02/23 @ 14.45 - Added&nbsp;
           <a href={SharedRoutes.Miscellaneous.NobelPrize}>
             {SharedText.Miscellaneous.NobelPrize}
