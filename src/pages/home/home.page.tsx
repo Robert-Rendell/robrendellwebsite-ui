@@ -29,6 +29,20 @@ export const HomePage = () => {
       <h5>Recent developments:</h5>
       <ul>
         <li>
+          04/03/23 @ 10.08 - Begun consuming my&nbsp;
+          <a href={SharedRoutes.Battleships.Dashboard}>
+            {SharedText.Battleships.Dashboard}
+          </a>{" "}
+          REST API
+        </li>
+        <li>
+          01/03/23 @ 19.01 - Added&nbsp;
+          <a href={SharedRoutes.Miscellaneous.JamesWebbTelescope}>
+            {SharedText.Miscellaneous.JamesWebbTelescope}
+          </a>{" "}
+          page
+        </li>
+        <li>
           12/02/23 @ 14.45 - Added&nbsp;
           <a href={SharedRoutes.Miscellaneous.NobelPrize}>
             {SharedText.Miscellaneous.NobelPrize}
