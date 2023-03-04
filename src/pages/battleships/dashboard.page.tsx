@@ -1,5 +1,9 @@
 import React, { useCallback, useRef, useState } from "react";
-import { BattleshipsGameId, BattleshipsUser } from "robrendellwebsite-common";
+import {
+  BattleshipsGame,
+  BattleshipsGameId,
+  BattleshipsUser,
+} from "robrendellwebsite-common";
 import { Button } from "react-bootstrap";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
@@ -9,8 +13,11 @@ import { useGetBattleshipsGame } from "./hooks/useGetBattleshipsGame.hook";
 import { BattleshipsGameComponent } from "./components/game.component";
 import { usePostBattleshipsCreateGame } from "./hooks/usePostBattleshipsCreateGame.hooks";
 import { usePostBattleshipsJoinGame } from "./hooks/usePostBattleshipsJoinGame.hook";
+import { usePreferences } from "../../hooks/use-preferences.hook";
 
 export function BattleshipsDashboardComponent() {
+  const { preferences, savePreferences } = usePreferences();
+  const currentGame = useRef<BattleshipsGame | undefined>();
   const joinGameId = useRef<BattleshipsGameId>("");
   const userState = useState<BattleshipsUser>();
   const [user] = userState;
@@ -24,13 +31,19 @@ export function BattleshipsDashboardComponent() {
     gameId: "",
     boardDimensions: [10, 10],
     isCreatingGame,
-    reset: () => setIsCreatingGame(false),
+    reset: (game?: BattleshipsGame) => {
+      currentGame.current = game;
+      setIsCreatingGame(false);
+    },
   });
   const [joinedGame] = usePostBattleshipsJoinGame({
     username: user?.username || "",
     gameId: joinGameId.current,
     isJoiningGame,
-    reset: () => setIsJoiningGame(false),
+    reset: (game?: BattleshipsGame) => {
+      currentGame.current = game;
+      setIsJoiningGame(false);
+    },
   });
   const joinGame = useCallback(() => {
     if (!isJoiningGame) {
@@ -67,7 +80,10 @@ export function BattleshipsDashboardComponent() {
             <p>
               Joined {joinedGame.playerUsernames[0]}&apos;s game:{" "}
               {joinedGame.gameId}
-              <Button onClick={startConfiguration} disabled>
+              <Button
+                onClick={startConfiguration}
+                disabled={currentGame.current?.state === "configuring"}
+              >
                 Submit start configuration
               </Button>
               <Button onClick={makeMove} disabled>

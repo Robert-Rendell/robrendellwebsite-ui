@@ -20,29 +20,28 @@ export function BattleshipsGameComponent(props: Props) {
           <hr />
           <p>{state === "created" && <p>Waiting for opponent to join...</p>}</p>
           <>
-            {state === "configuring" ||
-              (state === "playing" && (
-                <table className="battleships-table">
-                  <tbody>
-                    {Array.from(Array(rows)).map((x, i) => {
-                      console.log(x, i);
-                      return (
-                        <tr key={`${x}-${i}`}>
-                          {Array.from(Array(cols)).map((y, j) => {
-                            console.log(y, i);
-                            return (
-                              <td
-                                className="battleships-td"
-                                key={`${y}-${j}`}
-                              ></td>
-                            );
-                          })}
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              ))}
+            {(state === "configuring" || state === "playing") && (
+              <table className="battleships-table">
+                <tbody>
+                  {Array.from(Array(rows)).map((x, i) => {
+                    console.log(x, i);
+                    return (
+                      <tr key={`${x}-${i}`}>
+                        {Array.from(Array(cols)).map((y, j) => {
+                          console.log(y, i);
+                          return (
+                            <td
+                              className="battleships-td"
+                              key={`${y}-${j}`}
+                            ></td>
+                          );
+                        })}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            )}
           </>
         </>
       )}
