@@ -57,6 +57,9 @@ export const NavComponent = () => {
             <Nav.Link href={SharedRoutes.Sudoku.Dashboard}>
               Sudoku{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
+            <Nav.Link href={SharedRoutes.Battleships.Dashboard}>
+              Battleships{!smallerScreen && <>&nbsp;Project</>}
+            </Nav.Link>
             <NavDropdown
               menuVariant="dark"
               title="Creative Writing"

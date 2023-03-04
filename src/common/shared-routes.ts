@@ -11,6 +11,9 @@ export const SharedRoutes: RobRendellWebsiteModel = {
   Sudoku: {
     Dashboard: "/sudoku",
   },
+  Battleships: {
+    Dashboard: "/battleships",
+  },
   Miscellaneous: {
     India: "/miscellaneous/india",
     GiantPacificOctopus: "/miscellaneous/giant-pacific-octopus",

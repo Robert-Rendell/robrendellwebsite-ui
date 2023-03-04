@@ -8,6 +8,9 @@ export const SharedText: RobRendellWebsiteModel = {
   Sudoku: {
     Dashboard: "Sudoku Project",
   },
+  Battleships: {
+    Dashboard: "Battleships Project",
+  },
   Miscellaneous: {
     India: "India",
     GiantPacificOctopus: "Giant Pacific Octopus (Alaskan)",

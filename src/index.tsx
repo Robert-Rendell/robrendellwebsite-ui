@@ -34,7 +34,7 @@ import { LearningAndGeneticCodePage } from "./pages/neurochemistry/learning-and-
 import { LetItGoPage } from "./pages/neurochemistry/let-it-go.page";
 import { AdviceFromTheBeatlesPage } from "./pages/neurochemistry/advice-from-the-beatles.page";
 import { NeurochemistryReferencesPage } from "./pages/neurochemistry/references.page";
-import { RobRendellFooterComponent } from "./components/rob-rendell-footer.component";
+import { RobRendellFooterComponent } from "./components/footer/rob-rendell-footer.component";
 import { SharedRoutes } from "./common/shared-routes";
 import { SimpleEquationsInfiniteComplexity } from "./pages/recursion/simple-equations.page";
 import { MelatoninIsTheKeyToCreativeInsight } from "./pages/neurochemistry/melatonin-key-to-creativity.page";
@@ -77,6 +77,7 @@ import { NavComponent } from "./nav/nav.component";
 import { StravaDashboardHistoricalComponent } from "./pages/strava-api/strava-dashboard-historical.component";
 import { JamesWebbTelescopePage } from "./pages/misc/james-webb-telescope.page";
 import { PaintingsAndArtPage } from "./pages/misc/paintings-and-art.page";
+import { BattleshipsDashboardComponent } from "./pages/battleships/dashboard.page";
 
 const maintenanceMode = false;
 
@@ -103,6 +104,12 @@ ReactDOM.render(
             <Route path="sudoku" element={<SudokuDashboardComponent />} />
             <Route path="sudoku/play" element={<SudokuGameComponent />} />
             <Route path="sudoku/play/:sudokuId" element={<PlaySudoku />} />
+
+            {/* //////////////////////////////////// */}
+            <Route
+              path={SharedRoutes.Battleships.Dashboard}
+              element={<BattleshipsDashboardComponent />}
+            />
 
             {/* //////////////////////////////////// */}
             <Route

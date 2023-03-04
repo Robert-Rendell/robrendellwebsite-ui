@@ -1,0 +1,14 @@
+.flag-right {
+  margin: 10px;
+  float: right;
+}
+
+.flag-left {
+  margin: 10px;
+  float: left;
+}
+
+.footer-msg {
+  color: white;
+  text-align: center;
+}

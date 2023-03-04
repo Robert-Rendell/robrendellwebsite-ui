@@ -1,14 +1,12 @@
 import React, { useMemo } from "react";
-import { SharedRoutes } from "../common/shared-routes";
-import { usePreferences } from "../hooks/use-preferences.hook";
-import { useWindowSize } from "../hooks/use-window-size.hook";
-import Northumberland from "../resources/flag-of-northumberland.svg";
-import Saltire from "../resources/saltire.svg";
+import { SharedRoutes } from "../../common/shared-routes";
+import { usePreferences } from "../../hooks/use-preferences.hook";
+import Northumberland from "../../resources/flag-of-northumberland.svg";
+import Saltire from "../../resources/saltire.svg";
+import "./rob-rendell-footer.component.css";
 
 export function RobRendellFooterComponent() {
   const { preferences } = usePreferences();
-  const windowSize = useWindowSize();
-  const width = windowSize[0] - 40;
   const isFullScreen =
     preferences?.fullscreen &&
     window.location.pathname.includes(preferences.fullscreen);
@@ -26,27 +24,19 @@ export function RobRendellFooterComponent() {
       style={matrixTheme ? { background: "black" } : { background: "#282c34" }}
     >
       <div className="centred">
-        <img
-          src={Northumberland}
-          width={width / 20}
-          style={{ margin: "10px", float: "left" }}
-        />
-        <img
-          src={Saltire}
-          width={width / 20}
-          style={{ margin: "10px", float: "right" }}
-        />
-        <span style={{ color: "white", textAlign: "center" }}>
+        <img src={Northumberland} width="5%" className="flag-left" />
+        <img src={Saltire} width="5%" className="flag-right" />
+        <span className="footer-msg">
           Copyright &copy; 2021-2023 Robert Rendell. All rights reserved.
         </span>
       </div>
       <div className="centred">
-        <span style={{ color: "white", textAlign: "center" }}>
+        <span className="footer-msg">
           All views and opinions expressed on this website are my own.
         </span>
       </div>
       <div className="centred">
-        <span style={{ color: "white", textAlign: "center" }}>
+        <span className="footer-msg">
           [Disclaimer]: I am not medically trained and I don&apos;t take any
           responsibility for you, nor do I accept any liability; go see your GP.
         </span>
