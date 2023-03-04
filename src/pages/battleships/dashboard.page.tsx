@@ -41,6 +41,9 @@ export function BattleshipsDashboardComponent() {
   const makeMove = useCallback(() => {
     //
   }, []);
+  const startConfiguration = useCallback(() => {
+    //
+  }, []);
   return (
     <>
       <PageComponent
@@ -59,7 +62,12 @@ export function BattleshipsDashboardComponent() {
             <p>
               Joined {joinedGame.playerUsernames[0]}&apos;s game:{" "}
               {joinedGame.gameId}
-              <Button onClick={makeMove}>Make random move</Button>
+              <Button onClick={startConfiguration} disabled>
+                Submit start configuration
+              </Button>
+              <Button onClick={makeMove} disabled>
+                Make random move
+              </Button>
             </p>
             <hr />
           </>
