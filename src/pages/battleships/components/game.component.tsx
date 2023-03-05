@@ -56,14 +56,28 @@ export function BattleshipsGameComponent(
   const showConfigurationTools =
     props.game?.state === "configuring" && !isFinishedConfiguration.current;
 
+  const currentUserTurn = useMemo(
+    () => props.game && props.game?.playerUsernames[props.game.turn ? 0 : 1],
+    [props.game]
+  );
+
+  const isMyTurn = useCallback(
+    () => currentUserTurn === props.user?.username,
+    [currentUserTurn, props.user?.username]
+  );
+
+  const isPlayingAndNotMyTurn = useCallback(() => {
+    return props.game?.state === "playing" && !isMyTurn();
+  }, [isMyTurn, props.game?.state]);
+  
   useEffect(() => {
     clearInterval(refreshInterval.current);
     refreshInterval.current = setInterval(() => {
-      if (!showConfigurationTools) {
+      if (!showConfigurationTools || isPlayingAndNotMyTurn()) {
         props.setIsRefreshingGame(true);
       }
     }, 5000);
-  }, [props, showConfigurationTools]);
+  }, [isMyTurn, isPlayingAndNotMyTurn, props, showConfigurationTools]);
 
   const onCellClick = useCallback(
     (x: number, y: number) => {
@@ -120,16 +134,6 @@ export function BattleshipsGameComponent(
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.game]);
-
-  const currentUserTurn = useMemo(
-    () => props.game && props.game?.playerUsernames[props.game.turn ? 0 : 1],
-    [props.game]
-  );
-
-  const isMyTurn = useCallback(
-    () => currentUserTurn === props.user?.username,
-    [currentUserTurn, props.user?.username]
-  );
 
   const calculateCellClassName = useCallback(
     (x: number, y: number) => {
