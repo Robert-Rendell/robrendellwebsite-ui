@@ -10,6 +10,7 @@ import {
   BattleshipsGame,
   BattleshipsMove,
   BattleshipsUser,
+  BattleshipsUsername,
 } from "robrendellwebsite-common";
 import { usePostBattleshipsMakeMove } from "../hooks/useMakeMove.hook";
 import { usePostBattleshipsStartConfiguration } from "../hooks/usePostStartConfiguration.hook";
@@ -42,6 +43,9 @@ type Props = {
 export function BattleshipsGameComponent(
   props: React.PropsWithChildren<Props>
 ) {
+  const [perspective, setPerspective] = useState<
+    BattleshipsUsername | undefined
+  >(props.user?.username);
   const refreshInterval = useRef<NodeJS.Timer>();
   const isFinishedConfiguration = useRef(false);
   const currentMove = useRef<BattleshipsMove>();
@@ -69,7 +73,7 @@ export function BattleshipsGameComponent(
   const isPlayingAndNotMyTurn = useCallback(() => {
     return props.game?.state === "playing" && !isMyTurn();
   }, [isMyTurn, props.game?.state]);
-  
+
   useEffect(() => {
     clearInterval(refreshInterval.current);
     refreshInterval.current = setInterval(() => {
@@ -137,6 +141,10 @@ export function BattleshipsGameComponent(
 
   const calculateCellClassName = useCallback(
     (x: number, y: number) => {
+      const perspectiveIndex =
+        props.game?.playerUsernames.findIndex(
+          (username) => username === perspective
+        ) || 0;
       if (props.game?.state === "configuring") {
         if (startBoard && startBoard[x][y]) {
           return "battleships-td-occupied";
@@ -146,22 +154,26 @@ export function BattleshipsGameComponent(
       }
       if (props.game?.state === "playing") {
         if (
-          props.game.playerMoves[0].find(
+          props.game.playerMoves[perspectiveIndex].find(
             (item) => item.coords[0] === x && item.coords[1] === y
           )
         ) {
           return "battleships-td-p0-move";
         }
-        if (
-          props.game.playerMoves[1].find(
-            (item) => item.coords[0] === x && item.coords[1] === y
-          )
-        ) {
+
+        if (props.game?.playerBoards[perspectiveIndex][x][y] === 1) {
           return "battleships-td-p1-move";
         }
       }
     },
-    [props.game?.playerMoves, props.game?.state, startBoard]
+    [
+      perspective,
+      props.game?.playerBoards,
+      props.game?.playerMoves,
+      props.game?.playerUsernames,
+      props.game?.state,
+      startBoard,
+    ]
   );
 
   return (
@@ -223,6 +235,19 @@ export function BattleshipsGameComponent(
                       </tbody>
                     </table>
                   </div>
+                )}
+                {perspective && (
+                  <Button
+                    onClick={() =>
+                      setPerspective(
+                        props.game?.playerUsernames.filter(
+                          (un) => un !== perspective
+                        )[0]
+                      )
+                    }
+                  >
+                    <>Toggle perspective (Current: {perspective})</>
+                  </Button>
                 )}
                 <table className="battleships-table">
                   <tbody>
