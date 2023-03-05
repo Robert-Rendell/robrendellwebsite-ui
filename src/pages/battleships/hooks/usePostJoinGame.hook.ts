@@ -11,7 +11,7 @@ import { BattleshipsAPI } from "../battleships.api";
 
 type Props = PostBattleshipsJoinGameRequest & {
   isJoiningGame: boolean;
-  reset: () => void;
+  reset: (game?: BattleshipsGame) => void;
 };
 
 export function usePostBattleshipsJoinGame(props: Props) {
@@ -44,10 +44,11 @@ export function usePostBattleshipsJoinGame(props: Props) {
           (response) => {
             if (isBattleshipsGame(response.data)) {
               setGame(response.data);
-              props.reset();
+              props.reset(response.data);
             } else {
               console.error(response.data.errorMessage, response.data.meta);
               alert(response.data.errorMessage);
+              props.reset();
             }
           },
           (error) => {

@@ -1,36 +1,55 @@
 import React, { useCallback, useRef, useState } from "react";
-import { BattleshipsGameId, BattleshipsUser } from "robrendellwebsite-common";
+import {
+  BattleshipsGame,
+  BattleshipsGameId,
+  BattleshipsUser,
+} from "robrendellwebsite-common";
 import { Button } from "react-bootstrap";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { PageComponent } from "../../components/page.component";
 import { BattleshipsUserComponent } from "./components/user.component";
-import { useGetBattleshipsGame } from "./hooks/useGetBattleshipsGame.hook";
+import { useGetBattleshipsGame } from "./hooks/useGetGame.hook";
 import { BattleshipsGameComponent } from "./components/game.component";
-import { usePostBattleshipsCreateGame } from "./hooks/usePostBattleshipsCreateGame.hooks";
-import { usePostBattleshipsJoinGame } from "./hooks/usePostBattleshipsJoinGame.hook";
+import { usePostBattleshipsCreateGame } from "./hooks/usePostCreateGame.hooks";
+import { usePostBattleshipsJoinGame } from "./hooks/usePostJoinGame.hook";
 
 export function BattleshipsDashboardComponent() {
+  const [isCreatingGame, setIsCreatingGame] = useState(false);
+  const [isJoiningGame, setIsJoiningGame] = useState(false);
+  const [isRefreshingGame, setIsRefreshingGame] = useState(false);
+
+  const currentGame = useRef<BattleshipsGame | undefined>();
   const joinGameId = useRef<BattleshipsGameId>("");
   const userState = useState<BattleshipsUser>();
   const [user] = userState;
-  const [loadedGame] = useGetBattleshipsGame({
-    gameId: "",
+
+  useGetBattleshipsGame({
+    gameId: currentGame.current?.gameId,
+    isRefreshingGame,
+    reset: (game?: BattleshipsGame) => {
+      if (game) currentGame.current = game;
+      setIsRefreshingGame(false);
+    },
   });
-  const [isCreatingGame, setIsCreatingGame] = useState(false);
-  const [isJoiningGame, setIsJoiningGame] = useState(false);
   const [newGame] = usePostBattleshipsCreateGame({
     username: user?.username || "",
     gameId: "",
     boardDimensions: [10, 10],
     isCreatingGame,
-    reset: () => setIsCreatingGame(false),
+    reset: (game?: BattleshipsGame) => {
+      if (game) currentGame.current = game;
+      setIsCreatingGame(false);
+    },
   });
   const [joinedGame] = usePostBattleshipsJoinGame({
     username: user?.username || "",
     gameId: joinGameId.current,
     isJoiningGame,
-    reset: () => setIsJoiningGame(false),
+    reset: (game?: BattleshipsGame) => {
+      if (game) currentGame.current = game;
+      setIsJoiningGame(false);
+    },
   });
   const joinGame = useCallback(() => {
     if (!isJoiningGame) {
@@ -41,8 +60,8 @@ export function BattleshipsDashboardComponent() {
   const makeMove = useCallback(() => {
     //
   }, []);
-  const startConfiguration = useCallback(() => {
-    //
+  const refreshGame = useCallback(() => {
+    setIsRefreshingGame(true);
   }, []);
   return (
     <>
@@ -60,16 +79,12 @@ export function BattleshipsDashboardComponent() {
         <Button onClick={joinGame} disabled={!user}>
           Join Game
         </Button>
-        {joinedGame && (
+        {currentGame.current?.gameId === joinedGame?.gameId && joinedGame && (
           <>
-            {" "}
-            <hr />{" "}
+            <hr />
             <p>
               Joined {joinedGame.playerUsernames[0]}&apos;s game:{" "}
               {joinedGame.gameId}
-              <Button onClick={startConfiguration} disabled>
-                Submit start configuration
-              </Button>
               <Button onClick={makeMove} disabled>
                 Make random move
               </Button>
@@ -77,12 +92,20 @@ export function BattleshipsDashboardComponent() {
             <hr />
           </>
         )}
-        {newGame && (
-          <p>
-            New game created by {user?.username}: {newGame.gameId}
-          </p>
+        {currentGame.current?.gameId === newGame?.gameId && newGame && (
+          <>
+            <hr />
+            <p>
+              New game created by {user?.username}: {newGame.gameId}
+            </p>
+            <hr />
+          </>
         )}
-        <BattleshipsGameComponent game={newGame || joinedGame || loadedGame} />
+        <BattleshipsGameComponent game={currentGame.current}>
+          {currentGame.current?.state === "created" && (
+            <Button onClick={refreshGame}>Refresh</Button>
+          )}
+        </BattleshipsGameComponent>
       </PageComponent>
     </>
   );

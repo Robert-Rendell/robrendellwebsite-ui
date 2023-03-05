@@ -8,3 +8,14 @@
   height: 500px;
   width: 500px;
 }
+
+.battleship-selector {
+  border: 2px dotted black;
+  color: black;
+}
+
+.battleship-selected {
+  border: 2px solid black;
+  color: black;
+  background: limegreen;
+}

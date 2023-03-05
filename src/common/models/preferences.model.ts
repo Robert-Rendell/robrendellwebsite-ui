@@ -7,6 +7,7 @@ export type Preferences = {
   };
   battleships?: {
     username?: string;
+    currentGameId?: string;
   };
   fullscreen?: keyof RobRendellWebsiteModel | string;
   language?: string;

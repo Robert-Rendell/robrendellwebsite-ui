@@ -1,39 +1,113 @@
-import React from "react";
-import { BattleshipsGame } from "robrendellwebsite-common";
+import React, { useCallback, useRef, useState } from "react";
+import { Button } from "react-bootstrap";
+import {
+  BattleshipsGame,
+  BattleshipsStartConfiguration,
+} from "robrendellwebsite-common";
+import { usePostBattleshipsStartConfiguration } from "../hooks/usePostStartConfiguration.hook";
 import "./game.component.css";
+
+/**
+ * No.	Class of ship	 Size
+ * 1	  Carrier	       5
+ * 2	  Battleship	   4
+ * 3	  Cruiser	       3
+ * 4	  Submarine	     3
+ * 5	  Destroyer	     2
+ */
+export const Battleship = {
+  Carrier: 5,
+  Battleship: 4,
+  Cruiser: 3,
+  Submarine: 3,
+  Destroyer: 2,
+};
 
 type Props = {
   game?: BattleshipsGame;
 };
-export function BattleshipsGameComponent(props: Props) {
+export function BattleshipsGameComponent(
+  props: React.PropsWithChildren<Props>
+) {
+  const [isSubmittingStartConfiguration, setIsSubmittingStartConfiguration] =
+    useState(false);
+  const proposedConfiguration = useRef<BattleshipsStartConfiguration>();
+  const [selectedShip, setSelectedShip] =
+    useState<keyof typeof Battleship>("Carrier");
   const [rows, cols] = props.game?.boardDimensions || [0, 0];
   const state = props.game?.state;
+  const onCellClick = useCallback((x: number, y: number) => {
+    console.log("clicked", x, y);
+  }, []);
+  const submitStartConfiguration = useCallback(() => {
+    setIsSubmittingStartConfiguration(true);
+  }, []);
+  usePostBattleshipsStartConfiguration({
+    proposedStartConfiguration: proposedConfiguration.current,
+    isSubmittingStartConfiguration,
+    reset: () => {
+      setIsSubmittingStartConfiguration(false);
+    },
+  });
   return (
     <>
       {!props.game && <h2>No game loaded.</h2>}
       {props.game && (
         <>
           <>
+            startConfiguration?: BattleshipsStartConfiguration
             <h2>Game ID: [{props.game.gameId}]</h2>
             <p>{JSON.stringify(props.game)}</p>
           </>
           <hr />
-          <p>{state === "created" && <p>Waiting for opponent to join...</p>}</p>
+          <p>
+            {state === "created" && (
+              <>
+                <p>Waiting for opponent to join...</p>
+                {props.children}
+              </>
+            )}
+          </p>
+          <div>
+            <table>
+              <tbody>
+                <tr>
+                  {(Object.keys(Battleship) as (keyof typeof Battleship)[]).map(
+                    (ship) => {
+                      return (
+                        <>
+                          <td
+                            className={
+                              selectedShip === ship
+                                ? "battleship-selected"
+                                : "battleship-selector"
+                            }
+                            onClick={() => setSelectedShip(ship)}
+                          >
+                            {ship}
+                          </td>
+                        </>
+                      );
+                    }
+                  )}
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <>
-            {state === "configuring" ||
-              (state === "playing" && (
+            {(state === "configuring" || state === "playing") && (
+              <>
                 <table className="battleships-table">
                   <tbody>
                     {Array.from(Array(rows)).map((x, i) => {
-                      console.log(x, i);
                       return (
                         <tr key={`${x}-${i}`}>
                           {Array.from(Array(cols)).map((y, j) => {
-                            console.log(y, i);
                             return (
                               <td
                                 className="battleships-td"
                                 key={`${y}-${j}`}
+                                onClick={() => onCellClick(x, y)}
                               ></td>
                             );
                           })}
@@ -42,7 +116,14 @@ export function BattleshipsGameComponent(props: Props) {
                     })}
                   </tbody>
                 </table>
-              ))}
+                <Button
+                  onClick={submitStartConfiguration}
+                  disabled={props.game.state !== "configuring"}
+                >
+                  Submit start configuration
+                </Button>
+              </>
+            )}
           </>
         </>
       )}

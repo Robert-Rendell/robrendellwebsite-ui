@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import {
   BattleshipsErrorResponse,
   BattleshipsGame,
+  BattleshipsGameId,
   GetBattleshipsGameResponse,
   GetGameStateRequest,
 } from "robrendellwebsite-common";
@@ -10,7 +11,9 @@ import { config } from "../../../config";
 import { BattleshipsAPI } from "../battleships.api";
 
 type Props = {
-  gameId: string;
+  gameId?: BattleshipsGameId;
+  isRefreshingGame: boolean;
+  reset: (game?: BattleshipsGame) => void;
 };
 export function useGetBattleshipsGame(props: Props) {
   const [game, setGame] = useState<BattleshipsGame>();
@@ -24,7 +27,7 @@ export function useGetBattleshipsGame(props: Props) {
       .get<GetGameStateRequest, AxiosResponse<GetBattleshipsGameResponse>>(
         `${config.backend}${BattleshipsAPI.GET.GameState.replace(
           ":gameId",
-          props.gameId
+          props.gameId || ""
         )}`,
         {
           headers: { "Content-Type": "application/json" },
@@ -36,8 +39,10 @@ export function useGetBattleshipsGame(props: Props) {
       .then(
         (response) => {
           if (isBattleshipsGame(response.data)) {
+            props.reset(response.data);
             setGame(response.data);
           } else {
+            props.reset();
             console.error(response.data.errorMessage, response.data.meta);
             alert(response.data.errorMessage);
           }
@@ -46,6 +51,7 @@ export function useGetBattleshipsGame(props: Props) {
           console.error(error);
         }
       );
-  }, [props.gameId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.isRefreshingGame]);
   return [game];
 }
