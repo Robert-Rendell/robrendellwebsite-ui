@@ -32,7 +32,7 @@ type Props = {
 export function BattleshipsGameComponent(
   props: React.PropsWithChildren<Props>
 ) {
-  const [startBoard, setStartBoard] = useState<BattleshipType[][]>([[]]);
+  const [startBoard, setStartBoard] = useState<BattleshipType[][]>();
   const [isSubmittingStartConfiguration, setIsSubmittingStartConfiguration] =
     useState(false);
   const proposedConfiguration = useRef<BattleshipsStartConfiguration>();
@@ -122,16 +122,15 @@ export function BattleshipsGameComponent(
                             return (
                               <td
                                 className={
-                                  (startBoard && startBoard[i][j])
+                                  startBoard && startBoard[i][j]
                                     ? "battleships-td-occupied"
                                     : "battleships-td"
                                 }
                                 key={`${y}-${j}`}
                                 onClick={() => onCellClick(i, j)}
                               >
-                                {(startBoard && startBoard[i][j]) && (
-                                  <span className="battleships-td-occupied-span"
-                                  >
+                                {startBoard && startBoard[i][j] && (
+                                  <span className="battleships-td-occupied-span">
                                     {Battleship[startBoard[i][j]]}
                                   </span>
                                 )}
