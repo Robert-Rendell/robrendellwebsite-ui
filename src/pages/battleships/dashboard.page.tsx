@@ -57,9 +57,6 @@ export function BattleshipsDashboardComponent() {
       setIsJoiningGame(true);
     }
   }, [isJoiningGame]);
-  const makeMove = useCallback(() => {
-    //
-  }, []);
   const refreshGame = useCallback(() => {
     setIsRefreshingGame(true);
   }, []);
@@ -72,11 +69,11 @@ export function BattleshipsDashboardComponent() {
         <BattleshipsUserComponent userState={userState} />
         <Button
           onClick={() => !isCreatingGame && setIsCreatingGame(true)}
-          disabled={!user}
+          disabled={!user || isJoiningGame}
         >
           Create Game
         </Button>
-        <Button onClick={joinGame} disabled={!user}>
+        <Button onClick={joinGame} disabled={!user || isJoiningGame}>
           Join Game
         </Button>
         {currentGame.current?.gameId === joinedGame?.gameId && joinedGame && (
@@ -85,9 +82,6 @@ export function BattleshipsDashboardComponent() {
             <p>
               Joined {joinedGame.playerUsernames[0]}&apos;s game:{" "}
               {joinedGame.gameId}
-              <Button onClick={makeMove} disabled>
-                Make random move
-              </Button>
             </p>
             <hr />
           </>
@@ -101,10 +95,10 @@ export function BattleshipsDashboardComponent() {
             <hr />
           </>
         )}
-        <BattleshipsGameComponent game={currentGame.current}>
-          {currentGame.current?.state === "created" && (
-            <Button onClick={refreshGame}>Refresh</Button>
-          )}
+        <BattleshipsGameComponent game={currentGame.current} user={user}>
+          <Button onClick={refreshGame} disabled={isRefreshingGame}>
+            Refresh
+          </Button>
         </BattleshipsGameComponent>
       </PageComponent>
     </>

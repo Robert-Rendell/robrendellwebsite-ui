@@ -12,7 +12,7 @@ import { BattleshipsAPI } from "../battleships.api";
 type Props = {
   isSubmittingStartConfiguration: boolean;
   proposedStartConfiguration?: BattleshipsStartConfiguration;
-  reset: () => void;
+  reset: (success?: boolean) => void;
 };
 
 export function usePostBattleshipsStartConfiguration(props: Props) {
@@ -37,7 +37,10 @@ export function usePostBattleshipsStartConfiguration(props: Props) {
           AxiosResponse<PostBattleshipsStartConfigurationResponse>,
           PostStartConfigurationRequest
         >(
-          `${config.backend}${BattleshipsAPI.POST.StartConfiguration}`,
+          `${config.backend}${BattleshipsAPI.POST.StartConfiguration.replace(
+            ":username",
+            username
+          ).replace(":gameId", gameId)}`,
           {
             ...props.proposedStartConfiguration,
           },
@@ -52,7 +55,7 @@ export function usePostBattleshipsStartConfiguration(props: Props) {
           (response) => {
             if (isStartConfiguration(response.data)) {
               setStartConfiguration(response.data);
-              props.reset();
+              props.reset(true);
             } else {
               console.error(response.data.errorMessage, response.data.meta);
               alert(response.data.errorMessage);
@@ -66,7 +69,7 @@ export function usePostBattleshipsStartConfiguration(props: Props) {
     } else {
       props.reset();
     }
-    // Only join when isJoiningGame changes
+    // Only join when isSubmittingStartConfiguration changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.isSubmittingStartConfiguration]);
   return [startConfiguration];
