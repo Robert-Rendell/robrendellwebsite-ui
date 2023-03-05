@@ -70,6 +70,12 @@ export function BattleshipsGameComponent(
     [currentUserTurn, props.user?.username]
   );
 
+  useEffect(() => {
+    if (props.user?.username) {
+      setPerspective(props.user?.username);
+    }
+  }, [props.user]);
+
   const isPlayingAndNotMyTurn = useCallback(() => {
     return props.game?.state === "playing" && !isMyTurn();
   }, [isMyTurn, props.game?.state]);
@@ -141,10 +147,9 @@ export function BattleshipsGameComponent(
 
   const calculateCellClassName = useCallback(
     (x: number, y: number) => {
-      const perspectiveIndex =
-        props.game?.playerUsernames.findIndex(
-          (username) => username === perspective
-        ) || 0;
+      const perspectiveIndex = props.game?.playerUsernames.findIndex(
+        (username) => username === perspective
+      );
       if (props.game?.state === "configuring") {
         if (startBoard && startBoard[x][y]) {
           return "battleships-td-occupied";
@@ -153,16 +158,18 @@ export function BattleshipsGameComponent(
         }
       }
       if (props.game?.state === "playing") {
-        if (
-          props.game.playerMoves[perspectiveIndex].find(
-            (item) => item.coords[0] === x && item.coords[1] === y
-          )
-        ) {
-          return "battleships-td-p0-move";
-        }
+        if (typeof perspectiveIndex !== "undefined" && perspectiveIndex >= 0) {
+          if (
+            props.game?.playerMoves[perspectiveIndex].find(
+              (item) => item.coords[0] === x && item.coords[1] === y
+            )
+          ) {
+            return "battleships-td-p0-move";
+          }
 
-        if (props.game?.playerBoards[perspectiveIndex][x][y] === 1) {
-          return "battleships-td-p1-move";
+          if (props.game?.playerBoards[perspectiveIndex][x][y] === 1) {
+            return "battleships-td-p1-move";
+          }
         }
       }
     },
