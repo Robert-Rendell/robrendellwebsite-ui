@@ -1,5 +1,9 @@
 import React from "react";
 import InfinitySpinner from "../resources/infinity-spinner.svg";
-export function InfinitySpinnerComponent() {
-  return <img src={InfinitySpinner} />;
+
+type Props = {
+  size?: number;
+};
+export function InfinitySpinnerComponent(props: Props) {
+  return <img src={InfinitySpinner} width={props.size} />;
 }

@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   BattleshipsGame,
   BattleshipsGameId,
@@ -13,11 +13,13 @@ import { useGetBattleshipsGame } from "./hooks/useGetGame.hook";
 import { BattleshipsGameComponent } from "./components/game.component";
 import { usePostBattleshipsCreateGame } from "./hooks/usePostCreateGame.hooks";
 import { usePostBattleshipsJoinGame } from "./hooks/usePostJoinGame.hook";
+import { InfinitySpinnerComponent } from "../../components/infinity-spinner.component";
 
 export function BattleshipsDashboardComponent() {
   const [isCreatingGame, setIsCreatingGame] = useState(false);
   const [isJoiningGame, setIsJoiningGame] = useState(false);
-  const [isRefreshingGame, setIsRefreshingGame] = useState(false);
+  const isRefreshingGameRef = useState(false);
+  const [isRefreshingGame, setIsRefreshingGame] = isRefreshingGameRef;
 
   const currentGame = useRef<BattleshipsGame | undefined>();
   const joinGameId = useRef<BattleshipsGameId>("");
@@ -59,7 +61,7 @@ export function BattleshipsDashboardComponent() {
   }, [isJoiningGame]);
   const refreshGame = useCallback(() => {
     setIsRefreshingGame(true);
-  }, []);
+  }, [setIsRefreshingGame]);
   return (
     <>
       <PageComponent
@@ -95,10 +97,15 @@ export function BattleshipsDashboardComponent() {
             <hr />
           </>
         )}
-        <BattleshipsGameComponent game={currentGame.current} user={user}>
+        <BattleshipsGameComponent
+          game={currentGame.current}
+          user={user}
+          setIsRefreshingGame={setIsRefreshingGame}
+        >
           <Button onClick={refreshGame} disabled={isRefreshingGame}>
             Refresh
           </Button>
+          {isRefreshingGame && <InfinitySpinnerComponent size={35} />}
         </BattleshipsGameComponent>
       </PageComponent>
     </>
