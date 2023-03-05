@@ -1,7 +1,23 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { Button } from "react-bootstrap";
 import { BattleshipsGame } from "robrendellwebsite-common";
 import "./game.component.css";
+
+/**
+ * No.	Class of ship	 Size
+ * 1	  Carrier	       5
+ * 2	  Battleship	   4
+ * 3	  Cruiser	       3
+ * 4	  Submarine	     3
+ * 5	  Destroyer	     2
+ */
+export const Battleship = {
+  Carrier: 5,
+  Battleship: 4,
+  Cruiser: 3,
+  Submarine: 3,
+  Destroyer: 2,
+};
 
 type Props = {
   game?: BattleshipsGame;
@@ -9,6 +25,8 @@ type Props = {
 export function BattleshipsGameComponent(
   props: React.PropsWithChildren<Props>
 ) {
+  const [selectedShip, setSelectedShip] =
+    useState<keyof typeof Battleship>("Carrier");
   const [rows, cols] = props.game?.boardDimensions || [0, 0];
   const state = props.game?.state;
   const startConfiguration = useCallback(() => {
@@ -32,17 +50,41 @@ export function BattleshipsGameComponent(
               </>
             )}
           </p>
+          <div>
+            <table>
+              <tbody>
+                <tr>
+                  {(Object.keys(Battleship) as (keyof typeof Battleship)[]).map(
+                    (ship) => {
+                      return (
+                        <>
+                          <td
+                            className={
+                              selectedShip === ship
+                                ? "battleship-selected"
+                                : "battleship-selector"
+                            }
+                            onClick={() => setSelectedShip(ship)}
+                          >
+                            {ship}
+                          </td>
+                        </>
+                      );
+                    }
+                  )}
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <>
             {(state === "configuring" || state === "playing") && (
               <>
                 <table className="battleships-table">
                   <tbody>
                     {Array.from(Array(rows)).map((x, i) => {
-                      console.log(x, i);
                       return (
                         <tr key={`${x}-${i}`}>
                           {Array.from(Array(cols)).map((y, j) => {
-                            console.log(y, i);
                             return (
                               <td
                                 className="battleships-td"

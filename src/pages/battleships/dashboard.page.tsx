@@ -81,8 +81,7 @@ export function BattleshipsDashboardComponent() {
         </Button>
         {currentGame.current?.gameId === joinedGame?.gameId && joinedGame && (
           <>
-            {" "}
-            <hr />{" "}
+            <hr />
             <p>
               Joined {joinedGame.playerUsernames[0]}&apos;s game:{" "}
               {joinedGame.gameId}
@@ -94,9 +93,13 @@ export function BattleshipsDashboardComponent() {
           </>
         )}
         {currentGame.current?.gameId === newGame?.gameId && newGame && (
-          <p>
-            New game created by {user?.username}: {newGame.gameId}
-          </p>
+          <>
+            <hr />
+            <p>
+              New game created by {user?.username}: {newGame.gameId}
+            </p>
+            <hr />
+          </>
         )}
         <BattleshipsGameComponent game={currentGame.current}>
           {currentGame.current?.state === "created" && (
