@@ -37,10 +37,12 @@ export type BattleshipType = keyof typeof Battleship;
 type Props = {
   game?: BattleshipsGame;
   user?: BattleshipsUser;
+  setIsRefreshingGame: React.Dispatch<React.SetStateAction<boolean>>;
 };
 export function BattleshipsGameComponent(
   props: React.PropsWithChildren<Props>
 ) {
+  const refreshInterval = useRef<NodeJS.Timer>();
   const isFinishedConfiguration = useRef(false);
   const currentMove = useRef<BattleshipsMove>();
   const [startBoard, setStartBoard] = useState<BattleshipType[][]>();
@@ -50,6 +52,19 @@ export function BattleshipsGameComponent(
   const [selectedShip, setSelectedShip] = useState<BattleshipType>("Carrier");
   const [rows, cols] = props.game?.boardDimensions || [0, 0];
   const state = props.game?.state;
+
+  const showConfigurationTools =
+    props.game?.state === "configuring" && !isFinishedConfiguration.current;
+
+  useEffect(() => {
+    clearInterval(refreshInterval.current);
+    refreshInterval.current = setInterval(() => {
+      if (!showConfigurationTools) {
+        props.setIsRefreshingGame(true);
+      }
+    }, 5000);
+  }, [props, showConfigurationTools]);
+
   const onCellClick = useCallback(
     (x: number, y: number) => {
       if (state === "configuring") {
@@ -91,7 +106,8 @@ export function BattleshipsGameComponent(
     isSubmittingMove,
     reset: (newGameState?: BattleshipsGame) => {
       if (newGameState) {
-        // TODO
+        // TODO: instead of trigger another refresh, just set the game state
+        props.setIsRefreshingGame(true);
       }
       setIsSubmittingMove(false);
     },
@@ -144,8 +160,6 @@ export function BattleshipsGameComponent(
     [props.game?.playerMoves, props.game?.state, startBoard]
   );
 
-  const showConfigurationTools =
-    props.game?.state === "configuring" && !isFinishedConfiguration.current;
   return (
     <>
       {!props.game && <h2>No game loaded.</h2>}

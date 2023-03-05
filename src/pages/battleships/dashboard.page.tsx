@@ -16,7 +16,6 @@ import { usePostBattleshipsJoinGame } from "./hooks/usePostJoinGame.hook";
 import { InfinitySpinnerComponent } from "../../components/infinity-spinner.component";
 
 export function BattleshipsDashboardComponent() {
-  const refreshInterval = useRef<NodeJS.Timer>();
   const [isCreatingGame, setIsCreatingGame] = useState(false);
   const [isJoiningGame, setIsJoiningGame] = useState(false);
   const isRefreshingGameRef = useState(false);
@@ -26,15 +25,6 @@ export function BattleshipsDashboardComponent() {
   const joinGameId = useRef<BattleshipsGameId>("");
   const userState = useState<BattleshipsUser>();
   const [user] = userState;
-
-  useEffect(() => {
-    clearInterval(refreshInterval.current);
-    refreshInterval.current = setInterval(
-      () => setIsRefreshingGame(true),
-      5000
-    );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   useGetBattleshipsGame({
     gameId: currentGame.current?.gameId,
@@ -107,7 +97,11 @@ export function BattleshipsDashboardComponent() {
             <hr />
           </>
         )}
-        <BattleshipsGameComponent game={currentGame.current} user={user}>
+        <BattleshipsGameComponent
+          game={currentGame.current}
+          user={user}
+          setIsRefreshingGame={setIsRefreshingGame}
+        >
           <Button onClick={refreshGame} disabled={isRefreshingGame}>
             Refresh
           </Button>
