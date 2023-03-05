@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   BattleshipsGame,
   BattleshipsGameId,
@@ -13,16 +13,28 @@ import { useGetBattleshipsGame } from "./hooks/useGetGame.hook";
 import { BattleshipsGameComponent } from "./components/game.component";
 import { usePostBattleshipsCreateGame } from "./hooks/usePostCreateGame.hooks";
 import { usePostBattleshipsJoinGame } from "./hooks/usePostJoinGame.hook";
+import { InfinitySpinnerComponent } from "../../components/infinity-spinner.component";
 
 export function BattleshipsDashboardComponent() {
+  const refreshInterval = useRef<NodeJS.Timer>();
   const [isCreatingGame, setIsCreatingGame] = useState(false);
   const [isJoiningGame, setIsJoiningGame] = useState(false);
-  const [isRefreshingGame, setIsRefreshingGame] = useState(false);
+  const isRefreshingGameRef = useState(false);
+  const [isRefreshingGame, setIsRefreshingGame] = isRefreshingGameRef;
 
   const currentGame = useRef<BattleshipsGame | undefined>();
   const joinGameId = useRef<BattleshipsGameId>("");
   const userState = useState<BattleshipsUser>();
   const [user] = userState;
+
+  useEffect(() => {
+    clearInterval(refreshInterval.current);
+    refreshInterval.current = setInterval(
+      () => setIsRefreshingGame(true),
+      5000
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useGetBattleshipsGame({
     gameId: currentGame.current?.gameId,
@@ -59,7 +71,7 @@ export function BattleshipsDashboardComponent() {
   }, [isJoiningGame]);
   const refreshGame = useCallback(() => {
     setIsRefreshingGame(true);
-  }, []);
+  }, [setIsRefreshingGame]);
   return (
     <>
       <PageComponent
@@ -99,6 +111,7 @@ export function BattleshipsDashboardComponent() {
           <Button onClick={refreshGame} disabled={isRefreshingGame}>
             Refresh
           </Button>
+          {isRefreshingGame && <InfinitySpinnerComponent size={35} />}
         </BattleshipsGameComponent>
       </PageComponent>
     </>
