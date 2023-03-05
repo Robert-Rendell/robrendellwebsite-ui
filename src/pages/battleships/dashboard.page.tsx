@@ -9,10 +9,10 @@ import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { PageComponent } from "../../components/page.component";
 import { BattleshipsUserComponent } from "./components/user.component";
-import { useGetBattleshipsGame } from "./hooks/useGetBattleshipsGame.hook";
+import { useGetBattleshipsGame } from "./hooks/useGetGame.hook";
 import { BattleshipsGameComponent } from "./components/game.component";
-import { usePostBattleshipsCreateGame } from "./hooks/usePostBattleshipsCreateGame.hooks";
-import { usePostBattleshipsJoinGame } from "./hooks/usePostBattleshipsJoinGame.hook";
+import { usePostBattleshipsCreateGame } from "./hooks/usePostCreateGame.hooks";
+import { usePostBattleshipsJoinGame } from "./hooks/usePostJoinGame.hook";
 
 export function BattleshipsDashboardComponent() {
   const [isCreatingGame, setIsCreatingGame] = useState(false);

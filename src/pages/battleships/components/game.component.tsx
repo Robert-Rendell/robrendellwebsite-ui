@@ -1,6 +1,10 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
-import { BattleshipsGame } from "robrendellwebsite-common";
+import {
+  BattleshipsGame,
+  BattleshipsStartConfiguration,
+} from "robrendellwebsite-common";
+import { usePostBattleshipsStartConfiguration } from "../hooks/usePostStartConfiguration.hook";
 import "./game.component.css";
 
 /**
@@ -25,19 +29,33 @@ type Props = {
 export function BattleshipsGameComponent(
   props: React.PropsWithChildren<Props>
 ) {
+  const [isSubmittingStartConfiguration, setIsSubmittingStartConfiguration] =
+    useState(false);
+  const proposedConfiguration = useRef<BattleshipsStartConfiguration>();
   const [selectedShip, setSelectedShip] =
     useState<keyof typeof Battleship>("Carrier");
   const [rows, cols] = props.game?.boardDimensions || [0, 0];
   const state = props.game?.state;
-  const startConfiguration = useCallback(() => {
-    //
+  const onCellClick = useCallback((x: number, y: number) => {
+    console.log("clicked", x, y);
   }, []);
+  const submitStartConfiguration = useCallback(() => {
+    setIsSubmittingStartConfiguration(true);
+  }, []);
+  usePostBattleshipsStartConfiguration({
+    proposedStartConfiguration: proposedConfiguration.current,
+    isSubmittingStartConfiguration,
+    reset: () => {
+      setIsSubmittingStartConfiguration(false);
+    },
+  });
   return (
     <>
       {!props.game && <h2>No game loaded.</h2>}
       {props.game && (
         <>
           <>
+            startConfiguration?: BattleshipsStartConfiguration
             <h2>Game ID: [{props.game.gameId}]</h2>
             <p>{JSON.stringify(props.game)}</p>
           </>
@@ -89,6 +107,7 @@ export function BattleshipsGameComponent(
                               <td
                                 className="battleships-td"
                                 key={`${y}-${j}`}
+                                onClick={() => onCellClick(x, y)}
                               ></td>
                             );
                           })}
@@ -98,8 +117,8 @@ export function BattleshipsGameComponent(
                   </tbody>
                 </table>
                 <Button
-                  onClick={startConfiguration}
-                  disabled={props.game.state === "configuring"}
+                  onClick={submitStartConfiguration}
+                  disabled={props.game.state !== "configuring"}
                 >
                   Submit start configuration
                 </Button>
