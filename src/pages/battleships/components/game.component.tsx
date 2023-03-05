@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import {
   BattleshipsGame,
@@ -21,7 +21,10 @@ export const Battleship = {
   Cruiser: 3,
   Submarine: 3,
   Destroyer: 2,
+  "": -1,
 };
+
+export type BattleshipType = keyof typeof Battleship;
 
 type Props = {
   game?: BattleshipsGame;
@@ -29,6 +32,7 @@ type Props = {
 export function BattleshipsGameComponent(
   props: React.PropsWithChildren<Props>
 ) {
+  const [startBoard, setStartBoard] = useState<BattleshipType[][]>([[]]);
   const [isSubmittingStartConfiguration, setIsSubmittingStartConfiguration] =
     useState(false);
   const proposedConfiguration = useRef<BattleshipsStartConfiguration>();
@@ -36,9 +40,14 @@ export function BattleshipsGameComponent(
     useState<keyof typeof Battleship>("Carrier");
   const [rows, cols] = props.game?.boardDimensions || [0, 0];
   const state = props.game?.state;
-  const onCellClick = useCallback((x: number, y: number) => {
-    console.log("clicked", x, y);
-  }, []);
+  const onCellClick = useCallback(
+    (x: number, y: number) => {
+      const newStartBoard = JSON.parse(JSON.stringify(startBoard));
+      newStartBoard[x][y] = selectedShip;
+      setStartBoard(newStartBoard);
+    },
+    [startBoard, selectedShip]
+  );
   const submitStartConfiguration = useCallback(() => {
     setIsSubmittingStartConfiguration(true);
   }, []);
@@ -49,13 +58,20 @@ export function BattleshipsGameComponent(
       setIsSubmittingStartConfiguration(false);
     },
   });
+  useEffect(() => {
+    if (props.game) {
+      setStartBoard(
+        Array.from(Array(rows)).map(() => Array.from(Array(cols).map(() => "")))
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.game]);
   return (
     <>
       {!props.game && <h2>No game loaded.</h2>}
       {props.game && (
         <>
           <>
-            startConfiguration?: BattleshipsStartConfiguration
             <h2>Game ID: [{props.game.gameId}]</h2>
             <p>{JSON.stringify(props.game)}</p>
           </>
@@ -68,35 +84,35 @@ export function BattleshipsGameComponent(
               </>
             )}
           </p>
-          <div>
-            <table>
-              <tbody>
-                <tr>
-                  {(Object.keys(Battleship) as (keyof typeof Battleship)[]).map(
-                    (ship) => {
-                      return (
-                        <>
-                          <td
-                            className={
-                              selectedShip === ship
-                                ? "battleship-selected"
-                                : "battleship-selector"
-                            }
-                            onClick={() => setSelectedShip(ship)}
-                          >
-                            {ship}
-                          </td>
-                        </>
-                      );
-                    }
-                  )}
-                </tr>
-              </tbody>
-            </table>
-          </div>
           <>
             {(state === "configuring" || state === "playing") && (
               <>
+                <div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        {(Object.keys(Battleship) as BattleshipType[]).map(
+                          (ship) => {
+                            return (
+                              <>
+                                <td
+                                  className={
+                                    selectedShip === ship
+                                      ? "battleship-selected"
+                                      : "battleship-selector"
+                                  }
+                                  onClick={() => setSelectedShip(ship)}
+                                >
+                                  {ship}
+                                </td>
+                              </>
+                            );
+                          }
+                        )}
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
                 <table className="battleships-table">
                   <tbody>
                     {Array.from(Array(rows)).map((x, i) => {
@@ -105,10 +121,21 @@ export function BattleshipsGameComponent(
                           {Array.from(Array(cols)).map((y, j) => {
                             return (
                               <td
-                                className="battleships-td"
+                                className={
+                                  (startBoard && startBoard[i][j])
+                                    ? "battleships-td-occupied"
+                                    : "battleships-td"
+                                }
                                 key={`${y}-${j}`}
-                                onClick={() => onCellClick(x, y)}
-                              ></td>
+                                onClick={() => onCellClick(i, j)}
+                              >
+                                {(startBoard && startBoard[i][j]) && (
+                                  <span className="battleships-td-occupied-span"
+                                  >
+                                    {Battleship[startBoard[i][j]]}
+                                  </span>
+                                )}
+                              </td>
                             );
                           })}
                         </tr>

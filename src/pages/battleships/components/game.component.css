@@ -2,6 +2,21 @@
   border: 1px solid black;
   width: 25px;
   height: 25px;
+  background-color: white;
+  position: relative;
+}
+
+.battleships-td-occupied-span {
+  position: absolute;
+  inset: 5px;
+}
+
+.battleships-td-occupied {
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+  background-color: orange;
+  position: relative;
 }
 
 .battleships-table {
