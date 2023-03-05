@@ -177,7 +177,7 @@ export function BattleshipsGameComponent(
           <>
             {(state === "configuring" || state === "playing") && (
               <>
-                {state === "configuring" && (
+                {showConfigurationTools && (
                   <div>
                     <table>
                       <tbody>
