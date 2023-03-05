@@ -92,10 +92,11 @@ export function BattleshipsGameComponent(
                     <tbody>
                       <tr>
                         {(Object.keys(Battleship) as BattleshipType[]).map(
-                          (ship) => {
+                          (ship, i) => {
                             return (
                               <>
                                 <td
+                                  key={`${ship}${i}`}
                                   className={
                                     selectedShip === ship
                                       ? "battleship-selected"

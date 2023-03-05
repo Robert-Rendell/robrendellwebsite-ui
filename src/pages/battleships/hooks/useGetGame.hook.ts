@@ -23,34 +23,38 @@ export function useGetBattleshipsGame(props: Props) {
     return (res as BattleshipsErrorResponse).errorMessage === undefined;
   };
   useEffect(() => {
-    axios
-      .get<GetGameStateRequest, AxiosResponse<GetBattleshipsGameResponse>>(
-        `${config.backend}${BattleshipsAPI.GET.GameState.replace(
-          ":gameId",
-          props.gameId || ""
-        )}`,
-        {
-          headers: { "Content-Type": "application/json" },
-          validateStatus: function (status) {
-            return status >= 200 && status <= 400;
-          },
-        }
-      )
-      .then(
-        (response) => {
-          if (isBattleshipsGame(response.data)) {
-            props.reset(response.data);
-            setGame(response.data);
-          } else {
-            props.reset();
-            console.error(response.data.errorMessage, response.data.meta);
-            alert(response.data.errorMessage);
+    if (props.gameId) {
+      axios
+        .get<GetGameStateRequest, AxiosResponse<GetBattleshipsGameResponse>>(
+          `${config.backend}${BattleshipsAPI.GET.GameState.replace(
+            ":gameId",
+            props.gameId || ""
+          )}`,
+          {
+            headers: { "Content-Type": "application/json" },
+            validateStatus: function (status) {
+              return status >= 200 && status <= 400;
+            },
           }
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
+        )
+        .then(
+          (response) => {
+            if (isBattleshipsGame(response.data)) {
+              props.reset(response.data);
+              setGame(response.data);
+            } else {
+              props.reset();
+              console.error(response.data.errorMessage, response.data.meta);
+              alert(response.data.errorMessage);
+            }
+          },
+          (error) => {
+            console.error(error);
+          }
+        );
+    } else {
+      props.reset();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.isRefreshingGame]);
   return [game];
