@@ -145,7 +145,7 @@ export function BattleshipsGameComponent(
   );
 
   const showConfigurationTools =
-    props.game?.state === "configuring" && !isFinishedConfiguration;
+    props.game?.state === "configuring" && !isFinishedConfiguration.current;
   return (
     <>
       {!props.game && <h2>No game loaded.</h2>}
@@ -223,7 +223,6 @@ export function BattleshipsGameComponent(
                                     <span className="battleships-td-occupied-span">
                                       {Battleship[startBoard[i][j]]}
                                     </span>
-                                    <span>X</span>
                                   </>
                                 )}
                               </td>
