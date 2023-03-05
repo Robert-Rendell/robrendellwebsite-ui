@@ -13,26 +13,32 @@ import { useGetBattleshipsGame } from "./hooks/useGetBattleshipsGame.hook";
 import { BattleshipsGameComponent } from "./components/game.component";
 import { usePostBattleshipsCreateGame } from "./hooks/usePostBattleshipsCreateGame.hooks";
 import { usePostBattleshipsJoinGame } from "./hooks/usePostBattleshipsJoinGame.hook";
-import { usePreferences } from "../../hooks/use-preferences.hook";
 
 export function BattleshipsDashboardComponent() {
-  const { preferences, savePreferences } = usePreferences();
+  const [isCreatingGame, setIsCreatingGame] = useState(false);
+  const [isJoiningGame, setIsJoiningGame] = useState(false);
+  const [isRefreshingGame, setIsRefreshingGame] = useState(false);
+
   const currentGame = useRef<BattleshipsGame | undefined>();
   const joinGameId = useRef<BattleshipsGameId>("");
   const userState = useState<BattleshipsUser>();
   const [user] = userState;
-  const [loadedGame] = useGetBattleshipsGame({
-    gameId: "",
+
+  useGetBattleshipsGame({
+    gameId: currentGame.current?.gameId,
+    isRefreshingGame,
+    reset: (game?: BattleshipsGame) => {
+      if (game) currentGame.current = game;
+      setIsRefreshingGame(false);
+    },
   });
-  const [isCreatingGame, setIsCreatingGame] = useState(false);
-  const [isJoiningGame, setIsJoiningGame] = useState(false);
   const [newGame] = usePostBattleshipsCreateGame({
     username: user?.username || "",
     gameId: "",
     boardDimensions: [10, 10],
     isCreatingGame,
     reset: (game?: BattleshipsGame) => {
-      currentGame.current = game;
+      if (game) currentGame.current = game;
       setIsCreatingGame(false);
     },
   });
@@ -41,7 +47,7 @@ export function BattleshipsDashboardComponent() {
     gameId: joinGameId.current,
     isJoiningGame,
     reset: (game?: BattleshipsGame) => {
-      currentGame.current = game;
+      if (game) currentGame.current = game;
       setIsJoiningGame(false);
     },
   });
@@ -54,8 +60,8 @@ export function BattleshipsDashboardComponent() {
   const makeMove = useCallback(() => {
     //
   }, []);
-  const startConfiguration = useCallback(() => {
-    //
+  const refreshGame = useCallback(() => {
+    setIsRefreshingGame(true);
   }, []);
   return (
     <>
@@ -73,19 +79,13 @@ export function BattleshipsDashboardComponent() {
         <Button onClick={joinGame} disabled={!user}>
           Join Game
         </Button>
-        {joinedGame && (
+        {currentGame.current?.gameId === joinedGame?.gameId && joinedGame && (
           <>
             {" "}
             <hr />{" "}
             <p>
               Joined {joinedGame.playerUsernames[0]}&apos;s game:{" "}
               {joinedGame.gameId}
-              <Button
-                onClick={startConfiguration}
-                disabled={currentGame.current?.state === "configuring"}
-              >
-                Submit start configuration
-              </Button>
               <Button onClick={makeMove} disabled>
                 Make random move
               </Button>
@@ -93,12 +93,16 @@ export function BattleshipsDashboardComponent() {
             <hr />
           </>
         )}
-        {newGame && (
+        {currentGame.current?.gameId === newGame?.gameId && newGame && (
           <p>
             New game created by {user?.username}: {newGame.gameId}
           </p>
         )}
-        <BattleshipsGameComponent game={newGame || joinedGame || loadedGame} />
+        <BattleshipsGameComponent game={currentGame.current}>
+          {currentGame.current?.state === "created" && (
+            <Button onClick={refreshGame}>Refresh</Button>
+          )}
+        </BattleshipsGameComponent>
       </PageComponent>
     </>
   );

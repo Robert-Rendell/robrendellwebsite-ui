@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { Button } from "react-bootstrap";
 import { BattleshipsGame } from "robrendellwebsite-common";
 import "./game.component.css";
 
 type Props = {
   game?: BattleshipsGame;
 };
-export function BattleshipsGameComponent(props: Props) {
+export function BattleshipsGameComponent(
+  props: React.PropsWithChildren<Props>
+) {
   const [rows, cols] = props.game?.boardDimensions || [0, 0];
   const state = props.game?.state;
+  const startConfiguration = useCallback(() => {
+    //
+  }, []);
   return (
     <>
       {!props.game && <h2>No game loaded.</h2>}
@@ -18,29 +24,44 @@ export function BattleshipsGameComponent(props: Props) {
             <p>{JSON.stringify(props.game)}</p>
           </>
           <hr />
-          <p>{state === "created" && <p>Waiting for opponent to join...</p>}</p>
+          <p>
+            {state === "created" && (
+              <>
+                <p>Waiting for opponent to join...</p>
+                {props.children}
+              </>
+            )}
+          </p>
           <>
             {(state === "configuring" || state === "playing") && (
-              <table className="battleships-table">
-                <tbody>
-                  {Array.from(Array(rows)).map((x, i) => {
-                    console.log(x, i);
-                    return (
-                      <tr key={`${x}-${i}`}>
-                        {Array.from(Array(cols)).map((y, j) => {
-                          console.log(y, i);
-                          return (
-                            <td
-                              className="battleships-td"
-                              key={`${y}-${j}`}
-                            ></td>
-                          );
-                        })}
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+              <>
+                <table className="battleships-table">
+                  <tbody>
+                    {Array.from(Array(rows)).map((x, i) => {
+                      console.log(x, i);
+                      return (
+                        <tr key={`${x}-${i}`}>
+                          {Array.from(Array(cols)).map((y, j) => {
+                            console.log(y, i);
+                            return (
+                              <td
+                                className="battleships-td"
+                                key={`${y}-${j}`}
+                              ></td>
+                            );
+                          })}
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+                <Button
+                  onClick={startConfiguration}
+                  disabled={props.game.state === "configuring"}
+                >
+                  Submit start configuration
+                </Button>
+              </>
             )}
           </>
         </>

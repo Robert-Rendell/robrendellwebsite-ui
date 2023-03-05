@@ -50,6 +50,7 @@ export function usePostBattleshipsCreateGame(props: Props) {
               setGame(response.data);
               props.reset(response.data);
             } else {
+              props.reset();
               console.error(response.data.errorMessage, response.data.meta);
               alert(response.data.errorMessage);
             }
