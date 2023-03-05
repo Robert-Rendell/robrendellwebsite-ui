@@ -47,8 +47,7 @@ export function BattleshipsGameComponent(
   const [isSubmittingMove, setIsSubmittingMove] = useState(false);
   const [isSubmittingStartConfiguration, setIsSubmittingStartConfiguration] =
     useState(false);
-  const [selectedShip, setSelectedShip] =
-    useState<keyof typeof Battleship>("Carrier");
+  const [selectedShip, setSelectedShip] = useState<BattleshipType>("Carrier");
   const [rows, cols] = props.game?.boardDimensions || [0, 0];
   const state = props.game?.state;
   const onCellClick = useCallback(
@@ -105,14 +104,46 @@ export function BattleshipsGameComponent(
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.game]);
+
   const currentUserTurn = useMemo(
     () => props.game && props.game?.playerUsernames[props.game.turn ? 0 : 1],
     [props.game]
   );
+
   const isMyTurn = useCallback(
     () => currentUserTurn === props.user?.username,
     [currentUserTurn, props.user?.username]
   );
+
+  const calculateCellClassName = useCallback(
+    (x: number, y: number) => {
+      if (props.game?.state === "configuring") {
+        if (startBoard && startBoard[x][y]) {
+          return "battleships-td-occupied";
+        } else {
+          return "battleships-td";
+        }
+      }
+      if (props.game?.state === "playing") {
+        if (
+          props.game.playerMoves[0].find(
+            (item) => item.coords[0] === x && item.coords[1] === y
+          )
+        ) {
+          return "battleships-td-p0-move";
+        }
+        if (
+          props.game.playerMoves[1].find(
+            (item) => item.coords[0] === x && item.coords[1] === y
+          )
+        ) {
+          return "battleships-td-p1-move";
+        }
+      }
+    },
+    [props.game?.playerMoves, props.game?.state, startBoard]
+  );
+
   const showConfigurationTools =
     props.game?.state === "configuring" && !isFinishedConfiguration;
   return (
@@ -183,11 +214,7 @@ export function BattleshipsGameComponent(
                           {Array.from(Array(cols)).map((y, j) => {
                             return (
                               <td
-                                className={
-                                  startBoard && startBoard[i][j]
-                                    ? "battleships-td-occupied"
-                                    : "battleships-td"
-                                }
+                                className={calculateCellClassName(i, j)}
                                 key={`${y}-${j}`}
                                 onClick={() => onCellClick(i, j)}
                               >
@@ -215,8 +242,7 @@ export function BattleshipsGameComponent(
                     Submit start configuration
                   </Button>
                 )}
-                <hr />
-                <p>{JSON.stringify(props.game)}</p>
+                {/* <p>{JSON.stringify(props.game)}</p> */}
               </>
             )}
           </>
