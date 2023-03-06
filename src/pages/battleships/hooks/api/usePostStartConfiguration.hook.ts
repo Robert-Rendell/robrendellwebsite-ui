@@ -6,8 +6,8 @@ import {
   PostBattleshipsStartConfigurationResponse,
   PostStartConfigurationRequest,
 } from "robrendellwebsite-common";
-import { config } from "../../../config";
-import { BattleshipsAPI } from "../battleships.api";
+import { config } from "../../../../config";
+import { BattleshipsAPI } from "../../battleships.api";
 
 type Props = {
   isSubmittingStartConfiguration: boolean;

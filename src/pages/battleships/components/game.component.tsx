@@ -13,28 +13,12 @@ import {
   BattleshipsUser,
   BattleshipsUsername,
 } from "robrendellwebsite-common";
-import { usePostBattleshipsMakeMove } from "../hooks/useMakeMove.hook";
-import { usePostBattleshipsStartConfiguration } from "../hooks/usePostStartConfiguration.hook";
+import { Battleship, BattleshipType } from "../battleship-type";
+import { usePostBattleshipsMakeMove } from "../hooks/api/useMakeMove.hook";
+import { usePostBattleshipsStartConfiguration } from "../hooks/api/usePostStartConfiguration.hook";
+import { BattleshipsConfigurationToolsComponent } from "./configuration-tools.component";
+import { BattleshipsGameStatusComponent } from "./game-status.component";
 import "./game.component.css";
-
-/**
- * No.	Class of ship	 Size
- * 1	  Carrier	       5
- * 2	  Battleship	   4
- * 3	  Cruiser	       3
- * 4	  Submarine	     3
- * 5	  Destroyer	     2
- */
-export const Battleship = {
-  Carrier: 5,
-  Battleship: 4,
-  Cruiser: 3,
-  Submarine: 3,
-  Destroyer: 2,
-  "": -1,
-};
-
-export type BattleshipType = keyof typeof Battleship;
 
 type Props = {
   game?: BattleshipsGame;
@@ -54,7 +38,8 @@ export function BattleshipsGameComponent(
   const [isSubmittingMove, setIsSubmittingMove] = useState(false);
   const [isSubmittingStartConfiguration, setIsSubmittingStartConfiguration] =
     useState(false);
-  const [selectedShip, setSelectedShip] = useState<BattleshipType>("Carrier");
+  const selectedShipState = useState<BattleshipType>("Carrier");
+  const [selectedShip] = selectedShipState;
   const [rows, cols] = props.game?.boardDimensions || [0, 0];
   const state = props.game?.state;
 
@@ -93,6 +78,13 @@ export function BattleshipsGameComponent(
   const onCellClick = useCallback(
     (x: number, y: number) => {
       if (state === "configuring") {
+        if (!startBoard) {
+          setStartBoard(
+            Array.from(Array(rows)).map(() =>
+              Array.from(Array(cols).map(() => ""))
+            )
+          );
+        }
         const newStartBoard = JSON.parse(JSON.stringify(startBoard));
         newStartBoard[x][y] = selectedShip;
         setStartBoard(newStartBoard);
@@ -105,7 +97,7 @@ export function BattleshipsGameComponent(
         setIsSubmittingMove(true);
       }
     },
-    [isSubmittingMove, state, startBoard, selectedShip]
+    [state, isSubmittingMove, startBoard, selectedShip, rows, cols]
   );
   const submitStartConfiguration = useCallback(() => {
     setIsSubmittingStartConfiguration(true);
@@ -138,13 +130,13 @@ export function BattleshipsGameComponent(
     },
   });
   useEffect(() => {
-    if (props.game) {
+    if (props.game && !startBoard) {
       setStartBoard(
         Array.from(Array(rows)).map(() => Array.from(Array(cols).map(() => "")))
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.game]);
+  }, []);
 
   const isState = useCallback(
     (state: BattleshipsGameState): boolean => {
@@ -205,60 +197,22 @@ export function BattleshipsGameComponent(
       {!props.game && <h2>No game loaded.</h2>}
       {props.game && (
         <>
-          <p>
-            <>
-              {state === "created" && <p>Waiting for opponent to join...</p>}
-              {state === "configuring" && isFinishedConfiguration.current && (
-                <p>Waiting for opponent to place their ships...</p>
-              )}
-              {state === "playing" && isMyTurn() && (
-                <>
-                  <p>It&apos;s your turn!</p>
-                </>
-              )}
-              {state === "playing" && !isMyTurn() && (
-                <>
-                  <p>
-                    It&apos;s {currentUserTurn}
-                    &apos;s turn...
-                  </p>
-                </>
-              )}
-              {props.children}
-            </>
-          </p>
+          <BattleshipsGameStatusComponent
+            state={props.game.state}
+            isFinishedConfiguration={isFinishedConfiguration}
+            isMyTurn={isMyTurn}
+            currentUserTurn={currentUserTurn}
+          >
+            {props.children}
+          </BattleshipsGameStatusComponent>
           <hr />
           <>
             {(state === "configuring" || state === "playing") && (
               <>
                 {showConfigurationTools && (
-                  <div>
-                    <table>
-                      <tbody>
-                        <tr>
-                          {(Object.keys(Battleship) as BattleshipType[]).map(
-                            (ship, i) => {
-                              return (
-                                <>
-                                  <td
-                                    key={`${ship}${i}`}
-                                    className={
-                                      selectedShip === ship
-                                        ? "battleship-selected"
-                                        : "battleship-selector"
-                                    }
-                                    onClick={() => setSelectedShip(ship)}
-                                  >
-                                    {ship}
-                                  </td>
-                                </>
-                              );
-                            }
-                          )}
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  <BattleshipsConfigurationToolsComponent
+                    selectedShipState={selectedShipState}
+                  />
                 )}
                 {perspective && (
                   <Button
@@ -308,7 +262,6 @@ export function BattleshipsGameComponent(
                     Submit start configuration
                   </Button>
                 )}
-                {/* <p>{JSON.stringify(props.game)}</p> */}
               </>
             )}
           </>
