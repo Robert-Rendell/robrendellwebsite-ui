@@ -110,6 +110,10 @@ ReactDOM.render(
               path={SharedRoutes.Battleships.Dashboard}
               element={<BattleshipsDashboardComponent />}
             />
+            <Route
+              path={`${SharedRoutes.Battleships.Play}/:gameId`}
+              element={<PlayBattleships />}
+            />
 
             {/* //////////////////////////////////// */}
             <Route
@@ -398,6 +402,11 @@ ReactDOM.render(
 function PlaySudoku() {
   const { sudokuId } = useParams();
   return <SudokuGameComponent sudokuId={sudokuId} />;
+}
+
+function PlayBattleships() {
+  const { gameId } = useParams();
+  return <BattleshipsDashboardComponent joinLinkGameId={gameId} />;
 }
 
 // If you want to start measuring performance in your app, pass a function

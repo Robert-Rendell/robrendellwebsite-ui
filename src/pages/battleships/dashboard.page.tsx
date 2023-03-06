@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   BattleshipsGame,
   BattleshipsGameId,
@@ -14,8 +14,14 @@ import { BattleshipsGameComponent } from "./components/game.component";
 import { usePostBattleshipsCreateGame } from "./hooks/usePostCreateGame.hooks";
 import { usePostBattleshipsJoinGame } from "./hooks/usePostJoinGame.hook";
 import { InfinitySpinnerComponent } from "../../components/infinity-spinner.component";
+import { usePreferences } from "../../hooks/use-preferences.hook";
+import { NewTabLink } from "../../components/new-tab-link.component";
 
-export function BattleshipsDashboardComponent() {
+type Props = {
+  joinLinkGameId?: BattleshipsGameId;
+};
+export function BattleshipsDashboardComponent(props: Props) {
+  const { preferences } = usePreferences();
   const [isCreatingGame, setIsCreatingGame] = useState(false);
   const [isJoiningGame, setIsJoiningGame] = useState(false);
   const isRefreshingGameRef = useState(false);
@@ -24,13 +30,24 @@ export function BattleshipsDashboardComponent() {
   const currentGame = useRef<BattleshipsGame | undefined>();
   const joinGameId = useRef<BattleshipsGameId>("");
   const userState = useState<BattleshipsUser>();
-  const [user] = userState;
+  const [user, setUser] = userState;
+
+  useEffect(() => {
+    if (preferences?.battleships?.username) {
+      setUser({ username: preferences.battleships.username, battles: [] });
+      if (props.joinLinkGameId) {
+        setIsJoiningGame(true);
+      }
+    }
+  }, [preferences?.battleships?.username, props.joinLinkGameId, setUser]);
 
   useGetBattleshipsGame({
     gameId: currentGame.current?.gameId,
     isRefreshingGame,
     reset: (game?: BattleshipsGame) => {
-      if (game) currentGame.current = game;
+      if (game) {
+        currentGame.current = game;
+      }
       setIsRefreshingGame(false);
     },
   });
@@ -46,7 +63,7 @@ export function BattleshipsDashboardComponent() {
   });
   const [joinedGame] = usePostBattleshipsJoinGame({
     username: user?.username || "",
-    gameId: joinGameId.current,
+    gameId: props.joinLinkGameId || joinGameId.current,
     isJoiningGame,
     reset: (game?: BattleshipsGame) => {
       if (game) currentGame.current = game;
@@ -82,8 +99,12 @@ export function BattleshipsDashboardComponent() {
           <>
             <hr />
             <p>
-              Joined {joinedGame.playerUsernames[0]}&apos;s game:{" "}
-              {joinedGame.gameId}
+              Joined{" "}
+              <NewTabLink
+                href={`${SharedRoutes.Battleships.Play}/${currentGame.current?.gameId}`}
+              >
+                {joinedGame.playerUsernames[0]}&apos;s game:{" "}
+              </NewTabLink>
             </p>
             <hr />
           </>
@@ -92,7 +113,12 @@ export function BattleshipsDashboardComponent() {
           <>
             <hr />
             <p>
-              New game created by {user?.username}: {newGame.gameId}
+              New game created by {user?.username}:{" "}
+              <NewTabLink
+                href={`${SharedRoutes.Battleships.Play}/${newGame.gameId}`}
+              >
+                Share link
+              </NewTabLink>
             </p>
             <hr />
           </>

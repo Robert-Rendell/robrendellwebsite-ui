@@ -13,6 +13,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
   },
   Battleships: {
     Dashboard: "/battleships",
+    Play: "/battleships/play",
   },
   Miscellaneous: {
     India: "/miscellaneous/india",

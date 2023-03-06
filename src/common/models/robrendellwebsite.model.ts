@@ -11,6 +11,7 @@ export type RobRendellWebsiteModel = {
   };
   Battleships: {
     Dashboard: string;
+    Play: string;
   };
   StravaAPI: {
     Historical: string;
