@@ -8,6 +8,7 @@ import React, {
 import { Button } from "react-bootstrap";
 import {
   BattleshipsGame,
+  BattleshipsGameState,
   BattleshipsMove,
   BattleshipsUser,
   BattleshipsUsername,
@@ -145,40 +146,56 @@ export function BattleshipsGameComponent(
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.game]);
 
+  const isState = useCallback(
+    (state: BattleshipsGameState): boolean => {
+      return props.game?.state === state;
+    },
+    [props.game?.state]
+  );
+
   const calculateCellClassName = useCallback(
     (x: number, y: number) => {
       const perspectiveIndex = props.game?.playerUsernames.findIndex(
         (username) => username === perspective
       );
-      if (props.game?.state === "configuring") {
-        if (startBoard && startBoard[x][y]) {
-          return "battleships-td-occupied";
-        } else {
-          return "battleships-td";
-        }
-      }
-      if (props.game?.state === "playing") {
-        if (typeof perspectiveIndex !== "undefined" && perspectiveIndex >= 0) {
-          if (
-            props.game?.playerMoves[perspectiveIndex].find(
-              (item) => item.coords[0] === x && item.coords[1] === y
-            )
-          ) {
-            return "battleships-td-p0-move";
+      if (isState("configuring") || isState("playing")) {
+        if (isState("configuring" || perspective === props.user?.username)) {
+          if (startBoard && startBoard[x][y]) {
+            return "battleships-td-occupied";
+          } else {
+            if (isState("configuring")) {
+              return "battleships-td";
+            }
           }
+        }
 
-          if (props.game?.playerBoards[perspectiveIndex][x][y] === 1) {
-            return "battleships-td-p1-move";
+        if (isState("playing")) {
+          if (
+            typeof perspectiveIndex !== "undefined" &&
+            perspectiveIndex >= 0
+          ) {
+            if (
+              props.game?.playerMoves[perspectiveIndex].find(
+                (item) => item.coords[0] === x && item.coords[1] === y
+              )
+            ) {
+              return "battleships-td-p0-move";
+            }
+
+            if (props.game?.playerBoards[perspectiveIndex][x][y] === 1) {
+              return "battleships-td-p1-move";
+            }
           }
         }
       }
     },
     [
+      isState,
       perspective,
       props.game?.playerBoards,
       props.game?.playerMoves,
       props.game?.playerUsernames,
-      props.game?.state,
+      props.user?.username,
       startBoard,
     ]
   );

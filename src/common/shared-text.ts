@@ -10,6 +10,7 @@ export const SharedText: RobRendellWebsiteModel = {
   },
   Battleships: {
     Dashboard: "Battleships Project",
+    Play: "",
   },
   Miscellaneous: {
     India: "India",
