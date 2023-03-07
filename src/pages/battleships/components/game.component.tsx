@@ -87,7 +87,13 @@ export function BattleshipsGameComponent(
   const onCellClick = useCallback(
     (x: number, y: number) => {
       if (state === "configuring") {
-        const newStartBoard = JSON.parse(JSON.stringify(startBoard));
+        let newStartBoard;
+        if (!startBoard) {
+          newStartBoard = Array.from(Array(rows)).map(() =>
+            Array.from(Array(cols).map(() => ""))
+          );
+        }
+        newStartBoard = JSON.parse(JSON.stringify(startBoard || newStartBoard));
         newStartBoard[x][y] = selectedShip;
         setStartBoard(newStartBoard);
       }
@@ -99,7 +105,7 @@ export function BattleshipsGameComponent(
         setIsSubmittingMove(true);
       }
     },
-    [state, isSubmittingMove, isMyTurn, startBoard, selectedShip]
+    [state, isSubmittingMove, isMyTurn, startBoard, selectedShip, rows, cols]
   );
   const submitStartConfiguration = useCallback(() => {
     setIsSubmittingStartConfiguration(true);
@@ -166,10 +172,6 @@ export function BattleshipsGameComponent(
         if (isState("configuring") || perspective === props.user?.username) {
           if (startBoard && startBoard[x][y]) {
             return "battleships-td-occupied";
-          } else {
-            if (isState("configuring")) {
-              return "battleships-td";
-            }
           }
         }
 
@@ -183,7 +185,9 @@ export function BattleshipsGameComponent(
                 (item) => item.coords[0] === x && item.coords[1] === y
               )
             ) {
-              return "battleships-td-p0-move";
+              if (props.game?.playerBoards[perspectiveIndex][x][y] !== 1) {
+                return "battleships-td-p0-move";
+              }
             }
 
             if (props.game?.playerBoards[perspectiveIndex][x][y] === 1) {
@@ -192,6 +196,7 @@ export function BattleshipsGameComponent(
           }
         }
       }
+      return "battleships-td";
     },
     [
       isState,

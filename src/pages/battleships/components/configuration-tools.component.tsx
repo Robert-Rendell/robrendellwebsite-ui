@@ -17,19 +17,17 @@ export function BattleshipsConfigurationToolsComponent(props: Props) {
             <tr>
               {(Object.keys(Battleship) as BattleshipType[]).map((ship, i) => {
                 return (
-                  <>
-                    <td
-                      key={`${ship}${i}`}
-                      className={
-                        selectedShip === ship
-                          ? "battleship-selected"
-                          : "battleship-selector"
-                      }
-                      onClick={() => setSelectedShip(ship)}
-                    >
-                      {ship}
-                    </td>
-                  </>
+                  <td
+                    key={`${ship}${i}`}
+                    className={
+                      selectedShip === ship
+                        ? "battleship-selected"
+                        : "battleship-selector"
+                    }
+                    onClick={() => setSelectedShip(ship)}
+                  >
+                    {ship}
+                  </td>
                 );
               })}
             </tr>
