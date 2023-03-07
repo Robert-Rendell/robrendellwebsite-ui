@@ -15,21 +15,15 @@ export function BattleshipsGameStatusComponent(
     <>
       <p>
         <>
-          {state === "created" && <p>Waiting for opponent to join...</p>}
-          {state === "configuring" && isFinishedConfiguration.current && (
-            <p>Waiting for opponent to place their ships...</p>
-          )}
-          {state === "playing" && isMyTurn() && (
-            <>
-              <p>It&apos;s your turn!</p>
-            </>
-          )}
+          {state === "created" && "Waiting for opponent to join..."}
+          {state === "configuring" &&
+            isFinishedConfiguration.current &&
+            "Waiting for opponent to place their ships..."}
+          {state === "playing" && isMyTurn() && <>It&apos;s your turn!</>}
           {state === "playing" && !isMyTurn() && (
             <>
-              <p>
-                It&apos;s {currentUserTurn}
-                &apos;s turn...
-              </p>
+              It&apos;s {currentUserTurn}
+              &apos;s turn...
             </>
           )}
           {props.children}

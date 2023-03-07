@@ -2,7 +2,10 @@ import React from "react";
 import { Battleship, BattleshipType } from "../battleship-type";
 
 type Props = {
-  selectedShipState: [BattleshipType, React.Dispatch<React.SetStateAction<BattleshipType>>];
+  selectedShipState: [
+    BattleshipType,
+    React.Dispatch<React.SetStateAction<BattleshipType>>
+  ];
 };
 export function BattleshipsConfigurationToolsComponent(props: Props) {
   const [selectedShip, setSelectedShip] = props.selectedShipState;
