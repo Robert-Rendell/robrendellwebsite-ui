@@ -3,39 +3,45 @@ import { useEffect, useState } from "react";
 import {
   BattleshipsErrorResponse,
   BattleshipsGame,
-  PostBattleshipsCreateGameRequest,
-  PostBattleshipsCreateGameResponse,
+  PostBattleshipsMakeMoveRequest,
+  PostBattleshipsMakeMoveResponse,
 } from "robrendellwebsite-common";
-import { config } from "../../../config";
-import { BattleshipsAPI } from "../battleships.api";
+import { config } from "../../../../config";
+import { BattleshipsAPI } from "../../battleships.api";
 
-type Props = PostBattleshipsCreateGameRequest & {
-  isCreatingGame: boolean;
-  reset: (game?: BattleshipsGame) => void;
+type Props = PostBattleshipsMakeMoveRequest & {
+  isSubmittingMove: boolean;
+  reset: (newGameState?: BattleshipsGame) => void;
 };
 
-export function usePostBattleshipsCreateGame(props: Props) {
-  const [game, setGame] = useState<BattleshipsGame>();
+export function usePostBattleshipsMakeMove(props: Props) {
+  const [newGameState, setNewGameState] = useState<BattleshipsGame>();
   const isBattleshipsGame = (
-    res: PostBattleshipsCreateGameResponse
+    res: PostBattleshipsMakeMoveResponse
   ): res is BattleshipsGame => {
     return (res as BattleshipsErrorResponse).errorMessage === undefined;
   };
   useEffect(() => {
     if (
-      props.isCreatingGame &&
-      props.username &&
-      props.boardDimensions.length
+      props.isSubmittingMove &&
+      props.move &&
+      props.gameId &&
+      props.username
     ) {
       axios
         .post<
           unknown,
-          AxiosResponse<PostBattleshipsCreateGameResponse>,
-          PostBattleshipsCreateGameRequest
+          AxiosResponse<PostBattleshipsMakeMoveResponse>,
+          PostBattleshipsMakeMoveRequest
         >(
-          `${config.backend}${BattleshipsAPI.POST.Create}`,
+          `${config.backend}${BattleshipsAPI.POST.MakeMove.replace(
+            ":gameId",
+            props.gameId
+          )}`,
           {
-            ...props,
+            gameId: props.gameId,
+            move: props.move,
+            username: props.username,
           },
           {
             headers: { "Content-Type": "application/json" },
@@ -47,12 +53,12 @@ export function usePostBattleshipsCreateGame(props: Props) {
         .then(
           (response) => {
             if (isBattleshipsGame(response.data)) {
-              setGame(response.data);
+              setNewGameState(response.data);
               props.reset(response.data);
             } else {
-              props.reset();
               console.error(response.data.errorMessage, response.data.meta);
               alert(response.data.errorMessage);
+              props.reset();
             }
           },
           (error) => {
@@ -62,8 +68,8 @@ export function usePostBattleshipsCreateGame(props: Props) {
     } else {
       props.reset();
     }
-    // Only create when isCreatingGame changes
+    // Only join when isSubmittingMove changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.isCreatingGame]);
-  return [game];
+  }, [props.isSubmittingMove]);
+  return [newGameState];
 }

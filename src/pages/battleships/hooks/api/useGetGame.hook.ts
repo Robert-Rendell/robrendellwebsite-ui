@@ -7,8 +7,8 @@ import {
   GetBattleshipsGameResponse,
   GetGameStateRequest,
 } from "robrendellwebsite-common";
-import { config } from "../../../config";
-import { BattleshipsAPI } from "../battleships.api";
+import { config } from "../../../../config";
+import { BattleshipsAPI } from "../../battleships.api";
 
 type Props = {
   gameId?: BattleshipsGameId;

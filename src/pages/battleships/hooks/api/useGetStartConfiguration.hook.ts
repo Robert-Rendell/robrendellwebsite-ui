@@ -2,48 +2,40 @@ import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import {
   BattleshipsErrorResponse,
+  BattleshipsGameId,
   BattleshipsStartConfiguration,
-  PostBattleshipsStartConfigurationResponse,
-  PostStartConfigurationRequest,
+  BattleshipsUser,
+  GetBattleshipsStartConfigurationResponse,
+  GetStartConfigurationRequest,
 } from "robrendellwebsite-common";
-import { config } from "../../../config";
-import { BattleshipsAPI } from "../battleships.api";
+import { config } from "../../../../config";
+import { BattleshipsAPI } from "../../battleships.api";
 
 type Props = {
-  isSubmittingStartConfiguration: boolean;
-  proposedStartConfiguration?: BattleshipsStartConfiguration;
-  reset: (success?: boolean) => void;
+  gameId?: BattleshipsGameId;
+  user?: BattleshipsUser;
+  isGettingStartConfiguration: boolean;
+  reset: (startConfiguration?: BattleshipsStartConfiguration) => void;
 };
-
-export function usePostBattleshipsStartConfiguration(props: Props) {
+export function useGetStartConfiguration(props: Props) {
   const [startConfiguration, setStartConfiguration] =
     useState<BattleshipsStartConfiguration>();
   const isStartConfiguration = (
-    res: PostBattleshipsStartConfigurationResponse
+    res: GetBattleshipsStartConfigurationResponse
   ): res is BattleshipsStartConfiguration => {
     return (res as BattleshipsErrorResponse).errorMessage === undefined;
   };
-  const { username, gameId } = props.proposedStartConfiguration || {};
   useEffect(() => {
-    if (
-      props.isSubmittingStartConfiguration &&
-      props.proposedStartConfiguration &&
-      username &&
-      gameId
-    ) {
+    if (props.gameId && props.user) {
       axios
-        .post<
-          unknown,
-          AxiosResponse<PostBattleshipsStartConfigurationResponse>,
-          PostStartConfigurationRequest
+        .get<
+          GetStartConfigurationRequest,
+          AxiosResponse<GetBattleshipsStartConfigurationResponse>
         >(
-          `${config.backend}${BattleshipsAPI.POST.StartConfiguration.replace(
-            ":username",
-            username
-          ).replace(":gameId", gameId)}`,
-          {
-            ...props.proposedStartConfiguration,
-          },
+          `${config.backend}${BattleshipsAPI.GET.StartConfiguration.replace(
+            ":gameId",
+            props.gameId || ""
+          ).replace(":username", props.user.username)}`,
           {
             headers: { "Content-Type": "application/json" },
             validateStatus: function (status) {
@@ -54,12 +46,12 @@ export function usePostBattleshipsStartConfiguration(props: Props) {
         .then(
           (response) => {
             if (isStartConfiguration(response.data)) {
+              props.reset(response.data);
               setStartConfiguration(response.data);
-              props.reset(true);
             } else {
+              props.reset();
               console.error(response.data.errorMessage, response.data.meta);
               alert(response.data.errorMessage);
-              props.reset();
             }
           },
           (error) => {
@@ -69,8 +61,7 @@ export function usePostBattleshipsStartConfiguration(props: Props) {
     } else {
       props.reset();
     }
-    // Only join when isSubmittingStartConfiguration changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.isSubmittingStartConfiguration]);
+  }, [props.isGettingStartConfiguration]);
   return [startConfiguration];
 }
