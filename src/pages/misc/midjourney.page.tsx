@@ -1,19 +1,18 @@
 import React from "react";
-import { useWindowSize } from "../../hooks/use-window-size.hook";
 import "./india.page.css";
-import { usePageView } from "../../hooks/use-page-view.hook";
 import { SharedRoutes } from "../../common/shared-routes";
 import { SharedText } from "../../common/shared-text";
 import { NewTabLink } from "../../components/new-tab-link.component";
+import { PageComponent } from "../../components/page.component";
+import { useMidjourneyCreations } from "./hooks/useMidjourneyCreations.hook";
 
 export function MidJourneyPage() {
-  const windowSize = useWindowSize();
-  const width = windowSize[0] - 40;
-  usePageView(SharedRoutes.Miscellaneous.Midjourney);
+  const [midjourneyS3ImgUrls] = useMidjourneyCreations();
   return (
-    <div className="standard-page-margins standard-page-styling">
-      <h1>{SharedText.Miscellaneous.Midjourney}</h1>
-      <hr />
+    <PageComponent
+      route={SharedRoutes.Miscellaneous.Midjourney}
+      title={SharedText.Miscellaneous.Midjourney}
+    >
       <p>
         <NewTabLink href="https://docs.midjourney.com/docs/quick-start">
           Quick start tutorial
@@ -82,6 +81,12 @@ export function MidJourneyPage() {
         </ul>
       </p>
       <hr />
-    </div>
+      {midjourneyS3ImgUrls.map((url: string) => (
+        <>
+          <img width="100%" src={url} key={url} />
+          <br />
+        </>
+      ))}
+    </PageComponent>
   );
 }
