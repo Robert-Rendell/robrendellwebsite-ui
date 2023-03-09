@@ -49,7 +49,7 @@ export function SudokuGameComponent(props: Props) {
       (issue) => !(issue.row === row && issue.col === col)
     );
     if (localValidationIssues.length === 0) validationMessage.current = "";
-    if (key === "p") {
+    if (key === "p" || key === "_" || key === "-") {
       setNotesMode(!notesMode);
     }
     setValidationIssues(localValidationIssues);
