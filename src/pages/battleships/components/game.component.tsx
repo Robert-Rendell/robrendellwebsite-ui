@@ -248,6 +248,11 @@ export function BattleshipsGameComponent(
                 selectedShipState={selectedShipState}
               />
             )}
+            {state === "finished" && (
+              <>
+                <h2>Winner is: {props.game.winner}</h2>
+              </>
+            )}
             {(state === "configuring" || state === "playing") && (
               <>
                 {state === "playing" && (
