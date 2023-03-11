@@ -148,7 +148,7 @@ export function BattleshipsGameComponent(
     isGettingStartConfiguration,
     reset: (startConfiguration?: BattleshipsStartConfiguration) => {
       if (!startBoard && startConfiguration) {
-        setStartBoard(startConfiguration.configuration as any);
+        setStartBoard(startConfiguration.configuration);
       }
     },
   });
