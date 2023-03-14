@@ -9,7 +9,7 @@ import {
 import { config } from "../../../../config";
 import { BattleshipsAPI } from "../../battleships.api";
 
-type Props = PostBattleshipsMakeMoveRequest & {
+type Props = Partial<PostBattleshipsMakeMoveRequest> & {
   isSubmittingMove: boolean;
   reset: (newGameState?: BattleshipsGame) => void;
 };
