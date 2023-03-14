@@ -21,6 +21,7 @@ import { usePostBattleshipsStartConfiguration } from "../hooks/api/usePostStartC
 import { BattleshipsConfigurationToolsComponent } from "./configuration-tools.component";
 import { BattleshipsGameStatusComponent } from "./game-status.component";
 import "./game.component.css";
+import { BattleshipsComponent } from "./ships.component";
 
 type Props = {
   game?: BattleshipsGame;
@@ -292,6 +293,12 @@ export function BattleshipsGameComponent(
                     })}
                   </tbody>
                 </table>
+                {state === "playing" && (
+                  <BattleshipsComponent
+                    game={props.game}
+                    perspective={perspective}
+                  />
+                )}
                 {showConfigurationTools && (
                   <Button
                     onClick={submitStartConfiguration}
