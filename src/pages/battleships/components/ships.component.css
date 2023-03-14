@@ -1,0 +1,12 @@
+#ship-status {
+  font-size: smaller;
+}
+
+.ship-sunk {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.ship-unsunk {
+  color: white;
+}
