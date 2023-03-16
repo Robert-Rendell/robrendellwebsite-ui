@@ -21,7 +21,7 @@ type Props = {
   joinLinkGameId?: BattleshipsGameId;
 };
 export function BattleshipsDashboardComponent(props: Props) {
-  const { preferences } = usePreferences();
+  const { preferences, savePreferences } = usePreferences();
   const [isCreatingGame, setIsCreatingGame] = useState(false);
   const [isJoiningGame, setIsJoiningGame] = useState(false);
   const isRefreshingGameRef = useState(false);
@@ -38,8 +38,20 @@ export function BattleshipsDashboardComponent(props: Props) {
       if (props.joinLinkGameId) {
         setIsJoiningGame(true);
       }
+    } else {
+      const username = `user-${new Date().toISOString()}`;
+      setUser({ username, battles: [] });
+      savePreferences({ battleships: { username } });
+      if (props.joinLinkGameId) {
+        setIsJoiningGame(true);
+      }
     }
-  }, [preferences?.battleships?.username, props.joinLinkGameId, setUser]);
+  }, [
+    preferences?.battleships?.username,
+    props.joinLinkGameId,
+    setUser,
+    savePreferences,
+  ]);
 
   useGetBattleshipsGame({
     gameId: currentGame.current?.gameId,
@@ -70,12 +82,6 @@ export function BattleshipsDashboardComponent(props: Props) {
       setIsJoiningGame(false);
     },
   });
-  const joinGame = useCallback(() => {
-    if (!isJoiningGame) {
-      joinGameId.current = prompt("Enter the game id you wish to join") || "";
-      setIsJoiningGame(true);
-    }
-  }, [isJoiningGame]);
   const refreshGame = useCallback(() => {
     setIsRefreshingGame(true);
   }, [setIsRefreshingGame]);
@@ -92,9 +98,6 @@ export function BattleshipsDashboardComponent(props: Props) {
         >
           Create Game
         </Button>
-        <Button onClick={joinGame} disabled={!user || isJoiningGame}>
-          Join Game
-        </Button>
         {currentGame.current?.gameId === joinedGame?.gameId && joinedGame && (
           <>
             <hr />
@@ -103,7 +106,10 @@ export function BattleshipsDashboardComponent(props: Props) {
               <NewTabLink
                 href={`${SharedRoutes.Battleships.Play}/${currentGame.current?.gameId}`}
               >
-                {joinedGame.playerUsernames[0]}&apos;s game:{" "}
+                {joinedGame.playerUsernames[0] === user?.username
+                  ? "your"
+                  : `${joinedGame.playerUsernames[0]}'s`}{" "}
+                game{" "}
               </NewTabLink>
             </p>
             <hr />

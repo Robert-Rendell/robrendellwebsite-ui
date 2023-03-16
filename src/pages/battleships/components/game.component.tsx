@@ -131,9 +131,9 @@ export function BattleshipsGameComponent(
     },
   });
   usePostBattleshipsMakeMove({
-    gameId: props.game?.gameId || "",
-    username: props.user?.username || "",
-    move: currentMove.current as any,
+    gameId: props.game?.gameId,
+    username: props.user?.username,
+    move: currentMove.current,
     isSubmittingMove,
     reset: (newGameState?: BattleshipsGame) => {
       if (newGameState) {
