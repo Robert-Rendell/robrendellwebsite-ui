@@ -27,7 +27,7 @@ export function BattleshipsUserComponent(props: Props) {
 
   const logout = useCallback(() => {
     if (props.currentGame) {
-      if (confirm("Are you sure? Logging out will exit your current game")) {
+      if (confirm("Are you sure? Logging out will exit your current game.")) {
         savePreferences({ battleships: { username: undefined } });
         setUser(undefined);
         window.location.href = SharedRoutes.Battleships.Dashboard;
