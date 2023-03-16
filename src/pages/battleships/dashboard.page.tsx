@@ -39,10 +39,10 @@ export function BattleshipsDashboardComponent(props: Props) {
         setIsJoiningGame(true);
       }
     } else {
-      const username = `user-${new Date().toISOString()}`;
-      setUser({ username, battles: [] });
-      savePreferences({ battleships: { username } });
       if (props.joinLinkGameId) {
+        const username = `user-${new Date().toISOString()}`;
+        setUser({ username, battles: [] });
+        savePreferences({ battleships: { username } });
         setIsJoiningGame(true);
       }
     }
@@ -91,7 +91,10 @@ export function BattleshipsDashboardComponent(props: Props) {
         title={SharedText.Battleships.Dashboard}
         route={SharedRoutes.Battleships.Dashboard}
       >
-        <BattleshipsUserComponent userState={userState} />
+        <BattleshipsUserComponent
+          userState={userState}
+          currentGame={currentGame.current}
+        />
         <Button
           onClick={() => !isCreatingGame && setIsCreatingGame(true)}
           disabled={!user || isJoiningGame}
