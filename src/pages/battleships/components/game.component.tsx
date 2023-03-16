@@ -72,6 +72,11 @@ export function BattleshipsGameComponent(
   );
 
   useEffect(() => {
+    isFinishedConfiguration.current = false;
+    setStartBoard(undefined);
+  }, [props.game?.gameId]);
+
+  useEffect(() => {
     if (props.user?.username) {
       setPerspective(currentOpponent);
     }
