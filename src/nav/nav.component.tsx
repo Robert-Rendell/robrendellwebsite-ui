@@ -83,10 +83,7 @@ export const NavComponent = () => {
               <NavDropdown.Item href={"/photos-ive-taken/nature/wild-flowers"}>
                 Wild Flowers
               </NavDropdown.Item>
-              <NavDropdown.Item
-                href="/photos-ive-taken/nature/insects"
-                disabled
-              >
+              <NavDropdown.Item href="/photos-ive-taken/nature/insects">
                 Insects
               </NavDropdown.Item>
               <NavDropdown.Item href="/photos-ive-taken/nature/lichen">
