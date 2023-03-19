@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageComponent should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="standard-page-margins standard-page-styling"
+  >
+    <h1>
+      Rob title
+    </h1>
+    <hr />
+    <hr />
+  </div>
+</DocumentFragment>
+`;

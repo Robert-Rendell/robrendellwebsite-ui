@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageGallery Component should match snapshot 1`] = `
+<DocumentFragment>
+  <h2>
+    Loading images from AWS S3...
+  </h2>
+  <img
+    src="infinity-spinner.svg"
+  />
+</DocumentFragment>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoogleSearchLink should match snapshot 1`] = `
+<DocumentFragment>
+  <a
+    href="https://www.google.com/search?q=roberto"
+    rel="noreferrer"
+    target="_blank"
+  >
+    roberto
+  </a>
+</DocumentFragment>
+`;

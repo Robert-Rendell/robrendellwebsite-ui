@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScrollToBottomLink component should match snapshot 1`] = `
+<DocumentFragment>
+  <a
+    class="scroll-to-bottom"
+  >
+    scroll to bottom
+  </a>
+</DocumentFragment>
+`;

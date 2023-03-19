@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TechIconsComponent should match snapshot 1`] = `
+<DocumentFragment>
+  <img
+    alt="React"
+    height="40"
+    src="logo.svg"
+    width="40"
+  />
+  <img
+    alt="TypeScript"
+    class="tech-icons"
+    height="30"
+    src="ts-logo.png"
+    width="30"
+  />
+  <img
+    alt="nodeJs"
+    class="tech-icons nodejs-icon"
+    height="30"
+    src="nodejs-logo.png"
+    width="30"
+  />
+  <span
+    class="tech-icons aws-icon-bg"
+  >
+    <img
+      alt="nodeJs"
+      class="aws-icon"
+      height="20"
+      src="aws-logo.png"
+      width="30"
+    />
+  </span>
+</DocumentFragment>
+`;

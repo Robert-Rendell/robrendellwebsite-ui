@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewTabLink component should match snapshot 1`] = `
+<DocumentFragment>
+  <a
+    href="[object Object]"
+    rel="noreferrer"
+    target="_blank"
+  />
+</DocumentFragment>
+`;

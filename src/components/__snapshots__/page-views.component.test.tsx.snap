@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageViewsComponent should match snapshot 1`] = `
+<DocumentFragment>
+  Minds unlocked: 
+  <img
+    height="50"
+    src="infinity-spinner.svg"
+  />
+</DocumentFragment>
+`;
