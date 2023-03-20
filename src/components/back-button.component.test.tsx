@@ -4,7 +4,7 @@ import { RobBackButton } from "./back-button.component";
 
 describe("RobBackButton", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<RobBackButton/>);
+    const { asFragment } = render(<RobBackButton />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

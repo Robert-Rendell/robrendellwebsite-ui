@@ -4,7 +4,7 @@ import { ScrollToTopLink } from "./scroll-to-top-link.component";
 
 describe("ScrollToTopLink component", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<ScrollToTopLink/>);
+    const { asFragment } = render(<ScrollToTopLink />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

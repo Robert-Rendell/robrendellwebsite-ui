@@ -12,6 +12,7 @@ import { usePreferences } from "../hooks/use-preferences.hook";
 import { GitHubIcon } from "../components/icons/github.icon";
 import { NewTabLink } from "../components/new-tab-link.component";
 import { StackOverflowIcon } from "../components/icons/stack-overflow.icon";
+import { LinkedInIcon } from "../components/icons/linkedin.icon";
 
 export const NavComponent = () => {
   const { preferences } = usePreferences();
@@ -44,6 +45,11 @@ export const NavComponent = () => {
           <span className="tech-icons pointer">
             <NewTabLink href="https://stackoverflow.com/users/4529555/robert-rendell">
               <StackOverflowIcon />
+            </NewTabLink>
+          </span>
+          <span className="tech-icons pointer">
+            <NewTabLink href="https://www.linkedin.com/in/rob-rendell-a1a37126a/">
+              <LinkedInIcon />
             </NewTabLink>
           </span>
         </Navbar.Brand>
@@ -174,14 +180,10 @@ export const NavComponent = () => {
               <NavDropdown.Item href="/technical-tests/291121">
                 29/11/21 - University data visualiser
               </NavDropdown.Item>
+              <NavDropdown.Item href="https://github.com/Robert-Rendell/PLT-Technical-Test-190821">
+                19/08/21 - Stock calculator
+              </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link
-              // href={`${config.backend}/cv`}
-              // target="_blank"
-              disabled
-            >
-              {!smallerScreen && <>Download&nbsp;</>}CV
-            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <TechIconsComponent />

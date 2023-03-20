@@ -4,7 +4,7 @@ import { DateWritten } from "./date-written.component";
 
 describe("DateWrittenComponent", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<DateWritten/>);
+    const { asFragment } = render(<DateWritten />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
