@@ -4,7 +4,7 @@ import { TechIconsComponent } from "./tech-icons.component";
 
 describe("TechIconsComponent", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<TechIconsComponent/>);
+    const { asFragment } = render(<TechIconsComponent />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

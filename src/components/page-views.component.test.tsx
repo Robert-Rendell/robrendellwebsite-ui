@@ -4,7 +4,7 @@ import { PageViewsComponent } from "./page-views.component";
 
 describe("PageViewsComponent", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<PageViewsComponent/>);
+    const { asFragment } = render(<PageViewsComponent />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

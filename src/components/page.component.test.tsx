@@ -4,7 +4,9 @@ import { PageComponent } from "./page.component";
 
 describe("PageComponent", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<PageComponent route="Rob" title="Rob title"/>);
+    const { asFragment } = render(
+      <PageComponent route="Rob" title="Rob title" />
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 });

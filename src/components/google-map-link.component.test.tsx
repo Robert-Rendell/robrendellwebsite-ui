@@ -4,7 +4,7 @@ import { GoogleMapLink } from "./google-map-link.component";
 
 describe("GoogleMapLinkComponent", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<GoogleMapLink/>);
+    const { asFragment } = render(<GoogleMapLink />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

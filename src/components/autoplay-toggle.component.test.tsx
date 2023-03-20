@@ -4,7 +4,7 @@ import { AutoplayToggleComponent } from "./autoplay-toggle.component";
 
 describe("AutoplayToggleComponent", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<AutoplayToggleComponent/>);
+    const { asFragment } = render(<AutoplayToggleComponent />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

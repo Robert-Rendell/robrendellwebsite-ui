@@ -4,7 +4,7 @@ import { InfinitySpinnerComponent } from "./infinity-spinner.component";
 
 describe("InfinitySpinnerComponent", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<InfinitySpinnerComponent/>);
+    const { asFragment } = render(<InfinitySpinnerComponent />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

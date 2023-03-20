@@ -4,7 +4,7 @@ import { YouTubeVideoComponent } from "./youtube-video.component";
 
 describe("YouTubeVideoComponent", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<YouTubeVideoComponent/>);
+    const { asFragment } = render(<YouTubeVideoComponent />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

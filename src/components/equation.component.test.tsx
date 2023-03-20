@@ -4,7 +4,7 @@ import { Equation } from "./equation.component";
 
 describe("EquationComponent", () => {
   test("should match snapshot", () => {
-    const { asFragment } = render(<Equation/>);
+    const { asFragment } = render(<Equation />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
