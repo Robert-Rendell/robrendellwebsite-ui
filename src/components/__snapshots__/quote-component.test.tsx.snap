@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuoteComponent should match snapshot 1`] = `
+<DocumentFragment>
+  <h2
+    class="centred"
+  >
+    <i>
+      ""
+    </i>
+  </h2>
+  <p
+    class="centred"
+  >
+    <i>
+      Rob Rendell (2023)
+    </i>
+  </p>
+</DocumentFragment>
+`;

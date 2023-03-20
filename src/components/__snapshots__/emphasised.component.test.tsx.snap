@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateWrittenComponent should match snapshot 1`] = `
+<DocumentFragment>
+  <hr />
+  <span>
+    [
+    <i>
+      Date Written: 
+    </i>
+    ]
+  </span>
+</DocumentFragment>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfinitySpinnerComponent should match snapshot 1`] = `
+<DocumentFragment>
+  <img
+    src="infinity-spinner.svg"
+  />
+</DocumentFragment>
+`;
