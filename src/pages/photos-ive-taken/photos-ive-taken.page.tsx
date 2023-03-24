@@ -26,7 +26,9 @@ export function PhotosIveTakenPage(props: Props) {
 
   useEffect(() => {
     setPhotosIveTakenGallery();
-  }, [setPhotosIveTakenGallery]);
+  // gets stuck in infinite loop
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className="standard-page-margins standard-page-styling">
       <h1>Photos I&apos;ve Taken: {props.title}</h1>
