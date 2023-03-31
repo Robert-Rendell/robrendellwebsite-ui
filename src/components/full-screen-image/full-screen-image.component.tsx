@@ -21,7 +21,7 @@ export function FullScreenS3ImageComponent(props: Props) {
   const [show, setShow] = useState(false);
   const s3ImageSelected = useRef<FullScreenImageClickProps | undefined>();
 
-  const preloadedImage = useRef<HTMLImageElement>();
+  const [preloadedImage, setPreloadedImage] = useState<HTMLImageElement>();
 
   useEffect(() => {
     props.handleShowRef.current = (imageS3Url: FullScreenImageClickProps) => {
@@ -31,8 +31,11 @@ export function FullScreenS3ImageComponent(props: Props) {
   }, []);
 
   useEffect(() => {
-    preloadedImage.current = new Image();
-    preloadedImage.current.src =
+    const preloaded = new Image();
+    preloaded.onload = () => {
+      setPreloadedImage(preloaded);
+    };
+    preloaded.src =
       (typeof s3ImageSelected.current === "string"
         ? s3ImageSelected.current
         : s3ImageSelected.current?.imageS3Url) || "";
@@ -57,16 +60,7 @@ export function FullScreenS3ImageComponent(props: Props) {
         </Modal.Header>
         <Modal.Body className="centred">
           {!preloadedImage && <InfinitySpinnerComponent />}
-          {preloadedImage && (
-            <img
-              src={
-                typeof s3ImageSelected.current === "string"
-                  ? s3ImageSelected.current
-                  : s3ImageSelected.current?.imageS3Url
-              }
-              height={height}
-            />
-          )}
+          {preloadedImage && <img src={preloadedImage.src} height={height} />}
           {!s3ImageSelected && <h1>No image selected!</h1>}
         </Modal.Body>
       </Modal>
