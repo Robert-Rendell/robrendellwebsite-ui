@@ -9,6 +9,7 @@ import {
   S3ImageUrlWithData,
 } from "./types/types";
 import "./full-screen-image.component.css";
+import { InfinitySpinnerComponent } from "../infinity-spinner.component";
 
 type Props = {
   handleShowRef: S3ImageClickFn;
@@ -20,12 +21,22 @@ export function FullScreenS3ImageComponent(props: Props) {
   const [show, setShow] = useState(false);
   const s3ImageSelected = useRef<FullScreenImageClickProps | undefined>();
 
+  const preloadedImage = useRef<HTMLImageElement>();
+
   useEffect(() => {
     props.handleShowRef.current = (imageS3Url: FullScreenImageClickProps) => {
       setShow(true);
       s3ImageSelected.current = imageS3Url;
     };
   }, []);
+
+  useEffect(() => {
+    preloadedImage.current = new Image();
+    preloadedImage.current.src =
+      (typeof s3ImageSelected.current === "string"
+        ? s3ImageSelected.current
+        : s3ImageSelected.current?.imageS3Url) || "";
+  }, [s3ImageSelected]);
 
   return (
     <>
@@ -45,7 +56,8 @@ export function FullScreenS3ImageComponent(props: Props) {
           <CloseButton variant="white" onClick={() => setShow(false)} />
         </Modal.Header>
         <Modal.Body className="centred">
-          {s3ImageSelected && (
+          {!preloadedImage && <InfinitySpinnerComponent />}
+          {preloadedImage && (
             <img
               src={
                 typeof s3ImageSelected.current === "string"
