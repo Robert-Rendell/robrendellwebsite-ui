@@ -6,6 +6,7 @@ import { ImageGallery } from "../../components/image-gallery.component";
 import { SharedText } from "../../common/shared-text";
 import { SharedRoutes } from "../../common/shared-routes";
 import { config } from "../../config";
+import { usePageView } from "../../hooks/use-page-view.hook";
 
 export const HomePage = () => {
   const handleImageClickedRef = useRef();
@@ -22,6 +23,7 @@ export const HomePage = () => {
     setHomePageImages();
   }, [setHomePageImages]);
 
+  usePageView(SharedRoutes.HomePage);
   return (
     <div className="standard-page-margins standard-page-styling">
       <h2 className="centred">Welcome to rob-rendell.co.uk</h2>
