@@ -44,14 +44,6 @@ export function FullScreenS3ImageComponent(props: Props) {
     };
   }, [preloadImage, props.handleShowRef]);
 
-  useEffect(() => {
-    if (!show) {
-      setPreloadedImage(undefined);
-    } else {
-      preloadImage();
-    }
-  }, [preloadImage, show]);
-
   return (
     <>
       <Modal
@@ -59,6 +51,9 @@ export function FullScreenS3ImageComponent(props: Props) {
         show={show}
         fullscreen={true}
         onHide={() => setShow(false)}
+        onBackdropClick={() => setShow(false)}
+        onExited={() => setPreloadedImage(undefined)}
+        onEnter={() => preloadImage()}
         height={height}
       >
         <Modal.Header className="full-screen-image-modal">
