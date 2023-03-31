@@ -13,6 +13,7 @@ import { GitHubIcon } from "../components/icons/github.icon";
 import { NewTabLink } from "../components/new-tab-link.component";
 import { StackOverflowIcon } from "../components/icons/stack-overflow.icon";
 import { LinkedInIcon } from "../components/icons/linkedin.icon";
+import { config } from "../config";
 
 export const NavComponent = () => {
   const { preferences } = usePreferences();
@@ -63,127 +64,154 @@ export const NavComponent = () => {
             <Nav.Link href={SharedRoutes.Sudoku.Dashboard}>
               Sudoku{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
-            <Nav.Link href={SharedRoutes.Battleships.Dashboard}>
-              Battleships{!smallerScreen && <>&nbsp;Project</>}
-            </Nav.Link>
-            <NavDropdown
-              menuVariant="dark"
-              title="Creative Writing"
-              id="creative-projects"
-            >
-              <NavDropdown.Item href={SharedRoutes.Recursion.LandingPage}>
-                Recursion Project
-              </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.Neurochemistry.LandingPage}>
-                Neurochemistry Project
-              </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.Biomagnetism.LandingPage}>
-                Biomagnetism Project
-              </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.ClimateChange.LandingPage}>
-                Climate Change
-              </NavDropdown.Item>
-            </NavDropdown>
+            {config.minimal && (
+              <>
+                <Nav.Link href={SharedRoutes.StravaAPI.Historical}>
+                  Strava API Historical Stats
+                </Nav.Link>
+              </>
+            )}
+            {!config.minimal && (
+              <>
+                <Nav.Link href={SharedRoutes.Battleships.Dashboard}>
+                  Battleships{!smallerScreen && <>&nbsp;Project</>}
+                </Nav.Link>
+                <NavDropdown
+                  menuVariant="dark"
+                  title="Creative Writing"
+                  id="creative-projects"
+                >
+                  <NavDropdown.Item href={SharedRoutes.Recursion.LandingPage}>
+                    Recursion Project
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.Neurochemistry.LandingPage}
+                  >
+                    Neurochemistry Project
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.Biomagnetism.LandingPage}
+                  >
+                    Biomagnetism Project
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.ClimateChange.LandingPage}
+                  >
+                    Climate Change
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown menuVariant="dark" title="Nature" id="nature">
+                  <NavDropdown.Item
+                    href={"/photos-ive-taken/nature/wild-flowers"}
+                  >
+                    Wild Flowers
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/photos-ive-taken/nature/insects">
+                    Insects
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/photos-ive-taken/nature/lichen">
+                    Lichen
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/photos-ive-taken/nature/arachnids">
+                    Arachnids
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/photos-ive-taken/nature/fungi">
+                    Fungi
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Misc" id="misc" menuVariant="dark">
+                  <NavDropdown.Item href={SharedRoutes.StravaAPI.Historical}>
+                    Strava Historical Stats
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider color="grey" />
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.WordOfTheDay}
+                  >
+                    Word of the Day
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}
+                  >
+                    Interesting Dates in History
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider color="grey" />
+                  <NavDropdown.Item href={SharedRoutes.Miscellaneous.India}>
+                    India
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.GiantPacificOctopus}
+                  >
+                    Giant Pacific Octopus (Alaskan)
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.ScotchWhisky}
+                  >
+                    Scotch Whisky
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.Midjourney}
+                  >
+                    Midjourney AI
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider color="grey" />
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.Philosophy}
+                  >
+                    Philosophy
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.PaintingsAndArt}
+                  >
+                    Paintings and Art
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.NobelPrize}
+                  >
+                    Nobel Prize
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.JamesWebbTelescope}
+                  >
+                    James Webb Telescope
+                  </NavDropdown.Item>
+                </NavDropdown>
 
-            <NavDropdown menuVariant="dark" title="Nature" id="nature">
-              <NavDropdown.Item href={"/photos-ive-taken/nature/wild-flowers"}>
-                Wild Flowers
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/photos-ive-taken/nature/insects">
-                Insects
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/photos-ive-taken/nature/lichen">
-                Lichen
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/photos-ive-taken/nature/arachnids">
-                Arachnids
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/photos-ive-taken/nature/fungi">
-                Fungi
-              </NavDropdown.Item>
-            </NavDropdown>
+                <NavDropdown
+                  title="Music Projects"
+                  id="musicProjectsNavbarScrollingDropdown"
+                  menuVariant="dark"
+                >
+                  <NavDropdown.Item
+                    href="https://www.shiva-archetypes.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Shiva Archetypes (band)
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href="https://www.robcelticfiddle.co.uk"
+                    target="_blank"
+                    rel="noreferrer"
+                    disabled
+                  >
+                    Rob Celtic Fiddle (weddings)
+                  </NavDropdown.Item>
+                </NavDropdown>
 
-            <NavDropdown title="Misc" id="misc" menuVariant="dark">
-              <NavDropdown.Item href={SharedRoutes.StravaAPI.Historical}>
-                Strava Historical Stats
-              </NavDropdown.Item>
-              <NavDropdown.Divider color="grey" />
-              <NavDropdown.Item href={SharedRoutes.Miscellaneous.WordOfTheDay}>
-                Word of the Day
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}
-              >
-                Interesting Dates in History
-              </NavDropdown.Item>
-              <NavDropdown.Divider color="grey" />
-              <NavDropdown.Item href={SharedRoutes.Miscellaneous.India}>
-                India
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href={SharedRoutes.Miscellaneous.GiantPacificOctopus}
-              >
-                Giant Pacific Octopus (Alaskan)
-              </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.Miscellaneous.ScotchWhisky}>
-                Scotch Whisky
-              </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.Miscellaneous.Midjourney}>
-                Midjourney AI
-              </NavDropdown.Item>
-              <NavDropdown.Divider color="grey" />
-              <NavDropdown.Item href={SharedRoutes.Miscellaneous.Philosophy}>
-                Philosophy
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href={SharedRoutes.Miscellaneous.PaintingsAndArt}
-              >
-                Paintings and Art
-              </NavDropdown.Item>
-              <NavDropdown.Item href={SharedRoutes.Miscellaneous.NobelPrize}>
-                Nobel Prize
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href={SharedRoutes.Miscellaneous.JamesWebbTelescope}
-              >
-                James Webb Telescope
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown
-              title="Music Projects"
-              id="musicProjectsNavbarScrollingDropdown"
-              menuVariant="dark"
-            >
-              <NavDropdown.Item
-                href="https://www.shiva-archetypes.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Shiva Archetypes (band)
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href="https://www.robcelticfiddle.co.uk"
-                target="_blank"
-                rel="noreferrer"
-                disabled
-              >
-                Rob Celtic Fiddle (weddings)
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown
-              title="Tech Tests"
-              id="techTestsNavbarScrollingDropdown"
-              menuVariant="dark"
-            >
-              <NavDropdown.Item href="/technical-tests/291121">
-                29/11/21 - University data visualiser
-              </NavDropdown.Item>
-              <NavDropdown.Item href="https://github.com/Robert-Rendell/PLT-Technical-Test-190821">
-                19/08/21 - Stock calculator
-              </NavDropdown.Item>
-            </NavDropdown>
+                <NavDropdown
+                  title="Tech Tests"
+                  id="techTestsNavbarScrollingDropdown"
+                  menuVariant="dark"
+                >
+                  <NavDropdown.Item href="/technical-tests/291121">
+                    29/11/21 - University data visualiser
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="https://github.com/Robert-Rendell/PLT-Technical-Test-190821">
+                    19/08/21 - Stock calculator
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </>
+            )}
           </Nav>
           <Form className="d-flex">
             <TechIconsComponent />

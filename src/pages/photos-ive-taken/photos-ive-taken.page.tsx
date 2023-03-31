@@ -26,8 +26,8 @@ export function PhotosIveTakenPage(props: Props) {
 
   useEffect(() => {
     setPhotosIveTakenGallery();
-  // gets stuck in infinite loop
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // gets stuck in infinite loop
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="standard-page-margins standard-page-styling">

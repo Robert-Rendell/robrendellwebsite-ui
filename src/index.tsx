@@ -90,7 +90,7 @@ ReactDOM.render(
         </div>
       </>
     ) : (
-      <div>
+      <>
         <BrowserRouter>
           <NavComponent />
           <Routes>
@@ -393,7 +393,7 @@ ReactDOM.render(
           </Routes>
           <RobRendellFooterComponent />
         </BrowserRouter>
-      </div>
+      </>
     )}
   </React.StrictMode>,
   document.getElementById("root")
