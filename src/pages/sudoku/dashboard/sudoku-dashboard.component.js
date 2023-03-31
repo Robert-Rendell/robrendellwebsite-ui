@@ -339,7 +339,7 @@ class SudokuDashboardComponent extends React.Component {
           <code>AWS.DynamoDB</code>
         </p>
         <hr />
-        <h2>Documentation: Swagger API</h2>
+        {/* <h2>Documentation: Swagger API</h2>
         <p>
           <a
             href="https://app.swaggerhub.com/apis-docs/rob-tea/robrendellwebsite/1.0.0"
@@ -349,7 +349,7 @@ class SudokuDashboardComponent extends React.Component {
             https://app.swaggerhub.com/apis-docs/rob-tea/robrendellwebsite/1.0.0
           </a>
         </p>
-        <hr />
+        <hr /> */}
       </div>
     );
   }
