@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { CloseButton } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
@@ -21,22 +21,36 @@ export function FullScreenS3ImageComponent(props: Props) {
   const [show, setShow] = useState(false);
   const s3ImageSelected = useRef<FullScreenImageClickProps | undefined>();
 
-  const [preloadedImage, setPreloadedImage] = useState<HTMLImageElement>();
+  const [preloadedImage, setPreloadedImage] = useState<
+    HTMLImageElement | undefined
+  >();
+
+  const preloadImage = useCallback(() => {
+    const preloaded = new Image();
+    preloaded.onload = () => {
+      setPreloadedImage(preloaded);
+    };
+    preloaded.src =
+      (typeof s3ImageSelected.current === "string"
+        ? s3ImageSelected.current
+        : s3ImageSelected.current?.imageS3Url) || "";
+  }, [setPreloadedImage, s3ImageSelected]);
 
   useEffect(() => {
     props.handleShowRef.current = (imageS3Url: FullScreenImageClickProps) => {
       setShow(true);
       s3ImageSelected.current = imageS3Url;
-      const preloaded = new Image();
-      preloaded.onload = () => {
-        setPreloadedImage(preloaded);
-      };
-      preloaded.src =
-        (typeof s3ImageSelected.current === "string"
-          ? s3ImageSelected.current
-          : s3ImageSelected.current?.imageS3Url) || "";
+      preloadImage();
     };
-  }, []);
+  }, [preloadImage, props.handleShowRef]);
+
+  useEffect(() => {
+    if (!show) {
+      setPreloadedImage(undefined);
+    } else {
+      preloadImage();
+    }
+  }, [preloadImage, show]);
 
   return (
     <>
