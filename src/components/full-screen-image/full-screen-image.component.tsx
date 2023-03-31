@@ -27,19 +27,16 @@ export function FullScreenS3ImageComponent(props: Props) {
     props.handleShowRef.current = (imageS3Url: FullScreenImageClickProps) => {
       setShow(true);
       s3ImageSelected.current = imageS3Url;
+      const preloaded = new Image();
+      preloaded.onload = () => {
+        setPreloadedImage(preloaded);
+      };
+      preloaded.src =
+        (typeof s3ImageSelected.current === "string"
+          ? s3ImageSelected.current
+          : s3ImageSelected.current?.imageS3Url) || "";
     };
   }, []);
-
-  useEffect(() => {
-    const preloaded = new Image();
-    preloaded.onload = () => {
-      setPreloadedImage(preloaded);
-    };
-    preloaded.src =
-      (typeof s3ImageSelected.current === "string"
-        ? s3ImageSelected.current
-        : s3ImageSelected.current?.imageS3Url) || "";
-  }, [s3ImageSelected]);
 
   return (
     <>
