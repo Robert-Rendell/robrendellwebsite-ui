@@ -24,11 +24,12 @@ export function S3LoadedThumbnail(props: Props) {
           if (props.originalUrl) getCurrentS3Image = props.originalUrl;
           if (props.dataJsonUrl) {
             const imgWithData: S3ImageUrlWithData = {
-              imageS3Url: props.imgUrl,
+              imageS3Url: props.originalUrl || props.imgUrl,
               dataJsonUrl: props.dataJsonUrl,
             };
             getCurrentS3Image = imgWithData;
           }
+          
           props.onClick.current(getCurrentS3Image);
         }
       }}
