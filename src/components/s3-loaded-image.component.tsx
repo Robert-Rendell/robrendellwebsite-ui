@@ -29,7 +29,7 @@ export function S3LoadedThumbnail(props: Props) {
             };
             getCurrentS3Image = imgWithData;
           }
-          
+
           props.onClick.current(getCurrentS3Image);
         }
       }}
