@@ -7,6 +7,8 @@ import { useHistoricalStravaData } from "./hooks/useHistoricalStravaData.hook";
 import "./components/dashboard.chart.css";
 import "../page.css";
 import { useWindowSize } from "../../hooks/use-window-size.hook";
+import { PageComponent } from "../../components/page.component";
+import { SharedRoutes } from "../../common/shared-routes";
 
 export function StravaDashboardHistoricalComponent() {
   const [stravaGraphs] = useHistoricalStravaData();
@@ -15,8 +17,10 @@ export function StravaDashboardHistoricalComponent() {
 
   const onMobile = width < 600;
   return (
-    <div className="standard-page-margins standard-page-styling">
-      <h1>Historical Running / Cycling: Strava API</h1>
+    <PageComponent
+      title={"Historical Running / Cycling: Strava API"}
+      route={SharedRoutes.StravaAPI.Historical}
+    >
       {onMobile && <p>This page is best viewed landscape!</p>}
       {!stravaGraphs && <InfinitySpinnerComponent />}
       {stravaGraphs && (
@@ -94,6 +98,6 @@ export function StravaDashboardHistoricalComponent() {
           />
         </>
       )}
-    </div>
+    </PageComponent>
   );
 }

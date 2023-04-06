@@ -142,6 +142,29 @@ export function BattleshipsDashboardComponent(props: Props) {
           </Button>
           {isRefreshingGame && <InfinitySpinnerComponent size={35} />}
         </BattleshipsGameComponent>
+        <hr />
+        <p>
+          I am in the process of recreating the classic 2 player, turn taking{" "}
+          <NewTabLink href="https://en.wikipedia.org/wiki/Battleship_(game)">
+            Battleships board game
+          </NewTabLink>
+          .
+        </p>
+        <p>
+          To test out the game on your own, you will need to open a second
+          window in private browsing and use a different name.
+        </p>
+        <p>
+          The game is driven by a REST API that I created with TypeScript,
+          Node.js, Express and AWS.
+        </p>
+        <p>
+          You can find the API code{" "}
+          <NewTabLink href="https://github.com/Robert-Rendell/robrendellwebsite/blob/main/src/pages/battleships/battleships.page.ts">
+            here
+          </NewTabLink>
+          .
+        </p>
       </PageComponent>
     </>
   );
