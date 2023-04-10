@@ -99,6 +99,19 @@ export const NavComponent = () => {
                 <Nav.Link href={SharedRoutes.Battleships.Dashboard}>
                   Battleships{!smallerScreen && <>&nbsp;Project</>}
                 </Nav.Link>
+
+                <NavDropdown title="Misc" id="misc" menuVariant="dark">
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.WordOfTheDay}
+                  >
+                    Word of the Day
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.Miscellaneous.InterestingDatesInHistory}
+                  >
+                    Interesting Dates in History
+                  </NavDropdown.Item>
+                </NavDropdown>
               </>
             )}
             {!config.minimal && (
