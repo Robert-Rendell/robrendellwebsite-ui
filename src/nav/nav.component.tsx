@@ -14,6 +14,7 @@ import { NewTabLink } from "../components/new-tab-link.component";
 import { StackOverflowIcon } from "../components/icons/stack-overflow.icon";
 import { LinkedInIcon } from "../components/icons/linkedin.icon";
 import { config } from "../config";
+import { CalendlyIcon } from "../components/icons/calendly.icon";
 
 export const NavComponent = () => {
   const { preferences } = usePreferences();
@@ -51,6 +52,11 @@ export const NavComponent = () => {
           <span className="tech-icons pointer">
             <NewTabLink href="https://www.linkedin.com/in/rob-rendell-a1a37126a/">
               <LinkedInIcon />
+            </NewTabLink>
+          </span>
+          <span className="tech-icons pointer">
+            <NewTabLink href="https://calendly.com/robertrendell">
+              <CalendlyIcon />
             </NewTabLink>
           </span>
         </Navbar.Brand>
