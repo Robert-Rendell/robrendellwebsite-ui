@@ -38,7 +38,7 @@ export const HomePage = () => {
               <a href={SharedRoutes.Battleships.Dashboard}>
                 {SharedText.Battleships.Dashboard}
               </a>{" "}
-              REST API
+              HTTP API
             </li>
             <li>
               01/03/23 @ 19.01 - Added&nbsp;

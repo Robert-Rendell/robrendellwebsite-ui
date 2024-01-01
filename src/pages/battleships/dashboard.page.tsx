@@ -155,7 +155,7 @@ export function BattleshipsDashboardComponent(props: Props) {
           window in private browsing and use a different name.
         </p>
         <p>
-          The game is driven by a REST API that I created with TypeScript,
+          The game is driven by a HTTP API that I created with TypeScript,
           Node.js, Express and AWS.
         </p>
         <p>
