@@ -154,7 +154,7 @@ export function SudokuGameComponent(props: Props) {
             ) : (
               <>
                 <div id="sudoku-top-buttons" style={{ marginBottom: "4px" }}>
-                  <RobBackButton backTwo />
+                  <RobBackButton backTwo areYouSureDialog />
                   <FullScreenToggleComponent
                     path={window.location.pathname
                       .split("/")
