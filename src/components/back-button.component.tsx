@@ -15,17 +15,9 @@ const closeWindow = () => window.close();
 
 export function RobBackButton(props: Props) {
   const showAreYouSureDialogState = useState<boolean>(false);
-  const [areYouSureVisible, setAreYouSureVisible] = showAreYouSureDialogState;
+  const [, setAreYouSureVisible] = showAreYouSureDialogState;
   const goBack = () => (window.location.href = !props.backTwo ? "./" : "../");
   const defaultOnClick = () => (props.closeWindow ? closeWindow() : goBack());
-
-  window.onbeforeunload = function () {
-    if (props.areYouSureDialog && !areYouSureVisible) {
-      return "Changes that you made may not be saved.";
-    } else {
-      return null;
-    }
-  };
 
   return (
     <>
