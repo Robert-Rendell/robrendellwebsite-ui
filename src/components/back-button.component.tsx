@@ -19,11 +19,12 @@ export function RobBackButton(props: Props) {
   const goBack = () => (window.location.href = !props.backTwo ? "./" : "../");
   const defaultOnClick = () => (props.closeWindow ? closeWindow() : goBack());
 
-  window.onbeforeunload = function () {
+  window.onbeforeunload = function (event) {
     if (props.areYouSureDialog && !areYouSureVisible) {
-      return "Changes that you made may not be saved.";
+      event.preventDefault();
+      event.returnValue = true;
     } else {
-      return null;
+      event.returnValue = "";
     }
   };
 
