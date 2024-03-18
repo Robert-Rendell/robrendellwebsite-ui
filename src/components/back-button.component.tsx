@@ -24,7 +24,7 @@ export function RobBackButton(props: Props) {
       event.preventDefault();
       event.returnValue = true;
     } else {
-      event.returnValue = "";
+      event.returnValue = false;
     }
   };
 
