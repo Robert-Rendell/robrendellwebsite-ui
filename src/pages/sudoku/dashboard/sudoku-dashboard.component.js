@@ -13,6 +13,7 @@ class SudokuDashboardComponent extends React.Component {
     this.state = {
       date: new Date(),
       generationJobId: undefined,
+      generationDifficulty: undefined,
       retries: 0,
       recentSudokus: [],
       isGenerating: false,
@@ -68,7 +69,7 @@ class SudokuDashboardComponent extends React.Component {
         headers: { "Content-Type": "application/json" },
         roberto: "testing",
         difficulty,
-        generatorUserName: "implement on front end",
+        generatorUserName: "",
       })
       .then((response) => {
         const generationJobId = response.data["generationJobId"];
@@ -82,7 +83,7 @@ class SudokuDashboardComponent extends React.Component {
         }
         this.watchSudokuGeneration();
         console.log("Job Id: " + generationJobId);
-        this.setState({ generationJobId });
+        this.setState({ generationJobId, generationDifficulty: difficulty });
         this.setSudokuResult(`Generating ${difficulty} sudoku...`);
       })
       .catch((reason) => {
@@ -132,7 +133,7 @@ class SudokuDashboardComponent extends React.Component {
           "clues": "39",
           "difficulty": "medium",
           "generatorIPAddress": "::1",
-          "generatorUserName": "implement on front end"
+          "generatorUserName": ""
       }
   ]*/
   checkSudokuGeneration() {
@@ -145,7 +146,6 @@ class SudokuDashboardComponent extends React.Component {
         generatorUserName: "implement on front end",
       })
       .then((response) => {
-        console.log(response);
         if (response.data?.length > 0) {
           const sudokuId = response.data[0]["sudokuId"];
           this.sudokuGenerated(sudokuId);
@@ -157,10 +157,16 @@ class SudokuDashboardComponent extends React.Component {
               10000
             );
             this.setSudokuResult(
-              `No response yet, retrying (attempt no.${this.state.retries})...`
+              `Generating ${this.state.generationDifficulty} sudoku... AWS Lambda cold starts increase the generation time.`
             );
           } else {
-            this.setSudokuResult("Sudoku Generation timed out.");
+            console.log(
+              "Sudoku generation timed out. AWS Lambda execution time limit reached. Creating another request."
+            );
+            this.setState({ retries: 0, generationJobId: null });
+            this.toggleGenerating(false);
+            this.checkGenerationLoop = null;
+            this.generateSudoku(this.state.generationDifficulty);
           }
         }
       })
@@ -177,10 +183,9 @@ class SudokuDashboardComponent extends React.Component {
   }
 
   sudokuGenerated(sudokuId) {
-    console.log("Sudoku generated!");
     this.setState({ retries: 0, generationJobId: null });
     this.setSudokuResult(
-      `Sudoku Generated! <a href="/sudoku/play/${sudokuId}" target="_blank" rel="noreferrer">Play</a>`
+      `Sudoku generated! <a href="/sudoku/play/${sudokuId}" target="_blank" rel="noreferrer">Play</a>`
     );
     this.toggleGenerating(false);
     this.checkGenerationLoop = null;
