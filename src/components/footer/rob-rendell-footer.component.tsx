@@ -35,7 +35,7 @@ export function RobRendellFooterComponent() {
           </>
         )}
         <span className="footer-msg">
-          Copyright &copy; 2021-2023 Robert Rendell. All rights reserved.
+          Copyright &copy; 2021-2024 Robert Rendell. All rights reserved.
         </span>
       </div>
       {matrixTheme && (
