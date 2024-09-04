@@ -6,6 +6,7 @@ import Table from "react-bootstrap/Table";
 import InfinitySpinner from "../../../resources/infinity-spinner.svg";
 import "./sudoku-dashboard.component.css";
 import { InfinitySpinnerComponent } from "../../../components/infinity-spinner.component";
+import SudokuDesigns from "../../../resources/designs/sudoku-generation.svg";
 
 class SudokuDashboardComponent extends React.Component {
   constructor(props) {
@@ -344,6 +345,8 @@ class SudokuDashboardComponent extends React.Component {
           <code>AWS.DynamoDB</code>
         </p>
         <hr />
+        <h2>Designs</h2>
+        <img src={SudokuDesigns} width="100%" style={{ maxWidth: 1000 }} />
         {/* <h2>Documentation: Swagger API</h2>
         <p>
           <a
