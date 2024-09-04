@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { config } from "../config";
+import { DISABLE_CUSTOM_ANALYTICS_KEY } from "../common/constants";
 
 export type PageView = {
   ipAddress: string;
@@ -18,6 +19,9 @@ export function usePageView(
   pageViewsSetFn?: (val: PageViewResponse) => void
 ) {
   useEffect(() => {
+    if (localStorage.getItem(DISABLE_CUSTOM_ANALYTICS_KEY)) {
+      return;
+    }
     axios
       .post(`${config.backend}/view-page`, {
         headers: { "Content-Type": "application/json" },
