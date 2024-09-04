@@ -1,10 +1,11 @@
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { SharedRoutes } from "../../common/shared-routes";
 import { usePreferences } from "../../hooks/use-preferences.hook";
 import Northumberland from "../../resources/flag-of-northumberland.svg";
 import Saltire from "../../resources/saltire.svg";
 import "./rob-rendell-footer.component.css";
 import { config } from "../../config";
+import { DISABLE_CUSTOM_ANALYTICS_KEY } from "../../common/constants";
 
 export function RobRendellFooterComponent() {
   const { preferences } = usePreferences();
@@ -17,6 +18,11 @@ export function RobRendellFooterComponent() {
       window.location.pathname.includes(
         SharedRoutes.Neurochemistry.LandingPage
       ),
+    []
+  );
+
+  const disableAnalytics = useCallback(
+    () => localStorage.setItem(DISABLE_CUSTOM_ANALYTICS_KEY, "true"),
     []
   );
 
@@ -35,7 +41,8 @@ export function RobRendellFooterComponent() {
           </>
         )}
         <span className="footer-msg">
-          Copyright &copy; 2021-2024 Robert Rendell. All rights reserved.
+          Copyright &copy; 2021-2024 Robert Rendell.{" "}
+          <span onClick={disableAnalytics}>All</span> rights reserved.
         </span>
       </div>
       {matrixTheme && (
