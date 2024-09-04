@@ -26,8 +26,7 @@ export const HomePage = () => {
   usePageView(SharedRoutes.HomePage);
   return (
     <div className="standard-page-margins standard-page-styling">
-      <h2 className="centred">Welcome to rob-rendell.co.uk</h2>
-      <h3>Rob Rendell: TypeScript / Node.js Developer</h3>
+      <h2>TypeScript / Node.js Software Engineer</h2>
       <hr />
       {!config.minimal && (
         <>
