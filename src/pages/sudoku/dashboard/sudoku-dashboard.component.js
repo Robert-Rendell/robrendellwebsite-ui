@@ -268,6 +268,9 @@ class SudokuDashboardComponent extends React.Component {
         )}
         {recentSudokus.length === 0 && <InfinitySpinnerComponent />}
         <hr />
+        <h2>Designs</h2>
+        <img src={SudokuDesigns} width="100%" style={{ maxWidth: 1000 }} />
+        <hr />
         <h2>Pinned Sudokus: for those who are competitive!</h2>
         <Table striped bordered hover variant="dark">
           <thead>
@@ -345,8 +348,6 @@ class SudokuDashboardComponent extends React.Component {
           <code>AWS.DynamoDB</code>
         </p>
         <hr />
-        <h2>Designs</h2>
-        <img src={SudokuDesigns} width="100%" style={{ maxWidth: 1000 }} />
         {/* <h2>Documentation: Swagger API</h2>
         <p>
           <a
