@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -81,7 +81,7 @@ import { BattleshipsDashboardComponent } from "./pages/battleships/dashboard.pag
 
 const maintenanceMode = false;
 
-ReactDOM.render(
+createRoot(document.getElementById("root") as Element).render(
   <React.StrictMode>
     {maintenanceMode ? (
       <>
@@ -395,8 +395,7 @@ ReactDOM.render(
         </BrowserRouter>
       </>
     )}
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
 
 function PlaySudoku() {

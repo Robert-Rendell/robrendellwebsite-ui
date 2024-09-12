@@ -62,7 +62,7 @@ code {
 }
 
 .grow {
-  transition: transform .2s; /* Animation */
+  transition: transform 0.2s; /* Animation */
 }
 
 .grow:hover {
