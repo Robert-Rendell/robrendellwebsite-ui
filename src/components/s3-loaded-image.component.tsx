@@ -15,7 +15,7 @@ type Props = {
 export function S3LoadedThumbnail(props: Props) {
   return (
     <img
-      className="home-page-img"
+      className="grow home-page-img"
       src={props.imgUrl}
       title={getS3ImageFilenameFromUrl(props.imgUrl)}
       onClick={() => {

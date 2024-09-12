@@ -57,4 +57,14 @@ code {
 .home-page-img {
   width: 125px;
   height: 94px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.grow {
+  transition: transform .2s; /* Animation */
+}
+
+.grow:hover {
+  transform: scale(1.3);
 }

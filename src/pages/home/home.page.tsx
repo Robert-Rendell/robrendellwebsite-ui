@@ -176,7 +176,7 @@ export const HomePage = () => {
       </ul>
       <hr />
       <p>
-        Here are some of my own photos from travelling over the years{" "}
+        Here are some of my photos from travelling over the years{" "}
         <i>(click to enlarge)</i>:
       </p>
       <ImageGallery images={images ? images : []} />
