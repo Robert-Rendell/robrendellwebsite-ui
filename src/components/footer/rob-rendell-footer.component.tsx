@@ -1,5 +1,4 @@
-import React, { useCallback, useMemo } from "react";
-import { SharedRoutes } from "../../common/shared-routes";
+import React, { useCallback } from "react";
 import { usePreferences } from "../../hooks/use-preferences.hook";
 import Northumberland from "../../resources/flag-of-northumberland.svg";
 import Saltire from "../../resources/saltire.svg";

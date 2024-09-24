@@ -43,4 +43,7 @@ export const SharedText: RobRendellWebsiteModel = {
   StravaAPI: {
     Historical: "Strava API: Historical Stats",
   },
+  CustomAnalytics: {
+    LandingPage: "Custom Analytics AWS Microservices Project",
+  },
 };

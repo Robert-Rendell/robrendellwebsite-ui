@@ -38,6 +38,7 @@ import { StravaDashboardHistoricalComponent } from "./pages/strava-api/strava-da
 import { JamesWebbTelescopePage } from "./pages/misc/james-webb-telescope.page";
 import { PaintingsAndArtPage } from "./pages/misc/paintings-and-art.page";
 import { BattleshipsDashboardComponent } from "./pages/battleships/dashboard.page";
+import { CustomAnalyticsPage } from "./pages/custom-analytics/custom-analytics.page";
 
 const maintenanceMode = false;
 
@@ -73,6 +74,12 @@ createRoot(document.getElementById("root") as Element).render(
             <Route
               path={`${SharedRoutes.Battleships.Play}/:gameId`}
               element={<PlayBattleships />}
+            />
+
+            {/* //////////////////////////////////// */}
+            <Route
+              path={`${SharedRoutes.CustomAnalytics.LandingPage}`}
+              element={<CustomAnalyticsPage />}
             />
 
             {/* //////////////////////////////////// */}

@@ -15,6 +15,9 @@ export const SharedRoutes: RobRendellWebsiteModel = {
     Dashboard: "/battleships",
     Play: "/battleships/play",
   },
+  CustomAnalytics: {
+    LandingPage: "/custom-analytics",
+  },
   Miscellaneous: {
     India: "/miscellaneous/india",
     GiantPacificOctopus: "/miscellaneous/giant-pacific-octopus",

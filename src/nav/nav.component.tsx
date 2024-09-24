@@ -76,6 +76,14 @@ export const NavComponent = () => {
                   Strava API Historical Stats
                 </Nav.Link>
 
+                <Nav.Link href={SharedRoutes.Battleships.Dashboard}>
+                  Battleships{!smallerScreen && <>&nbsp;Project</>}
+                </Nav.Link>
+
+                <Nav.Link href={SharedRoutes.CustomAnalytics.LandingPage}>
+                  Custom Analytics{!smallerScreen && <>&nbsp;Project</>}
+                </Nav.Link>
+
                 <NavDropdown menuVariant="dark" title="Nature" id="nature">
                   <NavDropdown.Item
                     href={"/photos-ive-taken/nature/wild-flowers"}
@@ -95,10 +103,6 @@ export const NavComponent = () => {
                     Fungi
                   </NavDropdown.Item>
                 </NavDropdown>
-
-                <Nav.Link href={SharedRoutes.Battleships.Dashboard}>
-                  Battleships{!smallerScreen && <>&nbsp;Project</>}
-                </Nav.Link>
 
                 <NavDropdown title="Misc" id="misc" menuVariant="dark">
                   <NavDropdown.Item

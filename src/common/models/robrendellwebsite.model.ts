@@ -13,6 +13,9 @@ export type RobRendellWebsiteModel = {
     Dashboard: string;
     Play: string;
   };
+  CustomAnalytics: {
+    LandingPage: string;
+  };
   StravaAPI: {
     Historical: string;
   };
