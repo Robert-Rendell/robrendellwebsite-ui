@@ -89,20 +89,6 @@ export const HomePage = () => {
               page
             </li>
             <li>
-              31/12/22 @ 11.30 - Added&nbsp;
-              <a href={SharedRoutes.Biomagnetism.LandingPage}>
-                {SharedText.Biomagnetism.LandingPage}
-              </a>{" "}
-              project using my <code>AWS.DynamoDB</code> page views feature
-            </li>
-            <li>
-              26/11/22 @ 09.35 - Added&nbsp;
-              <a href="recursion/simple-equations-infinite-complexity">
-                {SharedText.Recursion.SimpleEquations}
-              </a>{" "}
-              page using my <code>AWS.DynamoDB</code> page views feature
-            </li>
-            <li>
               17/11/22 @ 14.25 - Completed{" "}
               <a href="neurochemistry/">Neurochemistry</a> project using my{" "}
               <code>AWS.DynamoDB</code> page views feature

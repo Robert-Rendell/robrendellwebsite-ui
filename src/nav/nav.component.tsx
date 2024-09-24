@@ -124,19 +124,6 @@ export const NavComponent = () => {
                   title="Creative Writing"
                   id="creative-projects"
                 >
-                  <NavDropdown.Item href={SharedRoutes.Recursion.LandingPage}>
-                    Recursion Project
-                  </NavDropdown.Item>
-                  <NavDropdown.Item
-                    href={SharedRoutes.Neurochemistry.LandingPage}
-                  >
-                    Neurochemistry Project
-                  </NavDropdown.Item>
-                  <NavDropdown.Item
-                    href={SharedRoutes.Biomagnetism.LandingPage}
-                  >
-                    Biomagnetism Project
-                  </NavDropdown.Item>
                   <NavDropdown.Item
                     href={SharedRoutes.ClimateChange.LandingPage}
                   >

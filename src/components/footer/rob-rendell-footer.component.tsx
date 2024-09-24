@@ -13,14 +13,6 @@ export function RobRendellFooterComponent() {
     preferences?.fullscreen &&
     window.location.pathname.includes(preferences.fullscreen);
 
-  const matrixTheme = useMemo(
-    () =>
-      window.location.pathname.includes(
-        SharedRoutes.Neurochemistry.LandingPage
-      ),
-    []
-  );
-
   const disableAnalytics = useCallback(
     () => localStorage.setItem(DISABLE_CUSTOM_ANALYTICS_KEY, "true"),
     []
@@ -30,7 +22,7 @@ export function RobRendellFooterComponent() {
     <div
       className="centred"
       style={{
-        ...(matrixTheme ? { background: "black" } : { background: "#282c34" }),
+        background: "#282c34",
       }}
     >
       <div className="centred">
@@ -45,22 +37,6 @@ export function RobRendellFooterComponent() {
           <span onClick={disableAnalytics}>All</span> rights reserved.
         </span>
       </div>
-      {matrixTheme && (
-        <>
-          <div className="centred">
-            <span className="footer-msg">
-              All views and opinions expressed on this website are my own.
-            </span>
-          </div>
-          <div className="centred">
-            <span className="footer-msg">
-              [Disclaimer]: I am not medically trained and I don&apos;t take any
-              responsibility for you, nor do I accept any liability; go see your
-              GP.
-            </span>
-          </div>
-        </>
-      )}
     </div>
   ) : (
     <></>
