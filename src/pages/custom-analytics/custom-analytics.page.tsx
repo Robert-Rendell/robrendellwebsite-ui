@@ -14,7 +14,11 @@ export function CustomAnalyticsPage() {
         infrastructure to be written as code.
       </p>
       <h3>Designs</h3>
-      <img src="https://raw.githubusercontent.com/Robert-Rendell/custom-analytics/8452ce4d9d1d1063f067ccdef8762543b1ba911e/designs/20-09-24.svg" />
+      <img
+        width="100%"
+        style={{ maxWidth: 1200 }}
+        src="https://raw.githubusercontent.com/Robert-Rendell/custom-analytics/8452ce4d9d1d1063f067ccdef8762543b1ba911e/designs/20-09-24.svg"
+      />
       <hr />
       <h3>Code</h3>
       <p>
