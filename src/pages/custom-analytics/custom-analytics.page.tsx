@@ -36,10 +36,7 @@ export function CustomAnalyticsPage() {
       <hr />
       <h3>Pros of AWS CDK</h3>
       <ul>
-        <li>
-          Imperative programming with familiar languages (TypeScript, Python,
-          Java, C#)
-        </li>
+        <li>Programming with familiar language: TypeScript</li>
         <li>Reusable Constructs for modular infrastructure</li>
         <li>High-level abstractions simplify resource management</li>
         <li>Synthesizes to CloudFormation, leveraging its benefits</li>
@@ -51,11 +48,9 @@ export function CustomAnalyticsPage() {
 
       <h3>Cons of AWS CDK</h3>
       <ul>
-        <li>Steep learning curve for non-developers</li>
         <li>High-level abstractions can hide important details</li>
         <li>Generated CloudFormation templates can be complex</li>
         <li>Frequent breaking changes in some constructs</li>
-        <li>Limited language support outside TypeScript</li>
         <li>Relies on CloudFormation, inheriting its limitations</li>
         <li>Smaller ecosystem compared to Terraform</li>
         <li>Increased complexity in large projects</li>
