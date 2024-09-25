@@ -17,7 +17,7 @@ export function CustomAnalyticsPage() {
       <img
         width="100%"
         style={{ maxWidth: 1200 }}
-        src="https://raw.githubusercontent.com/Robert-Rendell/custom-analytics/8452ce4d9d1d1063f067ccdef8762543b1ba911e/designs/20-09-24.svg"
+        src="https://github.com/Robert-Rendell/custom-analytics/raw/main/designs/20-09-24.svg"
       />
       <hr />
       <h3>Code</h3>
