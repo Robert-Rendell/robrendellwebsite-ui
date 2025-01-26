@@ -254,7 +254,7 @@ class SudokuDashboardComponent extends React.Component {
         <hr />
         <h2>Play Sudoku</h2>
         {recentSudokus.length > 0 && (
-          <Table striped bordered hover variant="dark">
+          <Table striped bordered hover variant="dark" maxWidth={1000}>
             <thead>
               <tr>
                 <th>#</th>
@@ -272,7 +272,7 @@ class SudokuDashboardComponent extends React.Component {
         <img src={SudokuDesigns} width="100%" style={{ maxWidth: 1000 }} />
         <hr />
         <h2>Pinned Sudokus: for those who are competitive!</h2>
-        <Table striped bordered hover variant="dark">
+        <Table striped bordered hover variant="dark" maxWidth={1000}>
           <thead>
             <tr>
               <th>Rob&apos;s time</th>
