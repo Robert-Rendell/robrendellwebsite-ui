@@ -32,7 +32,7 @@ export function RobRendellFooterComponent() {
           </>
         )}
         <span className="footer-msg">
-          Copyright &copy; 2021-2024 Robert Rendell.{" "}
+          Copyright &copy; 2021-2025 Robert Rendell.{" "}
           <span onClick={disableAnalytics}>All</span> rights reserved.
         </span>
       </div>
