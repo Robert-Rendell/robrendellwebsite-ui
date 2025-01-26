@@ -22,6 +22,7 @@ export function SudokuLeaderboardComponent(props: Props) {
           <td>{item.submitterName || "anonymous"}</td>
           <td>{convertMsToMinsSecs(item.timeTakenMs)}</td>
           <td>{item.timesValidated || "-"}</td>
+          <td>{item.invalidSubmissionCount || "-"}</td>
         </tr>
       );
     });
@@ -36,6 +37,7 @@ export function SudokuLeaderboardComponent(props: Props) {
               <th>Name</th>
               <th>Time</th>
               <th>Checks</th>
+              <th>Mistakes</th>
             </tr>
           </thead>
           <tbody>{leaderboardEntries}</tbody>
