@@ -70,19 +70,24 @@ export const NavComponent = () => {
             <Nav.Link href={SharedRoutes.Sudoku.Dashboard}>
               Sudoku{!smallerScreen && <>&nbsp;Project</>}
             </Nav.Link>
+
             {config.minimal && (
               <>
-                <Nav.Link href={SharedRoutes.StravaAPI.Historical}>
-                  Strava API Historical Stats
-                </Nav.Link>
-
-                <Nav.Link href={SharedRoutes.Battleships.Dashboard}>
-                  Battleships{!smallerScreen && <>&nbsp;Project</>}
-                </Nav.Link>
-
                 <Nav.Link href={SharedRoutes.CustomAnalytics.LandingPage}>
                   Custom Analytics{!smallerScreen && <>&nbsp;Project</>}
                 </Nav.Link>
+                <NavDropdown
+                  menuVariant="dark"
+                  title="Other software projects"
+                  id="software-projects"
+                >
+                  <NavDropdown.Item href={SharedRoutes.StravaAPI.Historical}>
+                    Strava API Historical Stats
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href={SharedRoutes.Battleships.Dashboard}>
+                    Battleships{!smallerScreen && <>&nbsp;Project</>}
+                  </NavDropdown.Item>
+                </NavDropdown>
 
                 <NavDropdown menuVariant="dark" title="Nature" id="nature">
                   <NavDropdown.Item
