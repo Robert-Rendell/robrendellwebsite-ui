@@ -15,6 +15,7 @@ import { StackOverflowIcon } from "../components/icons/stack-overflow.icon";
 import { LinkedInIcon } from "../components/icons/linkedin.icon";
 import { config } from "../config";
 import { CalendlyIcon } from "../components/icons/calendly.icon";
+import { SharedText } from "../common/shared-text";
 
 export const NavComponent = () => {
   const { preferences } = usePreferences();
@@ -86,6 +87,11 @@ export const NavComponent = () => {
                   </NavDropdown.Item>
                   <NavDropdown.Item href={SharedRoutes.Battleships.Dashboard}>
                     Battleships{!smallerScreen && <>&nbsp;Project</>}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href={SharedRoutes.RobsFreeDogWalking.LandingPage}
+                  >
+                    {SharedText.RobsFreeDogWalking.LandingPage}
                   </NavDropdown.Item>
                 </NavDropdown>
 

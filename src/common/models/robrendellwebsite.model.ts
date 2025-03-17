@@ -13,6 +13,9 @@ export type RobRendellWebsiteModel = {
     Dashboard: string;
     Play: string;
   };
+  RobsFreeDogWalking: {
+    LandingPage: string;
+  };
   CustomAnalytics: {
     LandingPage: string;
   };
