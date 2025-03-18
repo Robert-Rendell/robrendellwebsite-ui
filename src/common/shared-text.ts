@@ -46,7 +46,7 @@ export const SharedText: RobRendellWebsiteModel = {
   CustomAnalytics: {
     LandingPage: "Custom Analytics AWS Microservices Project",
   },
-  RobsFreeDogWalking: {
-    LandingPage: "Rob's Free Dog Walking",
+  RobsFreeDogWalks: {
+    LandingPage: "Rob's Free Dog Walks",
   },
 };

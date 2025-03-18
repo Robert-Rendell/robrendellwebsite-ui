@@ -49,7 +49,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
   StravaAPI: {
     Historical: "/strava-api/historical",
   },
-  RobsFreeDogWalking: {
+  RobsFreeDogWalks: {
     LandingPage: "https://robs-free-dog-walks.onrender.com/",
   },
 };

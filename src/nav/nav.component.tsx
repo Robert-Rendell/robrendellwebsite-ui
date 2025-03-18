@@ -89,9 +89,9 @@ export const NavComponent = () => {
                     Battleships{!smallerScreen && <>&nbsp;Project</>}
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    href={SharedRoutes.RobsFreeDogWalking.LandingPage}
+                    href={SharedRoutes.RobsFreeDogWalks.LandingPage}
                   >
-                    {SharedText.RobsFreeDogWalking.LandingPage}
+                    {SharedText.RobsFreeDogWalks.LandingPage}
                   </NavDropdown.Item>
                 </NavDropdown>
 
