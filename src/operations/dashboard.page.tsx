@@ -39,6 +39,11 @@ export function OperationsDashboardPage() {
               <Tab eventKey="dates-in-history" title="Dates in History">
                 <AddInterestingDateInHistoryComponent />
               </Tab>
+              <Tab eventKey="robs-free-dog-walks" title="Rob's Free Dog Walks">
+                <a href="https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/robs-free-dog-walks/dog-walking-calendar.json">
+                  Dog Walking Calendar
+                </a>
+              </Tab>
             </Tabs>
           </>
         )}
