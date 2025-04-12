@@ -16,6 +16,9 @@ export type RobRendellWebsiteModel = {
   RobsFreeDogWalks: {
     LandingPage: string;
   };
+  ShivaArchetypes: {
+    LandingPage: string;
+  };
   CustomAnalytics: {
     LandingPage: string;
   };

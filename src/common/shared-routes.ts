@@ -52,4 +52,7 @@ export const SharedRoutes: RobRendellWebsiteModel = {
   RobsFreeDogWalks: {
     LandingPage: "https://robs-free-dog-walks.onrender.com/",
   },
+  ShivaArchetypes: {
+    LandingPage: "https://shiva-archetypes.onrender.com/",
+  },
 };

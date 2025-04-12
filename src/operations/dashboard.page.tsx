@@ -44,6 +44,11 @@ export function OperationsDashboardPage() {
                   Dog Walking Calendar
                 </a>
               </Tab>
+              <Tab eventKey="shiva-archetypes" title="Shiva Archetypes">
+                <a href="https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/robs-free-dog-walks/dog-walking-calendar.json">
+                  Dog Walking Calendar
+                </a>
+              </Tab>
             </Tabs>
           </>
         )}

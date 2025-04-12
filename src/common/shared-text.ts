@@ -1,6 +1,6 @@
 import { RobRendellWebsiteModel } from "./models/robrendellwebsite.model";
 
-export const SharedText: RobRendellWebsiteModel = {
+export const SharedText: Omit<RobRendellWebsiteModel, "ShivaArchetypes"> = {
   HomePage: "",
   Operations: {
     Dashboard: "Operations Dashboard",
