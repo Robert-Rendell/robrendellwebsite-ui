@@ -3,11 +3,13 @@ import { Button, Tab, Tabs } from "react-bootstrap";
 import { useKnockKnock } from "../hooks/use-knock-knock.hook";
 import { SharedText } from "../common/shared-text";
 import { OpsPageViewsComponent } from "./components/page-views.component";
-import "../pages/page.css";
-import "./operations.page.css";
 import { AddWordOfDayComponent } from "./components/add-word-of-day.component";
 import { AddInterestingDateInHistoryComponent } from "./components/add-date-in-history.component";
 import { KNOCK_KNOCK_SECURITY_KEY } from "../common/constants";
+import { ShivaArchetypesPageViewsComponent } from "./components/shiva-archetypes/shiva-archetypes-page-views.component";
+
+import "../pages/page.css";
+import "./operations.page.css";
 
 export function OperationsDashboardPage() {
   const [hasAccess] = useKnockKnock();
@@ -45,9 +47,7 @@ export function OperationsDashboardPage() {
                 </a>
               </Tab>
               <Tab eventKey="shiva-archetypes" title="Shiva Archetypes">
-                <a href="https://robrendellwebsite-public.s3.eu-west-1.amazonaws.com/robs-free-dog-walks/dog-walking-calendar.json">
-                  Dog Walking Calendar
-                </a>
+                <ShivaArchetypesPageViewsComponent />
               </Tab>
             </Tabs>
           </>

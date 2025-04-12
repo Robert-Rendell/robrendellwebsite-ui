@@ -7,9 +7,9 @@ import { useWindowSize } from "../../../hooks/use-window-size.hook";
 import { useOpsDashboard } from "../../hooks/use-ops-dashboard.hook";
 import { OpsPageViewDetailComponent } from "../page-view-detail.component";
 
-import InfinitySpinner from "../../resources/infinity-spinner.svg";
+import InfinitySpinner from "../../../resources/infinity-spinner.svg";
 
-export function OpsPageViewsComponent() {
+export function ShivaArchetypesPageViewsComponent() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
   const allRoutes = useMemo(() => {
