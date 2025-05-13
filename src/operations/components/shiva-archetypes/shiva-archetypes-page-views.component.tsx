@@ -11,7 +11,7 @@ import InfinitySpinner from "../../../resources/infinity-spinner.svg";
 export function ShivaArchetypesPageViewsComponent() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  const allRoutes = ["shiva-archetypes/hunters-prayer"];
+  const allRoutes = ["lyrics/hunters-prayer", "lyrics/a-certain-truth"];
   const [pageViews] = useOpsDashboard({ pageUrls: allRoutes });
 
   const [selectedPageViews, setSelectedPageViews] = useState<
