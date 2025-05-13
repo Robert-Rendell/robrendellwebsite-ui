@@ -1,8 +1,7 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { Button, Table } from "react-bootstrap";
 import { PageViewerDocument } from "robrendellwebsite-common";
 
-import { SharedRoutes } from "../../../common/shared-routes";
 import { useWindowSize } from "../../../hooks/use-window-size.hook";
 import { useOpsDashboard } from "../../hooks/use-ops-dashboard.hook";
 import { OpsPageViewDetailComponent } from "../page-view-detail.component";
@@ -12,19 +11,7 @@ import InfinitySpinner from "../../../resources/infinity-spinner.svg";
 export function ShivaArchetypesPageViewsComponent() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  const allRoutes = useMemo(() => {
-    const routes = Object.values(SharedRoutes)
-      .map((sharedRoute) => Object.values(sharedRoute))
-      .flat()
-      .filter(
-        (sharedRoute) =>
-          typeof sharedRoute === "string" &&
-          sharedRoute.toString().includes("shiva") &&
-          !sharedRoute.includes("www.youtube.com")
-      );
-    routes.push(...Object.values(SharedRoutes.PhotosIveTaken.Nature));
-    return routes;
-  }, []);
+  const allRoutes = ["shiva-archetypes/hunters-prayer"];
   const [pageViews] = useOpsDashboard({ pageUrls: allRoutes });
 
   const [selectedPageViews, setSelectedPageViews] = useState<
