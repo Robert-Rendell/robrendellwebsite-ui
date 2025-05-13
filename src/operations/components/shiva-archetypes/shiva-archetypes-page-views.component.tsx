@@ -11,7 +11,19 @@ import InfinitySpinner from "../../../resources/infinity-spinner.svg";
 export function ShivaArchetypesPageViewsComponent() {
   const windowSize = useWindowSize();
   const width = windowSize[0] - 40;
-  const allRoutes = ["lyrics/hunters-prayer", "lyrics/a-certain-truth"];
+  const allRoutes = [
+    "lyrics/hunters-prayer",
+    "lyrics/a-certain-truth",
+    "lyrics/you-put-me-here",
+    "lyrics/working-class-tories",
+    "lyrics/triathlon",
+    "lyrics/secret-service",
+    "lyrics/play-to-your-strengths",
+    "lyrics/natural-wonders",
+    "lyrics/fourth-brain-between-the-legs",
+    "newspaper-stories/gili-t-mabul",
+    "newspaper-stories/the-scottish-mental-health-tribunal",
+  ];
   const [pageViews] = useOpsDashboard({ pageUrls: allRoutes });
 
   const [selectedPageViews, setSelectedPageViews] = useState<
