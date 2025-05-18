@@ -68,9 +68,6 @@ export const NavComponent = () => {
             style={{ maxHeight: "175px" }}
             navbarScroll
           >
-            <Nav.Link href={SharedRoutes.Sudoku.Dashboard}>
-              Sudoku{!smallerScreen && <>&nbsp;Project</>}
-            </Nav.Link>
 
             {config.minimal && (
               <>
