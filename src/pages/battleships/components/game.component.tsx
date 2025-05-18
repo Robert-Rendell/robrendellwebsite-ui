@@ -87,7 +87,8 @@ export function BattleshipsGameComponent(
   }, [isMyTurn, props.game?.state]);
 
   useEffect(() => {
-    clearInterval(refreshInterval.current);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    clearInterval(refreshInterval.current as any);
     refreshInterval.current = setInterval(() => {
       if (!showConfigurationTools || isPlayingAndNotMyTurn()) {
         props.setIsRefreshingGame(true);
