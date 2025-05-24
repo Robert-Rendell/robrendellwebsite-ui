@@ -17,34 +17,35 @@ export function RecentSudokusComponent() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   console.log("Rending recent sudokus component");
   useEffect(() => {
-    loadSudokus();
-  }, []);
-  function loadSudokus() {
-    if (!isLoading) {
-      setIsLoading(true);
-      axios
-        .post(`${config.backend}/sudoku/list`, {
-          headers: { "Content-Type": "application/json" },
-          filters: {
-            dateGenerated: {
-              days: 30,
+    function loadSudokus() {
+      if (!isLoading) {
+        setIsLoading(true);
+        axios
+          .post(`${config.backend}/sudoku/list`, {
+            headers: { "Content-Type": "application/json" },
+            filters: {
+              dateGenerated: {
+                days: 30,
+              },
             },
-          },
-          pagination: {
-            limit: 10,
-          },
-        })
-        .then((response) => {
-          setRecentSudokus(response.data);
-        })
-        .catch((reason) => {
-          console.error(reason);
-        })
-        .finally(() => {
-          setIsLoading(false);
-        });
+            pagination: {
+              limit: 10,
+            },
+          })
+          .then((response) => {
+            setRecentSudokus(response.data);
+          })
+          .catch((reason) => {
+            console.error(reason);
+          })
+          .finally(() => {
+            setIsLoading(false);
+          });
+      }
     }
-  }
+    loadSudokus();
+  }, [isLoading]);
+
   function renderRecentSudokuRows() {
     return recentSudokus.map((recentSudoku, i) => {
       return (
