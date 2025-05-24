@@ -8,7 +8,7 @@ import "./sudoku-dashboard.component.css";
 import { InfinitySpinnerComponent } from "../../../components/infinity-spinner.component";
 import SudokuDesigns from "../../../resources/designs/sudoku-generation.svg";
 
-class SudokuDashboardComponent extends React.Component {
+class OldSudokuDashboardComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -364,7 +364,7 @@ class SudokuDashboardComponent extends React.Component {
   }
 }
 
-export default SudokuDashboardComponent;
+export default OldSudokuDashboardComponent;
 
 SudokuDashboardComponent.Div = {
   SudokuGenerationResultsContainer: "sudoku-gen-results-container",

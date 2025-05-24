@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import reportWebVitals from "./reportWebVitals";
 import { HomePage } from "./pages/home/home.page";
-import SudokuDashboardComponent from "./pages/sudoku/dashboard/sudoku-dashboard.component";
+import { SudokuDashboardComponent } from "./pages/sudoku/dashboard/sudoku-dashboard.component";
 import { SudokuGameComponent } from "./pages/sudoku/game/sudoku-game.component";
 import UniDataVisualiserComponent from "./pages/technical-tests/291121/uni-data-visualiser.component";
 import { RuminantsPage } from "./pages/climate-change/ruminants.page";
