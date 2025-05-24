@@ -14,6 +14,7 @@ type SudokuRecord = {
 
 export function RecentSudokusComponent() {
   const [recentSudokus, setRecentSudokus] = useState<SudokuRecord[]>([]);
+  console.log("Rending recent sudokus component");
   useEffect(() => {
     loadSudokus();
   }, []);
