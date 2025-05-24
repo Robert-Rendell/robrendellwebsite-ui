@@ -14,29 +14,36 @@ type SudokuRecord = {
 
 export function RecentSudokusComponent() {
   const [recentSudokus, setRecentSudokus] = useState<SudokuRecord[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   console.log("Rending recent sudokus component");
   useEffect(() => {
     loadSudokus();
   }, []);
   function loadSudokus() {
-    axios
-      .post(`${config.backend}/sudoku/list`, {
-        headers: { "Content-Type": "application/json" },
-        filters: {
-          dateGenerated: {
-            days: 30,
+    if (!isLoading) {
+      setIsLoading(true);
+      axios
+        .post(`${config.backend}/sudoku/list`, {
+          headers: { "Content-Type": "application/json" },
+          filters: {
+            dateGenerated: {
+              days: 30,
+            },
           },
-        },
-        pagination: {
-          limit: 10,
-        },
-      })
-      .then((response) => {
-        setRecentSudokus(response.data);
-      })
-      .catch((reason) => {
-        console.error(reason);
-      });
+          pagination: {
+            limit: 10,
+          },
+        })
+        .then((response) => {
+          setRecentSudokus(response.data);
+        })
+        .catch((reason) => {
+          console.error(reason);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    }
   }
   function renderRecentSudokuRows() {
     return recentSudokus.map((recentSudoku, i) => {
@@ -74,7 +81,15 @@ export function RecentSudokusComponent() {
           <tbody>{renderRecentSudokuRows()}</tbody>
         </Table>
       )}
-      {recentSudokus.length === 0 && <InfinitySpinnerComponent />}
+      {isLoading && (
+        <>
+          <p>Loading recent sudokus from last 30 days ...</p>
+          <InfinitySpinnerComponent />
+        </>
+      )}
+      {!isLoading && recentSudokus.length === 0 && (
+        <>No recent sudokus in the last 30 days</>
+      )}
     </>
   );
 }

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { config } from "../../../../config";
+import { InfinitySpinnerComponent } from "../../../../components/infinity-spinner.component";
 
 export function SudokuGenerationComponent() {
   const [checkGenerationLoop, setCheckGenerationLoop] = useState();
@@ -19,8 +20,18 @@ export function SudokuGenerationComponent() {
     //
   }
 
+  function disableGenerationButtons() {
+    (document.getElementById(SudokuGenerationButton.Easy) as any).disabled =
+      true;
+    (document.getElementById(SudokuGenerationButton.Medium) as any).disabled =
+      true;
+    (document.getElementById(SudokuGenerationButton.Hard) as any).disabled =
+      true;
+  }
+
   function generateSudoku(difficulty: string) {
-    // this.toggleGenerating(true);
+    disableGenerationButtons();
+    setIsGenerating(true);
     console.log("generating sudoku " + difficulty);
     axios
       .post(`${config.backend}/sudoku/add`, {
@@ -74,7 +85,7 @@ export function SudokuGenerationComponent() {
           </Button>
         </div>
         <div id={SudokuDashboardComponentDiv.SudokuGenerationResultsContainer}>
-          {/* {isGenerating && <img src={InfinitySpinner} />} */}
+          {isGenerating && <InfinitySpinnerComponent />}
           <div id={SudokuDashboardComponentDiv.SudokuGenerationResults}></div>
         </div>
       </div>
