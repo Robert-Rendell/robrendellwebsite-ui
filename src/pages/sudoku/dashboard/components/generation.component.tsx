@@ -5,10 +5,11 @@ import { config } from "../../../../config";
 import { InfinitySpinnerComponent } from "../../../../components/infinity-spinner.component";
 
 export function SudokuGenerationComponent() {
-  const [checkGenerationLoop, setCheckGenerationLoop] = useState();
+  const [checkGenerationLoop, setCheckGenerationLoop] = useState<any>();
   const [generationJobId, setGenerationJobId] = useState<string>("");
   const [generationDifficulty, setGenerationDifficulty] = useState<string>("");
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
+  const [retries, setRetries] = useState<number>(0);
 
   console.log("rendered generation component");
 
@@ -16,8 +17,49 @@ export function SudokuGenerationComponent() {
     //
   }
 
+  function checkSudokuGeneration() {
+    axios
+      .post(`${config.backend}/sudoku/list`, {
+        headers: { "Content-Type": "application/json" },
+        filters: {
+          generatorJobId: generationJobId,
+        },
+        generatorUserName: "implement on front end",
+      })
+      .then((response) => {
+        if (response.data?.length > 0) {
+          const sudokuId = response.data[0]["sudokuId"];
+          console.log("Sudoku generated" + sudokuId);
+        } else {
+          if (retries < 2) {
+            setRetries(retries + 1);
+            watchSudokuGeneration();
+            console.log(
+              `Generating ${generationDifficulty} sudoku... AWS Lambda cold starts increase the generation time.`
+            );
+          } else {
+            console.log(
+              "Sudoku generation timed out. AWS Lambda execution time limit reached. Creating another request."
+            );
+            setRetries(0);
+            setGenerationJobId("");
+            setIsGenerating(false);
+            enableGenerationButtons();
+            setCheckGenerationLoop(null);
+            // Kick off another generation
+            generateSudoku(generationDifficulty);
+          }
+        }
+      })
+      .catch((reason) => {
+        console.error(reason);
+      });
+    clearTimeout(checkGenerationLoop);
+  }
+
   function watchSudokuGeneration() {
-    //
+    const interval = setInterval(() => checkSudokuGeneration(), 10000);
+    setCheckGenerationLoop(interval);
   }
 
   function disableGenerationButtons() {
@@ -27,6 +69,15 @@ export function SudokuGenerationComponent() {
       true;
     (document.getElementById(SudokuGenerationButton.Hard) as any).disabled =
       true;
+  }
+
+  function enableGenerationButtons() {
+    (document.getElementById(SudokuGenerationButton.Easy) as any).disabled =
+      false;
+    (document.getElementById(SudokuGenerationButton.Medium) as any).disabled =
+      false;
+    (document.getElementById(SudokuGenerationButton.Hard) as any).disabled =
+      false;
   }
 
   function generateSudoku(difficulty: string) {
