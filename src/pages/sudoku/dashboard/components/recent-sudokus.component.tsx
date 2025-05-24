@@ -18,6 +18,7 @@ export function RecentSudokusComponent() {
   console.log("Rending recent sudokus component");
   useEffect(() => {
     loadSudokus();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   function loadSudokus() {
     if (!isLoading) {
