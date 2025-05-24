@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import { config } from "../../../../config";
 import { InfinitySpinnerComponent } from "../../../../components/infinity-spinner.component";
@@ -9,7 +9,7 @@ export function SudokuGenerationComponent() {
   const [generationJobId, setGenerationJobId] = useState<string>("");
   const [generationDifficulty, setGenerationDifficulty] = useState<string>("");
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  const [retries, setRetries] = useState<number>(0);
+  const retries = useRef<number>(0);
 
   console.log("rendered generation component");
 
@@ -18,6 +18,9 @@ export function SudokuGenerationComponent() {
   }
 
   function checkSudokuGeneration() {
+    if (!isGenerating) {
+      return;
+    }
     axios
       .post(`${config.backend}/sudoku/list`, {
         headers: { "Content-Type": "application/json" },
@@ -31,17 +34,17 @@ export function SudokuGenerationComponent() {
           const sudokuId = response.data[0]["sudokuId"];
           console.log("Sudoku generated" + sudokuId);
         } else {
-          if (retries < 2) {
-            setRetries(retries + 1);
+          if (retries.current < 2) {
+            retries.current = retries.current + 1;
             watchSudokuGeneration();
             console.log(
-              `Generating ${generationDifficulty} sudoku... AWS Lambda cold starts increase the generation time.`
+              `Retry ${retries}: Generating ${generationDifficulty} sudoku... AWS Lambda cold starts increase the generation time.`
             );
           } else {
             console.log(
               "Sudoku generation timed out. AWS Lambda execution time limit reached. Creating another request."
             );
-            setRetries(0);
+            retries.current = 0;
             setGenerationJobId("");
             setIsGenerating(false);
             enableGenerationButtons();
@@ -52,6 +55,7 @@ export function SudokuGenerationComponent() {
         }
       })
       .catch((reason) => {
+        setIsGenerating(false);
         console.error(reason);
       });
     clearTimeout(checkGenerationLoop);
