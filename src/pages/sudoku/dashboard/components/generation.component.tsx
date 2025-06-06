@@ -18,9 +18,6 @@ export function SudokuGenerationComponent() {
   }
 
   function checkSudokuGeneration() {
-    if (!isGenerating) {
-      return;
-    }
     console.log(
       `Checking sudoku generation (retry: ${retries.current}) for jobId: ${generationJobId}`
     );
