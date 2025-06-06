@@ -21,6 +21,9 @@ export function SudokuGenerationComponent() {
     if (!isGenerating) {
       return;
     }
+    console.log(
+      `Checking sudoku generation (retry: ${retries.current}) for jobId: ${generationJobId}`
+    );
     axios
       .post(`${config.backend}/sudoku/list`, {
         headers: { "Content-Type": "application/json" },
