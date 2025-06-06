@@ -62,7 +62,8 @@ export function SudokuGenerationComponent() {
   }
 
   function watchSudokuGeneration() {
-    const interval = setInterval(() => checkSudokuGeneration(), 10000);
+    console.log("Watch sudoku generation 10 seconds");
+    const interval = setInterval(checkSudokuGeneration, 10000);
     setCheckGenerationLoop(interval);
   }
 
