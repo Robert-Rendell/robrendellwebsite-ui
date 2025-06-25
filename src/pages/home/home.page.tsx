@@ -11,12 +11,15 @@ import { usePageView } from "../../hooks/use-page-view.hook";
 export const HomePage = () => {
   const handleImageClickedRef = useRef();
   const [images, setImages] = useState<JSX.Element[]>([]);
+  const [imagesError, setImagesError] = useState<JSX.Element[]>([]);
   const getHomePageImageUrls = useGetHomePageImageUrls(handleImageClickedRef);
 
   const setHomePageImages = useCallback(
-    async () =>
-      getHomePageImageUrls().then((result) => setImages(result.thumbnails)),
-    [getHomePageImageUrls, setImages]
+    () =>
+      getHomePageImageUrls()
+        .then((result) => setImages(result.thumbnails))
+        .catch((e) => setImagesError(e)),
+    [getHomePageImageUrls, setImages, setImagesError]
   );
 
   useEffect(() => {
@@ -165,7 +168,7 @@ export const HomePage = () => {
         Here are some of my photos from travelling over the years{" "}
         <i>(click to enlarge)</i>:
       </p>
-      <ImageGallery images={images ? images : []} />
+      <ImageGallery images={images ? images : []} imagesError={imagesError} />
       <FullScreenS3ImageComponent handleShowRef={handleImageClickedRef} />
     </div>
   );

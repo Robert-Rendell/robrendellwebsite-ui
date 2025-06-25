@@ -4,11 +4,15 @@ import InfinitySpinner from "../resources/infinity-spinner.svg";
 
 type Props = {
   images: ReactNode[];
+  imagesError?: any;
 };
 export function ImageGallery(props: Props) {
   return (
     <>
-      {props.images.length === 0 && (
+      {props.imagesError && (
+        <h2>Error: There was a problem grabbing images.</h2>
+      )}
+      {!props.imagesError && props.images.length === 0 && (
         <>
           <h2>Loading images from AWS S3...</h2>
           <img src={InfinitySpinner} />

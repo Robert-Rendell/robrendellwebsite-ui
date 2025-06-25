@@ -31,6 +31,9 @@ export function usePageView(
         if (pageViewsSetFn) {
           pageViewsSetFn(res.data);
         }
+      })
+      .catch((error) => {
+        console.error(error);
       });
   }, [pageUrl]);
 }
