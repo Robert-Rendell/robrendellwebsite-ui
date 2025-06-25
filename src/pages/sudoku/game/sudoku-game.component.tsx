@@ -56,7 +56,9 @@ export function SudokuGameComponent(props: Props) {
   };
   const [submitterName, setSubmitterName] = useState("");
   const [disabled, setDisabled] = useState(false);
-  const { sudokuBoard, submissionId, sudokuId } = useGetSudoku(props.sudokuId);
+  const { sudokuBoard, submissionId, sudokuId, sudokuError } = useGetSudoku(
+    props.sudokuId
+  );
   const { completed } = useSubmitSudoku({
     submissionId,
     submitterName,
@@ -149,7 +151,8 @@ export function SudokuGameComponent(props: Props) {
           <div id="board" className="sudoku-parent">
             {typeof sudokuBoard === "undefined" ? (
               <div className="centred">
-                <img src={InfinitySpinner} />
+                {sudokuError && <h2>Error loading sudoku</h2>}
+                {!sudokuError && <img src={InfinitySpinner} />}
               </div>
             ) : (
               <>

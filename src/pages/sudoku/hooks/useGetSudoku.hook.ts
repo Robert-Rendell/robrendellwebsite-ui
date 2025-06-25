@@ -14,6 +14,7 @@ export function useGetSudoku(id?: string) {
   const [sudokuBoard, setSudokuBoard] = useState<number[][] | undefined>();
   const [submissionId, setSubmissionId] = useState("");
   const [sudokuId, setSudokuId] = useState("");
+  const [sudokuError, setSudokuError] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,8 +34,8 @@ export function useGetSudoku(id?: string) {
         setSudokuId(sudokuId);
       }
     };
-    fetchData();
+    fetchData().catch((error) => setSudokuError(error));
   }, [id]);
 
-  return { puzzle, sudokuBoard, submissionId, sudokuId };
+  return { puzzle, sudokuBoard, submissionId, sudokuId, sudokuError };
 }
